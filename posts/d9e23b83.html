@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="10月做题记录最后一个10月份了，年份都不用写了；即使实力不强也希望这份题单能给后人一些帮助 这个月主要在做课件，整体质量不错 好题：「HNOI2016」网络、HDU6634 Salty Fish、HDU5709 Claris Loves Painting">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-26T10:18:21.392Z">
+<meta property="og:updated_time" content="2019-12-03T12:34:09.459Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="10月做题记录">
 <meta name="twitter:description" content="10月做题记录最后一个10月份了，年份都不用写了；即使实力不强也希望这份题单能给后人一些帮助 这个月主要在做课件，整体质量不错 好题：「HNOI2016」网络、HDU6634 Salty Fish、HDU5709 Claris Loves Painting">
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-26 18:18:21" itemprop="dateModified" datetime="2019-10-26T18:18:21+08:00">2019-10-26</time>
+                <time title="修改时间：2019-12-03 20:34:09" itemprop="dateModified" datetime="2019-12-03T20:34:09+08:00">2019-12-03</time>
               </span>
             
           
@@ -652,7 +652,7 @@
 <p>对于无修改，设值c的出现区间为$[fl_c,fr_c]$，最后$fl_c…fr_c-1$都要和下一个相同，设$f_i$为被如此统计的次数</p>
 <p>那么$f_i=0$的位置就是一个段的结尾，将每种颜色的出现次数贡献到最左边的位置并记为$cnt_i$</p>
 <p>$ans=n-\sum_{每个段} cnt[fl_{出现最多次的值}]$，现在就是对这玩意求和，无修改直接扫一遍即可。</p>
-<p>考虑线段树能否维护，【最小值为0维护以0分割连续段的信息】经典转化成【区间以最小值分割的连续段的信息】</p>
+<p>考虑线段树能否维护，「最小值为0维护以0分割连续段的信息」经典转化成「区间以最小值分割的连续段的信息」</p>
 <p>其实已经可以做了，如果你还是不会维护可以继续往下看，用一棵还是两棵线段树维护无所谓</p>
 <p>我们只需要保证对于$mif=0$的区间算出的信息是正确的，设一个段$[kl,kr]$，记区间询问最大cnt为变量mxc，然后区间所有段的mxc和为sum，mif不为0的区间得出的sum并没有直接意义</p>
 <p>如何合并两侧的信息？发现需要记录$mif、mif最左边的点mifl、最右边的点mifr$</p>
@@ -660,14 +660,14 @@
 <p>$sum[x]=sum[lc]+sum[rc]-mxc(mifr[lc]+1..mid)-mxc(mid+1..mifl[rc])+mxc(mifr[lc]+1..mifl[rc])$</p>
 <p>若$mif[lc]&lt;mif[rc]$：$sum[x]=sum[lc]-mxc(mifr[lc]+1,mid)+mxc(mifr[lc]+1,r)$</p>
 <p>若$mif[lc]&gt;mif[rc]$：$sum[x]=sum[rc]-mxc(mid+1,mifr[rc])+mxc(l,mifr[rc])$</p>
-<p>最后$ans=n-sum[root]$，修改就是【单点改cnt而改mxc，更新包含这个点的区间的f和sum】、【区间加减f，sum不变，记录加法标记tag即可】</p>
+<p>最后$ans=n-sum[root]$，修改就是「单点改cnt而改mxc，更新包含这个点的区间的f和sum」、「区间加减f，sum不变，记录加法标记tag即可」</p>
 <p>维护sum需要调用log次查询mxc，$O(qlog^2n)$，<a href="https://codeforces.com/contest/1209/submission/62335507" target="_blank" rel="noopener">code</a></p>
 
 </div></div>
 <h3 id="CF97E-Leaders"><a href="#CF97E-Leaders" class="headerlink" title="CF97E Leaders"></a><a href="https://codeforces.com/problemset/problem/97/E" target="_blank" rel="noopener">CF97E Leaders</a></h3><p>题意： n个点m条边的简单无向图，q次询问两点间是否存在长度为奇数的简单路径，$n,m,q \le 1e5$</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>一般图两点间路径会想到处理出一棵生成树，那肯定是选择dfs搜索树方便，因为没有横叉边</p>
-<p><strong>结论</strong>：对于无向图，一个点双<strong>内</strong>如果有奇环，那么内部每条边都至少在一个奇环中；点双内有奇环的充要条件是在dfs搜索树上存在一个【一条非树边+若干树边】组成的奇环（这个奇环上所有边一定都在同一个点双内）；</p>
+<p><strong>结论</strong>：对于无向图，一个点双<strong>内</strong>如果有奇环，那么内部每条边都至少在一个奇环中；点双内有奇环的充要条件是在dfs搜索树上存在一个「一条非树边+若干树边」组成的奇环（这个奇环上所有边一定都在同一个点双内）；</p>
 <p>两个点间存在奇数长度简单路径的充要条件是：两点树上距离为奇数，或，两点树上路径中至少一条边在至少一个奇环中</p>
 <p>两个点间存在偶数长度简单路径的充要条件是：两点树上距离为偶数，或，两点树上路径中至少一条边在至少一个奇环中</p>
 <p>于是搞出搜索树，对于每个点记录回溯边，每个点双只是用回溯边找奇环确保复杂度，然后树上差分回答询问即可</p>
@@ -676,14 +676,13 @@
 </div></div>
 <h3 id="CF917D-Stranger-Trees"><a href="#CF917D-Stranger-Trees" class="headerlink" title="CF917D Stranger Trees"></a><a href="https://codeforces.com/problemset/problem/917/D" target="_blank" rel="noopener">CF917D Stranger Trees</a></h3><p><strong>题意：</strong>给出一棵n个节点的带标号树，要求对于每个k，求出有多少棵生成树满足恰好有k条边与原树相同，$n \le 1e2$<br><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>如果直接搞多项式，x的指数表示多少条重复的边，直接换元矩阵树定理+拉格朗日插值，$O(n^4+n^3)$</p>
-<p>然后因为一开始做的时候并不会基尔霍夫，接下来介绍如何容斥计数</p>
+<p>然后因为一开始做的时候并不会基尔霍夫，接下来介绍如何容斥计数（而且明显这个更有前途）</p>
 <p>设f恰好g至少i条边被使用，$g_i=\sum_{j=i}^{n-1}C_j^i f_j，二项式反演得，f_i=\sum_{j=i}^{n-1} (-1)^{j-i} C_j^i g_j$</p>
-<p>然后一开始想着用<strong>Cayley公式的推论</strong>，结果因为还要背包度数，复杂度一路直接炸到$O(n^6)$，还不知道怎么优化……</p>
-<p>高妙一点的做法，拓展一下<strong>Cayley公式</strong>：设缩成k个<strong>块</strong>，设<strong>块</strong>大小为$siz_t$，我们做$k-2$次找叶子<strong>块</strong>，每次找到的时候考虑连向<strong>点</strong>，那么就是$n^{k-2}$，然后这样我们已经<strong>直接连</strong>了k-2条边，剩下的两个<strong>块</strong>之间还要连一条边，已经连的边还没有确定从自己里面哪个<strong>点</strong>伸出去，所以乘上$\prod_{t=1}^k siz_t$<br>$$<br>明显可以直接树形背包，设f(x,cnt,siz_t)表示目前变成cnt个块（不包括子树根节点），子树根节点所在块大小为siz_t \\<br>new-f(x,cnt1+cnt2,siz1+siz2)+=f(x,cnt1,siz1)*f(son,cnt2,siz2)\\<br>new-f(x,cnt1+cnt2+1,siz1)+=f(x,cnt1,siz1)*f(son,cnt2,siz2)*siz2\\<br>g_{n-k}=\sum f(1,k,siz)*siz*n^{n-k-2}，经典树形背包，O(n^4) \\<br>观察发现可以设ff(x,cnt)=\sum_{siz} f(x,cnt,siz),g(x,cnt)=\sum_{siz} f(x,cnt,siz)*siz \\<br>new-g(x,cnt1+cnt2)+=g(x,cnt1)*ff(son,cnt2)+ff(x,cnt1)*g(son,cnt2) \\<br>new-ff(x,cnt1+cnt2)+=ff(x,cnt1)*ff(son,cnt2) \\<br>new-g(x,cnt1+cnt2+1)+=g(x,cnt1)*g(son,cnt2) \\<br>new-ff(x,cnt1+cnt2+1)+=ff(x,cnt1)*g(son,cnt2) \\<br>g_{n-k}=g(1,k-1)*n^{n-k-2}，复杂度降低为O(n^2)<br>$$</p>
+<p>生成树考虑<a href="9763.html#Prufer序列">Cayley公式的推论</a><br>$$<br>明显可以直接树形背包，设f(x,cnt,siz_t)表示目前变成cnt个块（不包括子树根节点），子树根节点所在块大小为siz_t \\<br>new-f(x,cnt1+cnt2,siz1+siz2)+=f(x,cnt1,siz1)*f(son,cnt2,siz2)\\<br>new-f(x,cnt1+cnt2+1,siz1)+=f(x,cnt1,siz1)*f(son,cnt2,siz2)*siz2\\<br>g_{n-k}=\sum f(1,k,siz)*siz*n^{n-k-2}，经典树形背包，O(n^4) \\<br>观察发现可以设ff(x,cnt)=\sum_{siz} f(x,cnt,siz),g(x,cnt)=\sum_{siz} f(x,cnt,siz)*siz \\<br>new-g(x,cnt1+cnt2)+=g(x,cnt1)*ff(son,cnt2)+ff(x,cnt1)*g(son,cnt2) \\<br>new-ff(x,cnt1+cnt2)+=ff(x,cnt1)*ff(son,cnt2) \\<br>new-g(x,cnt1+cnt2+1)+=g(x,cnt1)*g(son,cnt2) \\<br>new-ff(x,cnt1+cnt2+1)+=ff(x,cnt1)*g(son,cnt2) \\<br>g_{n-k}=g(1,k-1)*n^{n-k-2}，复杂度降低为O(n^2)<br>$$</p>
 <p><a href="https://codeforces.com/problemset/submission/917/63417698" target="_blank" rel="noopener">code</a></p>
 
 </div></div></p>
-<h3 id="loj2575-「TJOI2018」party"><a href="#loj2575-「TJOI2018」party" class="headerlink" title="loj2575 「TJOI2018」party"></a><a href="https://loj.ac/problem/2575" target="_blank" rel="noopener">loj2575 「TJOI2018」party</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<h3 id="loj2575「TJOI2018」party"><a href="#loj2575「TJOI2018」party" class="headerlink" title="loj2575「TJOI2018」party"></a><a href="https://loj.ac/problem/2575" target="_blank" rel="noopener">loj2575「TJOI2018」party</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>如果给出两个串求最长公共子序列，就是经典的dp即$f(i,j)=max\ f(i-1,j-1)+[S_i=T_j],f(i-1,j)$</p>
 <p>注意到A长B短，考虑把dp状态放到状态里面（所谓dp套dp？）计数，$f(|A|,state)=dp状态恰为state的A的数量$</p>
 <p>考虑state怎么设计，注意到$f(a,b)最多比f(a,b-1)多1$，在state里面放差分后的$f(|A|,b)$，状态数为$2^{|B|}$</p>
@@ -692,7 +691,7 @@
 
 </div></div>
 <h3 id="loj2048「HNOI2016」最小公倍数"><a href="#loj2048「HNOI2016」最小公倍数" class="headerlink" title="loj2048「HNOI2016」最小公倍数"></a><a href="https://loj.ac/problem/2048" target="_blank" rel="noopener">loj2048「HNOI2016」最小公倍数</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>其实就是询问只用$【a_i \le a且b_i \le b】的边$形成连通块，x和y是否在相同连通块且连通块内$max(a_i)=a,max(b_i)=b$</p>
+<p>其实就是询问只用$「a_i \le a且b_i \le b」的边$形成连通块，x和y是否在相同连通块且连通块内$max(a_i)=a,max(b_i)=b$</p>
 <p>首先max其实没啥用，因为并查集轻松维护这个信息</p>
 <p>一开始以为把边做成两个序列分别按a和b排序，然后莫队，只在第二次碰到时加入，第一次去掉时删除，然而仔细想想发现这东西并不是并查集的末尾撤回，光荣假掉</p>
 <p>但我们可以考虑一下将边按照a分块，每个块内b递增，然后询问也挂到块上，设块大小为B</p>
@@ -759,7 +758,7 @@
 <h3 id="GYM101102D-Rectangles"><a href="#GYM101102D-Rectangles" class="headerlink" title="GYM101102D Rectangles"></a><a href="https://codeforces.com/gym/101102/problem/D" target="_blank" rel="noopener">GYM101102D Rectangles</a></h3><p><strong>题意：</strong>给出一个矩形，问有多少个子矩形满足内部只有一种元素，$n,m \le 1e3$</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>对于每列，把相同元素缩成一个块；枚举矩形的上边界，求出以这个上边界为起点向下，每列能延伸多少</p>
-<p>下边界从下往上扫，记录当前的答案，每次通过预处理的东西精准找到【再往上都是完全相同元素】的列，用并查集合并同色可用块并更新当前答案，每个下边界都把答案累计到总和里面。$O(n*(n+m)*\alpha (m))$，<a href="https://codeforces.com/gym/101102/my#" target="_blank" rel="noopener">code</a></p>
+<p>下边界从下往上扫，记录当前的答案，每次通过预处理的东西精准找到「再往上都是完全相同元素」的列，用并查集合并同色可用块并更新当前答案，每个下边界都把答案累计到总和里面。$O(n*(n+m)*\alpha (m))$，<a href="https://codeforces.com/gym/101102/my#" target="_blank" rel="noopener">code</a></p>
 
 </div></div>
 <h3 id="loj6609-无意识的石子堆"><a href="#loj6609-无意识的石子堆" class="headerlink" title="loj6609 无意识的石子堆"></a><a href="https://loj.ac/problem/6609" target="_blank" rel="noopener">loj6609 无意识的石子堆</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -775,6 +774,19 @@
 <p>$f(i,j)=f(i+1,j-1),如果存在障碍点(t,a_t),f(t-1,a_t+1)=f(t,a_t+1),f(t,a_t)=\infty$</p>
 <p>发现只需要除了特殊点，只需要移动一下下标，可以指针实现，$O(n+m)$</p>
 <p>要特判n=1……因为是空集，<a href="https://codeforces.com/contest/1236/submission/63357702" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="CF360E-Levko-and-Game"><a href="#CF360E-Levko-and-Game" class="headerlink" title="CF360E Levko and Game"></a><a href="https://codeforces.com/problemset/problem/360/E" target="_blank" rel="noopener">CF360E Levko and Game</a></h3><p>题意：给出一个n点m+k边的有向图，给出定点s1、s2、f，前m条边权值固定，后k条边是区间$[l_i,r_i]$，构造边权方案使得$s1\to f&lt;s2 \to f$，不行就问能否平手，或必败，$n,m \le 1e4,k \le 1e2$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>等价于最大化$(s2 \to f)-(s1 \to f)$，注意终点相同，然后这种选择区间内数的题目猜一手结论只用到两个端点；因为是最短路，肯定是先$r_i$然后弄小会好做</p>
+<p>这样做一次最短路后，先追求WIN，注意到$\forall (x \to y) \in E,若d1[x]&lt;d2[x]，将边改成l_i不会使d2[f]-d1[f]从正变0或负，也不会从0变负$，所以每次找出这种边改掉即可；如果还是LOSE就追求DRAW，条件改成$d1[x] \le d2[x]$即可</p>
+<p>$O(k*mlogm)$，<a href="https://codeforces.com/contest/360/submission/63758118" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="loj2710「BalkanOI-2018-Day1」Election"><a href="#loj2710「BalkanOI-2018-Day1」Election" class="headerlink" title="loj2710「BalkanOI 2018 Day1」Election"></a><a href="https://loj.ac/problem/2710" target="_blank" rel="noopener">loj2710「BalkanOI 2018 Day1」Election</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>主要想说下，给出一个串要怎么求「每个前缀后缀都非负」</p>
+<p>考虑贪心，显然只会删除-1，从后往前贪心地将后缀保证合法后（即只在不得不删的时候删，这样保证了删掉的-1一定是靠前的），保证前缀的答案就是$-min(0,所有前缀和)$，正确性还是比较明显的</p>
+<p>现在区间询问，离线后用线段树维护前缀和就好了</p>
 
 </div></div>
 
@@ -914,7 +926,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -939,7 +951,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1348,7 +1362,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1411,7 +1429,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#loj2049「HNOI2016」网络"><span class="nav-text">loj2049「HNOI2016」网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU6634-Salty-Fish"><span class="nav-text">HDU6634 Salty Fish</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF997E-Good-Subsegments"><span class="nav-text">CF997E Good Subsegments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU5709-Claris-Loves-Painting"><span class="nav-text">HDU5709 Claris Loves Painting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1209G2-Into-Blocks"><span class="nav-text">CF1209G2 Into Blocks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF97E-Leaders"><span class="nav-text">CF97E Leaders</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF917D-Stranger-Trees"><span class="nav-text">CF917D Stranger Trees</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj2575-「TJOI2018」party"><span class="nav-text">loj2575 「TJOI2018」party</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj2048「HNOI2016」最小公倍数"><span class="nav-text">loj2048「HNOI2016」最小公倍数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF76A-Gift"><span class="nav-text">CF76A Gift</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF892E-Envy"><span class="nav-text">CF892E Envy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF743E-Vladik-and-cards"><span class="nav-text">CF743E Vladik and cards</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF599E-Sandy-and-Nuts"><span class="nav-text">CF599E Sandy and Nuts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF595E-Edo-and-Magnets"><span class="nav-text">CF595E Edo and Magnets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF908D-New-Year-and-Arbitrary-Arrangement"><span class="nav-text">CF908D New Year and Arbitrary Arrangement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1174E-Ehab-and-the-Expected-GCD-Problem"><span class="nav-text">CF1174E Ehab and the Expected GCD Problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF506D-Mr-Kitayuta’s-Colorful-Graph"><span class="nav-text">CF506D Mr. Kitayuta’s Colorful Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GYM101102D-Rectangles"><span class="nav-text">GYM101102D Rectangles</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj6609-无意识的石子堆"><span class="nav-text">loj6609 无意识的石子堆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1236E-Alice-and-the-Unfair-Game"><span class="nav-text">CF1236E Alice and the Unfair Game</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#loj2049「HNOI2016」网络"><span class="nav-text">loj2049「HNOI2016」网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU6634-Salty-Fish"><span class="nav-text">HDU6634 Salty Fish</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF997E-Good-Subsegments"><span class="nav-text">CF997E Good Subsegments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU5709-Claris-Loves-Painting"><span class="nav-text">HDU5709 Claris Loves Painting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1209G2-Into-Blocks"><span class="nav-text">CF1209G2 Into Blocks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF97E-Leaders"><span class="nav-text">CF97E Leaders</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF917D-Stranger-Trees"><span class="nav-text">CF917D Stranger Trees</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj2575「TJOI2018」party"><span class="nav-text">loj2575「TJOI2018」party</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj2048「HNOI2016」最小公倍数"><span class="nav-text">loj2048「HNOI2016」最小公倍数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF76A-Gift"><span class="nav-text">CF76A Gift</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF892E-Envy"><span class="nav-text">CF892E Envy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF743E-Vladik-and-cards"><span class="nav-text">CF743E Vladik and cards</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF599E-Sandy-and-Nuts"><span class="nav-text">CF599E Sandy and Nuts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF595E-Edo-and-Magnets"><span class="nav-text">CF595E Edo and Magnets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF908D-New-Year-and-Arbitrary-Arrangement"><span class="nav-text">CF908D New Year and Arbitrary Arrangement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1174E-Ehab-and-the-Expected-GCD-Problem"><span class="nav-text">CF1174E Ehab and the Expected GCD Problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF506D-Mr-Kitayuta’s-Colorful-Graph"><span class="nav-text">CF506D Mr. Kitayuta’s Colorful Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GYM101102D-Rectangles"><span class="nav-text">GYM101102D Rectangles</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj6609-无意识的石子堆"><span class="nav-text">loj6609 无意识的石子堆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1236E-Alice-and-the-Unfair-Game"><span class="nav-text">CF1236E Alice and the Unfair Game</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF360E-Levko-and-Game"><span class="nav-text">CF360E Levko and Game</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj2710「BalkanOI-2018-Day1」Election"><span class="nav-text">loj2710「BalkanOI 2018 Day1」Election</span></a></li></ol></div>
             
 
           </div>

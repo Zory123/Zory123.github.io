@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="差分约束，就是要满足一定条件(形如ax-ay&amp;lt;=c)求最值的问题。可以应用于求解不等式 其实就是把数形结合起来入门教程自行搜索">
+  <meta name="description" content="差分约束">
 <meta name="keywords" content="差分约束">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】04图论-6差分约束">
+<meta property="og:title" content="「OI之路」04图论-6差分约束">
 <meta property="og:url" content="http://zory.ink/posts/62.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="差分约束，就是要满足一定条件(形如ax-ay&amp;lt;=c)求最值的问题。可以应用于求解不等式 其实就是把数形结合起来入门教程自行搜索">
+<meta property="og:description" content="差分约束">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-16T01:46:57.640Z">
+<meta property="og:updated_time" content="2019-12-09T04:21:42.623Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】04图论-6差分约束">
-<meta name="twitter:description" content="差分约束，就是要满足一定条件(形如ax-ay&amp;lt;=c)求最值的问题。可以应用于求解不等式 其实就是把数形结合起来入门教程自行搜索">
+<meta name="twitter:title" content="「OI之路」04图论-6差分约束">
+<meta name="twitter:description" content="差分约束">
 
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】04图论-6差分约束 | Zory的个人博客</title>
+  <title>「OI之路」04图论-6差分约束 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】04图论-6差分约束
+          <h2 class="post-title" itemprop="name headline">「OI之路」04图论-6差分约束
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-16 09:46:57" itemprop="dateModified" datetime="2019-10-16T09:46:57+08:00">2019-10-16</time>
+                <time title="修改时间：2019-12-09 12:21:42" itemprop="dateModified" datetime="2019-12-09T12:21:42+08:00">2019-12-09</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/62.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】04图论-6差分约束">
+            <span id="/posts/62.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」04图论-6差分约束">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -611,10 +611,10 @@
       
 
       
-        <p>差分约束，就是要满足一定条件(形如ax-ay&lt;=c)求最值的问题。<br>可以应用于求解不等式</p>
-<p>其实就是把数形结合起来<br>入门教程自行搜索</p>
+        <p>差分约束</p>
 <a id="more"></a>
-<h3 id="入门练习"><a href="#入门练习" class="headerlink" title="入门练习"></a>入门练习</h3><p>Vijos1094<br><a href="e843.html">关系运算图</a><br>Bzoj2330<br><a href="cc92.html">糖果</a></p>
+<h3 id="基础应用"><a href="#基础应用" class="headerlink" title="基础应用"></a>基础应用</h3><p>存在若干变量，给出形如$a_i-a_j \le d$的限制，问a最值</p>
+<p>入门练习：<br><a href="e843.html">Vijos1094关系运算图</a><br><a href="cc92.html">Bzoj2330糖果</a></p>
 <h3 id="bzoj2788-Poi2012-Festival"><a href="#bzoj2788-Poi2012-Festival" class="headerlink" title="bzoj2788 [Poi2012]Festival"></a>bzoj2788 [Poi2012]Festival</h3><p>对于$x_a+1=x_b,a \to b=1,b \to a=-1$；对于$x_a\le x_b,a \to b,0$</p>
 <p>考虑怎么求取值最大化，如果你对其缩点，两个连通块之间的边权是w的话等价于连接的那两个变量的差至少是w，你发现这个对于我们求最多取值没有意义，在dag上我们可以给左边那个即所有连向它的向上无限平移来满足要求，所以连通块间取值其实可以无交。</p>
 <p>对于连通块内，首先不能有正环否则无解；注意到边权只有0、-1、1，最短路径权值和表示两个变量的最小差，那么可知这个连通块的贡献为$1+max_{x,y} dis(x\to y)$，可以floyd解决，$O(n^3)$</p>
@@ -632,42 +632,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/e843.html" rel="bookmark">【Vijos1094】关系运算图</a></div>
+      <div class="popular-posts-title"><a href="/posts/e843.html" rel="bookmark">「Vijos1094」关系运算图</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/34e8.html" rel="bookmark">【Poj1364】差分约束2国王</a></div>
+      <div class="popular-posts-title"><a href="/posts/34e8.html" rel="bookmark">「Poj1364」差分约束2国王</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/a10d.html" rel="bookmark">【Caioj1400】差分约束1区间</a></div>
+      <div class="popular-posts-title"><a href="/posts/a10d.html" rel="bookmark">「Caioj1400」差分约束1区间</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/75d0.html" rel="bookmark">【Poj1716】差分约束4整数区间</a></div>
+      <div class="popular-posts-title"><a href="/posts/75d0.html" rel="bookmark">「Poj1716」差分约束4整数区间</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3a06.html" rel="bookmark">【Caioj1402】差分约束3消息可靠吗</a></div>
+      <div class="popular-posts-title"><a href="/posts/3a06.html" rel="bookmark">「Caioj1402」差分约束3消息可靠吗</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/cc92.html" rel="bookmark">【Bzoj2330】【Luogu3275】糖果</a></div>
+      <div class="popular-posts-title"><a href="/posts/cc92.html" rel="bookmark">「Bzoj2330」「Luogu3275」糖果</a></div>
       
     </li>
   
@@ -685,7 +685,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/62.html" title="【OI之路】04图论-6差分约束">http://zory.ink/posts/62.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/62.html" title="「OI之路」04图论-6差分约束">http://zory.ink/posts/62.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -733,8 +733,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/b399.html" rel="prev" title="【OI之路】04图论-7生成树">
-                【OI之路】04图论-7生成树 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/b399.html" rel="prev" title="「OI之路」04图论-7生成树">
+                「OI之路」04图论-7生成树 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -812,7 +812,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -837,7 +837,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1246,7 +1248,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1309,7 +1315,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#入门练习"><span class="nav-text">入门练习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj2788-Poi2012-Festival"><span class="nav-text">bzoj2788 [Poi2012]Festival</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础应用"><span class="nav-text">基础应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj2788-Poi2012-Festival"><span class="nav-text">bzoj2788 [Poi2012]Festival</span></a></li></ol></div>
             
 
           </div>

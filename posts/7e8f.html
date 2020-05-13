@@ -95,14 +95,14 @@
   <meta name="description" content="SourceWC2016uoj172">
 <meta name="keywords" content="难度2,乱搞">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【WC2016】论战捆竹竿">
+<meta property="og:title" content="「WC2016」论战捆竹竿">
 <meta property="og:url" content="http://zory.ink/posts/7e8f.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="SourceWC2016uoj172">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-02T09:11:28.178Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【WC2016】论战捆竹竿">
+<meta name="twitter:title" content="「WC2016」论战捆竹竿">
 <meta name="twitter:description" content="SourceWC2016uoj172">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【WC2016】论战捆竹竿 | Zory的个人博客</title>
+  <title>「WC2016」论战捆竹竿 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【WC2016】论战捆竹竿
+          <h2 class="post-title" itemprop="name headline">「WC2016」论战捆竹竿
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-02 17:11:28" itemprop="dateModified" datetime="2019-12-02T17:11:28+08:00">2019-12-02</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/7e8f.html" class="post-meta-item leancloud_visitors" data-flag-title="【WC2016】论战捆竹竿">
+            <span id="/posts/7e8f.html" class="post-meta-item leancloud_visitors" data-flag-title="「WC2016」论战捆竹竿">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,11 +615,12 @@
 <a id="more"></a>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p><a href="https://files-cdn.cnblogs.com/files/Itst/T2.pdf" target="_blank" rel="noopener">官方题解</a></p>
-<p>先讲讲部分分热热身，显然是个border相关的无限背包<br>因为长度n可以随便加，那么这就是一个循环图（模数为n）的可达性统计<br>考虑求到达这个余数需要的最小长度（和<a href="3003.html">这题</a>的思想类似），暴力dij是带log的，可能被卡<br>因为边的种类最多n个，考虑每种边L的贡献（border为n-L）<br>注意到从每个点出发，回到这里需要走lcm(L,n)，即lcm(L,n)/L步<br>因为每个点只会在一个环里面，故环个数为gcd(L,n)（其实你不算这个也没什么啦）<br>从每个环最小的位置开始更新，这样就能少一个log<br>【这里的模型挺经典的】<br>然后还有20分，是w较小的，众所周知存在性无限背包可以用bitset优化，时间复杂度为 O(Twn/32)<br>算出来相同复杂度的分治+fft据说会被卡常</p>
+<p>先讲讲部分分热热身，显然是个border相关的无限背包<br>因为长度n可以随便加，那么这就是一个循环图（模数为n）的可达性统计<br>考虑求到达这个余数需要的最小长度（和<a href="3003.html">这题</a>的思想类似），暴力dij是带log的，可能被卡<br>因为边的种类最多n个，考虑每种边L的贡献（border为n-L）<br>注意到从每个点出发，回到这里需要走lcm(L,n)，即lcm(L,n)/L步<br>因为每个点只会在一个环里面，故环个数为gcd(L,n)（其实你不算这个也没什么啦）<br>从每个环最小的位置开始更新，这样就能少一个log<br>「这里的模型挺经典的」<br>然后还有20分，是w较小的，众所周知存在性无限背包可以用bitset优化，时间复杂度为 O(Twn/32)<br>算出来相同复杂度的分治+fft据说会被卡常</p>
 <p>接下来的部分需要一些<a href="5f38.html">前置知识</a><br>因为这个border的等差数列只有log个，考虑利用等差数列的性质<br>设当前等差数列首项a和公差d，长ln，很自然的想法是考虑利用公差<br>不妨把n个点按%d的余数分组，那么点i会更新(i+a)%n开始的一段连续区间，考虑线段树优化建图<br>那么log组，每组O(n)点，O(nlog(n/d))条边，跑dij，不知为何题解上说是双log的，个人感觉d可能=1</p>
 <p>我们需要更优秀的做法，观察上面的做法，瓶颈依旧是转移边过多（尽管已经尽力优化为一个log了）<br>再考虑利用首项a。我们之所以只建了n个点，是因为得到最小代价后，后面是可以任意用的<br>类似的，当前首项a也是可以任意用的，考虑把n个点改为a个点会发生什么：<br>假设我们已经处理完了前面的等差数列，而且经过处理现在恰好a个点，而且更新完毕，现在考虑将新的等差数列加入背包<br>因为转移边中a已经被模去了，考虑d，和前面类似的分为gcd(a,d)个环，每个环相邻差为d（模意义下）<br>然后和上面类似取出每个环，从环最小的值所在位置开始更新，这次一次转移ln-1种<br>$f(i)=min:f(i),f(j)+d \times (i-j)+a,j&lt;i,j \geq i-(ln-1) \times d$<br>这个显然可以单调队列优化</p>
 <p>剩下的唯一问题就是如何把当前的答案A贡献到下次的答案B中？<br>$B[A_i\%b] \gets A_i,B[(i+a)\%b] \gets B[i]+a$ ，注意这里只有一个a，因为其他a已经被统计了<br>第一步直接扔过去，第二步又是个无限背包，那我们再次分为gcd(a,b)个环去更新（和暴力一样）</p>
-<p>时间复杂度为 O(nlogn)<br>uoj要卡常</p>
+<p>时间复杂度为 O(nlogn)<br>uoj要卡常,luogu的原数据还是很快的</p>
+<p>upd：目前被hackTLE了，不想修了qwq</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2019</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">	<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">	<span class="comment">//#define double long double</span></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line">	<span class="keyword">const</span> ll LLINF=<span class="number">0x3f3f3f3f3f3f3f3f</span>ll;</div><div class="line">	<span class="function">ll <span class="title">qread</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		ll ans=<span class="number">0</span>;<span class="keyword">char</span> c=getchar();<span class="keyword">int</span> f=<span class="number">1</span>;</div><div class="line">		<span class="keyword">while</span>(c&lt;<span class="string">'0'</span> or c&gt;<span class="string">'9'</span>) &#123;<span class="keyword">if</span>(c==<span class="string">'-'</span>) f=<span class="number">-1</span>;c=getchar();&#125;</div><div class="line">		<span class="keyword">while</span>(<span class="string">'0'</span>&lt;=c and c&lt;=<span class="string">'9'</span>) ans=ans*<span class="number">10</span>+c-<span class="string">'0'</span>,c=getchar();</div><div class="line">		<span class="keyword">return</span> ans*f;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">write</span><span class="params">(ll num)</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">if</span>(num&lt;<span class="number">0</span>) &#123;num=-num;<span class="built_in">putchar</span>(<span class="string">'-'</span>);&#125;</div><div class="line">		<span class="keyword">if</span>(num&gt;<span class="number">9</span>) write(num/<span class="number">10</span>);</div><div class="line">		<span class="built_in">putchar</span>(<span class="string">'0'</span>+num%<span class="number">10</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">writeln</span><span class="params">(<span class="keyword">int</span> num)</span></span>&#123;write(num);<span class="built_in">puts</span>(<span class="string">""</span>);&#125;</div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> FR first</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> SE second</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> pr pair<span class="meta-string">&lt;int,int&gt;</span></span></div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">chmax</span><span class="params">(ll &amp;x,<span class="keyword">const</span> ll y)</span> </span>&#123;x=x&gt;y?x:y;&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">chmin</span><span class="params">(ll &amp;x,<span class="keyword">const</span> ll y)</span> </span>&#123;x=x&lt;y?x:y;&#125;</div><div class="line"></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> sum(x,mm) ((x)&gt;=(mm)?(x)-(mm):(x))</span></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">5e5</span>+<span class="number">10</span>;</div><div class="line">	<span class="keyword">struct</span> Data&#123;<span class="keyword">int</span> a,d,ln;&#125;;</div><div class="line">	ll f[MAX_N],g[MAX_N];<span class="keyword">bool</span> v[MAX_N];<span class="keyword">int</span> mi;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">getcc</span><span class="params">(<span class="keyword">int</span> st,<span class="keyword">int</span> kk,<span class="keyword">int</span> aa)</span></div><div class="line">	</span>&#123;</div><div class="line">        v[st]=<span class="number">1</span>;mi=st;<span class="keyword">int</span> tt=sum(st+kk,aa);</div><div class="line">		<span class="keyword">while</span>(tt!=st)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span>(f[tt]&lt;f[mi]) mi=tt;</div><div class="line">			v[tt]=<span class="number">1</span>;tt=sum(tt+kk,aa);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	pr q[MAX_N];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">calc</span><span class="params">(Data now,<span class="keyword">int</span> lst)</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;now.a;i++) g[i]=LLINF;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;lst;i++) chmin(g[f[i]%now.a],f[i]);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;now.a;i++) v[i]=<span class="number">0</span>,f[i]=g[i];</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;now.a;i++) <span class="keyword">if</span>(!v[i])</div><div class="line">		&#123;</div><div class="line">            <span class="keyword">int</span> m=lst%now.a;getcc(i,m,now.a);</div><div class="line">            <span class="keyword">int</span> tt=mi;</div><div class="line">            <span class="keyword">while</span>(<span class="number">1</span>)</div><div class="line">            &#123;</div><div class="line">                chmin(f[sum(tt+m,now.a)],f[tt]+lst);</div><div class="line">                tt=sum(tt+m,now.a);<span class="keyword">if</span>(tt==mi) <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;now.a;i++) v[i]=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;now.a;i++) <span class="keyword">if</span>(!v[i])</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> m=now.d%now.a;getcc(i,m,now.a);</div><div class="line">			<span class="keyword">int</span> tou=<span class="number">1</span>,wei=<span class="number">1</span>;q[<span class="number">1</span>]=MP(mi,<span class="number">0</span>);</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> tt=sum(mi+m,now.a),tmp=<span class="number">1</span>;tt!=mi;tt=sum(tt+m,now.a),tmp++)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">while</span>(tou&lt;=wei and q[tou].SE+(now.ln<span class="number">-1</span>)&lt;tmp) tou++;</div><div class="line">				<span class="keyword">if</span>(tou&lt;=wei) chmin(f[tt],f[q[tou].FR]+ll(tmp-q[tou].SE)*now.d+now.a);</div><div class="line">				<span class="keyword">while</span>(tou&lt;=wei and f[q[wei].FR]-f[tt]&gt;=ll(q[wei].SE-tmp)*now.d) wei--;</div><div class="line">				q[++wei]=MP(tt,tmp);</div><div class="line">            &#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	Data s[<span class="number">30</span>];<span class="keyword">int</span> cnt=<span class="number">0</span>;</div><div class="line">	<span class="keyword">char</span> str[MAX_N];<span class="keyword">int</span> nxt[MAX_N];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">int</span> T;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</div><div class="line">		<span class="keyword">while</span>(T--)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> n;ll w;<span class="built_in">scanf</span>(<span class="string">"%d%lld"</span>,&amp;n,&amp;w);gets(str+<span class="number">1</span>);gets(str+<span class="number">1</span>);</div><div class="line">			nxt[<span class="number">1</span>]=<span class="number">0</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> j=nxt[i<span class="number">-1</span>];<span class="keyword">while</span>(j and str[j+<span class="number">1</span>]!=str[i]) j=nxt[j];</div><div class="line">				nxt[i]=j+(str[j+<span class="number">1</span>]==str[i]);</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			cnt=<span class="number">0</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k=nxt[n];<span class="number">1</span>;k=nxt[k])</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> tt=n-k;</div><div class="line">				<span class="keyword">if</span>(cnt&gt;<span class="number">0</span> and s[cnt].ln==<span class="number">1</span>) s[cnt].ln++,s[cnt].d=(tt-s[cnt].a);</div><div class="line">				<span class="keyword">else</span> <span class="keyword">if</span>(cnt&gt;<span class="number">0</span> and tt==s[cnt].a+s[cnt].ln*s[cnt].d) s[cnt].ln++;</div><div class="line">				<span class="keyword">else</span> s[++cnt]=(Data)&#123;tt,<span class="number">0</span>,<span class="number">1</span>&#125;;</div><div class="line">				<span class="keyword">if</span>(k==<span class="number">0</span>) <span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">int</span> lst=n;<span class="built_in">memset</span>(f,<span class="number">0x3f</span>,<span class="keyword">sizeof</span> f);f[<span class="number">0</span>]=n;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=cnt;i++) calc(s[i],lst),lst=s[i].a;</div><div class="line">			ll ans=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;lst;i++) <span class="keyword">if</span>(f[i]&lt;=w) ans+=(w-f[i])/lst+<span class="number">1</span>;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	srand(time(<span class="number">0</span>));</div><div class="line">	mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
@@ -636,28 +637,28 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">【CF553E】Kyoya and Train</a></div>
+      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">「CF553E」Kyoya and Train</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8125.html" rel="bookmark">【SHOI2008】汉诺塔</a></div>
+      <div class="popular-posts-title"><a href="/posts/8125.html" rel="bookmark">「SHOI2008」汉诺塔</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8e88.html" rel="bookmark">【CF1110E】Magic Stones</a></div>
+      <div class="popular-posts-title"><a href="/posts/8e88.html" rel="bookmark">「CF1110E」Magic Stones</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b76f.html" rel="bookmark">【bzoj3136】brunhilda</a></div>
+      <div class="popular-posts-title"><a href="/posts/b76f.html" rel="bookmark">「bzoj3136」brunhilda</a></div>
       
     </li>
   
@@ -689,7 +690,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/7e8f.html" title="【WC2016】论战捆竹竿">http://zory.ink/posts/7e8f.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/7e8f.html" title="「WC2016」论战捆竹竿">http://zory.ink/posts/7e8f.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -729,8 +730,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/6eac.html" rel="next" title="【Ctsc2012】Cheat">
-                <i class="fa fa-chevron-left"></i> 【Ctsc2012】Cheat
+              <a href="/posts/6eac.html" rel="next" title="「Ctsc2012」Cheat">
+                <i class="fa fa-chevron-left"></i> 「Ctsc2012」Cheat
               </a>
             
           </div>
@@ -739,8 +740,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/4085.html" rel="prev" title="【51nod1647】小Z的trie">
-                【51nod1647】小Z的trie <i class="fa fa-chevron-right"></i>
+              <a href="/posts/4085.html" rel="prev" title="「51nod1647」小Z的trie">
+                「51nod1647」小Z的trie <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -818,7 +819,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -843,7 +844,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1252,7 +1255,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeNOIP2006 提高组 T1Luogu1063Caioj1525">
 <meta name="keywords" content="dp,难度1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Luogu1063】能量项链">
+<meta property="og:title" content="「Luogu1063」能量项链">
 <meta property="og:url" content="http://zory.ink/posts/d69c.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2006 提高组 T1Luogu1063Caioj1525">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Luogu1063】能量项链">
+<meta name="twitter:title" content="「Luogu1063」能量项链">
 <meta name="twitter:description" content="Source and JudgeNOIP2006 提高组 T1Luogu1063Caioj1525">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【Luogu1063】能量项链 | Zory的个人博客</title>
+  <title>「Luogu1063」能量项链 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Luogu1063】能量项链
+          <h2 class="post-title" itemprop="name headline">「Luogu1063」能量项链
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:48" itemprop="dateModified" datetime="2019-12-01T10:18:48+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/d69c.html" class="post-meta-item leancloud_visitors" data-flag-title="【Luogu1063】能量项链">
+            <span id="/posts/d69c.html" class="post-meta-item leancloud_visitors" data-flag-title="「Luogu1063」能量项链">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -613,7 +613,7 @@
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOIP2006 提高组 T1<br><a href="https://www.luogu.org/problemnew/show/P1063" target="_blank" rel="noopener">Luogu1063</a><br><a href="http://caioj.cn/problem.php?id=1525" target="_blank" rel="noopener">Caioj1525</a></p>
 <a id="more"></a>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>【Brief description】</strong><br>在Mars星球上，每个Mars人都随身佩带着一串能量项链。在项链上有N颗能量珠。<br>能量珠是一颗有头标记与尾标记的珠子，这些标记对应着某个正整数。<br>并且，对于相邻的两颗珠子，前一颗珠子的尾标记一定等于后一颗珠子的头标记。<br>因为只有这样，通过吸盘（吸盘是Mars人吸收能量的一种器官）的作用，<br>这两颗珠子才能聚合成一颗珠子，同时释放出可以被吸盘吸收的能量。<br>如果前一颗能量珠的头标记为m，尾标记为r，后一颗能量珠的头标记为r，尾标记为n，<br>则聚合后释放的能量为m*r*n（Mars单位），新产生的珠子的头标记为m，尾标记为n。<br>需要时，Mars人就用吸盘夹住相邻的两颗珠子，通过聚合得到能量，直到项链上只剩下一颗珠子为止。<br>显然，不同的聚合顺序得到的总能量是不同的，请你设计一个聚合顺序，使一串项链释放出的总能量最大。<br><strong>【Input】</strong><br>输入的第一行是一个正整数N，表示项链上珠子的个数。<br>第二行是N个用空格隔开的正整数，所有的数均不超过1000。<br>第i个数为第i颗珠子的头标记（1≤i≤N），<br>当1≤i&lt;N时，第i颗珠子的尾标记应该等于第i+1颗珠子的头标记。<br>第N颗珠子的尾标记应该等于第1颗珠子的头标记。<br><br>至于珠子的顺序，你可以这样确定：<br>将项链放到桌面上，不要出现交叉，<br>随意指定第一颗珠子，然后按顺时针方向确定其他珠子的顺序。<br><strong>【Output】</strong><br>一个正整数E，为一个最优聚合顺序所释放的总能量。<br><strong>【Limited conditions】</strong><br>4≤N≤100<br>E≤2.1*10^9<br><strong>【Sample input】</strong><br>4<br>2 3 5 10<br><strong>【Sample output】</strong><br>710<br><strong>【Sample explanation】</strong><br>4颗珠子的头标记与尾标记依次为(2，3) (3，5) (5，10) (10，2)。<br>我们用记号⊕表示两颗珠子的聚合操作，(j⊕k)表示第j，k两颗珠子聚合后所释放的能量。<br>则第4、1两颗珠子聚合后释放的能量为：<br>(4⊕1)=10*2*3=60。<br>这一串项链可以得到最优值的一个聚合顺序所释放的总能量为<br>((4⊕1)⊕2)⊕3）=10*2*3+10*3*5+10*5*10=710。<br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>「Brief description」</strong><br>在Mars星球上，每个Mars人都随身佩带着一串能量项链。在项链上有N颗能量珠。<br>能量珠是一颗有头标记与尾标记的珠子，这些标记对应着某个正整数。<br>并且，对于相邻的两颗珠子，前一颗珠子的尾标记一定等于后一颗珠子的头标记。<br>因为只有这样，通过吸盘（吸盘是Mars人吸收能量的一种器官）的作用，<br>这两颗珠子才能聚合成一颗珠子，同时释放出可以被吸盘吸收的能量。<br>如果前一颗能量珠的头标记为m，尾标记为r，后一颗能量珠的头标记为r，尾标记为n，<br>则聚合后释放的能量为m*r*n（Mars单位），新产生的珠子的头标记为m，尾标记为n。<br>需要时，Mars人就用吸盘夹住相邻的两颗珠子，通过聚合得到能量，直到项链上只剩下一颗珠子为止。<br>显然，不同的聚合顺序得到的总能量是不同的，请你设计一个聚合顺序，使一串项链释放出的总能量最大。<br><strong>「Input」</strong><br>输入的第一行是一个正整数N，表示项链上珠子的个数。<br>第二行是N个用空格隔开的正整数，所有的数均不超过1000。<br>第i个数为第i颗珠子的头标记（1≤i≤N），<br>当1≤i&lt;N时，第i颗珠子的尾标记应该等于第i+1颗珠子的头标记。<br>第N颗珠子的尾标记应该等于第1颗珠子的头标记。<br><br>至于珠子的顺序，你可以这样确定：<br>将项链放到桌面上，不要出现交叉，<br>随意指定第一颗珠子，然后按顺时针方向确定其他珠子的顺序。<br><strong>「Output」</strong><br>一个正整数E，为一个最优聚合顺序所释放的总能量。<br><strong>「Limited conditions」</strong><br>4≤N≤100<br>E≤2.1*10^9<br><strong>「Sample input」</strong><br>4<br>2 3 5 10<br><strong>「Sample output」</strong><br>710<br><strong>「Sample explanation」</strong><br>4颗珠子的头标记与尾标记依次为(2，3) (3，5) (5，10) (10，2)。<br>我们用记号⊕表示两颗珠子的聚合操作，(j⊕k)表示第j，k两颗珠子聚合后所释放的能量。<br>则第4、1两颗珠子聚合后释放的能量为：<br>(4⊕1)=10*2*3=60。<br>这一串项链可以得到最优值的一个聚合顺序所释放的总能量为<br>((4⊕1)⊕2)⊕3）=10*2*3+10*3*5+10*5*10=710。<br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>30min</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -636,42 +636,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/56ba.html" rel="bookmark">【NOIP13 D2T2】花匠</a></div>
+      <div class="popular-posts-title"><a href="/posts/56ba.html" rel="bookmark">「NOIP13 D2T2」花匠</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b524.html" rel="bookmark">【Hdu6403】Card</a></div>
+      <div class="popular-posts-title"><a href="/posts/b524.html" rel="bookmark">「Hdu6403」Card Game</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4670.html" rel="bookmark">【Bzoj1026】【Luogu2657】windy数</a></div>
+      <div class="popular-posts-title"><a href="/posts/4670.html" rel="bookmark">「Bzoj1026」「Luogu2657」windy数</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/87af.html" rel="bookmark">【Luogu1018】乘积最大</a></div>
+      <div class="popular-posts-title"><a href="/posts/87af.html" rel="bookmark">「Luogu1018」乘积最大</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/2e88.html" rel="bookmark">【Bzoj1131】【Luogu3160】时态同步</a></div>
+      <div class="popular-posts-title"><a href="/posts/2e88.html" rel="bookmark">「Bzoj1131」「Luogu3160」时态同步</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/e616.html" rel="bookmark">【Luogu1541】乌龟棋</a></div>
+      <div class="popular-posts-title"><a href="/posts/e616.html" rel="bookmark">「Luogu1541」乌龟棋</a></div>
       
     </li>
   
@@ -689,7 +689,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/d69c.html" title="【Luogu1063】能量项链">http://zory.ink/posts/d69c.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/d69c.html" title="「Luogu1063」能量项链">http://zory.ink/posts/d69c.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -729,8 +729,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/8231.html" rel="next" title="【Luogu1064】金明的预算方案">
-                <i class="fa fa-chevron-left"></i> 【Luogu1064】金明的预算方案
+              <a href="/posts/b7e3.html" rel="next" title="「Luogu1051」篝火晚会">
+                <i class="fa fa-chevron-left"></i> 「Luogu1051」篝火晚会
               </a>
             
           </div>
@@ -739,8 +739,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/a978.html" rel="prev" title="【Luogu1065】作业调度方案">
-                【Luogu1065】作业调度方案 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/8231.html" rel="prev" title="「Luogu1064」金明的预算方案">
+                「Luogu1064」金明的预算方案 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -818,7 +818,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -843,7 +843,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1252,7 +1254,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

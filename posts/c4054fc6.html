@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="xgc的场">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-29T07:35:17.267Z">
+<meta property="og:updated_time" content="2020-05-11T13:40:16.754Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="20191029模拟-xgc">
 <meta name="twitter:description" content="xgc的场">
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-29 15:35:17" itemprop="dateModified" datetime="2019-10-29T15:35:17+08:00">2019-10-29</time>
+                <time title="修改时间：2020-05-11 21:40:16" itemprop="dateModified" datetime="2020-05-11T21:40:16+08:00">2020-05-11</time>
               </span>
             
           
@@ -617,7 +617,7 @@
 <p>$n（值域）=1e5，m（长度、询问数）=1e5$</p>
 <p>因为是每次多个区间，我们要想办法快速合并信息，所以肯定不是直接用前缀和而是用bitset</p>
 <p>不太好搞的合并信息，可以考虑一下根号算法，先给序列分块</p>
-<p>如果每个块直接一个bitset到时候合并肯定时不行的，一个自然的想法是预处理每个块区间的bitset</p>
+<p>如果每个块直接一个bitset到时候合并肯定时不行的，一个自然的想法是预处理$(m/T)^2$个块区间的bitset</p>
 <p>直接这样做就是$(\frac{m}{T})^2*\frac{n}{w}+m*(2T+\frac{n}{w})$，注意到时间勉强（3亿）可以而空间是主要矛盾，现在是$(\frac{m}{T})^2*\frac{n}{w}$</p>
 <p>注意到时间复杂度上，我们是$O(1)$获取了整块区间bitset，而其实改成$\frac{n}{w}$都是没有问题的，能否牺牲这个换空间？</p>
 <p>再考虑核心矛盾主要用来存储范围是$\frac{m}{T}$的所有区间信息的合并，然而$[l,r]=[l,xx] \cup [xx+1,r]$，这些区间信息是可以通过预处理省去不少的</p>
@@ -634,14 +634,14 @@
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>首先我不是特别懂sg的那套理论，本来想用点小聪明，通过设置两维状态来规避公平组合游戏中双方可行操作相同的限制，但似乎gg了</p>
 <p>分类讨论，A=B直接巴什博弈；否则，大致思路是考虑尼姆博弈，即考虑将局面变成都在$C=min(A,B)$以内，然后考虑能否随心所欲掌控sg值，记住各个游戏间，操作顺序并没有意义</p>
-<h5 id="一、A-gt-B"><a href="#一、A-gt-B" class="headerlink" title="一、A&gt;B"></a>一、A&gt;B</h5><p>设只有一堆超过C，那么归纳或者感受一下可以发现，最后总是可以给对方一个【都在C内，sg异或和=0】的局面，因为自己的可行操作数严格大于对手；多堆的话，其他堆乱玩即可</p>
-<h5 id="二、A-lt-B"><a href="#二、A-lt-B" class="headerlink" title="二、A&lt;B"></a>二、A&lt;B</h5><p>假如只有一堆，那么能获胜当且仅当能<strong>一步</strong>把局面变成【都在C内，sg异或和=0】给对手。如果有多堆，那一定输，思维同上</p>
+<h5 id="一、A-gt-B"><a href="#一、A-gt-B" class="headerlink" title="一、A&gt;B"></a>一、A&gt;B</h5><p>设只有一堆超过C，那么归纳或者感受一下可以发现，最后总是可以给对方一个「都在C内，sg异或和=0」的局面，因为自己的可行操作数严格大于对手；多堆的话，其他堆乱玩即可</p>
+<h5 id="二、A-lt-B"><a href="#二、A-lt-B" class="headerlink" title="二、A&lt;B"></a>二、A&lt;B</h5><p>假如只有一堆，那么能获胜当且仅当能<strong>一步</strong>把局面变成「都在C内，sg异或和=0」给对手。如果有多堆，那一定输，思维同上</p>
 <p><a href="https://loj.ac/submission/643712" target="_blank" rel="noopener">code</a></p>
 
 </div></div>
-<h3 id="CF1096E"><a href="#CF1096E" class="headerlink" title="CF1096E"></a>CF1096E</h3><p>终于有我会做的题了……</p>
+<h3 id="CF1096E-The-Top-Scorer"><a href="#CF1096E-The-Top-Scorer" class="headerlink" title="CF1096E The Top Scorer"></a>CF1096E The Top Scorer</h3><p>终于有我会做的题了……</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>$$<br>\\分子=\sum_{mx=r} \sum_{i=1} C_{n-1}^{i-1}/i*f(sum-i*mx,n-i,mx) ，分母=\sum_{mx} f(sum-mx,n-1)=\sum_{mx} C_{sum-mx+n-2}^{n-2}=C_{sum-r+n-1}^{n-1}<br>\\f表示和、数量、上界（开区间），f(sum,0,mx)=[sum=0],f(sum,n,mx)=\sum_{i=0}^n (-1)^i C_{n}^{i} C_{sum-i*mx+n-1}^{n-1}<br>\\分子=\frac{1}{n}*\sum_{mx=r}^{sum}[sum-n*mx=0] +\sum_{i=1}^{n-1} \sum_{j=0}^{n-i} C_{n-1}^{i-1}/i*(-1)^j C_{n-i}^j \sum_{mx=r}^{sum} C_{sum-(i+j)*mx+n-i-1}^{n-i-1},最坏O(Sn^2)<br>\\似乎除了fft也没啥再能优化的了，让我们回到最顶上那个式子<br>\\考虑分子算出来东西的本质，就是C_{n-1}^{最大值个数-1}/最大值个数*【剩下&lt;最大值的方案数】=\frac{1}{n} *C_{n}^{最大值个数}*【剩下&lt;最大值的方案数】<br>\\注意到后面的部分其实就是【最大值 \ge r】的方案数，直接调用一次f求，单组询问O(n)<br>$$</p>
+<p>$$<br>\\分子=\sum_{mx=r} \sum_{i=1} C_{n-1}^{i-1}/i*f(sum-i*mx,n-i,mx) ，分母=\sum_{mx} f(sum-mx,n-1)=\sum_{mx} C_{sum-mx+n-2}^{n-2}=C_{sum-r+n-1}^{n-1}<br>\\f表示和、数量、上界（开区间），f(sum,0,mx)=[sum=0],f(sum,n,mx)=\sum_{i=0}^n (-1)^i C_{n}^{i} C_{sum-i*mx+n-1}^{n-1}<br>\\分子=\frac{1}{n}*\sum_{mx=r}^{sum}[sum-n*mx=0] +\sum_{i=1}^{n-1} \sum_{j=0}^{n-i} C_{n-1}^{i-1}/i*(-1)^j C_{n-i}^j \sum_{mx=r}^{sum} C_{sum-(i+j)*mx+n-i-1}^{n-i-1},最坏O(Sn^2)<br>\\似乎除了fft也没啥再能优化的了，让我们回到最顶上那个式子<br>\\考虑分子算出来东西的本质，就是C_{n-1}^{最大值个数-1}/最大值个数*「剩下&lt;最大值的方案数」=\frac{1}{n} *C_{n}^{最大值个数}*「剩下&lt;最大值的方案数」<br>\\注意到后面的部分其实就是「最大值 \ge r」的方案数，直接调用一次f求，单组询问O(n)<br>$$</p>
 
 </div></div>
 
@@ -692,8 +692,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/66eeb7d6.html" rel="next" title="cojR13">
-                <i class="fa fa-chevron-left"></i> cojR13
+              <a href="/posts/c838107c.html" rel="next" title="EJOI、CFR500">
+                <i class="fa fa-chevron-left"></i> EJOI、CFR500
               </a>
             
           </div>
@@ -701,6 +701,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/7b479835.html" rel="prev" title="20191031模拟-akc">
+                20191031模拟-akc <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -777,7 +781,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -802,7 +806,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1211,7 +1217,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1274,7 +1284,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#「雅礼集训-2018-Day2」颜色"><span class="nav-text">「雅礼集训 2018 Day2」颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XSY-3478-取石子"><span class="nav-text">XSY #3478 取石子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj6558「CERC2018」Game-of-Stones"><span class="nav-text">loj6558「CERC2018」Game of Stones</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一、A-gt-B"><span class="nav-text">一、A&gt;B</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二、A-lt-B"><span class="nav-text">二、A&lt;B</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1096E"><span class="nav-text">CF1096E</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#「雅礼集训-2018-Day2」颜色"><span class="nav-text">「雅礼集训 2018 Day2」颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XSY-3478-取石子"><span class="nav-text">XSY #3478 取石子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj6558「CERC2018」Game-of-Stones"><span class="nav-text">loj6558「CERC2018」Game of Stones</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一、A-gt-B"><span class="nav-text">一、A&gt;B</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二、A-lt-B"><span class="nav-text">二、A&lt;B</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1096E-The-Top-Scorer"><span class="nav-text">CF1096E The Top Scorer</span></a></li></ol></div>
             
 
           </div>

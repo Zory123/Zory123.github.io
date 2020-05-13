@@ -95,14 +95,14 @@
   <meta name="description" content="左偏树，可并堆的一种便利实现hyh论文的学习笔记">
 <meta name="keywords" content="左偏树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】02数据结构-13左偏树">
+<meta property="og:title" content="「OI之路」02数据结构-13左偏树">
 <meta property="og:url" content="http://zory.ink/posts/1197.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="左偏树，可并堆的一种便利实现hyh论文的学习笔记">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-11T06:51:14.483Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】02数据结构-13左偏树">
+<meta name="twitter:title" content="「OI之路」02数据结构-13左偏树">
 <meta name="twitter:description" content="左偏树，可并堆的一种便利实现hyh论文的学习笔记">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】02数据结构-13左偏树 | Zory的个人博客</title>
+  <title>「OI之路」02数据结构-13左偏树 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】02数据结构-13左偏树
+          <h2 class="post-title" itemprop="name headline">「OI之路」02数据结构-13左偏树
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-11 14:51:14" itemprop="dateModified" datetime="2019-10-11T14:51:14+08:00">2019-10-11</time>
+                <time title="修改时间：2019-12-01 10:18:45" itemprop="dateModified" datetime="2019-12-01T10:18:45+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/1197.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】02数据结构-13左偏树">
+            <span id="/posts/1197.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」02数据结构-13左偏树">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -612,8 +612,14 @@
 
       
         <p>左偏树，可并堆的一种便利实现<br>hyh论文的学习笔记<br><a id="more"></a></p>
-<p>话说hyh原来是我校的……<br>外节点：不是两个孩子<br>距离：到子树内最近的外节点距离<br>考虑固定一个距离，那么那么节点数最少的形态一定是二叉树<br>根据左偏性质，根节点的距离为log级别</p>
-<p>删除某个已知节点的操作，我yy了一下，不保证正确性……<br>可能是直接向上跳，但发现距离不变时退出<br>因为距离的变化是单向的，而且只有log次变化，所以复杂度为log级别</p>
+<p><strong>外节点：</strong>不是两个孩子的节点（因为只有这样的点，能够在下面挂上新的树）</p>
+<p><strong>距离</strong>：到子树内最近的外节点的序列</p>
+<p><strong>左偏树</strong>：首先肯定要满足二叉堆的性质，然后始终<strong>保证右孩子距离比左孩子小</strong></p>
+<p><strong>合并操作</strong>：往最近外孩子方向合并，发现这样复杂度就是距离</p>
+<p><strong>左偏带来的性质</strong>：如果固定一个距离，节点数最多的情况就是满二叉树，即$2^d \le n,d \le log_2 n$</p>
+<p><strong>删除某个节点</strong>（yy的，正确性无保证）：直接向上跳更新距离，但发现距离不变时退出，因为距离的变化是单向的，而且只有log次变化，所以最多跳log次（当然没必要搞这种东西，懒惰删除法是个好东西）</p>
+<p>例题：<a href="https://www.luogu.org/problem/P3377" target="_blank" rel="noopener">luogu板子</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a[N];<span class="keyword">bool</span> del[N];</div><div class="line"><span class="keyword">struct</span> Nod&#123;<span class="keyword">int</span> son[<span class="number">2</span>],len;&#125;p[N];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">merg</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(!x or !y) <span class="keyword">return</span> x+y;</div><div class="line">    <span class="keyword">if</span>(a[x]&gt;a[y] or (a[x]==a[y] and x&gt;y)) swap(x,y);</div><div class="line">    p[x].son[<span class="number">1</span>]=merg(p[x].son[<span class="number">1</span>],y);<span class="keyword">if</span>(p[p[x].son[<span class="number">0</span>]].len&lt;p[p[x].son[<span class="number">1</span>]].len) swap(p[x].son[<span class="number">0</span>],p[x].son[<span class="number">1</span>]);</div><div class="line">    p[x].len=p[p[x].son[<span class="number">1</span>]].len+<span class="number">1</span>;<span class="keyword">return</span> x;</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> fa[N],root[N];<span class="comment">//所在堆编号、堆顶节点编号</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">findfa</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">return</span> fa[x]==x?x:fa[x]=findfa(fa[x]);&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n=qread(),m=qread();fo(i,<span class="number">1</span>,n) root[i]=i,fa[i]=i,a[i]=qread();</div><div class="line">    <span class="keyword">while</span>(m--)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> op=qread();</div><div class="line">        <span class="keyword">if</span>(op==<span class="number">1</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> x=qread(),y=qread();<span class="keyword">if</span>(del[x] or del[y]) <span class="keyword">continue</span>;</div><div class="line">            x=findfa(x),y=findfa(y);<span class="keyword">if</span>(x==y) <span class="keyword">continue</span>;</div><div class="line">            root[x]=merg(root[x],root[y]);fa[y]=x;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> x=qread();<span class="keyword">if</span>(del[x])&#123;write2(<span class="number">-1</span>);<span class="keyword">continue</span>;&#125;</div><div class="line">            x=findfa(x);write2(a[root[x]]);del[root[x]]=<span class="number">1</span>;</div><div class="line">            root[x]=merg(p[root[x]].son[<span class="number">0</span>],p[root[x]].son[<span class="number">1</span>]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -627,7 +633,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/a3ae.html" rel="bookmark">【Baltic2004】sequence</a></div>
+      <div class="popular-posts-title"><a href="/posts/a3ae.html" rel="bookmark">「Baltic2004」sequence</a></div>
       
     </li>
   
@@ -645,7 +651,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/1197.html" title="【OI之路】02数据结构-13左偏树">http://zory.ink/posts/1197.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/1197.html" title="「OI之路」02数据结构-13左偏树">http://zory.ink/posts/1197.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -683,8 +689,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/3915.html" rel="next" title="【OI之路】02数据结构-12虚树">
-                <i class="fa fa-chevron-left"></i> 【OI之路】02数据结构-12虚树
+              <a href="/posts/3915.html" rel="next" title="「OI之路」02数据结构-12虚树">
+                <i class="fa fa-chevron-left"></i> 「OI之路」02数据结构-12虚树
               </a>
             
           </div>
@@ -693,8 +699,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/3d5b.html" rel="prev" title="【OI之路】02数据结构-14析合树">
-                【OI之路】02数据结构-14析合树 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/3d5b.html" rel="prev" title="「OI之路」02数据结构-14析合树">
+                「OI之路」02数据结构-14析合树 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -763,7 +769,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -788,7 +794,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1197,7 +1205,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -100,7 +100,7 @@
 <meta property="og:description" content="题目">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.ink/images/题解图片/2018-8-21-tkj的noip模拟赛/1.png">
-<meta property="og:updated_time" content="2019-08-22T04:44:46.260Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模拟赛2总结">
 <meta name="twitter:description" content="题目">
@@ -251,7 +251,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -269,7 +269,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -287,7 +287,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -538,7 +538,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-22 12:44:46" itemprop="dateModified" datetime="2019-08-22T12:44:46+08:00">2019-08-22</time>
+                <time title="修改时间：2019-12-01 10:18:49" itemprop="dateModified" datetime="2019-12-01T10:18:49+08:00">2019-12-01</time>
               </span>
             
           
@@ -623,7 +623,7 @@
 <p>然后我发现空间炸的一匹，vector也没有用（因为大数据非常良心，是一个dfs链状结构）<br>所以就放弃出大数据的希望了，用来对拍吧</p>
 <p>果然逆序对是错误的<br>主要是两个原因：循环先执行再判断、执行复杂度直接算是当前区间长度</p>
 <p>怎么办呢<br>想着交个暴力算了</p>
-<p>然后，突然灵光一现，发现可以改良<br>因为每一次的复杂度贡献是按照长度来的，然后每个分段，其实就是由<br>【在该数后面的数中比当前小，而且最远那个】和当前，包围起来的<br>此时因为查错，我右边的备用小数据中已经有差不多10个了<br>发现每一个都满足这个性质（一定要先跑一次，单循环冒泡，这样子分段才是明确的）</p>
+<p>然后，突然灵光一现，发现可以改良<br>因为每一次的复杂度贡献是按照长度来的，然后每个分段，其实就是由<br>「在该数后面的数中比当前小，而且最远那个」和当前，包围起来的<br>此时因为查错，我右边的备用小数据中已经有差不多10个了<br>发现每一个都满足这个性质（一定要先跑一次，单循环冒泡，这样子分段才是明确的）</p>
 <p>然后发现这是一个平方级别的做法，不知道能拿多少分<br>先打了先把，很好改<br>试试大样例</p>
 <p>？？居然过了？？<br>当时就激动得一匹<br>因为至少做法正确性没有问题<br>主要还是速度太慢</p>
 <p>想办法优化<br>数据结构中好像只有具备结构体能力的splay能搞<br>但当时只有20min了！<br>以我的码力，这是不可能的</p>
@@ -645,7 +645,7 @@
 </div></div>
 <h2 id="T2-Analysis"><a href="#T2-Analysis" class="headerlink" title="T2-Analysis"></a>T2-Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>原题 Usaco2018 Open Out of Sorts<br><a href="https://www.luogu.org/problemnew/show/P4372" target="_blank" rel="noopener">Luogu4372</a><br><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=5277" target="_blank" rel="noopener">Bzoj5277</a></p>
-<p>现在冷静想一想，发现我傻了，根本没有必要用线段树这种这么长的东西<br>因为已经离散化了，直接用数组，维护最后位置，然后搞一个【前缀最大值】就好了<br>这要是因为我们要维护的是位置，而这种东西可以通过比较直接确定在不在后面<br>然后前缀最大值这种东西，当时太紧张，再加上原本的做法是需要动态维护的，所以就没跳出来<br>当然复杂度没有变化</p>
+<p>现在冷静想一想，发现我傻了，根本没有必要用线段树这种这么长的东西<br>因为已经离散化了，直接用数组，维护最后位置，然后搞一个「前缀最大值」就好了<br>这要是因为我们要维护的是位置，而这种东西可以通过比较直接确定在不在后面<br>然后前缀最大值这种东西，当时太紧张，再加上原本的做法是需要动态维护的，所以就没跳出来<br>当然复杂度没有变化</p>
 <p>师兄的做法没看懂，不管了反正不一样</p>
 <p>UP：讲课的时候被d飞了<br>8<br>6 1 3 2 4 5 2 4<br>答案是19<br>虽然答案一样，但画出来的线段完全不对应<br>（据akc研究后说，它的总数值，代表了某种总贡献，只是神仙地把操作后移了）</p>
 <p>去膜了发官方题解<br>发现可以这样考虑：<br>对于所谓的快排下去递归冒泡，其实和对整个序列冒泡是等效的<br>那么考虑每个元素的贡献，就是它左右两边的分隔符都出现之前的时间长度<br>注意：</p>
@@ -668,13 +668,13 @@
 <p>原题 Usaco2018 Jan Sprinklers<br><a href="https://www.luogu.org/problemnew/show/P4184" target="_blank" rel="noopener">Luogu4184</a><br><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=5187" target="_blank" rel="noopener">Bzoj5187</a></p>
 <p>首先，最后的可行多边形一定是一个外凸边形<br>那么有一个重要的性质，就是对于这种形状（大概是两个阶梯围成的）<br><img src="../images/题解图片/2018-8-21-tkj的noip模拟赛/1.png" alt=""><br>然后这种图形的可行解非常好处理，因为对于每个点，它的另一个端点的可行区域就在其左下侧区域中<br>如果要直接暴力的话，现在就可以得到50分了</p>
 <p>考虑处理出每一列的up和low表示上下界<br>这个东西的维护，可以考虑先记录一个转折点，然后最后再线性推一推就好了（因为有单调性）</p>
-<p>接下来推式子<br>$$<br>\sum_{i=0}^{n-1}<br>{<br>    \sum_{j=low[i]+1}^{up[i]}<br>    【<br>        \sum_{k=low[i]}^{j-1} i-left[k]<br>    】<br>}<br>$$</p>
-<p>$$<br>\sum_{i=0}^{n-1}<br>{<br>    \sum_{j=low[i]+1}^{up[i]}<br>    【<br>        i \times (j-low[i])<br>        -<br>        \sum_{k=low[i]}^{j-1} left[k]<br>    】<br>}<br>$$</p>
-<p>$$<br>\sum_{i=0}^{n-1}<br>{<br>    i \times<br>    \sum_{j=low[i]+1}^{up[i]}<br>    【<br>        (j-low[i])<br>        -<br>        \sum_{k=low[i]}^{j-1} left[k]<br>    】<br>}<br>$$</p>
-<p>$$<br>\sum_{i=0}^{n-1}<br>【<br>    \frac{<br>    i (up[i]-low[i]) (up[i]-low[i]+1)<br>    }{2}<br>    -<br>    \sum_{j=low[i]+1}^{up[i]}<br>        \sum_{k=low[i]}^{j-1} left[k]<br>】<br>$$</p>
-<p>$$<br>\sum_{i=0}^{n-1}<br>【<br>    \frac{<br>    i (up[i]-low[i]) (up[i]-low[i]+1)<br>    }{2}<br>    -<br>    \sum_{t=low[i]}^{up[i]-1} left[t] \times (up[i]-t)<br>】<br>$$</p>
-<p>$$<br>\sum_{i=0}^{n-1}<br>【<br>    \frac{<br>    i (up[i]-low[i]) (up[i]-low[i]+1)<br>    }{2}<br>    -<br>    up[i] \times \sum_{t=low[i]}^{up[i]-1} left[t]<br>    +<br>    \sum_{t=low[i]}^{up[i]-1} left[t] \times t<br>】<br>$$</p>
-<p>$$<br>\sum_{i=0}^{n-1}<br>【<br>    \frac{<br>    i (up[i]-low[i]) (up[i]-low[i]+1)<br>    }{2}<br>    -<br>    up[i] \times \sum_{t=low[i]}^{up[i]-1} left[t]<br>    +<br>    \sum_{t=low[i]}^{up[i]-1} left[t] \times t<br>】<br>$$</p>
+<p>接下来推式子<br>$$<br>\sum_{i=0}^{n-1}<br>{<br>    \sum_{j=low[i]+1}^{up[i]}<br>    「<br>        \sum_{k=low[i]}^{j-1} i-left[k]<br>    」<br>}<br>$$</p>
+<p>$$<br>\sum_{i=0}^{n-1}<br>{<br>    \sum_{j=low[i]+1}^{up[i]}<br>    「<br>        i \times (j-low[i])<br>        -<br>        \sum_{k=low[i]}^{j-1} left[k]<br>    」<br>}<br>$$</p>
+<p>$$<br>\sum_{i=0}^{n-1}<br>{<br>    i \times<br>    \sum_{j=low[i]+1}^{up[i]}<br>    「<br>        (j-low[i])<br>        -<br>        \sum_{k=low[i]}^{j-1} left[k]<br>    」<br>}<br>$$</p>
+<p>$$<br>\sum_{i=0}^{n-1}<br>「<br>    \frac{<br>    i (up[i]-low[i]) (up[i]-low[i]+1)<br>    }{2}<br>    -<br>    \sum_{j=low[i]+1}^{up[i]}<br>        \sum_{k=low[i]}^{j-1} left[k]<br>」<br>$$</p>
+<p>$$<br>\sum_{i=0}^{n-1}<br>「<br>    \frac{<br>    i (up[i]-low[i]) (up[i]-low[i]+1)<br>    }{2}<br>    -<br>    \sum_{t=low[i]}^{up[i]-1} left[t] \times (up[i]-t)<br>」<br>$$</p>
+<p>$$<br>\sum_{i=0}^{n-1}<br>「<br>    \frac{<br>    i (up[i]-low[i]) (up[i]-low[i]+1)<br>    }{2}<br>    -<br>    up[i] \times \sum_{t=low[i]}^{up[i]-1} left[t]<br>    +<br>    \sum_{t=low[i]}^{up[i]-1} left[t] \times t<br>」<br>$$</p>
+<p>$$<br>\sum_{i=0}^{n-1}<br>「<br>    \frac{<br>    i (up[i]-low[i]) (up[i]-low[i]+1)<br>    }{2}<br>    -<br>    up[i] \times \sum_{t=low[i]}^{up[i]-1} left[t]<br>    +<br>    \sum_{t=low[i]}^{up[i]-1} left[t] \times t<br>」<br>$$</p>
 <p>所以维护一个前缀和就好了</p>
 
 </div></div>
@@ -730,8 +730,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/18f8.html" rel="next" title="【训练】算法竞赛进阶指南-5动态规划 24题">
-                <i class="fa fa-chevron-left"></i> 【训练】算法竞赛进阶指南-5动态规划 24题
+              <a href="/posts/18f8.html" rel="next" title="「训练」算法竞赛进阶指南-5动态规划 24题">
+                <i class="fa fa-chevron-left"></i> 「训练」算法竞赛进阶指南-5动态规划 24题
               </a>
             
           </div>
@@ -740,8 +740,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/6259.html" rel="prev" title="【训练】算法竞赛进阶指南-6图论 32题">
-                【训练】算法竞赛进阶指南-6图论 32题 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/6259.html" rel="prev" title="「训练」算法竞赛进阶指南-6图论 32题">
+                「训练」算法竞赛进阶指南-6图论 32题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -819,7 +819,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -844,7 +844,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1253,7 +1255,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

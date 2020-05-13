@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="题目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-15T01:49:53.658Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模拟赛1总结">
 <meta name="twitter:description" content="题目">
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-15 09:49:53" itemprop="dateModified" datetime="2019-10-15T09:49:53+08:00">2019-10-15</time>
+                <time title="修改时间：2019-12-01 10:18:49" itemprop="dateModified" datetime="2019-12-01T10:18:49+08:00">2019-12-01</time>
               </span>
             
           
@@ -612,7 +612,7 @@
       
         <p><a href="../files/考试/并不NOIP模拟赛.pdf">题目</a><br><a id="more"></a></p>
 <h2 id="T1-Analysis"><a href="#T1-Analysis" class="headerlink" title="T1-Analysis"></a>T1-Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>这是一道当时感觉很神，后来感觉很签到的好题<br>关键在于，判断是否是n的倍数<br>把加0看做乘以10，加1看做乘以10再加1<br>这里运用到了一个技巧————用余数表示<br>再通过记忆化，能够把原本【2的次幂】的复杂度，降低到n<br>具体的实现可以用bfs<br>路径的记录，可以以余数为索引，记录从哪个余数继承过来<br>当然无脑string也行，毕竟就是一个等差数列的复杂度</p>
+<p>这是一道当时感觉很神，后来感觉很签到的好题<br>关键在于，判断是否是n的倍数<br>把加0看做乘以10，加1看做乘以10再加1<br>这里运用到了一个技巧————用余数表示<br>再通过记忆化，能够把原本「2的次幂」的复杂度，降低到n<br>具体的实现可以用bfs<br>路径的记录，可以以余数为索引，记录从哪个余数继承过来<br>当然无脑string也行，毕竟就是一个等差数列的复杂度</p>
 
 </div></div>
 <h2 id="T1-Code-Std"><a href="#T1-Code-Std" class="headerlink" title="T1-Code-Std"></a>T1-Code-Std</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -620,7 +620,7 @@
 
 </div></div>
 <h2 id="T2-Analysis"><a href="#T2-Analysis" class="headerlink" title="T2-Analysis"></a>T2-Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>考虑用dp来预处理<br>神仙转化问题：【把原本的串取反，允许修改k的配额，能得到多少个目标串】<br>设$f(S,i,k)$为，当前状态为S，处理到第i位，剩下可分配额为k，后面能够得到多少个目标串<br>计数类dp，显然是倒推的<br>$f(S,i,k)=f(S,i+1,k)+【k&gt;=w_i】f(S^bin[i],i+1,k-w_i)$</p>
+<p>考虑用dp来预处理<br>神仙转化问题：「把原本的串取反，允许修改k的配额，能得到多少个目标串」<br>设$f(S,i,k)$为，当前状态为S，处理到第i位，剩下可分配额为k，后面能够得到多少个目标串<br>计数类dp，显然是倒推的<br>$f(S,i,k)=f(S,i+1,k)+「k&gt;=w_i」f(S^bin[i],i+1,k-w_i)$</p>
 
 </div></div>
 <h2 id="T2-Code-Std"><a href="#T2-Code-Std" class="headerlink" title="T2-Code-Std"></a>T2-Code-Std</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -628,8 +628,8 @@
 
 </div></div>
 <h2 id="T3-Analysis"><a href="#T3-Analysis" class="headerlink" title="T3-Analysis"></a>T3-Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>原题：<a href="http://codeforces.com/contest/1004/problem/D" target="_blank" rel="noopener">cf_R495_div_d</a><br>然后我的代码其实如果加上快读就卡过去了，大概0.5s的速度……<br>毕竟我的快速check函数，还是下了一番功夫的，从【面积】下降到【最大编号】</p>
-<p>先说说我的想法：<br>1.<br>设计一个check函数<br>表示在n乘m的矩阵中，数字i出现了几次（假设(1,1)=1）<br>然后这个东西很多人是暴力【面积】做的<br>其实可以通过找规律，分类讨论一下，降到【最大编号】</p>
+<p>原题：<a href="http://codeforces.com/contest/1004/problem/D" target="_blank" rel="noopener">cf_R495_div_d</a><br>然后我的代码其实如果加上快读就卡过去了，大概0.5s的速度……<br>毕竟我的快速check函数，还是下了一番功夫的，从「面积」下降到「最大编号」</p>
+<p>先说说我的想法：<br>1.<br>设计一个check函数<br>表示在n乘m的矩阵中，数字i出现了几次（假设(1,1)=1）<br>然后这个东西很多人是暴力「面积」做的<br>其实可以通过找规律，分类讨论一下，降到「最大编号」</p>
 <p>2.<br>确认一个最大的完美正方形，<br>每次调用check函数计算数字的需求量，然后判合法性</p>
 <p>3.<br>经过上一步，已经保证这个正方形会贴边了，<br>这样我们就能直接把它在那条边上移动（注意交换n和m）<br>最后还是分4个块，然后调用check判合法性</p>
 <p>讲讲正解和我不同的部分：<br>1.<br>通过一层层向外枚举，得到第一个不能完美菱形的数字，这个数字就是0的x坐标<br>可以这样考虑：x在外面，则高度为x-1~0，也就是x个<br>然后做法的话，其实可以直接每层数字，数量+4，而我硬生生调用一个函数来计算……<br>当然因为这个在外面，所以速度可以很随便，只是不那么优美</p>
@@ -648,7 +648,7 @@
 </div></div>
 <h2 id="T4-Analysis"><a href="#T4-Analysis" class="headerlink" title="T4-Analysis"></a>T4-Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>又是一道很好的脑力题<br>$a_i \&amp; a_j =0$<br>其实就是没有同时对应存在的1</p>
-<p>依然是巧妙地转化题目：<br>用个数组记录合法性<br>【取反后a】存在合法解a<br>并且因为【有合法解性】是可以传递的<br>所以倒着递推（像背包？），枚举每个数字，<br>每个【有合法解性】的数字，把某个1去掉后，都能从a得到合法解</p>
+<p>依然是巧妙地转化题目：<br>用个数组记录合法性<br>「取反后a」存在合法解a<br>并且因为「有合法解性」是可以传递的<br>所以倒着递推（像背包？），枚举每个数字，<br>每个「有合法解性」的数字，把某个1去掉后，都能从a得到合法解</p>
 
 </div></div>
 <h2 id="T4-Code-Std"><a href="#T4-Code-Std" class="headerlink" title="T4-Code-Std"></a>T4-Code-Std</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -703,8 +703,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/1774.html" rel="next" title="【国家集训队】礼物">
-                <i class="fa fa-chevron-left"></i> 【国家集训队】礼物
+              <a href="/posts/1774.html" rel="next" title="「国家集训队」礼物">
+                <i class="fa fa-chevron-left"></i> 「国家集训队」礼物
               </a>
             
           </div>
@@ -713,8 +713,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/20bf.html" rel="prev" title="【SCOI2007】降雨量">
-                【SCOI2007】降雨量 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/20bf.html" rel="prev" title="「SCOI2007」降雨量">
+                「SCOI2007」降雨量 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -792,7 +792,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -817,7 +817,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1226,7 +1228,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

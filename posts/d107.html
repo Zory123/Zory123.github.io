@@ -92,17 +92,17 @@
 
 
 
-  <meta name="description" content="杂七杂八：Dilworth定理、仙人掌、树哈希判断同构">
+  <meta name="description" content="包括：环计数、树哈希判断同构、求补图的联通块信息">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】04图论-10其他">
+<meta property="og:title" content="「OI之路」04图论-09其他">
 <meta property="og:url" content="http://zory.ink/posts/d107.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="杂七杂八：Dilworth定理、仙人掌、树哈希判断同构">
+<meta property="og:description" content="包括：环计数、树哈希判断同构、求补图的联通块信息">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-09T05:13:28.656Z">
+<meta property="og:updated_time" content="2019-12-14T02:56:52.217Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】04图论-10其他">
-<meta name="twitter:description" content="杂七杂八：Dilworth定理、仙人掌、树哈希判断同构">
+<meta name="twitter:title" content="「OI之路」04图论-09其他">
+<meta name="twitter:description" content="包括：环计数、树哈希判断同构、求补图的联通块信息">
 
 
 
@@ -120,7 +120,7 @@
   };
 </script>
 
-  <title>【OI之路】04图论-10其他 | Zory的个人博客</title>
+  <title>「OI之路」04图论-09其他 | Zory的个人博客</title>
   
 
 
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -495,7 +495,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】04图论-10其他
+          <h2 class="post-title" itemprop="name headline">「OI之路」04图论-09其他
 
               
             
@@ -521,7 +521,7 @@
                 
               
 
-              <time title="创建时间：2003-01-22 00:04:10" itemprop="dateCreated datePublished" datetime="2003-01-22T00:04:10+08:00">2003-01-22</time>
+              <time title="创建时间：2003-01-22 00:04:09" itemprop="dateCreated datePublished" datetime="2003-01-22T00:04:09+08:00">2003-01-22</time>
             </span>
           
 
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-09 13:13:28" itemprop="dateModified" datetime="2019-10-09T13:13:28+08:00">2019-10-09</time>
+                <time title="修改时间：2019-12-14 10:56:52" itemprop="dateModified" datetime="2019-12-14T10:56:52+08:00">2019-12-14</time>
               </span>
             
           
@@ -577,7 +577,7 @@
 
           
           
-            <span id="/posts/d107.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】04图论-10其他">
+            <span id="/posts/d107.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」04图论-09其他">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -610,33 +610,26 @@
       
 
       
-        <p>杂七杂八：Dilworth定理、仙人掌、树哈希判断同构</p>
+        <p>包括：环计数、树哈希判断同构、求补图的联通块信息</p>
 <a id="more"></a>
-<h2 id="k元环计数与k长简单路径"><a href="#k元环计数与k长简单路径" class="headerlink" title="k元环计数与k长简单路径"></a>k元环计数与k长简单路径</h2><p><strong>对于k=3</strong>，例题如jsoi2017原力，将点按照度数排序</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> x:pt)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> y:bb[x]) vis[y]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> y:bb[x]) <span class="keyword">for</span>(<span class="keyword">auto</span> z:bb[y])</div><div class="line">        <span class="keyword">if</span>(vis[z]) g3[x]++,g3[y]++,g3[z]++;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> y:bb[x]) vis[y]=<span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>分析复杂度，前面两个循环为$O(m)$，最后一个等于每个点出发向后的边数，对于度数小于m根号的点显然成立，对于度数大的点后面最多有根号m个点，故总复杂度为$O(m^{3/2})$</p>
-<p><strong>对于k=4</strong>，例题如tkppc2016H デバッグ（Debug），写了题解；大致思路就是在三元环的基础上处理些信息</p>
-<p>对于每个四元环，枚举x表示度数最大节点，枚举中间点y和端点z并记录在z处，回退的时候更新y在以后作为第四点（中介点）的次数，通过向左可以让每条边被访问次数为根号，总复杂度为$O(m^{3/2})$</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> x:pt)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> y:to[x]) <span class="keyword">if</span>(pos[y]&lt;pos[x]) <span class="keyword">for</span>(<span class="keyword">auto</span> z:to[y])</div><div class="line">        <span class="keyword">if</span>(pos[z]&lt;pos[x]) g4[x]+=cc[z],g4[y]+=cc[z],g4[z]+=cc[z],cc[z]++;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> y:to[x]) <span class="keyword">if</span>(pos[y]&lt;pos[x]) <span class="keyword">for</span>(<span class="keyword">auto</span> z:to[y])</div><div class="line">        <span class="keyword">if</span>(pos[z]&lt;pos[x]) cc[z]--,g4[y]+=cc[z];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>关于k=4简单路径计数，见<a href="454d426a.html">tkppc2016 H デバッグ（Debug）</a></p>
-<h2 id="Dilworth定理"><a href="#Dilworth定理" class="headerlink" title="Dilworth定理"></a>Dilworth定理</h2><p><strong>严格偏序</strong> 集的图像是dag<br>传递闭包结果为其本身<br>链即任意两个元素都能比较的集合<br>反链即任意两个元素无法比较的集合<br>极小元：没有能和他比较得更小的元素的集合</p>
-<h4 id="【最大反链大小-最少链（不可重）覆盖数】"><a href="#【最大反链大小-最少链（不可重）覆盖数】" class="headerlink" title="【最大反链大小=最少链（不可重）覆盖数】"></a>【最大反链大小=最少链（不可重）覆盖数】</h4><p>证明：<br>显然每条链上只能选择最多一个，加入反链<br>则 最大反链大小&lt;=最少链覆盖数<br>那么如果我们能构造一种方案，使得其取到【最少链覆盖数】，即完成了证明</p>
-<p>拆点二分图，左出右入<br>因为路径覆盖时，每个点只有一条出边，二分图匹配，然后左边没有出度的节点就是链的终点<br>其个数即链的数量<br><strong>最小可重路径覆盖，可以通过传递闭包转化为不可重，但其实更高效的做法是，网络流的时候入点-&gt;出点inf</strong><br><a href="https://loj.ac/problem/6197" target="_blank" rel="noopener">例题loj6197法克</a></p>
-<h3 id="构造："><a href="#构造：" class="headerlink" title="构造："></a>构造：</h3><p><strong>方法一</strong>：<br>直接跑二分图的最大独立集A，取满足入度和出度都在A中的点S<br>可行性：如果不是反链，那么会存在一条边，与最大独立集矛盾</p>
-<p>最小性：<br>设m为匹配数<br>根据定理，知 $|A|=2n-m$<br>$|A|=|S|+t（只有其中一个在A中）$<br>然后 $t \leq n$<br>所以 $|S| \geq n-m$<br>现在 $|S|=n-m$ ，所以是最小方案</p>
-<p>那么这个东东，可以构造 最小点覆盖，然后取补集<br>具体方法在二分图一章</p>
-<p><strong>方法二（不会证明）</strong>：<br>先取出每个路径的终点，作为集合A，将A走一步能到达的节点作为next(A)<br>按照题意，$A \cap next(A)=\varnothing$ ，所以我们要有所调整<br>取出这种元素，然后在其所属的【最小可重复点覆盖路径】上，往起点方向跳，<br>一定能找到一个元素不属于next(A)，否则意味着整条路径都是可以被别人覆盖掉的，违反了我们先前最小的定义<br>找到后，取代原先的元素，如此重复下去，最后总是能满足条件的；综上所述，存在一种方案，满足条件</p>
-<h4 id="【最少反链覆盖数-最长链长度】"><a href="#【最少反链覆盖数-最长链长度】" class="headerlink" title="【最少反链覆盖数=最长链长度】"></a>【最少反链覆盖数=最长链长度】</h4><p>最长链上每个元素不能在同一条反链中<br>构造法，每次选择极小元集合，选择【最长链长度】次就完全选完了</p>
-<h2 id="仙人掌"><a href="#仙人掌" class="headerlink" title="仙人掌"></a>仙人掌</h2><p>圆方树还没学……</p>
-<p>记一下定义吧：</p>
-<p>有向图：强连通图，每条边恰属于一个环</p>
-<p>无向图：连通，每条边最多属于一个简单环</p>
+<h2 id="无向图k元环与k长简单路径计数"><a href="#无向图k元环与k长简单路径计数" class="headerlink" title="无向图k元环与k长简单路径计数"></a>无向图k元环与k长简单路径计数</h2><p><strong>对于k=3</strong>，例题如<a href="249c.html">jsoi2017原力</a>，将点按照度数排序</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> x:pt)<span class="comment">//bb为向后的边</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> y:bb[x]) vis[y]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> y:bb[x]) <span class="keyword">for</span>(<span class="keyword">auto</span> z:bb[y])</div><div class="line">        <span class="keyword">if</span>(vis[z]) g3[x]++,g3[y]++,g3[z]++;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> y:bb[x]) vis[y]=<span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>分析复杂度，前面两层循环为$O(m)$，最后一个等于每个点出发向后的边数，对于度数小于m根号的点显然成立，对于度数大的点后面最多有根号m个点（因为这样的点最多根号个且都在后面），故总复杂度为$O(m^{3/2})$</p>
+<p><strong>对于k=4</strong>，例题如<a href="454d426a">tkppc2016H デバッグ（Debug）</a>；大致思路就是在三元环的基础上处理些信息</p>
+<p>对于每个四元环，枚举x表示度数最大节点，枚举中间点y和端点z并记录在z处</p>
+<p>那么一个环其实就是$x-y-z和x-y’-z$组成的，将后者记录在cc里面从而唯一统计四元环，做完x的时候回退</p>
+<p>某些题需要记录每个点作为四元环中一点的次数，那回退的时候顺便更新在以后作为$y’$的次数即可</p>
+<p>通过向左可以让每个点作为y的次数为根号，而里面那层枚举to是从y开始找的，总复杂度为$O(m^{3/2})$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> x:pt)<span class="comment">//to为所有边，pos为排序后位置，cc就是对于当前x而言</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> y:to[x]) <span class="keyword">if</span>(pos[y]&lt;pos[x]) <span class="keyword">for</span>(<span class="keyword">auto</span> z:to[y])</div><div class="line">        <span class="keyword">if</span>(pos[z]&lt;pos[x]) g4[x]+=cc[z],g4[y]+=cc[z],g4[z]+=cc[z],cc[z]++;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> y:to[x]) <span class="keyword">if</span>(pos[y]&lt;pos[x]) <span class="keyword">for</span>(<span class="keyword">auto</span> z:to[y])</div><div class="line">        <span class="keyword">if</span>(pos[z]&lt;pos[x]) cc[z]--,g4[y]+=cc[z];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>关于k=4简单路径计数，也见<a href="454d426a.html">tkppc2016 H デバッグ（Debug）</a></p>
 <h2 id="树哈希判断同构"><a href="#树哈希判断同构" class="headerlink" title="树哈希判断同构"></a>树哈希判断同构</h2><p>主要是<a href="https://loj.ac/problem/2072" target="_blank" rel="noopener">loj2072「JSOI2016」独特的树叶</a>，<a href="https://loj.ac/submission/609681" target="_blank" rel="noopener">code</a>，可能应该写双hash的偷懒没写</p>
 <p>考虑我们设计出的hash方式需要满足一些怎样的性质</p>
 <p>因为是无根树，我们需要计算出A树以每个节点为根的hash值，塞到一个map里面，然后对于B树考虑每个叶子节点x，去掉后这棵树以fa(x)为根的hash值，然后放到map里面查询</p>
 <p>可见：应该满足与遍历孩子顺序无关，而且方便我们换根来求出每个点为根的值</p>
 <p>满足这个条件基本可以$O(nlogn)$了，首先hash表之类的可能可以线性，具体怎么搞自行设计吧</p>
 <p>目前抄的是：$f(x)=(\sum f(son)*siz_{son} \%mod) xor (siz_x*base \%mod)$</p>
+<h2 id="求补图的联通块信息"><a href="#求补图的联通块信息" class="headerlink" title="求补图的联通块信息"></a>求补图的联通块信息</h2><p>例题：<a href="https://codeforces.com/contest/1242/problem/B" target="_blank" rel="noopener">CF1242B 0-1 MST</a>，给出一种复杂度为$O(n+m)$的做法，正确性和复杂度都很显然就不解释了，只是不是特别好想而已</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">unordered_set</span>&lt;<span class="keyword">int</span>&gt; to[N],lef;<span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">gao</span><span class="params">(<span class="keyword">int</span> rt)</span></div><div class="line"></span>&#123;</div><div class="line">    q.push(rt);lef.erase(rt);</div><div class="line">    <span class="keyword">while</span>(sz(q))</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> x=q.front();q.pop();</div><div class="line">        <span class="keyword">for</span>(<span class="built_in">unordered_set</span>&lt;<span class="keyword">int</span>&gt;::iterator it=lef.begin();it!=lef.end();)</div><div class="line">            <span class="keyword">if</span>(!to[x].count(*it)) q.push(*it),lef.erase(it++); <span class="keyword">else</span> it++;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n=qread(),m=qread();fo(i,<span class="number">1</span>,n) lef.insert(i);</div><div class="line">    <span class="keyword">while</span>(m--)&#123;<span class="keyword">int</span> x=qread(),y=qread();to[x].insert(y),to[y].insert(x);&#125;</div><div class="line">    <span class="keyword">int</span> ans=<span class="number">-1</span>;fo(i,<span class="number">1</span>,n) <span class="keyword">if</span>(lef.count(i)) gao(i),ans++;write(ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -656,7 +649,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/d107.html" title="【OI之路】04图论-10其他">http://zory.ink/posts/d107.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/d107.html" title="「OI之路」04图论-09其他">http://zory.ink/posts/d107.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -695,8 +688,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/c623.html" rel="prev" title="【OI之路】04图论-11第k优解相关">
-                【OI之路】04图论-11第k优解相关 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/d107.html" rel="prev" title="【OI之路】04图论-10其他">
+                【OI之路】04图论-10其他 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -774,7 +767,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -799,7 +792,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1208,7 +1203,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1271,7 +1270,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#k元环计数与k长简单路径"><span class="nav-text">k元环计数与k长简单路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dilworth定理"><span class="nav-text">Dilworth定理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【最大反链大小-最少链（不可重）覆盖数】"><span class="nav-text">【最大反链大小=最少链（不可重）覆盖数】</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造："><span class="nav-text">构造：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#【最少反链覆盖数-最长链长度】"><span class="nav-text">【最少反链覆盖数=最长链长度】</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#仙人掌"><span class="nav-text">仙人掌</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树哈希判断同构"><span class="nav-text">树哈希判断同构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#无向图k元环与k长简单路径计数"><span class="nav-text">无向图k元环与k长简单路径计数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树哈希判断同构"><span class="nav-text">树哈希判断同构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求补图的联通块信息"><span class="nav-text">求补图的联通块信息</span></a></li></ol></div>
             
 
           </div>

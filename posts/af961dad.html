@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="splay">
+  <meta name="description" content="splay（伸展树）">
 <meta name="keywords" content="splay">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】02数据结构-3splay">
+<meta property="og:title" content="「OI之路」02数据结构-3splay">
 <meta property="og:url" content="http://zory.ink/posts/af961dad.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="splay">
+<meta property="og:description" content="splay（伸展树）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-09T00:30:50.300Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】02数据结构-3splay">
-<meta name="twitter:description" content="splay">
+<meta name="twitter:title" content="「OI之路」02数据结构-3splay">
+<meta name="twitter:description" content="splay（伸展树）">
 
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】02数据结构-3splay | Zory的个人博客</title>
+  <title>「OI之路」02数据结构-3splay | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】02数据结构-3splay
+          <h2 class="post-title" itemprop="name headline">「OI之路」02数据结构-3splay
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-09 08:30:50" itemprop="dateModified" datetime="2019-10-09T08:30:50+08:00">2019-10-09</time>
+                <time title="修改时间：2019-12-01 10:18:45" itemprop="dateModified" datetime="2019-12-01T10:18:45+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/af961dad.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】02数据结构-3splay">
+            <span id="/posts/af961dad.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」02数据结构-3splay">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -611,23 +611,19 @@
       
 
       
-        <p>splay</p>
+        <p>splay（伸展树）</p>
 <a id="more"></a>
-<h2 id="6-4-1-定义"><a href="#6-4-1-定义" class="headerlink" title="6.4.1 定义"></a>6.4.1 定义</h2><p>伸展树是一种相当灵活的平衡树结构<br>（灵活：便于添加和删除）<br>比较少直接使用，能应用于LCT</p>
-<h2 id="6-4-2-模版题"><a href="#6-4-2-模版题" class="headerlink" title="6.4.2 模版题"></a>6.4.2 模版题</h2><p>我把最重要的讲解放在这里面了<br><a href="e070.html">【Caioj1130】【Codevs4543】【Bzoj3224】普通平衡树</a></p>
-<h2 id="6-4-5-练习"><a href="#6-4-5-练习" class="headerlink" title="6.4.5 练习"></a>6.4.5 练习</h2><p><a href="77a.html">Codevs3303文艺平衡树</a><br><a href="d7e9.html">Bzoj3196二逼平衡树</a><br><a href="d303.html">Bzoj1500维修数列</a></p>
-<h2 id="6-4-5-其他题目"><a href="#6-4-5-其他题目" class="headerlink" title="6.4.5 其他题目"></a>6.4.5 其他题目</h2><p>Caioj1131 Bzoj1588 Codevs1296 HNOI2002 HNOI2014 营业额统计<br>Caioj1132 Bzoj1503 Codevs1286 NOI2004 郁闷的出纳员<br>Caioj1133 Bzoj1208 CCodevs1285 HNOI2004 宠物收养所<br>Caioj1137 Bzoj1058 Codevs1429 ZJOI2007 报表统计</p>
-<h2 id="6-4-6-总结"><a href="#6-4-6-总结" class="headerlink" title="6.4.6 总结"></a>6.4.6 总结</h2><p>重点是利用伸展树的灵活性<br>另外，每次Splay既是加速也是重要的更新（pushdown/pushup）</p>
-<p>如果还看不懂，阔以看看介个文章：<br><a href="http://www.cnblogs.com/cjyyb/p/7499020.html" target="_blank" rel="noopener">FlashHu</a></p>
-<h2 id="6-4-7-所有题目"><a href="#6-4-7-所有题目" class="headerlink" title="6.4.7 所有题目"></a>6.4.7 所有题目</h2><p><a href="../tags/伸展树/">Tag-伸展树</a></p>
-<h2 id="update"><a href="#update" class="headerlink" title="update"></a>update</h2><p>说说我对前驱后继操作的理解<br>我的写法是兼容【参数不存在】的情况的<br>findip会找到一个存在元素，可能不满足条件，但一定是在那个方向最接近的<br>（如果比d小，那么一定是其中最大的，反之亦然）<br>那么为了确保找到正确答案，不能直接找父亲什么的，要旋转到根，然后往那个方向按具体需求去找</p>
+<p>每次Splay既是加速也是重要的更新（pushdown/pushup）</p>
+<p>说说我对前驱后继操作的理解<br>我的写法是兼容「参数不存在」的情况的<br>findip会找到一个存在元素，可能不满足条件，但一定是在那个方向最接近的<br>（如果比d小，那么一定是其中最大的，反之亦然）<br>那么为了确保找到正确答案，不能直接找父亲什么的，要旋转到根，然后往那个方向按具体需求去找</p>
 <p>目前已知的只有splay能实现，而set不能的功能：</p>
 <ol>
 <li>找第k大等，与具体值没有关系，而且k不是首尾的操作（这里没必要用主席树）</li>
 <li>logn合并两个splay，就是按照值顺序插入，据说是因为它满足finger search，我也不知道这是啥</li>
 </ol>
-<p>目前已知的只有主席树能实现的东西：<br>区间第k大（如果像二逼平衡树那样树套树也行）</p>
-<h2 id="板子"><a href="#板子" class="headerlink" title="板子"></a>板子</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> Splay</div><div class="line">&#123;</div><div class="line">    <span class="keyword">struct</span> Nod&#123;<span class="keyword">int</span> son[<span class="number">2</span>],fa;&#125;p[MAX_N];</div><div class="line">    <span class="keyword">int</span> id;spt()&#123;<span class="built_in">memset</span>(p,<span class="number">0</span>,<span class="keyword">sizeof</span> p);id=<span class="number">0</span>;&#125;</div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">son</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> p[p[x].fa].son[<span class="number">1</span>]==x;&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">int</span> f=p[x].fa,ff=p[f].fa;p[ff].son[son(f)]=x;</div><div class="line">        <span class="keyword">int</span> w=son(x),t=p[x].son[w^<span class="number">1</span>];p[f].son[w]=t;p[x].son[w^<span class="number">1</span>]=f;</div><div class="line">        p[x].fa=f;p[f].fa=x;p[t].fa=f;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isroot</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> p[x].fa==<span class="number">0</span>;&#125;</div><div class="line">    <span class="keyword">int</span> tmp[MAX_N];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">splay</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> rt)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> f=p[x].fa;!isroot(x);rotate(x),f=p[x].fa)</div><div class="line">            <span class="keyword">if</span>(!isroot(y)) son(x)^son(y)?rotate(x):rotate(f);</div><div class="line">    &#125;</div><div class="line">&#125;spt;</div></pre></td></tr></table></figure>
+<p>目前已知的只有主席树能实现的东西：区间第k大（如果像二逼平衡树那样树套树也行）</p>
+<h3 id="板子（LCT用）"><a href="#板子（LCT用）" class="headerlink" title="板子（LCT用）"></a>板子（LCT用）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> Splay<span class="comment">//用于不需要换根的lct</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">struct</span> Nod&#123;<span class="keyword">int</span> son[<span class="number">2</span>],fa;&#125;p[MAX_N];</div><div class="line">    <span class="keyword">int</span> id;spt()&#123;<span class="built_in">memset</span>(p,<span class="number">0</span>,<span class="keyword">sizeof</span> p);id=<span class="number">0</span>;&#125;</div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">son</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> p[p[x].fa].son[<span class="number">1</span>]==x;&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">int</span> f=p[x].fa,ff=p[f].fa;p[ff].son[son(f)]=x;</div><div class="line">        <span class="keyword">int</span> w=son(x),t=p[x].son[w^<span class="number">1</span>];p[f].son[w]=t;p[x].son[w^<span class="number">1</span>]=f;</div><div class="line">        p[x].fa=f;p[f].fa=x;p[t].fa=f;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isroot</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;<span class="keyword">return</span> p[x].fa==<span class="number">0</span>;&#125;</div><div class="line">    <span class="keyword">int</span> tmp[MAX_N];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">splay</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> rt)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> f=p[x].fa;!isroot(x);rotate(x),f=p[x].fa)</div><div class="line">            <span class="keyword">if</span>(!isroot(y)) son(x)^son(y)?rotate(x):rotate(f);</div><div class="line">    &#125;</div><div class="line">&#125;spt;</div></pre></td></tr></table></figure>
+<h3 id="板子（单纯作为数据结构用）"><a href="#板子（单纯作为数据结构用）" class="headerlink" title="板子（单纯作为数据结构用）"></a>板子（单纯作为数据结构用）</h3><p>debug:偷懒在findip里面洗splay，结果破坏了其叶子节点性质，影响了insert</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> Splay</div><div class="line">&#123;</div><div class="line">    <span class="keyword">struct</span> Nod&#123;<span class="keyword">int</span> son[<span class="number">2</span>],fa,val,nn,siz;<span class="keyword">bool</span> fz;&#125;p[N];<span class="keyword">int</span> id;</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> cson(x) (p[p[x].fa].son[1]==x)</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> lc p[x].son[0]</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> rc p[x].son[1]</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;p[x].siz=p[x].nn+p[lc].siz+p[rc].siz;&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">pushdown</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">if</span>(p[x].fz)p[lc].fz^=<span class="number">1</span>,p[rc].fz^=<span class="number">1</span>,swap(lc,rc),p[x].fz=<span class="number">0</span>;&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">int</span> f=p[x].fa,ff=p[f].fa;<span class="keyword">if</span>(ff) p[ff].son[cson(f)]=x;</div><div class="line">        <span class="keyword">int</span> c=cson(x),tson=p[x].son[c^<span class="number">1</span>];p[f].son[c]=tson;p[x].son[c^<span class="number">1</span>]=f;</div><div class="line">        p[x].fa=ff;p[f].fa=x;<span class="keyword">if</span>(tson) p[tson].fa=f;</div><div class="line">        update(f);update(x);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; tmp;<span class="keyword">int</span> root;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">splay</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa=<span class="number">0</span>)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="comment">// for(int t=x;t!=fa;t=p[t].fa) tmp.push(t);while(sz(tmp)) pushdown(tmp.top()),tmp.pop();</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> f=p[x].fa;p[x].fa!=fa;rotate(x),f=p[x].fa) <span class="keyword">if</span>(p[f].fa!=fa) cson(x)^cson(f)?rotate(x):rotate(f);</div><div class="line">        <span class="keyword">if</span>(!fa) root=x;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findip</span><span class="params">(<span class="keyword">int</span> val)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">int</span> x=root;</div><div class="line">        <span class="keyword">while</span>(val!=p[x].val)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(val&lt;p[x].val)&#123;<span class="keyword">if</span>(!lc)<span class="keyword">break</span>;x=lc;&#125;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(val&gt;p[x].val)&#123;<span class="keyword">if</span>(!rc)<span class="keyword">break</span>;x=rc;&#125;</div><div class="line">        &#125;<span class="keyword">return</span> x;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> val)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">if</span>(!root)&#123;<span class="keyword">int</span> x=++id;p[x]=(Nod)&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,val,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>&#125;;root=x;<span class="keyword">return</span>;&#125;</div><div class="line">        <span class="keyword">int</span> x=findip(val);<span class="keyword">if</span>(p[x].val==val)&#123;p[x].nn++,p[x].siz++;<span class="keyword">return</span>;&#125;</div><div class="line">        <span class="keyword">int</span> now=++id;p[now]=(Nod)&#123;<span class="number">0</span>,<span class="number">0</span>,x,val,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>&#125;;p[x].son[val&gt;p[x].val]=now;splay(now);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">del</span><span class="params">(<span class="keyword">int</span> val)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">int</span> x=findip(val);splay(x);<span class="keyword">if</span>(p[x].nn&gt;<span class="number">1</span>)&#123;p[x].nn--,p[x].siz--;<span class="keyword">return</span>;&#125;</div><div class="line">        <span class="keyword">if</span>(lc and rc)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> tmp=rc;x=lc;p[x].fa=<span class="number">0</span>;<span class="keyword">while</span>(rc) x=rc;</div><div class="line">            splay(x);rc=tmp;p[tmp].fa=x;update(x);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(lc) root=lc,p[root].fa=<span class="number">0</span>; <span class="keyword">else</span> <span class="keyword">if</span>(rc) root=rc,p[root].fa=<span class="number">0</span>; <span class="keyword">else</span> root=id=<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findrk</span><span class="params">(<span class="keyword">int</span> val)</span></span>&#123;<span class="keyword">int</span> x=findip(val);splay(x);<span class="keyword">return</span> p[lc].siz+<span class="number">1</span>;&#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findnum</span><span class="params">(<span class="keyword">int</span> rk)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">int</span> x=root;</div><div class="line">        <span class="keyword">while</span>(<span class="number">1</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(rk&lt;=p[lc].siz) x=lc;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(rk&gt;p[lc].siz+p[x].nn) rk-=p[lc].siz+p[x].nn,x=rc;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">break</span>;</div><div class="line">        &#125;splay(x);<span class="keyword">return</span> p[x].val;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findl</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;<span class="keyword">int</span> x=findip(val);splay(x);<span class="keyword">if</span>(p[x].val&gt;=val)&#123;x=lc;<span class="keyword">while</span>(rc)x=rc;&#125;splay(x);<span class="keyword">return</span> p[x].val;&#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findr</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;<span class="keyword">int</span> x=findip(val);splay(x);<span class="keyword">if</span>(p[x].val&lt;=val)&#123;x=rc;<span class="keyword">while</span>(lc)x=lc;&#125;splay(x);<span class="keyword">return</span> p[x].val;&#125;</div><div class="line">&#125;T;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> q=qread();</div><div class="line">    <span class="keyword">while</span>(q--)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> op=qread(),x=qread();</div><div class="line">        <span class="keyword">if</span>(op==<span class="number">1</span>) T.insert(x);</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">2</span>) T.del(x);</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">3</span>) write2(T.findrk(x));</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">4</span>) write2(T.findnum(x));</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">5</span>) write2(T.findl(x));</div><div class="line">        <span class="keyword">else</span> write2(T.findr(x));</div><div class="line">        assert(T.p[<span class="number">0</span>].son[<span class="number">0</span>]+T.p[<span class="number">0</span>].son[<span class="number">1</span>]+T.p[<span class="number">0</span>].fa+T.p[<span class="number">0</span>].siz+T.p[<span class="number">0</span>].nn+T.p[<span class="number">0</span>].val+T.p[<span class="number">0</span>].fz==<span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -641,7 +637,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/1613.html" rel="bookmark">【NOIP17 D2T3】列队</a></div>
+      <div class="popular-posts-title"><a href="/posts/1613.html" rel="bookmark">「NOIP17 D2T3」列队</a></div>
       
     </li>
   
@@ -659,7 +655,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/af961dad.html" title="【OI之路】02数据结构-3splay">http://zory.ink/posts/af961dad.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/af961dad.html" title="「OI之路」02数据结构-3splay">http://zory.ink/posts/af961dad.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -697,8 +693,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/1650.html" rel="next" title="【OI之路】02数据结构-2树状数组">
-                <i class="fa fa-chevron-left"></i> 【OI之路】02数据结构-2树状数组
+              <a href="/posts/1650.html" rel="next" title="「OI之路」02数据结构-2树状数组">
+                <i class="fa fa-chevron-left"></i> 「OI之路」02数据结构-2树状数组
               </a>
             
           </div>
@@ -707,8 +703,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/b144.html" rel="prev" title="【OI之路】02数据结构-4树上启发式合并">
-                【OI之路】02数据结构-4树上启发式合并 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/b144.html" rel="prev" title="「OI之路」02数据结构-4树上启发式合并">
+                「OI之路」02数据结构-4树上启发式合并 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -786,7 +782,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -811,7 +807,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1220,7 +1218,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1283,7 +1285,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-1-定义"><span class="nav-text">6.4.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-2-模版题"><span class="nav-text">6.4.2 模版题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-5-练习"><span class="nav-text">6.4.5 练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-5-其他题目"><span class="nav-text">6.4.5 其他题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-6-总结"><span class="nav-text">6.4.6 总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-7-所有题目"><span class="nav-text">6.4.7 所有题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#update"><span class="nav-text">update</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#板子"><span class="nav-text">板子</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#板子（LCT用）"><span class="nav-text">板子（LCT用）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#板子（单纯作为数据结构用）"><span class="nav-text">板子（单纯作为数据结构用）</span></a></li></ol></div>
             
 
           </div>

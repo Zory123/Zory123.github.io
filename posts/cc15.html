@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeNOIAC40">
 <meta name="keywords" content="贪心,难度2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【NOIAC40】Erlang">
+<meta property="og:title" content="「NOIAC40」Erlang">
 <meta property="og:url" content="http://zory.ink/posts/cc15.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIAC40">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【NOIAC40】Erlang">
+<meta name="twitter:title" content="「NOIAC40」Erlang">
 <meta name="twitter:description" content="Source and JudgeNOIAC40">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【NOIAC40】Erlang | Zory的个人博客</title>
+  <title>「NOIAC40」Erlang | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【NOIAC40】Erlang
+          <h2 class="post-title" itemprop="name headline">「NOIAC40」Erlang
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:46" itemprop="dateModified" datetime="2019-12-01T10:18:46+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/cc15.html" class="post-meta-item leancloud_visitors" data-flag-title="【NOIAC40】Erlang">
+            <span id="/posts/cc15.html" class="post-meta-item leancloud_visitors" data-flag-title="「NOIAC40」Erlang">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -617,7 +617,7 @@
 <p>一开始看错题意了，决策可以是动态的，根据取出来的数再决定下一步</p>
 <p>如果是静态的话，显然最多搞两个集合<br>考虑枚举每一种颜色<br>一、如果某个集合有多个，贡献为 len-其他种类+2（取光其他所有才出来）<br>二、分开来， len-其他种类+1 最少的两个之和（最后才出来）<br>时间复杂度n</p>
 <p>其实改成动态并不难，最多搞两个集合这个性质依然是对的，但不能再枚举具体颜色了<br>一、如果某个集合有多个，贡献为 颜色种类+1<br>二、分开来<br>这里是难点<br>自己曾想到一种情况，但不知道怎么解决：<br>可能我后面取出来的答案即使加上取出来的消耗依然比早出来的小<br>然后看到动态决策就很蒙蔽，不知道怎么处理……</p>
-<p>其实很容易证明，最坏情况一定是按贡献从大到小出来的<br>用微扰可以证明，其他的情况都会比这个更优<br>所以排序后每个的贡献就很明确了，即【存在此颜色的所有集合中，除了这个之外，最小的 其他颜色个数+1】<br>（这里我们不再考虑，因为取到别的相同颜色而停止的情况，因为在前面已经计算过了）</p>
+<p>其实很容易证明，最坏情况一定是按贡献从大到小出来的<br>用微扰可以证明，其他的情况都会比这个更优<br>所以排序后每个的贡献就很明确了，即「存在此颜色的所有集合中，除了这个之外，最小的 其他颜色个数+1」<br>（这里我们不再考虑，因为取到别的相同颜色而停止的情况，因为在前面已经计算过了）</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">	<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">510000</span>;</div><div class="line">	<span class="keyword">int</span> cc[MAX_N];<span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span> </span>&#123;<span class="keyword">return</span> a&gt;b;&#125;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> mi[MAX_N],mi2[MAX_N];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> num,<span class="keyword">int</span> c)</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="comment">//printf("num=%d c=%d\n",num,c);</span></div><div class="line">		<span class="keyword">if</span>(c&lt;mi[num]) mi2[num]=mi[num],mi[num]=c;</div><div class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(c&lt;mi2[num]) mi2[num]=c;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a[MAX_N];</div><div class="line"></div><div class="line">	<span class="keyword">int</span> n,ans=INF;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> ct[MAX_N];<span class="comment">//值的出现情况</span></div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> tmp=<span class="number">0</span>,m=(<span class="keyword">int</span>)a[i].size();</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;j++) ct[a[i][j]]++;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;j++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> get=mi[a[i][j]];</div><div class="line">				<span class="keyword">if</span>(get==m-ct[a[i][j]]+<span class="number">1</span>) get=mi2[a[i][j]];</div><div class="line">				cc[++tmp]=get;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;j++) ct[a[i][j]]--;</div><div class="line"></div><div class="line">			sort(cc+<span class="number">1</span>,cc+tmp+<span class="number">1</span>,cmp);</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=tmp;j++) ans=min(ans,cc[j]+j);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(ans==INF) <span class="built_in">puts</span>(<span class="string">"-1"</span>);</div><div class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> ed[MAX_N];</div><div class="line">	<span class="keyword">int</span> b[MAX_N];<span class="comment">//集合的种类数</span></div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="built_in">memset</span>(mi,<span class="number">63</span>,<span class="keyword">sizeof</span> mi);</div><div class="line">		<span class="built_in">memset</span>(mi2,<span class="number">63</span>,<span class="keyword">sizeof</span> mi2);</div><div class="line"></div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> m;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;m);</div><div class="line">			<span class="keyword">bool</span> bk=<span class="number">0</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;j++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> t;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</div><div class="line">				a[i].push_back(t);ed[t]=j;</div><div class="line">				<span class="keyword">if</span>(ct[t]==<span class="number">0</span>) b[i]++;</div><div class="line">				<span class="keyword">else</span> bk=<span class="number">1</span>;</div><div class="line">				ct[t]++;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span>(bk) ans=min(ans,b[i]+<span class="number">1</span>);<span class="comment">//只选一个的情况</span></div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;(<span class="keyword">int</span>)a[i].size();j++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">if</span>(ed[a[i][j]]==j) insert(a[i][j],(<span class="keyword">int</span>)a[i].size()-ct[a[i][j]]+<span class="number">1</span>);<span class="comment">//只插入一次</span></div><div class="line">				ct[a[i][j]]--;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		solve();</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
@@ -634,21 +634,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d2e5.html" rel="bookmark">【Luogu1514】引水入城</a></div>
+      <div class="popular-posts-title"><a href="/posts/d2e5.html" rel="bookmark">「Luogu1514」引水入城</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">【CF553E】Kyoya and Train</a></div>
+      <div class="popular-posts-title"><a href="/posts/2d0202e9.html" rel="bookmark">【OI之路】贪心</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">「POJ2057」The Lost House</a></div>
       
     </li>
   
@@ -662,14 +662,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f4f8.html" rel="bookmark">【GDOI2018 D1T2】【51nod1357】密码锁</a></div>
+      <div class="popular-posts-title"><a href="/posts/f4f8.html" rel="bookmark">「GDOI2018 D1T2」「51nod1357」密码锁</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/a4aa.html" rel="bookmark">【Bzoj4069】【Luogu3646】巴厘岛的雕塑</a></div>
+      <div class="popular-posts-title"><a href="/posts/a4aa.html" rel="bookmark">「Bzoj4069」「Luogu3646」巴厘岛的雕塑</a></div>
       
     </li>
   
@@ -687,7 +687,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/cc15.html" title="【NOIAC40】Erlang">http://zory.ink/posts/cc15.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/cc15.html" title="「NOIAC40」Erlang">http://zory.ink/posts/cc15.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -727,8 +727,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/51ff.html" rel="next" title="【NOI2006】网络收费">
-                <i class="fa fa-chevron-left"></i> 【NOI2006】网络收费
+              <a href="/posts/51ff.html" rel="next" title="「NOI2006」网络收费">
+                <i class="fa fa-chevron-left"></i> 「NOI2006」网络收费
               </a>
             
           </div>
@@ -737,8 +737,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/abe2.html" rel="prev" title="【NOIAC41】最短路">
-                【NOIAC41】最短路 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/abe2.html" rel="prev" title="「NOIAC41」最短路">
+                「NOIAC41」最短路 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -816,7 +816,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -841,7 +841,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1250,7 +1252,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

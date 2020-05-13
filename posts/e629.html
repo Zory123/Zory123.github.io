@@ -95,15 +95,15 @@
   <meta name="description" content="来源和评测点Nyoj298Caioj1479">
 <meta name="keywords" content="矩阵乘法,难度1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Nyoj298】点的变换">
+<meta property="og:title" content="「Nyoj298」点的变换">
 <meta property="og:url" content="http://zory.ink/posts/e629.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点Nyoj298Caioj1479">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.matrix67.com/blogimage/200708043.gif">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Nyoj298】点的变换">
+<meta name="twitter:title" content="「Nyoj298」点的变换">
 <meta name="twitter:description" content="来源和评测点Nyoj298Caioj1479">
 <meta name="twitter:image" content="http://www.matrix67.com/blogimage/200708043.gif">
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>【Nyoj298】点的变换 | Zory的个人博客</title>
+  <title>「Nyoj298」点的变换 | Zory的个人博客</title>
   
 
 
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -498,7 +498,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Nyoj298】点的变换
+          <h2 class="post-title" itemprop="name headline">「Nyoj298」点的变换
 
               
             
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:46" itemprop="dateModified" datetime="2019-12-01T10:18:46+08:00">2019-12-01</time>
               </span>
             
           
@@ -580,7 +580,7 @@
 
           
           
-            <span id="/posts/e629.html" class="post-meta-item leancloud_visitors" data-flag-title="【Nyoj298】点的变换">
+            <span id="/posts/e629.html" class="post-meta-item leancloud_visitors" data-flag-title="「Nyoj298」点的变换">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,7 +615,7 @@
       
         <h2 id="来源和评测点"><a href="#来源和评测点" class="headerlink" title="来源和评测点"></a>来源和评测点</h2><p><a href="http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid=298" target="_blank" rel="noopener">Nyoj298</a><br><a href="http://caioj.cn/problem.php?id=1479" target="_blank" rel="noopener">Caioj1479</a></p>
 <a id="more"></a>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-green"><strong>【题目大意】</strong><br>平面上有不超过10000个点，坐标都是已知的<br>现在可能对所有的点做以下几种操作：详见输入格式<br>操作的次数不超过1000000次，求最终所有点的坐标。<br>提示：如果程序中用到PI的值，可以用acos(-1.0)获得。<br><strong>【输入格式】</strong><br>测试数据的第一行是两个整数N,M，分别表示点的个数与操作的个数(N&lt;=10000,M&lt;=1000000)<br>随后的一行有N对数对，每个数对的第一个数表示一个点的x坐标，第二个数表示y坐标，这些点初始坐标大小绝对值不超过100。<br>随后的M行，每行代表一种操作，行首是一个字符：<br>首字符如果是M,则表示平移操作，该行后面将跟两个数x,y，表示把所有点按向量(x,y)平移;<br>首字符如果是X，则表示把所有点相对于X轴进行上下翻转;<br>首字符如果是Y，则表示把所有点相对于Y轴进行左右翻转;<br>首字符如果是S，则随后将跟一个数P,表示坐标放大P倍;<br>首字符如果是R，则随后将跟一个数A,表示所有点相对坐标原点逆时针旋转一定的角度A(单位是度)<br><strong>【输出格式】</strong><br>每行输出两个数，表示一个点的坐标(对结果四舍五入到小数点后1位，输出一位小数位）<br>点的输出顺序应与输入顺序保持一致<br><strong>【输入样例】</strong><br>2 5<br>1.0 2.0 2.0 3.0<br>X<br>Y<br>M 2.0 3.0<br>S 2.0<br>R 180<br><strong>【输出样例】</strong><br>-2.0 -2.0<br>0.0 0.0<br></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-green"><strong>「题目大意」</strong><br>平面上有不超过10000个点，坐标都是已知的<br>现在可能对所有的点做以下几种操作：详见输入格式<br>操作的次数不超过1000000次，求最终所有点的坐标。<br>提示：如果程序中用到PI的值，可以用acos(-1.0)获得。<br><strong>「输入格式」</strong><br>测试数据的第一行是两个整数N,M，分别表示点的个数与操作的个数(N&lt;=10000,M&lt;=1000000)<br>随后的一行有N对数对，每个数对的第一个数表示一个点的x坐标，第二个数表示y坐标，这些点初始坐标大小绝对值不超过100。<br>随后的M行，每行代表一种操作，行首是一个字符：<br>首字符如果是M,则表示平移操作，该行后面将跟两个数x,y，表示把所有点按向量(x,y)平移;<br>首字符如果是X，则表示把所有点相对于X轴进行上下翻转;<br>首字符如果是Y，则表示把所有点相对于Y轴进行左右翻转;<br>首字符如果是S，则随后将跟一个数P,表示坐标放大P倍;<br>首字符如果是R，则随后将跟一个数A,表示所有点相对坐标原点逆时针旋转一定的角度A(单位是度)<br><strong>「输出格式」</strong><br>每行输出两个数，表示一个点的坐标(对结果四舍五入到小数点后1位，输出一位小数位）<br>点的输出顺序应与输入顺序保持一致<br><strong>「输入样例」</strong><br>2 5<br>1.0 2.0 2.0 3.0<br>X<br>Y<br>M 2.0 3.0<br>S 2.0<br>R 180<br><strong>「输出样例」</strong><br>-2.0 -2.0<br>0.0 0.0<br></p>
 
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>首先，假如对每个点一个个进行操作的话，O(NM)显然会超时<br>那怎么办呢？题目中每个操作都是对所有点而言的，也就是所有点都要经过各种操作<br>那么考虑用矩阵乘法加速，把每个操作对应的矩阵推导出来就好了<br>这样有什么好处呢？矩阵乘法不是更慢吗？<br>答案：可以先将所有操作化为一个灰常复杂的操作O(M)，再每个点乘一次就好O(N)，共计O(M+N)<br>提示：由于不满足交换律，所以顺序不能变</p>
 <p><img src="http://www.matrix67.com/blogimage/200708043.gif" alt=""></p>
@@ -632,42 +632,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/bfe0.html" rel="bookmark">【Caioj1480】矩阵无限方</a></div>
+      <div class="popular-posts-title"><a href="/posts/bfe0.html" rel="bookmark">「Caioj1480」矩阵无限方</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/e353.html" rel="bookmark">【Vijos1049】送给圣诞夜的礼品</a></div>
+      <div class="popular-posts-title"><a href="/posts/e353.html" rel="bookmark">「Vijos1049」送给圣诞夜的礼品</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3bd.html" rel="bookmark">【Poj3233】Matrix Power Series</a></div>
+      <div class="popular-posts-title"><a href="/posts/3bd.html" rel="bookmark">「Poj3233」Matrix Power Series</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3729.html" rel="bookmark">【Luogu4881】hby与tkw的基情</a></div>
+      <div class="popular-posts-title"><a href="/posts/3729.html" rel="bookmark">「Luogu4881」hby与tkw的基情</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/fb98.html" rel="bookmark">【Poj3233】Matrix_Power_Series</a></div>
+      <div class="popular-posts-title"><a href="/posts/fb98.html" rel="bookmark">「Poj3233」Matrix_Power_Series</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3a8c.html" rel="bookmark">【NOIP14 D2T1】无线网络发射器选址</a></div>
+      <div class="popular-posts-title"><a href="/posts/3a8c.html" rel="bookmark">「NOIP14 D2T1」无线网络发射器选址</a></div>
       
     </li>
   
@@ -685,7 +685,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/e629.html" title="【Nyoj298】点的变换">http://zory.ink/posts/e629.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/e629.html" title="「Nyoj298」点的变换">http://zory.ink/posts/e629.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -735,8 +735,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/bfe0.html" rel="prev" title="【Caioj1480】矩阵无限方">
-                【Caioj1480】矩阵无限方 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/bfe0.html" rel="prev" title="「Caioj1480」矩阵无限方">
+                「Caioj1480」矩阵无限方 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -814,7 +814,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -839,7 +839,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1248,7 +1250,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

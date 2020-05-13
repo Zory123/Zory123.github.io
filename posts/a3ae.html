@@ -95,15 +95,15 @@
   <meta name="description" content="Source and JudgeBaltic2004bzoj1367">
 <meta name="keywords" content="左偏树,难度3,好题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Baltic2004】sequence">
+<meta property="og:title" content="「Baltic2004」sequence">
 <meta property="og:url" content="http://zory.ink/posts/a3ae.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeBaltic2004bzoj1367">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.ink/images/题解图片/Baltic2004.png">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2020-02-09T16:48:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Baltic2004】sequence">
+<meta name="twitter:title" content="「Baltic2004」sequence">
 <meta name="twitter:description" content="Source and JudgeBaltic2004bzoj1367">
 <meta name="twitter:image" content="http://zory.ink/images/题解图片/Baltic2004.png">
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>【Baltic2004】sequence | Zory的个人博客</title>
+  <title>「Baltic2004」sequence | Zory的个人博客</title>
   
 
 
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -498,7 +498,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Baltic2004】sequence
+          <h2 class="post-title" itemprop="name headline">「Baltic2004」sequence
 
               
             
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2020-02-10 00:48:20" itemprop="dateModified" datetime="2020-02-10T00:48:20+08:00">2020-02-10</time>
               </span>
             
           
@@ -580,7 +580,7 @@
 
           
           
-            <span id="/posts/a3ae.html" class="post-meta-item leancloud_visitors" data-flag-title="【Baltic2004】sequence">
+            <span id="/posts/a3ae.html" class="post-meta-item leancloud_visitors" data-flag-title="「Baltic2004」sequence">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -623,7 +623,7 @@
 <li>两段序列合并的中位数，显然在两边中位数的值域区间内<br>然后我们现在要寻找最小代价，肯定要在多个最优解中尽量找一个最容易算的形式，同理，我们说的中位数是指第 $\lceil \frac{n}{2} \rceil$ 小的数<br>然后我们的思路主要是，对于一个不递增的序列，变成不递减的最小代价方案中一定有变成中位数</li>
 </ol>
 <p>那么做法非常容易，每次加入一个数，作为一个区间和上一个区间比较，如果比上个区间的中位数小或相等，则合并两段区间，并用新的中位数作为这段区间的目标值，并不断往前这样做<br>然后实现的话，用可并堆（如左偏树）是nlogn，否则是log方，堆顶就是中位数那样维护，两边都是奇数长度时缩1即可</p>
-<p>但是这个做法的正确性呢？hyh的论文有一段没看懂，DraZxlNDdt的博客也有一段没看懂，捣鼓了几天（其实主要是过年巨颓废）才想出来（神仙写的东西依旧没看懂；哦说不定还是伪证？）</p>
+<p>但是这个做法的正确性呢？hyh的论文有一段没看懂，DraZxlNDdt的博客也有一段没看懂，捣鼓了几天（其实主要是过年巨颓废）才想出来（神仙写的东西依旧没看懂；哦说不定我的还是伪证？）</p>
 <p>第一点，两段区间的中位数不递增的话（不仅是内部递减的情况），合并为新序列的中位数<br>设前一段的中位数为u，后一段的中位数为v<br>设中间的编号为t，设某个最优方案为b，显然只考虑 $b_t,v \leq b_{t+1},u$ 否则没必要说下去了（例如左边如果比u大，改为全部u不会更差，递增性也保证了）<br><img src="..\..\images\题解图片\Baltic2004.png" alt=""><br>所以可以改为 $b_t,b_t,…,b_{t+1},b_{t+1}$<br>此时已经非常棒了，然而还是不好求，考虑进一步转化，这里就比较容易了<br>因为两边分别的代价是越接近中位数越小，显然两边不同是亏的，数学证明的话也很好推，分类讨论一下即可<br>所以两边相同，然后显然取为中位数</p>
 <p>第二点，新序列的中位数在保存的数中<br>这个你会经历多个过程，首先你想着维护中位数可以log方，然后你可能会想把中位数放在堆顶，感觉很对，然后又想想万一中位数不在两个堆中呢？再仔细想想又可以证明不会出现这种情况（我觉得这个很难啊……）<br>这需要我们仔细思考现在做法的细节<br>我们现在担心的是，新的中位数出现在右边，而且比右边中位数大<br>合并的时候一定是 $L_{mid} \leq R_{mid},L_{mid} \leq R_{mid_old}$<br>然后因为只有一个数，显然 $mid_old+1=mid$<br>然后因为新的中位数在它们之间，所以如果比右边中位数大的话，不会出现在右边，只会在左边<br>画画图就能理解了，关键是这个细节是否能在证明的时候想到</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2019</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">	<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line">	<span class="comment">// #define pr pair&lt;int,int&gt;</span></div><div class="line">	<span class="comment">// #define FR first</span></div><div class="line">	<span class="comment">// #define SE second</span></div><div class="line">	<span class="comment">// #define MP make_pair</span></div><div class="line">	<span class="function">ll <span class="title">myabs</span><span class="params">(ll x)</span> </span>&#123;<span class="keyword">return</span> x&gt;<span class="number">0</span>?x:-x;&#125;</div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">1e6</span>+<span class="number">10</span>;</div><div class="line">	<span class="keyword">int</span> a[MAX_N];</div><div class="line"></div><div class="line">	<span class="keyword">struct</span> Nod&#123;<span class="keyword">int</span> ls,rs,dis,key;Nod()&#123;ls=rs=<span class="number">0</span>;dis=<span class="number">-1</span>;key=-INF;&#125;&#125;p[MAX_N];</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">merg</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">if</span>(a==<span class="number">0</span> or b==<span class="number">0</span>) <span class="keyword">return</span> a+b;</div><div class="line">		<span class="keyword">if</span>(p[a].key&lt;p[b].key) swap(a,b);</div><div class="line">		p[a].rs=merg(p[a].rs,b);</div><div class="line">		<span class="keyword">if</span>(p[p[a].ls].dis&lt;p[p[a].rs].dis) swap(p[a].ls,p[a].rs);</div><div class="line">		p[a].dis=p[p[a].rs].dis+<span class="number">1</span>;</div><div class="line">		<span class="keyword">return</span> a;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> cnt=<span class="number">0</span>,rt[MAX_N],right[MAX_N],siz[MAX_N];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">int</span> n;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]),a[i]-=i;</div><div class="line"></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">		&#123;</div><div class="line">			siz[++cnt]=<span class="number">1</span>;rt[cnt]=right[cnt]=i;p[i].key=a[i];p[i].dis=<span class="number">0</span>;</div><div class="line">			<span class="keyword">while</span>(p[rt[cnt<span class="number">-1</span>]].key&gt;=p[rt[cnt]].key)</div><div class="line">			&#123;</div><div class="line">				cnt--;right[cnt]=right[cnt+<span class="number">1</span>];</div><div class="line">				rt[cnt]=merg(rt[cnt],rt[cnt+<span class="number">1</span>]);siz[cnt]+=siz[cnt+<span class="number">1</span>];</div><div class="line">				<span class="keyword">while</span>(siz[cnt]*<span class="number">2</span>&gt;right[cnt]-right[cnt<span class="number">-1</span>]+<span class="number">1</span>)<span class="comment">//delete</span></div><div class="line">					rt[cnt]=merg(p[rt[cnt]].ls,p[rt[cnt]].rs),siz[cnt]--;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		ll ans=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=cnt;i++)</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=right[i<span class="number">-1</span>]+<span class="number">1</span>;j&lt;=right[i];j++)</div><div class="line">				ans+=myabs(a[j]-p[rt[i]].key);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%lld"</span>,ans);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	srand(time(<span class="number">0</span>));</div><div class="line">	mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -642,35 +642,35 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/edb5.html" rel="bookmark">【Bzoj1835】【Luogu2605】基站选址</a></div>
+      <div class="popular-posts-title"><a href="/posts/edb5.html" rel="bookmark">「Bzoj1835」「Luogu2605」基站选址</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/df74.html" rel="bookmark">【Bzoj3771】Triple</a></div>
+      <div class="popular-posts-title"><a href="/posts/df74.html" rel="bookmark">「Bzoj3771」Triple</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/80e0.html" rel="bookmark">【NOI2014】购票</a></div>
+      <div class="popular-posts-title"><a href="/posts/80e0.html" rel="bookmark">「NOI2014」购票</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/2fa8.html" rel="bookmark">【CF590E】Birthday</a></div>
+      <div class="popular-posts-title"><a href="/posts/2fa8.html" rel="bookmark">「CF590E」Birthday</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/5359.html" rel="bookmark">【CTSC2010】珠宝商</a></div>
+      <div class="popular-posts-title"><a href="/posts/5359.html" rel="bookmark">「CTSC2010」珠宝商</a></div>
       
     </li>
   
@@ -695,7 +695,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/a3ae.html" title="【Baltic2004】sequence">http://zory.ink/posts/a3ae.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/a3ae.html" title="「Baltic2004」sequence">http://zory.ink/posts/a3ae.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -737,8 +737,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/e4c.html" rel="next" title="【HAOI2006】数字序列">
-                <i class="fa fa-chevron-left"></i> 【HAOI2006】数字序列
+              <a href="/posts/e4c.html" rel="next" title="「HAOI2006」数字序列">
+                <i class="fa fa-chevron-left"></i> 「HAOI2006」数字序列
               </a>
             
           </div>
@@ -747,8 +747,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/6e7f.html" rel="prev" title="【ZJOI2011】细胞">
-                【ZJOI2011】细胞 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/6e7f.html" rel="prev" title="「ZJOI2011」细胞">
+                「ZJOI2011」细胞 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -826,7 +826,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -851,7 +851,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1260,7 +1262,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

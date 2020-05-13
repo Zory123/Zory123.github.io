@@ -95,15 +95,15 @@
   <meta name="description" content="后缀自动机（SAM）目标：构造一个自动机（dag），能识别一个串的所有子串（也就是所有从根出发的合法路径都是一个子串） 以前放了一些证明之类的，仔细想了想没有太大必要，就略去吧，有兴趣可以看师弟的博客 所以主要放个框架和一些容易搞错的地方">
 <meta name="keywords" content="sam">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】06字符串-7后缀自动机">
+<meta property="og:title" content="「OI之路」06字符串-7后缀自动机">
 <meta property="og:url" content="http://zory.ink/posts/d6cf.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="后缀自动机（SAM）目标：构造一个自动机（dag），能识别一个串的所有子串（也就是所有从根出发的合法路径都是一个子串） 以前放了一些证明之类的，仔细想了想没有太大必要，就略去吧，有兴趣可以看师弟的博客 所以主要放个框架和一些容易搞错的地方">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.ink/images/OI之路/sam/构造.png">
-<meta property="og:updated_time" content="2019-08-30T00:46:03.301Z">
+<meta property="og:updated_time" content="2020-05-12T07:52:12.960Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】06字符串-7后缀自动机">
+<meta name="twitter:title" content="「OI之路」06字符串-7后缀自动机">
 <meta name="twitter:description" content="后缀自动机（SAM）目标：构造一个自动机（dag），能识别一个串的所有子串（也就是所有从根出发的合法路径都是一个子串） 以前放了一些证明之类的，仔细想了想没有太大必要，就略去吧，有兴趣可以看师弟的博客 所以主要放个框架和一些容易搞错的地方">
 <meta name="twitter:image" content="http://zory.ink/images/OI之路/sam/构造.png">
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>【OI之路】06字符串-7后缀自动机 | Zory的个人博客</title>
+  <title>「OI之路」06字符串-7后缀自动机 | Zory的个人博客</title>
   
 
 
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -498,7 +498,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】06字符串-7后缀自动机
+          <h2 class="post-title" itemprop="name headline">「OI之路」06字符串-7后缀自动机
 
               
             
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-30 08:46:03" itemprop="dateModified" datetime="2019-08-30T08:46:03+08:00">2019-08-30</time>
+                <time title="修改时间：2020-05-12 15:52:12" itemprop="dateModified" datetime="2020-05-12T15:52:12+08:00">2020-05-12</time>
               </span>
             
           
@@ -580,7 +580,7 @@
 
           
           
-            <span id="/posts/d6cf.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】06字符串-7后缀自动机">
+            <span id="/posts/d6cf.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」06字符串-7后缀自动机">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -620,18 +620,20 @@
 <h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>设字符集大小为k<br>方案一：$时间O(n)+空间O(nk)$<br>方案二：$时间O(nlogk)+空间O(n)$，即用平衡树应对大字符集</p>
 <h3 id="核心思路"><a href="#核心思路" class="headerlink" title="核心思路"></a>核心思路</h3><p>识别所有子串是个很crazy的idea，我们需要考虑怎样将朴素的 $n^2$ 个状态压缩；<br>考虑有没有一些子串他们对于这个串而言是相似的，比较自然的思路是合并完全相同的子串，但这种方法只在回文自动机里够用；<br>要识别所有一般的子串，还需要定义一个end-pos（或者right）集合，表示在串中出现位置的右端点，然后把所有right集合相同的合并起来 ，这样只会有 O(n) 个节点</p>
 <p>然后其实sam中的fail树也是很重要的部分，fail表示right集合包含当前节点且集合大小最小的位置（偏序集），也可以理解为一个出现集合不同的最长后缀</p>
-<h3 id="构造算法"><a href="#构造算法" class="headerlink" title="构造算法"></a>构造算法</h3><p>我们时刻维护字符串前面部分的sam，然后当前插入字符c（新建节点now），lst为表示前面整个串的节点<br>从lst开始尝试跳fail，寻找一个节点a拥有字符c儿子b（用类似trie的方式记录即可）<br>一、找不到b，则从rt连向now，$fail(now)=rt$<br>二、存在b<br>① $mx(a)+1=mx(b)$<br>b只代表一种本质不同串，显然right是包含的，而且是now的最近后缀，$fail(now)=b$<br>② $mx(a)+1&lt;mx(b)$<br>这意味着，在原串中a和b之间隔着一些字符，同时以前为了压缩节点数而把【加入c后right不同的状态】合并在了一起；原本right相同，但是<strong>即将</strong>不同，故新建节点tmp，父亲、儿子信息从b继承， $fail(b)=tmp,fail(now)=tmp$<br><img src="../images/OI之路/sam/构造.png" alt=""></p>
-<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>①第k小子串：dag上dp求不同子串个数，然后贪心即可（经典例题：<a href="https://loj.ac/problem/2102" target="_blank" rel="noopener">「TJOI2015」弦论 </a>，<a href="https://loj.ac/submission/435417" target="_blank" rel="noopener">code</a>）<br>②最长公共后缀：fail树上两点lca<br>③拓扑序：可以利用性质用mx排序<br>④最小表示：因为包含了所有子串，对S+S建，跑|S|次，贪心找最小的那个<br>⑤最长公共子串：先选一个建好，两串直接跑nxt，如果是多个就对每个节点记录其他串的min，最后选最大的节点<br>⑥后缀树：反串的fail树</p>
+<h3 id="构造算法"><a href="#构造算法" class="headerlink" title="构造算法"></a>构造算法</h3><p>我们时刻维护字符串前面部分的sam，然后当前插入字符c（新建节点now），lst为表示前面整个串的节点<br>从lst开始尝试跳fail，寻找一个节点a拥有字符c儿子b（用类似trie的方式记录即可）<br>一、找不到b，则从rt连向now，$fail(now)=rt$<br>二、存在b<br>① $mx(a)+1=mx(b)$<br>b只代表一种本质不同串，显然right是包含的，而且是now的最近后缀，$fail(now)=b$<br>② $mx(a)+1&lt;mx(b)$<br>这意味着，在原串中a和b之间隔着一些字符，同时以前为了压缩节点数而把「加入c后right不同的状态」合并在了一起；原本right相同，但是<strong>即将</strong>不同，故新建节点tmp，父亲、儿子信息从b继承， $fail(b)=tmp,fail(now)=tmp$<br><img src="../images/OI之路/sam/构造.png" alt=""></p>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>①第k小子串：dag上dp求不同子串个数，然后贪心即可（经典例题：<a href="https://loj.ac/problem/2102" target="_blank" rel="noopener">「TJOI2015」弦论 </a>，<a href="https://loj.ac/submission/435417" target="_blank" rel="noopener">code</a>）<br>②最长公共后缀：fail树上两点lca<br>③拓扑序：可以利用性质用mx排序<br>④最小表示：因为包含了所有子串，对S+S建，跑|S|次，贪心找最小的那个<br>⑤最长公共子串：先选一个建好，两串直接跑nxt，如果是多个就对每个节点记录其他串的min，最后选最大的节点<br>⑥后缀树：反串的fail树，详见<a href="https://eternalalexander.github.io/2019/10/31/%E5%90%8E%E7%BC%80%E6%A0%91%E7%AE%80%E4%BB%8B/" target="_blank" rel="noopener">EA-炫酷后缀树魔术</a></p>
 <p>当然还有经典的LCT动态维护sam，<a href="be44.html">51nod1600 Simple KMP</a></p>
 <h3 id="广义"><a href="#广义" class="headerlink" title="广义"></a>广义</h3><p><strong>多串</strong>：</p>
 <p>构建方法：对串逐个加入，每建完一个串，lst=1，时空复杂度和普通sam一样</p>
 <p>如果有相同的状态，其实本质上是一个点：faill树上，打标记、找子树等操作不会有影响，dag上，永远也不会访问到无用节点</p>
 <p>不过注意fail树不能用基数排序，因为可能和父亲的mx相同而父亲编号更大</p>
-<p>upd：<br>起因是看到<a href="https://www.zybuluo.com/xzyxzy/note/1193868" target="_blank" rel="noopener">这篇文章</a>，不过我觉得他有些地方没说清楚，一下给的板子是广义自动机正确板子里最简短的</p>
+<p>upd：<br>起因是看到<a href="https://www.zybuluo.com/xzyxzy/note/1193868" target="_blank" rel="noopener">这篇文章</a>，不过我觉得他有些地方没说清楚，以下给的板子是广义自动机正确板子里最简短的</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> SAM</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> id;SAM()&#123;id=<span class="number">1</span>;&#125;</div><div class="line">    <span class="keyword">struct</span> Nod&#123;<span class="keyword">int</span> son[<span class="number">10</span>],fail,mx;&#125;p[N];</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> lst,<span class="keyword">int</span> c,<span class="keyword">int</span> col)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">int</span> now=++id;p[now].mx=p[lst].mx+<span class="number">1</span>;</div><div class="line">        <span class="keyword">int</span> a=lst;<span class="keyword">while</span>(a and !p[a].son[c]) p[a].son[c]=now,a=p[a].fail;</div><div class="line">        <span class="keyword">int</span> b=p[a].son[c];</div><div class="line">        <span class="keyword">if</span>(!b) p[now].fail=<span class="number">1</span>;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(p[b].mx==p[a].mx+<span class="number">1</span>) p[now].fail=b;</div><div class="line">        <span class="keyword">else</span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> tmp=++id;p[tmp]=p[b];p[tmp].mx=p[a].mx+<span class="number">1</span>;</div><div class="line">            p[b].fail=p[now].fail=tmp;</div><div class="line">            <span class="keyword">while</span>(p[a].son[c]==b) p[a].son[c]=tmp,a=p[a].fail;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> p[lst].son[c];</div><div class="line">    &#125;</div><div class="line">&#125;sam;</div></pre></td></tr></table></figure>
 <p>不同的就是返回值：<br>这种情况只会出现在广义，不这么做是不会影响sam的构建的，但可能得到错误的pos（即从头开始逐个向自动机输入字符到i时到达的节点），而不少题目需要用到这个信息（如<a href="https://www.lydsy.com/JudgeOnline/upload/5408.pdf" target="_blank" rel="noopener">bzoj5408</a>）</p>
 <p><strong>Trie</strong>：</p>
 <p>这个直接dfs建复杂度是叶子节点到根路径和；bfs建就能保证是trie的大小</p>
+<p><strong>题：</strong></p>
+<p>bzoj5408需要LCT，单纯写板子可以考虑<a href="https://codeforces.com/contest/666/problem/E" target="_blank" rel="noopener">CF666E Forensic Examination </a>，连样例都提示是建出广义SAM（母串也放进去就能定位了）后线段树合并得出每个点子树内每种字符串的right集合贡献然后区间询问最大值，<a href="https://codeforces.com/contest/666/submission/67184127" target="_blank" rel="noopener">code</a></p>
 <p>下面给出bzoj5408的代码：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> double long double</span></div><div class="line">    <span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> pr pair<span class="meta-string">&lt;int,int&gt;</span></span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> FR first</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> SE second</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> vc vector</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> all(x) (x).begin(),(x).end()</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> SZ(x) ((int)(x).size())</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> bin(x) (1ll&lt;&lt;(x))</span></div><div class="line">    <span class="function">ll <span class="title">qread</span><span class="params">()</span></div><div class="line">    </span>&#123;</div><div class="line">        ll ans=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> c=getchar();</div><div class="line">        <span class="keyword">while</span>(c&lt;<span class="string">'0'</span> or c&gt;<span class="string">'9'</span>) &#123;<span class="keyword">if</span>(c==<span class="string">'-'</span>)f=<span class="number">-1</span>;c=getchar();&#125;</div><div class="line">        <span class="keyword">while</span>(<span class="string">'0'</span>&lt;=c and c&lt;=<span class="string">'9'</span>) ans=ans*<span class="number">10</span>+c-<span class="string">'0'</span>,c=getchar();</div><div class="line">        <span class="keyword">return</span> ans*f;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">write</span><span class="params">(ll num)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">if</span>(num&lt;<span class="number">0</span>) <span class="built_in">putchar</span>(<span class="string">'-'</span>),num=-num;</div><div class="line">        <span class="keyword">if</span>(num&gt;=<span class="number">10</span>) write(num/<span class="number">10</span>);</div><div class="line">        <span class="built_in">putchar</span>(<span class="string">'0'</span>+num%<span class="number">10</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">write1</span><span class="params">(ll num)</span></span>&#123;write(num);<span class="built_in">putchar</span>(<span class="string">' '</span>);&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">write2</span><span class="params">(ll num)</span></span>&#123;write(num);<span class="built_in">putchar</span>(<span class="string">'\n'</span>);&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">chmax</span><span class="params">(<span class="keyword">int</span> &amp;x,<span class="keyword">const</span> ll y)</span> </span>&#123;x=(x&gt;y?x:y);&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">chmin</span><span class="params">(<span class="keyword">int</span> &amp;x,<span class="keyword">const</span> ll y)</span> </span>&#123;x=(x&lt;y?x:y);&#125;</div><div class="line">    <span class="function">ll <span class="title">gcd</span><span class="params">(ll x,ll y)</span></span>&#123;<span class="keyword">return</span> y?gcd(y,x%y):<span class="number">0</span>;&#125;</div><div class="line">    <span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line">    <span class="keyword">const</span> <span class="keyword">int</span> MOD=<span class="number">1e9</span>+<span class="number">9</span>;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">mm</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">return</span> x&gt;=MOD?x-MOD:x;&#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> ll <span class="title">qpower</span><span class="params">(ll x,ll e)</span></div><div class="line">    </span>&#123;</div><div class="line">        ll ans=<span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>(e)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(e&amp;<span class="number">1</span>) ans=ans*x%MOD;</div><div class="line">            x=x*x%MOD;e&gt;&gt;=<span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> ans;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">invm</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">return</span> qpower(x,MOD<span class="number">-2</span>);&#125;</div><div class="line">    <span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e6</span>+<span class="number">10</span>;</div><div class="line"></div><div class="line">    <span class="keyword">namespace</span> LCT</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> son[N][<span class="number">2</span>],fa[N];</div><div class="line">        <span class="keyword">int</span> cnt[N][<span class="number">21</span>],tag[N][<span class="number">21</span>];</div><div class="line">        <span class="meta">#<span class="meta-keyword">define</span> lc(x) son[(x)][0]</span></div><div class="line">        <span class="meta">#<span class="meta-keyword">define</span> rc(x) son[(x)][1]</span></div><div class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">tw</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">return</span> rc(fa[x])==x;&#125;</div><div class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">isrt</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">return</span> son[fa[x]][tw(x)]!=x;&#125;</div><div class="line">        <span class="function"><span class="keyword">void</span> <span class="title">pushdown</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line">        </span>&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">20</span>;i++)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">if</span>(lc(x)) cnt[lc(x)][i]+=tag[x][i],tag[lc(x)][i]+=tag[x][i];</div><div class="line">                <span class="keyword">if</span>(rc(x)) cnt[rc(x)][i]+=tag[x][i],tag[rc(x)][i]+=tag[x][i];</div><div class="line">                tag[x][i]=<span class="number">0</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line">        </span>&#123;</div><div class="line">            <span class="keyword">int</span> f=fa[x],ff=fa[f];<span class="keyword">if</span>(!isrt(f)) son[ff][tw(f)]=x;</div><div class="line">            <span class="keyword">int</span> cc=tw(x),tson=son[x][cc^<span class="number">1</span>];son[x][cc^<span class="number">1</span>]=f;son[f][cc]=tson;</div><div class="line">            fa[x]=ff;fa[f]=x;<span class="keyword">if</span>(tson) fa[tson]=f;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> tmp[N];</div><div class="line">        <span class="function"><span class="keyword">void</span> <span class="title">splay</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line">        </span>&#123;</div><div class="line">            <span class="keyword">int</span> cnt=<span class="number">0</span>,tt=x;<span class="keyword">while</span>(!isrt(tt)) tmp[++cnt]=tt,tt=fa[tt];tmp[++cnt]=tt;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=cnt;i&gt;=<span class="number">1</span>;i--) pushdown(tmp[i]);</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> f=fa[x];!isrt(x);rotate(x),f=fa[x]) <span class="keyword">if</span>(!isrt(f)) tw(x)^tw(f)?rotate(x):rotate(f);</div><div class="line">        &#125;</div><div class="line">        <span class="function"><span class="keyword">void</span> <span class="title">access</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">for</span>(<span class="keyword">int</span> lst=<span class="number">0</span>;x&gt;<span class="number">0</span>;lst=x,x=fa[x]) &#123;splay(x),son[x][<span class="number">1</span>]=lst;<span class="keyword">if</span>(lst)fa[lst]=x;&#125;&#125;</div><div class="line">        <span class="comment">//y为树根</span></div><div class="line">        <span class="function"><span class="keyword">void</span> <span class="title">link</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;<span class="keyword">if</span>(min(x,y)) fa[y]=x;&#125;</div><div class="line">        <span class="function"><span class="keyword">void</span> <span class="title">cut</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;<span class="keyword">if</span>(min(x,y)) access(y),splay(x),son[x][<span class="number">1</span>]=fa[y]=<span class="number">0</span>;&#125;</div><div class="line">        <span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> id)</span></span>&#123;<span class="keyword">if</span>(x) access(x),splay(x),cnt[x][id]++,tag[x][id]++;&#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">using</span> <span class="keyword">namespace</span> LCT;</div><div class="line">    <span class="keyword">struct</span> SAM</div><div class="line">    &#123;</div><div class="line">        ll dif;<span class="keyword">int</span> id;SAM()&#123;id=<span class="number">1</span>;&#125;</div><div class="line">        <span class="keyword">struct</span> Nod&#123;<span class="keyword">int</span> son[<span class="number">10</span>],fail,mx;&#125;p[N];</div><div class="line">        <span class="function"><span class="keyword">int</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> lst,<span class="keyword">int</span> c,<span class="keyword">int</span> col)</span></div><div class="line">        </span>&#123;</div><div class="line">            <span class="keyword">int</span> now=++id;p[now].mx=p[lst].mx+<span class="number">1</span>;</div><div class="line">            <span class="keyword">int</span> a=lst;<span class="keyword">while</span>(a and !p[a].son[c]) p[a].son[c]=now,a=p[a].fail;</div><div class="line">            <span class="keyword">int</span> b=p[a].son[c];</div><div class="line">            <span class="keyword">if</span>(!b) p[now].fail=<span class="number">1</span>;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(p[b].mx==p[a].mx+<span class="number">1</span>) p[now].fail=b;</div><div class="line">            <span class="keyword">else</span></div><div class="line">            &#123;</div><div class="line">                cut(p[b].fail,b);splay(b);</div><div class="line">                <span class="keyword">int</span> tmp=++id;p[tmp]=p[b];p[tmp].mx=p[a].mx+<span class="number">1</span>;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">20</span>;i++) cnt[tmp][i]=cnt[b][i];</div><div class="line">                link(p[tmp].fail,tmp);link(tmp,b);</div><div class="line"></div><div class="line">                p[b].fail=p[now].fail=tmp;</div><div class="line">                <span class="keyword">while</span>(p[a].son[c]==b) p[a].son[c]=tmp,a=p[a].fail;</div><div class="line">            &#125;</div><div class="line">            link(p[now].fail,now);add(now,col);</div><div class="line">            dif+=p[now].mx-p[p[now].fail].mx;</div><div class="line">            <span class="keyword">return</span> p[lst].son[c];</div><div class="line">        &#125;</div><div class="line">    &#125;sam;</div><div class="line">    <span class="keyword">int</span> pos[N][<span class="number">30</span>];</div><div class="line">    <span class="keyword">char</span> str[<span class="number">20000001</span>];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">int</span> n=qread(),fuk=qread();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">        &#123;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%s"</span>,str+<span class="number">1</span>);pos[<span class="number">0</span>][i]=<span class="number">1</span>;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>,ln=<span class="built_in">strlen</span>(str+<span class="number">1</span>);j&lt;=ln;j++) pos[<span class="number">0</span>][i]=sam.insert(pos[<span class="number">0</span>][i],str[j]-<span class="string">'0'</span>,i);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> lstans=<span class="number">0</span>,m=qread();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=m;k++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> op=qread();<span class="built_in">memcpy</span>(pos[k],pos[k<span class="number">-1</span>],<span class="keyword">sizeof</span> pos[k]);</div><div class="line">            <span class="keyword">if</span>(op==<span class="number">1</span>)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">int</span> id=qread(),c=qread();<span class="keyword">if</span>(fuk) c=(c^lstans)%<span class="number">10</span>;</div><div class="line">                pos[k][id]=sam.insert(pos[k][id],c,id);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">2</span>)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">int</span> x=qread(),ti=qread(),y=qread();</div><div class="line">                <span class="keyword">int</span> now=pos[ti][x];</div><div class="line">                splay(now);write2(lstans=cnt[now][y]);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">3</span>) write2(sam.dif);</div><div class="line">            <span class="keyword">else</span></div><div class="line">            &#123;</div><div class="line">                <span class="built_in">scanf</span>(<span class="string">"%s"</span>,str+<span class="number">1</span>);<span class="keyword">int</span> ln=<span class="built_in">strlen</span>(str+<span class="number">1</span>);</div><div class="line">                <span class="keyword">int</span> now=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=ln;i++) now=sam.p[now].son[str[i]-<span class="string">'0'</span>];</div><div class="line">                <span class="keyword">if</span>(!now) <span class="built_in">puts</span>(<span class="string">"0"</span>),lstans=<span class="number">0</span>;<span class="comment">//debug 忘记写这个调了一晚上……</span></div><div class="line">                <span class="keyword">else</span></div><div class="line">                &#123;</div><div class="line">                    splay(now);<span class="keyword">int</span> mx=<span class="number">0</span>;</div><div class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) chmax(mx,cnt[now][i]);</div><div class="line">                    write2(lstans=mx);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    srand(time(<span class="number">0</span>));</div><div class="line">    mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
@@ -647,42 +649,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/333f.html" rel="bookmark">【bzoj2865】字符串识别【bzoj1396】识别子串</a></div>
+      <div class="popular-posts-title"><a href="/posts/333f.html" rel="bookmark">「bzoj2865」字符串识别「bzoj1396」识别子串</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d300.html" rel="bookmark">【SP8222】NSUBSTR</a></div>
+      <div class="popular-posts-title"><a href="/posts/d300.html" rel="bookmark">「SP8222」NSUBSTR</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ec10.html" rel="bookmark">【APIO2014】回文串</a></div>
+      <div class="popular-posts-title"><a href="/posts/ec10.html" rel="bookmark">「APIO2014」回文串</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7fcf.html" rel="bookmark">【BJWC2010】外星联络</a></div>
+      <div class="popular-posts-title"><a href="/posts/7fcf.html" rel="bookmark">「BJWC2010」外星联络</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/aba4.html" rel="bookmark">【Ahoi2013】差异</a></div>
+      <div class="popular-posts-title"><a href="/posts/aba4.html" rel="bookmark">「Ahoi2013」差异</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/5359.html" rel="bookmark">【CTSC2010】珠宝商</a></div>
+      <div class="popular-posts-title"><a href="/posts/5359.html" rel="bookmark">「CTSC2010」珠宝商</a></div>
       
     </li>
   
@@ -700,7 +702,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/d6cf.html" title="【OI之路】06字符串-7后缀自动机">http://zory.ink/posts/d6cf.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/d6cf.html" title="「OI之路」06字符串-7后缀自动机">http://zory.ink/posts/d6cf.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -738,8 +740,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/cc01.html" rel="next" title="【OI之路】06字符串-6后缀数组">
-                <i class="fa fa-chevron-left"></i> 【OI之路】06字符串-6后缀数组
+              <a href="/posts/cc01.html" rel="next" title="「OI之路」06字符串-6后缀数组">
+                <i class="fa fa-chevron-left"></i> 「OI之路」06字符串-6后缀数组
               </a>
             
           </div>
@@ -748,8 +750,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/5f38.html" rel="prev" title="【OI之路】06字符串-8其他">
-                【OI之路】06字符串-8其他 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/5f38.html" rel="prev" title="「OI之路」06字符串-8其他">
+                「OI之路」06字符串-8其他 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -827,7 +829,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -852,7 +854,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1261,7 +1265,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

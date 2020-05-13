@@ -95,14 +95,14 @@
   <meta name="description" content="来源和评测点Zjoi2014Bzoj3771Caioj1451">
 <meta name="keywords" content="难度3,好题,快速傅里叶变换,容斥原理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Bzoj3771】Triple">
+<meta property="og:title" content="「Bzoj3771」Triple">
 <meta property="og:url" content="http://zory.ink/posts/df74.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点Zjoi2014Bzoj3771Caioj1451">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-22T04:44:44.820Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Bzoj3771】Triple">
+<meta name="twitter:title" content="「Bzoj3771」Triple">
 <meta name="twitter:description" content="来源和评测点Zjoi2014Bzoj3771Caioj1451">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【Bzoj3771】Triple | Zory的个人博客</title>
+  <title>「Bzoj3771」Triple | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Bzoj3771】Triple
+          <h2 class="post-title" itemprop="name headline">「Bzoj3771」Triple
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-22 12:44:44" itemprop="dateModified" datetime="2019-08-22T12:44:44+08:00">2019-08-22</time>
+                <time title="修改时间：2019-12-01 10:18:45" itemprop="dateModified" datetime="2019-12-01T10:18:45+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/df74.html" class="post-meta-item leancloud_visitors" data-flag-title="【Bzoj3771】Triple">
+            <span id="/posts/df74.html" class="post-meta-item leancloud_visitors" data-flag-title="「Bzoj3771」Triple">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -613,9 +613,9 @@
       
         <h2 id="来源和评测点"><a href="#来源和评测点" class="headerlink" title="来源和评测点"></a>来源和评测点</h2><p>Zjoi2014<br><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3771" target="_blank" rel="noopener">Bzoj3771</a><br><a href="http://caioj.cn/problem.php?id=1451" target="_blank" rel="noopener">Caioj1451</a></p>
 <a id="more"></a>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-blue"><strong>【题目大意】</strong><br>我们讲一个悲伤的故事。<br>从前有一个贫穷的樵夫在河边砍柴。<br>这时候河里出现了一个水神，夺过了他的斧头，说：<br>“这把斧头，是不是你的？”<br>樵夫一看：“是啊是啊！”<br>水神把斧头扔在一边，又拿起一个东西问：<br>“这把斧头，是不是你的？”<br>樵夫看不清楚，但又怕真的是自己的斧头，只好又答：“是啊是啊！”<br>水神又把手上的东西扔在一边，拿起第三个东西问：<br>“这把斧头，是不是你的？”<br>樵夫还是看不清楚，但是他觉得再这样下去他就没法砍柴了。<br>于是他又一次答：“是啊是啊！真的是！”<br>水神看着他，哈哈大笑道：<br>“你看看你现在的样子，真是丑陋！”<br>之后就消失了。<br>樵夫觉得很坑爹，他今天不仅没有砍到柴，还丢了一把斧头给那个水神。<br>于是他准备回家换一把斧头。<br>回家之后他才发现真正坑爹的事情才刚开始。<br>水神拿着的的确是他的斧头。<br>但是不一定是他拿出去的那把，<br>还有可能是水神不知道怎么偷偷从他家里拿走的。<br>换句话说，水神可能拿走了他的一把，两把或者三把斧头。<br>樵夫觉得今天真是倒霉透了，但不管怎么样日子还得过。<br>他想统计他的损失。<br>樵夫的每一把斧头都有一个价值，不同斧头的价值不同。<br>总损失就是丢掉的斧头价值和。<br>他想对于每个可能的总损失，计算有几种可能的方案。<br>注意：如果水神拿走了两把斧头a和b，(a,b)和(b,a)视为一种方案。<br>拿走三把斧头时，<br>(a,b,c),(b,c,a),(c,a,b),(c,b,a),(b,a,c),(a,c,b)视为一种方案。<br><strong>【输入格式】</strong><br>第一行是整数N，表示有N把斧头。<br>接下来n行升序输入N个数字Ai，表示每把斧头的价值。<br>所有数据满足：Ai&lt;=40000<br><strong>【输出格式】</strong><br>若干行，按升序对于所有可能的总损失输出一行x y，x为损失值，y为方案数。<br><strong>【输入样例】</strong><br>4<br>4 5 6 7<br><strong>【输出样例】</strong><br>4 1<br>5 1<br>6 1<br>8 1<br>9 1<br>10 1<br>11 2<br>12 1<br>13 1<br>14 1<br>15 1<br>17 1<br>18 1<br>19 1<br></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-blue"><strong>「题目大意」</strong><br>我们讲一个悲伤的故事。<br>从前有一个贫穷的樵夫在河边砍柴。<br>这时候河里出现了一个水神，夺过了他的斧头，说：<br>“这把斧头，是不是你的？”<br>樵夫一看：“是啊是啊！”<br>水神把斧头扔在一边，又拿起一个东西问：<br>“这把斧头，是不是你的？”<br>樵夫看不清楚，但又怕真的是自己的斧头，只好又答：“是啊是啊！”<br>水神又把手上的东西扔在一边，拿起第三个东西问：<br>“这把斧头，是不是你的？”<br>樵夫还是看不清楚，但是他觉得再这样下去他就没法砍柴了。<br>于是他又一次答：“是啊是啊！真的是！”<br>水神看着他，哈哈大笑道：<br>“你看看你现在的样子，真是丑陋！”<br>之后就消失了。<br>樵夫觉得很坑爹，他今天不仅没有砍到柴，还丢了一把斧头给那个水神。<br>于是他准备回家换一把斧头。<br>回家之后他才发现真正坑爹的事情才刚开始。<br>水神拿着的的确是他的斧头。<br>但是不一定是他拿出去的那把，<br>还有可能是水神不知道怎么偷偷从他家里拿走的。<br>换句话说，水神可能拿走了他的一把，两把或者三把斧头。<br>樵夫觉得今天真是倒霉透了，但不管怎么样日子还得过。<br>他想统计他的损失。<br>樵夫的每一把斧头都有一个价值，不同斧头的价值不同。<br>总损失就是丢掉的斧头价值和。<br>他想对于每个可能的总损失，计算有几种可能的方案。<br>注意：如果水神拿走了两把斧头a和b，(a,b)和(b,a)视为一种方案。<br>拿走三把斧头时，<br>(a,b,c),(b,c,a),(c,a,b),(c,b,a),(b,a,c),(a,c,b)视为一种方案。<br><strong>「输入格式」</strong><br>第一行是整数N，表示有N把斧头。<br>接下来n行升序输入N个数字Ai，表示每把斧头的价值。<br>所有数据满足：Ai&lt;=40000<br><strong>「输出格式」</strong><br>若干行，按升序对于所有可能的总损失输出一行x y，x为损失值，y为方案数。<br><strong>「输入样例」</strong><br>4<br>4 5 6 7<br><strong>「输出样例」</strong><br>4 1<br>5 1<br>6 1<br>8 1<br>9 1<br>10 1<br>11 2<br>12 1<br>13 1<br>14 1<br>15 1<br>17 1<br>18 1<br>19 1<br></p>
 
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>莫比乌斯教程和题目分类参见：<br><a href="../2003-01/【OI之路】11更高级数论-3快速傅里叶变换.html">【OI之路】11更高级数论-3快速傅里叶变换</a><br>其他快速傅里叶变换题目参见：<a href="../tags/快速傅里叶变换/">Tag-快速傅里叶变换</a></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>莫比乌斯教程和题目分类参见：<br><a href="../2003-01/「OI之路」11更高级数论-3快速傅里叶变换.html">「OI之路」11更高级数论-3快速傅里叶变换</a><br>其他快速傅里叶变换题目参见：<a href="../tags/快速傅里叶变换/">Tag-快速傅里叶变换</a></p>
 <h1 id="Triple"><a href="#Triple" class="headerlink" title="Triple"></a>Triple</h1><p>这道题的精华是容斥<br>先推荐一下<a href="http://blog.csdn.net/cabi_zgx/article/details/78759008" target="_blank" rel="noopener">同学的博客</a>，相当严谨科学<br>他和我的思路不同，属于两种不同的角度<br>我的思路可能有些乱啊，因为其实是在别人不停点醒才想到的，并不断完善</p>
 <p>题意：给出价格<strong>各不相同</strong>（这很重要）的一些斧头，每次选一、二、三个，将所有方案统计起来，按价格输出，<strong>注意选的是组合不是排列。</strong><br>考虑分解成子问题。</p>
 <h1 id="选一个"><a href="#选一个" class="headerlink" title="选一个"></a>选一个</h1><p>先解决选一个的情况。<br>设$q_i$表示第i个斧头的价格。<br>再设$A(q_i)=1$<br>则$Ans[i]+=A(q_i)$<br>原因就是每个斧头选自己，很好理解的</p>
@@ -638,42 +638,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/e426.html" rel="bookmark">【Bzoj3240】【Luogu1397】矩阵游戏</a></div>
+      <div class="popular-posts-title"><a href="/posts/e426.html" rel="bookmark">「Bzoj3240」「Luogu1397」矩阵游戏</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b4ff.html" rel="bookmark">【Hdu4609】3-idiots</a></div>
+      <div class="popular-posts-title"><a href="/posts/b4ff.html" rel="bookmark">「Hdu4609」3-idiots</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/80e0.html" rel="bookmark">【NOI2014】购票</a></div>
+      <div class="popular-posts-title"><a href="/posts/80e0.html" rel="bookmark">「NOI2014」购票</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/2fa8.html" rel="bookmark">【CF590E】Birthday</a></div>
+      <div class="popular-posts-title"><a href="/posts/2fa8.html" rel="bookmark">「CF590E」Birthday</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/5359.html" rel="bookmark">【CTSC2010】珠宝商</a></div>
+      <div class="popular-posts-title"><a href="/posts/5359.html" rel="bookmark">「CTSC2010」珠宝商</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/edb5.html" rel="bookmark">【Bzoj1835】【Luogu2605】基站选址</a></div>
+      <div class="popular-posts-title"><a href="/posts/edb5.html" rel="bookmark">「Bzoj1835」「Luogu2605」基站选址</a></div>
       
     </li>
   
@@ -691,7 +691,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/df74.html" title="【Bzoj3771】Triple">http://zory.ink/posts/df74.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/df74.html" title="「Bzoj3771」Triple">http://zory.ink/posts/df74.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -735,8 +735,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/fb8e.html" rel="next" title="【Bzoj2194】快速傅立叶之二">
-                <i class="fa fa-chevron-left"></i> 【Bzoj2194】快速傅立叶之二
+              <a href="/posts/b4ff.html" rel="next" title="「Hdu4609」3-idiots">
+                <i class="fa fa-chevron-left"></i> 「Hdu4609」3-idiots
               </a>
             
           </div>
@@ -745,8 +745,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/b4ff.html" rel="prev" title="【Hdu4609】3-idiots">
-                【Hdu4609】3-idiots <i class="fa fa-chevron-right"></i>
+              <a href="/posts/1db5.html" rel="prev" title="「Zjoi2014」力">
+                「Zjoi2014」力 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -824,7 +824,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -849,7 +849,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1258,7 +1260,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -95,15 +95,15 @@
   <meta name="description" content="计算几何more1more2">
 <meta name="keywords" content="计算几何">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】07其他-6计算几何">
+<meta property="og:title" content="「OI之路」07其他-6计算几何">
 <meta property="og:url" content="http://zory.ink/posts/7158.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="计算几何more1more2">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.ink/images/OI之路/直线交点.png">
-<meta property="og:updated_time" content="2019-10-06T09:28:12.636Z">
+<meta property="og:updated_time" content="2020-03-02T16:05:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】07其他-6计算几何">
+<meta name="twitter:title" content="「OI之路」07其他-6计算几何">
 <meta name="twitter:description" content="计算几何more1more2">
 <meta name="twitter:image" content="http://zory.ink/images/OI之路/直线交点.png">
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>【OI之路】07其他-6计算几何 | Zory的个人博客</title>
+  <title>「OI之路」07其他-6计算几何 | Zory的个人博客</title>
   
 
 
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -498,7 +498,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】07其他-6计算几何
+          <h2 class="post-title" itemprop="name headline">「OI之路」07其他-6计算几何
 
               
             
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-06 17:28:12" itemprop="dateModified" datetime="2019-10-06T17:28:12+08:00">2019-10-06</time>
+                <time title="修改时间：2020-03-03 00:05:17" itemprop="dateModified" datetime="2020-03-03T00:05:17+08:00">2020-03-03</time>
               </span>
             
           
@@ -580,7 +580,7 @@
 
           
           
-            <span id="/posts/7158.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】07其他-6计算几何">
+            <span id="/posts/7158.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」07其他-6计算几何">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,24 +615,31 @@
       
         <p>计算几何<br><a href="https://www.cnblogs.com/candy99/p/6360536.html" target="_blank" rel="noopener">more1</a><br><a href="https://www.cnblogs.com/Smeow/p/10582631.html" target="_blank" rel="noopener">more2</a></p>
 <a id="more"></a>
-<h3 id="辅助函数"><a href="#辅助函数" class="headerlink" title="辅助函数"></a>辅助函数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">atan2</span><span class="params">(<span class="keyword">double</span> x,<span class="keyword">double</span> y)</span></span></div></pre></td></tr></table></figure>
-<h3 id="向量相关"><a href="#向量相关" class="headerlink" title="向量相关"></a>向量相关</h3><p>见线性代数一章</p>
-<p> 坐标（向量）旋转：<br>这个很好推，$(a,b)逆时针旋转 \theta -&gt;(acos\theta -bsin\theta ,asin\theta +bcos\theta )$</p>
+<h3 id="辅助函数"><a href="#辅助函数" class="headerlink" title="辅助函数"></a>辅助函数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">atan2</span><span class="params">(<span class="keyword">double</span> y,<span class="keyword">double</span> x)</span></div><div class="line"><span class="keyword">long</span> <span class="keyword">double</span> <span class="title">atan2l</span><span class="params">(<span class="keyword">long</span> <span class="keyword">double</span> y,<span class="keyword">long</span> <span class="keyword">double</span> x)</span></span></div></pre></td></tr></table></figure>
+<h3 id="向量相关"><a href="#向量相关" class="headerlink" title="向量相关"></a>向量相关</h3><p>主要见线性代数一章</p>
+<p>向量旋转：这个很好推，考虑两个基向量即可，$(a,b)逆时针旋转 \theta -&gt;(acos\theta -bsin\theta ,asin\theta +bcos\theta )$</p>
 <h3 id="三角形的五心"><a href="#三角形的五心" class="headerlink" title="三角形的五心"></a>三角形的五心</h3><p><strong>外心</strong>：垂直平分线交点</p>
 <p><strong>重心</strong>：中线交点，重心到顶点=2*重心到对边中点，平分面积，到三个顶点距离的平方和最小，坐标为平均数，到三个顶点的向量和=零向量</p>
 <p><strong>垂心</strong>：垂线交点，三角形垂心到任一顶点=2*其外心到对边，单位圆上为三点坐标之和</p>
 <p><strong>内心</strong>：角平分线交点，直角三角形内心的$r=\frac{a+b-c}{2}$，圆内三点的三角形内心=那三段圆弧的中点形成三角形的垂心</p>
 <p><strong>欧拉线</strong>：外心O，重心G，垂心H，三点共线，2OG=GH</p>
-<h3 id="几何图形"><a href="#几何图形" class="headerlink" title="几何图形"></a>几何图形</h3><p><strong>求多边形（可以凹）的面积</strong>：<br>相邻两点（逆时针的话，可以不用绝对值，所以能模了，尽管面积可能是负数，最后总是正数）到坐标原点的叉积和<br>例题：HDU-2036</p>
-<p><strong>随机任意多边形的数据</strong>：<br>[Wf2017]Airport Construction</p>
+<h3 id="平面图转对偶图"><a href="#平面图转对偶图" class="headerlink" title="平面图转对偶图"></a>平面图转对偶图</h3><p>如果是表格（如经典的bjoi狼抓兔子）很好转，但假如是个普通的平面图呢？例题：<a href="https://loj.ac/problem/2052" target="_blank" rel="noopener">「HNOI2016」矿区</a></p>
+<p>主要是给面编号，并且能快速得到一条边的两侧面的编号。一个小技巧是将无向边拆成两条相向的有向边，不妨用若干条顺时针连接的边（右侧有效的半平面）表示出一个面。于是枚举每个点，逆时针枚举每条还没用过的边$(x \to y)$，在y的出边中找到这条边逆时针的下一条边走（删除保证复杂度），这样走回原点就能得到一个面。一条边两侧的面就是两条有向边所属的面。另外还会得到一个无限大的面，其叉积和为负。</p>
+<p>将例题讲完：因为依次将边断开后肯定能把图断开，随便求个生成树，只需要关心断掉的树边就能得到面的点集（具体而言，<del>人云亦云</del>，逆时针看，如果右侧半平面是父亲就加子树，否则减子树），$O(\sum d*log)$，实现时因为是整数所以面积乘二就是整数，最后除二即可。另外要注意对偶图中可能有重边，<a href="https://loj.ac/submission/719933" target="_blank" rel="noopener">loj倒二code</a></p>
+<h3 id="其他零散知识"><a href="#其他零散知识" class="headerlink" title="其他零散知识"></a>其他零散知识</h3><p>加粗表示小标题</p>
+<p><strong>求多边形（可以凹）的面积</strong>：相邻两点（逆时针最后是正）到坐标原点的叉积和，例题：HDU-2036</p>
+<p><strong>随机任意多边形的数据</strong>：据说，[Wf2017]Airport Construction</p>
+<p><strong>欧拉公式</strong>：对于一个多边形：$顶点数V-边数E+面数F=2$，<a href="https://www.zhihu.com/question/23813378" target="_blank" rel="noopener">适用范围</a></p>
+<p>推论：对于一个平面图，一定满足$m \leq 3n-6$（每条边最多给两个面使用，每个面至少有3条边，$r \leq \frac{2m}{3}$）例题好像叫planar</p>
 <p><strong>直线交点</strong>：<br>建议画图，一条直线与另外两点的叉积面积比=高的比=另一条直线被交点所分的两部分之比<br><img src="../images/OI之路/直线交点.png" alt=""></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function">Pt <span class="title">check</span><span class="params">(Pt a,Pt b,Pt c,Pt d)</span><span class="comment">//尚未验证正确性</span></div><div class="line"></span>&#123;</div><div class="line">    Pt t1=b-a,t2=d-c,t3=c-a;</div><div class="line">    ll A=cross(t1,t2),B=cross(t3,t2);</div><div class="line">    <span class="keyword">double</span> xx=a.x+(<span class="keyword">double</span>)B/A*t1.x,yy=a.y+(<span class="keyword">double</span>)B/A*t1.y;</div><div class="line">	<span class="keyword">return</span> (Pt)&#123;xx,yy&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function">Pt <span class="title">check</span><span class="params">(Pt a,Pt b,Pt c,Pt d)</span><span class="comment">//尚未验证正确性</span></div><div class="line"></span>&#123;</div><div class="line">    Pt t1=b-a,t2=d-c,t3=c-a;</div><div class="line">    ll A=cross(t1,t2),B=cross(t3,t2);</div><div class="line">	<span class="keyword">return</span> a+t1*(<span class="keyword">double</span>)B/A;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>过圆外一点的切线</strong>：求点与圆心的直线然后用asin旋转</p>
-<h3 id="好题"><a href="#好题" class="headerlink" title="好题"></a>好题</h3><p><a href="caf.html">雅礼冬令营集训2019 D7t3</a></p>
-<h3 id="转载"><a href="#转载" class="headerlink" title="转载"></a>转载</h3><p>尚未学习</p>
-<blockquote>
-<p> y&gt;=kx+b（y&lt;=kx+b同理）的半平面交的并集是一个上凸壳，我们可以把它对偶成凸包，即是将一条直线的 (k,b)视为一个点 (k,b)，然后做一个下凸壳。这样我们就可以合并半平面交了，即为做这个对偶凸包的闵可夫斯基和（就是(a,b)和(c,d)合并起来后为(a+b,c+d)。因为ax+b+cx+d=&gt;(a+c,b+d)）。而闵可夫斯基和可以双指针在两个凸壳上面移动来解决，开始时候，两个指针p1,p2都在1位置，之后判断(p1,p2+1),(p1+1,p2)和(p1,p2)的斜率哪个更大（叉积判断即可），以此来移动指针，这样相当于直接扔掉了一列或者一行。</p>
-</blockquote>
+<p><strong>Pick定理</strong>：$S=内部整点+边界整点/2-1$，<a href="https://blog.csdn.net/corsica6/article/details/87605282" target="_blank" rel="noopener">证明（还讲到用其证明Farey序列的性质）</a></p>
+<p><a href="https://codeforces.com/contest/559/problem/D" target="_blank" rel="noopener">CF559D Randomizer</a>：给出n个整点的凸多边形，问所有构成的多边形不退化的点集得到的多边形严格内部整点数，$n \le 1e5，精度1e-9$</p>
+<p>做法：拆成求面积、边界整点；面积拆分到每条边上，于是都可以用期望线性性摊到每条边$i \to j$上（多边形看做逆时针），$(x_1y_2-x_2y_1)/2$；至于边界整点显然是$\sum gcd(|x_1-x_2|,|y_1-y_2|)$，概率就是$\frac{2^{n-a}-1}{2^n-(1+n+C_n^2)}=(2^{-a}-2^{-n})/(1-2^{-n}(1+n+C_n^2))$，故a在一定范围内即可，<a href="https://codeforces.com/contest/559/submission/68399114" target="_blank" rel="noopener">code</a></p>
+<h3 id="基础题"><a href="#基础题" class="headerlink" title="基础题"></a>基础题</h3><p><a href="caf.html">雅礼冬令营集训2019 D7t3</a></p>
+<p><a href="71bd.html">PKUSC2018D2T3 PKUSC</a></p>
+<h3 id="板子"><a href="#板子" class="headerlink" title="板子"></a>板子</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//#define db double</span></div><div class="line"><span class="comment">//const db eps=1e-7;</span></div><div class="line"><span class="keyword">const</span> db PI=<span class="built_in">acos</span>(<span class="number">-1</span>);</div><div class="line"><span class="function">db <span class="title">sqr</span><span class="params">(db x)</span></span>&#123;<span class="keyword">return</span> x*x;&#125;</div><div class="line"><span class="keyword">struct</span> V<span class="comment">//向量</span></div><div class="line">&#123;</div><div class="line">    db x,y;V(db _x=<span class="number">0</span>,db _y=<span class="number">0</span>)&#123;x=_x,y=_y;&#125;</div><div class="line">    V <span class="keyword">operator</span> + (V b)&#123;<span class="keyword">return</span> V(x+b.x,y+b.y);&#125;</div><div class="line">    V <span class="keyword">operator</span> - (V b)&#123;<span class="keyword">return</span> V(x-b.x,y-b.y);&#125;</div><div class="line">    V <span class="keyword">operator</span> - ()&#123;<span class="keyword">return</span> V(-x,-y);&#125;</div><div class="line">    V <span class="keyword">operator</span> * (db b)&#123;<span class="keyword">return</span> V(x*b,y*b);&#125;</div><div class="line">    db <span class="keyword">operator</span> * (V b)&#123;<span class="keyword">return</span> x*b.y-y*b.x;&#125;</div><div class="line">    <span class="function">db <span class="title">len</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> <span class="built_in">sqrt</span>(x*x+y*y);&#125;</div><div class="line">    <span class="function">V <span class="title">Unit</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> V(x/len(),y/len());&#125;</div><div class="line">    <span class="function">db <span class="title">cross</span><span class="params">(V a,V b)</span></span>&#123;<span class="keyword">return</span> V(a.x-x,a.y-y)*V(b.x-x,b.y-y);&#125;</div><div class="line">    <span class="function">V <span class="title">rotate</span><span class="params">(db rad)</span></span>&#123;<span class="keyword">return</span> (V)&#123;x*<span class="built_in">cos</span>(rad)-y*<span class="built_in">sin</span>(rad),x*<span class="built_in">sin</span>(rad)+y*<span class="built_in">cos</span>(rad)&#125;;&#125;</div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> == (V oth)&#123;<span class="keyword">return</span> <span class="built_in">fabs</span>(x-oth.x)+<span class="built_in">fabs</span>(y-oth.y)&lt;=eps;&#125;</div><div class="line">&#125;; <span class="keyword">typedef</span> V pt;</div><div class="line"><span class="keyword">typedef</span> pair&lt;pt,db&gt; cir;</div><div class="line"><span class="keyword">typedef</span> pair&lt;pt,pt&gt; line;</div><div class="line"><span class="function">line <span class="title">cir_jd</span><span class="params">(cir a,cir b)</span><span class="comment">//圆的交点</span></div><div class="line"></span>&#123;</div><div class="line">    V oo=b.FR-a.FR;assert(oo.len()&gt;eps);</div><div class="line">    db x=(sqr(a.SE)-sqr(b.SE)+sqr(oo.len()))/oo.len()/<span class="number">2</span>;</div><div class="line">    pt mid=a.FR+oo*(x/oo.len());</div><div class="line">    V go=oo.Unit().rotate(PI/<span class="number">2</span>)*<span class="built_in">sqrt</span>(sqr(a.SE)-sqr(x));<span class="keyword">return</span> &#123;mid-go,mid+go&#125;;</div><div class="line">&#125;</div><div class="line"><span class="function">db <span class="title">sp</span><span class="params">(V a,V b)</span><span class="comment">//向量夹角</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">fabs</span>(a.x)&lt;=eps and <span class="built_in">fabs</span>(a.y)&lt;=eps) debug(<span class="string">"err\n"</span>);</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">fabs</span>(b.x)&lt;=eps and <span class="built_in">fabs</span>(b.y)&lt;=eps) debug(<span class="string">"err\n"</span>);</div><div class="line">    db c=<span class="built_in">atan2</span>(a.y,a.x),d=<span class="built_in">atan2</span>(b.y,b.x);</div><div class="line">    <span class="keyword">return</span> min(<span class="built_in">fabs</span>(c-d),PI*<span class="number">2</span>-<span class="built_in">fabs</span>(c-d));</div><div class="line">&#125;</div><div class="line"><span class="function">V <span class="title">chui_zu</span><span class="params">(V a,V b)</span><span class="comment">//向量垂足</span></div><div class="line"></span>&#123;</div><div class="line">    db len=(b-a).len(),dis=<span class="built_in">fabs</span>(a*b)/len;</div><div class="line">    <span class="keyword">return</span> (a-b).rotate(PI/<span class="number">2</span>)*(dis/len)*(a*b&gt;<span class="number">0</span>?<span class="number">1</span>:<span class="number">-1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -652,7 +659,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/7158.html" title="【OI之路】07其他-6计算几何">http://zory.ink/posts/7158.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/7158.html" title="「OI之路」07其他-6计算几何">http://zory.ink/posts/7158.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -690,8 +697,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/9bde.html" rel="next" title="【OI之路】07其他-5哈希">
-                <i class="fa fa-chevron-left"></i> 【OI之路】07其他-5哈希
+              <a href="/posts/9bde.html" rel="next" title="「OI之路」07其他-5哈希">
+                <i class="fa fa-chevron-left"></i> 「OI之路」07其他-5哈希
               </a>
             
           </div>
@@ -700,8 +707,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/3d1d710e.html" rel="prev" title="【OI之路】07其他-7一类线性二分">
-                【OI之路】07其他-7一类线性二分 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/3d1d710e.html" rel="prev" title="「OI之路」07其他-7一类线性二分">
+                「OI之路」07其他-7一类线性二分 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -779,7 +786,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -804,7 +811,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1213,7 +1222,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1276,7 +1289,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#辅助函数"><span class="nav-text">辅助函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量相关"><span class="nav-text">向量相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角形的五心"><span class="nav-text">三角形的五心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几何图形"><span class="nav-text">几何图形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#好题"><span class="nav-text">好题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转载"><span class="nav-text">转载</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#辅助函数"><span class="nav-text">辅助函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量相关"><span class="nav-text">向量相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角形的五心"><span class="nav-text">三角形的五心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平面图转对偶图"><span class="nav-text">平面图转对偶图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他零散知识"><span class="nav-text">其他零散知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础题"><span class="nav-text">基础题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#板子"><span class="nav-text">板子</span></a></li></ol></div>
             
 
           </div>

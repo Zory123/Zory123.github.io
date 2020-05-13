@@ -92,17 +92,17 @@
 
 
 
-  <meta name="description" content="积性函数，及其前缀和（杜教筛、min25筛） 很多可以拿去容斥，但本章主要关注其【积性函数】这个性质">
+  <meta name="description" content="积性函数，及其前缀和（杜教筛、min25筛） 很多可以拿去容斥，但本章主要关注其「积性函数」这个性质">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】03数学-10积性函数及其前缀和">
+<meta property="og:title" content="「OI之路」03数学-10积性函数及其前缀和">
 <meta property="og:url" content="http://zory.ink/posts/416d.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="积性函数，及其前缀和（杜教筛、min25筛） 很多可以拿去容斥，但本章主要关注其【积性函数】这个性质">
+<meta property="og:description" content="积性函数，及其前缀和（杜教筛、min25筛） 很多可以拿去容斥，但本章主要关注其「积性函数」这个性质">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-10T09:18:28.485Z">
+<meta property="og:updated_time" content="2020-04-16T13:53:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】03数学-10积性函数及其前缀和">
-<meta name="twitter:description" content="积性函数，及其前缀和（杜教筛、min25筛） 很多可以拿去容斥，但本章主要关注其【积性函数】这个性质">
+<meta name="twitter:title" content="「OI之路」03数学-10积性函数及其前缀和">
+<meta name="twitter:description" content="积性函数，及其前缀和（杜教筛、min25筛） 很多可以拿去容斥，但本章主要关注其「积性函数」这个性质">
 
 
 
@@ -120,7 +120,7 @@
   };
 </script>
 
-  <title>【OI之路】03数学-10积性函数及其前缀和 | Zory的个人博客</title>
+  <title>「OI之路」03数学-10积性函数及其前缀和 | Zory的个人博客</title>
   
 
 
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -495,7 +495,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】03数学-10积性函数及其前缀和
+          <h2 class="post-title" itemprop="name headline">「OI之路」03数学-10积性函数及其前缀和
 
               
             
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-10 17:18:28" itemprop="dateModified" datetime="2019-10-10T17:18:28+08:00">2019-10-10</time>
+                <time title="修改时间：2020-04-16 21:53:52" itemprop="dateModified" datetime="2020-04-16T21:53:52+08:00">2020-04-16</time>
               </span>
             
           
@@ -577,7 +577,7 @@
 
           
           
-            <span id="/posts/416d.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】03数学-10积性函数及其前缀和">
+            <span id="/posts/416d.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」03数学-10积性函数及其前缀和">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -611,38 +611,45 @@
 
       
         <p>积性函数，及其前缀和（杜教筛、min25筛）</p>
-<p>很多可以拿去容斥，但本章主要关注其【积性函数】这个性质</p>
+<p>很多可以拿去容斥，但本章主要关注其「积性函数」这个性质</p>
 <a id="more"></a>
 <h3 id="狄利克雷卷积"><a href="#狄利克雷卷积" class="headerlink" title="狄利克雷卷积"></a>狄利克雷卷积</h3><p><strong>常见积性函数</strong>：</p>
-<p>约数函数 $\sigma_k(n)=\sum_{d|n}{d^k}$，约数个数 $\tau(n)=d(n)=\sigma_0(n)$，约数和 $\sigma(n)=\sigma_1(n)$</p>
+<p>约数函数 $\sigma_k(n)=\sum_{d|n}{d^k}$，其中约数个数有三种符号 $\tau(n)=d(n)=\sigma_0(n)$，约数和 $\sigma(n)=\sigma_1(n)$</p>
 <p>莫比乌斯函数 $\mu(n)$，欧拉函数 $\varphi(n)=n \prod \frac{p_k-1}{p_k}$</p>
 <p>元函数（或$\epsilon$）$e(n)=[n=1]$ ；恒等函数（或1）$I(n)=1$ ；幂函数$id_k(n)=n^k$；不知叫啥的函数$\lambda(n) = (-1)^n$</p>
 <p><strong>狄利克雷Dirichlet卷积</strong>：$(f*g)(n) = \sum_{d|n} f(d) g(\frac{n}{d})$<strong>，满足交换律和结合律，两个积性函数的狄利克雷卷积也是积性函数</strong></p>
 <p>常用式子（下面很多都可以拿去反演，而且你会发现mu在数论中是个很强的容斥系数）：<br>莫比乌斯反演：$\mu *1=e$<br>欧拉反演$\varphi * 1=id、\mu \ast id=\varphi$<br>$d=1*1、1=\mu * d$<br>$\sigma=id*1、id=\mu*\sigma、\sigma=\varphi * d$</p>
 <p>不一定互质两数乘积：</p>
 <p>$d(a \cdot b)=\sum_{x|a} \sum_{y|b} [gcd(x,y)=1]$<br>$\sigma(a \cdot b)=\sum_{x|a} \sum_{y|b} [gcd(x,y)=1] \frac{ay}{x}$<br>这个东西没接触过的话应该挺难想的吧；证明的话我不会推广，所以就不给出来了<br>所谓推广即，多个数乘积，要求各个约数两两互质</p>
-<h3 id="杜教筛"><a href="#杜教筛" class="headerlink" title="杜教筛"></a>杜教筛</h3><p><a href="https://blog.csdn.net/skywalkert/article/details/50500009" target="_blank" rel="noopener">经典文章</a></p>
-<p>假设现在是求f的前缀和F<br>主要思路就是搞出一个 F(n)的递推式<br>那么构造另外两个积性函数g和h，要求这个h的前缀和很好求<br>$$<br>\begin{aligned}<br>&amp; h=f*g \\<br>&amp; \sum_i h(i)=\sum_i \sum_{d|i} f(\frac{i}{d}) g(d)=<br>\sum_d g(d) F(n/d) \\<br>&amp; 然后我们把g(1)提出来 \\<br>&amp; g(1)F(n)=\sum_i h(i)-\sum_{i=2}^n F(n/i)<br>\end{aligned}<br>$$<br>直接递归，复杂度 $T(n)=O(\sqrt{n})+\sum_{i=1}^{\sqrt{n}}{T(i)+T(\frac{n}{i})}$<br>然后据说只要展开一次， $T(n)=\sum_{i=1}^{\sqrt{n}}{O(\sqrt{i})+O(\sqrt{\frac{n}{i}})}=O(n^\frac{3}{4})$<br>因为f是个积性函数，比较小的部分可以线筛，设预处理的范围为K，在 $K=O(n^{2/3})$ 的时候取到总复杂度为 $O(n^{2/3})$ ，怎么得出来的我就不太懂了……跑了<br>大概能跑1e11，<a href="https://riteme.site/blog/2018-9-11/time-space-complexity-dyh-algo.html#ref-2" target="_blank" rel="noopener">时间推导</a></p>
-<p>这里保证复杂度不要求是积性函数，而是要求这个f的预处理部分能线性求出前缀和，<br>然后能在根号x的时间内求出单个h(x)的前缀和</p>
-<p>还有就是实测不开hash的话会很慢<br>然后有种奇妙的快速方案，类似这样：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> id(x) x&lt;=UB?x:(n/(x)+UB)</span></div></pre></td></tr></table></figure>
-<p>测板子可以用f(i)=i</p>
-<p>phi的前缀和：$\varphi \ast I=id$<br>mu的前缀和：$\mu \ast I=e$<br>例题：51nod1244、【luogu3768】简单的数学题</p>
-<p>板子：51nod1244<br><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">bool</span> mark[MAX_N];<span class="keyword">int</span> pp=<span class="number">0</span>,prime[MAX_N/<span class="number">10</span>],mu[MAX_N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    mu[<span class="number">1</span>]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;MAX_N;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(!mark[i]) prime[++pp]=i,mu[i]=<span class="number">-1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=pp and (ll)i*prime[j]&lt;MAX_N;j++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> t=i*prime[j];mark[t]=<span class="number">1</span>;</div><div class="line">            <span class="keyword">if</span>(i%prime[j]==<span class="number">0</span>)&#123;mu[t]=<span class="number">0</span>;<span class="keyword">break</span>;&#125;</div><div class="line">            mu[t]=-mu[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;MAX_N;i++) mu[i]+=mu[i<span class="number">-1</span>];</div><div class="line">&#125;</div><div class="line">ll N;</div><div class="line"><span class="keyword">struct</span> M</div><div class="line">&#123;</div><div class="line">    ll aa[<span class="number">100001</span>],bb[<span class="number">100001</span>];<span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>&#123;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">100000</span>;i++) aa[i]=bb[i]=-LLINF;&#125;</div><div class="line">    <span class="function">ll <span class="title">ask</span><span class="params">(ll n)</span></span>&#123;<span class="keyword">return</span> (n&lt;=<span class="number">100000</span>)?aa[n]:bb[N/n];&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(ll n,ll num)</span></span>&#123;(n&lt;=<span class="number">100000</span>)?(aa[n]=num):(bb[N/n]=num);&#125;</div><div class="line">&#125;mp;</div><div class="line"><span class="function">ll <span class="title">getmu</span><span class="params">(ll n)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(n&lt;MAX_N) <span class="keyword">return</span> mu[n];</div><div class="line">    ll tmp=mp.ask(n);<span class="keyword">if</span>(tmp!=-LLINF) <span class="keyword">return</span> tmp;</div><div class="line">    ll ans=<span class="number">0</span>;<span class="keyword">for</span>(ll l=<span class="number">2</span>,r;l&lt;=n;l=r+<span class="number">1</span>) r=n/(n/l),ans+=getmu(n/l)*(r-l+<span class="number">1</span>);</div><div class="line">    mp.insert(n,<span class="number">1l</span>l-ans);<span class="keyword">return</span> <span class="number">1l</span>l-ans;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    pre();ll ans;</div><div class="line">    N=qread()<span class="number">-1</span>;mp.clear();ans=-getmu(N);</div><div class="line">    N=qread();mp.clear();ans+=getmu(N);write(ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-</div></div></p>
-<h3 id="洲阁筛"><a href="#洲阁筛" class="headerlink" title="洲阁筛"></a>洲阁筛</h3><p>不会告辞</p>
-<h3 id="min25筛"><a href="#min25筛" class="headerlink" title="min25筛"></a>min25筛</h3><p><a href="https://www.cnblogs.com/GuessYCB/p/10061411.html?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">另一份教程</a></p>
-<p>这东西搞了足足一天……<br>然后我并没有好好看zzt的论文，所以并不会证复杂度（其实也不知道自己复杂度对不对）<br>甚至不确定复杂度到底是多少（论文里有证明，但我没找到结论，然后网上说法各异）<br>大概能跑1e10<br><a href="http://www.cnblogs.com/zzqsblog/p/8302815.html" target="_blank" rel="noopener">zzq速度是我的5倍</a></p>
-<p>然后似乎主要有两种做法（递推和递归）和两种实现（枚举最小质因子与否）<br>然后我的做法是递推、不枚举最小质因子，这样似乎单组慢一些，但能顺便求出所有[n/i]的前缀和</p>
-<p>首先，我们希望求的依然是积性函数的前缀和，先考虑做法，再考虑适用条件<br>首先积性函数在x=素数时，大部分能表达为一个p相关多项式的形式，那么设当前项的次幂为k<br>下述做法建议速览一遍后自行推导，注意到利用【f是积性函数】、【合数最小质因子在根号内】<br>$$<br>\begin{aligned}<br>&amp; S(n)=\sum P_i^k，S2(n)=\sum f(P_i)，minp(n)=n的最小质因子，pp为 \sqrt n 内素数个数 \\<br>&amp; 先考虑计算素数部分，设g(n,j)=\sum_{minp(i)&gt;P_j 或 i \in P} i^k，那么所求即g(n,pp) \\<br>&amp; 从j-1转移，考虑要去掉什么且只能去掉什么，乘法原理组合出合数 \\<br>&amp; g(n,j)=g(n,j-1)-[P_j^2 \leq n] P_j^k (g(n/p_j,j-1)-S(j-1)) \\<br>&amp; 在考虑利用g求f的和，设w(n,j)=\sum_{minp(i) \leq P_j 或 i \in P} f(i) ，边界用g的多项式求 \\<br>&amp; 从j+1转移，暴力枚举当前质因子的次幂，考虑要增加什么且只能增加什么 \\<br>&amp; w(n,j)=w(n,j-1)+\sum_{t=1}^{P_j^{t+1} \leq n} (w(n/P_j^t,j+1)-S2(j))f(P_j^t)+\sum_{t=2}^{P_j^t \leq n} f(P_j^t)<br>\end{aligned}<br>$$<br>补充一下，上面的两次容斥，都要考虑枚举范围的不等式带来的推论，形如 $n/P_j \leq P_j$</p>
-<p>然后我们考虑如何减小空间复杂度（时间我真管不了，不过写法会影响时间）<br>先处理出[n/i]的所有取值，降序排序，先筛g，第二维是可以滚的，第一维离散存<br>注意到很多时候一些n是可以直接保留j-1的值的，所以可知复杂度低于n（大雾<br>如果仅仅是没理解这段可参考代码，很短很清晰</p>
-<p>分析min25筛的适用条件<br>虽然上面的求和用到了积性函数的性质，但是很多时候不是积性函数，也可以灵活地改定义去求<br>那么这类解决方法的必须条件是：在x=素数时，要求能表达为一个多项式的形式（所以像这种 $f(p^c)=p xor (c+1)$ 就不能筛）<br>然后还需要快速求出 $f(p^k)的值$</p>
-<p>板子：loj6053，单独考虑偶素数2<br><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">bool</span> mark[MAX_N];<span class="keyword">int</span> pp=<span class="number">0</span>,p[MAX_N];</div><div class="line"><span class="keyword">int</span> S0[MAX_N],S1[MAX_N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">(<span class="keyword">int</span> mxn)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=mxn;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(!mark[i]) p[++pp]=i,S0[pp]=pp,S1[pp]=(S1[pp<span class="number">-1</span>]+i)%MOD;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=pp and (ll)i*p[j]&lt;=mxn;j++)</div><div class="line">        &#123;</div><div class="line">            mark[i*p[j]]=<span class="number">1</span>;</div><div class="line">            <span class="keyword">if</span>(i%p[j]==<span class="number">0</span>) <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">ll a[MAX_N],N,md;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> id(x) ((x)&lt;=md?a[(x)]:a[md+N/(x)])</span></div><div class="line"><span class="built_in">vector</span>&lt;ll&gt; num;<span class="comment">//递减</span></div><div class="line"><span class="keyword">int</span> g0[MAX_N],g1[MAX_N],w[MAX_N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    N=qread();pre(md=<span class="built_in">sqrt</span>(N));<span class="keyword">if</span>(N==<span class="number">1</span>) &#123;<span class="built_in">puts</span>(<span class="string">"1"</span>);<span class="keyword">return</span>;&#125;</div><div class="line">    <span class="keyword">for</span>(ll l=<span class="number">1</span>,r;l&lt;=N;l=r+<span class="number">1</span>) r=N/(N/l),id(N/l)=num.size(),num.PB(N/l);</div><div class="line">    <span class="keyword">int</span> m=num.size();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;m;t++) g0[t]=(num[t]<span class="number">-1</span>)%MOD,g1[t]=(num[t]+<span class="number">2</span>)%MOD*((num[t]<span class="number">-1</span>)%MOD)%MOD*((MOD+<span class="number">1</span>)/<span class="number">2</span>)%MOD;<span class="comment">//k=0/1</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=pp;j++) <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;m and (ll)p[j]*p[j]&lt;=num[t];t++)</div><div class="line">    &#123;</div><div class="line">        g0[t]=g0[t]-(g0[id(num[t]/p[j])]-S0[j<span class="number">-1</span>]),g0[t]%=MOD;</div><div class="line">        g1[t]=g1[t]-ll(g1[id(num[t]/p[j])]-S1[j<span class="number">-1</span>])*p[j]%MOD,g1[t]%=MOD;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;m;t++) w[t]=g1[t]-g0[t]+(num[t]&gt;=<span class="number">2</span>?<span class="number">2</span>:<span class="number">0</span>),w[t]%=MOD;<span class="comment">//k=0/1</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=pp;j&gt;=<span class="number">1</span>;j--) <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;m and (ll)p[j]*p[j]&lt;=num[t];t++)</div><div class="line">        <span class="keyword">for</span>(ll now=p[j],k=<span class="number">1</span>;now&lt;=num[t];now=now*p[j],k++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(now*p[j]&lt;=num[t]) w[t]+=ll( w[id(num[t]/now)]-(S1[j]-S0[j]+<span class="number">2</span>) )%MOD*(p[j]^k)%MOD,w[t]%=MOD;</div><div class="line">            <span class="keyword">if</span>(k&gt;<span class="number">1</span>) w[t]+=p[j]^k,w[t]%=MOD;</div><div class="line">        &#125;</div><div class="line">    write((w[<span class="number">0</span>]+<span class="number">1</span>+MOD)%MOD);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-</div></div></p>
+<hr>
+<h3 id="杜教筛"><a href="#杜教筛" class="headerlink" title="杜教筛"></a>杜教筛</h3><p><a href="https://blog.csdn.net/skywalkert/article/details/50500009" target="_blank" rel="noopener">tjz的经典文章</a>、<a href="https://riteme.site/blog/2018-9-11/time-space-complexity-dyh-algo.html#ref-2" target="_blank" rel="noopener">riteme-杜教筛的时空复杂度分析</a></p>
+<p>目的：定义函数$f_n$，求前缀和$F_n=\sum_{i=1}^n f_i$</p>
+<p>条件：能构造出另外两个函数，满足$h=f*g$，能快速求$H_n=\sum_{i=1}^n h_n$</p>
+<p>做法：其实学了一次就不会忘<br>$$<br>h=f*g,\sum_i h_i=\sum_i \sum_{d|i} f_{i/d} g_d=\sum_d g_d F_{i/d} \\<br>F_ng_1=H_n-\sum_{i=2}^n F_{n/i} g_i，数论分块，递归做<br>$$<br>复杂度：如果能线性预处理前$N^{2/3}$项，且能$O(\sqrt n)内求出单个H_n$，<strong>据说</strong>复杂度为$O(N^{2/3})$</p>
+<p>实现的技巧：</p>
+<p>​    测板子可以用$f_i=i$</p>
+<p>​    <figure class="highlight plain"><figcaption><span>id(x) (x)<</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">副产品：同时也求出了$\forall x,F_&#123;\lfloor \frac&#123;N&#125;&#123;x&#125; \rfloor&#125;$</div><div class="line"></div><div class="line">例题：51nod1244、「luogu3768」简单的数学题</div><div class="line"></div><div class="line">```cpp</div><div class="line">ll NN;ll rem[UB*2];</div><div class="line">ll getF(ll n)//e=mu*1</div><div class="line">&#123;</div><div class="line">    if(n&lt;UB) return mu[n];if(rem[id(n)]!=rem[0]) return rem[id(n)];ll ret=(n&gt;=1);</div><div class="line">    for(ll l=2,r;l&lt;=n;l=r+1) r=n/(n/l),ret-=getF(n/l)*(r-l+1);return rem[id(n)]=ret;</div><div class="line">&#125;//51nod1244，跑1e11要3s</div></pre></td></tr></table></figure></p>
+<h3 id="洲阁筛"><a href="#洲阁筛" class="headerlink" title="洲阁筛"></a>洲阁筛</h3><p>不会告辞，据说不如min25筛</p>
+<h3 id="min25筛"><a href="#min25筛" class="headerlink" title="min25筛"></a>min25筛</h3><p>高一学过一次，当时写在这里的博客一次都没复习过（事实证明写得很糟，不复习是觉得很容易忘），省选胡策考这玩意逼着我再和它大战一次（不过快退役了所以就不担心忘记了，事实上写此文的时候自认为不容易忘了）……</p>
+<p>我不会证明复杂度（网上也基本没人证，大概会比较麻烦所以也不感兴趣），所以如果你依然想阅读下文的话，个人不建议看一点然后就自己想想后面咋搞，可能会yy半天得到一个蛋疼的结果（别问我怎么知道的，问就是蛋疼</p>
+<p><strong>源动力</strong>：希望能找到一个算法，能求杜教筛不能求的<strong>积性函数</strong>前缀和，而且最好能像杜教筛一样能同时求$\forall x,F_{\lfloor \frac{N}{x} \rfloor}$</p>
+<p><strong>记号</strong>：现在要求的是$\sum_{i=1}^m f_i$；P是素数集合，其中$\sqrt m$以内有prn个，第i个元素是$P_i$；$mip(x)表示x的最小质因子$</p>
+<p>最重要的<strong>条件</strong>1：可以将$x \in P,f(x)表示为\sum_{k=0}^{\infty} c_kx^k$（例如$f(p^c)=p \oplus c$是可以的，但$f(p^c)=p \oplus (c+1)$不行）。</p>
+<p><strong>思路</strong>：素数的条件是为了能方便地求出素数位置上的和：$\sum_{i \in P,i \le m} f(i)=\sum_{k=0}^{\infty} c_k \sum_{i \in P,i \le m} i^k$；然后再用某些方式搞出别的和。所以很明显<strong>条件2</strong>是k不能太大</p>
+<p>用质因子筛东西的时候，可以考虑的<strong>性质</strong>：<strong>对于合数，最大质因子不一定在根号外，最小质因子却一定在根号内</strong></p>
+<p>所以尽量用最小质因子去处理，这样我们只需要钦定不超过根号/ln个素数作为最小质因子。而要钦定某个东西是最小质因子的话，不考虑复杂度时状态的设计还是比较自然的（类似埃筛中筛了前面若干质数后，剩下来的数集合；可能不会完全一样，这里只是给出最简洁那种状态）</p>
+<p>筛前面部分比较简单，经过思考发现应该递增枚举质因子作为最小质因子然后去掉。具体地：<br>$$<br>设g_k(n,j)=\sum_{mip(i)&gt;P_j 或 i \in P} i^k，因为是完全积性的很好做，g_k(n,0)=自然数幂和(k,n) \\<br>g_k(n,j)=g_k(n,j-1)-P_j^k[ g_k( \frac{n}{P_j},j-1 )-S_k(j-1)-1 ]，其中S_k(i)=\sum_{j=1}^i P_j^k<br>$$<br>第二个咋整？考虑类似的设状态方法，经过思考发现应该递减枚举质因子作为最小质因子然后加入，因为不完全积性需要枚举次幂z。具体地：（同时，可见追加<strong>条件3</strong>是$f(P_j^z)$能比较快速地计算）<br>$$<br>h(n,j)=\sum_{mip(i) \ge P_j或i \in P} f(i),h(n,prn+1)=\sum_{k=0}^{\infty} c_kg_k(n,prn) \\<br>h(n,j)=h(n,j+1)+\sum_{P_j^z \le n} f(P_j^z)[ h( \frac{n}{P_j^z},j+1)-S(j)+[z&gt;1] ]，其中S(i)=\sum_{j=1}^i f(P_j)<br>$$<br><strong>实现细节</strong>：只需枚举$P_j^2 \le n$；第二维可以滚动，这样空间只需要$O(\sqrt m)$</p>
+<p>上面有部分没看懂可以看看半成品代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function">ll <span class="title">solve</span><span class="params">(ll _M)</span></div><div class="line"></span>&#123;</div><div class="line">    M=_M;mem(g,<span class="number">0</span>),mem(h,<span class="number">0</span>);nn.clear();<span class="keyword">for</span>(ll l=<span class="number">1</span>;l&lt;=M;l++) nn.PB(M/l),l=M/(M/l);<span class="comment">//降序</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> n:nn) g[<span class="number">0</span>][id(n)]=n,g[<span class="number">1</span>][id(n)]=n*(n+<span class="number">1</span>)/<span class="number">2</span>;</div><div class="line">    fo(j,<span class="number">1</span>,prn) <span class="keyword">for</span>(<span class="keyword">auto</span> n:nn) &#123;</div><div class="line">        <span class="keyword">if</span>(n&lt;prm[j]*prm[j])<span class="keyword">break</span>;</div><div class="line">        g[<span class="number">0</span>][id(n)]-=( g[<span class="number">0</span>][id(n/prm[j])]-(j<span class="number">-1</span>)<span class="number">-1</span> );</div><div class="line">        g[<span class="number">1</span>][id(n)]-=( g[<span class="number">1</span>][id(n/prm[j])]-S1[j<span class="number">-1</span>]<span class="number">-1</span> )*prm[j];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> n:nn) h[id(n)]=g[<span class="number">1</span>][id(n)]-g[<span class="number">0</span>][id(n)]+(n&gt;=<span class="number">2</span>)*<span class="number">2</span>;</div><div class="line">    fd(j,prn,<span class="number">1</span>) <span class="keyword">for</span>(<span class="keyword">auto</span> n:nn)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(n&lt;prm[j]*prm[j])<span class="keyword">break</span>;</div><div class="line">		<span class="keyword">for</span>(ll z=<span class="number">1</span>,pp=prm[j],lf=n/pp;lf&gt;<span class="number">0</span>;z++,pp=pp*prm[j],lf/=prm[j])<span class="comment">//避免爆ll</span></div><div class="line">            h[id(n)]+=( (lf/prm[j]&gt;<span class="number">0</span>?h[id(n/pp)]+MOD-S[j]:<span class="number">0</span>)+(z&gt;<span class="number">1</span>) )*f(prm[j],z);</div><div class="line">    &#125;<span class="keyword">return</span> h[id(M)]+<span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>板子：<a href="https://loj.ac/problem/6053" target="_blank" rel="noopener">loj6053</a>，单独考虑偶素数2，<a href="https://loj.ac/submission/787617" target="_blank" rel="noopener">code</a></p>
+<p>此题（式子不算复杂，但毕竟要模）1e10本机速度是2.4s，loj是0.5s</p>
+<p><strong>拓展资料</strong>：<a href="https://www.cnblogs.com/GuessYCB/p/10061411.html" target="_blank" rel="noopener">各种灵活变形-GuessYCB</a></p>
+<h3 id="powerful-number"><a href="#powerful-number" class="headerlink" title="powerful number"></a>powerful number</h3><p>下文中函数乘法为狄利克雷卷积，除法为其逆运算（结果似乎一定是积性函数），p表示一个质数</p>
+<p><strong>定义：</strong>质因子的次幂都不是1的数（可以表示为$a^2b^3$），根据$\int_{0}^{n^{1/2}}( \frac{n}{x^2} )^{1/3} dx=O(n^{1/2})$可知可以直接枚举每个质因数的次幂搜索出所有powerful number（因为要压栈，不知道和枚举$a^2b^3$再分解哪个快）</p>
+<p><strong>构造：</strong>现在要求$\sum_{i=1}^m f_i$，构造积性函数g满足$g_p=f_p$。记$h=\frac{f}{g}$，则$f_p=h_1g_p+h_pg_1$，则$h_p=0$，因此h只有在下标为powerful number的时候有值。而$\sum_{i=1}^m f_i=\sum_{i=1}^m h_i (\sum_{j=1}^{m/i} g_j)$，因此可以枚举所有powerful number，然后计算g的前缀和（可见g的计算是可以搭配杜教筛、min25筛的，例如用这个方法来做min25筛例题的时候可以用杜教筛求g=phi）</p>
+<p><strong>条件和复杂度：</strong>$积性函数g满足g_p=f_p$且容易求和，单个h也容易求（边搜索边求即可），$O(\sqrt n*sumg)$</p>
+<p><strong>例题</strong>：给定常数$K \le 20$，定义一个积性函数f，满足$f(1)=1,\forall 质数p正整数e，f(p^e)=p^k$，求$\sum_{i=1}^n f(i),n \le 1e13$</p>
+<p>设$g(x)=x^k$的话，手玩+归纳证明可知$h(p^e)=<a href="p^k-p^{2k}">e \ge 2</a>$，<a href="1f2a.html">自然数幂和</a>部分听说预处理前根号项后，因为后面的不多，可以3s出5e3的答案</p>
 
       
     </div>
@@ -662,7 +669,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/416d.html" title="【OI之路】03数学-10积性函数及其前缀和">http://zory.ink/posts/416d.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/416d.html" title="「OI之路」03数学-10积性函数及其前缀和">http://zory.ink/posts/416d.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -691,8 +698,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/1f2a.html" rel="next" title="【OI之路】03数学-9自然数幂和">
-                <i class="fa fa-chevron-left"></i> 【OI之路】03数学-9自然数幂和
+              <a href="/posts/1f2a.html" rel="next" title="「OI之路」03数学-9自然数幂和">
+                <i class="fa fa-chevron-left"></i> 「OI之路」03数学-9自然数幂和
               </a>
             
           </div>
@@ -701,8 +708,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/f834.html" rel="prev" title="【OI之路】03数学-11集合幂级数">
-                【OI之路】03数学-11集合幂级数 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/f834.html" rel="prev" title="「OI之路」03数学-11集合幂级数">
+                「OI之路」03数学-11集合幂级数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -780,7 +787,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -805,7 +812,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1214,7 +1223,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1277,7 +1290,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#狄利克雷卷积"><span class="nav-text">狄利克雷卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#杜教筛"><span class="nav-text">杜教筛</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洲阁筛"><span class="nav-text">洲阁筛</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#min25筛"><span class="nav-text">min25筛</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#狄利克雷卷积"><span class="nav-text">狄利克雷卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#杜教筛"><span class="nav-text">杜教筛</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洲阁筛"><span class="nav-text">洲阁筛</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#min25筛"><span class="nav-text">min25筛</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#powerful-number"><span class="nav-text">powerful number</span></a></li></ol></div>
             
 
           </div>

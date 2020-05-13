@@ -95,15 +95,15 @@
   <meta name="description" content="Source and JudgeNOIP2006 提高组 T3Luogu1065Caioj1527长长的原题面，我已简化">
 <meta name="keywords" content="模拟,难度1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Luogu1065】作业调度方案">
+<meta property="og:title" content="「Luogu1065」作业调度方案">
 <meta property="og:url" content="http://zory.ink/posts/a978.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2006 提高组 T3Luogu1065Caioj1527长长的原题面，我已简化">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://pic002.cnblogs.com/images/2010/133181/2010102423271740.jpg">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Luogu1065】作业调度方案">
+<meta name="twitter:title" content="「Luogu1065」作业调度方案">
 <meta name="twitter:description" content="Source and JudgeNOIP2006 提高组 T3Luogu1065Caioj1527长长的原题面，我已简化">
 <meta name="twitter:image" content="http://pic002.cnblogs.com/images/2010/133181/2010102423271740.jpg">
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>【Luogu1065】作业调度方案 | Zory的个人博客</title>
+  <title>「Luogu1065」作业调度方案 | Zory的个人博客</title>
   
 
 
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -498,7 +498,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Luogu1065】作业调度方案
+          <h2 class="post-title" itemprop="name headline">「Luogu1065」作业调度方案
 
               
             
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:47" itemprop="dateModified" datetime="2019-12-01T10:18:47+08:00">2019-12-01</time>
               </span>
             
           
@@ -580,7 +580,7 @@
 
           
           
-            <span id="/posts/a978.html" class="post-meta-item leancloud_visitors" data-flag-title="【Luogu1065】作业调度方案">
+            <span id="/posts/a978.html" class="post-meta-item leancloud_visitors" data-flag-title="「Luogu1065」作业调度方案">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,7 +615,7 @@
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOIP2006 提高组 T3<br><a href="https://www.luogu.org/problemnew/show/P1065" target="_blank" rel="noopener">Luogu1065</a><br><a href="http://caioj.cn/problem.php?id=1527" target="_blank" rel="noopener">Caioj1527</a><br>长长的原题面，我已简化</p>
 <a id="more"></a>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-red"><strong>【Brief description】</strong><br>我们现在要利用m台机器加工n个工件，每个工件都有m道工序。<br>每道工序都在不同的指定的机器上完成，每个工件的每道工序都有指定的加工时间。<br>每个工件的每个工序称为一个操作，给出操作顺序，你的任务就是设计符合该顺序的实施方案。<br><br>实施方案条件（后面不得违背前面）：<br>1. 对同一个工件，每道工序必须在它前面的工序完成后才能开始；<br>2. 同一时刻每一台机器至多只能加工一个工件。<br>3. 在安排后面的操作时，不能改动前面已安排的操作的工作状态。<br>4. 尽量靠前插入空档。<br>5. 如果有多个空档可以插入，就插入到最前面的一个空档。<br><br>操作顺序以以下格式描述：<br>共n*m个正整数，表示对应的工件编号，同一工件编号共出现m次，分别表示m个工序的执行顺序<br>【原理是方案条件1】<br>注意，“安排顺序”只要求按照给定的顺序安排每个操作。<br>不一定是各机器上的实际操作顺序。<br>在具体实施时，有可能排在后面的某个操作比前面的某个操作先完成。<br><br>显然，在这些约定下，对于给定的安排顺序，符合该安排顺序的实施方案是唯一的。<br>请你计算出该方案完成全部任务所需的总时间。<br><strong>【Input】</strong><br>输入文件的第1行为两个正整数，用一个空格隔开：m n （其中m表示机器数，n表示工件数）<br>第2行：m*n个用空格隔开的数，为给定的安排顺序。<br>接下来的2n行，每行都是用空格隔开的m个正整数，每个数不超过20。<br>其中前n行依次表示每个工件的每个工序所使用的机器号，<br>第1个数为第1个工序的机器号，第2个数为第2个工序机器号，等等。<br>后n行依次表示每个工件的每个工序的加工时间。<br><strong>【Output】</strong><br>一个正整数，为最少的加工时间<br><strong>【Limited conditions】</strong><br>m&lt;20<br>n&lt;20<br>物品的价格都是10元的整数倍<br><strong>【Sample input】</strong><br>2 3<br>1 1 2 3 3 2<br>1 2<br>1 2<br>2 1<br>3 2<br>2 5<br>2 4<br><strong>【Sample output】</strong><br>10<br><strong>【Sample explanation】</strong><br><img src="http://pic002.cnblogs.com/images/2010/133181/2010102423271740.jpg" alt=""><br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-red"><strong>「Brief description」</strong><br>我们现在要利用m台机器加工n个工件，每个工件都有m道工序。<br>每道工序都在不同的指定的机器上完成，每个工件的每道工序都有指定的加工时间。<br>每个工件的每个工序称为一个操作，给出操作顺序，你的任务就是设计符合该顺序的实施方案。<br><br>实施方案条件（后面不得违背前面）：<br>1. 对同一个工件，每道工序必须在它前面的工序完成后才能开始；<br>2. 同一时刻每一台机器至多只能加工一个工件。<br>3. 在安排后面的操作时，不能改动前面已安排的操作的工作状态。<br>4. 尽量靠前插入空档。<br>5. 如果有多个空档可以插入，就插入到最前面的一个空档。<br><br>操作顺序以以下格式描述：<br>共n*m个正整数，表示对应的工件编号，同一工件编号共出现m次，分别表示m个工序的执行顺序<br>「原理是方案条件1」<br>注意，“安排顺序”只要求按照给定的顺序安排每个操作。<br>不一定是各机器上的实际操作顺序。<br>在具体实施时，有可能排在后面的某个操作比前面的某个操作先完成。<br><br>显然，在这些约定下，对于给定的安排顺序，符合该安排顺序的实施方案是唯一的。<br>请你计算出该方案完成全部任务所需的总时间。<br><strong>「Input」</strong><br>输入文件的第1行为两个正整数，用一个空格隔开：m n （其中m表示机器数，n表示工件数）<br>第2行：m*n个用空格隔开的数，为给定的安排顺序。<br>接下来的2n行，每行都是用空格隔开的m个正整数，每个数不超过20。<br>其中前n行依次表示每个工件的每个工序所使用的机器号，<br>第1个数为第1个工序的机器号，第2个数为第2个工序机器号，等等。<br>后n行依次表示每个工件的每个工序的加工时间。<br><strong>「Output」</strong><br>一个正整数，为最少的加工时间<br><strong>「Limited conditions」</strong><br>m&lt;20<br>n&lt;20<br>物品的价格都是10元的整数倍<br><strong>「Sample input」</strong><br>2 3<br>1 1 2 3 3 2<br>1 2<br>1 2<br>2 1<br>3 2<br>2 5<br>2 4<br><strong>「Sample output」</strong><br>10<br><strong>「Sample explanation」</strong><br><img src="http://pic002.cnblogs.com/images/2010/133181/2010102423271740.jpg" alt=""><br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>30min</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -638,42 +638,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ce8e.html" rel="bookmark">【Luogu1126】火柴棒等式</a></div>
+      <div class="popular-posts-title"><a href="/posts/ce8e.html" rel="bookmark">「Luogu1126」火柴棒等式</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/25a7.html" rel="bookmark">【NOIP17 D1T2】时间复杂度</a></div>
+      <div class="popular-posts-title"><a href="/posts/ba43.html" rel="bookmark">【OI之路】模拟与讨论大合集</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7398.html" rel="bookmark">【Luogu1072】Hankson的趣味题</a></div>
+      <div class="popular-posts-title"><a href="/posts/7398.html" rel="bookmark">「Luogu1072」Hankson的趣味题</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">【CF11B】【51Nod1615】Jumping Jack</a></div>
+      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">「CF11B」「51Nod1615」Jumping Jack</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/745a.html" rel="bookmark">【Luogu1079】Vigenère密码</a></div>
+      <div class="popular-posts-title"><a href="/posts/745a.html" rel="bookmark">「Luogu1079」Vigenère密码</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f28f.html" rel="bookmark">【Luogu1024】一元三次方程求解</a></div>
+      <div class="popular-posts-title"><a href="/posts/f28f.html" rel="bookmark">「Luogu1024」一元三次方程求解</a></div>
       
     </li>
   
@@ -691,7 +691,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/a978.html" title="【Luogu1065】作业调度方案">http://zory.ink/posts/a978.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/a978.html" title="「Luogu1065」作业调度方案">http://zory.ink/posts/a978.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -731,8 +731,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/d69c.html" rel="next" title="【Luogu1063】能量项链">
-                <i class="fa fa-chevron-left"></i> 【Luogu1063】能量项链
+              <a href="/posts/8231.html" rel="next" title="「Luogu1064」金明的预算方案">
+                <i class="fa fa-chevron-left"></i> 「Luogu1064」金明的预算方案
               </a>
             
           </div>
@@ -741,8 +741,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/a045.html" rel="prev" title="【Luogu1066】2^k进制数">
-                【Luogu1066】2^k进制数 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/a045.html" rel="prev" title="「Luogu1066」2^k进制数">
+                「Luogu1066」2^k进制数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -820,7 +820,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -845,7 +845,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1254,7 +1256,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

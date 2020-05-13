@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeNOI2011luogu1971">
 <meta name="keywords" content="网络流,难度2,博弈">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【NOI2011】兔兔与蛋蛋游戏">
+<meta property="og:title" content="「NOI2011」兔兔与蛋蛋游戏">
 <meta property="og:url" content="http://zory.ink/posts/9d0c.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOI2011luogu1971">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【NOI2011】兔兔与蛋蛋游戏">
+<meta name="twitter:title" content="「NOI2011」兔兔与蛋蛋游戏">
 <meta name="twitter:description" content="Source and JudgeNOI2011luogu1971">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【NOI2011】兔兔与蛋蛋游戏 | Zory的个人博客</title>
+  <title>「NOI2011」兔兔与蛋蛋游戏 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【NOI2011】兔兔与蛋蛋游戏
+          <h2 class="post-title" itemprop="name headline">「NOI2011」兔兔与蛋蛋游戏
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:49" itemprop="dateModified" datetime="2019-12-01T10:18:49+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/9d0c.html" class="post-meta-item leancloud_visitors" data-flag-title="【NOI2011】兔兔与蛋蛋游戏">
+            <span id="/posts/9d0c.html" class="post-meta-item leancloud_visitors" data-flag-title="「NOI2011」兔兔与蛋蛋游戏">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -614,7 +614,7 @@
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOI2011<br><a href="https://www.luogu.org/problemnew/show/P1971" target="_blank" rel="noopener">luogu1971</a></p>
 <a id="more"></a>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>仔细分析题意，发现就是移动空格。棋盘问题先染色一下（强制空格为黑色），<br>然后只有那些【棋子和格子颜色相同】的位置能去，而且一旦出去就被删除了。<br>那么其实就是一个二分图，多次加点并询问现在某个点是必胜还是必败<br>然后有个<a href="c7bb.html">结论</a></p>
+<p>仔细分析题意，发现就是移动空格。棋盘问题先染色一下（强制空格为黑色），<br>然后只有那些「棋子和格子颜色相同」的位置能去，而且一旦出去就被删除了。<br>那么其实就是一个二分图，多次加点并询问现在某个点是必胜还是必败<br>然后有个<a href="c7bb.html">结论</a></p>
 <p>接下来就很简单了，倒着加点判是否是关键点，应该匈牙利和网络流都行吧……<br>时间复杂度为 O(能过)<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2019</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">	<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> pr pair<span class="meta-string">&lt;int,int&gt;</span></span></div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> FR first</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> SE second</span></div><div class="line">	<span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">41</span>;</div><div class="line">	<span class="keyword">char</span> mp[MAX_N][MAX_N];</div><div class="line">	<span class="keyword">int</span> n,m;</div><div class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">okay</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> <span class="number">0</span>&lt;=x and x&lt;n and <span class="number">0</span>&lt;=y and y&lt;m;&#125;</div><div class="line">	<span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;<span class="keyword">return</span> x*m+y;&#125;</div><div class="line">	<span class="keyword">int</span> col[MAX_N*MAX_N];<span class="comment">//1-&gt;black</span></div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> dx[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">1</span>&#125;;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> dy[<span class="number">4</span>]=&#123;<span class="number">-1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;</div><div class="line">	<span class="keyword">int</span> stx,sty;<span class="built_in">queue</span>&lt;pr&gt; q;</div><div class="line">	<span class="keyword">bool</span> vis[MAX_N][MAX_N];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">bfs</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		q.push(MP(calc(stx,sty),<span class="number">1</span>));vis[stx][sty]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">while</span>(q.size())</div><div class="line">		&#123;</div><div class="line">			pr x=q.front();q.pop();</div><div class="line">			col[calc(x.FR/m,x.FR%m)]=x.SE;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> tx=x.FR/m+dx[i],ty=x.FR%m+dy[i];</div><div class="line">				<span class="keyword">if</span>(!okay(tx,ty) or vis[tx][ty]) <span class="keyword">continue</span>;</div><div class="line">				q.push(MP(calc(tx,ty),x.SE^<span class="number">1</span>));vis[tx][ty]=<span class="number">1</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> ti=<span class="number">0</span>,ask[MAX_N*MAX_N];</div><div class="line">	<span class="keyword">bool</span> can[MAX_N*MAX_N];</div><div class="line">	<span class="keyword">int</span> match[MAX_N*MAX_N];</div><div class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">findm</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> tx=x/m+dx[i],ty=x%m+dy[i],y=calc(tx,ty);</div><div class="line">			<span class="keyword">if</span>(!okay(tx,ty) or !can[y] or ask[y]==ti) <span class="keyword">continue</span>;</div><div class="line">			ask[y]=ti;</div><div class="line">			<span class="keyword">if</span>(match[y]&lt;<span class="number">0</span> or findm(match[y]))</div><div class="line">			&#123;</div><div class="line">				match[x]=y;</div><div class="line">				match[y]=x;</div><div class="line">				<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmp;<span class="keyword">int</span> f[<span class="number">2100</span>];</div><div class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ans;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</div><div class="line">		&#123;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%s"</span>,mp[i]);</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;j++) <span class="keyword">if</span>(mp[i][j]==<span class="string">'.'</span>) stx=i,sty=j;</div><div class="line">		&#125;</div><div class="line">		bfs();</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;j++) can[calc(i,j)]=( col[calc(i,j)]==(mp[i][j]!=<span class="string">'O'</span>) );</div><div class="line"></div><div class="line">		<span class="keyword">int</span> q;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;q);pr now=MP(stx,sty);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=q*<span class="number">2</span>;i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> x,y;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);x--;y--;</div><div class="line">			tmp.push_back(calc(now.FR,now.SE)),can[calc(now.FR,now.SE)]=<span class="number">0</span>;</div><div class="line">			now=MP(x,y);</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">memset</span>(match,<span class="number">-1</span>,<span class="keyword">sizeof</span> match);</div><div class="line">		<span class="keyword">int</span> tt=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n*m;i++) <span class="keyword">if</span>(can[i] and col[i] and match[i]&lt;<span class="number">0</span>) &#123;ti++;tt+=findm(i);&#125;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> t=(<span class="keyword">int</span>)tmp.size()<span class="number">-1</span>;t&gt;=<span class="number">0</span>;t--)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> tot=<span class="number">0</span>;can[tmp[t]]=<span class="number">1</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n*m;i++) <span class="keyword">if</span>(can[i] and col[i] and match[i]&lt;<span class="number">0</span>) &#123;ti++;tot+=findm(i);&#125;</div><div class="line">			f[t]=tot;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=q*<span class="number">2</span><span class="number">-2</span>;i+=<span class="number">2</span>) <span class="keyword">if</span>(f[i]==<span class="number">1</span> and f[i+<span class="number">1</span>]==<span class="number">1</span>) ans.push_back(i/<span class="number">2</span>);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans.size());<span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;(<span class="keyword">int</span>)ans.size();t++) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans[t]+<span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	srand(time(<span class="number">0</span>));</div><div class="line">	mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
 </div></div>
@@ -631,42 +631,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/a1fb.html" rel="bookmark">【Bzoj1934】【Bzoj2768】善意的投票&冠军调查</a></div>
+      <div class="popular-posts-title"><a href="/posts/a1fb.html" rel="bookmark">「Bzoj1934」「Bzoj2768」善意的投票&冠军调查</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">【CF553E】Kyoya and Train</a></div>
+      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">「CF553E」Kyoya and Train</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/44a6.html" rel="bookmark">【Usaco05Mar】Ombrophobic Bovines</a></div>
+      <div class="popular-posts-title"><a href="/posts/44a6.html" rel="bookmark">「Usaco05Mar」Ombrophobic Bovines</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/41bc.html" rel="bookmark">【Poj2112】Optimal Milking</a></div>
+      <div class="popular-posts-title"><a href="/posts/41bc.html" rel="bookmark">「Poj2112」Optimal Milking</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7731.html" rel="bookmark">【Poj2455】【Bzoj1733】Secret Milking Machine</a></div>
+      <div class="popular-posts-title"><a href="/posts/7731.html" rel="bookmark">「Poj2455」「Bzoj1733」Secret Milking Machine</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b6a3.html" rel="bookmark">【Poj3189】Steady Cow Assignment</a></div>
+      <div class="popular-posts-title"><a href="/posts/b6a3.html" rel="bookmark">「Poj3189」Steady Cow Assignment</a></div>
       
     </li>
   
@@ -684,7 +684,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/9d0c.html" title="【NOI2011】兔兔与蛋蛋游戏">http://zory.ink/posts/9d0c.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/9d0c.html" title="「NOI2011」兔兔与蛋蛋游戏">http://zory.ink/posts/9d0c.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -726,8 +726,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/4e7e.html" rel="next" title="【CQOI2014】学习小组">
-                <i class="fa fa-chevron-left"></i> 【CQOI2014】学习小组
+              <a href="/posts/4e7e.html" rel="next" title="「CQOI2014」学习小组">
+                <i class="fa fa-chevron-left"></i> 「CQOI2014」学习小组
               </a>
             
           </div>
@@ -815,7 +815,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -840,7 +840,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1249,7 +1251,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

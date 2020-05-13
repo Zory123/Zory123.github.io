@@ -95,15 +95,15 @@
   <meta name="description" content="主席树">
 <meta name="keywords" content="主席树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】02数据结构-6主席树">
+<meta property="og:title" content="「OI之路」02数据结构-6主席树">
 <meta property="og:url" content="http://zory.ink/posts/d299.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="主席树">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://caioj.cn/upload/image/20170714/20170714145219_85080.png">
-<meta property="og:updated_time" content="2019-10-11T02:52:00.298Z">
+<meta property="og:updated_time" content="2020-02-28T09:09:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】02数据结构-6主席树">
+<meta name="twitter:title" content="「OI之路」02数据结构-6主席树">
 <meta name="twitter:description" content="主席树">
 <meta name="twitter:image" content="http://caioj.cn/upload/image/20170714/20170714145219_85080.png">
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>【OI之路】02数据结构-6主席树 | Zory的个人博客</title>
+  <title>「OI之路」02数据结构-6主席树 | Zory的个人博客</title>
   
 
 
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -498,7 +498,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】02数据结构-6主席树
+          <h2 class="post-title" itemprop="name headline">「OI之路」02数据结构-6主席树
 
               
             
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-11 10:52:00" itemprop="dateModified" datetime="2019-10-11T10:52:00+08:00">2019-10-11</time>
+                <time title="修改时间：2020-02-28 17:09:42" itemprop="dateModified" datetime="2020-02-28T17:09:42+08:00">2020-02-28</time>
               </span>
             
           
@@ -580,7 +580,7 @@
 
           
           
-            <span id="/posts/d299.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】02数据结构-6主席树">
+            <span id="/posts/d299.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」02数据结构-6主席树">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -616,7 +616,7 @@
         <p>主席树</p>
 <a id="more"></a>
 <h2 id="6-6-0-背景"><a href="#6-6-0-背景" class="headerlink" title="6.6.0 背景"></a>6.6.0 背景</h2><p>对于两颗上下界相同的线段树，其结构唯一，节点一一对应。<br><img src="http://caioj.cn/upload/image/20170714/20170714145219_85080.png" alt=""><br>至于主席树来历之类的八卦，请自行上网搜索。<br>某大佬：<a href="http://blog.csdn.net/xgc_woker/article/details/78018297" target="_blank" rel="noopener">http://blog.csdn.net/xgc_woker/article/details/78018297</a></p>
-<h2 id="6-6-1-性质"><a href="#6-6-1-性质" class="headerlink" title="6.6.1 性质"></a>6.6.1 性质</h2><p>主席树，主要用于解决区间大小关系询问类问题，当然也用到了身为区间问题始祖的前缀和。<br>其实它本质上是一颗权值线段树，所以比较大小就比较方便啦。</p>
+<h2 id="6-6-1-性质"><a href="#6-6-1-性质" class="headerlink" title="6.6.1 性质"></a>6.6.1 性质</h2><p>主席树，主要用于解决区间大小关系询问类问题，当然也用到了身为区间问题始祖的前缀和。<br>其实它本质上是一棵权值线段树，所以比较大小就比较方便啦。</p>
 <p>由于它存储的值是，对应某段区间，在他管辖范围内的这些数字总共出现了多少次。<br>也正是由于出现次数满足可加性，前缀和可以很好的解决。</p>
 <p>对于长度为1的一个区间，如果只看有用的信息，<br>它的形状大致是一根链（空间logn），所以应该看成残缺的线段树<br>（否则就会需要大量空间导致MLE）<br>利用前缀和思想，用n颗主席树分别维护1~i区间内的信息，合并重复信息即可。</p>
 <p>哦对了因为是权值线段树，所以要离散化，<br>既减少空间，也避免下标出现负数。</p>
@@ -639,35 +639,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8705.html" rel="bookmark">【Bzoj1901】Dynamic Rankings</a></div>
+      <div class="popular-posts-title"><a href="/posts/8705.html" rel="bookmark">「Bzoj1901」Dynamic Rankings</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d7e9.html" rel="bookmark">【Bzoj3196】【Luogu3380】二逼平衡树</a></div>
+      <div class="popular-posts-title"><a href="/posts/d7e9.html" rel="bookmark">「Bzoj3196」「Luogu3380」二逼平衡树</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9028.html" rel="bookmark">【Bzoj3932】【Luogu3168】任务查询系统</a></div>
+      <div class="popular-posts-title"><a href="/posts/9028.html" rel="bookmark">「Bzoj3932」「Luogu3168」任务查询系统</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/fea4.html" rel="bookmark">【Cqoi2011】动态逆序对</a></div>
+      <div class="popular-posts-title"><a href="/posts/fea4.html" rel="bookmark">「Cqoi2011」动态逆序对</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/c709.html" rel="bookmark">【HEOI2016】字符串</a></div>
+      <div class="popular-posts-title"><a href="/posts/c709.html" rel="bookmark">「HEOI2016」字符串</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/b9ce4df0.html" rel="bookmark">CFR602</a></div>
       
     </li>
   
@@ -685,7 +692,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/d299.html" title="【OI之路】02数据结构-6主席树">http://zory.ink/posts/d299.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/d299.html" title="「OI之路」02数据结构-6主席树">http://zory.ink/posts/d299.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -733,8 +740,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/e23c.html" rel="prev" title="【OI之路】02数据结构-7动态树LCT">
-                【OI之路】02数据结构-7动态树LCT <i class="fa fa-chevron-right"></i>
+              <a href="/posts/e23c.html" rel="prev" title="「OI之路」02数据结构-7LCT">
+                「OI之路」02数据结构-7LCT <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -812,7 +819,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -837,7 +844,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1246,7 +1255,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

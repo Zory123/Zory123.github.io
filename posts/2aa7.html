@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="文章参考网页版：http://hzwer.com/8053.html 好吧，实话说已经灰常详细了，暂时不知道说些什么好…… 学习指导：Hzwer题表">
-<meta name="keywords" content="分块">
+  <meta name="description" content="分块与莫队入门">
+<meta name="keywords" content="分块,莫队">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】02数据结构-1分块">
+<meta property="og:title" content="「OI之路」02数据结构-1分块与莫队入门">
 <meta property="og:url" content="http://zory.ink/posts/2aa7.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="文章参考网页版：http://hzwer.com/8053.html 好吧，实话说已经灰常详细了，暂时不知道说些什么好…… 学习指导：Hzwer题表">
+<meta property="og:description" content="分块与莫队入门">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2020-05-13T01:14:07.753Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】02数据结构-1分块">
-<meta name="twitter:description" content="文章参考网页版：http://hzwer.com/8053.html 好吧，实话说已经灰常详细了，暂时不知道说些什么好…… 学习指导：Hzwer题表">
+<meta name="twitter:title" content="「OI之路」02数据结构-1分块与莫队入门">
+<meta name="twitter:description" content="分块与莫队入门">
 
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】02数据结构-1分块 | Zory的个人博客</title>
+  <title>「OI之路」02数据结构-1分块与莫队入门 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】02数据结构-1分块
+          <h2 class="post-title" itemprop="name headline">「OI之路」02数据结构-1分块与莫队入门
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2020-05-13 09:14:07" itemprop="dateModified" datetime="2020-05-13T09:14:07+08:00">2020-05-13</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/2aa7.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】02数据结构-1分块">
+            <span id="/posts/2aa7.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」02数据结构-1分块与莫队入门">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -611,11 +611,93 @@
       
 
       
-        <h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><p><a href="../files/文章/分块-黄哲威-庄博尔.pdf">参考</a><br>网页版：<a href="http://hzwer.com/8053.html" target="_blank" rel="noopener">http://hzwer.com/8053.html</a></p>
-<p>好吧，实话说已经灰常详细了，暂时不知道说些什么好……</p>
-<p>学习指导：<br><a href="http://hzwer.com/category/algorithm/data-structure/basic-data-structure/piecemeal/page/2" target="_blank" rel="noopener">Hzwer题表</a></p>
+        <p>分块与莫队入门</p>
 <a id="more"></a>
-<h2 id="所有题目"><a href="#所有题目" class="headerlink" title="所有题目"></a>所有题目</h2><p><a href="../tags/分块/">Tag-分块</a></p>
+<h2 id="分块"><a href="#分块" class="headerlink" title="分块"></a>分块</h2><p><a href="../files/文章/分块-黄哲威-庄博尔.pdf">hzwer的入门ppt</a>：包括区间众数（如bzoj4241）等基础题，是不错的入门教程</p>
+<p>另外熟练运用均值法是很有必要的</p>
+<p>可以多思考一些操作复杂度的平衡，例如维护集合，每次插入一个数或询问第k大，你会$插入O(1)询问O(\sqrt n)$，那就思考一下能不能$插入O(\sqrt n)询问O(1)$</p>
+<p>顺便说一下做个问题咋做，维护有序集合，每个块大小都是T的手写任意访问deque，插入时每个块向后移一个，如果空间太大可以考虑每T次重构一下或者循环数组，这样是线性空间</p>
+<p>UPD：数据结构常常还需要考虑空间，因为据说大空间需要的内存访问时间更长，小空间的离线做法不一定会被在线完虐</p>
+<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p>一些离线做法可能混入莫队，参考链接包括<a href="http://olddrivertree.blog.uoj.ac/blog/4656" target="_blank" rel="noopener">lxl的博客</a></p>
+<h4 id="bzoj4241-历史研究"><a href="#bzoj4241-历史研究" class="headerlink" title="bzoj4241 历史研究"></a><a href="https://darkbzoj.tk/problem/4241" target="_blank" rel="noopener">bzoj4241 历史研究</a></h4><p><strong>题意</strong>：众数/带权众数的$O(n \sqrt n)$在线做法</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>经典做法是空间为$O(n \sqrt n)$的，就是预处理区间整块答案、每种值在整块前缀出现次数，然后扫两侧散块的时候可以在上面修改次数，最后回退回来就好了</p>
+<p>更优秀的做法是，依然预处理答案，扫两侧不使用预处理，扫两侧的时候答案最多增加$2\sqrt n$，我们一步步增加答案，那么我们需要的其实是，在这个数对应vc中查看pos-ans的那个数是否在区间内。空间为$O(n)$</p>
+
+</div></div>
+<h4 id="bzoj3744-Gty的妹子序列、bzoj3289-Mato的文件管理、luogu-强制在线、luogu-可离线"><a href="#bzoj3744-Gty的妹子序列、bzoj3289-Mato的文件管理、luogu-强制在线、luogu-可离线" class="headerlink" title="bzoj3744 Gty的妹子序列、bzoj3289 Mato的文件管理、luogu-强制在线、luogu-可离线"></a><a href="https://darkbzoj.tk/problem/3744" target="_blank" rel="noopener">bzoj3744 Gty的妹子序列</a>、<a href="https://darkbzoj.tk/problem/3289" target="_blank" rel="noopener">bzoj3289 Mato的文件管理</a>、<a href="https://www.luogu.org/problemnew/show/P5046" target="_blank" rel="noopener">luogu-强制在线</a>、<a href="https://www.luogu.org/problemnew/show/P5047" target="_blank" rel="noopener">luogu-可离线</a></h4><p><strong>题意</strong>：区间逆序对的$O(n\sqrt n)$做法</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>在线做法：预处理数组大小为$(\frac{n}{T})^2$的整块区间答案，两个散块间归并，那么我们只关心散块与整块间答案，经过一堆差分得到若干组前缀块与序列前缀间的答案（空间$O(n \sqrt n)$），这个可以预处理（求出单独每个块与序列前缀的答案后只需前缀和，而这个可以配合值域分块那个$O( \sqrt n )修改-O(1)询问前缀和$）</p>
+<p>离线做法：该思想被lxl命名为二次离线莫队。就是普通的莫队借助树状数组的话是$O(n \sqrt nlog)$。我们需要的是两次间的差，不失一般性地看做是$[l,r] \to [l,r’]$，差分一下，$记|表示前后逆序对，\sum_{i=r}^{r’} [l,i)|[i,i]=(\sum_{i=r}^{r’} [1,i)|[i,i])-[1,l)|[r,r’]$，前面预处理，后面就是m次某种询问。考虑把这个问题离线下来并挂在l那里做个值域分块那个$O( \sqrt n )修改-O(1)询问前缀和$，询问次数等于后面那个区间的长度和也就是莫队复杂度$O(n \sqrt q)$，最后再用差补出所有询问的答案，空间$O(n+m)$，时间$O(n \sqrt q+q \sqrt n)$</p>
+
+</div></div>
+<h4 id="bzoj3809-Gty的二逼妹子序列、-AHOI2013-作业"><a href="#bzoj3809-Gty的二逼妹子序列、-AHOI2013-作业" class="headerlink" title="bzoj3809 Gty的二逼妹子序列、[AHOI2013]作业"></a><a href="https://acm.taifua.com/bzoj/p/3809.html" target="_blank" rel="noopener">bzoj3809 Gty的二逼妹子序列</a>、<a href="https://www.luogu.com.cn/problem/P4396" target="_blank" rel="noopener">[AHOI2013]作业</a></h4><p><strong>题意</strong>：无修改，询问一个值域区间中多少个数在序列区间中出现过，$n \le 1e5,q \le 1e6$，时限6s</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>主流做法是莫队+值域分块，$O(n \sqrt q+q \sqrt n)$</p>
+<p>三维数点做法则是考虑从每种数在区间内第一个那里统计，即$pre_i &lt;l$，cdq分治处理，也是离线做法</p>
+<p>纯分块做法可以在线，序列分块T+值域分块B，预处理出数组大小为$O(\frac{n}{B}*(\frac{n}{T})^2)$的每个值域块在每个序列块区间中的答案，那么回答询问的时候只需要关注值域散块中每个值，用个桶先去掉并累计掉在序列散块中出现的，剩下的只需要枚举每个值，判断在序列整块中是否出现，这个可以预处理数组大小为$O(n*\frac{n}{T})$的每种值在序列块次数前缀和搞定</p>
+<p>复杂度为$O(\frac{n^3}{T^2B}+q*B)$，取$B=T=(\frac{n^3}{q})^{1/4}得O((nq)^{3/4})$的做法</p>
+
+</div></div>
+<h4 id="bzoj4867-Ynoi2017舌尖上的由乃"><a href="#bzoj4867-Ynoi2017舌尖上的由乃" class="headerlink" title="bzoj4867 Ynoi2017舌尖上的由乃"></a><a href="https://acm.taifua.com/bzoj/p/4867.html" target="_blank" rel="noopener">bzoj4867 Ynoi2017舌尖上的由乃</a></h4><p><strong>题意</strong>：区间加，区间第k大，$n,m \le 1e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>序列分块，二分答案，回答询问为$O(log*(T+\frac{n}{T})*log)$（维护有序数组），修改为$O(T+\frac{n}{T})$（归并），取$T=\sqrt{nlog}得O(n^{1.5}log)$</p>
+
+</div></div>
+<h4 id="CodeChef-Chef-and-Churu"><a href="#CodeChef-Chef-and-Churu" class="headerlink" title="CodeChef Chef and Churu"></a><a href="https://vjudge.net/problem/CodeChef-FNCS" target="_blank" rel="noopener">CodeChef Chef and Churu</a></h4><p><strong>题意</strong>：$n \le 1e5$的序列，$m \le 1e5$个表示序列某个区间和的函数，$q \le 1e5$次操作，每次单点修改序列或询问第l到r个函数的和</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>函数是固定的，对函数分块，$O( \frac{n}{T} (T+n))$预处理每个数记录对每个块的贡献，那么单点修改的时候可以直接得出每个块新的和，回答询问扫散块并用树状数组询问，$O(\frac{n}{T}+Tlog)$，取$T=\sqrt {n/log}得O(n\sqrt{nlog})$，空间$O(n \sqrt n)$</p>
+<p>其实树状数组这里可以进一步优化，我们其实需要的是$修改O(\sqrt n)-询问O(1)$，序列分块，记录每个块的前缀和、以块为单位的前缀和，这样时间复杂度为$O(n \sqrt n)$</p>
+
+</div></div>
+<h4 id="Ynoi2018未来日记"><a href="#Ynoi2018未来日记" class="headerlink" title="Ynoi2018未来日记"></a><a href="https://www.luogu.com.cn/problem/P4119" target="_blank" rel="noopener">Ynoi2018未来日记</a></h4><p><strong>题意</strong>：区间将所有x变成y，区间询问第k大，$n,q \le 1e5$，时限20s</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>求区间第k大在已经考虑使用分块的时候，除了二分还可以值域分块递增处理每个值域块找到答案所在</p>
+<p>对于每个值域块、每个值，都记录序列块的前缀和；对于每个序列块，将相同的位置用链表以任意顺序连接</p>
+<p>回答询问时递增处理每个值域块，对于序列块的散块只需一开始取出并归并好再单指针移动</p>
+<p>得到答案所在值域块后，再具体扫该值域内的值即可</p>
+<p>修改时，散块还原暴力重构链表，整块连接链表，再更新x和y所在值域块的前缀和，$O(n \sqrt n)$ </p>
+<p><del>写个屁</del></p>
+
+</div></div>
+<h2 id="莫队Mo’s-algorithm"><a href="#莫队Mo’s-algorithm" class="headerlink" title="莫队Mo’s algorithm"></a>莫队Mo’s algorithm</h2><p><strong>分析复杂度的时候只需要分析修改（端点移动）复杂度F对应的系数，询问复杂度G对应的系数没有特殊说明都是q</strong></p>
+<h3 id="普通的莫队"><a href="#普通的莫队" class="headerlink" title="普通的莫队"></a>普通的莫队</h3><p>要求：可离线，无修</p>
+<p>不分块的莫队指求平面曼哈顿最小生成树，因为遍历树的话大致上每条边经过两次；但一般不这样搞，比较麻烦</p>
+<p>咱搞OI的关心理论最坏，一个比较接近下界的方法是设块大小阈值B分块，左端点在同个块的一组，组内右端点递增</p>
+<p>UPD：一个可以快一倍的方法是，考虑每次奇数组做完，右端点在尾部，然后偶数组倒着做（排序的时候让组内右端点递减），右端点递减下来，就不用每次都移动到最前面了</p>
+<p>另外一个玄学优化是，$块大小=\frac{n}{\sqrt{2m/3}}$，据说快$10\%$，即使你不用，知道这个也方便看别人代码</p>
+<p>$\sum_{n/B各组} q_i*B+n=qB+n^2/B，由均值不等式，B=n/\sqrt q时得到下界n \sqrt q$，因此通常一道题复杂度为$O(n \sqrt q*F+q*G)$</p>
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2038" target="_blank" rel="noopener">bzoj2038 小Z的袜子</a>：mt的经典题</p>
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3585" target="_blank" rel="noopener">bzoj3585</a>：求区间mex；那么权值分块一下，$F=1,G=\sqrt n$。顺便说说主席树的做法：开n棵表示前缀，位置i表示数字i的位置，那么询问就是在第r棵上二分（维护区间最小值）</p>
+<p><a href="https://www.luogu.com.cn/problem/P4689" target="_blank" rel="noopener">Ynoi2016 这是我自己的发明</a>：换根看似可怕，其实根在x的孩子y内的话，范围就是$[1,dfn_y) \cup [dfn_y+siz_y,n]$，本质上还是两个区间的问题。因此就是$\sum_{val} cnt1(val)*cnt2(val)$，容斥一下就是袜子了</p>
+<p><a href="https://darkbzoj.tk/problem/3920" target="_blank" rel="noopener">bzoj3920 Yuuna的礼物</a>：</p>
+<blockquote>
+<p>高维离散化：如果x在整个序列出现y次，在vc[1..y]中每个都插入一次x，每个vc内离散化</p>
+</blockquote>
+<p>先通过值域分块第k大求出次数，每个次数开个数组，每个数组内值域分块，然后就是第k大，$F=1,G=\sqrt n$</p>
+<h3 id="二次离线莫队"><a href="#二次离线莫队" class="headerlink" title="二次离线莫队"></a>二次离线莫队</h3><p>我觉得只需要看上面区间逆序对就可以知道大概什么思想了</p>
+<p>然后<a href="https://www.luogu.com.cn/problem/P4887" target="_blank" rel="noopener">luogu 第十四分块前体</a>、<a href="https://www.cometoj.com/contest/38/problem/F?problem_id=1545" target="_blank" rel="noopener">cojR3F 毒瘤的菜菜子</a>都是</p>
+<p>一般一点就是，将移动指针的部分差分（因此要求可加性）为可预处理的部分和一个前缀-区间询问，挂在前缀上暴力扫区间求，$O(n \sqrt q*F+q*G) \to O(n \sqrt q+n*F+q*G)$</p>
+<h3 id="回滚莫队-不删除莫队"><a href="#回滚莫队-不删除莫队" class="headerlink" title="回滚莫队/不删除莫队"></a>回滚莫队/不删除莫队</h3><p>因为历史研究这题已经被上面在线做法吊打了，不另外说了</p>
+<p>主要用于解决容易加不容易减的题目，排序方式还是一样，但每次询问前后都始终让当前区间左端点在分块点，每次移动完右端点后，再移动左端点，这样回去的时候是个回撤而不是删除</p>
+<p><a href="https://vjudge.net/problem/CodeChef-QCHEF" target="_blank" rel="noopener">CodeChef Chef and Problems</a>、<a href="https://www.luogu.com.cn/problem/P5906" target="_blank" rel="noopener">luogu模板题</a></p>
+<p><strong>题意</strong>：区间询问$\max_{a_i=a_j,i,j \in [l,r]} |i-j|$，$n,q \le 1e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>在线做法：$O(\frac{n}{T}*n)$预处理出数组大小为$(\frac{n}{T})^2$的整块区间答案，归并线性处理两端散块间答案后，以右散块为例，只需要预处理出数组大小为$n*\frac{n}{T}$的每种值在每个块后第一次在哪里出现，就能够$O(1)$回答询问了，总复杂度为$O(n \sqrt n)$，空间为$O(n \sqrt n)$</p>
+<p>离线做法：回滚莫队冲冲冲，空间为$O(n)$</p>
+
+</div></div>
+<p><a href="https://darkbzoj.tk/problem/4358" target="_blank" rel="noopener">bzoj4358 permu</a>：回滚莫队+可撤销的并查集</p>
+<h3 id="带修莫队"><a href="#带修莫队" class="headerlink" title="带修莫队"></a>带修莫队</h3><p>要求：可离线，要能方便地处理修改对当前区间的答案的影响</p>
+<p>一般做法：<strong>左右端点都要分块，都在同块的一组内部时间有序</strong>（即三维空间分$(\frac{n}{B})^2$个组，高度递增，所以上面卡常技巧也可用）</p>
+<p>分析修改复杂度，时间这维次数是$(n/B)^2tim$，端点的移动是考虑q次组内B+B，以及每个x块内但跨组的$\frac{n}{B}*n$。如果$n=tim=q取B=n^{2/3}，则为n^{5/3}$（对于n、q不同，或者不同维的移动复杂度不同的，建议自行计算）</p>
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2120" target="_blank" rel="noopener">bzoj2120 数颜色</a>：经典题</p>
+<p><a href="https://codeforces.com/problemset/problem/940/F" target="_blank" rel="noopener">CF940F Machine Learning</a>：首先次数值域与n同阶，那么现在就是怎么求mex，值域分块，记录每个块当前被填充的大小即可，不影响复杂度，因为移动虽多询问还是q次，每次跑个根号求mex罢了，<a href="https://codeforces.com/problemset/submission/940/61055395" target="_blank" rel="noopener">code</a></p>
+<h3 id="树上莫队"><a href="#树上莫队" class="headerlink" title="树上莫队"></a>树上莫队</h3><p>要求：可离线</p>
+<p>主要是要搞懂怎么把树上路径问题<strong>搞到序列上</strong>：</p>
+<p>树上定义的序列无非就是dfs序家族，无脑上dfs序也是不行的，欧拉序一个点会出现多次，但我们可以用不常用的括号序，考虑怎么让不要的点被统计两次，要的点统计一次</p>
+<p>不妨假定我们处理的是无向路径（有向的话再稍加讨论即可），不妨设$in_x&lt;in_y$，当x为y祖先时，$[in_x,in_y]$能不重不漏；否则，$[out_x,in_y]$会没法统计路径lca，特判即可。全局记录每个点是否已经被统计过，第二次加入时消除影响即可</p>
+<p><a href="http://uoj.ac/problem/58" target="_blank" rel="noopener">【WC2013】糖果公园</a>：显然$ans=\sum_{col} v_{col}*(\sum_{i=1}^{times\ of\ col} w_i)$，<del>给每个点开个颜色的栈即可</del>会被卡常，写链表快14s，<a href="http://uoj.ac/submission/375595" target="_blank" rel="noopener">code</a></p>
 
       
     </div>
@@ -629,28 +711,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/86909ea3.html" rel="bookmark">【OI之路】02数据结构-15树上问题</a></div>
+      <div class="popular-posts-title"><a href="/posts/86909ea3.html" rel="bookmark">「OI之路」02数据结构-15树上问题</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8065.html" rel="bookmark">【Bzoj2002】【Luogu3203】弹飞绵羊</a></div>
+      <div class="popular-posts-title"><a href="/posts/8065.html" rel="bookmark">「Bzoj2002」「Luogu3203」弹飞绵羊</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/c57c.html" rel="bookmark">【Bzoj3343】教主的魔法</a></div>
+      <div class="popular-posts-title"><a href="/posts/c57c.html" rel="bookmark">「Bzoj3343」教主的魔法</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d8f8.html" rel="bookmark">【51nod1462】树据结构</a></div>
+      <div class="popular-posts-title"><a href="/posts/d8f8.html" rel="bookmark">「51nod1462」树据结构</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/343e.html" rel="bookmark">【OI之路】02数据结构-6莫队Mo's algorithm</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/8705.html" rel="bookmark">「Bzoj1901」Dynamic Rankings</a></div>
       
     </li>
   
@@ -668,7 +764,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/2aa7.html" title="【OI之路】02数据结构-1分块">http://zory.ink/posts/2aa7.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/2aa7.html" title="「OI之路」02数据结构-1分块与莫队入门">http://zory.ink/posts/2aa7.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -695,6 +791,8 @@
           
             <a href="/tags/分块/" rel="tag"># 分块</a>
           
+            <a href="/tags/莫队/" rel="tag"># 莫队</a>
+          
         </div>
       
 
@@ -706,8 +804,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/212a.html" rel="next" title="【OI之路】01语法与STL-5二叉树">
-                <i class="fa fa-chevron-left"></i> 【OI之路】01语法与STL-5二叉树
+              <a href="/posts/212a.html" rel="next" title="「OI之路」01语法与STL-5二叉树">
+                <i class="fa fa-chevron-left"></i> 「OI之路」01语法与STL-5二叉树
               </a>
             
           </div>
@@ -716,8 +814,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/1650.html" rel="prev" title="【OI之路】02数据结构-2树状数组">
-                【OI之路】02数据结构-2树状数组 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/2aa7.html" rel="prev" title="【OI之路】02数据结构-1分块">
+                【OI之路】02数据结构-1分块 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -795,7 +893,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -820,7 +918,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1229,7 +1329,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1292,7 +1396,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文章"><span class="nav-text">文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所有题目"><span class="nav-text">所有题目</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分块"><span class="nav-text">分块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例题"><span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#bzoj4241-历史研究"><span class="nav-text">bzoj4241 历史研究</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bzoj3744-Gty的妹子序列、bzoj3289-Mato的文件管理、luogu-强制在线、luogu-可离线"><span class="nav-text">bzoj3744 Gty的妹子序列、bzoj3289 Mato的文件管理、luogu-强制在线、luogu-可离线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bzoj3809-Gty的二逼妹子序列、-AHOI2013-作业"><span class="nav-text">bzoj3809 Gty的二逼妹子序列、[AHOI2013]作业</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bzoj4867-Ynoi2017舌尖上的由乃"><span class="nav-text">bzoj4867 Ynoi2017舌尖上的由乃</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CodeChef-Chef-and-Churu"><span class="nav-text">CodeChef Chef and Churu</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Ynoi2018未来日记"><span class="nav-text">Ynoi2018未来日记</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#莫队Mo’s-algorithm"><span class="nav-text">莫队Mo’s algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#普通的莫队"><span class="nav-text">普通的莫队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二次离线莫队"><span class="nav-text">二次离线莫队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回滚莫队-不删除莫队"><span class="nav-text">回滚莫队/不删除莫队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#带修莫队"><span class="nav-text">带修莫队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#树上莫队"><span class="nav-text">树上莫队</span></a></li></ol></li></ol></div>
             
 
           </div>

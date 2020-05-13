@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="当时太菜了没有去，题解合集">
-<meta name="keywords" content="复习">
+  <meta name="description" content="当时太菜了没有去，题解合集 begay稳扎稳打的游记，如果不是数学就有一本了 5/5">
+<meta name="keywords" content="fft">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PKUSC2018题解">
 <meta property="og:url" content="http://zory.ink/posts/71bd.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="当时太菜了没有去，题解合集">
+<meta property="og:description" content="当时太菜了没有去，题解合集 begay稳扎稳打的游记，如果不是数学就有一本了 5/5">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-18T00:43:37.541Z">
+<meta property="og:updated_time" content="2019-12-02T11:16:12.215Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PKUSC2018题解">
-<meta name="twitter:description" content="当时太菜了没有去，题解合集">
+<meta name="twitter:description" content="当时太菜了没有去，题解合集 begay稳扎稳打的游记，如果不是数学就有一本了 5/5">
 
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-18 08:43:37" itemprop="dateModified" datetime="2019-09-18T08:43:37+08:00">2019-09-18</time>
+                <time title="修改时间：2019-12-02 19:16:12" itemprop="dateModified" datetime="2019-12-02T19:16:12+08:00">2019-12-02</time>
               </span>
             
           
@@ -612,16 +612,40 @@
 
       
         <p>当时太菜了没有去，题解合集</p>
-<a id="more"></a>
-<h1 id="CF1204E-Natasha-Sasha-and-the-Prefix-Sums"><a href="#CF1204E-Natasha-Sasha-and-the-Prefix-Sums" class="headerlink" title="CF1204E Natasha, Sasha and the Prefix Sums"></a>CF1204E Natasha, Sasha and the Prefix Sums</h1><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>这题不是PKUSC2018的，但有兴趣的可以看看<br>$$<br>考虑在第一个max处计数，f(a,b)表示前缀 \le0，g(a,b)表示后缀&gt;0的方案数 \\<br>f(a&gt;b)=0,f(a,b)=C_{a+b}^a-C_{a+b}^{b+1}，类似卡特兰数的推导方式 \\<br>g(0,0)=g(a&lt;b)=0,在后面先放一个1，g(a,b)=C_{a+b-1}^{a-1}-C_{a+b-1}^a \\<br>然后枚举前缀mx，前面g后面f拼接起来，O(n^2)，g和f也可以dp计算<br>$$<br><a href="https://codeforces.com/contest/1204/submission/59207128" target="_blank" rel="noopener">code</a><br>$$<br>k(a,b)=a个1，b个-1下f&lt;0的方案数 \\<br>k(a&gt;b)=0,k(a&lt;b)考虑从后面添加=k(a-1,b)+k(a,b-1) \\<br>其实用类似卡特兰数的推导方式可知 k(a&lt;b)=C_{a+b}^a-C_{a+b}^{a-1} \\<br>f(a,0)=a,f(0,b)=0,考虑从前面添加（奇妙的思路） \\<br>f(a,b)=(f(a-1,b)+C_{a+b-1}^b)+(f(a,b-1)-(C_{a+b-1}^a-k(a,b-1)))<br>$$<br><a href="https://codeforces.com/contest/1204/submission/59208290" target="_blank" rel="noopener">code</a></p>
-<p>线性做法：就是求一个至少i+1，可以看<a href="5905.html">【OI之路】03数学-7组合数学</a>中Catalan数拓展部分<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> x=n,y=m+i+<span class="number">1</span>;<span class="comment">//注意要这样比大小</span></div><div class="line">    <span class="keyword">if</span>(min(x,n+m-x)&lt;min(y,n+m-y)) <span class="keyword">continue</span>;</div><div class="line">    cnt[i]=C[n+m][x]-C[n+m][y];</div><div class="line">&#125;</div><div class="line">ll ans=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) ans+=(cnt[i]-cnt[i<span class="number">-1</span>])*i,ans%=MOD;write((ans+MOD)%MOD);</div></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/qq_33229466/article/details/80859904" target="_blank" rel="noopener">begay稳扎稳打的游记</a>，如果不是数学就有一本了</p>
+<h1 id="5-5"><a href="#5-5" class="headerlink" title="5/5"></a>5/5</h1><a id="more"></a>
+<h2 id="CF1204E-Natasha-Sasha-and-the-Prefix-Sums"><a href="#CF1204E-Natasha-Sasha-and-the-Prefix-Sums" class="headerlink" title="CF1204E Natasha, Sasha and the Prefix Sums"></a>CF1204E Natasha, Sasha and the Prefix Sums</h2><p>这题不是PKUSC2018的，但有兴趣的可以看看</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>$$<br>考虑在第一个max处计数，f(a,b)表示前缀 \le0，g(a,b)表示后缀&gt;0的方案数 \\<br>f(a&gt;b)=0,f(a,b)=C_{a+b}^a-C_{a+b}^{b+1}，类似卡特兰数的推导方式 \\<br>g(0,0)=g(a&lt;b)=0,在后面先放一个1，g(a,b)=C_{a+b-1}^{a-1}-C_{a+b-1}^a \\<br>然后枚举前缀mx，前面g后面f拼接起来，O(n^2)，g和f也可以dp计算<br>$$<br><a href="https://codeforces.com/contest/1204/submission/59207128" target="_blank" rel="noopener">code</a><br>$$<br>k(a,b)=a个1，b个-1下f&lt;0的方案数 \\<br>k(a&gt;b)=0,k(a&lt;b)考虑从后面添加=k(a-1,b)+k(a,b-1) \\<br>其实用类似卡特兰数的推导方式可知 k(a&lt;b)=C_{a+b}^a-C_{a+b}^{a-1} \\<br>f(a,0)=a,f(0,b)=0,考虑从前面添加（奇妙的思路） \\<br>f(a,b)=(f(a-1,b)+C_{a+b-1}^b)+(f(a,b-1)-(C_{a+b-1}^a-k(a,b-1)))<br>$$<br><a href="https://codeforces.com/contest/1204/submission/59208290" target="_blank" rel="noopener">code</a></p>
+<p>线性做法：就是求一个至少i+1，可以看<a href="5905.html">「OI之路」03数学-7组合数学</a>中Catalan数拓展部分<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> x=n,y=m+i+<span class="number">1</span>;<span class="comment">//注意要这样比大小</span></div><div class="line">    <span class="keyword">if</span>(min(x,n+m-x)&lt;min(y,n+m-y)) <span class="keyword">continue</span>;</div><div class="line">    cnt[i]=C[n+m][x]-C[n+m][y];</div><div class="line">&#125;</div><div class="line">ll ans=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) ans+=(cnt[i]-cnt[i<span class="number">-1</span>])*i,ans%=MOD;write((ans+MOD)%MOD);</div></pre></td></tr></table></figure></p>
 
 </div></div>
-<h1 id="最大前缀和"><a href="#最大前缀和" class="headerlink" title="最大前缀和"></a>最大前缀和</h1><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>和上题做法类似，不过需要注意一个细节，整个S的和不算是后缀和的一部分，否则前缀和可能取在题面中i=0<br><a href="https://loj.ac/submission/580394" target="_blank" rel="noopener">code</a></p>
+<h2 id="PKUSC2018D1T2-最大前缀和"><a href="#PKUSC2018D1T2-最大前缀和" class="headerlink" title="PKUSC2018D1T2 最大前缀和"></a>PKUSC2018D1T2 最大前缀和</h2><p>和上题做法类似</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>需要注意一个细节，整个S的和不算是后缀和的一部分，否则前缀和可能取在题面中i=0<br><a href="https://loj.ac/submission/580394" target="_blank" rel="noopener">code</a></p>
 
 </div></div>
+<h2 id="PKUSC2018D1T1-真实排名"><a href="#PKUSC2018D1T1-真实排名" class="headerlink" title="PKUSC2018D1T1 真实排名"></a>PKUSC2018D1T1 真实排名</h2><p>细节：ai相同、=0（特判）</p>
+<p>若x不变，则 $[x/2,x)不变，ans=C_{all-cnt-1}^k$</p>
+<p>若x变，则 $[x,2x)变，ans=C_{all-cnt}^{k-cnt}$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a[MAX_N],b[MAX_N];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> n=qread(),k=qread();</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) a[i]=b[i]=qread();</div><div class="line">	sort(b+<span class="number">1</span>,b+n+<span class="number">1</span>);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> ans=<span class="number">0</span>,x=a[i];</div><div class="line">		<span class="keyword">if</span>(x==<span class="number">0</span>) ans=C(n,k);</div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> aa=lower_bound(b+<span class="number">1</span>,b+n+<span class="number">1</span>,x)<span class="number">-1</span>-lower_bound(b+<span class="number">1</span>,b+n+<span class="number">1</span>,(<span class="keyword">int</span>)<span class="built_in">ceil</span>(x/<span class="number">2.0</span>))+<span class="number">1</span>;</div><div class="line">			<span class="keyword">int</span> bb=lower_bound(b+<span class="number">1</span>,b+n+<span class="number">1</span>,<span class="number">2</span>*x)<span class="number">-1</span>-lower_bound(b+<span class="number">1</span>,b+n+<span class="number">1</span>,x)+<span class="number">1</span>;</div><div class="line">			ans=C(n-aa<span class="number">-1</span>,k)+C(n-bb,k-bb);</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,(ans%MOD+MOD)%MOD);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="PKUSC2018D2T2-神仙的游戏"><a href="#PKUSC2018D2T2-神仙的游戏" class="headerlink" title="PKUSC2018D2T2 神仙的游戏"></a>PKUSC2018D2T2 神仙的游戏</h2><p>从<a href="4d802d5f.html">这套的E</a>那里改改就行了，因为border=n-period</p>
+<h2 id="PKUSC2018D2T1-星际穿越"><a href="#PKUSC2018D2T1-星际穿越" class="headerlink" title="PKUSC2018D2T1 星际穿越"></a>PKUSC2018D2T1 星际穿越</h2><p>一个显然<del>而我没看出来</del>的结论是：前往左边某点的最短路径，要么一直向左，要么走一步右然后一直向左，然后就能借助rmq拿70</p>
+<p>先考虑询问点到点的距离怎么做，你发现除了第一步稍有特殊外，后面每步都可以转化成这样一种形式：在位置i，找到右端点$ \ge i$的一切线段中左端点最小的那个并跳到那里，然后划归到那种情况+1；至于第一步的处理就是看目标点是否第一步就可达，否则$dist(i,j)=solve(L_i,j)+1$</p>
+<p>线性预处理出每个点能跳到的位置$to_i$，然后加速跳的过程很自然的想法就是倍增</p>
+<p>设$f_{i,j}表示向左跳2^j步的所有点的距离和，f_{i,j}=f_{i,j-1}+f_{to_{i,j-1},j-1}+(to_{i,j-1}-to_{i,j})*2^{j-1}$</p>
+<p>将询问区间距离和差分为询问后缀距离和，倍增跳过去回答询问，$O(nlogn)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n,L[N],to[N][<span class="number">30</span>];ll f[N][<span class="number">30</span>];</div><div class="line"><span class="function">ll <span class="title">solve</span><span class="params">(<span class="keyword">int</span> pos,<span class="keyword">int</span> R)</span></div><div class="line"></span>&#123;</div><div class="line">    ll ans=<span class="number">0</span>;fd(i,<span class="number">20</span>,<span class="number">0</span>) <span class="keyword">if</span>(to[pos][i]&gt;=R) ans+=(to[pos][i]-R)*bin(i)+f[pos][i],pos=to[pos][i];</div><div class="line">    ans+=pos-R;<span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    n=qread();fo(i,<span class="number">2</span>,n) L[i]=qread(),to[i][<span class="number">0</span>]=L[i];fd(i,n,<span class="number">2</span>) chmin(to[i<span class="number">-1</span>][<span class="number">0</span>],to[i][<span class="number">0</span>]),f[i][<span class="number">0</span>]=i-to[i][<span class="number">0</span>];</div><div class="line">    fo(j,<span class="number">1</span>,<span class="number">20</span>) fo(i,<span class="number">1</span>,n) to[i][j]=to[to[i][j<span class="number">-1</span>]][j<span class="number">-1</span>],f[i][j]=f[i][j<span class="number">-1</span>]+f[to[i][j<span class="number">-1</span>]][j<span class="number">-1</span>]+(to[i][j<span class="number">-1</span>]-to[i][j])*bin(j<span class="number">-1</span>);</div><div class="line">    <span class="keyword">int</span> q=qread();</div><div class="line">    <span class="keyword">while</span>(q--)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> l=qread(),r=qread(),pos=qread();</div><div class="line">        <span class="keyword">if</span>(l&gt;=L[pos])&#123;<span class="built_in">printf</span>(<span class="string">"1/1\n"</span>);<span class="keyword">continue</span>;&#125;</div><div class="line">        ll x=r-l+<span class="number">1</span>,y=r-l+<span class="number">1</span>;chmin(r,L[pos]<span class="number">-1</span>);</div><div class="line">        x+=solve(L[pos],l);x-=solve(L[pos],r+<span class="number">1</span>);</div><div class="line">        ll d=gcd(x,y);<span class="built_in">printf</span>(<span class="string">"%lld/%lld\n"</span>,x/d,y/d);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="PKUSC2018D2T3-PKUSC"><a href="#PKUSC2018D2T3-PKUSC" class="headerlink" title="PKUSC2018D2T3 PKUSC"></a>PKUSC2018D2T3 PKUSC</h2><p><a href="7158.html">计算几何补习</a>，注意简单多边形的话边不会交</p>
+<p>感觉这题口胡很容易，写起来还是不少细节的，要不是我能下载loj数据调可能要搞一天</p>
+<p>很自然的想法是拆开计算每个人的贡献，而每个人其实就是一个圆，问圆周上在多边形内的范围占比</p>
+<p>将多边形的面积定义为在里面的圆弧弧度和，那么就能用任意多边形计算面积的方法计算这玩意，那么现在转化为计算两点与原点形成三角形与圆周交的弧度。</p>
+<p>这东西基本上可以自己想，主要就是讨论一下</p>
+<p>具体而言（省略板子的内容）：<br>若两点都在圆内，0<br>若恰一点在圆内，则为sp(外点、两点连线与圆交点)</p>
+<p>若两点都在圆外，判一下连线到圆心的距离，如果小的话有可能是两段区间，用「直线与圆求交」做交点就好了</p>
+<p>除了这种较为特殊的情况，剩下的都是sp(a,b)</p>
+<p>$O(nm)$，需要特判原点即R=0；<a href="https://loj.ac/submission/685260" target="_blank" rel="noopener">完整code</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//上面是计算几何板子</span></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">solve</span><span class="params">(V a,V b)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(a.ss()&lt;=R+eps) swap(a,b);</div><div class="line">    <span class="keyword">if</span>(a.ss()&lt;=R+eps) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    V c=chui_zu(a,b);<span class="keyword">double</span> len=(a-b).ss();</div><div class="line">    V go=(b-a)*(<span class="built_in">sqrt</span>(R*R-c.ss()*c.ss())/len);</div><div class="line">    <span class="keyword">if</span>(b.ss()&lt;=R+eps) <span class="keyword">return</span> sp(a,c-go);<span class="comment">//a外b内</span></div><div class="line">    <span class="comment">//需保证a-&gt;b为逆时针</span></div><div class="line">    <span class="keyword">if</span>(c.ss()&gt;=R) <span class="keyword">return</span> sp(a,b);</div><div class="line">    <span class="keyword">if</span>(a*(c-go)&gt;<span class="number">0</span> and (c-go)*(c+go)&gt;<span class="number">0</span> and (c+go)*b&gt;<span class="number">0</span>) <span class="keyword">return</span> sp(a,c-go)+sp(b,c+go);</div><div class="line">    <span class="keyword">return</span> sp(a,b);</div><div class="line">&#125;</div><div class="line">V a[N],b[N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n=qread(),m=qread();</div><div class="line">    fo(i,<span class="number">0</span>,n<span class="number">-1</span>) a[i].x=qread(),a[i].y=qread();</div><div class="line">    fo(i,<span class="number">0</span>,m<span class="number">-1</span>) b[i].x=qread(),b[i].y=qread();</div><div class="line">    <span class="keyword">double</span> ans=<span class="number">0</span>;</div><div class="line">    fo(_i,<span class="number">0</span>,n<span class="number">-1</span>)</div><div class="line">    &#123;</div><div class="line">        R=a[_i].ss();</div><div class="line">        <span class="keyword">double</span> zero=<span class="number">0</span>;fo(j,<span class="number">0</span>,m<span class="number">-1</span>) zero+=(b[j]*b[(j+<span class="number">1</span>)%m]&gt;eps?<span class="number">1</span>:<span class="number">-1</span>)*sp(b[j],b[(j+<span class="number">1</span>)%m]);</div><div class="line">		<span class="keyword">if</span>(<span class="built_in">fabs</span>(zero-PI*<span class="number">2</span>)&gt;eps) zero=<span class="number">0</span>;<span class="comment">//原点要特判，用角度搞即可</span></div><div class="line">        fo(j,<span class="number">0</span>,m<span class="number">-1</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">double</span> cr=b[j]*b[(j+<span class="number">1</span>)%m];<span class="keyword">if</span>(<span class="built_in">fabs</span>(cr)&lt;=eps) <span class="keyword">continue</span>;</div><div class="line">            <span class="keyword">if</span>(cr&gt;<span class="number">0</span>) &#123;<span class="keyword">double</span> now=solve(b[j],b[(j+<span class="number">1</span>)%m]);ans+=now;&#125;</div><div class="line">            <span class="keyword">else</span> &#123;<span class="keyword">double</span> now=solve(b[(j+<span class="number">1</span>)%m],b[j]);ans-=now;&#125;</div><div class="line">        &#125;</div><div class="line">    &#125;<span class="built_in">printf</span>(<span class="string">"%.5Lf"</span>,ans/(PI*<span class="number">2</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -635,42 +659,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3d6b.html" rel="bookmark">【Jsoi2014】回文串</a></div>
+      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">「CF553E」Kyoya and Train</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/40b6.html" rel="bookmark">【POI2014】Hotel加强版</a></div>
+      <div class="popular-posts-title"><a href="/posts/e5f5.html" rel="bookmark">「CF528D」Fuzzy Search</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9bc9.html" rel="bookmark">【Vijos1677】陶陶的名字</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/f69a.html" rel="bookmark">【HAOI2012】外星人</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/f65b.html" rel="bookmark">【WC2018】州区划分</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/8125.html" rel="bookmark">【SHOI2008】汉诺塔</a></div>
+      <div class="popular-posts-title"><a href="/posts/838d.html" rel="bookmark">小w的喜糖</a></div>
       
     </li>
   
@@ -713,7 +716,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/复习/" rel="tag"># 复习</a>
+            <a href="/tags/fft/" rel="tag"># fft</a>
           
         </div>
       
@@ -815,7 +818,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -840,7 +843,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1249,7 +1254,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1312,7 +1321,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CF1204E-Natasha-Sasha-and-the-Prefix-Sums"><span class="nav-text">CF1204E Natasha, Sasha and the Prefix Sums</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最大前缀和"><span class="nav-text">最大前缀和</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#5-5"><span class="nav-text">5/5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CF1204E-Natasha-Sasha-and-the-Prefix-Sums"><span class="nav-text">CF1204E Natasha, Sasha and the Prefix Sums</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PKUSC2018D1T2-最大前缀和"><span class="nav-text">PKUSC2018D1T2 最大前缀和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PKUSC2018D1T1-真实排名"><span class="nav-text">PKUSC2018D1T1 真实排名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PKUSC2018D2T2-神仙的游戏"><span class="nav-text">PKUSC2018D2T2 神仙的游戏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PKUSC2018D2T1-星际穿越"><span class="nav-text">PKUSC2018D2T1 星际穿越</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PKUSC2018D2T3-PKUSC"><span class="nav-text">PKUSC2018D2T3 PKUSC</span></a></li></ol></li></ol></div>
             
 
           </div>

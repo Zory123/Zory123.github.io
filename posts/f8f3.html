@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点NOIP2009 赛前集训（CZYZ2009 暑假集训提高组 5）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WZK的减肥计划">
 <meta name="twitter:description" content="来源和评测点NOIP2009 赛前集训（CZYZ2009 暑假集训提高组 5）">
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:46" itemprop="dateModified" datetime="2019-12-01T10:18:46+08:00">2019-12-01</time>
               </span>
             
           
@@ -613,7 +613,7 @@
       
         <h2 id="来源和评测点"><a href="#来源和评测点" class="headerlink" title="来源和评测点"></a>来源和评测点</h2><p>NOIP2009 赛前集训（CZYZ2009 暑假集训提高组 5）</p>
 <a id="more"></a>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-yellow"><strong>【题目大意】</strong><br>有 n 种食品可供 WZK 选择，每种物品都有给定的价格，卡路里和拥有数量，<br>选出一些食品使得总卡路里大于要求量且最小，<br>如果有多种组合满足条件， 则取价格最小的。<br><strong>【输入格式】</strong><br>第一行为两个整数 n(0&lt;n&lt;=100)，k（0&lt;k&lt;=10^5）<br>分别表示物品个数和一天消耗的最少卡路里。<br>接下来n行每行 3 个整数，costi，mi，cali<br>（0&lt; costi,1&lt;=mi&lt;=100,cali&lt;10^6）<br>分别表示价格，数量和所含卡路里。<br>输入数据保证合法、有解。<br><strong>【输出格式】</strong><br>满足条件的总卡路里和总价格，中间用一个空格隔开。<br>注意：保证答案的总卡路里小于 10^5，总价格小于 10^8。<br><strong>【输入样例】</strong><br>5 10<br>10 2 6<br>5 1 9<br>6 1 6<br>9 1 6<br>5 1 9<br><strong>【输出样例】</strong><br>12 15<br></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-yellow"><strong>「题目大意」</strong><br>有 n 种食品可供 WZK 选择，每种物品都有给定的价格，卡路里和拥有数量，<br>选出一些食品使得总卡路里大于要求量且最小，<br>如果有多种组合满足条件， 则取价格最小的。<br><strong>「输入格式」</strong><br>第一行为两个整数 n(0&lt;n&lt;=100)，k（0&lt;k&lt;=10^5）<br>分别表示物品个数和一天消耗的最少卡路里。<br>接下来n行每行 3 个整数，costi，mi，cali<br>（0&lt; costi,1&lt;=mi&lt;=100,cali&lt;10^6）<br>分别表示价格，数量和所含卡路里。<br>输入数据保证合法、有解。<br><strong>「输出格式」</strong><br>满足条件的总卡路里和总价格，中间用一个空格隔开。<br>注意：保证答案的总卡路里小于 10^5，总价格小于 10^8。<br><strong>「输入样例」</strong><br>5 10<br>10 2 6<br>5 1 9<br>6 1 6<br>9 1 6<br>5 1 9<br><strong>「输出样例」</strong><br>12 15<br></p>
 
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>话说今天生日耶，刷个卡~</p>
 <p>注意，逻辑上答案应该是可以何要求值（原题为WZK的需求量）一样的，<br>但题目确实要求大于，机房许多大佬都错了，就是因为这个，暴0<br>时间复杂度nk，应该这个才是正解，虽然数据水体现不出来<br>注意现在更像多重背包了<br>重点：c也就是使用量只跟物品有关，考试时以为实现不出来</p>
@@ -630,21 +630,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/304d.html" rel="bookmark">【Bzoj3679】数字之积</a></div>
+      <div class="popular-posts-title"><a href="/posts/304d.html" rel="bookmark">「Bzoj3679」数字之积</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">【CF553E】Kyoya and Train</a></div>
+      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">「CF553E」Kyoya and Train</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/39cb.html" rel="bookmark">【CF955F】Heaps</a></div>
+      <div class="popular-posts-title"><a href="/posts/39cb.html" rel="bookmark">「CF955F」Heaps</a></div>
       
     </li>
   
@@ -665,7 +665,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/381c.html" rel="bookmark">【NOIAC31】MST</a></div>
+      <div class="popular-posts-title"><a href="/posts/381c.html" rel="bookmark">「NOIAC31」MST</a></div>
       
     </li>
   
@@ -723,8 +723,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/e070.html" rel="next" title="【Bzoj3224】普通平衡树">
-                <i class="fa fa-chevron-left"></i> 【Bzoj3224】普通平衡树
+              <a href="/posts/e070.html" rel="next" title="「Bzoj3224」普通平衡树">
+                <i class="fa fa-chevron-left"></i> 「Bzoj3224」普通平衡树
               </a>
             
           </div>
@@ -733,8 +733,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/d7e9.html" rel="prev" title="【Bzoj3196】【Luogu3380】二逼平衡树">
-                【Bzoj3196】【Luogu3380】二逼平衡树 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/d7e9.html" rel="prev" title="「Bzoj3196」「Luogu3380」二逼平衡树">
+                「Bzoj3196」「Luogu3380」二逼平衡树 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -812,7 +812,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -837,7 +837,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1246,7 +1248,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -95,7 +95,7 @@
   <meta name="description" content="Source and JudgeNOIP2010 提高组 T4Luogu1514Caioj1544">
 <meta name="keywords" content="贪心,dp,难度2,好题,记忆化搜索">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Luogu1514】引水入城">
+<meta property="og:title" content="「Luogu1514」引水入城">
 <meta property="og:url" content="http://zory.ink/posts/d2e5.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2010 提高组 T4Luogu1514Caioj1544">
@@ -103,9 +103,9 @@
 <meta property="og:image" content="https://cdn.luogu.org/upload/pic/299.png">
 <meta property="og:image" content="https://cdn.luogu.org/upload/pic/301.png">
 <meta property="og:image" content="https://cdn.luogu.org/upload/pic/300.png">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Luogu1514】引水入城">
+<meta name="twitter:title" content="「Luogu1514」引水入城">
 <meta name="twitter:description" content="Source and JudgeNOIP2010 提高组 T4Luogu1514Caioj1544">
 <meta name="twitter:image" content="https://cdn.luogu.org/upload/pic/299.png">
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>【Luogu1514】引水入城 | Zory的个人博客</title>
+  <title>「Luogu1514」引水入城 | Zory的个人博客</title>
   
 
 
@@ -254,7 +254,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -272,7 +272,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -290,7 +290,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -500,7 +500,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Luogu1514】引水入城
+          <h2 class="post-title" itemprop="name headline">「Luogu1514」引水入城
 
               
             
@@ -541,7 +541,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:48" itemprop="dateModified" datetime="2019-12-01T10:18:48+08:00">2019-12-01</time>
               </span>
             
           
@@ -582,7 +582,7 @@
 
           
           
-            <span id="/posts/d2e5.html" class="post-meta-item leancloud_visitors" data-flag-title="【Luogu1514】引水入城">
+            <span id="/posts/d2e5.html" class="post-meta-item leancloud_visitors" data-flag-title="「Luogu1514」引水入城">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -617,11 +617,11 @@
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOIP2010 提高组 T4<br><a href="https://www.luogu.org/problemnew/show/P1514" target="_blank" rel="noopener">Luogu1514</a><br><a href="http://caioj.cn/problem.php?id=1544" target="_blank" rel="noopener">Caioj1544</a></p>
 <a id="more"></a>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-red"><strong>【Brief description】</strong><br>在一个遥远的国度，一侧是风景秀美的湖泊，另一侧则是漫无边际的沙漠。<br>该国的行政区划十分特殊，刚好构成一个N 行M 列的矩形，如图所示。<br>其中每个格子都代表一座城市，每座城市都有一个海拔高度。<br><img src="https://cdn.luogu.org/upload/pic/299.png" alt=""><br>为了使居民们都尽可能饮用到清澈的湖水，现在要在某些城市建造水利设施。<br>水利设施有两种，分别为蓄水厂和输水站。<br>蓄水厂的功能是利用水泵将湖泊中的水抽取到所在城市的蓄水池中。<br><br>因此，只有与湖泊毗邻的第1 行的城市可以建造蓄水厂。<br>而输水站的功能则是通过输水管线利用高度落差，将湖水从高处向低处输送。<br>故一座城市能建造输水站的前提，是存在比它海拔更高且拥有公共边的相邻城市，已经建有水利设施。<br>由于第N 行的城市靠近沙漠，是该国的干旱区，所以要求其中的每座城市都建有水利设施。<br>那么，这个要求能否满足呢？<br>如果能，请计算最少建造几个蓄水厂；<br>如果不能，求干旱区中不可能建有水利设施的城市数目。<br><strong>【Input】</strong><br>每行中两个数之间用一个空格隔开。输入的第一行是两个正整数 N 和 M，表示矩形的规模。<br>接下来 N 行，每行 M 个正整数，依次代表每座城市的海拔高度。<br><strong>【Output】</strong><br>如果能满足要求，输出的第一行是整数1，第二行是一个整数，代表最少建造几个蓄水厂；<br>如果不能满足要求，输出的第一行是整数0，第二行是一个整数，代表有几座干旱区中的城市不可能建有水利设施。<br><strong>【Limited conditions】</strong><br><img src="https://cdn.luogu.org/upload/pic/301.png" alt=""><br><strong>【Sample input】</strong><br>3 6<br>8 4 5 6 4 4<br>7 3 4 3 3 3<br>3 2 2 1 1 2<br><strong>【Sample output】</strong><br>1<br>3<br><strong>【Sample explanation】</strong><br><img src="https://cdn.luogu.org/upload/pic/300.png" alt=""><br>上图中，在 3 个粗线框出的城市中建造蓄水厂，可以满足要求。<br>以这 3 个蓄水厂为源头在干旱区中建造的输水站分别用 3 种颜色标出。<br>当然，建造方法可能不唯一。<br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-red"><strong>「Brief description」</strong><br>在一个遥远的国度，一侧是风景秀美的湖泊，另一侧则是漫无边际的沙漠。<br>该国的行政区划十分特殊，刚好构成一个N 行M 列的矩形，如图所示。<br>其中每个格子都代表一座城市，每座城市都有一个海拔高度。<br><img src="https://cdn.luogu.org/upload/pic/299.png" alt=""><br>为了使居民们都尽可能饮用到清澈的湖水，现在要在某些城市建造水利设施。<br>水利设施有两种，分别为蓄水厂和输水站。<br>蓄水厂的功能是利用水泵将湖泊中的水抽取到所在城市的蓄水池中。<br><br>因此，只有与湖泊毗邻的第1 行的城市可以建造蓄水厂。<br>而输水站的功能则是通过输水管线利用高度落差，将湖水从高处向低处输送。<br>故一座城市能建造输水站的前提，是存在比它海拔更高且拥有公共边的相邻城市，已经建有水利设施。<br>由于第N 行的城市靠近沙漠，是该国的干旱区，所以要求其中的每座城市都建有水利设施。<br>那么，这个要求能否满足呢？<br>如果能，请计算最少建造几个蓄水厂；<br>如果不能，求干旱区中不可能建有水利设施的城市数目。<br><strong>「Input」</strong><br>每行中两个数之间用一个空格隔开。输入的第一行是两个正整数 N 和 M，表示矩形的规模。<br>接下来 N 行，每行 M 个正整数，依次代表每座城市的海拔高度。<br><strong>「Output」</strong><br>如果能满足要求，输出的第一行是整数1，第二行是一个整数，代表最少建造几个蓄水厂；<br>如果不能满足要求，输出的第一行是整数0，第二行是一个整数，代表有几座干旱区中的城市不可能建有水利设施。<br><strong>「Limited conditions」</strong><br><img src="https://cdn.luogu.org/upload/pic/301.png" alt=""><br><strong>「Sample input」</strong><br>3 6<br>8 4 5 6 4 4<br>7 3 4 3 3 3<br>3 2 2 1 1 2<br><strong>「Sample output」</strong><br>1<br>3<br><strong>「Sample explanation」</strong><br><img src="https://cdn.luogu.org/upload/pic/300.png" alt=""><br>上图中，在 3 个粗线框出的城市中建造蓄水厂，可以满足要求。<br>以这 3 个蓄水厂为源头在干旱区中建造的输水站分别用 3 种颜色标出。<br>当然，建造方法可能不唯一。<br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>3h</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>本来看着这个图，硬是yy了一个本来不会的费用流【因为自己灵光一闪发现好久没用啦】<br>然后中午做了两道裸题学会了费用流<br>然后打、调了两个小时这题，建图：<br>把开通一个地方看作费用为1<br>这是因为之前做过一道费用不是单位而是边的题目<br>但其实那道题是每条边只能用一次的，所以没有关系<br>但这道题的话，用费用的时候，spfa完全没有任何比较能力，所以是错误的！<br><del>心疼我的两小时，特别是今天已经不得不去考统测五而浪费一天时间</del></p>
+<p>本来看着这个图，硬是yy了一个本来不会的费用流「因为自己灵光一闪发现好久没用啦」<br>然后中午做了两道裸题学会了费用流<br>然后打、调了两个小时这题，建图：<br>把开通一个地方看作费用为1<br>这是因为之前做过一道费用不是单位而是边的题目<br>但其实那道题是每条边只能用一次的，所以没有关系<br>但这道题的话，用费用的时候，spfa完全没有任何比较能力，所以是错误的！<br><del>心疼我的两小时，特别是今天已经不得不去考统测五而浪费一天时间</del></p>
 <p>然后正解又是爆搜……noip不搞这个会死</p>
 <p>首先，如果有解，显然每一个蓄水站，<br>所覆盖的地方一定是一段连续的区间，<br>否则断开的地方别的蓄水站也无法进入<br>于是就变成了区间覆盖问题</p>
 <p>那区间，就是l和r，灰常好维护，考虑dp<br>但是不能直接从下往上来dp，从样例就能看出，可能水会往上<br>所以用更加灵活的记忆化搜索代替dp即可</p>
@@ -643,42 +643,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">「POJ2057」The Lost House</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/a379.html" rel="bookmark">【ZJOI2016】小星星</a></div>
+      <div class="popular-posts-title"><a href="/posts/a379.html" rel="bookmark">「ZJOI2016」小星星</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/a4aa.html" rel="bookmark">【Bzoj4069】【Luogu3646】巴厘岛的雕塑</a></div>
+      <div class="popular-posts-title"><a href="/posts/a4aa.html" rel="bookmark">「Bzoj4069」「Luogu3646」巴厘岛的雕塑</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8b22.html" rel="bookmark">【Luogu1525】关押罪犯</a></div>
+      <div class="popular-posts-title"><a href="/posts/8b22.html" rel="bookmark">「Luogu1525」关押罪犯</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/32f8.html" rel="bookmark">【Luogu1084】疫情控制</a></div>
+      <div class="popular-posts-title"><a href="/posts/32f8.html" rel="bookmark">「Luogu1084」疫情控制</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4a8c.html" rel="bookmark">【AHOI2005】【CQOI2014】病毒检测/通配符匹配</a></div>
+      <div class="popular-posts-title"><a href="/posts/4a8c.html" rel="bookmark">「AHOI2005」「CQOI2014」病毒检测/通配符匹配</a></div>
       
     </li>
   
@@ -696,7 +696,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/d2e5.html" title="【Luogu1514】引水入城">http://zory.ink/posts/d2e5.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/d2e5.html" title="「Luogu1514」引水入城">http://zory.ink/posts/d2e5.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -742,8 +742,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/2acf.html" rel="next" title="【Poj2135】Farm Tour">
-                <i class="fa fa-chevron-left"></i> 【Poj2135】Farm Tour
+              <a href="/posts/2acf.html" rel="next" title="「Poj2135」Farm Tour">
+                <i class="fa fa-chevron-left"></i> 「Poj2135」Farm Tour
               </a>
             
           </div>
@@ -752,8 +752,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/1666.html" rel="prev" title="【Luogu1514】铺地毯">
-                【Luogu1514】铺地毯 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/1666.html" rel="prev" title="「Luogu1514」铺地毯">
+                「Luogu1514」铺地毯 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -831,7 +831,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -856,7 +856,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1265,7 +1267,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -94,14 +94,14 @@
 
   <meta name="description" content="传统数论">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】03数学-1传统数论">
+<meta property="og:title" content="「OI之路」03数学-1传统数论">
 <meta property="og:url" content="http://zory.ink/posts/60ff.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="传统数论">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-13T12:33:10.826Z">
+<meta property="og:updated_time" content="2020-05-12T03:29:42.468Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】03数学-1传统数论">
+<meta name="twitter:title" content="「OI之路」03数学-1传统数论">
 <meta name="twitter:description" content="传统数论">
 
 
@@ -120,7 +120,7 @@
   };
 </script>
 
-  <title>【OI之路】03数学-1传统数论 | Zory的个人博客</title>
+  <title>「OI之路」03数学-1传统数论 | Zory的个人博客</title>
   
 
 
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -495,7 +495,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】03数学-1传统数论
+          <h2 class="post-title" itemprop="name headline">「OI之路」03数学-1传统数论
 
               
             
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-13 20:33:10" itemprop="dateModified" datetime="2019-10-13T20:33:10+08:00">2019-10-13</time>
+                <time title="修改时间：2020-05-12 11:29:42" itemprop="dateModified" datetime="2020-05-12T11:29:42+08:00">2020-05-12</time>
               </span>
             
           
@@ -577,7 +577,7 @@
 
           
           
-            <span id="/posts/60ff.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】03数学-1传统数论">
+            <span id="/posts/60ff.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」03数学-1传统数论">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,11 +615,11 @@
 <h2 id="取余和取模"><a href="#取余和取模" class="headerlink" title="取余和取模"></a>取余和取模</h2><p>基本思路：①$c=a/b$ ②$r=a-c\times b$<br>取余：在①中，向0方向取整<br>取模：在①中，向负无穷方向取整<br>举个栗子：<br>(4)/(-3)≈-1.3<br>$4 rem (-3)=4-(-1)\times (-3)=1$<br>$4 mod (-3)=4-(-2)\times (-3)=-2$<br>C++中的%运算符其实是rem，但为了方便我比较习惯用mod表示，小心混淆<br><strong>划重点：数论中为了化公式，经常要变成$r=a-\lfloor a/b \rfloor \times b$的形式</strong></p>
 <h4 id="最大公约数Greatest-Common-Divisor"><a href="#最大公约数Greatest-Common-Divisor" class="headerlink" title="最大公约数Greatest Common Divisor"></a>最大公约数Greatest Common Divisor</h4><p>$gcd(x,y)=x和y的最大公约数$<br>定义：$gcd(x,0)=x$<br><strong>划重点：约数的定义域是自然数，所以x和y不能是负数！</strong></p>
 <h4 id="最小公倍数Least-Common-Multiple"><a href="#最小公倍数Least-Common-Multiple" class="headerlink" title="最小公倍数Least Common Multiple"></a>最小公倍数Least Common Multiple</h4><p>lcm(x,y)=x和y的最小公倍数<br>公共倍数中最小的</p>
-<h4 id="x-y-最小公倍数-最大公倍数"><a href="#x-y-最小公倍数-最大公倍数" class="headerlink" title="x*y=最小公倍数*最大公倍数"></a>x*y=最小公倍数*最大公倍数</h4><p>证明：<br>设两个数为x和y,其最大公约数为a,则<br>最小公倍数为$(x/a)\times (y/a)\times a=x\times y/a$<br>最大公约数和最小公倍数的乘积为$(a)\times (x\times y/a)=x\times y$</p>
+<h4 id="x-y-最小公倍数-最大公倍数"><a href="#x-y-最小公倍数-最大公倍数" class="headerlink" title="x*y=最小公倍数*最大公倍数"></a>x*y=最小公倍数*最大公倍数</h4><p>证明：设两个数为x和y,其最大公约数为a,则<br>最小公倍数为$(x/a)\times (y/a)\times a=x\times y/a$<br>最大公约数和最小公倍数的乘积为$(a)\times (x\times y/a)=x\times y$</p>
 <h2 id="欧几里得算法Euclid"><a href="#欧几里得算法Euclid" class="headerlink" title="欧几里得算法Euclid"></a>欧几里得算法Euclid</h2><p>又名辗转相除法，对于大小关系没有要求<br>内容： $gcd(a,b)=gcd(b,a\%b)$<br>证明：</p>
 <ol>
 <li>设d是a,b的一个约数，所以a/d,b/d为整数</li>
-<li>$r=a-k\times b 【0\leq r&lt;b，k为整】$<br>同时除以d，$r/d=a/d-kb/d$<br>因为$a/d-k\times (b/d)$为整数<br>所以r/d也是整数，所以r是d的倍数</li>
+<li>$r=a-k\times b 「0\leq r&lt;b，k为整」$<br>同时除以d，$r/d=a/d-kb/d$<br>因为$a/d-k\times (b/d)$为整数<br>所以r/d也是整数，所以r是d的倍数</li>
 <li>d本身就是a,b的约数,又d是r的约数，所以是a,b,a%b的公约数<br>既然公约数是一样的（因为d并非定值，可以应用于所有公约数）<br>最大公约数也必然相等，得证<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;<span class="keyword">return</span> b==<span class="number">0</span>?a:gcd(b,a%b);&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
@@ -634,10 +634,11 @@
 <p>然后它也被称之为<strong>拓展中国剩余定理</strong>，因为它能够解同余方程组且不要求各模数互质</p>
 <p>设方程组为$num=b_i(\% m_i),i \in [1,n]$；基本思路就是合并相邻的两个方程组，最后只有一个方程<br>$$<br>合并num=b1+m1*x1,num=b2+m2*x2,b1&lt;b2 \\<br>即num=b1+m1*x1=b2+m2*x2\\<br>m1*(x1)+m2*(-x2)=b2-b1，解出一组x \\<br>num=b1+m1*x1(\% lcm(m1,m2))<br>$$<br>例题：<a href="http://POJ.org/problem?id=2891" target="_blank" rel="noopener">Poj2891</a>，过不去是懒得写高精度</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(b1&gt;b2) swap(b1,b2),swap(m1,m2);</div><div class="line">ll x1,x2,d=exgcd(m1,m2,x1,x2),C=b2-b1;<span class="keyword">if</span>(C%d!=<span class="number">0</span>) gg=<span class="number">1</span>;</div><div class="line">x1=x1*(C/d);ll tmp=m2/d;x1=(x1%tmp+tmp)%tmp;</div><div class="line">b1=b1+m1*x1;m1=m1/gcd(m1,m2)*m2;b1%=m1;</div></pre></td></tr></table></figure>
-<h2 id="线性筛选素数"><a href="#线性筛选素数" class="headerlink" title="线性筛选素数"></a>线性筛选素数</h2><p>线性筛选素数，也就是O(n)<br>条件：积性函数，常见如素数函数、莫比乌斯函数、欧拉函数<br>精髓：每个合数都只被它的最小质因子筛出<br>注意，作为素数的循环j是在内部的<br>那么当i%prime[j]==0，意味着i中已经包含了prime[j]<br>那后面的数中，prime[j]一定会比prime[t]小<br>那么 <strong>至少</strong> 最小质因数不会是prime[t]<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">21000000</span>;</div><div class="line"><span class="keyword">int</span> prime[<span class="number">1100000</span>],pr;</div><div class="line"><span class="keyword">bool</span> v[MAXN];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">calcprime</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=MAXN;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(v[i]==<span class="number">0</span>) prime[++pr]=i;</div><div class="line">        <span class="keyword">if</span>(pr==<span class="number">1000000</span>) <span class="keyword">return</span>;<span class="comment">//满意而归</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=pr and i*prime[j]&lt;=MAXN;j++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(i%prime[j]==<span class="number">0</span>) <span class="keyword">break</span>;</div><div class="line">            v[ i*prime[j] ]=<span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="类欧几里得"><a href="#类欧几里得" class="headerlink" title="类欧几里得"></a>类欧几里得</h2><p>$$<br>\begin{aligned}<br>f(n,a,b,c)&amp;=\sum_{i=0}^n \lfloor \frac{ai+b}{c} \rfloor \\<br>a=0或n=0,f(n,a,b,c)&amp;=(n+1)\lfloor b/c \rfloor \\<br>max(a,b) \geq c,f(n,a,b,c)&amp;=n(n+1)/2*\lfloor a/c \rfloor+(n+1)\lfloor b/c \rfloor+f(n,a\%c,b\%c,c) \\<br>f(n,a,b,c)&amp;=\sum_{i=0}^n \sum_{j=0}^{m-1} [\lfloor \frac{ai+b}{c} \rfloor \geq j+1]=\sum_{i=0}^n \sum_{j=0}^{m-1} [ai&gt;cj+c-b-1] \\<br>&amp;=\sum_{i=0}^n \sum_{j=0}^{m-1} [i&gt; \lfloor \frac{cj+c-b-1}{a} \rfloor]=mn-f(m-1,c,c-b-1,a)  \\<br>\end{aligned}<br>$$</p>
+<h2 id="线性筛选素数"><a href="#线性筛选素数" class="headerlink" title="线性筛选素数"></a>线性筛选素数</h2><p>线性筛选素数，也就是O(n)<br>条件：积性函数，常见如素数函数、莫比乌斯函数、欧拉函数<br>精髓：每个合数都只被它的最小质因子筛出<br>注意，作为素数的循环j是在内部的<br>那么当i%prime[j]==0，意味着i中已经包含了prime[j]<br>那后面的数中，prime[j]一定会比prime[t]小<br>那么 <strong>至少</strong> 最小质因数不会是prime[t]</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//线性筛</span></div><div class="line"><span class="keyword">bool</span> nop[N];<span class="keyword">int</span> prn,prm[N],mu[N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    mu[<span class="number">1</span>]=<span class="number">1</span>;</div><div class="line">    fo(i,<span class="number">2</span>,N<span class="number">-1</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(!nop[i]) prm[++prn]=i,mu[i]=<span class="number">-1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=prn and prm[j]*i&lt;N;j++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> t=prm[j]*i;nop[t]=<span class="number">1</span>;mu[t]=-mu[i];</div><div class="line">            <span class="keyword">if</span>(i%prm[j]==<span class="number">0</span>)&#123; mu[t]=<span class="number">0</span>;<span class="keyword">break</span>; &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="类欧几里得"><a href="#类欧几里得" class="headerlink" title="类欧几里得"></a>类欧几里得</h2><p>$$<br>\begin{aligned}<br>f(n,a,b,c)&amp;=\sum_{i=0}^n \lfloor \frac{ai+b}{c} \rfloor \\<br>a=0或n=0,f(n,a,b,c)&amp;=(n+1)\lfloor b/c \rfloor \\<br>max(a,b) \geq c,f(n,a,b,c)&amp;=n(n+1)/2*\lfloor a/c \rfloor+(n+1)\lfloor b/c \rfloor+f(n,a\%c,b\%c,c) \\<br>otherwise,f(n,a,b,c)&amp;=\sum_{i=0}^n \sum_{j=0}^{m-1} [\lfloor \frac{ai+b}{c} \rfloor \geq j+1]=\sum_{i=0}^n \sum_{j=0}^{m-1} [ai&gt;cj+c-b-1] \\<br>&amp;=\sum_{i=0}^n \sum_{j=0}^{m-1} [i&gt; \lfloor \frac{cj+c-b-1}{a} \rfloor]=mn-f(m-1,c,c-b-1,a)  \\<br>\end{aligned}<br>$$</p>
 <p>复杂度：观察a和c，发现a&gt;=c则%，否则交换，所以类似欧几里得……</p>
-<h2 id="miller-rabin"><a href="#miller-rabin" class="headerlink" title="miller-rabin"></a>miller-rabin</h2><p>费马测试：尝试几个x，若都满足$x^{p-1}=1(\%p)$ 则p为质数<br>很不幸的是x=561（Carmichael Number）满足所有p……qwq</p>
+<h2 id="miller-rabin"><a href="#miller-rabin" class="headerlink" title="miller-rabin"></a>miller-rabin</h2><p>费马测试：尝试几个x（当然$gcd(x,p)=1$这个基本条件还是要满足的），若都满足$x^{p-1}=1(\%p)$ 则p为质数<br>很不幸的是如p=561（Carmichael Number）能通过该测试</p>
 <p>二次探测定理：$a \in[2,p-2],若a^2=1(\%p)，则p不是质数$ ，证明：用平方差公式拆开<br>所以大致思路就是<strong>费马测试+二次探测定理</strong></p>
 <p>随机一个a，先做费马测试，然后分解$p-1=u2^t$ ，二次探测<br>如果$a^{u2^i}=1，那么判断a^{u2^{i-1}}=\pm1$ ，这个过程最坏是<strong>log方</strong>的<br>据说：一次正确率是$\frac{1}{4}$ ，如果p在int内a=2,7,61，ll内a=前12个素数可得到精确解<br>模板：<a href="https://loj.ac/submission/570872" target="_blank" rel="noopener">loj143 质数判定 code</a></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="function">ll <span class="title">MUL</span><span class="params">(ll x,ll y,ll mod)</span></div><div class="line"></span>&#123;</div><div class="line">    ll tmp=(<span class="keyword">long</span> <span class="keyword">double</span>)x/mod*y+<span class="number">0.5</span>;tmp=x*y-tmp*mod;</div><div class="line">    <span class="keyword">return</span> tmp&lt;<span class="number">0</span>?tmp+mod:tmp;<span class="comment">//利用LIMIT这个模数相同，做差得精确值</span></div><div class="line">&#125;</div><div class="line"><span class="function">ll <span class="title">PP</span><span class="params">(ll x,ll e,ll mod)</span></div><div class="line"></span>&#123;</div><div class="line">    ll ans=<span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(e)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(e&amp;<span class="number">1</span>) ans=MUL(ans,x,mod);</div><div class="line">        x=MUL(x,x,mod);e&gt;&gt;=<span class="number">1</span>;</div><div class="line">    &#125;<span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line">ll aa[<span class="number">20</span>]=&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">11</span>,<span class="number">13</span>,<span class="number">17</span>,<span class="number">19</span>,<span class="number">23</span>,<span class="number">29</span>,<span class="number">31</span>,<span class="number">37</span>&#125;;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">miller_rabin</span><span class="params">(ll p)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(p&lt;<span class="number">2</span>) <span class="keyword">return</span> <span class="number">0</span>;<span class="keyword">if</span>(p==<span class="number">2</span>) <span class="keyword">return</span> <span class="number">1</span>;<span class="keyword">if</span>(!(p&amp;<span class="number">1</span>)) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;<span class="number">12</span>;t++)</div><div class="line">    &#123;</div><div class="line">        ll tmp=p<span class="number">-1</span>;<span class="keyword">if</span>(aa[t]==p)<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>(<span class="number">1</span>)</div><div class="line">        &#123;</div><div class="line">            ll now=PP(aa[t],tmp,p);</div><div class="line">            <span class="keyword">if</span>(now!=<span class="number">1</span> and now!=p<span class="number">-1</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">            <span class="keyword">if</span>(now!=<span class="number">1</span> or tmp&amp;<span class="number">1</span>) <span class="keyword">break</span>;tmp/=<span class="number">2</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -669,7 +670,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/60ff.html" title="【OI之路】03数学-1传统数论">http://zory.ink/posts/60ff.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/60ff.html" title="「OI之路」03数学-1传统数论">http://zory.ink/posts/60ff.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -698,8 +699,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/86909ea3.html" rel="next" title="【OI之路】02数据结构-15树上问题">
-                <i class="fa fa-chevron-left"></i> 【OI之路】02数据结构-15树上问题
+              <a href="/posts/86909ea3.html" rel="next" title="「OI之路」02数据结构-15树上问题">
+                <i class="fa fa-chevron-left"></i> 「OI之路」02数据结构-15树上问题
               </a>
             
           </div>
@@ -708,8 +709,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/a06a.html" rel="prev" title="【OI之路】03数学-2定理杂烩">
-                【OI之路】03数学-2定理杂烩 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/a06a.html" rel="prev" title="「OI之路」03数学-2定理杂烩">
+                「OI之路」03数学-2定理杂烩 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -787,7 +788,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -812,7 +813,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1221,7 +1224,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

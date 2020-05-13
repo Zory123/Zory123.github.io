@@ -95,15 +95,15 @@
   <meta name="description" content="Source and JudgeNOIP2009 提高组 T3Luogu1073Caioj1539">
 <meta name="keywords" content="模拟,dp,并查集,最短路,难度1,好题,强连通">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Luogu1073】最优贸易">
+<meta property="og:title" content="「Luogu1073」最优贸易">
 <meta property="og:url" content="http://zory.ink/posts/b656.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2009 提高组 T3Luogu1073Caioj1539">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cdn.luogu.org/upload/pic/27.png">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Luogu1073】最优贸易">
+<meta name="twitter:title" content="「Luogu1073」最优贸易">
 <meta name="twitter:description" content="Source and JudgeNOIP2009 提高组 T3Luogu1073Caioj1539">
 <meta name="twitter:image" content="https://cdn.luogu.org/upload/pic/27.png">
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>【Luogu1073】最优贸易 | Zory的个人博客</title>
+  <title>「Luogu1073」最优贸易 | Zory的个人博客</title>
   
 
 
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -498,7 +498,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Luogu1073】最优贸易
+          <h2 class="post-title" itemprop="name headline">「Luogu1073」最优贸易
 
               
             
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:48" itemprop="dateModified" datetime="2019-12-01T10:18:48+08:00">2019-12-01</time>
               </span>
             
           
@@ -580,7 +580,7 @@
 
           
           
-            <span id="/posts/b656.html" class="post-meta-item leancloud_visitors" data-flag-title="【Luogu1073】最优贸易">
+            <span id="/posts/b656.html" class="post-meta-item leancloud_visitors" data-flag-title="「Luogu1073」最优贸易">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,11 +615,11 @@
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOIP2009 提高组 T3<br><a href="https://www.luogu.org/problemnew/show/P1073" target="_blank" rel="noopener">Luogu1073</a><br><a href="http://caioj.cn/problem.php?id=1539" target="_blank" rel="noopener">Caioj1539</a></p>
 <a id="more"></a>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>【Brief description】</strong><br>C 国有 n 个大城市和 m 条道路，每条道路连接这 n 个城市中的某两个城市。<br>任意两个城市之间最多只有一条道路直接相连。<br>这 m 条道路中有一部分为单向通行的道路，一部分为双向通行的道路，双向通行的道路在统计条数时也计为 1 条。<br><br>C 国幅员辽阔，各地的资源分布情况各不相同，这就导致了同一种商品在不同城市的价格不一定相同。<br>但是，同一种商品在同一个城市的买入价和卖出价始终是相同的。<br><br>商人阿龙来到 C 国旅游。<br>当他得知同一种商品在不同城市的价格可能会不同这一信息之后，便决定在旅游的同时，<br>利用商品在不同城市中的差价赚回一点旅费。<br>设 C 国 n 个城市的标号从 1~n，阿龙决定从 1 号城市出发，并最终在 n 号城市结束自己的旅行。<br>在旅游的过程中，任何城市可以重复经过多次，但不要求经过所有 n 个城市。<br>阿龙通过这样的贸易方式赚取旅费：<br>他会选择一个经过的城市买入他最喜欢的商品——水晶球，<br>并在之后经过的另一个城市卖出这个水晶球，用赚取的差价当做旅费。<br>由于阿龙主要是来 C 国旅游，他决定这个贸易只进行最多一次，<br>当然，在赚不到差价的情况下他就无需进行贸易。<br><br>现在给出 n 个城市的水晶球价格，m 条道路的信息<br>（每条道路所连接的两个城市的编号以及该条道路的通行情况）。<br>请你告诉阿龙，他最多能赚取多少旅费。<br><strong>【Input】</strong><br>第一行包含 2 个正整数 n 和 m，中间用一个空格隔开，分别表示城市的数目和道路的数目。<br>第二行 n 个正整数，每两个整数之间用一个空格隔开，按标号顺序分别表示这 n 个城市的商品价格。<br>接下来 m 行，每行有 3 个正整数，x，y，z，每两个整数之间用一个空格隔开。<br>如果 z=1，表示这条道路是城市 x 到城市 y 之间的单向道路；<br>如果 z=2，表示这条道路为城市 x 和城市y 之间的双向道路。<br><strong>【Output】</strong><br>共 1 行，包含 1 个整数，表示最多能赚取的旅费。如果没有进行贸易，则输出 0。<br><strong>【Limited conditions】</strong><br>输入数据保证 1 号城市可以到达 n 号城市。<br>对于 10%的数据，1≤n≤6。<br>对于 30%的数据，1≤n≤100。<br>对于 50%的数据，不存在一条旅游路线，可以从一个城市出发，再回到这个城市。<br>对于 100%的数据，1≤n≤100000，1≤m≤500000，1≤x，y≤n，1≤z≤2，1≤各城市<br>水晶球价格≤100。<br><strong>【Sample input】</strong><br>5 5<br>4 3 5 6 1<br>1 2 1<br>1 4 1<br>2 3 2<br>3 5 1<br>4 5 2<br><strong>【Sample output】</strong><br>5<br><strong>【Sample explanation】</strong><br>C 国有 5 个大城市，城市的编号和道路连接情况如下图，<br>单向箭头表示这条道路为单向通行，双向箭头表示这条道路为双向通行。<br><img src="https://cdn.luogu.org/upload/pic/27.png" alt=""><br>假设 1~n 号城市的水晶球价格分别为 4，3，5，6，1。<br>阿龙可以选择如下一条线路：1-&gt;2-&gt;3-&gt;5，<br>并在 2 号城市以 3 的价格买入水晶球，<br>在 3号城市以 5 的价格卖出水晶球，赚取的旅费数为 2。<br>阿龙也可以选择如下一条线路 1-&gt;4-&gt;5-&gt;4-&gt;5，<br>并在第 1 次到达 5 号城市时以 1 的价格买入水晶球，<br>在第 2 次到达 4 号城市时以 6 的价格卖出水晶球，赚取的旅费数为 5。<br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>「Brief description」</strong><br>C 国有 n 个大城市和 m 条道路，每条道路连接这 n 个城市中的某两个城市。<br>任意两个城市之间最多只有一条道路直接相连。<br>这 m 条道路中有一部分为单向通行的道路，一部分为双向通行的道路，双向通行的道路在统计条数时也计为 1 条。<br><br>C 国幅员辽阔，各地的资源分布情况各不相同，这就导致了同一种商品在不同城市的价格不一定相同。<br>但是，同一种商品在同一个城市的买入价和卖出价始终是相同的。<br><br>商人阿龙来到 C 国旅游。<br>当他得知同一种商品在不同城市的价格可能会不同这一信息之后，便决定在旅游的同时，<br>利用商品在不同城市中的差价赚回一点旅费。<br>设 C 国 n 个城市的标号从 1~n，阿龙决定从 1 号城市出发，并最终在 n 号城市结束自己的旅行。<br>在旅游的过程中，任何城市可以重复经过多次，但不要求经过所有 n 个城市。<br>阿龙通过这样的贸易方式赚取旅费：<br>他会选择一个经过的城市买入他最喜欢的商品——水晶球，<br>并在之后经过的另一个城市卖出这个水晶球，用赚取的差价当做旅费。<br>由于阿龙主要是来 C 国旅游，他决定这个贸易只进行最多一次，<br>当然，在赚不到差价的情况下他就无需进行贸易。<br><br>现在给出 n 个城市的水晶球价格，m 条道路的信息<br>（每条道路所连接的两个城市的编号以及该条道路的通行情况）。<br>请你告诉阿龙，他最多能赚取多少旅费。<br><strong>「Input」</strong><br>第一行包含 2 个正整数 n 和 m，中间用一个空格隔开，分别表示城市的数目和道路的数目。<br>第二行 n 个正整数，每两个整数之间用一个空格隔开，按标号顺序分别表示这 n 个城市的商品价格。<br>接下来 m 行，每行有 3 个正整数，x，y，z，每两个整数之间用一个空格隔开。<br>如果 z=1，表示这条道路是城市 x 到城市 y 之间的单向道路；<br>如果 z=2，表示这条道路为城市 x 和城市y 之间的双向道路。<br><strong>「Output」</strong><br>共 1 行，包含 1 个整数，表示最多能赚取的旅费。如果没有进行贸易，则输出 0。<br><strong>「Limited conditions」</strong><br>输入数据保证 1 号城市可以到达 n 号城市。<br>对于 10%的数据，1≤n≤6。<br>对于 30%的数据，1≤n≤100。<br>对于 50%的数据，不存在一条旅游路线，可以从一个城市出发，再回到这个城市。<br>对于 100%的数据，1≤n≤100000，1≤m≤500000，1≤x，y≤n，1≤z≤2，1≤各城市<br>水晶球价格≤100。<br><strong>「Sample input」</strong><br>5 5<br>4 3 5 6 1<br>1 2 1<br>1 4 1<br>2 3 2<br>3 5 1<br>4 5 2<br><strong>「Sample output」</strong><br>5<br><strong>「Sample explanation」</strong><br>C 国有 5 个大城市，城市的编号和道路连接情况如下图，<br>单向箭头表示这条道路为单向通行，双向箭头表示这条道路为双向通行。<br><img src="https://cdn.luogu.org/upload/pic/27.png" alt=""><br>假设 1~n 号城市的水晶球价格分别为 4，3，5，6，1。<br>阿龙可以选择如下一条线路：1-&gt;2-&gt;3-&gt;5，<br>并在 2 号城市以 3 的价格买入水晶球，<br>在 3号城市以 5 的价格卖出水晶球，赚取的旅费数为 2。<br>阿龙也可以选择如下一条线路 1-&gt;4-&gt;5-&gt;4-&gt;5，<br>并在第 1 次到达 5 号城市时以 1 的价格买入水晶球，<br>在第 2 次到达 4 号城市时以 6 的价格卖出水晶球，赚取的旅费数为 5。<br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>1h</p>
 <h2 id="Analysis1"><a href="#Analysis1" class="headerlink" title="Analysis1"></a>Analysis1</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>图上灰常规dp<br>注意两个很重要的剪枝<br>【如果不喜欢剪枝，可以用强连通搞一搞，总之就是避免环】</p>
+<p>图上灰常规dp<br>注意两个很重要的剪枝<br>「如果不喜欢剪枝，可以用强连通搞一搞，总之就是避免环」</p>
 
 </div></div>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -644,42 +644,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">【CF11B】【51Nod1615】Jumping Jack</a></div>
+      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">「CF11B」「51Nod1615」Jumping Jack</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d499.html" rel="bookmark">【NOIP13 D2T1】积木大赛</a></div>
+      <div class="popular-posts-title"><a href="/posts/d499.html" rel="bookmark">「NOIP13 D2T1」积木大赛</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/6a8a.html" rel="bookmark">【CF946-F】Fibonacci String Subsequences</a></div>
+      <div class="popular-posts-title"><a href="/posts/6a8a.html" rel="bookmark">「CF946-F」Fibonacci String Subsequences</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/5323.html" rel="bookmark">【Bzoj1783】【Luogu2975】轮流Taking Turns</a></div>
+      <div class="popular-posts-title"><a href="/posts/5323.html" rel="bookmark">「Bzoj1783」「Luogu2975」轮流Taking Turns</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b9c2.html" rel="bookmark">【bzoj4169】Lmc的游戏</a></div>
+      <div class="popular-posts-title"><a href="/posts/b9c2.html" rel="bookmark">「bzoj4169」Lmc的游戏</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9f3.html" rel="bookmark">【Bzoj1833】【Luogu2602】数字计数</a></div>
+      <div class="popular-posts-title"><a href="/posts/304d.html" rel="bookmark">「Bzoj3679」数字之积</a></div>
       
     </li>
   
@@ -697,7 +697,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/b656.html" title="【Luogu1073】最优贸易">http://zory.ink/posts/b656.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/b656.html" title="「Luogu1073」最优贸易">http://zory.ink/posts/b656.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -747,8 +747,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/7398.html" rel="next" title="【Luogu1072】Hankson的趣味题">
-                <i class="fa fa-chevron-left"></i> 【Luogu1072】Hankson的趣味题
+              <a href="/posts/9e5c.html" rel="next" title="「Luogu1071」潜伏者">
+                <i class="fa fa-chevron-left"></i> 「Luogu1071」潜伏者
               </a>
             
           </div>
@@ -757,8 +757,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/ead0.html" rel="prev" title="【Luogu1075】靶形数独">
-                【Luogu1075】靶形数独 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/ead0.html" rel="prev" title="「Luogu1075」靶形数独">
+                「Luogu1075」靶形数独 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -836,7 +836,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -861,7 +861,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1270,7 +1272,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

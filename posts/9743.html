@@ -95,14 +95,14 @@
   <meta name="description" content="Sourcebzoj4498">
 <meta name="keywords" content="dp,难度2,好题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【bzoj4498】魔法的碰撞">
+<meta property="og:title" content="「bzoj4498」魔法的碰撞">
 <meta property="og:url" content="http://zory.ink/posts/9743.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Sourcebzoj4498">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【bzoj4498】魔法的碰撞">
+<meta name="twitter:title" content="「bzoj4498」魔法的碰撞">
 <meta name="twitter:description" content="Sourcebzoj4498">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【bzoj4498】魔法的碰撞 | Zory的个人博客</title>
+  <title>「bzoj4498」魔法的碰撞 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【bzoj4498】魔法的碰撞
+          <h2 class="post-title" itemprop="name headline">「bzoj4498」魔法的碰撞
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:50" itemprop="dateModified" datetime="2019-12-01T10:18:50+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/9743.html" class="post-meta-item leancloud_visitors" data-flag-title="【bzoj4498】魔法的碰撞">
+            <span id="/posts/9743.html" class="post-meta-item leancloud_visitors" data-flag-title="「bzoj4498」魔法的碰撞">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -619,7 +619,7 @@
 </div></div>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>众所周知这个排列能搞成状压dp，n太大，所以考虑插入<br>因为这个是跟max有关，如果从大到小插入，就能消去这个比较<br>假设一开始只有一个括号，考虑以后左右两边是否有人<br>如果都有人，则贡献为2(di-1)，然后会产生两个括号<br>如果只有一边有人，则贡献为di-1，然后产生一个括号<br>如果都没有人，则没贡献没括号<br>于是我们的转移就跟两边具体是什么人没关系了，只需要讨论一下我的决策，他们一定是不同的方案<br>然后注意到我们是不关心括号的位置什么的，只需要记录数量即可</p>
-<p>于是不难想到dp的状态，设 $f(i,j,w)$ 表示【考虑前i大，目前有j个空括号，和为w】的方案数</p>
+<p>于是不难想到dp的状态，设 $f(i,j,w)$ 表示「考虑前i大，目前有j个空括号，和为w」的方案数</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    fac[<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_M;i++) fac[i]=fac[i<span class="number">-1</span>]*i%MOD;</div><div class="line">    inv[<span class="number">1</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;MAX_M;i++) inv[i]=ll(MOD-MOD/i)*inv[MOD%i]%MOD;</div><div class="line">    facinv[<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_M;i++) facinv[i]=facinv[i<span class="number">-1</span>]*inv[i]%MOD;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> L=qread(),n=qread();<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) d[i]=qread();</div><div class="line">    sort(d+<span class="number">1</span>,d+n+<span class="number">1</span>);reverse(d+<span class="number">1</span>,d+n+<span class="number">1</span>);</div><div class="line"></div><div class="line">    f[<span class="number">0</span>][<span class="number">1</span>][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++) <span class="keyword">for</span>(<span class="keyword">int</span> w=<span class="number">0</span>;w&lt;MAX_N*MAX_N;w++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> t=(ll)f[i<span class="number">-1</span>][j][w]*j%MOD;<span class="keyword">if</span>(t==<span class="number">0</span>) <span class="keyword">continue</span>;</div><div class="line">        add(f[i][j<span class="number">-1</span>][w],t);</div><div class="line">        add(f[i][j][w+(d[i]<span class="number">-1</span>)],t*<span class="number">2</span>%MOD);</div><div class="line">        add(f[i][j+<span class="number">1</span>][w+<span class="number">2</span>*(d[i]<span class="number">-1</span>)],t);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> w=<span class="number">0</span>;w&lt;MAX_N*MAX_N;w++) add(ans,(ll)f[n][<span class="number">0</span>][w]*C(L-w,n)%MOD);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
@@ -636,42 +636,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/304d.html" rel="bookmark">【Bzoj3679】数字之积</a></div>
+      <div class="popular-posts-title"><a href="/posts/304d.html" rel="bookmark">「Bzoj3679」数字之积</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3455.html" rel="bookmark">【abc134F】Permutation Oddness</a></div>
+      <div class="popular-posts-title"><a href="/posts/1d84.html" rel="bookmark">「Noi2011」Noi嘉年华</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/381c.html" rel="bookmark">【NOIAC31】MST</a></div>
+      <div class="popular-posts-title"><a href="/posts/381c.html" rel="bookmark">「NOIAC31」MST</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ae99.html" rel="bookmark">【CF960F】Pathwalks</a></div>
+      <div class="popular-posts-title"><a href="/posts/ae99.html" rel="bookmark">「CF960F」Pathwalks</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">「POJ2057」The Lost House</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d879.html" rel="bookmark">【CF1039D】You Are Given a Tree</a></div>
+      <div class="popular-posts-title"><a href="/posts/d879.html" rel="bookmark">「CF1039D」You Are Given a Tree</a></div>
       
     </li>
   
@@ -689,7 +689,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/9743.html" title="【bzoj4498】魔法的碰撞">http://zory.ink/posts/9743.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/9743.html" title="「bzoj4498」魔法的碰撞">http://zory.ink/posts/9743.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -731,8 +731,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/96b8.html" rel="next" title="【bzoj4665】已经没有什么好害怕的了">
-                <i class="fa fa-chevron-left"></i> 【bzoj4665】已经没有什么好害怕的了
+              <a href="/posts/96b8.html" rel="next" title="「bzoj4665」已经没有什么好害怕的了">
+                <i class="fa fa-chevron-left"></i> 「bzoj4665」已经没有什么好害怕的了
               </a>
             
           </div>
@@ -741,8 +741,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/8c73.html" rel="prev" title="【bzoj4664】Count">
-                【bzoj4664】Count <i class="fa fa-chevron-right"></i>
+              <a href="/posts/8c73.html" rel="prev" title="「bzoj4664」Count">
+                「bzoj4664」Count <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -820,7 +820,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -845,7 +845,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1254,7 +1256,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

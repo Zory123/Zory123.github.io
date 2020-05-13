@@ -92,17 +92,17 @@
 
 
 
-  <meta name="description" content="atcTenka1-2019好题：F">
+  <meta name="description" content="Tenka1 Programmer Contest 2019好题：F">
 <meta property="og:type" content="article">
-<meta property="og:title" content="atcTenka1-2019">
+<meta property="og:title" content="Tenka1 Programmer Contest 2019">
 <meta property="og:url" content="http://zory.ink/posts/23f2.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="atcTenka1-2019好题：F">
+<meta property="og:description" content="Tenka1 Programmer Contest 2019好题：F">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-22T04:44:47.072Z">
+<meta property="og:updated_time" content="2020-01-11T00:44:04.361Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="atcTenka1-2019">
-<meta name="twitter:description" content="atcTenka1-2019好题：F">
+<meta name="twitter:title" content="Tenka1 Programmer Contest 2019">
+<meta name="twitter:description" content="Tenka1 Programmer Contest 2019好题：F">
 
 
 
@@ -120,7 +120,7 @@
   };
 </script>
 
-  <title>atcTenka1-2019 | Zory的个人博客</title>
+  <title>Tenka1 Programmer Contest 2019 | Zory的个人博客</title>
   
 
 
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -495,7 +495,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">atcTenka1-2019
+          <h2 class="post-title" itemprop="name headline">Tenka1 Programmer Contest 2019
 
               
             
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-22 12:44:47" itemprop="dateModified" datetime="2019-08-22T12:44:47+08:00">2019-08-22</time>
+                <time title="修改时间：2020-01-11 08:44:04" itemprop="dateModified" datetime="2020-01-11T08:44:04+08:00">2020-01-11</time>
               </span>
             
           
@@ -577,7 +577,7 @@
 
           
           
-            <span id="/posts/23f2.html" class="post-meta-item leancloud_visitors" data-flag-title="atcTenka1-2019">
+            <span id="/posts/23f2.html" class="post-meta-item leancloud_visitors" data-flag-title="Tenka1 Programmer Contest 2019">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -610,9 +610,10 @@
       
 
       
-        <p>atcTenka1-2019<br>好题：F</p>
+        <p><a href="https://atcoder.jp/contests/tenka1-2019" target="_blank" rel="noopener">Tenka1 Programmer Contest 2019</a><br>好题：F</p>
 <a id="more"></a>
-<h1 id="D-Three-Colors"><a href="#D-Three-Colors" class="headerlink" title="D Three Colors"></a>D Three Colors</h1><p>$(a&gt;b&gt;c)合法当且仅当 a&lt;\lceil \frac{sum}{2} \rceil$ ，考虑容斥掉非法情况</p>
+<h3 id="D-Three-Colors"><a href="#D-Three-Colors" class="headerlink" title="D Three Colors"></a>D Three Colors</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>$(a&gt;b&gt;c)合法当且仅当 a&lt;\lceil \frac{sum}{2} \rceil$ ，考虑容斥掉非法情况</p>
 <p>先考虑一个 $n^4$ 的做法，$dp(i,a)=选了i个数，和为a的方案数$</p>
 <p>那么 $ans=\sum_{S \geq \lceil \frac{sum}{2} \rceil} \sum_i 3f(i,S)2^{n-i}$</p>
 <p>但当S为偶数，a=b=num/2的情况会被减两次，加回来即可</p>
@@ -621,26 +622,28 @@
 <p>还有一种做法，也是考虑容斥，容斥掉 $a-b-c \geq 0$ 的部分，然后这个部分很好求，因为a一定是最大值，不会被替代</p>
 <p>和上面一样要考虑a=b=num/2的情况</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> f[MAX_N][MAX_N*MAX_N*<span class="number">2</span>],g[MAX_N][MAX_N*MAX_N];</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> F(i,j) f[i][MAX_N*MAX_N+j]</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> G(i,j) g[i][MAX_N*MAX_N+j]</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n=qread(),sum=<span class="number">0</span>;F(<span class="number">0</span>,<span class="number">0</span>)=<span class="number">1</span>;G(<span class="number">0</span>,<span class="number">0</span>)=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> aa=qread();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> s=-sum;s&lt;=sum;s++)</div><div class="line">        &#123;</div><div class="line">            add(F(i,s+aa),F(i<span class="number">-1</span>,s));</div><div class="line">            add(F(i,s-aa),<span class="number">1l</span>l*F(i<span class="number">-1</span>,s)*<span class="number">2</span>%MOD);</div><div class="line">            add(G(i,s+aa),G(i<span class="number">-1</span>,s));</div><div class="line">            add(G(i,s-aa),G(i<span class="number">-1</span>,s));</div><div class="line">        &#125;</div><div class="line">        sum+=aa;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> ans=qpower(<span class="number">3</span>,n);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;=sum;s++) add(ans,-(ll)F(n,s)*<span class="number">3</span>%MOD);</div><div class="line">    <span class="keyword">if</span>(sum%<span class="number">2</span>==<span class="number">0</span>) add(ans,(ll)G(n,<span class="number">0</span>)*<span class="number">3</span>%MOD);</div><div class="line">    write((ans+MOD)%MOD);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="E-Polynomial-Divisors"><a href="#E-Polynomial-Divisors" class="headerlink" title="E Polynomial Divisors"></a>E Polynomial Divisors</h1><p>$\forall f(i)=0(\%p)$</p>
-<p>在 $p|gcd(ai)$ 时显然成立，考虑如何验证一个p</p>
-<p>多项式必定含有因式 $\prod_{t=0}^{p-1} (x-t)$ ，使用【威尔逊定理】、【任意模数下存在逆元的数，其逆元互不相同】这两个结论，可化为 $x^p-x$</p>
-<p>【任意模数下存在逆元的数，其逆元互不相同】的证明： $ax=1(\%p)，那么把其一作为未知数，根据裴蜀定理另一个与p互质​$</p>
-<p>实现的时候，化一下式子，发现只需要判断【%下系数剩余系=0】即可；根据上面的推导，只要判断 $p \leq n$ 即可(upd：需要判断a[0]%p=0，我不太清楚为什么)</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n,a[MAX_N];</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> p)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;p<span class="number">-1</span>;t++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=t;i&lt;=n;i+=p<span class="number">-1</span>) sum=(sum+a[i])%p;</div><div class="line">        <span class="keyword">if</span>(sum) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isp</span><span class="params">(<span class="keyword">int</span> n)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i*i&lt;=n;i++) <span class="keyword">if</span>(n%i==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;<span class="keyword">return</span> y==<span class="number">0</span>?x:gcd(y,x%y);&#125;</div><div class="line">vc&lt;<span class="keyword">int</span>&gt; ans;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    n=qread();<span class="keyword">int</span> d=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;=<span class="number">0</span>;i--) a[i]=qread(),d=gcd(d,<span class="built_in">abs</span>(a[i]));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;(ll)i*i&lt;=d;i++) <span class="keyword">if</span>(d%i==<span class="number">0</span>)<span class="comment">//debug 爆int</span></div><div class="line">    &#123;</div><div class="line">        ans.PB(i);</div><div class="line">        <span class="keyword">while</span>(d%i==<span class="number">0</span>) d/=i;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(d&gt;<span class="number">1</span>) ans.PB(d);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++) <span class="keyword">if</span>(a[<span class="number">0</span>]%i==<span class="number">0</span> and isp(i) and check(i)) ans.PB(i);</div><div class="line">    sort(ans.begin(),ans.end());</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;(<span class="keyword">int</span>)ans.size();t++) <span class="keyword">if</span>(t==<span class="number">0</span> or ans[t<span class="number">-1</span>]!=ans[t]) write2(ans[t]);<span class="comment">//debug</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="F-Banned-X"><a href="#F-Banned-X" class="headerlink" title="F Banned X"></a>F Banned X</h1><p>需要考虑12串的贡献，最后枚举长度塞0即可</p>
+
+</div></div>
+<h3 id="E-Polynomial-Divisors"><a href="#E-Polynomial-Divisors" class="headerlink" title="E Polynomial Divisors"></a>E Polynomial Divisors</h3><p>题意：给出一个$n \le 1e4$次多项式f，问有多少个$p \in Prime$满足$\forall f(i)=0(\%p)$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>首先$p|gcd(a_i)$肯定是可以的，除此之外，根据因式定理，多项式一定有因式$\prod_{t=0}^{p-1} (x-t)$，分析这个因式的根、最高项，根据费马小定理知等价于$(x^{p-1}-1)x$。故枚举n以内的p并做多项式取模即可，$O(n^2/ln)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">ll n,a[N],b[N];vc&lt;<span class="keyword">int</span>&gt; ans;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isp</span><span class="params">(<span class="keyword">int</span> num)</span></span>&#123;<span class="keyword">if</span>(num==<span class="number">1</span>)<span class="keyword">return</span> <span class="number">0</span>;fo(i,<span class="number">2</span>,<span class="built_in">sqrt</span>(num))<span class="keyword">if</span>(num%i==<span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;<span class="keyword">return</span> <span class="number">1</span>;&#125;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> p)</span></div><div class="line"></span>&#123;</div><div class="line">    fo(i,<span class="number">0</span>,n<span class="number">-1</span>) b[i]=a[i+<span class="number">1</span>];</div><div class="line">    fd(i,n<span class="number">-1</span>,p<span class="number">-1</span>) (b[i-(p<span class="number">-1</span>)]-=<span class="number">1l</span>l*(p<span class="number">-1</span>)*b[i])%=p,b[i]=<span class="number">0</span>;</div><div class="line">    fo(i,<span class="number">0</span>,p<span class="number">-2</span>) <span class="keyword">if</span>(b[i]) <span class="keyword">return</span> <span class="number">0</span>;<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    n=qread();<span class="keyword">int</span> d=<span class="number">0</span>;fd(i,n,<span class="number">0</span>) a[i]=qread(),d=gcd(d,a[i]);d=<span class="built_in">abs</span>(d);</div><div class="line">    fo(p,<span class="number">1</span>,<span class="built_in">sqrt</span>(d)) <span class="keyword">if</span>(d%p==<span class="number">0</span>) &#123;<span class="keyword">if</span>(isp(p)) ans.PB(p);<span class="keyword">if</span>(isp(d/p)) ans.PB(d/p);&#125;</div><div class="line">    fo(p,<span class="number">1</span>,n) <span class="keyword">if</span>(isp(p) and a[<span class="number">0</span>]%p==<span class="number">0</span> and check(p)) ans.PB(p);</div><div class="line">    sort(all(ans));ans.resize(unique(all(ans))-ans.begin());<span class="keyword">for</span>(<span class="keyword">auto</span> t:ans) write2(t);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="F-Banned-X"><a href="#F-Banned-X" class="headerlink" title="F Banned X"></a>F Banned X</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>需要考虑12串的贡献，最后枚举长度塞0即可</p>
 <ol>
 <li>$sum&lt;X$</li>
 <li>$sum&gt;X，不能产生一个连续区间的和为某个 \geq sum 的偶数$</li>
 </ol>
 <p>如果存在这样的区间，那么不断删除2、删除两边的1就能产生0</p>
 <p>那么枚举ln和sum</p>
-<p>对于第一种，$C_{ln}^{sum-ln}​$</p>
+<p>对于第一种，$C_{ln}^{sum-ln}$</p>
 <p>对于第二种，$[(sum-X)\&amp;1]$，左右两侧都必须放足够多的2（$\lceil \frac{sum-ln}{2} \rceil$），然后中间就可以随便放了，即 $C_{ln-2\lceil \frac{sum-ln}{2} \rceil}^{2ln-sum}$</p>
 <p>$ans=\sum C_n^{ln} f(ln)$ 时间复杂度 $O(n^2)$</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> C[MAX_N][MAX_N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    C[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_N;i++)&#123;C[i][<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=i;j++) C[i][j]=(C[i<span class="number">-1</span>][j<span class="number">-1</span>]+C[i<span class="number">-1</span>][j])%MOD;&#125;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> n=qread(),X=qread();<span class="keyword">int</span> ans=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> ln=<span class="number">1</span>;ln&lt;=n;ln++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> now=(X&amp;<span class="number">1</span> or X&gt;<span class="number">2</span>*ln);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> sum=ln;sum&lt;=<span class="number">2</span>*ln<span class="number">-1</span>;sum++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(sum&lt;X) add(now,C[ln][sum-ln]);</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>((sum-X)&amp;<span class="number">1</span>)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">int</span> cnt=(sum-X+<span class="number">1</span>)/<span class="number">2</span>;<span class="keyword">if</span>(cnt*<span class="number">2</span>&gt;=ln) <span class="keyword">continue</span>;</div><div class="line">                add(now,C[ln<span class="number">-2</span>*cnt][<span class="number">2</span>*ln-sum]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        add(ans,(ll)now*C[n][ln]%MOD);</div><div class="line">    &#125;</div><div class="line">    write(ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
+</div></div>
       
     </div>
 
@@ -659,7 +662,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/23f2.html" title="atcTenka1-2019">http://zory.ink/posts/23f2.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/23f2.html" title="Tenka1 Programmer Contest 2019">http://zory.ink/posts/23f2.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -688,8 +691,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/13ef.html" rel="next" title="20190423模拟赛">
-                <i class="fa fa-chevron-left"></i> 20190423模拟赛
+              <a href="/posts/46b6.html" rel="next" title="GDOI2019滚粗记">
+                <i class="fa fa-chevron-left"></i> GDOI2019滚粗记
               </a>
             
           </div>
@@ -698,8 +701,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/90dc.html" rel="prev" title="2019省选前做的题">
-                2019省选前做的题 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/21f3.html" rel="prev" title="计蒜客信息学4月提高组模拟赛">
+                计蒜客信息学4月提高组模拟赛 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -777,7 +780,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -802,7 +805,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1211,7 +1216,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1274,7 +1283,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#D-Three-Colors"><span class="nav-text">D Three Colors</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#E-Polynomial-Divisors"><span class="nav-text">E Polynomial Divisors</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#F-Banned-X"><span class="nav-text">F Banned X</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#D-Three-Colors"><span class="nav-text">D Three Colors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E-Polynomial-Divisors"><span class="nav-text">E Polynomial Divisors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#F-Banned-X"><span class="nav-text">F Banned X</span></a></li></ol></div>
             
 
           </div>

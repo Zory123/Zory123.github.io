@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="lhy的场">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-29T07:46:14.198Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="20191026模拟-lhy">
 <meta name="twitter:description" content="lhy的场">
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-29 15:46:14" itemprop="dateModified" datetime="2019-10-29T15:46:14+08:00">2019-10-29</time>
+                <time title="修改时间：2019-12-01 10:18:51" itemprop="dateModified" datetime="2019-12-01T10:18:51+08:00">2019-12-01</time>
               </span>
             
           
@@ -613,7 +613,7 @@
         <p>lhy的场</p>
 <a id="more"></a>
 <h3 id="「ZJOI2017」线段树"><a href="#「ZJOI2017」线段树" class="headerlink" title="「ZJOI2017」线段树"></a><a href="https://loj.ac/problem/2570" target="_blank" rel="noopener">「ZJOI2017」线段树</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>答案的组成需要考虑广义线段树的结构，如果学过zkw可能会很熟悉：定位出$x=[l-1,l-1]和y=[r+1,r+1]$，也就是变成开区间（要将$[0,0]$和$[n+1,n+1]$放进去），那么答案就是【x到lca路径上，作为左孩子时统计右孩子】+【y到lca路径上，作为右孩子时统计左孩子】</p>
+<p>答案的组成需要考虑广义线段树的结构，如果学过zkw可能会很熟悉：定位出$x=[l-1,l-1]和y=[r+1,r+1]$，也就是变成开区间（要将$[0,0]$和$[n+1,n+1]$放进去），那么答案就是「x到lca路径上，作为左孩子时统计右孩子」+「y到lca路径上，作为右孩子时统计左孩子」</p>
 <p>考试的时候想到了转成开区间，但对于具体怎么统计不太记得了，就先跳了这题，不过确实也不好写</p>
 <p>核心代码很短：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">fo(x,<span class="number">1</span>,rt) val1[ !isleft[x] ][x]--,val1[ !isleft[x] ][ff[x]]++,val2[ !isleft[x] ][x]-=dep[x],val2[ !isleft[x] ][ff[x]]+=dep[x];<span class="comment">//小容斥，树上差分</span></div><div class="line"><span class="comment">//----------------------------</span></div><div class="line"><span class="function">ll <span class="title">solve</span><span class="params">(<span class="keyword">int</span> wt,<span class="keyword">int</span> u,<span class="keyword">int</span> x,<span class="keyword">int</span> lca,<span class="keyword">int</span> LCA)</span></div><div class="line"></span>&#123;</div><div class="line">    ll sum1,sum2,ans=<span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(in(LCA,lca))<span class="comment">//LCA在lca子树中</span></div><div class="line">    &#123;</div><div class="line">        sum1=val1[wt][x]-val1[wt][LCA];sum2=val2[wt][x]-val2[wt][LCA];</div><div class="line">        ans+=sum2+sum1*(dep[u]<span class="number">-2</span>*dep[lca]);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span><span class="comment">//lca!=LCA</span></div><div class="line">    &#123;</div><div class="line">        sum1=val1[wt][x]-val1[wt][lca];sum2=val2[wt][x]-val2[wt][lca];</div><div class="line">        <span class="keyword">if</span>(sz(son[lca]) and in(x,son[lca][wt])) sum1++,sum2+=dep[son[lca][wt]];<span class="comment">//想容斥去掉lca，现在不需要了</span></div><div class="line">        ans+=sum1*(dep[u]-dep[lca]*<span class="number">2</span>)+sum2;</div><div class="line"></div><div class="line">        sum1=val1[wt][lca]-val1[wt][LCA];sum2=val2[wt][lca]-val2[wt][LCA];</div><div class="line">        <span class="keyword">if</span>(sz(son[lca]))</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(in(x,son[lca][wt])) sum1--,sum2-=dep[son[lca][wt]];<span class="comment">//错误地将son[lca][wt]计入答案</span></div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(in(u,son[lca][wt])) ans-=<span class="number">2</span>;<span class="comment">//son[lca][wt]并不需要上去再下来</span></div><div class="line">        &#125;</div><div class="line">        ans+=sum1*(dep[u]+<span class="number">2</span>)-sum2;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"><span class="comment">//----------------------------</span></div><div class="line">ll ans=<span class="number">0</span>;</div><div class="line"><span class="keyword">if</span>(x!=LCA) ans+=solve(<span class="number">1</span>,u,x,getlca(x,u),LCA);</div><div class="line"><span class="keyword">if</span>(y!=LCA) ans+=solve(<span class="number">0</span>,u,y,getlca(y,u),LCA);</div><div class="line">write2(ans);</div></pre></td></tr></table></figure>
@@ -692,8 +692,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/6d278cf9.html" rel="prev" title="CFR596">
-                CFR596 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/58b5aaea.html" rel="prev" title="CFR371 div1">
+                CFR371 div1 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -771,7 +771,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -796,7 +796,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1205,7 +1207,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

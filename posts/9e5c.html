@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeNOIP2009 提高组 T1Luogu1071Caioj1537">
 <meta name="keywords" content="模拟,难度1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Luogu1071】潜伏者">
+<meta property="og:title" content="「Luogu1071」潜伏者">
 <meta property="og:url" content="http://zory.ink/posts/9e5c.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2009 提高组 T1Luogu1071Caioj1537">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Luogu1071】潜伏者">
+<meta name="twitter:title" content="「Luogu1071」潜伏者">
 <meta name="twitter:description" content="Source and JudgeNOIP2009 提高组 T1Luogu1071Caioj1537">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【Luogu1071】潜伏者 | Zory的个人博客</title>
+  <title>「Luogu1071」潜伏者 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Luogu1071】潜伏者
+          <h2 class="post-title" itemprop="name headline">「Luogu1071」潜伏者
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:48" itemprop="dateModified" datetime="2019-12-01T10:18:48+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/9e5c.html" class="post-meta-item leancloud_visitors" data-flag-title="【Luogu1071】潜伏者">
+            <span id="/posts/9e5c.html" class="post-meta-item leancloud_visitors" data-flag-title="「Luogu1071」潜伏者">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -613,7 +613,7 @@
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOIP2009 提高组 T1<br><a href="https://www.luogu.org/problemnew/show/P1071" target="_blank" rel="noopener">Luogu1071</a><br><a href="http://caioj.cn/problem.php?id=1537" target="_blank" rel="noopener">Caioj1537</a></p>
 <a id="more"></a>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-red"><strong>【Brief description】</strong><br>R 国和 S 国正陷入战火之中，双方都互派间谍，潜入对方内部，伺机行动。<br>历尽艰险后，潜伏于 S 国的 R 国间谍小 C 终于摸清了 S 国军用密码的编码规则：<br>1. S 国军方内部欲发送的原信息经过加密后在网络上发送，<br>原信息的内容与加密后所得的内容均由大写字母‘A’-‘Z’构成（无空格等其他字符）。<br>2. S 国对于每个字母规定了对应的“密字”。<br>加密的过程就是将原信息中的所有字母替换为其对应的“密字”。<br>3. 每个字母只对应一个唯一的“密字”，不同的字母对应不同的“密字”。“密字”可以和原字母相同。<br><br>例如，若规定‘A’的密字为‘A’，‘B’的密字为‘C’（其他字母及密字略），则原信息“ABA”被加密为“ACA”。<br>现在，小C通过内线掌握了 S 国网络上发送的一条加密信息及其对应的原信息。<br>小C希望能通过这条信息，破译S国的军用密码。<br>小C的破译过程是这样的：<br>扫描原信息，对于原信息中的字母 x（代表任一大写字母），<br>找到其在加密信息中的对应大写字母 y，并认为在密码里 y 是 x 的密字。<br><br>如此进行下去直到停止于如下的某个状态：<br>1. 所有信息扫描完毕，‘A’-‘Z’ 所有 26 个字母在原信息中均出现过并获得了相应的“密字”。<br>2. 所有信息扫描完毕，但发现存在某个（或某些）字母在原信息中没有出现。<br>3. 扫描中发现掌握的信息里有明显的自相矛盾或错误（违反 S 国密码的编码规则）。<br>例如某条信息“XYZ”被翻译为“ABA”就违反了“不同字母对应不同密字”的规则。<br><br>在小C忙得头昏脑涨之际，R国司令部又发来电报，要求他翻译另外一条从S国刚刚截取到的加密信息。<br>现在请你帮助小 C：通过内线掌握的信息，尝试破译密码。<br>然后利用破译的密码，翻译电报中的加密信息。<br><strong>【Input】</strong><br>第 1 行为小 C 掌握的一条加密信息。<br>第 2 行为第 1 行的加密信息所对应的原信息。<br>第 3 行为 R 国司令部要求小 C 翻译的加密信息。<br>输入数据保证所有字符串仅由大写字母‘A’-‘Z’构成，且第 1 行长度与第 2 行相等。<br><strong>【Output】</strong><br>共 1 行。<br>若破译密码停止时出现 2，3 两种情况，请你输出“Failed”<br>（不含引号，注意首字母大写，其它小写）。<br>否则请输出利用密码翻译电报中加密信息后得到的原信息。<br><strong>【Limited conditions】</strong><br>字符串长度在 1 到 100 之间。<br><strong>【Sample input 1】</strong><br>AA<br>AB<br>EOWIE<br><strong>【Sample output 1】</strong><br>Failed<br><strong>【Sample input 2】</strong><br>QWERTYUIOPLKJHGFDSAZXCVBN<br>ABCDEFGHIJKLMNOPQRSTUVWXY<br>DSLIEWO<br><strong>【Sample output 2】</strong><br>Failed<br><strong>【Sample input 3】</strong><br>MSRTZCJKPFLQYVAWBINXUEDGHOOILSMIJFRCOPPQCEUNYDUMPP<br>YIZSDWAHLNOVFUCERKJXQMGTBPPKOIYKANZWPLLVWMQJFGQYLL<br>FLSO<br><strong>【Sample output 3】</strong><br>NOIP<br><strong>【Sample explanation】</strong><br>【输入输出样例 1 说明】<br>原信息中的字母‘A’和‘B’对应相同的密字，输出“Failed”。<br>【输入输出样例 2 说明】<br>字母‘Z’在原信息中没有出现，输出“Failed”。<br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-red"><strong>「Brief description」</strong><br>R 国和 S 国正陷入战火之中，双方都互派间谍，潜入对方内部，伺机行动。<br>历尽艰险后，潜伏于 S 国的 R 国间谍小 C 终于摸清了 S 国军用密码的编码规则：<br>1. S 国军方内部欲发送的原信息经过加密后在网络上发送，<br>原信息的内容与加密后所得的内容均由大写字母‘A’-‘Z’构成（无空格等其他字符）。<br>2. S 国对于每个字母规定了对应的“密字”。<br>加密的过程就是将原信息中的所有字母替换为其对应的“密字”。<br>3. 每个字母只对应一个唯一的“密字”，不同的字母对应不同的“密字”。“密字”可以和原字母相同。<br><br>例如，若规定‘A’的密字为‘A’，‘B’的密字为‘C’（其他字母及密字略），则原信息“ABA”被加密为“ACA”。<br>现在，小C通过内线掌握了 S 国网络上发送的一条加密信息及其对应的原信息。<br>小C希望能通过这条信息，破译S国的军用密码。<br>小C的破译过程是这样的：<br>扫描原信息，对于原信息中的字母 x（代表任一大写字母），<br>找到其在加密信息中的对应大写字母 y，并认为在密码里 y 是 x 的密字。<br><br>如此进行下去直到停止于如下的某个状态：<br>1. 所有信息扫描完毕，‘A’-‘Z’ 所有 26 个字母在原信息中均出现过并获得了相应的“密字”。<br>2. 所有信息扫描完毕，但发现存在某个（或某些）字母在原信息中没有出现。<br>3. 扫描中发现掌握的信息里有明显的自相矛盾或错误（违反 S 国密码的编码规则）。<br>例如某条信息“XYZ”被翻译为“ABA”就违反了“不同字母对应不同密字”的规则。<br><br>在小C忙得头昏脑涨之际，R国司令部又发来电报，要求他翻译另外一条从S国刚刚截取到的加密信息。<br>现在请你帮助小 C：通过内线掌握的信息，尝试破译密码。<br>然后利用破译的密码，翻译电报中的加密信息。<br><strong>「Input」</strong><br>第 1 行为小 C 掌握的一条加密信息。<br>第 2 行为第 1 行的加密信息所对应的原信息。<br>第 3 行为 R 国司令部要求小 C 翻译的加密信息。<br>输入数据保证所有字符串仅由大写字母‘A’-‘Z’构成，且第 1 行长度与第 2 行相等。<br><strong>「Output」</strong><br>共 1 行。<br>若破译密码停止时出现 2，3 两种情况，请你输出“Failed”<br>（不含引号，注意首字母大写，其它小写）。<br>否则请输出利用密码翻译电报中加密信息后得到的原信息。<br><strong>「Limited conditions」</strong><br>字符串长度在 1 到 100 之间。<br><strong>「Sample input 1」</strong><br>AA<br>AB<br>EOWIE<br><strong>「Sample output 1」</strong><br>Failed<br><strong>「Sample input 2」</strong><br>QWERTYUIOPLKJHGFDSAZXCVBN<br>ABCDEFGHIJKLMNOPQRSTUVWXY<br>DSLIEWO<br><strong>「Sample output 2」</strong><br>Failed<br><strong>「Sample input 3」</strong><br>MSRTZCJKPFLQYVAWBINXUEDGHOOILSMIJFRCOPPQCEUNYDUMPP<br>YIZSDWAHLNOVFUCERKJXQMGTBPPKOIYKANZWPLLVWMQJFGQYLL<br>FLSO<br><strong>「Sample output 3」</strong><br>NOIP<br><strong>「Sample explanation」</strong><br>「输入输出样例 1 说明」<br>原信息中的字母‘A’和‘B’对应相同的密字，输出“Failed”。<br>「输入输出样例 2 说明」<br>字母‘Z’在原信息中没有出现，输出“Failed”。<br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>30min</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -636,42 +636,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ce8e.html" rel="bookmark">【Luogu1126】火柴棒等式</a></div>
+      <div class="popular-posts-title"><a href="/posts/ce8e.html" rel="bookmark">「Luogu1126」火柴棒等式</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/25a7.html" rel="bookmark">【NOIP17 D1T2】时间复杂度</a></div>
+      <div class="popular-posts-title"><a href="/posts/ba43.html" rel="bookmark">【OI之路】模拟与讨论大合集</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7398.html" rel="bookmark">【Luogu1072】Hankson的趣味题</a></div>
+      <div class="popular-posts-title"><a href="/posts/7398.html" rel="bookmark">「Luogu1072」Hankson的趣味题</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">【CF11B】【51Nod1615】Jumping Jack</a></div>
+      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">「CF11B」「51Nod1615」Jumping Jack</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/745a.html" rel="bookmark">【Luogu1079】Vigenère密码</a></div>
+      <div class="popular-posts-title"><a href="/posts/745a.html" rel="bookmark">「Luogu1079」Vigenère密码</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f28f.html" rel="bookmark">【Luogu1024】一元三次方程求解</a></div>
+      <div class="popular-posts-title"><a href="/posts/f28f.html" rel="bookmark">「Luogu1024」一元三次方程求解</a></div>
       
     </li>
   
@@ -689,7 +689,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/9e5c.html" title="【Luogu1071】潜伏者">http://zory.ink/posts/9e5c.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/9e5c.html" title="「Luogu1071」潜伏者">http://zory.ink/posts/9e5c.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -729,8 +729,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/958b.html" rel="next" title="【Luogu1155】双栈排序">
-                <i class="fa fa-chevron-left"></i> 【Luogu1155】双栈排序
+              <a href="/posts/7398.html" rel="next" title="「Luogu1072」Hankson的趣味题">
+                <i class="fa fa-chevron-left"></i> 「Luogu1072」Hankson的趣味题
               </a>
             
           </div>
@@ -739,8 +739,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/7398.html" rel="prev" title="【Luogu1072】Hankson的趣味题">
-                【Luogu1072】Hankson的趣味题 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/b656.html" rel="prev" title="「Luogu1073」最优贸易">
+                「Luogu1073」最优贸易 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -818,7 +818,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -843,7 +843,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1252,7 +1254,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

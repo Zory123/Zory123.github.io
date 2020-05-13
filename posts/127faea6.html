@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="AGC031到AGC040题解合集 好题：agc038E、agc039E 5/10">
+  <meta name="description" content="AGC031到AGC040题解合集 AGC的题面一般都不难懂，就不给出翻译了 好题：AGC039E、AGC040C 6/10">
 <meta name="keywords" content="min-max容斥">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AGC031到040">
 <meta property="og:url" content="http://zory.ink/posts/127faea6.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="AGC031到AGC040题解合集 好题：agc038E、agc039E 5/10">
+<meta property="og:description" content="AGC031到AGC040题解合集 AGC的题面一般都不难懂，就不给出翻译了 好题：AGC039E、AGC040C 6/10">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-25T00:39:24.678Z">
+<meta property="og:updated_time" content="2020-05-13T05:51:49.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AGC031到040">
-<meta name="twitter:description" content="AGC031到AGC040题解合集 好题：agc038E、agc039E 5/10">
+<meta name="twitter:description" content="AGC031到AGC040题解合集 AGC的题面一般都不难懂，就不给出翻译了 好题：AGC039E、AGC040C 6/10">
 
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-25 08:39:24" itemprop="dateModified" datetime="2019-10-25T08:39:24+08:00">2019-10-25</time>
+                <time title="修改时间：2020-05-13 13:51:49" itemprop="dateModified" datetime="2020-05-13T13:51:49+08:00">2020-05-13</time>
               </span>
             
           
@@ -612,57 +612,78 @@
 
       
         <p>AGC031到AGC040题解合集</p>
-<p>好题：agc038E、agc039E</p>
-<h1 id="5-10"><a href="#5-10" class="headerlink" title="5/10"></a>5/10</h1><a id="more"></a>
+<p>AGC的题面一般都不难懂，就不给出翻译了</p>
+<p>好题：AGC039E、AGC040C</p>
+<h1 id="6-10"><a href="#6-10" class="headerlink" title="6/10"></a>6/10</h1><a id="more"></a>
 <h2 id="AGC031"><a href="#AGC031" class="headerlink" title="AGC031"></a>AGC031</h2><p><a href="6c0c.html">old_link</a></p>
 <h2 id="AGC032"><a href="#AGC032" class="headerlink" title="AGC032"></a>AGC032</h2><p><a href="6c3f.html">old_link</a></p>
-<h2 id="AGC037"><a href="#AGC037" class="headerlink" title="AGC037"></a>AGC037</h2><p><a href="6c6a.html">old_link</a></p>
-<h2 id="AGC038"><a href="#AGC038" class="headerlink" title="AGC038"></a>AGC038</h2><p><strong>人傻做法傻，大家散了吧</strong></p>
-<p><strong>agc038A - 01 Matrix</strong></p>
+<h2 id="AGC033"><a href="#AGC033" class="headerlink" title="AGC033"></a><a href="https://atcoder.jp/contests/AGC033/tasks" target="_blank" rel="noopener">AGC033</a></h2><p><strong>AGC033A - Darker and Darker</strong> <a href="https://atcoder.jp/contests/AGC033/submissions/9014709" target="_blank" rel="noopener">code</a></p>
+<p><strong>AGC033B - LRUD Game</strong> <a href="https://atcoder.jp/contests/AGC033/submissions/9014990" target="_blank" rel="noopener">code</a></p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p> <a href="https://atcoder.jp/contests/agc038/submissions/7657930" target="_blank" rel="noopener">code</a></p>
+<p>考虑一个倒着dp的过程，发现能到达不出去结局的部分始终是个矩形，只不过是哪条边缩小或增大</p>
+
+</div></div>
+<p><strong>AGC033C - Removing Coins</strong> <a href="https://atcoder.jp/contests/AGC033/submissions/9015383" target="_blank" rel="noopener">code</a></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>发现操作等价于删掉叶子但如果选的是某个叶子则保留，链的情况就是少1或2直接推sg发现循环节3</p>
+<p>然后感受一下发现应该就是当只存在直径来做，因为如果加入一个不影响直径的点，发现是不影响正负性的，可能这证明不太严谨感受一下还是挺对的</p>
+
+</div></div>
+<p><strong>AGC033D - Complexity</strong> <a href="https://atcoder.jp/contests/AGC033/submissions/9028489" target="_blank" rel="noopener">code</a></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>其实很憨，不过比赛的时候先写了个复杂度假的做法然后没打完就有事走了</p>
+<p>$dp(ned,i,l,r)=左上角(i,l)右上角(i,r)用不超过ned最大能到第几行$，很容易$O(n^4)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">fo(l,<span class="number">1</span>,m) fo(i,<span class="number">1</span>,n+<span class="number">1</span>) fo(r,l,m) fo(ned,<span class="number">0</span>,<span class="number">20</span>) dp[ned][i][l][r]=i<span class="number">-1</span>;</div><div class="line">fd(i,n,<span class="number">1</span>) fo(l,<span class="number">1</span>,m) fo(r,l,m)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(!same(i,i,l,r)) dp[<span class="number">0</span>][i][l][r]=i<span class="number">-1</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(same(i,i+<span class="number">1</span>,l,l)) dp[<span class="number">0</span>][i][l][r]=dp[<span class="number">0</span>][i+<span class="number">1</span>][l][r];</div><div class="line">    <span class="keyword">else</span> dp[<span class="number">0</span>][i][l][r]=i;</div><div class="line">&#125;</div><div class="line">dp[ned][i][l][r]=dp[ned<span class="number">-1</span>][dp[ned<span class="number">-1</span>][i][l][r]+<span class="number">1</span>][l][r];</div><div class="line">fo(j,l,r<span class="number">-1</span>) chmax(dp[ned][i][l][r],min(dp[ned<span class="number">-1</span>][i][l][j],dp[ned<span class="number">-1</span>][i][j+<span class="number">1</span>][r]));</div><div class="line"><span class="keyword">int</span> ans=<span class="number">0</span>;<span class="keyword">while</span>(dp[ans][<span class="number">1</span>][<span class="number">1</span>][m]&lt;n) ans++;write(ans);&#123;% endfold %&#125;</div></pre></td></tr></table></figure>
+<p>很明显是个单调递减和单调递增的两个函数取max，取大小关系不同的旁边两点即可，这个位置可以固定l增加r来单调移动</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">dp[ned][i][l][r]=dp[ned<span class="number">-1</span>][dp[ned<span class="number">-1</span>][i][l][r]+<span class="number">1</span>][l][r];</div><div class="line"><span class="keyword">while</span>(pos+<span class="number">1</span>&lt;r and dp[ned<span class="number">-1</span>][i][l][pos+<span class="number">1</span>]&gt;=dp[ned<span class="number">-1</span>][i][pos+<span class="number">2</span>][r]) pos++;</div><div class="line"><span class="keyword">if</span>(l&lt;=pos)  chmax(dp[ned][i][l][r],dp[ned<span class="number">-1</span>][i][pos+<span class="number">1</span>][r]);</div><div class="line"><span class="keyword">if</span>(pos+<span class="number">1</span>&lt;r) chmax(dp[ned][i][l][r],dp[ned<span class="number">-1</span>][i][l][pos+<span class="number">1</span>]);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h2 id="AGC034"><a href="#AGC034" class="headerlink" title="AGC034"></a><a href="https://atcoder.jp/contests/AGC034/tasks" target="_blank" rel="noopener">AGC034</a></h2><h2 id="AGC035"><a href="#AGC035" class="headerlink" title="AGC035"></a><a href="https://atcoder.jp/contests/AGC035/tasks" target="_blank" rel="noopener">AGC035</a></h2><h2 id="AGC036"><a href="#AGC036" class="headerlink" title="AGC036"></a><a href="https://atcoder.jp/contests/AGC036/tasks" target="_blank" rel="noopener">AGC036</a></h2><h2 id="AGC037"><a href="#AGC037" class="headerlink" title="AGC037"></a>AGC037</h2><p><a href="6c6a.html">old_link</a></p>
+<h2 id="AGC038"><a href="#AGC038" class="headerlink" title="AGC038"></a><a href="https://atcoder.jp/contests/AGC038/tasks" target="_blank" rel="noopener">AGC038</a></h2><p><strong>人傻做法傻，大家散了吧</strong></p>
+<p><strong>AGC038A - 01 Matrix</strong> <a href="https://atcoder.jp/contests/AGC038/submissions/7657930" target="_blank" rel="noopener">code</a></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>枚举任意一组i和j满足$i(m-A)+(n-i)A=j(n-B)+(m-j)B$即1的个数相同，然后考虑每列，每次贪心选1最多的行，$O(n^2logn)$</p>
 <p>正常人的做法是右上角和左下角是1之类的</p>
 
 </div></div>
-<p><strong>agc038B - Sorting a Segment </strong><a href="https://atcoder.jp/contests/agc038/submissions/7658526" target="_blank" rel="noopener">code</a></p>
+<p><strong>AGC038B - Sorting a Segment </strong><a href="https://atcoder.jp/contests/AGC038/submissions/7658526" target="_blank" rel="noopener">code</a></p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>看完题意考虑按题意模拟，就是区间排序，从左往右枚举这个区间，用个线段树维护值域hash即可，其实不难写，就是要写双hash才行，错的点有些多我还以为我是错的，$O(nlogn)$</p>
-<p>正常人的做法是考虑【i开始】和【i+1开始】相同，当且仅当ai为【i开始】中最小且a[i+m]为【i+1开始】最大，可能还有些特殊情况要判</p>
+<p>正常人的做法是考虑「i开始」和「i+1开始」相同，当且仅当ai为「i开始」中最小且a[i+m]为「i+1开始」最大，可能还有些特殊情况要判</p>
 
 </div></div>
-<p><strong>agc038C - LCMs </strong><a href="https://atcoder.jp/contests/agc038/submissions/7661705" target="_blank" rel="noopener">code</a></p>
-<p><strong>agc038D - Unique Path </strong><a href="https://atcoder.jp/contests/agc038/submissions/7662515" target="_blank" rel="noopener">code</a></p>
+<p><strong>AGC038C - LCMs </strong><a href="https://atcoder.jp/contests/AGC038/submissions/7661705" target="_blank" rel="noopener">code</a></p>
+<p><strong>AGC038D - Unique Path </strong><a href="https://atcoder.jp/contests/AGC038/submissions/7662515" target="_blank" rel="noopener">code</a></p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>先把op=0的点并查集在一起成一条链（m–），顺序不重要，主要是以后参与其他东西只能派唯一一个点，相当于缩点</p>
 <p>然后考虑op=1的边，新建图，并查集起来，对于siz=2的需要找一个外援，m-=3，然后siz&gt;2的就m-=siz，相当于最小代价，然后还需要判上界，这个需要按一些顺序算</p>
-<p>正常人的做法是必须用的边其实是n条（包括两类），上界是所有缩点成环后补边，大概是这样吧，见<a href="https://atcoder.jp/contests/agc038/submissions/7662312" target="_blank" rel="noopener">rose代码</a></p>
+<p>正常人的做法是必须用的边其实是n条（包括两类），上界是所有缩点成环后补边，大概是这样吧，见<a href="https://atcoder.jp/contests/AGC038/submissions/7662312" target="_blank" rel="noopener">rose代码</a></p>
 
 </div></div>
-<p><strong>agc038E - Gachapon</strong> <a href="https://atcoder.jp/contests/agc038/submissions/7664409" target="_blank" rel="noopener">做法一code</a></p>
+<p><strong>AGC038E - Gachapon</strong> </p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p><strong>期望有个套路的转化，就是如果求恰好到达的状态的概率*步数之和，等价于所有未到达的状态的概率之和，这个你可以通过【把当前概率推到上面的步数个祖先上】理解</strong></p>
-<p><strong>做法一</strong>：min-max容斥，那么考虑对于某个元素的集合State，就是$ans=\sum_{State \ne \emptyset} (-1)^{|State|+1} min(State)$</p>
+<p><strong>做法一</strong>：期望有个套路的转化，就是如果求恰好到达的状态的概率*步数之和，等价于所有未到达的状态的概率之和，这个你可以通过「把当前概率推到上面的步数个祖先上」理解</p>
+<p>min-max容斥，那么考虑对于某个元素的集合State，就是$ans=\sum_{State \ne \emptyset} (-1)^{|State|+1} min(State)$</p>
 <p>对于本做法，恰好到达指恰好有一个元素的出现次数为bi，其他都更小；则未到达为所有都在bi-1以内</p>
 <p>然后你会发现基本做完了，大致思路基本上就是推推式子，dp优化之类的，这个是min-max容斥的常见套路</p>
 <p>对于每个未到达状态，显然按每种State内元素的出现个数表示（记为数组c，和为C）</p>
-<p>记$sumA=\sum_{i \in State} A_i,P\ of\ min(State)=\frac{C!}{sumA^{C+1}/S} \prod_{i \in State} \frac{A_i^{c_i}}{c_i!}$，这里是为了方便先只考虑State内元素的期望步数，然后乘上$\frac{1}{p}=\frac{S}{sumA}$放缩，即现实中这么多步顶里面一步</p>
+<p>记$sumA=\sum_{i \in State} A_i,P\ of\ min(State)=\frac{C!}{sumA^{C+1}/S} \prod_{i \in State} \frac{A_i^{c_i}}{c_i!}$，这里是为了方便先只考虑State内元素的期望步数，然后乘上$\frac{1}{p}=\frac{S}{sumA}$放缩，即实际这么多步顶里面一步</p>
 <p>设$f(n,sum_A,C)$表示考虑前n个数，类似二维背包那样dp，第一维可以去掉</p>
-<p>转移的复杂度为bi，故复杂度为$O((\sum a_i)*(\sum b_i)^2)$</p>
-<p><strong>做法二</strong>：生成函数</p>
-<p>对于本做法，恰好到达指每个元素都是bi次出现，则写出答案的指数型生成函数<br>$$<br>计算至少一个元素没有出现bi次的概率之和，F=e^x-\prod_i(e^x-\sum_{t&lt;b_i} p_i^t \frac{x^t}{t!}) \\<br>设卷出来的东西是若干个带系数的x^B e^{Cx},每个单项式对答案的贡献为 f(B,C)=\sum_{i=0}^{\infty}\frac{C^i}{i!} (i+B)! \\<br>无限和式考虑扰动法，(1-C)f(B,C)=\sum_{i=0}^{\infty} C^i*(i+B-1)^{\underline {B-1}}*B \\<br>f(0,C)=\frac{1}{1-C}，f(B,C)=\frac{B}{1-C}*f(B-1,C)，展开递推得f(B,C)=\frac{B!}{(1-C)^{B+1}} \\<br>复杂度瓶颈为展开多项式O(nBC)，与a无关<br>$$</p>
+<p>转移的复杂度为bi，故复杂度为$O((\sum a_i)*(\sum b_i)^2)$，<a href="https://atcoder.jp/contests/AGC038/submissions/7664409" target="_blank" rel="noopener">code</a></p>
+<p><strong>做法二</strong>：<a href="3e6e.html#概率生成函数">概率生成函数</a>，有经验的长者的首选<br>$f为恰结束g为未结束的OGF，f+g=zg+1,ans=f’(1)=g(1)=转OGF[e^z-\prod (e^{\frac{A_i}{S}z}-\sum_{j=0}^{B_i-1} \frac{(\frac{A_i}{S}z)^j}{j!}]并带入z=1$</p>
+<p>发现$e^z$会被消掉，背包求$z^ie^{\frac{j}{S} z}$的系数，复杂度为$O(B^2S)$，<a href="https://atcoder.jp/contests/AGC038/submissions/8817248" target="_blank" rel="noopener">code</a></p>
 
 </div></div>
-<p><strong>agc038F - Two Permutations </strong><a href="https://atcoder.jp/contests/agc038/submissions/7668518" target="_blank" rel="noopener">code</a></p>
+<p><strong>AGC038F - Two Permutations </strong><a href="https://atcoder.jp/contests/AGC038/submissions/7668518" target="_blank" rel="noopener">code</a></p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>注意到选择的形式很特殊：$i或P_i$，将P看做置换，则等价于一个若干个轮换的图，选择若干个轮换，将其改为$i \to i$</p>
 <p>注意到时限很大，考虑用最小割求解，对每个i分类讨论，因为决策是对于整个轮换的，所以要缩点保证依然是排列</p>
 <p>设P中轮换选的话在st集合不选ed，Q与其相反<br>$$<br>\begin{aligned}<br>&amp; 1)p_i=i=q_i，直接忽略,\\<br>&amp; 2)p_i=i\ne q_i，对q改则-1，st \to Q\\<br>&amp; 3)p_i\ne i = q_i，对p改则-1，P \to ed\\<br>&amp; 4)p_i=q_i \ne i，改的状态相同则-1（给原答案+1），P \leftrightarrow Q \\<br>&amp; 5)互不相同，都改则-1，P \to Q<br>\end{aligned}<br>$$<br>需要加个当前弧</p>
 
 </div></div>
-<h2 id="AGC039"><a href="#AGC039" class="headerlink" title="AGC039"></a>AGC039</h2><p><strong>agc039A - Connection and Disconnection</strong> <a href="https://atcoder.jp/contests/agc039/submissions/7867618" target="_blank" rel="noopener">code</a>，忘记判n=1；其实复制一遍会好写很多</p>
-<p><strong>agc039B - Graph Partition</strong> <a href="https://atcoder.jp/contests/agc039/submissions/7872182" target="_blank" rel="noopener">code</a>，只有偶环，这样搞肯定合法且是上界</p>
-<p><strong>agc039C - Division by Two with Something</strong></p>
+<h2 id="AGC039"><a href="#AGC039" class="headerlink" title="AGC039"></a><a href="https://atcoder.jp/contests/AGC039/tasks" target="_blank" rel="noopener">AGC039</a></h2><p><strong>AGC039A - Connection and Disconnection</strong> <a href="https://atcoder.jp/contests/AGC039/submissions/7867618" target="_blank" rel="noopener">code</a>，忘记判n=1；其实复制一遍会好写很多</p>
+<p><strong>AGC039B - Graph Partition</strong> <a href="https://atcoder.jp/contests/AGC039/submissions/7872182" target="_blank" rel="noopener">code</a>，只有偶环，这样搞肯定合法且是上界</p>
+<p><strong>AGC039C - Division by Two with Something</strong></p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>注意到每个数都能被到达，所以一定是若干个环组成，考虑如何计算一个数所在环的环长</p>
 <p>转化一下操作，每次就是把最后一个字符0/1去掉并在最前面加上1/0</p>
@@ -670,24 +691,24 @@
 <p>做2n次肯定能回到自己，考虑更短的那些有什么特性，欢乐玩耍一下发现：rev(A)+A一定存在一个循环节（也是环长）2d，并且$\frac{2n}{2d}$一定是奇数（否则断点都在串里面，等价于rev(A)=A，显然不可能），而且这个2d一定形如B+rev(B)</p>
 <p>考虑枚举d求有$f(d)$个串满足存在循环节2d（环长可能是d的约数*2，莫反解决）</p>
 <p>注意到确定了d和B整个串就确定了，而B是受到题目中上界的限制，</p>
-<p>对于每个d，随便判一下就能求出有多少个合法的B，复杂度不超过$O(n^{3/2})$，<a href="https://atcoder.jp/contests/agc039/submissions/7885575" target="_blank" rel="noopener">code</a></p>
+<p>对于每个d，随便判一下就能求出有多少个合法的B，复杂度不超过$O(n^{3/2})$，<a href="https://atcoder.jp/contests/AGC039/submissions/7885575" target="_blank" rel="noopener">code</a></p>
 
 </div></div>
-<p><strong>agc039 D - Incenters </strong></p>
+<p><strong>AGC039 D - Incenters </strong></p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p><a href="7158.html">三角形五心复习</a></p>
 <p>那么现在就是求圆弧中点形成三点坐标之和，贡献拆开，枚举两点i和j，统计中间圆弧中点被统计次数，讨论一下在哪一侧即可</p>
-<p>$O(n^2)$，<a href="https://atcoder.jp/contests/agc039/submissions/7886168" target="_blank" rel="noopener">code</a></p>
+<p>$O(n^2)$，<a href="https://atcoder.jp/contests/AGC039/submissions/7886168" target="_blank" rel="noopener">code</a></p>
 
 </div></div>
-<p><strong>agc039 E - Pairing Points </strong></p>
+<p><strong>AGC039 E - Pairing Points </strong></p>
 <p>题意补充：所谓树形结构，考虑的是线不成环，跟点没关系</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>考虑怎么理解、应用直线上的树形结构；特判n=1后相邻不能连边</p>
-<p>设$1 \to pp$为根，画出若干条一级孩子，你发现这些孩子的子树用的点一定是连续的两个区间<br>$$<br>设f(l,r,k)表示l到r区间的点，并且k号点向区间外配对，ans=\sum_{pp} f(2,2n,pp) \\<br>f(l,r,k)=\sum_{x=l}^{k-1} \sum_{y=k+1}^r [(x \to y) \in Edges]<br>\sum_{a=x}^{k-1} \sum_{b=k+1}^y f(l,a,x)*f(a+1,b-1,k)*f(b,r,y)<br>$$<br>$O(n^7)$且常数很小，实际跑得飞快，<a href="https://atcoder.jp/contests/agc039/submissions/7903895" target="_blank" rel="noopener">code</a></p>
+<p>设$1 \to pp$为根，画出若干条一级孩子，你发现这些孩子的子树用的点一定是连续的两个区间<br>$$<br>设f(l,r,k)表示l到r区间的点，并且k号点向区间外配对，ans=\sum_{pp} f(2,2n,pp) \\<br>f(l,r,k)=\sum_{x=l}^{k-1} \sum_{y=k+1}^r [(x \to y) \in Edges]<br>\sum_{a=x}^{k-1} \sum_{b=k+1}^y f(l,a,x)*f(a+1,b-1,k)*f(b,r,y)<br>$$<br>$O(n^7)$且常数很小，实际跑得飞快，<a href="https://atcoder.jp/contests/AGC039/submissions/7903895" target="_blank" rel="noopener">code</a></p>
 
 </div></div>
-<p><strong>agc039 F - Min Product Sum  </strong></p>
+<p><strong>AGC039 F - Min Product Sum  </strong></p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>题意转化，对于矩阵A的权值，其实就等价于填一个B满足$B[i][j] \le min(A[i][1..m],A[1..n][j])$的方案数</p>
 <p>每个位置都考虑其行列有点恶心，再转化一下，$B[i][1..m] \le min\ A[i,1..m],B[1..n][j] \le min\ A[1..n][j]$</p>
@@ -697,6 +718,42 @@
 <p>并没有看懂<a href="https://www.cnblogs.com/weiyanpeng/p/11629015.html" target="_blank" rel="noopener">这个做法</a></p>
 
 </div></div>
+<h2 id="AGC040"><a href="#AGC040" class="headerlink" title="AGC040"></a><a href="https://atcoder.jp/contests/AGC040/tasks" target="_blank" rel="noopener">AGC040</a></h2><p><strong>AGC040A - &gt;&lt;</strong> <a href="https://atcoder.jp/contests/AGC040/submissions/8325744" target="_blank" rel="noopener">code</a></p>
+<p><strong>AGC040B - Two Contests</strong> <a href="https://atcoder.jp/contests/AGC040/submissions/8326605" target="_blank" rel="noopener">code</a></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>按照左端点排序后枚举左端点较小的那个集合的左端点，然后考虑谁负责肝那个最小的右端点</p>
+
+</div></div>
+<p><strong>AGC040C - Division by Two with Something</strong> <a href="https://atcoder.jp/contests/AGC040/submissions/8334412" target="_blank" rel="noopener">code</a></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>肯定要先想清楚，串合法的充要条件</p>
+<p>每次删掉连续的两个格子，考虑黑白染色，那么将黑色格子上的A改成B，B改成A，规则改成不能删除AA、BB</p>
+<p>这个改变初看没啥，但细想一下你会发现后面没有难点了</p>
+<p>我们肯定希望A和B消，搞不定的就C帮忙消，所以显然有个必要条件：$C \ge |A-B|$</p>
+<p>思考一下你会发现其实这个条件是也是充分的，可以感性理解，于是相当于$\sum_x \sum_y [|x-y| \le n-x-y] \frac{n!}{x!y!(n-x-y)!}$</p>
+<p>分类讨论一下，发现其实就是$\sum_{x=0}^{n/2} \sum_{y=0}^{n/2} \frac{n!}{x!y!(n-x-y)!}=\sum_{x=0}^{n/2} \frac{n^{\overline x}}{x!} (\sum_{y=0}^{n/2} C_{n-x}^y)$，可以用$C_n^m=C_{n-1}^{m-1}+C_{n-1}^m$，设后面部分为now，则$now(x)=2now(x+1)-C_{n-x-1}^{n/2}$，从大往小枚举x计算即可，$O(n)$</p>
+<p>upd：我是脑残吗？x和y不可能同时比n/2大，直接减去各自非负情况就好了，是独立的……</p>
+
+</div></div>
+<p><strong>AGC040D - Balance Beam</strong> ，注意选点是实数点，<a href="https://atcoder.jp/contests/AGC040/submissions/8390489" target="_blank" rel="noopener">code</a></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>如果已知排列方式，那么Ringo能选的让Snuke胜利的点一定是一段前缀，设最大能选点为p，那么$ans=p/n$</p>
+<p>注意到选的是实数点，考虑二维折线图，x轴为距离，y轴为时间（设$S=\sum_{i=1}^n a_i$），那么只要两人的折线有超过一个交点，就能将Ringo的折线竖直向下平移，则Ringo的折线与x轴交点就是$(p,0)$</p>
+<p>考虑两折线只有一个交点怎么利用，考虑用折线C表示一种方案：从$(p,0)$出发，先按斜率b走，到交点的时候按照斜率a走，最后到达$(n,S)$，这个C的优点主要在于终点是确定的，而且因为恰有一个交点一定能去到。</p>
+<p>于是就好做多了，既然开始和结束的y坐标都固定而要最大化起点的x坐标，肯定是选尽量少的线段让y快速上升（线段数决定p的整数部分，第二关键字为上升量决定p的小数部分），枚举k表示$(p,0)$在线段k上，而一条线段放在右边的最大贡献显然是$max(a_i,b_i)$，而这个上界是可以达到的，将想要a的放交点右边，其他放交点左边就行了</p>
+<p>于是枚举k，二分一下最小的p，使得$b_k+\sum max(a_i,b_i) \ge S$</p>
+
+</div></div>
+<p><strong>AGC040E - Prefix Suffix Addition</strong> <a href="https://atcoder.jp/contests/AGC040/submissions/8391298" target="_blank" rel="noopener">code</a></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>如果只有操作1，显然答案为$\sum_{i=0}^n A_i&gt;A_{i+1}$，同理只有操作2，答案为$\sum_{i=0}^n A_i&lt;A_{i+1}$，于是考虑每个数$A_i=x_i+y_i$表示两种操作分别的贡献，然后$val=\sum x_i&gt;x_{i+1}+\sum y_i&lt;y_{i+1}$，问一种拆分最小化val</p>
+<p>注意到现在权值的计算只和相邻两项有关，明显考虑</p>
+<p>$dp(i,x_i)=minval,dp(i+1,x_{i+1})=min\ dp(i,x_i)+[x_{i+1}&lt;x_i]+[x_{i+1}&lt;A_{i+1}+x_i-A_i]$</p>
+<p>观察一下这个dp形式，你发现他就是$A_i$个函数min在一起，这些函数的是一段x+2，一段x+1，一段x这样的形式</p>
+<p>然后相同值的一段，只有最小那个x是有用的，用它给后面转移就好了</p>
+
+</div></div>
+<p><strong>AGC040F - Two Pieces </strong> 咕咕咕</p>
 
       
     </div>
@@ -710,21 +767,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3b5e.html" rel="bookmark">【OI之路】03数学-8反演与容斥</a></div>
+      <div class="popular-posts-title"><a href="/posts/3b5e.html" rel="bookmark">「OI之路」03数学-8反演与容斥</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d84e.html" rel="bookmark">【UNR1】合唱队形</a></div>
+      <div class="popular-posts-title"><a href="/posts/d84e.html" rel="bookmark">「UNR1」合唱队形</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/1e94.html" rel="bookmark">【HAOI2015】按位或</a></div>
+      <div class="popular-posts-title"><a href="/posts/1e94.html" rel="bookmark">「HAOI2015」按位或</a></div>
       
     </li>
   
@@ -794,8 +851,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/e1875d00.html" rel="next" title="AGC001到010">
-                <i class="fa fa-chevron-left"></i> AGC001到010
+              <a href="/posts/6000e5d.html" rel="next" title="AGC011到020">
+                <i class="fa fa-chevron-left"></i> AGC011到020
               </a>
             
           </div>
@@ -804,8 +861,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/b5b79302.html" rel="prev" title="code festival 2017 qualb题解">
-                code festival 2017 qualb题解 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/e1875d00.html" rel="prev" title="AGC001到010">
+                AGC001到010 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -883,7 +940,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -908,7 +965,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1317,7 +1376,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1380,7 +1443,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#5-10"><span class="nav-text">5/10</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC031"><span class="nav-text">AGC031</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC032"><span class="nav-text">AGC032</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC037"><span class="nav-text">AGC037</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC038"><span class="nav-text">AGC038</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC039"><span class="nav-text">AGC039</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#6-10"><span class="nav-text">6/10</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC031"><span class="nav-text">AGC031</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC032"><span class="nav-text">AGC032</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC033"><span class="nav-text">AGC033</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC034"><span class="nav-text">AGC034</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC035"><span class="nav-text">AGC035</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC036"><span class="nav-text">AGC036</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC037"><span class="nav-text">AGC037</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC038"><span class="nav-text">AGC038</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC039"><span class="nav-text">AGC039</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC040"><span class="nav-text">AGC040</span></a></li></ol></li></ol></div>
             
 
           </div>

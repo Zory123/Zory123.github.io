@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeGDOI2018 D1T2（模数不固定）51nod1357">
 <meta name="keywords" content="贪心,难度2,差分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【GDOI2018 D1T2】【51nod1357】密码锁">
+<meta property="og:title" content="「GDOI2018 D1T2」「51nod1357」密码锁">
 <meta property="og:url" content="http://zory.ink/posts/f4f8.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeGDOI2018 D1T2（模数不固定）51nod1357">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【GDOI2018 D1T2】【51nod1357】密码锁">
+<meta name="twitter:title" content="「GDOI2018 D1T2」「51nod1357」密码锁">
 <meta name="twitter:description" content="Source and JudgeGDOI2018 D1T2（模数不固定）51nod1357">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【GDOI2018 D1T2】【51nod1357】密码锁 | Zory的个人博客</title>
+  <title>「GDOI2018 D1T2」「51nod1357」密码锁 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【GDOI2018 D1T2】【51nod1357】密码锁
+          <h2 class="post-title" itemprop="name headline">「GDOI2018 D1T2」「51nod1357」密码锁
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:48" itemprop="dateModified" datetime="2019-12-01T10:18:48+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/f4f8.html" class="post-meta-item leancloud_visitors" data-flag-title="【GDOI2018 D1T2】【51nod1357】密码锁">
+            <span id="/posts/f4f8.html" class="post-meta-item leancloud_visitors" data-flag-title="「GDOI2018 D1T2」「51nod1357」密码锁">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -612,7 +612,7 @@
 
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>GDOI2018 D1T2（模数不固定）<br><a href="https://www.51nod.com/onlineJudge/questionCode.html#!problemId=1357" target="_blank" rel="noopener">51nod1357</a><br><a id="more"></a></p>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-red"><strong>【Description】</strong><br>有一个密码锁，其有N位，每一位可以是一个0~9的数字，开启密码锁需要将锁上每一位数字转到解锁密码一致。这个类似你旅行用的行李箱上的密码锁，密码锁的每一位其实是一个圆形转盘，上面依次标了0,1，…9,对每一位来说可以正向或者逆向拨动，正向拨动时原有数字x会变成新的数字(x+1 mod 10),例如1-&gt;2，2-&gt;3，9-&gt;0；同理逆向拨动变为(x-1 mod 10)即9-&gt;8,5-&gt;4,0-&gt;9。定义对密码锁的一次操作：选择一个连续的区间[L,R]，可以只包含一位即L==R，将这个区间的所有数字正向拨动或逆向拨动一次，注意要么全部正着拨，要么全逆着。例如：12397正向后变成23408，逆向后变成01286。给出密码锁初始和解锁需要的终止状态，问最少多少次操作能解锁。<br><strong>【Input】</strong><br>多组测试数据，第一行一个整数T，表示测试数据数量<br>每组测试数据有相同的结构构成：<br>每组数据有两行构成，第一行是密码锁的初始状态S，第二行是解锁的终止状态E<br><strong>【Output】</strong><br>每组数据一行输出，即最少需要的操作数。<br><strong>【Limited conditions】</strong><br>1&lt;=len(S)=len(E)&lt;=2500,且都由0~9构成<br><strong>【Sample input】</strong><br>10<br>607<br>607<br>1234<br>4567<br>3789656<br>5159478<br>92778243285457494629783933521676060327742645358293<br>73909905995243281321698807518024164499178500552788<br>4412418167031360587403146933365311425441936961077<br>8733406822463469353946356056711090437786504862201<br>123<br>112<br>1<br>7<br>020<br>909<br>4423232218340<br>6290421476245<br>0183785<br>0000000<br><strong>【Sample output】</strong><br>0<br>3<br>10<br>66<br>28<br>1<br>4<br>2<br>18<br>11<br><strong>【Sample explanation】</strong><br>无<br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-red"><strong>「Description」</strong><br>有一个密码锁，其有N位，每一位可以是一个0~9的数字，开启密码锁需要将锁上每一位数字转到解锁密码一致。这个类似你旅行用的行李箱上的密码锁，密码锁的每一位其实是一个圆形转盘，上面依次标了0,1，…9,对每一位来说可以正向或者逆向拨动，正向拨动时原有数字x会变成新的数字(x+1 mod 10),例如1-&gt;2，2-&gt;3，9-&gt;0；同理逆向拨动变为(x-1 mod 10)即9-&gt;8,5-&gt;4,0-&gt;9。定义对密码锁的一次操作：选择一个连续的区间[L,R]，可以只包含一位即L==R，将这个区间的所有数字正向拨动或逆向拨动一次，注意要么全部正着拨，要么全逆着。例如：12397正向后变成23408，逆向后变成01286。给出密码锁初始和解锁需要的终止状态，问最少多少次操作能解锁。<br><strong>「Input」</strong><br>多组测试数据，第一行一个整数T，表示测试数据数量<br>每组测试数据有相同的结构构成：<br>每组数据有两行构成，第一行是密码锁的初始状态S，第二行是解锁的终止状态E<br><strong>「Output」</strong><br>每组数据一行输出，即最少需要的操作数。<br><strong>「Limited conditions」</strong><br>1&lt;=len(S)=len(E)&lt;=2500,且都由0~9构成<br><strong>「Sample input」</strong><br>10<br>607<br>607<br>1234<br>4567<br>3789656<br>5159478<br>92778243285457494629783933521676060327742645358293<br>73909905995243281321698807518024164499178500552788<br>4412418167031360587403146933365311425441936961077<br>8733406822463469353946356056711090437786504862201<br>123<br>112<br>1<br>7<br>020<br>909<br>4423232218340<br>6290421476245<br>0183785<br>0000000<br><strong>「Sample output」</strong><br>0<br>3<br>10<br>66<br>28<br>1<br>4<br>2<br>18<br>11<br><strong>「Sample explanation」</strong><br>无<br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>2h<br>这个是比赛的题目，但当时没有做出来<br>然后因为讲课的时候不是那么明确，想做一做（就是想报仇的心态）<br>在知乎上找到了类似的题目，不过都没人做<br>wa了很多次……<br>所以数据特别多，是我买的几组数据</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -641,28 +641,28 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d2e5.html" rel="bookmark">【Luogu1514】引水入城</a></div>
+      <div class="popular-posts-title"><a href="/posts/d2e5.html" rel="bookmark">「Luogu1514」引水入城</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">【CF553E】Kyoya and Train</a></div>
+      <div class="popular-posts-title"><a href="/posts/2d0202e9.html" rel="bookmark">【OI之路】贪心</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/2c33.html" rel="bookmark">【Wf2016】Swap Space【PA2014】Bohater</a></div>
+      <div class="popular-posts-title"><a href="/posts/2c33.html" rel="bookmark">「Wf2016」Swap Space「PA2014」Bohater</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">「POJ2057」The Lost House</a></div>
       
     </li>
   
@@ -676,7 +676,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/a4aa.html" rel="bookmark">【Bzoj4069】【Luogu3646】巴厘岛的雕塑</a></div>
+      <div class="popular-posts-title"><a href="/posts/a4aa.html" rel="bookmark">「Bzoj4069」「Luogu3646」巴厘岛的雕塑</a></div>
       
     </li>
   
@@ -694,7 +694,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/f4f8.html" title="【GDOI2018 D1T2】【51nod1357】密码锁">http://zory.ink/posts/f4f8.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/f4f8.html" title="「GDOI2018 D1T2」「51nod1357」密码锁">http://zory.ink/posts/f4f8.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -736,8 +736,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/6c7a.html" rel="next" title="【Sdoi2016】数字配对">
-                <i class="fa fa-chevron-left"></i> 【Sdoi2016】数字配对
+              <a href="/posts/6c7a.html" rel="next" title="「Sdoi2016」数字配对">
+                <i class="fa fa-chevron-left"></i> 「Sdoi2016」数字配对
               </a>
             
           </div>
@@ -746,8 +746,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/bc9.html" rel="prev" title="【NOIP14 D2T2】寻找道路">
-                【NOIP14 D2T2】寻找道路 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/bc9.html" rel="prev" title="「NOIP14 D2T2」寻找道路">
+                「NOIP14 D2T2」寻找道路 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -825,7 +825,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -850,7 +850,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1259,7 +1261,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

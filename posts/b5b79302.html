@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Sourcecode festival 2017 qualb">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-22T00:42:56.296Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="code festival 2017 qualb题解">
 <meta name="twitter:description" content="Sourcecode festival 2017 qualb">
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-22 08:42:56" itemprop="dateModified" datetime="2019-09-22T08:42:56+08:00">2019-09-22</time>
+                <time title="修改时间：2019-12-01 10:18:51" itemprop="dateModified" datetime="2019-12-01T10:18:51+08:00">2019-12-01</time>
               </span>
             
           
@@ -615,7 +615,7 @@
 <h2 id="E"><a href="#E" class="headerlink" title="E"></a>E</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>此题不难，网上的题解搞得玄乎得一匹都不知道在说啥qwq，<a href="https://atcoder.jp/contests/code-festival-2017-qualb/submissions/7606714" target="_blank" rel="noopener">code</a></p>
 <ol>
-<li><p>浅层分析：注意到一定存在一种方案，使得使用s或t的时候是为蓝色球服务的，所以我们更关心某一时刻能否选蓝色；而这个也是分阶段的，就是【仅红】、【t蓝】、【仅红】、【s蓝】、【仅红】；然后由贪心，我们可以强制t为第一次取蓝球的位置，同时这个球也是最前面的蓝球</p>
+<li><p>浅层分析：注意到一定存在一种方案，使得使用s或t的时候是为蓝色球服务的，所以我们更关心某一时刻能否选蓝色；而这个也是分阶段的，就是「仅红」、「t蓝」、「仅红」、「s蓝」、「仅红」；然后由贪心，我们可以强制t为第一次取蓝球的位置，同时这个球也是最前面的蓝球</p>
 </li>
 <li><p>考虑求$solve(A,B)$，枚举$t=1..A+1$，那么序列以$A+1-t$ 个红球和$1$个蓝球开始，不重不漏；此时剩下$t-1$个红球和$B-1$个蓝球，随后的$B-1$次任意选颜色（可能红色用完）；设最后剩下共$t-1$个球，转化为子问题</p>
 </li>
@@ -671,8 +671,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/127faea6.html" rel="next" title="AGC031到040">
-                <i class="fa fa-chevron-left"></i> AGC031到040
+              <a href="/posts/e1875d00.html" rel="next" title="AGC001到010">
+                <i class="fa fa-chevron-left"></i> AGC001到010
               </a>
             
           </div>
@@ -760,7 +760,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -785,7 +785,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1194,7 +1196,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

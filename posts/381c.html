@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeNOIAC31">
 <meta name="keywords" content="dp,难度2,好题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【NOIAC31】MST">
+<meta property="og:title" content="「NOIAC31」MST">
 <meta property="og:url" content="http://zory.ink/posts/381c.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIAC31">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-07T09:02:07.441Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【NOIAC31】MST">
+<meta name="twitter:title" content="「NOIAC31」MST">
 <meta name="twitter:description" content="Source and JudgeNOIAC31">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【NOIAC31】MST | Zory的个人博客</title>
+  <title>「NOIAC31」MST | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【NOIAC31】MST
+          <h2 class="post-title" itemprop="name headline">「NOIAC31」MST
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-07 17:02:07" itemprop="dateModified" datetime="2019-09-07T17:02:07+08:00">2019-09-07</time>
+                <time title="修改时间：2019-12-01 10:18:46" itemprop="dateModified" datetime="2019-12-01T10:18:46+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/381c.html" class="post-meta-item leancloud_visitors" data-flag-title="【NOIAC31】MST">
+            <span id="/posts/381c.html" class="post-meta-item leancloud_visitors" data-flag-title="「NOIAC31」MST">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,7 +615,7 @@
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>3h</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>神仙题，%出题人<br>这道题我能非常认同其做法，但我深知不是我能自己想出来的范围内</p>
-<p>如果我按顺序枚举每一条边，那么非树边一定连接同一个块，而树边连接不同两个块<br>因为每个节点都是一样的，用【每个大小的连通块数量】表示，这个状态总数是37338<br>用这个状态的出现编号作为hash，那么就可以用这个来线性dp<br>把状态按照【越大连通块是越前的关键字】排序，这样就能保证线性性<br>然后顺序枚举每个状态，往后继状态转移<br>为了方便找到对应的hash，建议用一个trie，因为map是其15倍（如果hash不稳……）</p>
+<p>如果我按顺序枚举每一条边，那么非树边一定连接同一个块，而树边连接不同两个块<br>因为每个节点都是一样的，用「每个大小的连通块数量」表示，这个状态总数是37338<br>用这个状态的出现编号作为hash，那么就可以用这个来线性dp<br>把状态按照「越大连通块是越前的关键字」排序，这样就能保证线性性<br>然后顺序枚举每个状态，往后继状态转移<br>为了方便找到对应的hash，建议用一个trie，因为map是其15倍（如果hash不稳……）</p>
 <p>现在是 $O(n^4 \times 状态)$ 的，分情况加速<br>考虑树边，枚举两个连通块然后合并起来，在这个过程中显然和具体边无关<br>所以可以对于每个状态预处理，记录能否转移以及转移系数（这个自行推算）<br>考虑非树边，因为是一个完全图，我们需要知道有哪些地方还能加入边<br>注意到加入之后状态的表示没有变化，所以其实跟具体在哪个加入是没有关系的<br>所以说，可以动态维护一个全局num数组，表示每个状态在当前可以加入的空位数量<br>这个东西的维护可以自行推导</p>
 <p>注意到一个重要的细节，也是我之前的疑惑之处<br>就是我原本认为这个num应当是状态的一部分，但显然这样会炸<br>其实你会发现，在外层枚举了边数之后，某个状态的num其实是确定的（从num的维护可以看出）</p>
 <p>然后这道题就做了两天……</p>
@@ -641,42 +641,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/dae0.html" rel="bookmark">【Bzoj1010】【Luogu3195】玩具装箱</a></div>
+      <div class="popular-posts-title"><a href="/posts/dae0.html" rel="bookmark">「Bzoj1010」「Luogu3195」玩具装箱</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3455.html" rel="bookmark">【abc134F】Permutation Oddness</a></div>
+      <div class="popular-posts-title"><a href="/posts/3455.html" rel="bookmark">「abc134F」Permutation Oddness</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ae99.html" rel="bookmark">【CF960F】Pathwalks</a></div>
+      <div class="popular-posts-title"><a href="/posts/ae99.html" rel="bookmark">「CF960F」Pathwalks</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">「POJ2057」The Lost House</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d879.html" rel="bookmark">【CF1039D】You Are Given a Tree</a></div>
+      <div class="popular-posts-title"><a href="/posts/d879.html" rel="bookmark">「CF1039D」You Are Given a Tree</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7019.html" rel="bookmark">【HAOI2018】奇怪的背包</a></div>
+      <div class="popular-posts-title"><a href="/posts/7019.html" rel="bookmark">「HAOI2018」奇怪的背包</a></div>
       
     </li>
   
@@ -694,7 +694,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/381c.html" title="【NOIAC31】MST">http://zory.ink/posts/381c.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/381c.html" title="「NOIAC31」MST">http://zory.ink/posts/381c.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -736,8 +736,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/bfa5.html" rel="next" title="【NOIAC32】Sort">
-                <i class="fa fa-chevron-left"></i> 【NOIAC32】Sort
+              <a href="/posts/bfa5.html" rel="next" title="「NOIAC32」Sort">
+                <i class="fa fa-chevron-left"></i> 「NOIAC32」Sort
               </a>
             
           </div>
@@ -746,8 +746,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/51ff.html" rel="prev" title="【NOI2006】网络收费">
-                【NOI2006】网络收费 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/51ff.html" rel="prev" title="「NOI2006」网络收费">
+                「NOI2006」网络收费 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -825,7 +825,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -850,7 +850,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1259,7 +1261,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

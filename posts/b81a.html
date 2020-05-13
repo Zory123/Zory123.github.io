@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeNOIP2011 提高组 D2T3Luogu1315Caioj1550">
 <meta name="keywords" content="模拟,贪心,难度2,好题,坑,费用流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Luogu1315】观光公交">
+<meta property="og:title" content="「Luogu1315」观光公交">
 <meta property="og:url" content="http://zory.ink/posts/b81a.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2011 提高组 D2T3Luogu1315Caioj1550">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Luogu1315】观光公交">
+<meta name="twitter:title" content="「Luogu1315」观光公交">
 <meta name="twitter:description" content="Source and JudgeNOIP2011 提高组 D2T3Luogu1315Caioj1550">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【Luogu1315】观光公交 | Zory的个人博客</title>
+  <title>「Luogu1315」观光公交 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Luogu1315】观光公交
+          <h2 class="post-title" itemprop="name headline">「Luogu1315」观光公交
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:48" itemprop="dateModified" datetime="2019-12-01T10:18:48+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/b81a.html" class="post-meta-item leancloud_visitors" data-flag-title="【Luogu1315】观光公交">
+            <span id="/posts/b81a.html" class="post-meta-item leancloud_visitors" data-flag-title="「Luogu1315」观光公交">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -613,7 +613,7 @@
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOIP2011 提高组 D2T3<br><a href="https://www.luogu.org/problemnew/show/P1315" target="_blank" rel="noopener">Luogu1315</a><br><a href="http://caioj.cn/problem.php?id=1550" target="_blank" rel="noopener">Caioj1550</a></p>
 <a id="more"></a>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-green"><strong>【Brief description】</strong><br><br>风景迷人的小城Y 市，拥有n 个美丽的景点。由于慕名而来的游客越来越多，Y 市特意安排了一辆观光公交车，为游客提供更便捷的交通服务。观光公交车在第 0 分钟出现在 1号景点，随后依次前往 2、3 、4 ……n 号景点。从第 i 号景点开到第 i+1 号景点需要 Di 分钟。任意时刻，公交车只能往前开，或在景点处等待。<br><br>设共有m 个游客，每位游客需要乘车1 次从一个景点到达另一个景点，第i 位游客在Ti 分钟来到景点 Ai ，希望乘车前往景点Bi （Ai&lt;Bi ）。为了使所有乘客都能顺利到达目的地，公交车在每站都必须等待需要从该景点出发的所有乘客都上车后才能出发开往下一景点。<br><br>假设乘客上下车不需要时间。<br><br>一个乘客的旅行时间，等于他到达目的地的时刻减去他来到出发地的时刻。因为只有一辆观光车，有时候还要停下来等其他乘客，乘客们纷纷抱怨旅行时间太长了。于是聪明的司机ZZ给公交车安装了 k 个氮气加速器，每使用一个加速器，可以使其中一个 Di 减1 。对于同一个Di 可以重复使用加速器，但是必须保证使用后Di 大于等于0 。<br><br>那么ZZ该如何安排使用加速器，才能使所有乘客的旅行时间总和最小？<br><br><strong>【Input】</strong><br><br>第 1 行是3 个整数n, m, k ，每两个整数之间用一个空格隔开。分别表示景点数、乘客数和氮气加速器个数。<br><br>第 2 行是n-1 个整数，每两个整数之间用一个空格隔开，第i 个数表示从第i 个景点开往第i+1 个景点所需要的时间，即 Di 。<br><br>第 3 行至m+2 行每行 3 个整数 Ti, Ai, Bi，每两个整数之间用一个空格隔开。<br><br>第 i+2 行表示第i 位乘客来到出发景点的时刻，出发的景点编号和到达的景点编号。<br><br><strong>【Output】</strong><br><br>共一行，包含一个整数，表示最小的总旅行时间。<br><br><strong>【Limited conditions】</strong><br><br>对于10% 的数据，k=0 ；<br><br>对于20% 的数据，k=1 ；<br><br>对于40% 的数据，2 ≤ n ≤ 50，1 ≤ m ≤ 1,000，0 ≤ k ≤ 20，0 ≤ Di ≤ 10，0 ≤ T i ≤ 500；<br><br>对于60% 的数据，1 ≤ n ≤ 100，1 ≤ m ≤ 1,000，0 ≤ k ≤ 100 ，0 ≤ Di ≤ 100，0 ≤ T i ≤ 10,000 ；<br><br>对于100%的数据，1 ≤ n ≤ 1,000，1 ≤ m ≤ 10,000 ，0 ≤ k ≤ 100,000，0 ≤ Di ≤ 100 ，0 ≤ T i ≤ 100,000。<br><br><strong>【Sample input】</strong><br><br>3 3 2<br>1 4<br>0 1 3<br>1 1 2<br>5 2 3<br><br><strong>【Sample output】</strong><br><br>10<br><br><strong>【Sample explanation】</strong><br><br>对D2 使用2 个加速器，从2 号景点到 3 号景点时间变为 2 分钟。<br><br>公交车在第1 分钟从1 号景点出发，第2 分钟到达2 号景点，第5 分钟从2 号景点出发，第7 分钟到达 3 号景点。<br><br>第1 个旅客旅行时间 7-0 = 7 分钟。<br><br>第2 个旅客旅行时间 2-1 = 1 分钟。<br><br>第3 个旅客旅行时间 7-5 = 2 分钟。<br><br>总时间 7+1+2 = 10分钟。<br><br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-green"><strong>「Brief description」</strong><br><br>风景迷人的小城Y 市，拥有n 个美丽的景点。由于慕名而来的游客越来越多，Y 市特意安排了一辆观光公交车，为游客提供更便捷的交通服务。观光公交车在第 0 分钟出现在 1号景点，随后依次前往 2、3 、4 ……n 号景点。从第 i 号景点开到第 i+1 号景点需要 Di 分钟。任意时刻，公交车只能往前开，或在景点处等待。<br><br>设共有m 个游客，每位游客需要乘车1 次从一个景点到达另一个景点，第i 位游客在Ti 分钟来到景点 Ai ，希望乘车前往景点Bi （Ai&lt;Bi ）。为了使所有乘客都能顺利到达目的地，公交车在每站都必须等待需要从该景点出发的所有乘客都上车后才能出发开往下一景点。<br><br>假设乘客上下车不需要时间。<br><br>一个乘客的旅行时间，等于他到达目的地的时刻减去他来到出发地的时刻。因为只有一辆观光车，有时候还要停下来等其他乘客，乘客们纷纷抱怨旅行时间太长了。于是聪明的司机ZZ给公交车安装了 k 个氮气加速器，每使用一个加速器，可以使其中一个 Di 减1 。对于同一个Di 可以重复使用加速器，但是必须保证使用后Di 大于等于0 。<br><br>那么ZZ该如何安排使用加速器，才能使所有乘客的旅行时间总和最小？<br><br><strong>「Input」</strong><br><br>第 1 行是3 个整数n, m, k ，每两个整数之间用一个空格隔开。分别表示景点数、乘客数和氮气加速器个数。<br><br>第 2 行是n-1 个整数，每两个整数之间用一个空格隔开，第i 个数表示从第i 个景点开往第i+1 个景点所需要的时间，即 Di 。<br><br>第 3 行至m+2 行每行 3 个整数 Ti, Ai, Bi，每两个整数之间用一个空格隔开。<br><br>第 i+2 行表示第i 位乘客来到出发景点的时刻，出发的景点编号和到达的景点编号。<br><br><strong>「Output」</strong><br><br>共一行，包含一个整数，表示最小的总旅行时间。<br><br><strong>「Limited conditions」</strong><br><br>对于10% 的数据，k=0 ；<br><br>对于20% 的数据，k=1 ；<br><br>对于40% 的数据，2 ≤ n ≤ 50，1 ≤ m ≤ 1,000，0 ≤ k ≤ 20，0 ≤ Di ≤ 10，0 ≤ T i ≤ 500；<br><br>对于60% 的数据，1 ≤ n ≤ 100，1 ≤ m ≤ 1,000，0 ≤ k ≤ 100 ，0 ≤ Di ≤ 100，0 ≤ T i ≤ 10,000 ；<br><br>对于100%的数据，1 ≤ n ≤ 1,000，1 ≤ m ≤ 10,000 ，0 ≤ k ≤ 100,000，0 ≤ Di ≤ 100 ，0 ≤ T i ≤ 100,000。<br><br><strong>「Sample input」</strong><br><br>3 3 2<br>1 4<br>0 1 3<br>1 1 2<br>5 2 3<br><br><strong>「Sample output」</strong><br><br>10<br><br><strong>「Sample explanation」</strong><br><br>对D2 使用2 个加速器，从2 号景点到 3 号景点时间变为 2 分钟。<br><br>公交车在第1 分钟从1 号景点出发，第2 分钟到达2 号景点，第5 分钟从2 号景点出发，第7 分钟到达 3 号景点。<br><br>第1 个旅客旅行时间 7-0 = 7 分钟。<br><br>第2 个旅客旅行时间 2-1 = 1 分钟。<br><br>第3 个旅客旅行时间 7-5 = 2 分钟。<br><br>总时间 7+1+2 = 10分钟。<br><br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>6h</p>
 <h2 id="Analysis1"><a href="#Analysis1" class="headerlink" title="Analysis1"></a>Analysis1</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -623,7 +623,7 @@
 <p>$arr[ t]$=当前方案，开车到t点的时间=$max(arr[t-1],lst[t-1])+d[t]$</p>
 <p>那么思考在什么地方用加速器呢？可以考虑贪心一下</p>
 <p>假如要对$(t-1,t)$这条边加速，</p>
-<p>①$lst[t]\geq arr[t]$，则对于【不在i点下车的乘客】，旅行时间不变，贡献$tot[t]$</p>
+<p>①$lst[t]\geq arr[t]$，则对于「不在i点下车的乘客」，旅行时间不变，贡献$tot[t]$</p>
 <p>②$lst[t]&lt;arr[t]​$，贡献$\sum_{i=t}^{g[t]} tot[i]​$，g[t]是当前连续情况②的最后一个，因为一旦碰到①又要等了</p>
 <p>然后tot不变，可以搞个前缀和</p>
 <p>总结：把没有加速的答案先搞定，然后一个个贪心</p>
@@ -643,8 +643,8 @@
 <p>核心：</p>
 <p>一次加速器，碰到$lst[t]\geq arr[t]$也就是上面的情况①就会停止</p>
 <p>那么也就是说加速器个数超过$max(arr[i]-lst[i],0)$就停止影响</p>
-<p>那么考虑把每一个点拆成【到达】和【离开】</p>
-<p>然后用变化的【加速器分配方案】作为流量</p>
+<p>那么考虑把每一个点拆成「到达」和「离开」</p>
+<p>然后用变化的「加速器分配方案」作为流量</p>
 <p>则构图如下（i作为边i~i+1遍历）：</p>
 <table>
 <thead>
@@ -723,42 +723,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">「POJ2057」The Lost House</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">【CF11B】【51Nod1615】Jumping Jack</a></div>
+      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">「CF11B」「51Nod1615」Jumping Jack</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f1fd.html" rel="bookmark">【Luogu1081】开车旅行</a></div>
+      <div class="popular-posts-title"><a href="/posts/f1fd.html" rel="bookmark">「Luogu1081」开车旅行</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b7e3.html" rel="bookmark">【Luogu1051】篝火晚会</a></div>
+      <div class="popular-posts-title"><a href="/posts/b7e3.html" rel="bookmark">「Luogu1051」篝火晚会</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/6a62.html" rel="bookmark">【Luogu1092】虫食算</a></div>
+      <div class="popular-posts-title"><a href="/posts/6a62.html" rel="bookmark">「Luogu1092」虫食算</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ead0.html" rel="bookmark">【Luogu1075】靶形数独</a></div>
+      <div class="popular-posts-title"><a href="/posts/ead0.html" rel="bookmark">「Luogu1075」靶形数独</a></div>
       
     </li>
   
@@ -776,7 +776,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/b81a.html" title="【Luogu1315】观光公交">http://zory.ink/posts/b81a.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/b81a.html" title="「Luogu1315」观光公交">http://zory.ink/posts/b81a.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -824,8 +824,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/e6e5.html" rel="next" title="【Luogu1314】聪明的质监员">
-                <i class="fa fa-chevron-left"></i> 【Luogu1314】聪明的质监员
+              <a href="/posts/e6e5.html" rel="next" title="「Luogu1314」聪明的质监员">
+                <i class="fa fa-chevron-left"></i> 「Luogu1314」聪明的质监员
               </a>
             
           </div>
@@ -834,8 +834,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/745a.html" rel="prev" title="【Luogu1079】Vigenère密码">
-                【Luogu1079】Vigenère密码 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/745a.html" rel="prev" title="「Luogu1079」Vigenère密码">
+                「Luogu1079」Vigenère密码 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -913,7 +913,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -938,7 +938,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1347,7 +1349,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

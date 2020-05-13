@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeCF838-B">
 <meta name="keywords" content="线段树,难度2,树剖,dfs序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【CF838-B】Diverging Directions">
+<meta property="og:title" content="「CF838-B」Diverging Directions">
 <meta property="og:url" content="http://zory.ink/posts/b187.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeCF838-B">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【CF838-B】Diverging Directions">
+<meta name="twitter:title" content="「CF838-B」Diverging Directions">
 <meta name="twitter:description" content="Source and JudgeCF838-B">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【CF838-B】Diverging Directions | Zory的个人博客</title>
+  <title>「CF838-B」Diverging Directions | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【CF838-B】Diverging Directions
+          <h2 class="post-title" itemprop="name headline">「CF838-B」Diverging Directions
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:47" itemprop="dateModified" datetime="2019-12-01T10:18:47+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/b187.html" class="post-meta-item leancloud_visitors" data-flag-title="【CF838-B】Diverging Directions">
+            <span id="/posts/b187.html" class="post-meta-item leancloud_visitors" data-flag-title="「CF838-B」Diverging Directions">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -612,7 +612,7 @@
 
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p><a href="http://codeforces.com/problemset/problem/838/B" target="_blank" rel="noopener">CF838-B</a><br><a id="more"></a></p>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>【Description】</strong><br>西瓜们生活在编号 1⋯n 的 n个平行时空中，2n−2 台时光机将这些平行时空联系在一起。<br>一台时光机有 3个整数参数 u,v,t 表示从时空 u 可以花费 t 的时间穿梭到时空 v。<br>为了确保时空之间可以相互穿梭，同时方便作为现世的 1号时空的通行，西瓜们将这些时光机进行分工：前 n−1 台时光机确保从 1号时空可以直接 / 间接抵达任意时空，后 n−1台时光机负责从 2⋯n号时空<strong>直接</strong>返回 1号时空。<br><strong>【Input】</strong><br>第一行 3 个整数 n,q 分别表示 平行时空，操作 的个数。<br>接下来 2n−2 行，每行 3 个整数 u,v,t 表示一台时光机。<br>接下来 q 行，每行 3 个整数 id,x,y：<br>若 $id=1$，表示第 $x$ 台时光机的运行时间变成了 $y$。<br>若 $id=2$，表示当前有一个西瓜想要从时空 $x$ 穿梭到 时空 $y$；<br><strong>【Output】</strong><br>每次询问输出最短时间。<br><strong>【Limited conditions】</strong><br>n,q&lt;=2*10^6<br><strong>【Sample input】</strong><br>5 9<br>1 3 1<br>3 2 2<br>1 4 3<br>3 5 4<br>5 1 5<br>3 1 6<br>2 1 7<br>4 1 8<br>2 1 1<br>2 1 3<br>2 3 5<br>2 5 2<br>1 1 100<br>2 1 3<br>1 8 30<br>2 4 2<br>2 2 4<br><strong>【Sample output】</strong><br>0<br>1<br>4<br>8<br>100<br>132<br>10<br><strong>【Sample explanation】</strong><br>无<br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>「Description」</strong><br>西瓜们生活在编号 1⋯n 的 n个平行时空中，2n−2 台时光机将这些平行时空联系在一起。<br>一台时光机有 3个整数参数 u,v,t 表示从时空 u 可以花费 t 的时间穿梭到时空 v。<br>为了确保时空之间可以相互穿梭，同时方便作为现世的 1号时空的通行，西瓜们将这些时光机进行分工：前 n−1 台时光机确保从 1号时空可以直接 / 间接抵达任意时空，后 n−1台时光机负责从 2⋯n号时空<strong>直接</strong>返回 1号时空。<br><strong>「Input」</strong><br>第一行 3 个整数 n,q 分别表示 平行时空，操作 的个数。<br>接下来 2n−2 行，每行 3 个整数 u,v,t 表示一台时光机。<br>接下来 q 行，每行 3 个整数 id,x,y：<br>若 $id=1$，表示第 $x$ 台时光机的运行时间变成了 $y$。<br>若 $id=2$，表示当前有一个西瓜想要从时空 $x$ 穿梭到 时空 $y$；<br><strong>「Output」</strong><br>每次询问输出最短时间。<br><strong>「Limited conditions」</strong><br>n,q&lt;=2*10^6<br><strong>「Sample input」</strong><br>5 9<br>1 3 1<br>3 2 2<br>1 4 3<br>3 5 4<br>5 1 5<br>3 1 6<br>2 1 7<br>4 1 8<br>2 1 1<br>2 1 3<br>2 3 5<br>2 5 2<br>1 1 100<br>2 1 3<br>1 8 30<br>2 4 2<br>2 2 4<br><strong>「Sample output」</strong><br>0<br>1<br>4<br>8<br>100<br>132<br>10<br><strong>「Sample explanation」</strong><br>无<br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>1h</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -635,42 +635,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/cbab.html" rel="bookmark">【CF1017G】The Tree</a></div>
+      <div class="popular-posts-title"><a href="/posts/cbab.html" rel="bookmark">「CF1017G」The Tree</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/1613.html" rel="bookmark">【NOIP17 D2T3】列队</a></div>
+      <div class="popular-posts-title"><a href="/posts/1613.html" rel="bookmark">「NOIP17 D2T3」列队</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">【CF553E】Kyoya and Train</a></div>
+      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">「CF553E」Kyoya and Train</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/1ba5.html" rel="bookmark">【CF997E】Good Subsegments</a></div>
+      <div class="popular-posts-title"><a href="/posts/1ba5.html" rel="bookmark">「CF997E」Good Subsegments</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/31df.html" rel="bookmark">【SDOI2017】树点涂色</a></div>
+      <div class="popular-posts-title"><a href="/posts/31df.html" rel="bookmark">「SDOI2017」树点涂色</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/184e.html" rel="bookmark">【Bzoj1018】【Luogu4246】堵塞的交通</a></div>
+      <div class="popular-posts-title"><a href="/posts/184e.html" rel="bookmark">「Bzoj1018」「Luogu4246」堵塞的交通</a></div>
       
     </li>
   
@@ -688,7 +688,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/b187.html" title="【CF838-B】Diverging Directions">http://zory.ink/posts/b187.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/b187.html" title="「CF838-B」Diverging Directions">http://zory.ink/posts/b187.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -732,8 +732,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/f934.html" rel="next" title="【Caioj1178】最长共同前缀长度">
-                <i class="fa fa-chevron-left"></i> 【Caioj1178】最长共同前缀长度
+              <a href="/posts/f934.html" rel="next" title="「Caioj1178」最长共同前缀长度">
+                <i class="fa fa-chevron-left"></i> 「Caioj1178」最长共同前缀长度
               </a>
             
           </div>
@@ -742,8 +742,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/d692.html" rel="prev" title="【Bzoj5290】【Luogu4438】Hnoi2018道路">
-                【Bzoj5290】【Luogu4438】Hnoi2018道路 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/d692.html" rel="prev" title="「Bzoj5290」「Luogu4438」Hnoi2018道路">
+                「Bzoj5290」「Luogu4438」Hnoi2018道路 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -821,7 +821,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -846,7 +846,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1255,7 +1257,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

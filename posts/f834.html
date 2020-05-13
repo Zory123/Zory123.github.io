@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="集合幂级数 或者你可以直接称其为 FWT 以下主要是学习笔记（vfk在15年的论文）和自己的一些实验 所以下面的内容请配合论文来看，不然你可能会自闭的">
+  <meta name="description" content="集合幂级数">
 <meta name="keywords" content="精品文章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】03数学-11集合幂级数">
+<meta property="og:title" content="「OI之路」03数学-11集合幂级数">
 <meta property="og:url" content="http://zory.ink/posts/f834.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="集合幂级数 或者你可以直接称其为 FWT 以下主要是学习笔记（vfk在15年的论文）和自己的一些实验 所以下面的内容请配合论文来看，不然你可能会自闭的">
+<meta property="og:description" content="集合幂级数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-11T02:52:00.296Z">
+<meta property="og:updated_time" content="2020-05-01T14:18:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】03数学-11集合幂级数">
-<meta name="twitter:description" content="集合幂级数 或者你可以直接称其为 FWT 以下主要是学习笔记（vfk在15年的论文）和自己的一些实验 所以下面的内容请配合论文来看，不然你可能会自闭的">
+<meta name="twitter:title" content="「OI之路」03数学-11集合幂级数">
+<meta name="twitter:description" content="集合幂级数">
 
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】03数学-11集合幂级数 | Zory的个人博客</title>
+  <title>「OI之路」03数学-11集合幂级数 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】03数学-11集合幂级数
+          <h2 class="post-title" itemprop="name headline">「OI之路」03数学-11集合幂级数
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-11 10:52:00" itemprop="dateModified" datetime="2019-10-11T10:52:00+08:00">2019-10-11</time>
+                <time title="修改时间：2020-05-01 22:18:24" itemprop="dateModified" datetime="2020-05-01T22:18:24+08:00">2020-05-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/f834.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】03数学-11集合幂级数">
+            <span id="/posts/f834.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」03数学-11集合幂级数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -611,28 +611,61 @@
       
 
       
-        <p>集合幂级数 或者你可以直接称其为 FWT</p>
-<p>以下主要是学习笔记（vfk在15年的论文）和自己的一些实验</p>
-<p>所以下面的内容请配合论文来看，不然你可能会自闭的</p>
+        <p>集合幂级数</p>
 <a id="more"></a>
-<h3 id="形式"><a href="#形式" class="headerlink" title="形式"></a>形式</h3><p>集合幂级数 $f=\sum_{S \subseteq 2^U} f_S x^S$<br>加减法很好定义，对于乘除法，我们可以自行定义各种运算</p>
-<h3 id="集合并卷积（你也可以叫他子集反演）"><a href="#集合并卷积（你也可以叫他子集反演）" class="headerlink" title="集合并卷积（你也可以叫他子集反演）"></a>集合并卷积（你也可以叫他子集反演）</h3><p>核心思想：$[S_1 \bigcup S_2 \subseteq S]=[S_1 \subseteq S][S_2 \subseteq S]$</p>
-<p>我们不妨称现在框里的形式为点值表达法；点值表达法很好求，简单dp即可，从高到低和从低到高是一样的；不过得出结果的点值后，怎么转化回去呢？</p>
-<p>二项式定理可知$\sum_{s \in S} (-1)^{|s|}=[S=0]$ ，然后设f为原幂级数，g为点值表达法，然后反演来用g表达f<br>$$<br>g(n)=\sum_{m \in n}[n-m=0]g(m)=\sum_{m \in n} \sum_{s \in n-m}(-1)^{|s|}g(m)=\sum_{s \in n} (-1)^{|s|} \sum_{m \in n-s}g(m)=\sum_{m \in n} (-1)^{|n|-|m|}  f(m)<br>$$<br><del>集合交也是类似的，就不赘述了</del></p>
-<p>另一种理解思路，符号为 $g(S,k)$ 表示统计所有 $C_S T\in [1..k]$ 的子集T，从k=0开始dp，有些动态维护的题目需要这样表示（疯狂暗示其实是碰到过来加上的）；然后如果这样完整表达，你按啥顺序dp都行，例如先第一维再第二维</p>
-<p>那么加减乘都资瓷了，这个卷积的逆运算的话，就是在点值表达法下直接除<br>不能理解原理的话，把check写出来，不用运行你都会发现是正确的（指观察代码的形式，当然并没有考虑唯一性等问题）……所以说不定用二次剩余开根都行</p>
-<p>###集合对称差卷积</p>
-<p>$[S=\emptyset]=\frac{1}{2^n} \sum_{T \subseteq U} (-1)^{|T \bigcap S|}$<br>那么现在的式子就是 $B_S=\sum_{T \subseteq U} (-1)^{|T \bigcap S|} A_T$<br>考虑递推，$B[S][i]$表示当前只统计和S的异或值为 $2^i-1$ 的子集的T<br>那么每次把这一位不同、后面相同、前面任意的统计进去（然后你会发现自己没有被统计，应作为$B[S][-1]$）<br>$B[S][i]=B[S][i-1]-B[S|2^i][i-1],B[S|2^i]=B[S][i-1]+B[S|2^i][i-1]$<br>然后有个更简单的写法： $B[S][i]=B[S][i-1]+B[S|2^i][i-1],B[S|2^i]=B[S][i-1]-B[S|2^i][i-1]$<br>这个就不用前面那步了，本质上是一样的，因为 $B[S|2^i][i-1]$ 里面这一位都是1，等价于把-1放到中间去乘</p>
-<h3 id="子集卷积"><a href="#子集卷积" class="headerlink" title="子集卷积"></a>子集卷积</h3><p>或为S并为空，相当于两个不重叠集合的拼接，感觉不少状压都是这种形式<br>将条件转化为 $a \bigcup b=S且|a|+|b|=|S|$<br>可以看作是一个集合幂级数的或运算（异或也行）套一个形式幂级数的乘法，暴力枚举做即可，但要去除没有意义的地方（二进制与位长不符的地方）<br>然后逆运算的话，和上面思路不太一样（显然上面的方法不能再用了）<br>考虑每个位置<strong>在点值表达法</strong>下， $C_t=\sum A_i B_{t-i}$<br>那么现在求B的话可以递推，把其他B移到左边，除A0即可（经典的求递推方法）</p>
-<h3 id="经典题"><a href="#经典题" class="headerlink" title="经典题"></a>经典题</h3><p><a href="1e94.html">【HAOI2015】按位或</a><br><a href="f65b.html">【WC2018】州区划分</a><br><a href="caf.html">雅礼冬令营集训2019 D8t1</a></p>
-<h4 id="bzoj5092-分割序列"><a href="#bzoj5092-分割序列" class="headerlink" title="bzoj5092 分割序列"></a><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=5092" target="_blank" rel="noopener">bzoj5092 分割序列</a></h4><p>先求出前缀异或值，然后就是 $S_j+(S_i \ xor \ S_j)$ ，当Si=1，怎么选都是1，否则如果Sj=1就是2，所以记录一个mask表示当前希望的Sj一定是mask的超集，所以fwt预处理好f(S)表示S的超集最左边在哪里</p>
+<p>一些记号同论文（vfk-15年）中一开始的约定</p>
+<p>为了方便区分，私自将集合并、交称为FMT，集合对称差卷积称为FWT</p>
+<p>很多东西如果只是想写对复杂度是容易的（都是些基础dp），但这样没啥未来（比如我重写这破文章无数次了），最好知道式子是怎样的</p>
+<h3 id="形式"><a href="#形式" class="headerlink" title="形式"></a>形式</h3><p>集合幂级数 $f=\sum_{S \subseteq 2^U} f_S x^S$，其中$x^S$并没有实际意义<br>加减法很好定义，对于乘除法，我们可以自行定义各种运算（即定义$(f_Ax^A)(g_Bx^B)=f_Ag_Bx^{A \cdot B}$中的点是啥）</p>
+<p>值得一提的是，因为无论怎么运算长度不变，所以可以做一些形式幂级数（生成函数那一套理论）做不到的事，例如以逆元为代表的，当初需要在模$x^N$意义下定义的各种操作</p>
+<h3 id="集合并卷积FMT"><a href="#集合并卷积FMT" class="headerlink" title="集合并卷积FMT"></a>集合并卷积FMT</h3><p>将运算定义为集合并，即$H_{S_1 \cup S_2}+=A_{S_1}*B_{S_2}$</p>
+<p>集合并的核心性质：$[S_1 \cup S_2 \subseteq S]=[S_1 \subseteq S][S_2 \subseteq S]$</p>
+<p>发现框里的东西很像当年学多项式卷积时的点值表达法，因为在那个意义下直接乘起来（因为成功拆分了）就行了</p>
+<p>这启发我们实现$FMT:f’*S=\sum*{T \subseteq S} f_T$和$IFMT:FMT的逆运算$，熟练反演的选手可以知道IFMT就是$f_S=\sum_{T \subseteq S} (-1)^{|S|-|T|} f’_T$，不熟练的选手可以去<a href="3b5e.html">反演与容斥那一章</a>补习二项式反演、子集卷积</p>
+<p>集合交也是类似的，就不赘述了</p>
+<p>实现的理解、方法很多，不一一细说了，稍微值得一提的是 $g(S,k)$ 表示统计所有 $C_S T\in [1..k]$ 的子集T，这种写法可以写成第一层循环枚举S，第二层循环枚举数位（一般的写法就是这种的滚动版，但这种能做一些动态的问题，例如下面的度度熊）</p>
+<p>集合并卷积的逆元就是在点值表达法下直接除，不考虑唯一性等各种学术问题的话是显然的</p>
+<h3 id="子集卷积"><a href="#子集卷积" class="headerlink" title="子集卷积"></a>子集卷积</h3><p>不少状压都是这种形式：$S_1 \cup S_2=S,S_1 \cap S_2=\emptyset$</p>
+<p>将条件转化为 $a \cup b=S且|a|+|b|=|S|$，可以看作是一个集合幂级数的或运算套一个形式幂级数（称为占位幂级数）的乘法，暴力枚举做即可，但要去除没有意义的地方（二进制与位长不符的地方）</p>
+<p>有了这个占位幂级数后，上面的思路已经不能再用来求逆元了，但是，注意到我们外面是个占位多项式，我们可以将系数表达法时的$A[x^{\emptyset}]$看做常数项，然后把多项式那套理论搬过来，在点值表达法下，运算其实会变得很简洁，乘除、求导和积分，都是直接按位做就好了，所以可以把枚举二进制放在外面，数组也是，然后给函数传个数组。</p>
+<p>逆元：$one_i=\sum_{j=0}^i A_jInv_{i-j},Inv_i=\frac{one_i-\sum_{j=1}^i A_jInv_{i-j}}{A_0}$，因此条件就是常数项非零，$O(n^22^n)$</p>
+<p>exp：为了收敛，常数项=0，然后直接按照$exp(A)=\sum_{i} A^i/i!$算，指数只要枚举到n就好了，$O(n^22^n)$</p>
+<p>ln：常数项=1，直接用$ln(A)=\int \frac{A’}{A}$求，求逆元的时候A0=1可以忽略，$O(n^22^n)$</p>
+<h3 id="二进制FWT"><a href="#二进制FWT" class="headerlink" title="二进制FWT"></a>二进制FWT</h3><p>UPD：学会K进制FWT后这部分的主要意义就是$f’*S=\sum*{T} (-1)^{|T \cap S|} f_T$这个式子</p>
+<p>定义那个运算为集合异或，思考异或的性质，<del>不知道如何</del>发现$[S=\emptyset]=\frac{1}{2^n} \sum_{T \subseteq U} (-1)^{|T \bigcap S|}$</p>
+<p>于是$H_{S}=\sum_{S1} \sum_{S2} [S1 \oplus S2 \oplus S=\emptyset] A_{S1}B_{S2} \to \frac{1}{2^n} \sum_{T} (-1)^{|T \cap S|} (\sum_{S1} (-1)^{|T \cap S1|} A_{S1})(\sum_{S2} (-1)^{|T \cap S2|} B_{S2})$</p>
+<p>启发我们定义$FWT:f’*S=\sum*{T} (-1)^{|T \cap S|} f_T且IFWT:f_S=\frac{1}{2^n} \sum_{T} (-1)^{|T \cap S|} f’_T$</p>
+<p>实现方法（显然只需实现一个函数）：<br>考虑递推，$B[S][i]$表示当前只统计和S的异或值为 $2^i-1$ 的子集的T<br>那么每次把这一位不同、后面相同、前面任意的统计进去（然后你会发现自己没有被统计，应作为$B[S][-1]$）<br>$B[S][i]=B[S][i-1]-B[S|2^i][i-1],B[S|2^i]=B[S][i-1]+B[S|2^i][i-1]$<br>然后有个更简单的写法： $B[S][i]=B[S][i-1]+B[S|2^i][i-1],B[S|2^i]=B[S][i-1]-B[S|2^i][i-1]$<br>这个就不用前面那步了，本质上是一样的，因为 $B[S|2^i][i-1]$ 里面这一位都是1，等价于把-1放到中间去乘</p>
+<h3 id="K进制FWT"><a href="#K进制FWT" class="headerlink" title="K进制FWT"></a>K进制FWT</h3><p>异或本质上是二进制的不进位加法，这里就是K进制不进位加法（用$\oplus$表示）</p>
+<p>众所周知FFT有一种比较好的线性代数理解是，存在变换矩阵F，ABC是列向量，$\times$是点积，$(F*A) \times (F*B)=(F*C)$</p>
+<p>对于第i行，把矩乘化开：$(\sum_{j=0}^{K^n-1} F_{i,j} A_j )*(\sum_{j=0}^{K^n-1} F_{i,j} B_j )=(\sum_{j=0}^{K^n-1} F_{i,j} C_j ) \rightarrow F_{i,z}=\sum_{x \oplus y} F_{i,x}F_{i,y}$</p>
+<p>这个矩阵看似很大，但明显$F_{i,j}=\prod_{t=0}^{n-1} F_{ \frac{i}{K^t} \%K, \frac{j}{K^t} \%K }$，因此我们只需搞出$K*K$的矩阵。熟练的选手想必已经看出来了，此时就是个FFT，我们把当初推过的东西搬过来就完事了，$F_{i,j}=w_{K}^{ij},F^{-1}*{i,j}=\frac{w*{K}^{-ij}}{K}$</p>
+<p>$F*A$的快速变换，就是每次把F的第i位加上去，$O(n*K^n*K)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span> kFWT</div><div class="line">&#123;</div><div class="line">    <span class="keyword">const</span> <span class="keyword">int</span> K,N=<span class="number">5</span>,M=<span class="number">100000</span>,ivM=<span class="number">666</span>;ll B[M];<span class="comment">//上面瞎写的</span></div><div class="line">    ll omega[K*K];<span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">()</span></span>&#123; ll g=qpower(<span class="number">3</span>,(MOD<span class="number">-1</span>)/K);omega[<span class="number">0</span>]=<span class="number">1</span>;fo(i,<span class="number">1</span>,K*K<span class="number">-1</span>) omega[i]=omega[i<span class="number">-1</span>]*g%MOD; &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">FWT</span><span class="params">(ll A[],<span class="keyword">int</span> op=<span class="number">0</span>)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>,w=<span class="number">1</span>;t&lt;N;t++,w*=K)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> up=<span class="number">0</span>;up&lt;M;up+=w*K) <span class="keyword">for</span>(<span class="keyword">int</span> dw=<span class="number">0</span>;dw&lt;w;dw++)</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,ii=<span class="number">0</span>;i&lt;K;i++,ii+=w) <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>,jj=<span class="number">0</span>;j&lt;K;j++,jj+=w)</div><div class="line">                    B[up+ii+dw]+=omega[i*j]*A[up+jj+dw];</div><div class="line">            fo(x,<span class="number">0</span>,M<span class="number">-1</span>) A[x]=B[x]%MOD,B[x]=<span class="number">0</span>;</div><div class="line">        &#125; <span class="keyword">if</span>(op) fo(x,<span class="number">0</span>,M<span class="number">-1</span>) A[x]=A[x]*ivM%MOD;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>用到过：CF1103E Radix sum</p>
+<h2 id="题"><a href="#题" class="headerlink" title="题"></a>题</h2><p><a href="1e94.html">「HAOI2015」按位或</a><br><a href="c7f8.html/「WC2018」州区划分">「WC2018」州区划分</a><br><a href="https://zory.ink/posts/caf.html#t1-4">雅礼冬令营集训2019 D8t1</a></p>
+<hr>
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=5092" target="_blank" rel="noopener">bzoj5092 分割序列</a>:</p>
+<p>先求出前缀异或值，然后就是 $S_j+(S_i \ xor \ S_j)$ ，当Si=1，怎么选都是1，否则如果Sj=1就是2，所以记录一个mask表示当前希望的Sj一定是mask的超集，所以FMT预处理好f(S)表示S的超集最左边在哪里</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a[N],pp[<span class="number">1</span>&lt;&lt;<span class="number">21</span>];<span class="comment">//超集</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n=qread();<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) a[i]=qread()^a[i<span class="number">-1</span>];</div><div class="line">    <span class="built_in">memset</span>(pp,<span class="number">0x3f</span>,<span class="keyword">sizeof</span> pp);<span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;=<span class="number">1</span>;i--) pp[a[i]]=i;pp[<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=<span class="number">20</span>;j++) <span class="keyword">for</span>(<span class="keyword">int</span> i=(<span class="number">1</span>&lt;&lt;<span class="number">21</span>)<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) <span class="keyword">if</span>((i&amp;bin(j))) chmin(pp[i^bin(j)],pp[i]);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>,mask=<span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">20</span>;j&gt;=<span class="number">0</span>;j--)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(a[i]&amp;bin(j)) ans+=bin(j);</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(pp[mask|bin(j)]&lt;=i) mask|=bin(j),ans+=bin(j+<span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line">        write2(ans);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>一道类似的题：<a href="ed65.html">Manthan, Codefest 19 CF1208F Bits And Pieces</a></p>
+<hr>
 <h4 id="HDU6679-度度熊与运算式-2"><a href="#HDU6679-度度熊与运算式-2" class="headerlink" title="HDU6679 度度熊与运算式 2"></a><a href="http://acm.HDU.edu.cn/showproblem.php?pid=6679" target="_blank" rel="noopener">HDU6679 度度熊与运算式 2</a></h4><p>首先转化题意，最大值一定是n+1，然后改异或的话要求不能进位即重叠，记$a_i$表示第i个？左边有多少个1，$a_{m+1}=n+1$ ，那么就是选一个集合要求最后一个元素是n+1且前面每个都是后面的子集</p>
 <p>不难设计$dp(S)$ 表示以S为结尾的方案数，转移即 $dp(S)=\sum_{T \subset S}dp(T)$，考虑 $g(S)$ 表示S的子集和</p>
 <p>因为要求这个必须求好前面，考虑类似分治fft的快速递推，考虑怎么动态做FMT，首先FMT如果要动态做，肯定要保留中间状态即上面所说的 $dp(S,k)$ 表示处理了k位，然后这种状态想怎么dp都行，考虑到现在是从小到大优化dp过程，所以先枚举第一维S，把$g(S)$给FMT出来，但如果当前是dp位置（即？处）的话，我们求出的只是 $dp(S)$ ，所以放到dp(S,0)处重新做一次FMT求出g</p>
-<p>$O(n2^n)$ ，然而HDU的机子很慢，比赛时myh的ac代码都会tle</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span> str[N];<span class="keyword">int</span> a[(<span class="number">1</span>&lt;&lt;<span class="number">21</span>)+<span class="number">4</span>][<span class="number">22</span>];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> T=qread();</div><div class="line">    <span class="keyword">while</span>(T--)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%s"</span>,str+<span class="number">1</span>);<span class="keyword">int</span> n=<span class="built_in">strlen</span>(str+<span class="number">1</span>);</div><div class="line">        <span class="keyword">int</span> mx=<span class="built_in">ceil</span>(log2(n+<span class="number">2</span>));a[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n+<span class="number">1</span>;i++)</div><div class="line">        &#123;</div><div class="line">            <span class="comment">//这里直接写成放进a[i][0]也行</span></div><div class="line">            <span class="keyword">if</span>(i) a[i][<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;mx;j++) <span class="keyword">if</span>(i&amp;(<span class="number">1</span>&lt;&lt;j)) a[i][j+<span class="number">1</span>]=mm(a[i][j]+a[i^(<span class="number">1</span>&lt;&lt;j)][j]); <span class="keyword">else</span> a[i][j+<span class="number">1</span>]=a[i][j];</div><div class="line">            <span class="keyword">if</span>(i and i&lt;=n and str[i]==<span class="string">'?'</span>)</div><div class="line">            &#123;</div><div class="line">                a[i][<span class="number">0</span>]=a[i][mx];</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;mx;j++) <span class="keyword">if</span>(i&amp;(<span class="number">1</span>&lt;&lt;j)) a[i][j+<span class="number">1</span>]=mm(a[i][j]+a[i^(<span class="number">1</span>&lt;&lt;j)][j]); <span class="keyword">else</span> a[i][j+<span class="number">1</span>]=a[i][j];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,n+<span class="number">1</span>,a[n+<span class="number">1</span>][mx]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>$O(n2^n)$ ，然而HDU的机子很慢，交比赛时myh的ac代码都会tle</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span> str[N];<span class="keyword">int</span> a[(<span class="number">1</span>&lt;&lt;<span class="number">21</span>)+<span class="number">4</span>][<span class="number">22</span>];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> T=qread();</div><div class="line">    <span class="keyword">while</span>(T--)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%s"</span>,str+<span class="number">1</span>);<span class="keyword">int</span> n=<span class="built_in">strlen</span>(str+<span class="number">1</span>);</div><div class="line">        <span class="keyword">int</span> mx=<span class="built_in">ceil</span>(log2(n+<span class="number">2</span>));a[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n+<span class="number">1</span>;i++)</div><div class="line">        &#123;</div><div class="line">            <span class="comment">//这里直接写成放进a[i][0]也行</span></div><div class="line">            <span class="keyword">if</span>(i) a[i][<span class="number">0</span>]=<span class="number">0</span>;	</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;mx;j++) <span class="keyword">if</span>(i&amp;(<span class="number">1</span>&lt;&lt;j)) a[i][j+<span class="number">1</span>]=mm(a[i][j]+a[i^(<span class="number">1</span>&lt;&lt;j)][j]); <span class="keyword">else</span> a[i][j+<span class="number">1</span>]=a[i][j];</div><div class="line">            <span class="keyword">if</span>(i and i&lt;=n and str[i]==<span class="string">'?'</span>)</div><div class="line">            &#123;</div><div class="line">                a[i][<span class="number">0</span>]=a[i][mx];</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;mx;j++) <span class="keyword">if</span>(i&amp;(<span class="number">1</span>&lt;&lt;j)) a[i][j+<span class="number">1</span>]=mm(a[i][j]+a[i^(<span class="number">1</span>&lt;&lt;j)][j]); <span class="keyword">else</span> a[i][j+<span class="number">1</span>]=a[i][j];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>,n+<span class="number">1</span>,a[n+<span class="number">1</span>][mx]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="UNR-2-黎明前的巧克力"><a href="#UNR-2-黎明前的巧克力" class="headerlink" title="UNR#2 黎明前的巧克力"></a><a href="http://uoj.ac/contest/39/problem/310" target="_blank" rel="noopener">UNR#2 黎明前的巧克力</a></h3><p><strong>题意</strong>：给出n个数，求$\sum_{不能同时空，不重叠子集A，B} [异或和相等]$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>$\sum_{子集S异或和=0} 2^{|S|}$，写成dp就是$dp_{0,0}=1，dp_{i-1,j}*2 \to dp_{i,j \oplus a_i},dp_{i-1,j} \to dp_{i,j}$，发现这是n次异或卷积</p>
+<p>于是我们回忆FWT的式子：$f’*S=\sum*{T} (-1)^{|T \cap S|} f_T$，而且特殊性在于每次只有$f_{\emptyset}=1,f_{a_i}=2$，因此$f’_S=1+(-1)^{<br>|S \cap a_i|}*2$</p>
+<p>$ans=IFWT_{\emptyset}=\frac{1}{2^{bit}} \sum_S F_S=\frac{1}{2^{bit}} \sum_S (-1)^{cnt_S=\sum [S \cap a_i是奇数]}*3^{n-cnt_S}$</p>
+<p>用集合交FMT推一下，$cnt_S=\sum_T [|T|\&amp;1] \sum_{T \subseteq ss} (-1)^{|ss|-|T|} [ss \subseteq S] \sum_{i=1}^m [ss \subseteq a_i]$</p>
+<p>于是设$A_{ss}=(\sum_{i=1}^m [ss \subseteq a_i])*(\sum_{T \subseteq ss} (-1)^{|ss|-|T|}) [|T|\&amp;1] $，发现前面是个集合交FMT，后面是个集合并IFMT，乘起来后做个集合并的FMT就能得到cnt了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">20</span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">FMT1</span><span class="params">(ll A[])</span></span>&#123; fo(i,<span class="number">0</span>,N<span class="number">-1</span>) fo(s,<span class="number">0</span>,bin(N)<span class="number">-1</span>) <span class="keyword">if</span>(s&amp;bin(i)) A[s]+=A[s^bin(i)]; &#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">IFMT1</span><span class="params">(ll A[])</span></span>&#123; fo(i,<span class="number">0</span>,N<span class="number">-1</span>) fo(s,<span class="number">0</span>,bin(N)<span class="number">-1</span>) <span class="keyword">if</span>(s&amp;bin(i)) A[s]-=A[s^bin(i)]; &#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">FMT2</span><span class="params">(ll A[])</span></span>&#123; fo(i,<span class="number">0</span>,N<span class="number">-1</span>) fo(s,<span class="number">0</span>,bin(N)<span class="number">-1</span>) <span class="keyword">if</span>(s&amp;bin(i)) A[s^bin(i)]+=A[s]; &#125;</div><div class="line">ll A[<span class="number">1</span>&lt;&lt;N],B[<span class="number">1</span>&lt;&lt;N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> m=qread();fo(i,<span class="number">1</span>,m) A[qread()]++;fo(s,<span class="number">0</span>,bin(N)<span class="number">-1</span>) B[s]=(PC(s)&amp;<span class="number">1</span>);</div><div class="line">    FMT2(A),IFMT1(B);fo(s,<span class="number">0</span>,bin(N)<span class="number">-1</span>) A[s]=A[s]*B[s]%MOD;FMT1(A);</div><div class="line">    ll ans=<span class="number">0</span>;fo(s,<span class="number">0</span>,bin(N)<span class="number">-1</span>)&#123; <span class="keyword">int</span> cnts=A[s];add(ans,(cnts&amp;<span class="number">1</span>?MOD<span class="number">-1</span>:<span class="number">1</span>)*qpower(<span class="number">3</span>,m-cnts)%MOD); &#125;</div><div class="line">    write((ans*qpower(<span class="number">2</span>,MOD<span class="number">-1</span>-N)+MOD<span class="number">-1</span>)%MOD);<span class="comment">//记得减去同时空的方案</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
 
       
     </div>
@@ -646,14 +679,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9763.html" rel="bookmark">【OI之路】03数学-16快乐计数</a></div>
+      <div class="popular-posts-title"><a href="/posts/250b.html" rel="bookmark">【OI之路】04图论-9二分图</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/80c8.html" rel="bookmark">【置顶】套路集锦</a></div>
+      <div class="popular-posts-title"><a href="/posts/3e6e.html" rel="bookmark">「OI之路」03数学-15概率论</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/4bab.html" rel="bookmark">「OI之路」05动态规划-2-动态规划进阶</a></div>
       
     </li>
   
@@ -667,21 +707,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/250b.html" rel="bookmark">【OI之路】04图论-9二分图</a></div>
+      <div class="popular-posts-title"><a href="/posts/80c8.html" rel="bookmark">「置顶」套路集锦</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b399.html" rel="bookmark">【OI之路】04图论-7生成树</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/68d9.html" rel="bookmark">【OI之路】03数学-13生成函数</a></div>
+      <div class="popular-posts-title"><a href="/posts/b399.html" rel="bookmark">「OI之路」04图论-7生成树</a></div>
       
     </li>
   
@@ -699,7 +732,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/f834.html" title="【OI之路】03数学-11集合幂级数">http://zory.ink/posts/f834.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/f834.html" title="「OI之路」03数学-11集合幂级数">http://zory.ink/posts/f834.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -737,8 +770,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/416d.html" rel="next" title="【OI之路】03数学-10积性函数及其前缀和">
-                <i class="fa fa-chevron-left"></i> 【OI之路】03数学-10积性函数及其前缀和
+              <a href="/posts/416d.html" rel="next" title="「OI之路」03数学-10积性函数及其前缀和">
+                <i class="fa fa-chevron-left"></i> 「OI之路」03数学-10积性函数及其前缀和
               </a>
             
           </div>
@@ -747,8 +780,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/ed71.html" rel="prev" title="【OI之路】03数学-12极限与微积分">
-                【OI之路】03数学-12极限与微积分 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/ed71.html" rel="prev" title="「OI之路」03数学-12极限与微积分">
+                「OI之路」03数学-12极限与微积分 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -826,7 +859,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -851,7 +884,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1260,7 +1295,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1323,7 +1362,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#形式"><span class="nav-text">形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合并卷积（你也可以叫他子集反演）"><span class="nav-text">集合并卷积（你也可以叫他子集反演）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子集卷积"><span class="nav-text">子集卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#经典题"><span class="nav-text">经典题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#bzoj5092-分割序列"><span class="nav-text">bzoj5092 分割序列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HDU6679-度度熊与运算式-2"><span class="nav-text">HDU6679 度度熊与运算式 2</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#形式"><span class="nav-text">形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合并卷积FMT"><span class="nav-text">集合并卷积FMT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子集卷积"><span class="nav-text">子集卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二进制FWT"><span class="nav-text">二进制FWT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#K进制FWT"><span class="nav-text">K进制FWT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题"><span class="nav-text">题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HDU6679-度度熊与运算式-2"><span class="nav-text">HDU6679 度度熊与运算式 2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UNR-2-黎明前的巧克力"><span class="nav-text">UNR#2 黎明前的巧克力</span></a></li></ol></div>
             
 
           </div>

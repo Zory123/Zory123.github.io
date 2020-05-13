@@ -95,15 +95,15 @@
   <meta name="description" content="来源和评测点BeiJing2006Bzoj1001">
 <meta name="keywords" content="网络流,最短路,难度2,好题,最小割,对偶图,Dijkstra">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Bzoj1001】狼抓兔子">
+<meta property="og:title" content="「Bzoj1001」狼抓兔子">
 <meta property="og:url" content="http://zory.ink/posts/9c9f.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点BeiJing2006Bzoj1001">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.ink/images/题目图片/狼抓兔子/1.png">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Bzoj1001】狼抓兔子">
+<meta name="twitter:title" content="「Bzoj1001」狼抓兔子">
 <meta name="twitter:description" content="来源和评测点BeiJing2006Bzoj1001">
 <meta name="twitter:image" content="http://zory.ink/images/题目图片/狼抓兔子/1.png">
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>【Bzoj1001】狼抓兔子 | Zory的个人博客</title>
+  <title>「Bzoj1001」狼抓兔子 | Zory的个人博客</title>
   
 
 
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -498,7 +498,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Bzoj1001】狼抓兔子
+          <h2 class="post-title" itemprop="name headline">「Bzoj1001」狼抓兔子
 
               
             
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:45" itemprop="dateModified" datetime="2019-12-01T10:18:45+08:00">2019-12-01</time>
               </span>
             
           
@@ -580,7 +580,7 @@
 
           
           
-            <span id="/posts/9c9f.html" class="post-meta-item leancloud_visitors" data-flag-title="【Bzoj1001】狼抓兔子">
+            <span id="/posts/9c9f.html" class="post-meta-item leancloud_visitors" data-flag-title="「Bzoj1001」狼抓兔子">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,9 +615,9 @@
       
         <h2 id="来源和评测点"><a href="#来源和评测点" class="headerlink" title="来源和评测点"></a>来源和评测点</h2><p>BeiJing2006<br><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1001" target="_blank" rel="noopener">Bzoj1001</a></p>
 <a id="more"></a>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-red"><strong>【题目大意】</strong><br>现在小朋友们最喜欢的”喜羊羊与灰太狼”,话说灰太狼抓羊不到，但抓兔子还是比较在行的，<br>而且现在的兔子还比较笨，它们只有两个窝，现在你做为狼王，面对下面这样一个网格的地形：<br><img src="../images/题目图片/狼抓兔子/1.png" alt=""><br>左上角点为(1,1),右下角点为(N,M)(上图中N=3,M=4)。<br>有以下三种类型的道路：<br>1:(x,y)&lt;==&gt;(x+1,y)<br>2:(x,y)&lt;==&gt;(x,y+1)<br>3:(x,y)&lt;==&gt;(x+1,y+1)<br>道路上的权值表示这条路上最多能够通过的兔子数，道路是无向的。<br>左上角和右下角为兔子的两个窝，开始时所有的兔子都聚集在左上角(1,1)的窝里，现在它们要跑到右下解(N,M)的窝中去，狼王开始伏击这些兔子。<br>当然为了保险起见，如果一条道路上最多通过的兔子数为K，狼王需要安排同样数量的K只狼，<br>才能完全封锁这条道路。<br>你需要帮助狼王安排一个伏击方案，使得在将兔子一网打尽的前提下，参与的狼的数量要最小。因为狼还要去找喜羊羊麻烦。<br><strong>【输入格式】</strong><br>第一行为N,M.表示网格的大小，N,M均小于等于1000.<br>接下来分三部分<br>第一部分共N行，每行M-1个数，表示横向道路的权值.<br>第二部分共N-1行，每行M个数，表示纵向道路的权值.<br>第三部分共N-1行，每行M-1个数，表示斜向道路的权值.<br>输入文件保证不超过10M<br><strong>【输出格式】</strong><br>输出一个整数，表示参与伏击的狼的最小数量.<br><strong>【输入样例】</strong><br>3 4<br>5 6 4<br>4 3 1<br>7 5 3<br>5 6 7 8<br>8 7 6 5<br>5 5 5<br>6 6 6<br><strong>【输出样例】</strong><br>14<br></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-red"><strong>「题目大意」</strong><br>现在小朋友们最喜欢的”喜羊羊与灰太狼”,话说灰太狼抓羊不到，但抓兔子还是比较在行的，<br>而且现在的兔子还比较笨，它们只有两个窝，现在你做为狼王，面对下面这样一个网格的地形：<br><img src="../images/题目图片/狼抓兔子/1.png" alt=""><br>左上角点为(1,1),右下角点为(N,M)(上图中N=3,M=4)。<br>有以下三种类型的道路：<br>1:(x,y)&lt;==&gt;(x+1,y)<br>2:(x,y)&lt;==&gt;(x,y+1)<br>3:(x,y)&lt;==&gt;(x+1,y+1)<br>道路上的权值表示这条路上最多能够通过的兔子数，道路是无向的。<br>左上角和右下角为兔子的两个窝，开始时所有的兔子都聚集在左上角(1,1)的窝里，现在它们要跑到右下解(N,M)的窝中去，狼王开始伏击这些兔子。<br>当然为了保险起见，如果一条道路上最多通过的兔子数为K，狼王需要安排同样数量的K只狼，<br>才能完全封锁这条道路。<br>你需要帮助狼王安排一个伏击方案，使得在将兔子一网打尽的前提下，参与的狼的数量要最小。因为狼还要去找喜羊羊麻烦。<br><strong>「输入格式」</strong><br>第一行为N,M.表示网格的大小，N,M均小于等于1000.<br>接下来分三部分<br>第一部分共N行，每行M-1个数，表示横向道路的权值.<br>第二部分共N-1行，每行M个数，表示纵向道路的权值.<br>第三部分共N-1行，每行M-1个数，表示斜向道路的权值.<br>输入文件保证不超过10M<br><strong>「输出格式」</strong><br>输出一个整数，表示参与伏击的狼的最小数量.<br><strong>「输入样例」</strong><br>3 4<br>5 6 4<br>4 3 1<br>7 5 3<br>5 6 7 8<br>8 7 6 5<br>5 5 5<br>6 6 6<br><strong>「输出样例」</strong><br>14<br></p>
 
-<h2 id="分析1"><a href="#分析1" class="headerlink" title="分析1"></a>分析1</h2><p>网络流教程和题目分类参见：<br><a href="../2003-01/【OI之路】03图论算法-4网络流.html">【OI之路】03图论算法-4网络流</a><br>其他最小割题目参见：<a href="../tags/最小割/">Tag-最小割</a></p>
+<h2 id="分析1"><a href="#分析1" class="headerlink" title="分析1"></a>分析1</h2><p>网络流教程和题目分类参见：<br><a href="../2003-01/「OI之路」03图论算法-4网络流.html">「OI之路」03图论算法-4网络流</a><br>其他最小割题目参见：<a href="../tags/最小割/">Tag-最小割</a></p>
 <p>一看就是最小割</p>
 <h2 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**************************************************************</div><div class="line">    Problem: 1001</div><div class="line">    User: Zory</div><div class="line">    Language: C++</div><div class="line">    Result: Accepted</div><div class="line">    Time:1256 ms</div><div class="line">    Memory:85196 kb</div><div class="line">****************************************************************/</span></div><div class="line"> </div><div class="line"><span class="comment">//最小割</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="comment">//#include&lt;cstdlib&gt;</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="comment">//#include&lt;cctype&gt;</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="comment">//#include&lt;ctime&gt;</span></div><div class="line"><span class="comment">//#include&lt;queue&gt;</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="comment">//#include&lt;stack&gt;</span></div><div class="line"><span class="comment">//#include&lt;iostream&gt;</span></div><div class="line"><span class="comment">//#include&lt;string&gt;</span></div><div class="line"><span class="comment">//#include&lt;iomanip&gt;</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymax</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">return</span> a&gt;b?a:b;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymin</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">return</span> a&gt;b?b:a;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*int myabs(int a)</div><div class="line">&#123;</div><div class="line">    return a&gt;0?a:-a;</div><div class="line">&#125;</div><div class="line">void myswap(int &amp;x,int &amp;y)</div><div class="line">&#123;</div><div class="line">    int t=x;x=y;y=t;</div><div class="line">&#125;*/</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> s=<span class="number">0</span>;<span class="keyword">char</span> c=getchar();</div><div class="line">    <span class="keyword">while</span>(c&lt;<span class="string">'0'</span> or c&gt;<span class="string">'9'</span>) c=getchar();</div><div class="line">    <span class="keyword">while</span>(c&gt;=<span class="string">'0'</span> and c&lt;=<span class="string">'9'</span>) s=s*<span class="number">10</span>+c-<span class="string">'0'</span>,c=getchar();</div><div class="line">    <span class="keyword">return</span> s;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************定义*******************</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> Maxn=<span class="number">1100000</span>,Maxm=<span class="number">6100000</span>;</div><div class="line"><span class="keyword">int</span> st,ed;</div><div class="line"><span class="keyword">int</span> hou[Maxn],h[Maxn];</div><div class="line"><span class="keyword">struct</span> nod</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> y,c;<span class="keyword">int</span> gg;</div><div class="line">&#125;e[Maxm];</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="keyword">int</span> ln;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ins</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> c)</span></div><div class="line"></span>&#123;</div><div class="line">    ln++;</div><div class="line">    e[ln].y=y;e[ln].c=c;</div><div class="line">    e[ln].gg=hou[x];hou[x]=ln;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getoth</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123; <span class="keyword">return</span> (x%<span class="number">2</span>==<span class="number">0</span>)?x<span class="number">-1</span>:x+<span class="number">1</span>; &#125;</div><div class="line"><span class="keyword">int</span> q[Maxn];</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">bfs</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="built_in">memset</span>(h,<span class="number">0</span>,<span class="keyword">sizeof</span>(h));</div><div class="line">    q[<span class="number">1</span>]=st;h[st]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> tou=<span class="number">1</span>,wei=<span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(tou&lt;=wei)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> x=q[tou];</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=hou[x];k&gt;<span class="number">0</span>;k=e[k].gg)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> y=e[k].y;</div><div class="line">            <span class="keyword">if</span>(h[y]==<span class="number">0</span> and e[k].c&gt;<span class="number">0</span> )</div><div class="line">            &#123;</div><div class="line">                h[y]=h[x]+<span class="number">1</span>;</div><div class="line">                q[++wei]=y;</div><div class="line">                <span class="keyword">if</span>(y==ed) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        tou++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> s)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(x==ed) <span class="keyword">return</span> s;</div><div class="line">    <span class="keyword">int</span> t=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=hou[x];k&gt;<span class="number">0</span>;k=e[k].gg )</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> y=e[k].y;</div><div class="line">        <span class="keyword">if</span>(h[y]==h[x]+<span class="number">1</span> and e[k].c&gt;<span class="number">0</span> and t&lt;s )</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> b=dfs(y,mymin(e[k].c,s-t));</div><div class="line">            e[k].c-=b;e[getoth(k)].c+=b;t+=b;</div><div class="line">            <span class="keyword">if</span>(s==t) <span class="keyword">return</span> s;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(t==<span class="number">0</span>) h[x]=<span class="number">0</span>;</div><div class="line">    <span class="keyword">return</span> t;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************接口*******************</span></div><div class="line"><span class="keyword">int</span> n,m;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">pt</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">return</span> (x<span class="number">-1</span>)*m+y;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="keyword">int</span> tx[<span class="number">3</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>&#125;;<span class="keyword">int</span> ty[<span class="number">3</span>]=&#123;<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">    ln=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;=<span class="number">2</span>;k++)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=((k==<span class="number">0</span>)?n:n<span class="number">-1</span>);i++)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=((k==<span class="number">1</span>)?m:m<span class="number">-1</span>);j++)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">int</span> x=pt(i,j),y=pt(i+tx[k],j+ty[k]),c=read();</div><div class="line">                ins(x,y,c);ins(y,x,c);</div><div class="line">            &#125;</div><div class="line">                 </div><div class="line">    st=<span class="number">1</span>;ed=pt(n,m);</div><div class="line">     </div><div class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(bfs()) ans+=dfs(st,INF);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="分析2"><a href="#分析2" class="headerlink" title="分析2"></a>分析2</h2><p>可以将网格图转化为对偶图<br>可以参考论文：<a href="https://wenku.baidu.com/view/8f1fde586edb6f1aff001f7d" target="_blank" rel="noopener">https://wenku.baidu.com/view/8f1fde586edb6f1aff001f7d</a></p>
@@ -634,42 +634,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/a1fb.html" rel="bookmark">【Bzoj1934】【Bzoj2768】善意的投票&冠军调查</a></div>
+      <div class="popular-posts-title"><a href="/posts/a1fb.html" rel="bookmark">「Bzoj1934」「Bzoj2768」善意的投票&冠军调查</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/44a6.html" rel="bookmark">【Usaco05Mar】Ombrophobic Bovines</a></div>
+      <div class="popular-posts-title"><a href="/posts/44a6.html" rel="bookmark">「Usaco05Mar」Ombrophobic Bovines</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3001.html" rel="bookmark">【CQOI2014】危桥</a></div>
+      <div class="popular-posts-title"><a href="/posts/3001.html" rel="bookmark">「CQOI2014」危桥</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4e7e.html" rel="bookmark">【CQOI2014】学习小组</a></div>
+      <div class="popular-posts-title"><a href="/posts/4e7e.html" rel="bookmark">「CQOI2014」学习小组</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ab3c.html" rel="bookmark">【Poj3897】【Bzoj2709】迷宫花园</a></div>
+      <div class="popular-posts-title"><a href="/posts/ab3c.html" rel="bookmark">「Poj3897」「Bzoj2709」迷宫花园</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/2fdd.html" rel="bookmark">【COCI2013】hiperprostor</a></div>
+      <div class="popular-posts-title"><a href="/posts/2fdd.html" rel="bookmark">「COCI2013」hiperprostor</a></div>
       
     </li>
   
@@ -687,7 +687,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/9c9f.html" title="【Bzoj1001】狼抓兔子">http://zory.ink/posts/9c9f.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/9c9f.html" title="「Bzoj1001」狼抓兔子">http://zory.ink/posts/9c9f.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -737,8 +737,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/eed1.html" rel="next" title="【Bzoj1645】City Horizon城市地平线">
-                <i class="fa fa-chevron-left"></i> 【Bzoj1645】City Horizon城市地平线
+              <a href="/posts/eed1.html" rel="next" title="「Bzoj1645」City Horizon城市地平线">
+                <i class="fa fa-chevron-left"></i> 「Bzoj1645」City Horizon城市地平线
               </a>
             
           </div>
@@ -747,8 +747,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/d395.html" rel="prev" title="【Hdu1695】GCD(莫比乌斯1)">
-                【Hdu1695】GCD(莫比乌斯1) <i class="fa fa-chevron-right"></i>
+              <a href="/posts/d395.html" rel="prev" title="「Hdu1695」GCD(莫比乌斯1)">
+                「Hdu1695」GCD(莫比乌斯1) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -826,7 +826,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -851,7 +851,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1260,7 +1262,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

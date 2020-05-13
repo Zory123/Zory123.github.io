@@ -94,14 +94,14 @@
 
   <meta name="description" content="抽象代数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】03数学-3抽象代数">
+<meta property="og:title" content="「OI之路」03数学-3抽象代数">
 <meta property="og:url" content="http://zory.ink/posts/998a.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="抽象代数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-30T13:10:41.152Z">
+<meta property="og:updated_time" content="2020-02-08T09:00:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】03数学-3抽象代数">
+<meta name="twitter:title" content="「OI之路」03数学-3抽象代数">
 <meta name="twitter:description" content="抽象代数">
 
 
@@ -120,7 +120,7 @@
   };
 </script>
 
-  <title>【OI之路】03数学-3抽象代数 | Zory的个人博客</title>
+  <title>「OI之路」03数学-3抽象代数 | Zory的个人博客</title>
   
 
 
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -495,7 +495,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】03数学-3抽象代数
+          <h2 class="post-title" itemprop="name headline">「OI之路」03数学-3抽象代数
 
               
             
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-30 21:10:41" itemprop="dateModified" datetime="2019-09-30T21:10:41+08:00">2019-09-30</time>
+                <time title="修改时间：2020-02-08 17:00:03" itemprop="dateModified" datetime="2020-02-08T17:00:03+08:00">2020-02-08</time>
               </span>
             
           
@@ -577,7 +577,7 @@
 
           
           
-            <span id="/posts/998a.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】03数学-3抽象代数">
+            <span id="/posts/998a.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」03数学-3抽象代数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -611,19 +611,30 @@
 
       
         <p>抽象代数<br><a id="more"></a></p>
-<h1 id="群论"><a href="#群论" class="headerlink" title="群论"></a>群论</h1><p><a href="https://www.cnblogs.com/nosta/p/9444576.html#3264913471" target="_blank" rel="noopener">nosta</a>、<a href="https://blog.csdn.net/xym_CSDN/article/details/53456447" target="_blank" rel="noopener">xym_CSDN</a></p>
+<h1 id="置换群"><a href="#置换群" class="headerlink" title="置换群"></a>置换群</h1><p><a href="https://www.cnblogs.com/nosta/p/9444576.html#3264913471" target="_blank" rel="noopener">nosta</a>、<a href="https://blog.csdn.net/xym_CSDN/article/details/53456447" target="_blank" rel="noopener">xym</a></p>
 <p><strong>群G</strong>：一个集合S，一个定义在集合上的二元运算$\cdot$，且二元运算需要满足：结合律、单位元存在、逆元存在、运算封闭性</p>
-<p><strong>群的阶</strong>：所含元素个数</p>
-<p><strong>元素的阶</strong>：就是模意义那个阶的拓展，即S中最小正整数k满足$a^k=e$，若不存在则阶为无穷大</p>
-<p><strong>置换f</strong>：有限集合到自身的一一映射</p>
-<hr>
-<h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><p><strong>Burnside引理</strong>：在置换群G中的置换F意义下，有C(F)个经过F置换后保持不变的方案，则总的本质不同的等价类数量有 $\frac{\sum_{F \in G} C(f)}{|G|}$ 个</p>
-<p><strong>Pόlya</strong>定理：设用k种颜色让染色，考虑C中每个循环一定染成同种颜色，等价类=$\frac{\sum_{F \in G} k^{循环数量} }{|G|}$</p>
+<p><strong>置换f</strong>：<strong>有限集合到自身的双射</strong></p>
+<p>置换群：集合元素为置换，二元运算为置换的<strong>连接</strong></p>
+<h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><p><strong>Burnside引理</strong>：在置换群G中的置换F意义下，有C(F)个经过F置换后保持不变的方案，则总的本质不同的等价类数量有 $\frac{\sum_{F \in G} C(F)}{|G|}$ 个</p>
+<p><strong>Pόlya</strong>定理：Burnside的特殊情况，无需了解</p>
 <h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h3><p><a href="https://www.luogu.org/problemnew/show/P4980" target="_blank" rel="noopener">luogu模板</a></p>
 <p>考虑本题的置换群G，就是a=1到n-1的旋转方案，每种方案的循环节长度ln= $lcm(n,a)/a$<br>循环的数量= $n/ln=n \times a/lcm(n,a)=gcd(n,a)$则$ans=\frac{1}{n} \sum_{a=1}^{n-1} n^{gcd(n,a)}$<br>那么枚举gcd，dfs顺便求个phi即可（用vector求好根号内次幂即可），因为约数个数在2000内，时间为 $O(1000^2 log n)$</p>
-<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p><a href="694.html">好几道题</a></p>
-<h3 id="欧拉公式的一种理解（我不知道我在吹啥"><a href="#欧拉公式的一种理解（我不知道我在吹啥" class="headerlink" title="欧拉公式的一种理解（我不知道我在吹啥"></a>欧拉公式的一种理解（我不知道我在吹啥</h3><p>幂函数将加法群（实滑动+虚滑动）映射到乘法群（缩放+旋转），e^x下，加法群上移i，乘法群逆时针旋转1rad，然后就可以推导欧拉公式，至于为什么是e，似乎需要用到向量微积分</p>
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1004" target="_blank" rel="noopener">[HNOI2008]Cards</a></p>
+<p>这道题的置换群是由题目给出的，不过需要<strong>手动加入单位置换</strong>以满足群的定义，即群大小为m+1，套burnside写个二维背包即可</p>
+<p>值得一提的做法是，$ans=\frac{n!}{a!b!c!(m+1)}$，并不太懂怎么推的</p>
+<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p><a href="https://www.luogu.org/problemnew/show/P4128" target="_blank" rel="noopener">「SHOI2006」有色图</a>、<a href="https://www.luogu.org/problemnew/show/P4727" target="_blank" rel="noopener">「HNOI2009」图的同构记数</a>、<a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1478" target="_blank" rel="noopener">bzoj1478 Isomorphism</a>：以有色图为例，其他都是子问题</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>考虑已经确定了一种置换后本质不同数量。</p>
+<p>对于一个大小为a的轮换内部：两条端点差的绝对值相同的边是等价的，差的取值为$[0,\lfloor n/2 \rfloor]$即$\lfloor n/2 \rfloor+1$种</p>
+<p>对于两个大小为a和b的轮换间：显然有$gcd(a,b)$种等价类</p>
+<p>$O(能跑)$</p>
 
+</div></div>
+<p><a href="https://atcoder.jp/contests/arc062/tasks/arc062_d" target="_blank" rel="noopener">ARC062F Painting Graphs with AtCoDeer</a></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>需要猜到一个奥妙的结论——当两个环有交，任意两条相邻的边可通过一系列操作交换颜色。因为考虑点双的本质不同方案数只和每种颜色的个数有关，点双之间是独立的，判掉只有一条边（K）、只有一个裸环（burnside得$\frac{\sum_<br>{i=0}^{a-1} K^{gcd(a,i)}}{a}$）的弱智点双即可。</p>
+
+</div></div>
       
     </div>
 
@@ -642,7 +653,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/998a.html" title="【OI之路】03数学-3抽象代数">http://zory.ink/posts/998a.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/998a.html" title="「OI之路」03数学-3抽象代数">http://zory.ink/posts/998a.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -671,8 +682,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/a06a.html" rel="next" title="【OI之路】03数学-2定理杂烩">
-                <i class="fa fa-chevron-left"></i> 【OI之路】03数学-2定理杂烩
+              <a href="/posts/a06a.html" rel="next" title="「OI之路」03数学-2定理杂烩">
+                <i class="fa fa-chevron-left"></i> 「OI之路」03数学-2定理杂烩
               </a>
             
           </div>
@@ -681,8 +692,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/83b5.html" rel="prev" title="【OI之路】03数学-4博弈论">
-                【OI之路】03数学-4博弈论 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/83b5.html" rel="prev" title="「OI之路」03数学-4博弈论">
+                「OI之路」03数学-4博弈论 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -760,7 +771,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -785,7 +796,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1194,7 +1207,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1257,7 +1274,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#群论"><span class="nav-text">群论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定理"><span class="nav-text">定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板"><span class="nav-text">模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题"><span class="nav-text">例题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉公式的一种理解（我不知道我在吹啥"><span class="nav-text">欧拉公式的一种理解（我不知道我在吹啥</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#置换群"><span class="nav-text">置换群</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定理"><span class="nav-text">定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板"><span class="nav-text">模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题"><span class="nav-text">例题</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

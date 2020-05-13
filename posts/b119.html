@@ -95,14 +95,14 @@
   <meta name="description" content="动态规划dp">
 <meta name="keywords" content="dp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】05动态规划-1入门">
+<meta property="og:title" content="「OI之路」05动态规划-1入门">
 <meta property="og:url" content="http://zory.ink/posts/b119.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="动态规划dp">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-11T02:52:00.296Z">
+<meta property="og:updated_time" content="2020-01-17T03:33:15.842Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】05动态规划-1入门">
+<meta name="twitter:title" content="「OI之路」05动态规划-1入门">
 <meta name="twitter:description" content="动态规划dp">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】05动态规划-1入门 | Zory的个人博客</title>
+  <title>「OI之路」05动态规划-1入门 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】05动态规划-1入门
+          <h2 class="post-title" itemprop="name headline">「OI之路」05动态规划-1入门
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-11 10:52:00" itemprop="dateModified" datetime="2019-10-11T10:52:00+08:00">2019-10-11</time>
+                <time title="修改时间：2020-01-17 11:33:15" itemprop="dateModified" datetime="2020-01-17T11:33:15+08:00">2020-01-17</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/b119.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】05动态规划-1入门">
+            <span id="/posts/b119.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」05动态规划-1入门">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -612,14 +612,23 @@
 
       
         <p>动态规划dp<br><a id="more"></a></p>
-<h2 id="多重背包"><a href="#多重背包" class="headerlink" title="多重背包"></a>多重背包</h2><p>二进制拆分法：<br>每个物品有ci次使用机会<br>可以把每个物品拆成log个<br>主要是利用二进制的表示法<br>记得把余数加上就好了<br>还是很好理解的</p>
+<h2 id="多重背包"><a href="#多重背包" class="headerlink" title="多重背包"></a>多重背包</h2><p>最大化方案权值和，且每种物品权值一样：<a href="https://www.luogu.com.cn/problem/P1776" target="_blank" rel="noopener">luoguP1776宝物筛选</a></p>
+<p>枚举每种题解，再枚举每种余数r，设$f_i=dp(i*V+r),f_i=max\ f_j+(i-j)*w$，对每种余数开单调队列优化即可，复杂度为$O(体积数*背包大小)$</p>
+<p>当然也可以二进制拆分，即若干个二进制数和一个余数</p>
+<p>最大化方案权值和，每种物品权值不同：<a href="https://loj.ac/problem/6039" target="_blank" rel="noopener">「雅礼集训 2017 Day5」珠宝</a></p>
+<p>$f_i=max\ f_j+w(j,i),w(j,i)=在这种体积里面选最大的j-i个$，显然满足<a href="4bab.html">四边形不等式</a></p>
 <h2 id="环形dp"><a href="#环形dp" class="headerlink" title="环形dp"></a>环形dp</h2><p>对于没有产生环形依赖的情况，可以把自身复制一遍到后面<br>但如果有环形依赖，但转移简单的时候，可以用高斯消元<br>否则有一种精妙的办法，适用于那种收尾相接情况简单的时候，<br>就是通过多次dp，第一次不相连，第二次强行相连（通过赋初始值）</p>
 <h2 id="数位dp"><a href="#数位dp" class="headerlink" title="数位dp"></a>数位dp</h2><p><a href="https://www.cnblogs.com/zbtrs/p/6106783.html" target="_blank" rel="noopener">zbtrs</a></p>
+<h2 id="一类树形dp"><a href="#一类树形dp" class="headerlink" title="一类树形dp"></a>一类树形dp</h2><p>$f(x,t)=在x子树中，权值为t的背包，而且限制t \le min(siz_x,K)$</p>
+<p>例题：<a href="https://nanti.jisuanke.com/t/37250" target="_blank" rel="noopener">计蒜客信息学4月普及组模拟赛 苹果树</a></p>
+<p>当$K=n$时是经典的$O(n^2)$，因为每个点对只会在其lca被统计一次；这个是可拓展的，复杂度为$O(nK)$</p>
+<p>证明：可以理解为n个点，每个点的siz是正数，一个集合的大小为内部元素的siz和，每次选两个集合合并，合并的代价为两个集合权值的积，一个集合的权值为$min(K,siz)$</p>
+<p>那么如果两个集合都爆出去，这样的合并最多n/K次，故$O(nK)$；如果有某个没爆，那么就是$O(\sum siz_{小集合}*K)=O(nK)$</p>
 <h2 id="题单"><a href="#题单" class="headerlink" title="题单"></a>题单</h2><p>理论上都写了题解</p>
 <ol>
-<li><a href="797f.html">agc002F Leftmost Ball</a></li>
+<li><a href="797f.html">AGC002F Leftmost Ball</a></li>
 <li><a href="8884.html">SRM613 TaroCheckers</a></li>
-<li><a href="794c.html">agc001E BBQ Hard</a></li>
+<li><a href="794c.html">AGC001E BBQ Hard</a></li>
 <li><a href="8884.html">SRM625 Seatfriends</a></li>
 <li><a href="8884.html">HDU5181 numbers</a></li>
 </ol>
@@ -636,14 +645,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8530.html" rel="bookmark">【Bzoj1911】【Luogu3628】特别行动队</a></div>
+      <div class="popular-posts-title"><a href="/posts/8530.html" rel="bookmark">「Bzoj1911」「Luogu3628」特别行动队</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4bab.html" rel="bookmark">【OI之路】05动态规划-2-1d1d动态规划</a></div>
+      <div class="popular-posts-title"><a href="/posts/4bab.html" rel="bookmark">「OI之路」05动态规划-2-动态规划进阶</a></div>
       
     </li>
   
@@ -657,14 +666,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">【CZYZ2009暑假集训提高组6】盟军敢死队</a></div>
+      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">「CZYZ2009暑假集训提高组6」盟军敢死队</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/39cb.html" rel="bookmark">【CF955F】Heaps</a></div>
+      <div class="popular-posts-title"><a href="/posts/39cb.html" rel="bookmark">「CF955F」Heaps</a></div>
       
     </li>
   
@@ -689,7 +698,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/b119.html" title="【OI之路】05动态规划-1入门">http://zory.ink/posts/b119.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/b119.html" title="「OI之路」05动态规划-1入门">http://zory.ink/posts/b119.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -737,8 +746,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/4bab.html" rel="prev" title="【OI之路】05动态规划-2-1d1d动态规划">
-                【OI之路】05动态规划-2-1d1d动态规划 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/4bab.html" rel="prev" title="「OI之路」05动态规划-2-动态规划进阶">
+                「OI之路」05动态规划-2-动态规划进阶 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -816,7 +825,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -841,7 +850,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1250,7 +1261,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1313,7 +1328,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多重背包"><span class="nav-text">多重背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环形dp"><span class="nav-text">环形dp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数位dp"><span class="nav-text">数位dp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题单"><span class="nav-text">题单</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多重背包"><span class="nav-text">多重背包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环形dp"><span class="nav-text">环形dp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数位dp"><span class="nav-text">数位dp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一类树形dp"><span class="nav-text">一类树形dp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题单"><span class="nav-text">题单</span></a></li></ol></div>
             
 
           </div>

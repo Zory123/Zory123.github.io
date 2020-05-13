@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="9月做题记录最后一个9月份了，年份都不用写了；即使实力不强也希望这份题单能给后人一些帮助 这个月主要在做课件，整体质量不错">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-21T05:02:32.848Z">
+<meta property="og:updated_time" content="2020-01-14T01:54:00.439Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="9月做题记录">
 <meta name="twitter:description" content="9月做题记录最后一个9月份了，年份都不用写了；即使实力不强也希望这份题单能给后人一些帮助 这个月主要在做课件，整体质量不错">
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-21 13:02:32" itemprop="dateModified" datetime="2019-10-21T13:02:32+08:00">2019-10-21</time>
+                <time title="修改时间：2020-01-14 09:54:00" itemprop="dateModified" datetime="2020-01-14T09:54:00+08:00">2020-01-14</time>
               </span>
             
           
@@ -637,17 +637,23 @@
 </div></div>
 <h3 id="51nod1822-序列求和-V5"><a href="#51nod1822-序列求和-V5" class="headerlink" title="51nod1822 序列求和 V5"></a><a href="https://www.51nod.com/Challenge/Problem.html#problemId=1822" target="_blank" rel="noopener">51nod1822 序列求和 V5</a></h3><p>这题不建议开</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>R=1同样先判了，要求$O(k)$可以插值或伯努利，详见<a href="1f2a.html">这里 </a></p>
+<p>R=1先判了，要求$O(k)$可以插值或伯努利，详见<a href="1f2a.html">这里 </a></p>
 <p>实话说，本题的做法几乎每一步除了神还是神，我只能理解其正确性，而没法逻辑上推导，见谅。</p>
-<p>$$<br>1)f_k(n)=R^{n}F_k(n)-F_k(0)，这里F_k是个k次多项式，正确性很好证明，上面的递推式+归纳法即可 \\<br>那么我们现在的目标就是求出F_k的点值然后插出来，再探索一些关系 \\<br>2)f_k(n+1)-f_k(n)=(n+1)^k R^{n+1}，这个也是上面的递推式+归纳法可证 \\<br>同时f_k(n+1)-f_k(n)=R^{n+1} F_k(n+1)-R^nF_k(n)，可得F_k(n+1)=(n+1)^k+F_k(n)/R即递推式 \\<br>3)根据牛顿插值法或自行思考一下，任何关于x的k次多项式都可以被表示为\sum_{i=0}^k a_i C_x^i，有可以看做系数放了分母的下降幂多项式 \\<br>\sum_{i=0}^{k+1} (-1)^i C_{k+1}^i F_k(i)<br>=\sum_{i=0}^{k+1} (-1)^i C_{k+1}^i \sum_{j=0}^ka_jC_i^j<br>=\sum_{j=0}^ka_j(\sum_{i=j}^{k+1} (-1)^i C_{k+1}^i C_i^j=0)=0 \\<br>证明：\sum_{i=j}^{k+1} (-1)^i C_{k+1}^j C_{k+1-j}^{i-j}<br>=\sum_{t=0}^{k+1-j} (-1)^{j+t} C_{k+1}^j C_{k+1-j}^{t}<br>=C_{k+1}^j (-1)^j (\sum_{t=0}^{k+1-j} (-1)^t C_{k+1-j}^{t}=[j=k+1]=0)=0 \\<br>4)于是我们获得了k+1条方程，能求出至少一组解，点值数量也超过k \\<br>设A=F_k(0)然后表示出F_k(1..k+1)从而求出A，然后用2的递推式求出点值，再插值即可<br>$$</p>
+<p>$$<br>1)f_k(n)=R^{n}F_k(n)-F_k(0)，这里F_k是个k次多项式，正确性很好证明，上面的递推式+归纳法即可 \\<br>那么我们现在的目标就是求出F_k的点值然后插出来，再探索一些关系 \\<br>2)f_k(n+1)-f_k(n)=(n+1)^k R^{n+1}，这个也是上面的递推式+归纳法可证 \\<br>同时f_k(n+1)-f_k(n)=R^{n+1} F_k(n+1)-R^nF_k(n)，可得F_k(n+1)=(n+1)^k+F_k(n)/R即递推式 \\<br>3)根据牛顿插值法或自行思考一下，任何关于x的k次多项式都可以被表示为\sum_{i=0}^k a_i C_x^i，也可以看做系数放了分母的下降幂多项式 \\<br>\sum_{i=0}^{k+1} (-1)^i C_{k+1}^i F_k(i)<br>=\sum_{i=0}^{k+1} (-1)^i C_{k+1}^i \sum_{j=0}^ka_jC_i^j<br>=\sum_{j=0}^ka_j(\sum_{i=j}^{k+1} (-1)^i C_{k+1}^i C_i^j=0)=0 \\<br>证明：\sum_{i=j}^{k+1} (-1)^i C_{k+1}^j C_{k+1-j}^{i-j}<br>=\sum_{t=0}^{k+1-j} (-1)^{j+t} C_{k+1}^j C_{k+1-j}^{t}<br>=C_{k+1}^j (-1)^j (\sum_{t=0}^{k+1-j} (-1)^t C_{k+1-j}^{t}=[j=k+1]=0)=0 \\<br>4)于是我们获得了k+1条方程，能求出至少一组解，点值数量也超过k \\<br>设A=F_k(0)然后表示出F_k(1..k+1)从而求出A，然后用2的递推式求出点值，再插值即可<br>$$</p>
 <p>总复杂度$O(\sum k)$</p>
 
 </div></div>
-<h3 id="uoj193【UR-14】人类补完计划"><a href="#uoj193【UR-14】人类补完计划" class="headerlink" title="uoj193【UR#14】人类补完计划"></a><a href="http://uoj.ac/contest/28/problem/193" target="_blank" rel="noopener">uoj193【UR#14】人类补完计划</a></h3><p>题意：给出一个n个点m条边的无向图，求所有基于边集的生成子图是一棵连通基环树的方案权值和，一个方案的权值为$2^{非叶子节点个数}$</p>
+<h3 id="uoj193「UR-14」人类补完计划"><a href="#uoj193「UR-14」人类补完计划" class="headerlink" title="uoj193「UR#14」人类补完计划"></a><a href="http://uoj.ac/contest/28/problem/193" target="_blank" rel="noopener">uoj193「UR#14」人类补完计划</a></h3><p>题意：给出一个n个点m条边的无向图，求所有基于边集的生成子图是一棵连通基环树的方案权值和，一个方案的权值为$2^{非叶子节点个数}$</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>Rose的做法：和<a href="2558.html">CEOI2019游乐园</a>有点像，<strong>一定要分清哪些东西你需要考虑进容斥系数的选择而哪些不用</strong></p>
-<p>$$<br>首先考虑环，不妨从编号最小的点开始，这样每个环会记两次，设link(S,ed)然后转移到比mi(S)大的点，O(2^nn^2)\\<br>f(S)表示连通基环树方案数，用link(S)/2初始化，设cnt(T\to S \setminus T)边方案，可以用类似游乐园的方法O(1)处理切换 \\<br>f(S)=\sum_{T\ne \emptyset,T\subset S} (-1)^{|T|+1}f(S \setminus T)*cnt(T\to S \setminus T),ans=\sum_{S} \sum_{T\subset S可空} pp(|S|,|T|) 2^{|S|-|T|} f(S \setminus T)*cnt(T\to S \setminus T) \\<br>我们希望2^{n-i}=\sum_{j=0}^{i} C_i^j pp(i,j)*2^{n-j}，即1=\sum_{j=0}^{i} C_i^j pp(i,j)*2^{i-j}，考虑pp(i,j)=(-1)^j，O(3^n)<br>$$<br>低级推广一下，设权值为$a^{非叶子个数}，则pp(i,j)=(1-a)^j$即可</p>
-<p>至于官方题解的做法能进一步怎么推广并没有细看，感兴趣的可以<a href="http://jiry-2.blog.uoj.ac/blog/1622" target="_blank" rel="noopener">看看</a>，另外还有<a href="http://zx2003.blog.uoj.ac/blog/3651?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">zx的$2^nn^3$做法</a></p>
+<p>首先请确保掌握<a href="3b5e.html/#容斥">这里讲的容斥技能</a></p>
+<p>转化一下题意，等价于统计能画出多少种不同的基环树，且方案权值=$2^{基环树大小}*(1/2)^{叶子节点数}$</p>
+<p>很自然的想法是枚举基环树点集、叶子节点点集，然后转化为给定点集的基环树不带权方案数。</p>
+<p>统计方案数也是类似现在这样<strong>剥一层叶子</strong>，肯定要套个容斥；剥到最后肯定是一个环，所以我们要用环来初始化dp</p>
+<p>对于环，从编号最小的点开始走，每个环会被记录恰两次（特判掉二元环），记$link(S,ed)$然后转移到不小于$mi(S)$，$O(2^nn^2)$</p>
+<p>里面就是朴素的全集统计$(-1)^{|叶|+1}$，$dp(S)=\sum_{L \subset S} (-1)^{|L|+1} dp(S \setminus L) \prod_{z \in L} cnt(z \to S \setminus L)$，后面那个是从点连到集合内的边数</p>
+<p>外面就是$2^{基环树大小}*\sum_w (1/2)^w*[恰w]=2^{基环树大小}\sum_{w=0} (-1/2)^w*[至少w]$，式子和上面类似，实现的时候w从1开始，所以再将$dp_S$累入答案即可补上那个1</p>
+<p><a href="http://uoj.ac/submission/376421" target="_blank" rel="noopener">先写了个$O(n^23^n)$的code</a>验了下正确性，比较简洁；然后上面的式子枚举$S \setminus T$再枚举超集去更新别人就能$O(3^n)$了，实现可以考虑将所有超集记录下来，然后那个cnt从「少个lowbit」的地方转移过来即可，<a href="http://uoj.ac/submission/376456" target="_blank" rel="noopener">code</a></p>
+<p><a href="http://zx2003.blog.uoj.ac/blog/3651?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">zx的$O(n^32^n)$做法</a></p>
 
 </div></div>
 <h3 id="luogu5162-WD与积木"><a href="#luogu5162-WD与积木" class="headerlink" title="luogu5162 WD与积木"></a><a href="https://www.luogu.org/problem/P5162" target="_blank" rel="noopener">luogu5162 WD与积木</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -657,7 +663,7 @@
 <p>妈呀这居然变成生成函数裸题了……$G=e^x*G-G+1,G=(2-e^x)^{-1};F=G+e^xF-F,F=(2-e^x)^{-2}，O(nlogn)$</p>
 
 </div></div>
-<h3 id="uoj50【UR-3】链式反应"><a href="#uoj50【UR-3】链式反应" class="headerlink" title="uoj50【UR #3】链式反应"></a><a href="http://uoj.ac/problem/50" target="_blank" rel="noopener">uoj50【UR #3】链式反应</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<h3 id="uoj50「UR-3」链式反应"><a href="#uoj50「UR-3」链式反应" class="headerlink" title="uoj50「UR #3」链式反应"></a><a href="http://uoj.ac/problem/50" target="_blank" rel="noopener">uoj50「UR #3」链式反应</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>是我鲁莽了……以为不搞有根树就行了，$F=x(F^2G/2+1)$，仔细想想才发现是错的，还是应该老老实实从dp式开始写<br>$$<br>f_n<br>=[n=1]+ \frac{1}{2} \sum_{t \in G} \sum_{i=1}^n C_{n-1}^{t} C_{n-t-1}^{i} f_{i} f_{n-t-i}<br>=[n=1]+(n-1)! \sum_{t \in G} \frac{g_{n-t-1}}{t!},g_n=\frac{1}{2} \sum_{i=1}^n \frac{f_if_{n-i}}{i!(n-i)!}<br>$$<br>到这里已经可以分治FFT了，$O(nlog^2n)$，rk1和2似乎都是这个做法，这种自己卷自己的分治FFT不会写见<a href="https://www.cnblogs.com/cjyyb/p/11055520.html" target="_blank" rel="noopener">yyb的code</a>或<a href="8c82.html/#分治FFT">这里</a></p>
 <p>接下来介绍一种<strong>理论复杂度</strong>nlogn的做法</p>
 <p>写成生成函数就是：$\frac{d}{dx} F=1+F^2G/2$，也就是一个一阶微分方程（接下来符号换来换去的……f是函数，F是形式幂级数，B是这一层的，b是上一层的）</p>
@@ -665,16 +671,11 @@
 <p>详见<a href="68d9.html#解微分方程">生成函数-解微分方程</a>，代码咕了</p>
 
 </div></div>
-<h3 id="AGC018E-Sightseeing-Plan"><a href="#AGC018E-Sightseeing-Plan" class="headerlink" title="AGC018E Sightseeing Plan"></a><a href="https://atcoder.jp/contests/agc018/tasks/agc018_e" target="_blank" rel="noopener">AGC018E Sightseeing Plan</a></h3><p>题意补充：在给定3个无交矩形内选3个点，对【连接3点路径数】求和</p>
-<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>$$<br>设f(a,b)表示从(0,0)\to(a,b)的方案数，显然f(a,b)=C_{a+b}^a \\<br>于是 \sum_{x=X_1}^{X_2}\sum_{y=Y_1}^{Y_2} f(x,y)=f(X_2+1,Y_2+1)-f(X_2+1,Y_1)-f(X_1,Y_2+1)+f(X_1,Y_1) \\<br>枚举4*4种关键点选择方案，问题转化成统计(0,0) \to (dx,dy)的路径权值和，一条路径的权值为与矩阵([X_1,X_2],[Y_1,Y_2])的交的长度 \\<br>注意到这个长度其实就是在矩形中的终点T与起点S的哈密顿距离，T_x+T_y-S_x-S_y+1<br>$$<br>然后这个东西是可以拆开计算贡献的，考虑会被作为起点多少次即可；而且起点终点关键点只有$4e6$个</p>
-
-</div></div>
 <h3 id="CF286E-Ladies’-Shop"><a href="#CF286E-Ladies’-Shop" class="headerlink" title="CF286E Ladies’ Shop"></a><a href="https://codeforces.com/contest/286/problem/E" target="_blank" rel="noopener">CF286E Ladies’ Shop</a></h3><p>题意：现在有序列a，问是否存在序列p满足对p做值域m以内的完全背包后=a</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>又被教育了是什么鬼啊……虽然暴力多项式快速幂应该能过，但存在nlogn做法</p>
-<p>首先【有解】与【a是解】是等价的，如果无解则a也不是解；那么我们现在只需要知道是否存在一个k使得能被a表示而不在a中；考虑第一个这样的k，你发现一定$\exists i,j\le n,a_i+a_j=k$，因为比k更小的不在a中的数都是不可表的；于是我们对a做多项式平方即可判断是否无解。</p>
-<p>考虑最小的p，这个p一定是a的子集（剩下类似NOIP2018D1T2），对于每个数【在p中】等价于【不可被前面的表出】，思考一下发现也是一定$\exists i,j\le n,a_i+a_j=a_t$，因为已经保证有解了，那么如果需要超过两个数表示（可能有重复，不关心怎么组成），那么那些数的子集和一定都是a中的；于是对a做多项式平方即可。</p>
+<p>首先「有解」与「a是解」是等价的，如果无解则a也不是解；那么我们现在只需要知道是否存在一个k使得能被a表示而不在a中；考虑第一个这样的k，你发现一定$\exists i,j\le n,a_i+a_j=k$，因为比k更小的不在a中的数都是不可表的；于是我们对a做多项式平方即可判断是否无解。</p>
+<p>考虑最小的p，这个p一定是a的子集（剩下类似NOIP2018D1T2），对于每个数「在p中」等价于「不可被前面的表出」，思考一下发现也是一定$\exists i,j\le n,a_i+a_j=a_t$，因为已经保证有解了，那么如果需要超过两个数表示（可能有重复，不关心怎么组成），那么那些数的子集和一定都是a中的；于是对a做多项式平方即可。</p>
 <p>$O(mlogm)$</p>
 
 </div></div>
@@ -715,10 +716,10 @@
 <p>这部分搞了很久没看懂别人写的题解，按自己的理解想了个就过了qwq<br>$$<br>g(A,B)=\sum_{x&lt;y,a_x&gt;a_y},g(B,A)=\sum_{x&lt;y,a_x&lt;a_y}  \\<br>然后涉及C的，上面统计的是所有C而现在是具体的，所以g_y(State)/=n-2 \\<br>g(C,B)=\sum_{x&lt;y}\sum_{i \ne x,a_i&gt;a_y},g(B,C)=\sum_{x&lt;y}\sum_{i \ne x,a_i&lt;a_y} \\<br>g(C,A)=\sum_{x&lt;y}\sum_{i \ne y,a_i&gt;a_x},g(A,C)=\sum_{x&lt;y}\sum_{i \ne y,a_i&lt;a_x} \\<br>最后再计g(C,C)=C_n^2/2*f(C,C)，因为所有可能的合法C之和恰为1/2 \\<br>$$<br>上面的条件非常好维护，搞个树状数组维护$x&lt;y且a_x&lt;a_y$的个数即可，$O(nlogn)$，<a href="../code/bzoj/bzoj5058.html">code</a></p>
 
 </div></div>
-<h3 id="uoj390【UNR-3】百鸽笼"><a href="#uoj390【UNR-3】百鸽笼" class="headerlink" title="uoj390【UNR #3】百鸽笼"></a><a href="http://uoj.ac/contest/46/problem/390" target="_blank" rel="noopener">uoj390【UNR #3】百鸽笼</a></h3><p>注意只有小写n，并没有保证总和在30以内，上面的大写N是没用的……</p>
+<h3 id="uoj390「UNR-3」百鸽笼"><a href="#uoj390「UNR-3」百鸽笼" class="headerlink" title="uoj390「UNR #3」百鸽笼"></a><a href="http://uoj.ac/contest/46/problem/390" target="_blank" rel="noopener">uoj390「UNR #3」百鸽笼</a></h3><p>注意只有小写n，并没有保证总和在30以内，上面的大写N是没用的……</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>好题，正解复杂度均为$O(n^3m^2)$，前置：<a href="be4c.html">PKUWC2018猎人杀的题意转化</a></p>
-<p>现在求第k列的答案，考虑容斥，固定至少m个非法列在第k列放完后仍未满<br>$$<br>我们只关心固定列，设形成一个长为L的序列，则最后一个元素一定是k\\<br>然后考虑每在这个序列上填一个数字，非固定列的贡献=\frac{1}{n} \sum_{i=0}^{\infty} (\frac{n-m-1}{n})^i=(m+1)^{-1} \\<br>F_k=\frac{x^{a_k-1}}{(a_k-1)!} *<br>\prod_{t \ne k} (1+y\sum_{i=1}^{a_t-1} \frac{x^i}{i!}),<br>ans_k=\sum L!*(m+1)^{-(L+1)}*(-1)^m *[x^L y^m]F \\<br>设f(L,m)=[x^L y^m]F，插入某列是O(状态n^2m*转移m)，那么无脑每次都放进去是O(n^4m^2)的 \\<br>注意到对于求ans_k，我们其实是把其他n-1个卷起来，那一开始卷好n个后面删除掉k就行了 \\<br>复杂度降低至O(n^3 m^2)，其中删除从背包撤回角度比较好理解 \\<br>$$<br>至于<a href="https://blog.csdn.net/lyd_7_29/article/details/83787557" target="_blank" rel="noopener">生成函数做法</a>，我觉得难度、实现、本质上都差不多，就是推导的时候繁琐一点，因为我们在很早前就把式子里的n给消掉了，至于展开$x^Ae^{Bx}$对普通生成函数的贡献见这里的推导：<a href="127faea6.html">agc038E - Gachapon</a></p>
+<p>现在求第k列的答案，考虑容斥，固定至少m个非法列在第k列放完后仍未满<br>$$<br>我们只关心固定列，设形成一个长为L的序列，则最后一个元素一定是k\\<br>然后考虑每在这个序列上填一个数字，非固定列的贡献=\frac{1}{n} \sum_{i=0}^{\infty} (\frac{n-m-1}{n})^i=(m+1)^{-1} \\<br>F_k=\frac{x^{a_k-1}}{(a_k-1)!} *<br>\prod_{t \ne k} (1+y\sum_{i=1}^{a_t-1} \frac{x^i}{i!}),<br>ans_k=\sum L!*(m+1)^{-(L+1)}*(-1)^m *[x^L y^m]F \\<br>设f(L,m)=[x^L y^m]F，插入某列是O(状态n^2m*转移m)，那么无脑每次都放进去是O(n^4m^2)的 \\<br>注意到对于求ans_k，我们其实是把其他n-1个卷起来，那一开始卷好n个后面删除掉k就行了 \\<br>复杂度降低至O(n^3 m^2)，其中删除从背包撤回角度比较好理解 \\<br>$$<br>至于<a href="https://blog.csdn.net/lyd_7_29/article/details/83787557" target="_blank" rel="noopener">生成函数做法</a>，我觉得难度、实现、本质上都差不多，就是推导的时候繁琐一点，因为我们在很早前就把式子里的n给消掉了，至于展开$x^Ae^{Bx}$对普通生成函数的贡献见这里的推导：<a href="127faea6.html">AGC038E - Gachapon</a></p>
 
 </div></div>
 <h3 id="HDU5181-numbers"><a href="#HDU5181-numbers" class="headerlink" title="HDU5181 numbers"></a><a href="https://vjudge.net/problem/HDU-5181" target="_blank" rel="noopener">HDU5181 numbers</a></h3><p>题意：1到n依次入栈，给出m个限制，$A_i 要早于 B_i 出栈$，求多少合法出栈序列，$n \le 3e2$</p>
@@ -735,7 +736,7 @@
 <p>翻转字符串sa排序后缀，经典套路并查集从大到小合并，连通块存set启发式合并</p>
 <p>set存储的是下标而不是排名，合并的时候考虑贪心，用set找到左右两侧新产生的关键点对，共有$O(nlogn)$个</p>
 <p>一种思路是存下来作为一个点，那么询问就是要回答矩形最大值，这个离线就是经典的树状数组做</p>
-<p>另一种思路复杂些（我脑残了），用【树上最短路】那题的思想，区间放到线段树上，现在对于一个区间要找到所有包含它的区间并删除，考虑用左端点单点查询找到包含左端点的所有区间，每个区间在当初插入的时候按右端点从小到大vector存，这样每次判vector最后的并删除掉，这样每个区间会被访问log次</p>
+<p>另一种思路复杂些（我脑残了），用「树上最短路」那题的思想，区间放到线段树上，现在对于一个区间要找到所有包含它的区间并删除，考虑用左端点单点查询找到包含左端点的所有区间，每个区间在当初插入的时候按右端点从小到大vector存，这样每次判vector最后的并删除掉，这样每个区间会被访问log次</p>
 <p><a href="https://loj.ac/submission/611915" target="_blank" rel="noopener">code</a>，这个做法是卡在了存下标这个小trick，而这个恰好是没啥替代方式的按我目前的思路，其他基本都想到了</p>
 <p>下面是两个网上的sam做法，看题的时候到这个翻转后询问后缀的就主要在想sa，因为做题少sam以前都是拿来处理子串信息的所以没怎么考虑过</p>
 <p><strong>做法二</strong>：sam，两个前缀的最长公共后缀就是其lca的len，树结构上set存right集合启发式合并，然后和上面类似</p>
@@ -929,7 +930,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -954,7 +955,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1363,7 +1366,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1426,7 +1433,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#loj6338「SDWC2018-Day2」优秀、CF301E-Yaroslav-and-Arrangements"><span class="nav-text">loj6338「SDWC2018 Day2」优秀、CF301E Yaroslav and Arrangements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF947E-Perpetual-Subtraction"><span class="nav-text">CF947E Perpetual Subtraction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#51nod1229-序列求和-V2"><span class="nav-text">51nod1229 序列求和 V2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#51nod1822-序列求和-V5"><span class="nav-text">51nod1822 序列求和 V5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uoj193【UR-14】人类补完计划"><span class="nav-text">uoj193【UR#14】人类补完计划</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#luogu5162-WD与积木"><span class="nav-text">luogu5162 WD与积木</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uoj50【UR-3】链式反应"><span class="nav-text">uoj50【UR #3】链式反应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC018E-Sightseeing-Plan"><span class="nav-text">AGC018E Sightseeing Plan</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF286E-Ladies’-Shop"><span class="nav-text">CF286E Ladies’ Shop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Topcoder-SRM613-TaroCheckers"><span class="nav-text">Topcoder SRM613 TaroCheckers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Topcoder-SRM625-Seatfriends"><span class="nav-text">Topcoder SRM625 Seatfriends</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj547「LibreOJ-β-Round-7」匹配字符串"><span class="nav-text">loj547「LibreOJ β Round #7」匹配字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj5058-期望逆序对"><span class="nav-text">bzoj5058 期望逆序对</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uoj390【UNR-3】百鸽笼"><span class="nav-text">uoj390【UNR #3】百鸽笼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU5181-numbers"><span class="nav-text">HDU5181 numbers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj6041「雅礼集训-2017-Day7」事情的相似度"><span class="nav-text">loj6041「雅礼集训 2017 Day7」事情的相似度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU5822-color"><span class="nav-text">HDU5822 color</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF135E-Weak-Subsequence"><span class="nav-text">CF135E Weak Subsequence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF995F-Cowmpany-Cowmpensation"><span class="nav-text">CF995F Cowmpany Cowmpensation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#51nod1690-区间求和2"><span class="nav-text">51nod1690 区间求和2</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#loj6338「SDWC2018-Day2」优秀、CF301E-Yaroslav-and-Arrangements"><span class="nav-text">loj6338「SDWC2018 Day2」优秀、CF301E Yaroslav and Arrangements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF947E-Perpetual-Subtraction"><span class="nav-text">CF947E Perpetual Subtraction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#51nod1229-序列求和-V2"><span class="nav-text">51nod1229 序列求和 V2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#51nod1822-序列求和-V5"><span class="nav-text">51nod1822 序列求和 V5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uoj193「UR-14」人类补完计划"><span class="nav-text">uoj193「UR#14」人类补完计划</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#luogu5162-WD与积木"><span class="nav-text">luogu5162 WD与积木</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uoj50「UR-3」链式反应"><span class="nav-text">uoj50「UR #3」链式反应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF286E-Ladies’-Shop"><span class="nav-text">CF286E Ladies’ Shop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Topcoder-SRM613-TaroCheckers"><span class="nav-text">Topcoder SRM613 TaroCheckers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Topcoder-SRM625-Seatfriends"><span class="nav-text">Topcoder SRM625 Seatfriends</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj547「LibreOJ-β-Round-7」匹配字符串"><span class="nav-text">loj547「LibreOJ β Round #7」匹配字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj5058-期望逆序对"><span class="nav-text">bzoj5058 期望逆序对</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uoj390「UNR-3」百鸽笼"><span class="nav-text">uoj390「UNR #3」百鸽笼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU5181-numbers"><span class="nav-text">HDU5181 numbers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj6041「雅礼集训-2017-Day7」事情的相似度"><span class="nav-text">loj6041「雅礼集训 2017 Day7」事情的相似度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU5822-color"><span class="nav-text">HDU5822 color</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF135E-Weak-Subsequence"><span class="nav-text">CF135E Weak Subsequence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF995F-Cowmpany-Cowmpensation"><span class="nav-text">CF995F Cowmpany Cowmpensation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#51nod1690-区间求和2"><span class="nav-text">51nod1690 区间求和2</span></a></li></ol></div>
             
 
           </div>

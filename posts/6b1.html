@@ -95,14 +95,14 @@
   <meta name="description" content="ProblemWC2014uoj54">
 <meta name="keywords" content="难度2,好题,莫反">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【WC2014】时空穿梭">
+<meta property="og:title" content="「WC2014」时空穿梭">
 <meta property="og:url" content="http://zory.ink/posts/6b1.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="ProblemWC2014uoj54">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-22T04:44:46.650Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【WC2014】时空穿梭">
+<meta name="twitter:title" content="「WC2014」时空穿梭">
 <meta name="twitter:description" content="ProblemWC2014uoj54">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【WC2014】时空穿梭 | Zory的个人博客</title>
+  <title>「WC2014」时空穿梭 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【WC2014】时空穿梭
+          <h2 class="post-title" itemprop="name headline">「WC2014」时空穿梭
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-22 12:44:46" itemprop="dateModified" datetime="2019-08-22T12:44:46+08:00">2019-08-22</time>
+                <time title="修改时间：2019-12-01 10:18:50" itemprop="dateModified" datetime="2019-12-01T10:18:50+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/6b1.html" class="post-meta-item leancloud_visitors" data-flag-title="【WC2014】时空穿梭">
+            <span id="/posts/6b1.html" class="post-meta-item leancloud_visitors" data-flag-title="「WC2014」时空穿梭">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,7 +615,7 @@
 <a id="more"></a>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>完整数据范围请前往uoj<br>如果对像本sb一样对高维空间难以理解，可以看看bzoj3518帮助理解</p>
-<p>因为在一条直线上，考虑枚举线段两端的节点<br>那么我们不妨枚举跨度向量a，那么在中间的点的数量就是 $gcd(a_i)-1$ ，这个挺好想的吧，因为右上角的节点会被所有【除以gcd的位置】覆盖<br>考虑每种向量实际有多少个，那么不难得出式子（如果选不到c-2个，组合数为0）<br>$$<br>\begin{aligned}<br>ans&amp;=\sum_{a_t}^{M_t} \sum \sum C_{gcd(a_t)-1}^{c-2} (\prod M_t-a_t)\\<br>&amp;=\sum_{g=1}^{minM} C_{g-1}^{c-2} \times ( \sum_{m_t=1}^{M_t/g} \sum \sum (\prod M_t-m_t \times g) \times [gcd(m)=1] )\\<br>&amp;然后套路地莫反一下（目的是取消之间的依赖性，利用乘法分配律降低复杂度）\\<br>&amp;=\sum_{g=1}^{minM} C_{g-1}^{c-2}  \times  ( \sum_{m_t=1}^{M_t/g} \sum \sum (\prod M_t-m_t \times g) \times (\sum_{d|gcd(m_i)} \mu(d)) )\\<br>&amp;=\sum_{g=1}^{minM} C_{g-1}^{c-2}  \times  ( \sum_{d=1}^{minM/g} \mu(d) \times \prod (\sum_{i=1}^{\frac{M_t}{dg}} M_t-i \times dg) )\\<br>&amp;看到这个形式，做题多的不难发现枚举dg会方便很多\\<br>&amp;=\sum_{D=1}^{minM} (\prod ( \sum_{i=0}^{\frac{M_t}{D}} M_t-i \times D ))  \times  (\sum_{g|D} C_{g-1}^{c-2} \mu(D/g))\\<br>&amp;=\sum_{D=1}^{minM} (\prod ( (M_t/D) \times M_t-D \times (M_t/D)*(M_t/D+1)/2 ))  \times  (\sum_{g|D} C_{g-1}^{c-2} \mu(D/g))\\<br>\end{aligned}<br>$$<br>后面那个 cmlogm 预处理为f(c,D)，则每组数据的复杂度为nmlogm<br>到此为止都比较常规，然而还是无法处理多组数据，主要在于致命的枚举D<br>此时很多人肯定会观察到式子中的整除，公所周知现在不同的 $\frac{M_t}{D}$ 只有 $n \sqrt m$ 个<br>但是看到式子中还有一个D，非常麻烦，但也仅仅只有这个东西是麻烦的，于是我们不妨把D当做未知数！<br>所以我们依然可以用数论分块得出当前D的区间dl和dr，<br>这段区间内中间的东西是个关于D的多项式，可以 $n^2$ 计算出 $D^i$ 的系数a<br>$ans=\sum_{i=0}^n a_i \times ( \sum_{dl}^{dr} f(D) \times D^i )$<br>后面那个可以cnM计算前缀和</p>
+<p>因为在一条直线上，考虑枚举线段两端的节点<br>那么我们不妨枚举跨度向量a，那么在中间的点的数量就是 $gcd(a_i)-1$ ，这个挺好想的吧，因为右上角的节点会被所有「除以gcd的位置」覆盖<br>考虑每种向量实际有多少个，那么不难得出式子（如果选不到c-2个，组合数为0）<br>$$<br>\begin{aligned}<br>ans&amp;=\sum_{a_t}^{M_t} \sum \sum C_{gcd(a_t)-1}^{c-2} (\prod M_t-a_t)\\<br>&amp;=\sum_{g=1}^{minM} C_{g-1}^{c-2} \times ( \sum_{m_t=1}^{M_t/g} \sum \sum (\prod M_t-m_t \times g) \times [gcd(m)=1] )\\<br>&amp;然后套路地莫反一下（目的是取消之间的依赖性，利用乘法分配律降低复杂度）\\<br>&amp;=\sum_{g=1}^{minM} C_{g-1}^{c-2}  \times  ( \sum_{m_t=1}^{M_t/g} \sum \sum (\prod M_t-m_t \times g) \times (\sum_{d|gcd(m_i)} \mu(d)) )\\<br>&amp;=\sum_{g=1}^{minM} C_{g-1}^{c-2}  \times  ( \sum_{d=1}^{minM/g} \mu(d) \times \prod (\sum_{i=1}^{\frac{M_t}{dg}} M_t-i \times dg) )\\<br>&amp;看到这个形式，做题多的不难发现枚举dg会方便很多\\<br>&amp;=\sum_{D=1}^{minM} (\prod ( \sum_{i=0}^{\frac{M_t}{D}} M_t-i \times D ))  \times  (\sum_{g|D} C_{g-1}^{c-2} \mu(D/g))\\<br>&amp;=\sum_{D=1}^{minM} (\prod ( (M_t/D) \times M_t-D \times (M_t/D)*(M_t/D+1)/2 ))  \times  (\sum_{g|D} C_{g-1}^{c-2} \mu(D/g))\\<br>\end{aligned}<br>$$<br>后面那个 cmlogm 预处理为f(c,D)，则每组数据的复杂度为nmlogm<br>到此为止都比较常规，然而还是无法处理多组数据，主要在于致命的枚举D<br>此时很多人肯定会观察到式子中的整除，公所周知现在不同的 $\frac{M_t}{D}$ 只有 $n \sqrt m$ 个<br>但是看到式子中还有一个D，非常麻烦，但也仅仅只有这个东西是麻烦的，于是我们不妨把D当做未知数！<br>所以我们依然可以用数论分块得出当前D的区间dl和dr，<br>这段区间内中间的东西是个关于D的多项式，可以 $n^2$ 计算出 $D^i$ 的系数a<br>$ans=\sum_{i=0}^n a_i \times ( \sum_{dl}^{dr} f(D) \times D^i )$<br>后面那个可以cnM计算前缀和</p>
 <p>组合数用递推式算<br>f(i,c,D)枚举倍数暴力预处理<br>总复杂度为 $O(cmlogm+cnm+Tn^3\sqrt m)$</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2019</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">	<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">	<span class="comment">// #define pr pair&lt;int,int&gt;</span></div><div class="line">	<span class="comment">// #define FR first</span></div><div class="line">	<span class="comment">// #define SE second</span></div><div class="line">	<span class="comment">// #define MP make_pair</span></div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MOD=<span class="number">10007</span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> y)</span></div><div class="line">	</span>&#123;</div><div class="line">		x+=y;<span class="keyword">if</span>(x&gt;=MOD) x-=MOD;</div><div class="line">		<span class="keyword">if</span>(x&lt;=-MOD) x+=MOD;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;add(x,y);<span class="keyword">return</span> x;&#125;</div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">12</span>,MAX_M=<span class="number">100001</span>;</div><div class="line">	<span class="keyword">bool</span> no[MAX_M];<span class="keyword">int</span> pr=<span class="number">0</span>,prime[MAX_M],mu[MAX_M];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		mu[<span class="number">1</span>]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;MAX_M;i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span>(!no[i]) prime[++pr]=i,mu[i]=<span class="number">-1</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=pr and (ll)i*prime[j]&lt;MAX_M;j++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> t=i*prime[j];no[t]=<span class="number">1</span>;</div><div class="line">				<span class="keyword">if</span>(i%prime[j]==<span class="number">0</span>) &#123;mu[t]=<span class="number">0</span>;<span class="keyword">break</span>;&#125;</div><div class="line">				mu[t]=-mu[i];</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> aa[MAX_N];</div><div class="line">	<span class="keyword">int</span> C[MAX_M][<span class="number">30</span>],f[<span class="number">30</span>][MAX_M],ff[MAX_N][<span class="number">30</span>][MAX_M];</div><div class="line">	<span class="keyword">int</span> m[MAX_N];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		pre();</div><div class="line">		C[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_M;i++)</div><div class="line">		&#123;</div><div class="line">			C[i][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;<span class="number">30</span> and j&lt;=i;j++) C[i][j]=sum(C[i<span class="number">-1</span>][j<span class="number">-1</span>],C[i<span class="number">-1</span>][j]);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> D=<span class="number">1</span>;D&lt;MAX_M;D++)</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> c=<span class="number">2</span>;c&lt;=<span class="number">20</span>;c++)</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> j=D;j&lt;MAX_M;j+=D) add(f[c][j], C[D<span class="number">-1</span>][c<span class="number">-2</span>]*mu[j/D] );</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;MAX_N;i++)</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> D=<span class="number">1</span>;D&lt;MAX_M;D++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> Di=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=i;j++) Di=Di*D%MOD;</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> c=<span class="number">2</span>;c&lt;=<span class="number">20</span>;c++)</div><div class="line">					ff[i][c][D]=f[c][D]*Di%MOD,add(ff[i][c][D],ff[i][c][D<span class="number">-1</span>]);</div><div class="line">			&#125;</div><div class="line"></div><div class="line">		<span class="keyword">int</span> T;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</div><div class="line">		<span class="keyword">while</span>(T--)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> n,c;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;c);</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;m[i]);</div><div class="line">			sort(m+<span class="number">1</span>,m+n+<span class="number">1</span>);</div><div class="line"></div><div class="line">			<span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> D=<span class="number">1</span>;D&lt;=m[<span class="number">1</span>]<span class="number">-1</span>;)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> lst=m[<span class="number">1</span>];<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) lst=min(lst,m[i]/(m[i]/D));</div><div class="line"></div><div class="line">				<span class="built_in">memset</span>(aa,<span class="number">0</span>,<span class="keyword">sizeof</span> aa);aa[<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">				&#123;</div><div class="line">					<span class="keyword">int</span> t=(m[i]/D)%MOD;<span class="keyword">int</span> a=t*m[i]%MOD,b=(-t*(t+<span class="number">1</span>)/<span class="number">2</span>)%MOD;</div><div class="line">					<span class="keyword">for</span>(<span class="keyword">int</span> j=n;j&gt;=<span class="number">1</span>;j--) aa[j]=sum(aa[j]*a%MOD,aa[j<span class="number">-1</span>]*b%MOD);</div><div class="line">					aa[<span class="number">0</span>]=aa[<span class="number">0</span>]*a%MOD;</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++) add(ans, aa[i]*(ff[i][c][lst]-ff[i][c][D<span class="number">-1</span>])%MOD );</div><div class="line">				D=lst+<span class="number">1</span>;</div><div class="line">			&#125;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,(ans+MOD)%MOD);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	srand(time(<span class="number">0</span>));</div><div class="line">	mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
@@ -633,21 +633,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b81a.html" rel="bookmark">【Luogu1315】观光公交</a></div>
+      <div class="popular-posts-title"><a href="/posts/b81a.html" rel="bookmark">「Luogu1315」观光公交</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3455.html" rel="bookmark">【abc134F】Permutation Oddness</a></div>
+      <div class="popular-posts-title"><a href="/posts/3455.html" rel="bookmark">「abc134F」Permutation Oddness</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/381c.html" rel="bookmark">【NOIAC31】MST</a></div>
+      <div class="popular-posts-title"><a href="/posts/381c.html" rel="bookmark">「NOIAC31」MST</a></div>
       
     </li>
   
@@ -661,14 +661,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ae99.html" rel="bookmark">【CF960F】Pathwalks</a></div>
+      <div class="popular-posts-title"><a href="/posts/ae99.html" rel="bookmark">「CF960F」Pathwalks</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">「POJ2057」The Lost House</a></div>
       
     </li>
   
@@ -686,7 +686,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/6b1.html" title="【WC2014】时空穿梭">http://zory.ink/posts/6b1.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/6b1.html" title="「WC2014」时空穿梭">http://zory.ink/posts/6b1.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -728,8 +728,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/1b03.html" rel="next" title="【TJOI2015】线性代数">
-                <i class="fa fa-chevron-left"></i> 【TJOI2015】线性代数
+              <a href="/posts/1b03.html" rel="next" title="「TJOI2015」线性代数">
+                <i class="fa fa-chevron-left"></i> 「TJOI2015」线性代数
               </a>
             
           </div>
@@ -738,8 +738,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/509.html" rel="prev" title="【BJWC2018】餐巾计划问题">
-                【BJWC2018】餐巾计划问题 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/509.html" rel="prev" title="「BJWC2018」餐巾计划问题">
+                「BJWC2018」餐巾计划问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -817,7 +817,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -842,7 +842,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1251,7 +1253,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

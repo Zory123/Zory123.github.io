@@ -95,14 +95,14 @@
   <meta name="description" content="哈希Hash">
 <meta name="keywords" content="哈希">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】07其他-5哈希">
+<meta property="og:title" content="「OI之路」07其他-5哈希">
 <meta property="og:url" content="http://zory.ink/posts/9bde.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="哈希Hash">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-13T12:50:50.643Z">
+<meta property="og:updated_time" content="2020-03-01T11:53:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】07其他-5哈希">
+<meta name="twitter:title" content="「OI之路」07其他-5哈希">
 <meta name="twitter:description" content="哈希Hash">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】07其他-5哈希 | Zory的个人博客</title>
+  <title>「OI之路」07其他-5哈希 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】07其他-5哈希
+          <h2 class="post-title" itemprop="name headline">「OI之路」07其他-5哈希
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-13 20:50:50" itemprop="dateModified" datetime="2019-10-13T20:50:50+08:00">2019-10-13</time>
+                <time title="修改时间：2020-03-01 19:53:31" itemprop="dateModified" datetime="2020-03-01T19:53:31+08:00">2020-03-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/9bde.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】07其他-5哈希">
+            <span id="/posts/9bde.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」07其他-5哈希">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -612,14 +612,14 @@
 
       
         <p>哈希Hash<br><a id="more"></a></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这东西主要用来验重<br>而且在字符串领域比较常用<br>但其思想的应用才是其精髓<br>所以没有放在字符串分类</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</div><div class="line"><span class="function">ull <span class="title">gethash</span><span class="params">(<span class="keyword">char</span> *s)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> len=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</div><div class="line">    ull ans=<span class="number">0</span>,p=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=len;i++)</div><div class="line">    &#123;</div><div class="line">        ans=ans*p+s[i];</div><div class="line">        p*=<span class="number">13331</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="其他应用"><a href="#其他应用" class="headerlink" title="其他应用"></a>其他应用</h2><h3 id="1-字符串匹配-kmp"><a href="#1-字符串匹配-kmp" class="headerlink" title="1. 字符串匹配-kmp"></a>1. 字符串匹配-kmp</h3><p>例题：<a href="eaf4.html">POJ3461 Oulipo</a></p>
+<h2 id="字符串hash"><a href="#字符串hash" class="headerlink" title="字符串hash"></a>字符串hash</h2><p>基数一般用131或13331<br>然后注意ull的话同时多少hash都能卡，需要取模<br>例子：<a href="https://codeforces.com/contest/1200/problem/E" target="_blank" rel="noopener">CF1200E E. Compress Words</a><br>然后cf比赛的时候最好rand，否则可以针对你的code来hack</p>
+<p>注意下面代码不应当用于windows</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span> HASH</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> base[<span class="number">2</span>],mod[<span class="number">2</span>],bs[<span class="number">2</span>][N];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">prehash</span><span class="params">()</span></span>&#123;</div><div class="line">        base[<span class="number">0</span>]=<span class="number">131</span>;mod[<span class="number">0</span>]=rand()%<span class="number">993244853</span>+<span class="number">100000</span>;base[<span class="number">1</span>]=<span class="number">13331</span>;mod[<span class="number">1</span>]=<span class="number">993244853</span>;bs[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;bs[<span class="number">1</span>][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;N;i++) bs[<span class="number">0</span>][i]=bs[<span class="number">0</span>][i<span class="number">-1</span>]*base[<span class="number">0</span>]%mod[<span class="number">0</span>],bs[<span class="number">1</span>][i]=bs[<span class="number">1</span>][i<span class="number">-1</span>]*base[<span class="number">1</span>]%mod[<span class="number">1</span>];</div><div class="line">    &#125;</div><div class="line">    <span class="function">pr <span class="title">hash</span><span class="params">(pr old,<span class="keyword">int</span> add)</span></span>&#123;<span class="keyword">return</span> MP((old.FR*base[<span class="number">0</span>]+add)%mod[<span class="number">0</span>],(old.SE*base[<span class="number">1</span>]+add)%mod[<span class="number">1</span>]);&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="应用于字符串匹配"><a href="#应用于字符串匹配" class="headerlink" title="应用于字符串匹配"></a>应用于字符串匹配</h2><h3 id="1-字符串匹配-kmp"><a href="#1-字符串匹配-kmp" class="headerlink" title="1. 字符串匹配-kmp"></a>1. 字符串匹配-kmp</h3><p>例题：<a href="eaf4.html">POJ3461 Oulipo</a></p>
 <h3 id="2-字符串匹配-ac自动机"><a href="#2-字符串匹配-ac自动机" class="headerlink" title="2. 字符串匹配-ac自动机"></a>2. 字符串匹配-ac自动机</h3><p>等价于用kmp搞ac机，不推荐</p>
 <h3 id="3-字符串匹配-manacher"><a href="#3-字符串匹配-manacher" class="headerlink" title="3. 字符串匹配-manacher"></a>3. 字符串匹配-manacher</h3><p>O(nlogn)求最大回文子串<br>其实就是枚举中心点，分情况讨论，然后二分长度</p>
-<h3 id="4-字符串匹配-后缀数组"><a href="#4-字符串匹配-后缀数组" class="headerlink" title="4. 字符串匹配-后缀数组"></a>4. 字符串匹配-后缀数组</h3><p>O(n log^2⁡ n )<br>在排序的比较函数中，套一个二分，得到最长公共前缀，比较其下一个字符，就能够比较出大小<br>得出排名后，相邻的再同样地二分一次就好了</p>
-<h2 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h2><p><a href="../tags/哈希.html">Tag-哈希</a></p>
-<h1 id="MinHash"><a href="#MinHash" class="headerlink" title="MinHash"></a>MinHash</h1><p>例题：<a href="https://codeforces.com/gym/101372" target="_blank" rel="noopener">GYM101372E Nice Report</a></p>
+<h3 id="4-字符串匹配-后缀数组"><a href="#4-字符串匹配-后缀数组" class="headerlink" title="4. 字符串匹配-后缀数组"></a>4. 字符串匹配-后缀数组</h3><p>$O(n log^2⁡ n )$<br>在排序的比较函数中，套一个二分，得到最长公共前缀，比较其下一个字符，就能够比较出大小<br>得出排名后，相邻的再同样地二分一次就好了</p>
+<h2 id="MinHash"><a href="#MinHash" class="headerlink" title="MinHash"></a>MinHash</h2><p>例题：<a href="https://codeforces.com/gym/101372" target="_blank" rel="noopener">GYM101372E Nice Report</a></p>
 <p>定义两个集合的 $Jaccard \  similarity(A,B)=\frac{ |A \cap B| }{ |A \cup B| }$</p>
 <p>然后假设现在有一个随机的完美hash函数， $Pr[minh_A=minh_B]=Jaccard \  similarity(A,B)，Pr指成立的概率$</p>
 <p>如果是两个集合合并，利用$$交+并=|A|+|B|$$以及$交/并=S$得到$并的大小=\frac{|A|+|B|}{S+1}$</p>
@@ -641,14 +641,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/eaf4.html" rel="bookmark">【Poj3461】Oulipo</a></div>
+      <div class="popular-posts-title"><a href="/posts/eaf4.html" rel="bookmark">「Poj3461」Oulipo</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4a8c.html" rel="bookmark">【AHOI2005】【CQOI2014】病毒检测/通配符匹配</a></div>
+      <div class="popular-posts-title"><a href="/posts/4a8c.html" rel="bookmark">「AHOI2005」「CQOI2014」病毒检测/通配符匹配</a></div>
       
     </li>
   
@@ -666,7 +666,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/9bde.html" title="【OI之路】07其他-5哈希">http://zory.ink/posts/9bde.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/9bde.html" title="「OI之路」07其他-5哈希">http://zory.ink/posts/9bde.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -704,8 +704,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/f6c6.html" rel="next" title="【OI之路】07其他-4哈夫曼树">
-                <i class="fa fa-chevron-left"></i> 【OI之路】07其他-4哈夫曼树
+              <a href="/posts/f6c6.html" rel="next" title="「OI之路」07其他-4哈夫曼树">
+                <i class="fa fa-chevron-left"></i> 「OI之路」07其他-4哈夫曼树
               </a>
             
           </div>
@@ -714,8 +714,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/7158.html" rel="prev" title="【OI之路】07其他-6计算几何">
-                【OI之路】07其他-6计算几何 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/7158.html" rel="prev" title="「OI之路」07其他-6计算几何">
+                「OI之路」07其他-6计算几何 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -793,7 +793,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -818,7 +818,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1227,7 +1229,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1290,7 +1296,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-text">正文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他应用"><span class="nav-text">其他应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-字符串匹配-kmp"><span class="nav-text">1. 字符串匹配-kmp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-字符串匹配-ac自动机"><span class="nav-text">2. 字符串匹配-ac自动机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-字符串匹配-manacher"><span class="nav-text">3. 字符串匹配-manacher</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-字符串匹配-后缀数组"><span class="nav-text">4. 字符串匹配-后缀数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习题"><span class="nav-text">练习题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MinHash"><span class="nav-text">MinHash</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串hash"><span class="nav-text">字符串hash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用于字符串匹配"><span class="nav-text">应用于字符串匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-字符串匹配-kmp"><span class="nav-text">1. 字符串匹配-kmp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-字符串匹配-ac自动机"><span class="nav-text">2. 字符串匹配-ac自动机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-字符串匹配-manacher"><span class="nav-text">3. 字符串匹配-manacher</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-字符串匹配-后缀数组"><span class="nav-text">4. 字符串匹配-后缀数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MinHash"><span class="nav-text">MinHash</span></a></li></ol></div>
             
 
           </div>

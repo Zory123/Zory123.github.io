@@ -95,14 +95,14 @@
   <meta name="description" content="博大精深的线段树 很多东西可能是可以自己yy的，但名字能方便交流">
 <meta name="keywords" content="精品文章,线段树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】02数据结构-8线段树">
+<meta property="og:title" content="「OI之路」02数据结构-8线段树">
 <meta property="og:url" content="http://zory.ink/posts/b1b7.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="博大精深的线段树 很多东西可能是可以自己yy的，但名字能方便交流">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-12T06:46:04.068Z">
+<meta property="og:updated_time" content="2020-05-03T07:14:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】02数据结构-8线段树">
+<meta name="twitter:title" content="「OI之路」02数据结构-8线段树">
 <meta name="twitter:description" content="博大精深的线段树 很多东西可能是可以自己yy的，但名字能方便交流">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】02数据结构-8线段树 | Zory的个人博客</title>
+  <title>「OI之路」02数据结构-8线段树 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】02数据结构-8线段树
+          <h2 class="post-title" itemprop="name headline">「OI之路」02数据结构-8线段树
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-12 14:46:04" itemprop="dateModified" datetime="2019-10-12T14:46:04+08:00">2019-10-12</time>
+                <time title="修改时间：2020-05-03 15:14:36" itemprop="dateModified" datetime="2020-05-03T15:14:36+08:00">2020-05-03</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/b1b7.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】02数据结构-8线段树">
+            <span id="/posts/b1b7.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」02数据结构-8线段树">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -616,32 +616,37 @@
 <a id="more"></a>
 <h2 id="基本线段树"><a href="#基本线段树" class="headerlink" title="基本线段树"></a>基本线段树</h2><p>例题：JSOI2014 奇怪的计算器</p>
 <h3 id="区间查询，复杂度log的证明"><a href="#区间查询，复杂度log的证明" class="headerlink" title="区间查询，复杂度log的证明"></a>区间查询，复杂度log的证明</h3><p>假设某一次要同时访问左右两边，后面一定是刚进入就退出的（区间的连续性）<br>所以说其实只有一次需要同时访问两边，复杂度为深度即log<br>区间修改同样如此</p>
-<p>upd:<strong>注意，这并不代表【同时访问左右两边】这部分每次只会执行一次</strong></p>
-<h2 id="势能线段树"><a href="#势能线段树" class="headerlink" title="势能线段树"></a>势能线段树</h2><p>主要考虑线段树的深度以及被操作次数</p>
+<p>upd:<strong>注意，这并不代表「同时访问左右两边」这部分每次只会执行一次</strong></p>
+<h3 id="标记永久化"><a href="#标记永久化" class="headerlink" title="标记永久化"></a>标记永久化</h3><p><a href="https://www.cnblogs.com/wozaixuexi/p/9462461.html" target="_blank" rel="noopener">基础文章</a></p>
+<h3 id="其他势能线段树"><a href="#其他势能线段树" class="headerlink" title="其他势能线段树"></a>其他势能线段树</h3><p>主要考虑线段树的深度以及被操作次数，保证复杂度基本就是看这段区间能否预测答案（例如整除时区间内相同就跳出）</p>
 <ol>
-<li>开方，$log_2(log_{10}x)$次（次幂/2），BZOJ3211花神游历各国</li>
+<li>开方，$log_2(log_{2}x)$次（次幂/2），BZOJ3211花神游历各国</li>
 <li>取模，logx次（被减少的数/2）</li>
-<li>整除，logx次（区间极差/2）</li>
+<li>向下整除，logx次（区间极差/2）</li>
 </ol>
+<p><a href="http://uoj.ac/problem/228" target="_blank" rel="noopener">uoj228基础数据结构练习题</a>则在开方的基础上加入了区间加，注意到数的大小虽然不再单向，方差之类依然是单向的</p>
+<p>于是区间相同直接打标记</p>
 <h2 id="zkw线段树"><a href="#zkw线段树" class="headerlink" title="zkw线段树"></a>zkw线段树</h2><p><a href="../files/文章/统计的力量-线段树全接触-张昆玮.ppt">统计的力量-线段树全接触-张昆玮</a><br>只学了最基础的：堆式编号下，我们是可以直接得到叶子节点的编号的；转化为为开区间就能非递归了</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span> ZKW</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> a[<span class="number">1</span>&lt;&lt;<span class="number">19</span>],M=<span class="number">1</span>&lt;&lt;<span class="number">18</span>;</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> lc x&lt;&lt;1</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> rc x&lt;&lt;1|1</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">()</span></span>&#123;fd(x,M<span class="number">-1</span>,<span class="number">1</span>) a[x]=max(a[lc],a[rc]);&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> val)</span></span>&#123;x+=M;a[x]=val;<span class="keyword">while</span>(x&gt;<span class="number">1</span>) x&gt;&gt;=<span class="number">1</span>,a[x]=max(a[lc],a[rc]);&#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">ask</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></div><div class="line">    </span>&#123;</div><div class="line">        l+=M<span class="number">-1</span>,r+=M+<span class="number">1</span>;<span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span>((l^r)!=<span class="number">1</span>)</div><div class="line">        &#123; </div><div class="line">            <span class="keyword">if</span>(!(l&amp;<span class="number">1</span>)) chmax(ans,a[l+<span class="number">1</span>]);</div><div class="line">            <span class="keyword">if</span>(r&amp;<span class="number">1</span>) chmax(ans,a[r<span class="number">-1</span>]);</div><div class="line">            l&gt;&gt;=<span class="number">1</span>;r&gt;&gt;=<span class="number">1</span>;</div><div class="line">        &#125;<span class="keyword">return</span> ans;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h2 id="李超线段树"><a href="#李超线段树" class="headerlink" title="李超线段树"></a>李超线段树</h2><p>比较常见的应用是维护线段单点查询，见<a href="81f.html">bzoj适者</a></p>
-<p>其主要思路就是，记录当前区间内，完全覆盖的线段中交mid最高的那个<br>然后因为只能和当前层有关，只能标记永久化，当一个线段被淘汰的时候，就往某侧下传更新（自行推导具体方向）</p>
+<h2 id="李超线段树"><a href="#李超线段树" class="headerlink" title="李超线段树"></a>李超线段树</h2><p>比较常见的应用是维护线段单点查询，最早碰到是在<a href="81f.html">bzoj适者</a></p>
+<p>其主要思路就是，记录当前区间内，完全覆盖的线段中交mid最高的那个<br>然后因为只能和当前层有关，只能标记永久化，当一个线段被淘汰的时候，只需要往一侧下传更新（自行推导具体方向）</p>
 <p>修改复杂度，若直线直接log，线段要处理log个区间，故log方；询问就是单点询问log</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span> SGT<span class="comment">//李超树</span></div><div class="line">&#123;</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> lc x&lt;&lt;1</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> rc x&lt;&lt;1|1</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> mid (l+r)/2</span></div><div class="line">    <span class="function"><span class="keyword">inline</span> ll <span class="title">V</span><span class="params">(pll li,ll x)</span></span>&#123;<span class="keyword">return</span> li.FR*x+li.SE;&#125;</div><div class="line">    pll mi[N&lt;&lt;<span class="number">2</span>];<span class="keyword">bool</span> hav[N&lt;&lt;<span class="number">2</span>];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(pll li,<span class="keyword">int</span> x=<span class="number">1</span>,<span class="keyword">int</span> l=<span class="number">0</span>,<span class="keyword">int</span> r=<span class="number">1e6</span>)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">if</span>(!hav[x])&#123;mi[x]=li;hav[x]=<span class="number">1</span>;<span class="keyword">return</span>;&#125;</div><div class="line">        <span class="keyword">if</span>(V(li,mid)&lt;V(mi[x],mid)) swap(li,mi[x]);<span class="keyword">if</span>(l==r) <span class="keyword">return</span>;</div><div class="line">        <span class="keyword">if</span>(V(li,l)&lt;V(mi[x],l)) insert(li,lc,l,mid); <span class="keyword">else</span> insert(li,rc,mid+<span class="number">1</span>,r);</div><div class="line">    &#125;</div><div class="line">    <span class="function">ll <span class="title">ask</span><span class="params">(ll pos,<span class="keyword">int</span> x=<span class="number">1</span>,<span class="keyword">int</span> l=<span class="number">0</span>,<span class="keyword">int</span> r=<span class="number">1e6</span>)</span></div><div class="line">    </span>&#123;</div><div class="line">        ll ans=V(mi[x],pos);</div><div class="line">        <span class="keyword">if</span>(l&lt;r)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(pos&lt;=mid and hav[lc]) chmin(ans,ask(pos,lc,l,mid));</div><div class="line">            <span class="keyword">if</span>(pos&gt;mid  and hav[rc]) chmin(ans,ask(pos,rc,mid+<span class="number">1</span>,r));</div><div class="line">        &#125;<span class="keyword">return</span> ans;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <p>另外还有一些跟前后缀min/max有关的应用：主要是写出一个solve函数后，有些特殊的solve调用（如访问右孩子的solve，附带的是左孩子的min，这种东西是可以记录下来的，带修的话只会调用log次solve）</p>
-<h5 id="【bzoj2957】楼房重建"><a href="#【bzoj2957】楼房重建" class="headerlink" title="【bzoj2957】楼房重建"></a>【bzoj2957】楼房重建</h5><p>见<a href="44d84051">之前写的题解</a></p>
-<h5 id="jsc2019-H-Distinct-Integers"><a href="#jsc2019-H-Distinct-Integers" class="headerlink" title="jsc2019 H Distinct Integers"></a>jsc2019 H Distinct Integers</h5><p><a href="5ee1ed15.html">题解</a></p>
-<h5 id="码队的跑团历险"><a href="#码队的跑团历险" class="headerlink" title="码队的跑团历险"></a><a href="https://nanti.jisuanke.com/t/40553" target="_blank" rel="noopener">码队的跑团历险</a></h5><p>最后一定是)))(((这样的，先只考虑计算右括号，然后反过来做即可</p>
+<h5 id="「bzoj2957」楼房重建：之前写的题解"><a href="#「bzoj2957」楼房重建：之前写的题解" class="headerlink" title="「bzoj2957」楼房重建：之前写的题解"></a>「bzoj2957」楼房重建：<a href="44d84051">之前写的题解</a></h5><h5 id="jsc2019-H-Distinct-Integers：题解"><a href="#jsc2019-H-Distinct-Integers：题解" class="headerlink" title="jsc2019 H Distinct Integers：题解"></a>jsc2019 H Distinct Integers：<a href="5ee1ed15.html">题解</a></h5><h5 id="码队的跑团历险："><a href="#码队的跑团历险：" class="headerlink" title="码队的跑团历险："></a><a href="https://nanti.jisuanke.com/t/40553" target="_blank" rel="noopener">码队的跑团历险</a>：</h5><p>最后一定是)))(((这样的，先只考虑计算右括号，然后反过来做即可</p>
 <p>这种右括号就是其前缀和从0开始递减（左括号+1右括号-1），于是又变成求递减序列长度了，只不过多了个修改的标记维护</p>
-<h2 id="吉老师线段树-弱"><a href="#吉老师线段树-弱" class="headerlink" title="吉老师线段树-弱"></a>吉老师线段树-弱</h2><p>要求：区间改min，询问区间max或区间和</p>
+<h2 id="吉老师线段树-弱"><a href="#吉老师线段树-弱" class="headerlink" title="吉老师线段树-弱"></a>吉老师线段树-弱</h2><p>要求：区间改min，询问区间max或区间和，选择性支持区间加法、区间乘法、区间开根</p>
 <p>做法：记录最大值m1，最大值出现次数cnt，严格次大值m2，区间和sum</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(x&gt;=m1) <span class="keyword">return</span>;</div><div class="line"><span class="keyword">if</span>(x&gt;m2) &#123;m1=x;update tag,update sum;<span class="keyword">return</span>;&#125;</div><div class="line">递归两侧</div></pre></td></tr></table></figure>
-<p>时间复杂度：做递归的时候，这个<strong>节点内</strong>不同值个数–，初始所有节点不同值个数的上界就是复杂度，$O(nlogn)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(val&gt;=m1) <span class="keyword">return</span>;</div><div class="line"><span class="keyword">if</span>(val&gt;m2) &#123;m1=val;update tag,update sum;<span class="keyword">return</span>;&#125;</div><div class="line">递归两侧</div></pre></td></tr></table></figure>
+<p>注意这里标记的意义是，要将区间内最大值改成我现在的值，这个标记是可以合并的</p>
+<p>时间复杂度：做递归的时候，这个<strong>节点内</strong>不同值个数减少（合并了次大和最大），初始所有节点不同值个数的上界就是复杂度，$O(nlogn)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span> SGT</div><div class="line">&#123;</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> Args int x=1,int l=1,int r=n</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> lc x&lt;&lt;1</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> rc x&lt;&lt;1|1</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> mid (l+r)/2</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> LC lc,l,mid</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> RC rc,mid+1,r</span></div><div class="line">    <span class="keyword">struct</span> Data&#123;<span class="keyword">int</span> mx,cnt,m2;ll sum;&#125;p[N&lt;&lt;<span class="number">2</span>];<span class="keyword">bool</span> tag[N&lt;&lt;<span class="number">2</span>];</div><div class="line">    Data <span class="keyword">operator</span> + (Data a,Data b)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(a.mx&lt;b.mx) swap(a,b);a.sum+=b.sum;</div><div class="line">        <span class="keyword">if</span>(a.mx==b.mx) a.cnt+=b.cnt,chmax(a.m2,b.m2);</div><div class="line">        <span class="keyword">else</span> chmax(a.m2,b.mx);<span class="keyword">return</span> a;</div><div class="line">    &#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">upd</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> val)</span></span>&#123;p[x].sum-=<span class="number">1l</span>l*(p[x].mx-val)*p[x].cnt,p[x].mx=val,tag[x]=<span class="number">1</span>;&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">pushdown</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">if</span>(!tag[x]) <span class="keyword">return</span>;tag[x]=<span class="number">0</span>;</div><div class="line">        <span class="keyword">if</span>(p[lc].mx==p[rc].mx) upd(lc,p[x].mx),upd(rc,p[x].mx);</div><div class="line">        <span class="keyword">else</span> upd(p[lc].mx&gt;p[rc].mx?lc:rc,p[x].mx);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(Args)</span></span>&#123;<span class="keyword">if</span>(l==r) &#123;<span class="keyword">int</span> now=qread();p[x]=&#123;now,<span class="number">1</span>,<span class="number">0</span>,now&#125;;&#125;<span class="keyword">else</span> build(LC),build(RC),p[x]=p[lc]+p[rc];&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> fl,<span class="keyword">int</span> fr,<span class="keyword">int</span> val,Args)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">if</span>(val&gt;=p[x].mx) <span class="keyword">return</span>;</div><div class="line">        <span class="keyword">if</span>(fl&lt;=l and r&lt;=fr and val&gt;p[x].m2)&#123;upd(x,val);<span class="keyword">return</span>;&#125;pushdown(x);</div><div class="line">        <span class="keyword">if</span>(fl&lt;=mid) solve(fl,fr,val,LC);<span class="keyword">if</span>(fr&gt;mid) solve(fl,fr,val,RC);p[x]=p[lc]+p[rc];</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">askmx</span><span class="params">(<span class="keyword">int</span> fl,<span class="keyword">int</span> fr,Args)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">if</span>(fl&lt;=l and r&lt;=fr) <span class="keyword">return</span> p[x].mx;pushdown(x);</div><div class="line">        <span class="keyword">int</span> ret=<span class="number">0</span>;<span class="keyword">if</span>(fl&lt;=mid) chmax(ret,askmx(fl,fr,LC));<span class="keyword">if</span>(fr&gt;mid) chmax(ret,askmx(fl,fr,RC));<span class="keyword">return</span> ret;</div><div class="line">    &#125;</div><div class="line">    <span class="function">ll <span class="title">asksum</span><span class="params">(<span class="keyword">int</span> fl,<span class="keyword">int</span> fr,Args)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">if</span>(fl&lt;=l and r&lt;=fr) <span class="keyword">return</span> p[x].sum;pushdown(x);</div><div class="line">        ll ret=<span class="number">0</span>;<span class="keyword">if</span>(fl&lt;=mid) ret+=asksum(fl,fr,LC);<span class="keyword">if</span>(fr&gt;mid) ret+=asksum(fl,fr,RC);<span class="keyword">return</span> ret;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <h2 id="猫树"><a href="#猫树" class="headerlink" title="猫树"></a>猫树</h2><p>以一道题引入：维护序列，1e6次后面插入，1e7次询问区间最值，强制在线</p>
 <p>线段树复杂度主要就是在找分界点和前后缀答案，那现在考虑通过预处理加速这个过程</p>
-<p>注意到答案满足结合律，对于每个线段树节点都维护前缀、后缀答案，这个很好维护(nlogn)，然后每次询问找到区间第一次在线段树上分开的位置p，把两段合并即可；考虑怎么找p，感受一下p的左右端点都是可以用一些log之类求到的；具体而言，对于一般的堆式编号（满二叉树），p=二进制下l和r的lcp</p>
+<p>注意到答案满足结合律，对于每个线段树节点都维护前缀、后缀答案，这个很好维护(nlogn)，然后每次询问找到区间第一次在线段树上分开的位置p，把两段合并即可；考虑怎么找p，感受一下p的左右端点都是可以用一些log之类求到的；具体而言，对于一般的二叉堆式编号，p=二进制下l和r的lcp</p>
 <p><a href="http://immortalco.blog.uoj.ac/blog/2102" target="_blank" rel="noopener">immortalCO的blog</a></p>
-<h2 id="线段树分治"><a href="#线段树分治" class="headerlink" title="线段树分治"></a>线段树分治</h2><p><a href="http://61.187.179.132:16386/JudgeOnline/problem.php?id=4025" target="_blank" rel="noopener">bzoj4025 二分图</a></p>
+<h2 id="线段树分治"><a href="#线段树分治" class="headerlink" title="线段树分治"></a>线段树分治</h2><p><strong>核心思想</strong>：线段树结构把区间分为log段，离线后dfs解决问题，那么回溯的时候我们不需要执行删除，而是执行撤销（回滚），主要是利用这两者区别设计数据结构（经典例子是并查集）</p>
+<p><a href="http://61.187.179.132:16386/JudgeOnline/problem.php?id=4025" target="_blank" rel="noopener">bzoj4025 二分图</a></p>
 <p>经典例题</p>
 <p><a href="https://loj.ac/problem/2987" target="_blank" rel="noopener">「CTSC2016」时空旅行</a>（口胡）</p>
 <p>题意：维护n个集合，呈以0为根的树状，集合元素为四元组$(x,y,z,c)$，根有一个元素$(0,0,0,c_0)$，每个集合由父亲转移，区别为插入或删除一个元素；m次询问对于某个集合s和横坐标xx，求$min_{i\in s}\ (x_i-xx)^2+c_i$（y和z是来卖萌的）</p>
@@ -670,14 +675,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/cf34.html" rel="bookmark">【Bzoj1858】【Luogu2572】序列操作</a></div>
+      <div class="popular-posts-title"><a href="/posts/250b.html" rel="bookmark">【OI之路】04图论-9二分图</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/80c8.html" rel="bookmark">【置顶】套路集锦</a></div>
+      <div class="popular-posts-title"><a href="/posts/184e.html" rel="bookmark">「Bzoj1018」「Luogu4246」堵塞的交通</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/4bab.html" rel="bookmark">「OI之路」05动态规划-2-动态规划进阶</a></div>
       
     </li>
   
@@ -691,21 +703,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/250b.html" rel="bookmark">【OI之路】04图论-9二分图</a></div>
+      <div class="popular-posts-title"><a href="/posts/80c8.html" rel="bookmark">「置顶」套路集锦</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f834.html" rel="bookmark">【OI之路】03数学-11集合幂级数</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/b399.html" rel="bookmark">【OI之路】04图论-7生成树</a></div>
+      <div class="popular-posts-title"><a href="/posts/f834.html" rel="bookmark">「OI之路」03数学-11集合幂级数</a></div>
       
     </li>
   
@@ -723,7 +728,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/b1b7.html" title="【OI之路】02数据结构-8线段树">http://zory.ink/posts/b1b7.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/b1b7.html" title="「OI之路」02数据结构-8线段树">http://zory.ink/posts/b1b7.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -773,8 +778,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/d12f.html" rel="prev" title="【OI之路】02数据结构-9-cdq分治">
-                【OI之路】02数据结构-9-cdq分治 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/d12f.html" rel="prev" title="「OI之路」02数据结构-9-cdq分治">
+                「OI之路」02数据结构-9-cdq分治 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -852,7 +857,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -877,7 +882,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1286,7 +1293,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1349,7 +1360,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本线段树"><span class="nav-text">基本线段树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#区间查询，复杂度log的证明"><span class="nav-text">区间查询，复杂度log的证明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#势能线段树"><span class="nav-text">势能线段树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zkw线段树"><span class="nav-text">zkw线段树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#李超线段树"><span class="nav-text">李超线段树</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#【bzoj2957】楼房重建"><span class="nav-text">【bzoj2957】楼房重建</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#jsc2019-H-Distinct-Integers"><span class="nav-text">jsc2019 H Distinct Integers</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#码队的跑团历险"><span class="nav-text">码队的跑团历险</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吉老师线段树-弱"><span class="nav-text">吉老师线段树-弱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#猫树"><span class="nav-text">猫树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线段树分治"><span class="nav-text">线段树分治</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线段树合并"><span class="nav-text">线段树合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线段树维护动态直径"><span class="nav-text">线段树维护动态直径</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本线段树"><span class="nav-text">基本线段树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#区间查询，复杂度log的证明"><span class="nav-text">区间查询，复杂度log的证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记永久化"><span class="nav-text">标记永久化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他势能线段树"><span class="nav-text">其他势能线段树</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zkw线段树"><span class="nav-text">zkw线段树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#李超线段树"><span class="nav-text">李超线段树</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#「bzoj2957」楼房重建：之前写的题解"><span class="nav-text">「bzoj2957」楼房重建：之前写的题解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#jsc2019-H-Distinct-Integers：题解"><span class="nav-text">jsc2019 H Distinct Integers：题解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#码队的跑团历险："><span class="nav-text">码队的跑团历险：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吉老师线段树-弱"><span class="nav-text">吉老师线段树-弱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#猫树"><span class="nav-text">猫树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线段树分治"><span class="nav-text">线段树分治</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线段树合并"><span class="nav-text">线段树合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线段树维护动态直径"><span class="nav-text">线段树维护动态直径</span></a></li></ol></div>
             
 
           </div>

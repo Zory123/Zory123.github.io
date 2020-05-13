@@ -95,14 +95,14 @@
   <meta name="description" content="最短路">
 <meta name="keywords" content="最短路">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】04图论-1最短路">
+<meta property="og:title" content="「OI之路」04图论-1最短路">
 <meta property="og:url" content="http://zory.ink/posts/8720.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="最短路">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-15T01:57:16.836Z">
+<meta property="og:updated_time" content="2019-12-21T03:09:41.153Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】04图论-1最短路">
+<meta name="twitter:title" content="「OI之路」04图论-1最短路">
 <meta name="twitter:description" content="最短路">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】04图论-1最短路 | Zory的个人博客</title>
+  <title>「OI之路」04图论-1最短路 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】04图论-1最短路
+          <h2 class="post-title" itemprop="name headline">「OI之路」04图论-1最短路
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-15 09:57:16" itemprop="dateModified" datetime="2019-10-15T09:57:16+08:00">2019-10-15</time>
+                <time title="修改时间：2019-12-21 11:09:41" itemprop="dateModified" datetime="2019-12-21T11:09:41+08:00">2019-12-21</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/8720.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】04图论-1最短路">
+            <span id="/posts/8720.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」04图论-1最短路">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -618,16 +618,14 @@
 <p>最后，对于判断负权回路：<br>bfs，一个点进入队列n次，或者记录每个节点当前最短路径的边数，超过n则跳出，通常会更快一些<br>dfs，进入一个已经在栈中的节点，但听说可以被卡到 $2^n$</p>
 <h2 id="Dijkstra"><a href="#Dijkstra" class="headerlink" title="Dijkstra"></a>Dijkstra</h2><p>在<strong>无负权</strong>的图中，找最短路<br>可防止被卡边（spfa容易被卡）<br>时间复杂度相对没那么玄学，比较稳定（如果慢，那就真的慢）</p>
 <p>dijkstra算法基于贪心思想，每次找最小的dist来更新<br>这是因为，当边长都是非负数的时候，全局最小的那个dist显然不会再被更新，所以已经是最短路径<br>堆优化就是在找最小的dist的时候，用堆维护，时间复杂度从 $O(n^2)$ 变成 $O(mlogn)$</p>
-<h2 id="floyd"><a href="#floyd" class="headerlink" title="floyd"></a>floyd</h2><p>这个算法用于求所有点对的最短距离，时间复杂度为O(n^3)。【无法判断、计算含有<strong>负环</strong>的图（可负边）】<br>依次扫描每一点(k)，并以该点作为中介点，计算出通过k点的其他任意两点(i,j)的最短距离，这就是floyd算法的精髓！同时也解释了为什么k点这个中介点要放在最外层循环。<br>其实就是运用动态规划的思想。</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">floyd</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="built_in">memset</span>(dis,<span class="number">127</span>,<span class="keyword">sizeof</span>(dis));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) dis[i][i]=<span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n;k++)<span class="comment">//中介点</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</div><div class="line">                dis[i][j]=min(dis[i][j],dis[i][k]+dis[k][j]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>up 2018.8.29<br>floyd的正确性证明：<br>设$dis[k][i][j]$表示只经过编号小于k的<strong>中介点</strong>（注意不包括i和j），从i到j的最小距离<br>那么对于任意一条最短路径，可以想象为分割的，<br>然后以k为阶段，长度递增，逐渐合并<br>具体实现的时候，只要把k放在外面，就可以通过滚动数组，省去第一维</p>
-<p>找无向图最小环：<br>加入一句<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ans=min(len[i][j]+dis[i][k]+dis[k][j]);</div></pre></td></tr></table></figure></p>
-<p>即可<br><del>韵味自行理解</del><br>其实就是假设这个环，编号最大那个为k<br>不过要注意一点，就是要针对实际需求，看要不要打上i!=j等三个条件<br>例题：<br><a href="6259.html">POJ1734 Sightseeing trip</a></p>
-<p>然后无向图的话，因为两个点也能组成（甚至一个点）<br>所以不需要对环的大小作限制，可以直接扫一次dis[i][i]<br>例题：vijos1423<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> w[MAX_N];</div><div class="line"><span class="keyword">int</span> dis[MAX_N][MAX_N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n,m;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;w[i]);</div><div class="line">    <span class="built_in">memset</span>(dis,<span class="number">63</span>,<span class="keyword">sizeof</span> dis);</div><div class="line">    <span class="keyword">while</span>(m--)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> x,y,c;<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;x,&amp;y,&amp;c);c+=w[x];</div><div class="line">        <span class="keyword">if</span>(c&lt;dis[x][y]) dis[x][y]=c;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n;k++)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</div><div class="line">                <span class="keyword">if</span>(dis[i][j]&gt;dis[i][k]+dis[k][j])</div><div class="line">                    dis[i][j]=dis[i][k]+dis[k][j];</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d "</span>,dis[<span class="number">1</span>][<span class="number">1</span>]==INF?<span class="number">-1</span>:dis[<span class="number">1</span>][<span class="number">1</span>]);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>当然如果跑dijkstra+heap<br>把起点更新后，d[st]=正无穷，下一次取出也是最小环长度</p>
-<h3 id="倍增floyd"><a href="#倍增floyd" class="headerlink" title="倍增floyd"></a>倍增floyd</h3><p>其实就是矩乘，预处理长度$\le2^k$的最短路径，这样就能快速获得与长度有关的最短路信息了，例题：bzoj4773负环</p>
+<h2 id="floyd"><a href="#floyd" class="headerlink" title="floyd"></a>floyd</h2><p>这个算法用于求所有点对的最短距离，时间复杂度为$O(n^3)$</p>
+<p>无法判断、计算含有<strong>负环</strong>的图（可负边）</p>
+<p>设$dis[k][i][j]$表示只经过编号小于k的<strong>中介点</strong>（注意不包括i和j），从i到j的最小距离<br>那么对于任意一条最短路径，可以想象为分割的，然后以k为阶段，长度递增，逐渐合并</p>
+<p>具体实现的时候，只要把k放在外面，就可以通过滚动数组，省去第一维</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">fo(k,<span class="number">1</span>,cnt)</div><div class="line">&#123;</div><div class="line">    <span class="comment">/*</div><div class="line">    此为求无向图最小环，len为原边</div><div class="line">    fo(i,1,cnt) fo(j,1,cnt) if(i!=k and k!=j and i!=j)</div><div class="line">        chmin(ans, dis[i][j]+len[i][k]+len[k][j] );</div><div class="line">    */</span></div><div class="line">    fo(i,<span class="number">1</span>,cnt) fo(j,<span class="number">1</span>,cnt) <span class="keyword">if</span>(i!=k and k!=j and i!=j)</div><div class="line">        chmin(dis[i][j],dis[i][k]+dis[k][j]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>倍增floyd：其实就是矩乘，预处理长度$\le2^k$的最短路径，这样就能快速获得与长度有关的最短路信息了，例题：bzoj4773负环</p>
 <h2 id="Johnson全源最短路"><a href="#Johnson全源最短路" class="headerlink" title="Johnson全源最短路"></a>Johnson全源最短路</h2><p>感觉挺偏的，拓展一下视野吧<br>应用于有负权边的情况，且点相对稀疏（相比floyd）<br>思路是把图转化为等效的图，那么我们希望最短路集不变<br>从超级源点向各点连0边，先跑一次spfa，得到f表示最短路（显然为非正数）<br>然后转化图，对于边x-&gt;y=z，显然： $z-(f[y]-f[x]) \leq 0$<br>在新的图上跑n次dij，$O(n^2logn)$<br>每条路径长度为 $dis(st,ed)+f(st)-f(ed)$</p>
-<h2 id="题"><a href="#题" class="headerlink" title="题"></a>题</h2><h3 id="边权递增最短路"><a href="#边权递增最短路" class="headerlink" title="边权递增最短路"></a>边权递增最短路</h3><p>按边权顺序加入图中即可，发现所有合法路径都被统计，所有非法路径都没有被统计</p>
+<h2 id="题"><a href="#题" class="headerlink" title="题"></a>题</h2><h3 id="边权严格递增最短路"><a href="#边权严格递增最短路" class="headerlink" title="边权严格递增最短路"></a>边权严格递增最短路</h3><p>按边权顺序加入图中即可，发现所有合法路径都被统计，所有非法路径都没有被统计</p>
 <h3 id="CF449B-Jzzhu-and-Cities"><a href="#CF449B-Jzzhu-and-Cities" class="headerlink" title="CF449B Jzzhu and Cities"></a><a href="https://codeforces.com/problemset/problem/449/B" target="_blank" rel="noopener">CF449B Jzzhu and Cities</a></h3><p><strong>题意：</strong>n个点m条边的正权图，其中一些是从1出发的特殊边，问最多删除多少条特殊边后1到每个点的最短路径长度不变，$n,m,k \le 3e5$</p>
 <p><strong>做法</strong>：建出最短路径树，同长度优先用非特殊边，最后统计有多少条特殊边在树上即可</p>
 <h3 id="GXOI2019-旅行者"><a href="#GXOI2019-旅行者" class="headerlink" title="GXOI2019 旅行者"></a>GXOI2019 旅行者</h3><p><a href="50cd.html">题解</a></p>
@@ -644,42 +642,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/bc9.html" rel="bookmark">【NOIP14 D2T2】寻找道路</a></div>
+      <div class="popular-posts-title"><a href="/posts/bc9.html" rel="bookmark">「NOIP14 D2T2」寻找道路</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/e9ee.html" rel="bookmark">【Luogu1027】Car的旅行路线</a></div>
+      <div class="popular-posts-title"><a href="/posts/e9ee.html" rel="bookmark">「Luogu1027」Car的旅行路线</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b656.html" rel="bookmark">【Luogu1073】最优贸易</a></div>
+      <div class="popular-posts-title"><a href="/posts/b656.html" rel="bookmark">「Luogu1073」最优贸易</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ab3c.html" rel="bookmark">【Poj3897】【Bzoj2709】迷宫花园</a></div>
+      <div class="popular-posts-title"><a href="/posts/ab3c.html" rel="bookmark">「Poj3897」「Bzoj2709」迷宫花园</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f27c.html" rel="bookmark">【NOIP17 D1T3】逛公园</a></div>
+      <div class="popular-posts-title"><a href="/posts/f27c.html" rel="bookmark">「NOIP17 D1T3」逛公园</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9c9f.html" rel="bookmark">【Bzoj1001】狼抓兔子</a></div>
+      <div class="popular-posts-title"><a href="/posts/9c9f.html" rel="bookmark">「Bzoj1001」狼抓兔子</a></div>
       
     </li>
   
@@ -697,7 +695,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/8720.html" title="【OI之路】04图论-1最短路">http://zory.ink/posts/8720.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/8720.html" title="「OI之路」04图论-1最短路">http://zory.ink/posts/8720.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -735,8 +733,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/9763.html" rel="next" title="【OI之路】03数学-16快乐计数">
-                <i class="fa fa-chevron-left"></i> 【OI之路】03数学-16快乐计数
+              <a href="/posts/9763.html" rel="next" title="「OI之路」03数学-16快乐计数">
+                <i class="fa fa-chevron-left"></i> 「OI之路」03数学-16快乐计数
               </a>
             
           </div>
@@ -745,8 +743,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/a89d.html" rel="prev" title="【OI之路】04图论-2并查集">
-                【OI之路】04图论-2并查集 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/a89d.html" rel="prev" title="「OI之路」04图论-2并查集">
+                「OI之路」04图论-2并查集 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -824,7 +822,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -849,7 +847,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1258,7 +1258,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1321,7 +1325,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bellman-ford"><span class="nav-text">Bellman-ford</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SPFA"><span class="nav-text">SPFA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra"><span class="nav-text">Dijkstra</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#floyd"><span class="nav-text">floyd</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#倍增floyd"><span class="nav-text">倍增floyd</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Johnson全源最短路"><span class="nav-text">Johnson全源最短路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题"><span class="nav-text">题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#边权递增最短路"><span class="nav-text">边权递增最短路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF449B-Jzzhu-and-Cities"><span class="nav-text">CF449B Jzzhu and Cities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GXOI2019-旅行者"><span class="nav-text">GXOI2019 旅行者</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bellman-ford"><span class="nav-text">Bellman-ford</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SPFA"><span class="nav-text">SPFA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra"><span class="nav-text">Dijkstra</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#floyd"><span class="nav-text">floyd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Johnson全源最短路"><span class="nav-text">Johnson全源最短路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题"><span class="nav-text">题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#边权严格递增最短路"><span class="nav-text">边权严格递增最短路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF449B-Jzzhu-and-Cities"><span class="nav-text">CF449B Jzzhu and Cities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GXOI2019-旅行者"><span class="nav-text">GXOI2019 旅行者</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -95,16 +95,16 @@
   <meta name="description" content="Source and JudgeNOIP2014 提高组 D1T3Luogu1941Caioj1565">
 <meta name="keywords" content="dp,难度2,bfs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【NOIP14 D1T3】飞扬的小鸟">
+<meta property="og:title" content="「NOIP14 D1T3」飞扬的小鸟">
 <meta property="og:url" content="http://zory.ink/posts/ad3d.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2014 提高组 D1T3Luogu1941Caioj1565">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cdn.vijos.org/fs/ab820ade16604d7b3ce8c4e0e64d6302f7ba0ac3">
 <meta property="og:image" content="https://cdn.luogu.org/upload/pic/1348.png">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【NOIP14 D1T3】飞扬的小鸟">
+<meta name="twitter:title" content="「NOIP14 D1T3」飞扬的小鸟">
 <meta name="twitter:description" content="Source and JudgeNOIP2014 提高组 D1T3Luogu1941Caioj1565">
 <meta name="twitter:image" content="https://cdn.vijos.org/fs/ab820ade16604d7b3ce8c4e0e64d6302f7ba0ac3">
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>【NOIP14 D1T3】飞扬的小鸟 | Zory的个人博客</title>
+  <title>「NOIP14 D1T3」飞扬的小鸟 | Zory的个人博客</title>
   
 
 
@@ -253,7 +253,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -271,7 +271,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -289,7 +289,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -499,7 +499,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【NOIP14 D1T3】飞扬的小鸟
+          <h2 class="post-title" itemprop="name headline">「NOIP14 D1T3」飞扬的小鸟
 
               
             
@@ -540,7 +540,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:48" itemprop="dateModified" datetime="2019-12-01T10:18:48+08:00">2019-12-01</time>
               </span>
             
           
@@ -581,7 +581,7 @@
 
           
           
-            <span id="/posts/ad3d.html" class="post-meta-item leancloud_visitors" data-flag-title="【NOIP14 D1T3】飞扬的小鸟">
+            <span id="/posts/ad3d.html" class="post-meta-item leancloud_visitors" data-flag-title="「NOIP14 D1T3」飞扬的小鸟">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,7 +615,7 @@
 
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOIP2014 提高组 D1T3<br><a href="https://www.luogu.org/problemnew/show/P1941" target="_blank" rel="noopener">Luogu1941</a><br><a href="http://caioj.cn/problem.php?id=1565" target="_blank" rel="noopener">Caioj1565</a><br><a id="more"></a></p>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>【Description】</strong><br>Flappy Bird 是一款风靡一时的休闲手机游戏。玩家需要不断控制点击手机屏幕的频率来调节小鸟的飞行高度，让小鸟顺利通过画面右方的管道缝隙。如果小鸟一不小心撞到了水管或者掉在地上的话，便宣告失败。<br><img src="https://cdn.vijos.org/fs/ab820ade16604d7b3ce8c4e0e64d6302f7ba0ac3" alt=""><br><br>为了简化问题，我们对游戏规则进行了简化和改编：<br>1. 游戏界面是一个长为 n ，高为 m 的二维平面，其中有 k 个管道（忽略管道的宽度）。<br>2. 小鸟始终在游戏界面内移动。小鸟从游戏界面最左边任意整数高度位置出发，到达游戏界面最右边时，游戏完成。<br>3. 小鸟每个单位时间沿横坐标方向右移的距离为1 ，竖直移动的距离由玩家控制。如果点击屏幕，小鸟就会上升一定高度X ，每个单位时间可以点击多次，效果叠加；如果不点击屏幕，小鸟就会下降一定高度Y 。小鸟位于横坐标方向不同位置时，上升的高度X 和下降的高度Y 可能互不相同。<br>4. 小鸟高度等于0 或者小鸟碰到管道时，游戏失败。小鸟高度为 m 时，无法再上升。<br><br>现在，请你判断是否可以完成游戏。<br>如果可以 ，输出最少点击屏幕数；否则，输出小鸟最多可以通过多少个管道缝隙。<br><strong>【Input】</strong><br>第1 行有3 个整数n ，m ，k ，分别表示游戏界面的长度，高度和水管的数量，每两个整数之间用一个空格隔开；<br>接下来的n 行，每行2 个用一个空格隔开的整数X 和Y ，依次表示在横坐标位置0 ~n- 1上玩家点击屏幕后，小鸟在下一位置上升的高度X ，以及在这个位置上玩家不点击屏幕时，小鸟在下一位置下降的高度Y 。<br>接下来k 行，每行3 个整数P ，L ，H ，每两个整数之间用一个空格隔开。<br>每行表示一个管道，其中P 表示管道的横坐标，L 表示此管道缝隙的下边沿高度为L ，H 表示管道缝隙上边沿的高度（输入数据保证P 各不相同，但不保证按照大小顺序给出）。<br><strong>【Output】</strong><br>共两行。<br>第一行，包含一个整数，如果可以成功完成游戏，则输出1 ，否则输出0 。<br>第二行，包含一个整数，如果第一行为1 ，则输出成功完成游戏需要最少点击屏幕数，否则，输出小鸟最多可以通过多少个管道缝隙。<br><strong>【Limited conditions】</strong><br>对于 30%的数据：5≤n≤10，5≤m≤10，k=0，保证存在一组最优解使得同一单位时间最多点击屏幕 3 次；<br>对于 50%的数据：5≤n≤20，5≤m≤10，保证存在一组最优解使得同一单位时间最多点击屏幕 3 次；<br>对于 70%的数据：5≤n≤1000，5≤m≤100；<br>对于 100%的数据：5≤n≤10000，5≤m≤1000，0≤k&lt;n，0&lt;X&lt;m，0&lt;Y&lt;m，0&lt;P&lt;n，0≤L&lt;H ≤m，L+1&lt;H。<br><strong>【Sample input 1】</strong><br>10 10 6<br>3 9<br>9 9<br>1 2<br>1 3<br>1 2<br>1 1<br>2 1<br>2 1<br>1 6<br>2 2<br>1 2 7<br>5 1 5<br>6 3 5<br>7 5 8<br>8 7 9<br>9 1 3<br><strong>【Sample output 1】</strong><br>1<br>6<br><strong>【Sample input 2】</strong><br>10 10 4<br>1 2<br>3 1<br>2 2<br>1 8<br>1 8<br>3 2<br>2 1<br>2 1<br>2 2<br>1 2<br>1 0 2<br>6 7 9<br>9 1 4<br>3 8 10<br><strong>【Sample output 2】</strong><br>0<br>3<br><strong>【Sample explanation】</strong><br>如下图所示，蓝色直线表示小鸟的飞行轨迹，红色直线表示管道。<br><img src="https://cdn.luogu.org/upload/pic/1348.png" alt=""><br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>「Description」</strong><br>Flappy Bird 是一款风靡一时的休闲手机游戏。玩家需要不断控制点击手机屏幕的频率来调节小鸟的飞行高度，让小鸟顺利通过画面右方的管道缝隙。如果小鸟一不小心撞到了水管或者掉在地上的话，便宣告失败。<br><img src="https://cdn.vijos.org/fs/ab820ade16604d7b3ce8c4e0e64d6302f7ba0ac3" alt=""><br><br>为了简化问题，我们对游戏规则进行了简化和改编：<br>1. 游戏界面是一个长为 n ，高为 m 的二维平面，其中有 k 个管道（忽略管道的宽度）。<br>2. 小鸟始终在游戏界面内移动。小鸟从游戏界面最左边任意整数高度位置出发，到达游戏界面最右边时，游戏完成。<br>3. 小鸟每个单位时间沿横坐标方向右移的距离为1 ，竖直移动的距离由玩家控制。如果点击屏幕，小鸟就会上升一定高度X ，每个单位时间可以点击多次，效果叠加；如果不点击屏幕，小鸟就会下降一定高度Y 。小鸟位于横坐标方向不同位置时，上升的高度X 和下降的高度Y 可能互不相同。<br>4. 小鸟高度等于0 或者小鸟碰到管道时，游戏失败。小鸟高度为 m 时，无法再上升。<br><br>现在，请你判断是否可以完成游戏。<br>如果可以 ，输出最少点击屏幕数；否则，输出小鸟最多可以通过多少个管道缝隙。<br><strong>「Input」</strong><br>第1 行有3 个整数n ，m ，k ，分别表示游戏界面的长度，高度和水管的数量，每两个整数之间用一个空格隔开；<br>接下来的n 行，每行2 个用一个空格隔开的整数X 和Y ，依次表示在横坐标位置0 ~n- 1上玩家点击屏幕后，小鸟在下一位置上升的高度X ，以及在这个位置上玩家不点击屏幕时，小鸟在下一位置下降的高度Y 。<br>接下来k 行，每行3 个整数P ，L ，H ，每两个整数之间用一个空格隔开。<br>每行表示一个管道，其中P 表示管道的横坐标，L 表示此管道缝隙的下边沿高度为L ，H 表示管道缝隙上边沿的高度（输入数据保证P 各不相同，但不保证按照大小顺序给出）。<br><strong>「Output」</strong><br>共两行。<br>第一行，包含一个整数，如果可以成功完成游戏，则输出1 ，否则输出0 。<br>第二行，包含一个整数，如果第一行为1 ，则输出成功完成游戏需要最少点击屏幕数，否则，输出小鸟最多可以通过多少个管道缝隙。<br><strong>「Limited conditions」</strong><br>对于 30%的数据：5≤n≤10，5≤m≤10，k=0，保证存在一组最优解使得同一单位时间最多点击屏幕 3 次；<br>对于 50%的数据：5≤n≤20，5≤m≤10，保证存在一组最优解使得同一单位时间最多点击屏幕 3 次；<br>对于 70%的数据：5≤n≤1000，5≤m≤100；<br>对于 100%的数据：5≤n≤10000，5≤m≤1000，0≤k&lt;n，0&lt;X&lt;m，0&lt;Y&lt;m，0&lt;P&lt;n，0≤L&lt;H ≤m，L+1&lt;H。<br><strong>「Sample input 1」</strong><br>10 10 6<br>3 9<br>9 9<br>1 2<br>1 3<br>1 2<br>1 1<br>2 1<br>2 1<br>1 6<br>2 2<br>1 2 7<br>5 1 5<br>6 3 5<br>7 5 8<br>8 7 9<br>9 1 3<br><strong>「Sample output 1」</strong><br>1<br>6<br><strong>「Sample input 2」</strong><br>10 10 4<br>1 2<br>3 1<br>2 2<br>1 8<br>1 8<br>3 2<br>2 1<br>2 1<br>2 2<br>1 2<br>1 0 2<br>6 7 9<br>9 1 4<br>3 8 10<br><strong>「Sample output 2」</strong><br>0<br>3<br><strong>「Sample explanation」</strong><br>如下图所示，蓝色直线表示小鸟的飞行轨迹，红色直线表示管道。<br><img src="https://cdn.luogu.org/upload/pic/1348.png" alt=""><br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>3h</p>
 <h2 id="Analysis1"><a href="#Analysis1" class="headerlink" title="Analysis1"></a>Analysis1</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -627,9 +627,9 @@
 
 </div></div>
 <h2 id="Analysis2"><a href="#Analysis2" class="headerlink" title="Analysis2"></a>Analysis2</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>在上一个做法中，我们忽略了这道题一个重要的特性：方向固定（向右）<br>所以是可以dp的<br>把上升看作【多次背包】，下降看作【单次背包】</p>
+<p>在上一个做法中，我们忽略了这道题一个重要的特性：方向固定（向右）<br>所以是可以dp的<br>把上升看作「多次背包」，下降看作「单次背包」</p>
 <p>朴素的$O(nm^2)$：<br>$$<br>f[i][j] =<br>\left{<br>\begin{matrix}<br>\underset{k}{min}(f[i-1][j-k\times x[i-1]])+k&amp; (j-k\times x[i-1]&gt;0) \\<br>f[i-1][j+y[i-1]]&amp; (j+y[i-1]\leq m)<br>\end{matrix}<br>\right.<br>$$</p>
-<p>然鹅，对于这之中耗时最多的枚举k，其实我们完全可以【放后影响】，从上一遍搞过来<br>（显而易见，打bfs的时候想过但是不适用……然鹅dp是可以的）<br>于是就下降到了$O(nm)$辣：<br>$$<br>f[i][j] =<br>\left{<br>\begin{matrix}<br>min(f[i-1][j-x[i-1]],f[i][j-x[i-1])+1&amp; (j-x[i-1]&gt;0) \\<br>f[i-1][j+y[i-1]]&amp; (j+y[i-1]\leq m)<br>\end{matrix}<br>\right.<br>$$</p>
+<p>然鹅，对于这之中耗时最多的枚举k，其实我们完全可以「放后影响」，从上一遍搞过来<br>（显而易见，打bfs的时候想过但是不适用……然鹅dp是可以的）<br>于是就下降到了$O(nm)$辣：<br>$$<br>f[i][j] =<br>\left{<br>\begin{matrix}<br>min(f[i-1][j-x[i-1]],f[i][j-x[i-1])+1&amp; (j-x[i-1]&gt;0) \\<br>f[i-1][j+y[i-1]]&amp; (j+y[i-1]\leq m)<br>\end{matrix}<br>\right.<br>$$</p>
 <p>注意：<br>对于撞到管子的$f[i][j]$，还是要计算的，因为有这种情况：<br>我们从$f[i][j-x[i-1]]$转移过来，它撞墙了，但$f[i][j]$没有撞墙，它去没得继承了。<br>所以要<br>顺便说一句：<br>感觉这个dp很像维护一个二维前缀</p>
 <p>所以，综上所述，对于每一列：</p>
 <ol>
@@ -657,28 +657,28 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/304d.html" rel="bookmark">【Bzoj3679】数字之积</a></div>
+      <div class="popular-posts-title"><a href="/posts/304d.html" rel="bookmark">「Bzoj3679」数字之积</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">【CF553E】Kyoya and Train</a></div>
+      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">「CF553E」Kyoya and Train</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">【CZYZ2009暑假集训提高组6】盟军敢死队</a></div>
+      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">「CZYZ2009暑假集训提高组6」盟军敢死队</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/39cb.html" rel="bookmark">【CF955F】Heaps</a></div>
+      <div class="popular-posts-title"><a href="/posts/39cb.html" rel="bookmark">「CF955F」Heaps</a></div>
       
     </li>
   
@@ -710,7 +710,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/ad3d.html" title="【NOIP14 D1T3】飞扬的小鸟">http://zory.ink/posts/ad3d.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/ad3d.html" title="「NOIP14 D1T3」飞扬的小鸟">http://zory.ink/posts/ad3d.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -752,8 +752,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/3a8c.html" rel="next" title="【NOIP14 D2T1】无线网络发射器选址">
-                <i class="fa fa-chevron-left"></i> 【NOIP14 D2T1】无线网络发射器选址
+              <a href="/posts/b8ea.html" rel="next" title="「NOIP14 D1T2」联合权值">
+                <i class="fa fa-chevron-left"></i> 「NOIP14 D1T2」联合权值
               </a>
             
           </div>
@@ -762,8 +762,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/15f6.html" rel="prev" title="【Bzoj3124】【Luogu3304】直径">
-                【Bzoj3124】【Luogu3304】直径 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/3a8c.html" rel="prev" title="「NOIP14 D2T1」无线网络发射器选址">
+                「NOIP14 D2T1」无线网络发射器选址 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -841,7 +841,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -866,7 +866,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1275,7 +1277,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

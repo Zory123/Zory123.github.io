@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeCF1025D">
 <meta name="keywords" content="难度2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【CF1025D】Recovering BST">
+<meta property="og:title" content="「CF1025D」Recovering BST">
 <meta property="og:url" content="http://zory.ink/posts/7565.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeCF1025D">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-23T13:43:01.491Z">
+<meta property="og:updated_time" content="2020-02-28T09:09:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【CF1025D】Recovering BST">
+<meta name="twitter:title" content="「CF1025D」Recovering BST">
 <meta name="twitter:description" content="Source and JudgeCF1025D">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【CF1025D】Recovering BST | Zory的个人博客</title>
+  <title>「CF1025D」Recovering BST | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【CF1025D】Recovering BST
+          <h2 class="post-title" itemprop="name headline">「CF1025D」Recovering BST
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-23 21:43:01" itemprop="dateModified" datetime="2019-08-23T21:43:01+08:00">2019-08-23</time>
+                <time title="修改时间：2020-02-28 17:09:29" itemprop="dateModified" datetime="2020-02-28T17:09:29+08:00">2020-02-28</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/7565.html" class="post-meta-item leancloud_visitors" data-flag-title="【CF1025D】Recovering BST">
+            <span id="/posts/7565.html" class="post-meta-item leancloud_visitors" data-flag-title="「CF1025D」Recovering BST">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,7 +615,7 @@
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>1h</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>这道题出得灰常好<br>再次%一发rose大爷<br>首先，所谓BST就是吓唬人的<br>联想一下splay，其中序遍历不变<br>这道题同样如此<br>甚至都帮你排好序了<br>然后就不知道怎么解决了……</p>
-<p>其实可以继续在中序遍历中做文章<br>因为这是一个一维的序列<br><strong>然后在一颗子树中，其实是连续的一段（完全忘记的我……）</strong></p>
+<p>其实可以继续在中序遍历中做文章<br>因为这是一个一维的序列<br><strong>然后在一棵子树中，其实是连续的一段（完全忘记的我……）</strong></p>
 <p>考虑一下区间dp<br>然后有个小性质：<strong>我的父亲一定在当前区间的旁边，毕竟当初就是这样分开的</strong><br>而且，这棵树的根节点是可以随便取的</p>
 <p>具体实现的话，枚举出当前子树的根节点x，与rt判断是否合法，然后向下<br>用记忆化会灰常方便<br>设f(l,r,op)表示可行性，然后op表示rt在那一侧就好了</p>
 
@@ -637,21 +637,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/421b.html" rel="bookmark">【NOIP13 D1T2】火柴排队</a></div>
+      <div class="popular-posts-title"><a href="/posts/b262.html" rel="bookmark">「Bzoj1999」「Luogu1099」树网的核</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8705.html" rel="bookmark">【Bzoj1901】Dynamic Rankings</a></div>
+      <div class="popular-posts-title"><a href="/posts/8705.html" rel="bookmark">「Bzoj1901」Dynamic Rankings</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7392.html" rel="bookmark">【Poj1325】Machine Schedule</a></div>
+      <div class="popular-posts-title"><a href="/posts/7392.html" rel="bookmark">「Poj1325」Machine Schedule</a></div>
       
     </li>
   
@@ -665,14 +665,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/c65d.html" rel="bookmark">【Hdu2157】多少条路呢</a></div>
+      <div class="popular-posts-title"><a href="/posts/c65d.html" rel="bookmark">「Hdu2157」多少条路呢</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/c439.html" rel="bookmark">【Vijos1067】守望者的烦恼</a></div>
+      <div class="popular-posts-title"><a href="/posts/c439.html" rel="bookmark">「Vijos1067」守望者的烦恼</a></div>
       
     </li>
   
@@ -690,7 +690,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/7565.html" title="【CF1025D】Recovering BST">http://zory.ink/posts/7565.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/7565.html" title="「CF1025D」Recovering BST">http://zory.ink/posts/7565.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -728,8 +728,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/1613.html" rel="next" title="【NOIP17 D2T3】列队">
-                <i class="fa fa-chevron-left"></i> 【NOIP17 D2T3】列队
+              <a href="/posts/f894.html" rel="next" title="「NOIAC9」小h的树">
+                <i class="fa fa-chevron-left"></i> 「NOIAC9」小h的树
               </a>
             
           </div>
@@ -738,8 +738,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/f894.html" rel="prev" title="【NOIAC9】小h的树">
-                【NOIAC9】小h的树 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/1dd8.html" rel="prev" title="「CF1019A」Elections">
+                「CF1019A」Elections <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -817,7 +817,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -842,7 +842,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1251,7 +1253,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

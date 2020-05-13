@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Global Round 5 好题：F">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-27T07:35:56.610Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Global Round 5">
 <meta name="twitter:description" content="Global Round 5 好题：F">
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-27 15:35:56" itemprop="dateModified" datetime="2019-10-27T15:35:56+08:00">2019-10-27</time>
+                <time title="修改时间：2019-12-01 10:18:51" itemprop="dateModified" datetime="2019-12-01T10:18:51+08:00">2019-12-01</time>
               </span>
             
           
@@ -620,7 +620,7 @@
 
 </div></div>
 <h3 id="CF1237F-Balanced-Domino-Placements"><a href="#CF1237F-Balanced-Domino-Placements" class="headerlink" title="CF1237F Balanced Domino Placements"></a>CF1237F Balanced Domino Placements</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>先考虑空棋盘怎么放，随便想想发现如果现在在某行放了个横，那么会分割成两个相互影响的部分，如果直接看做一部分需要把【有竖跨过这行】去掉，不太好搞，但注意到现在的矛盾是<strong>横与竖之间的，这启发我们分开考虑竖和横</strong></p>
+<p>先考虑空棋盘怎么放，随便想想发现如果现在在某行放了个横，那么会分割成两个相互影响的部分，如果直接看做一部分需要把「有竖跨过这行」去掉，不太好搞，但注意到现在的矛盾是<strong>横与竖之间的，这启发我们分开考虑竖和横</strong></p>
 <p>设有i个竖，j个横，设$f(n,cnt)=长度为n的表格，放若干不重叠骨牌方案数$，则$ans=竖f(n,i)*横f(m,j)*P_{m-2j}^i*P_{n-2i}^j$</p>
 <p>空棋盘的f随便dp，不空其实也随便dp，求答案中排列数的下标改成剩下可选的行、列即可，$O(n^2)$，<a href="https://codeforces.com/contest/1237/submission/62762296" target="_blank" rel="noopener">code</a></p>
 
@@ -762,7 +762,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -787,7 +787,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1196,7 +1198,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

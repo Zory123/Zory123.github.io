@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/avatar.ico?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false,"dimmer":false,"b2t":true,"scrollpercent":true},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="3月做题记录最后一个3月份了，年份都不用写了；即使实力不强也希望这份题单能给后人一些帮助">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3月做题记录">
+<meta property="og:url" content="http://zory.ink/posts/6b2a555d.html">
+<meta property="og:site_name" content="Zory的个人博客">
+<meta property="og:description" content="3月做题记录最后一个3月份了，年份都不用写了；即使实力不强也希望这份题单能给后人一些帮助">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-05-11T08:27:35.588Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="3月做题记录">
+<meta name="twitter:description" content="3月做题记录最后一个3月份了，年份都不用写了；即使实力不强也希望这份题单能给后人一些帮助">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://zory.ink/posts/6b2a555d"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>3月做题记录 | Zory的个人博客</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6c38ba8648d29103b8d122f998787d71";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zory的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">人生即使没有最短路，也是连通图</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-template">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/OI之路" rel="section"><i class="menu-item-icon fa fa-fw fa-telegram"></i> <br/>OI之路</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-problems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/刷题" rel="section"><i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br/>刷题Problems</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-friends">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/friends/" rel="section"><i class="menu-item-icon fa fa-fw fa-user-circle"></i> <br/>友链Friends</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-boutique">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/精品文章/" rel="section"><i class="menu-item-icon fa fa-fw fa-handshake-o"></i> <br/>精品文章</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-gproblems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/好题" rel="section"><i class="menu-item-icon fa fa-fw fa-thumbs-o-up"></i> <br/>好题</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-top">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/top/" rel="section"><i class="menu-item-icon fa fa-fw fa-signal"></i> <br/>排行榜Hot</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>Search（找文章必备，请耐心等待）</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="不区分大小写，尽量缩短关键词（如CF412、CFR123）" spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zory.ink/posts/6b2a555d.html"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zory"/>
+      <meta itemprop="description" content="Zory的个人博客"/>
+      <meta itemprop="image" content="/./avatar.ico"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zory的个人博客"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">3月做题记录
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-01 00:00:00" itemprop="dateCreated datePublished" datetime="2020-03-01T00:00:00+08:00">2020-03-01</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-11 16:27:35" itemprop="dateModified" datetime="2020-05-11T16:27:35+08:00">2020-05-11</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/刷题/" itemprop="url" rel="index"><span itemprop="name">刷题</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/6b2a555d.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/6b2a555d.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/posts/6b2a555d.html" class="post-meta-item leancloud_visitors" data-flag-title="3月做题记录">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>3月做题记录<br><del>最后一个3月份了，年份都不用写了；即使实力不强也希望这份题单能给后人一些帮助</del></p>
+<a id="more"></a>
+<p>「在家=摸鱼」系列</p>
+<h3 id="ABC157F-Yakiniku-Optimization-Problem"><a href="#ABC157F-Yakiniku-Optimization-Problem" class="headerlink" title="ABC157F Yakiniku Optimization Problem"></a><a href="https://atcoder.jp/contests/abc157/tasks/abc157_f" target="_blank" rel="noopener">ABC157F Yakiniku Optimization Problem</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>很容易想到二分，问题转化为给出n个圆，是否存在一个区域被至少K个圆覆盖</p>
+<p><del>被教育了，写了个乱搞只能过大部分数据，果断跑路打cf去了</del></p>
+<p>结论：圆的交集的每段弧都是圆上的，只要不是只有一段弧（一个圆），就会有两弧的公共点，这一定是两圆交点的子集，可以用这个点代替圆的交集</p>
+<p>因此这个区域可以由上面的点去考虑，所以总共要考虑的点集就是两圆交点、每个圆上取一点，枚举每个点再枚举每个圆判断，$O(log_{2}(ans/eps)* n^3)$，<a href="https://atcoder.jp/contests/abc157/submissions/10496593" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="「NOI-Online-提高组」序列"><a href="#「NOI-Online-提高组」序列" class="headerlink" title="「NOI Online 提高组」序列"></a><a href="https://www.luogu.com.cn/problem/P6185" target="_blank" rel="noopener">「NOI Online 提高组」序列</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>首先显然操作2就是缩点，然后我们要用操作1，让所有点的和都是0</p>
+<p>注意到一个奇环可以让环上某个点+=2而其他点不变，另一个经典套路是生成树可以让除了根外的所有点变成0</p>
+<p>因此对每个联通块跑一次黑白染色来判断是否有奇环，如果有就给根当前值模2，然后判断当前值为0即可，<a href="https://www.luogu.com.cn/record/31519910" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="CF1312G-Autocompletion"><a href="#CF1312G-Autocompletion" class="headerlink" title="CF1312G Autocompletion"></a><a href="https://codeforces.com/contest/1312/problem/G" target="_blank" rel="noopener">CF1312G Autocompletion</a></h3><p><strong>题意：</strong>给一个Trie，取其中若干个点到根路径（因此称这个点为特殊点）得到集合S，对于集合S中每个字符串，求出得到这个字符串的最小花费。从根节点开始，每次向下<strong>走</strong>到儿子花费1，也可以花费i<strong>跳</strong>到子树中字典序第i大的S中字符串去</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>我的做法好像算是特别短的了，然而因为神志不清赛中没过，结束后手写板清屏写下三句话，翻译到c++，就过了……</p>
+<p>注意到如果最后是从节点z<strong>跳</strong>到x，一定是先到z祖先中最近的特殊点lst走到z再跳。</p>
+<p>因此记录$up=\min_{祖先t} dp_{lst \ of \ t}+dis(lst,t)+[递归到x时的tg_t]$，因为每次会对<strong>所有祖先</strong>做$tg+=tg_y$，所以很好维护</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">map</span>&lt;<span class="keyword">char</span>,<span class="keyword">int</span>&gt; son[N];<span class="keyword">int</span> dep[N],tg[N],dp[N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa,<span class="keyword">int</span> up,<span class="keyword">int</span> lst)</span></div><div class="line"></span>&#123;</div><div class="line">    dep[x]=(x&gt;<span class="number">0</span>?dep[fa]+<span class="number">1</span>:<span class="number">0</span>);</div><div class="line"></div><div class="line">    dp[x]=min(up+<span class="number">1</span>,dp[lst]+dep[x]-dep[lst]);</div><div class="line">    <span class="keyword">if</span>(tg[x]) lst=x;chmin(up,dp[lst]+dep[x]-dep[lst]);</div><div class="line">    up+=tg[x];<span class="comment">//就这三句，别问我为什么花了1.5h</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> t:son[x]) <span class="keyword">if</span>(t.SE!=fa)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> y=t.SE;</div><div class="line">        pre(y,x,up,lst);</div><div class="line">        tg[x]+=tg[y];up+=tg[y];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> pos[N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n=qread();fo(i,<span class="number">1</span>,n)&#123; <span class="keyword">int</span> fa=qread();<span class="keyword">char</span> c[<span class="number">5</span>];<span class="built_in">scanf</span>(<span class="string">"%s"</span>,c); son[fa][c[<span class="number">0</span>]]=i; &#125;</div><div class="line">    <span class="keyword">int</span> k=qread();fo(i,<span class="number">1</span>,k) pos[i]=qread(),tg[pos[i]]++;pre(<span class="number">0</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>);</div><div class="line">    fo(i,<span class="number">1</span>,k) write1(dp[pos[i]]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="panasonic2020F-Fractal-Shortest-Path"><a href="#panasonic2020F-Fractal-Shortest-Path" class="headerlink" title="panasonic2020F Fractal Shortest Path"></a><a href="https://atcoder.jp/contests/panasonic2020/tasks/panasonic2020_f" target="_blank" rel="noopener">panasonic2020F Fractal Shortest Path</a></h3><p><strong>题意：</strong>在一个无限大的如图所示分形里，黑色为禁区，q次询问两点最短距离，移动方式为四连通</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>找到一个最大的禁区块，使得其x完整覆盖x1x2，或y完整覆盖y1y2，那就必须要绕路走，而周围的一圈一定都是非禁区，容易发现只有这种情况，会在曼哈顿距离的基础上额外花费。$O(qlog_3a)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function">ll <span class="title">solve</span><span class="params">(ll T,ll x1,ll y1,ll x2,ll y2)</span><span class="comment">//x--,y--后</span></div><div class="line"></span>&#123;</div><div class="line">    ll xx1=x1/T,yy1=y1/T,xx2=x2/T,yy2=y2/T;</div><div class="line">    <span class="keyword">if</span>(xx1==xx2 and xx1%<span class="number">3</span>==<span class="number">1</span> and <span class="built_in">abs</span>(yy1-yy2)&gt;=<span class="number">2</span>) &#123;x1%=(T*<span class="number">3</span>),x2%=(T*<span class="number">3</span>);<span class="keyword">return</span> min(x1+x2-(T<span class="number">-1</span>)*<span class="number">2</span>,(T+T)*<span class="number">2</span>-x1-x2)+<span class="built_in">abs</span>(y1-y2);&#125;</div><div class="line">    <span class="keyword">if</span>(yy1==yy2 and yy1%<span class="number">3</span>==<span class="number">1</span> and <span class="built_in">abs</span>(xx1-xx2)&gt;=<span class="number">2</span>) &#123;y1%=(T*<span class="number">3</span>),y2%=(T*<span class="number">3</span>);<span class="keyword">return</span> min(y1+y2-(T<span class="number">-1</span>)*<span class="number">2</span>,(T+T)*<span class="number">2</span>-y1-y2)+<span class="built_in">abs</span>(x1-x2);&#125;</div><div class="line">    <span class="keyword">if</span>(T==<span class="number">1</span>) <span class="keyword">return</span> <span class="built_in">abs</span>(x1-x2)+<span class="built_in">abs</span>(y1-y2);</div><div class="line">    <span class="keyword">else</span> <span class="keyword">return</span> solve(T/<span class="number">3</span>,x1,y1,x2,y2);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="SRM735-MaxSquare"><a href="#SRM735-MaxSquare" class="headerlink" title="SRM735 MaxSquare"></a><a href="https://vjudge.net/problem/TopCoder-14929" target="_blank" rel="noopener">SRM735 MaxSquare</a></h3><p><strong>题意：</strong>给定长度为$n \le 1e5$的序列b，求$\max 2(s_i-s_j)(i-j)$</p>
+<p><a href="https://blog.csdn.net/weixin_45313881/article/details/104048892" target="_blank" rel="noopener">题解</a></p>
+<h3 id="loj2257「SNOI2017」遗失的答案"><a href="#loj2257「SNOI2017」遗失的答案" class="headerlink" title="loj2257「SNOI2017」遗失的答案"></a><a href="https://loj.ac/problem/2257" target="_blank" rel="noopener">loj2257「SNOI2017」遗失的答案</a></h3><p><strong>题意：</strong>给定$n,G,L \le 1e8$，q次询问x，求有多少个${1,2,..n}$的子集，满足gcd=G，lcm=L，且包含x</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>相当于在${1,2,..n’=n/G}$中找个包含$x’=x/G$的子集，满足gcd=1且$lcm=L’=L/G$，最坏情况显然就是G=1，所以不用管G</p>
+<p>因为选出的数一定都是lcm的约数，即$x’|L’$，即本质不同的询问只有几千个，且要考虑的数集合大小也是几千个，另外L’的不同质因子不超过8个。直接dp每个素因子是否有0和mx相当于，将约数个集合幂级数或卷积起来</p>
+<p>容斥为不包含x肯定好搞</p>
+<p>一开始想着，合并前后缀，这样时空都是$O(2^{2*8}*1e3)$，空间带上个常数2后超过500MB，似乎luogu那里没开这么大</p>
+<p>那就是额外做个集合幂级数除法，但这样带多个log，时间爆炸</p>
+<p>在想到集合幂级数之前想过对每组询问，两个循环搞容斥也是可以的，不确定对不对，但是肯定没有集合幂级数优美，不管了</p>
+<p>穷途末路，向<a href="https://www.cnblogs.com/Itst/p/11558147.html" target="_blank" rel="noopener">Itst</a>学习了一下，呃……</p>
+<p>就是咱别管啥或卷积了，答案的式子并不难写：$\sum_S (-1)^S 2^{\sum_{二进制状态j} [j \subseteq U \oplus S]}$，于是我们可以直接累计每种二进制的出现次数，并维护次数的子集和，回退直接超集–就完事了，而且这种做法不写fwt可能也能过</p>
+
+</div></div>
+<h3 id="CF908H-New-Year-and-Boolean-Bridges"><a href="#CF908H-New-Year-and-Boolean-Bridges" class="headerlink" title="CF908H New Year and Boolean Bridges"></a><a href="https://codeforces.com/contest/908/problem/H" target="_blank" rel="noopener">CF908H New Year and Boolean Bridges</a></h3><p><strong>题意：</strong>给出一个对角线无意义的对称方阵，元素$(i,j)=’A’/‘O’/‘X’$分别表示这两点间的关系是：强联通、可达、不强连通且可达。求一个合法的n个点有向图，最小化边数</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>对于一个确定的强连通分组方案，每个联通块直接形成一条链就行了，而每个强连通内肯定是一个环最优（但要注意大小为1的），即最小化$n-联通块数+[大小&gt;1的强连通数]$</p>
+<p>因为这个方阵是满的，联通块数一定是1，所以先把必定强连通的缩成一个点，然后原本就一个点就直接删掉（合并不会更优），等价于一个无向图，将点染色，使得相邻不同色，最小化颜色数（注意！此时点数m不超过23）</p>
+<p><del>试图搜索k染色结果找到了cqzhangyu写的这题题解……</del>好像写得挺好的，<a href="https://www.cnblogs.com/CQzhangyu/p/8227483.html" target="_blank" rel="noopener">link</a></p>
+<p>不过其实几句就讲完了，就是随机一个模数当做计数去做，会发现特别好做，就是预处理可行独立集，然后用fwt或卷积，判断k可行的条件显然为$\sum_S (-1)^{|U \setminus S|} A_S^i$，$O(m2^m)$</p>
+
+</div></div>
+<h3 id="CF1215D-Ticket-Game"><a href="#CF1215D-Ticket-Game" class="headerlink" title="CF1215D Ticket Game"></a><a href="https://codeforces.com/contest/1215/problem/D" target="_blank" rel="noopener">CF1215D Ticket Game</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>虽然这题dif只有1700，感觉也不是很水，而且是这套里最有趣的了</p>
+<p>转化题意为，i次加，j次减，最后后手希望能恰好是wt</p>
+<p>先考虑j=0，发现如果$wt&lt;(i/2)*9$，先手可以直接超过，而如果$wt&gt;(i/2)*9$，先手可以全0不走，因此要求$wt=(i/2)*9$</p>
+<p>然后多提供k次加，k次减，先手只要每次往最坏方向跳9，后手就不得不选反方向跳9，因此公共的k无意义</p>
+<p><a href="https://codeforces.com/contest/1215/submission/73974134" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="CF1327F-AND-Segments"><a href="#CF1327F-AND-Segments" class="headerlink" title="CF1327F AND Segments"></a><a href="https://codeforces.com/contest/1327/problem/F" target="_blank" rel="noopener">CF1327F AND Segments</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p><a href="https://www.bilibili.com/video/BV1o7411176y" target="_blank" rel="noopener">dls又发视频了</a></p>
+<p>明显拆位，问题转化成若干区间必须全是1，若干区间必须存在0，看起来很经典，但智商下线划水30min就跑去做G了</p>
+<p>现在一看，全是1相当于ban掉了若干位置放0的可能，相当于在能放的地方放若干个dp，且在每个右端点时需要满足上个0放的范围是个后缀，因为处理i时只会修改$dp_{i,i}$，一个状态非法后以后也是非法，所以可以写成线性的dp，总复杂度$O(nloga)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">fo(i,<span class="number">1</span>,m) <span class="keyword">if</span>(B[i]&amp;bin(z)) cnt[A[i].FR]++,cnt[A[i].SE+<span class="number">1</span>]--; <span class="keyword">else</span> chmax(up[A[i].SE],A[i].FR);</div><div class="line">fo(i,<span class="number">1</span>,n) cnt[i]+=cnt[i<span class="number">-1</span>];</div><div class="line">mem(dp,<span class="number">0</span>);dp[<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">int</span> sum=<span class="number">1</span>,pos=<span class="number">0</span>;</div><div class="line">fo(i,<span class="number">1</span>,n)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(cnt[i]==<span class="number">0</span>) dp[i]=sum,add(sum,dp[i]);</div><div class="line">    <span class="keyword">while</span>(pos&lt;up[i]) add(sum,MOD-dp[pos++]);</div><div class="line">&#125;ans=ans*sum%MOD;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1327G-Letters-and-Question-Marks"><a href="#CF1327G-Letters-and-Question-Marks" class="headerlink" title="CF1327G Letters and Question Marks"></a><a href="https://codeforces.com/contest/1327/problem/G" target="_blank" rel="noopener">CF1327G Letters and Question Marks</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>看懂题开始码：不涉及?的用hash花$O(nk)$判，一个长度为len的串涉及?的左端点个数为$O(len)$级别，暴力$O(len^2)$判断能否匹配，能的话给每个?统计是字母c的话的贡献，然后跑个$O(2^{14}14)$的沙雕状压</p>
+<p>求稳写了个双hash，结果赛后才过样例。手速慢是我的问题，但我完全搞不懂这出题人是怎么想的，闲着没事n开这么大卡人常数<a href="https://codeforces.com/contest/1327/submission/74126137" target="_blank" rel="noopener">荣获tle</a>，改单hash又wa，最后只好改成在cf从来没用过的kmp（因为太少用，并没有存kmp和ac机的板子），当然复杂度一样，<a href="https://codeforces.com/contest/1327/submission/74160792" target="_blank" rel="noopener">code</a></p>
+<p>其实如果我之前准备好便捷使用的hash和kmp板子说不定能在当时30min内搞出来</p>
+
+</div></div>
+<h3 id="Codechef-WEASELSC"><a href="#Codechef-WEASELSC" class="headerlink" title="Codechef  WEASELSC"></a><a href="https://www.codechef.com/problems/WEASELSC" target="_blank" rel="noopener">Codechef  WEASELSC</a></h3><p>题意：给出长度为n的序列a，求一个长度为n的非负整数序列b，最大化b的序列和，要求b最多一个非0连续段。</p>
+<p>对于这个连续段中元素，$\forall i,b_i \le a_i$，且不增或不减，且不同数字个数不超过K+1个，$n,a_i \le 1e5,k \le 50$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>递减的不用管，翻转a再做一次就好了</p>
+<p>核心观察1：看做不超过k段区间，每段区间值相同，那么一定满足区间的值就是区间的min，因为如果向上首先是被后面的人限制了，可以将这两段区间合并</p>
+<p>设$lf_i和rf_i$分别表示向左、向右第一个更小的数，考虑对于一个方案在区间最小值计算贡献那么就是做K次下述dp</p>
+<p>$$<br>g_i=\max_{i&lt;j \le rf_i} f_j+a_i(lf_j-lf_i)<br>$$</p>
+<p>核心观察2：做若干次$j=lf_j$后一定能到达i，因此设$fa_i=lf_i$得到的树上，转移集合就是子树中。子树没有祖先方便处理，因此考虑换成从小到大的形式<br>$$<br>g_x=\max_{y \in arc_x} dp_y+a_y(fa_x-y)+a_x(x-fa_x)<br>$$</p>
+<p>很明显可以斜率优化了，而且进一步考虑性质可以避免使用树上cdq</p>
+<p>首先编号是单调的，因此横坐标是单调递增的，我们在末尾弹栈的时候，不要修改栈中没必要修改的地方，记录原本的栈尾在哪里，就能快速还原了。口胡复杂度为$O(nlogn)$。</p>
+<p><a href="https://www.cnblogs.com/TinyWong/p/7479466.html" target="_blank" rel="noopener">看起来是另一种做法</a></p>
+
+</div></div>
+
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+	
+		<div>
+				<p id="div-border-left-purple">
+			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
+				<span>
+				<b>本文地址：</b><a href="/posts/6b2a555d.html" title="3月做题记录">http://zory.ink/posts/6b2a555d.html</a><br/><b>转载请注明出处，谢谢！</b>
+				</span>
+				</p>
+		</div>
+    
+
+    
+    
+    
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/1586e9f6.html" rel="next" title="Ozon Tech Challenge 2020">
+                <i class="fa fa-chevron-left"></i> Ozon Tech Challenge 2020
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/159cbad1.html" rel="prev" title="CFR625">
+                CFR625 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/./avatar.ico"
+                alt="Zory"/>
+            
+              <p class="site-author-name" itemprop="name">Zory</p>
+              <div class="site-description motion-element" itemprop="description">Zory的个人博客</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">688</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Zory123" title="GitHub &rarr; https://github.com/Zory123" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:1134430323@qq.com" title="E-Mail &rarr; mailto:1134430323@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          ﻿
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ABC157F-Yakiniku-Optimization-Problem"><span class="nav-text">ABC157F Yakiniku Optimization Problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#「NOI-Online-提高组」序列"><span class="nav-text">「NOI Online 提高组」序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1312G-Autocompletion"><span class="nav-text">CF1312G Autocompletion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#panasonic2020F-Fractal-Shortest-Path"><span class="nav-text">panasonic2020F Fractal Shortest Path</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SRM735-MaxSquare"><span class="nav-text">SRM735 MaxSquare</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loj2257「SNOI2017」遗失的答案"><span class="nav-text">loj2257「SNOI2017」遗失的答案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF908H-New-Year-and-Boolean-Bridges"><span class="nav-text">CF908H New Year and Boolean Bridges</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1215D-Ticket-Game"><span class="nav-text">CF1215D Ticket Game</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1327F-AND-Segments"><span class="nav-text">CF1327F AND Segments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1327G-Letters-and-Question-Marks"><span class="nav-text">CF1327G Letters and Question Marks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Codechef-WEASELSC"><span class="nav-text">Codechef  WEASELSC</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zory</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: true,
+    appId: 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+    appKey: 'cJDLxDoNgzq0JJUWQFmpCRdw',
+    placeholder: '对这篇文章有什么看法？大胆地说出来吧',
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '20' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('2');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+                'X-LC-Key': 'cJDLxDoNgzq0JJUWQFmpCRdw',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

@@ -92,17 +92,17 @@
 
 
 
-  <meta name="description" content="博弈论">
+  <meta name="description" content="博弈论 比较详细的资料">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】03数学-4博弈论">
+<meta property="og:title" content="「OI之路」03数学-4博弈论">
 <meta property="og:url" content="http://zory.ink/posts/83b5.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="博弈论">
+<meta property="og:description" content="博弈论 比较详细的资料">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-21T03:21:49.378Z">
+<meta property="og:updated_time" content="2020-02-06T04:21:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】03数学-4博弈论">
-<meta name="twitter:description" content="博弈论">
+<meta name="twitter:title" content="「OI之路」03数学-4博弈论">
+<meta name="twitter:description" content="博弈论 比较详细的资料">
 
 
 
@@ -120,7 +120,7 @@
   };
 </script>
 
-  <title>【OI之路】03数学-4博弈论 | Zory的个人博客</title>
+  <title>「OI之路」03数学-4博弈论 | Zory的个人博客</title>
   
 
 
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -495,7 +495,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】03数学-4博弈论
+          <h2 class="post-title" itemprop="name headline">「OI之路」03数学-4博弈论
 
               
             
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-21 11:21:49" itemprop="dateModified" datetime="2019-10-21T11:21:49+08:00">2019-10-21</time>
+                <time title="修改时间：2020-02-06 12:21:31" itemprop="dateModified" datetime="2020-02-06T12:21:31+08:00">2020-02-06</time>
               </span>
             
           
@@ -577,7 +577,7 @@
 
           
           
-            <span id="/posts/83b5.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】03数学-4博弈论">
+            <span id="/posts/83b5.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」03数学-4博弈论">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -610,35 +610,42 @@
       
 
       
-        <p>博弈论<br><a id="more"></a></p>
+        <p>博弈论</p>
+<p><a href="https://www.cnblogs.com/candy99/p/6548836.html" target="_blank" rel="noopener">比较详细的资料</a></p>
+<a id="more"></a>
 <h2 id="平等博弈"><a href="#平等博弈" class="headerlink" title="平等博弈"></a>平等博弈</h2><h3 id="有向图游戏"><a href="#有向图游戏" class="headerlink" title="有向图游戏"></a>有向图游戏</h3><p>在一个DAG中，只由一个起点，上面有一个棋子，<br>两个玩家轮流沿着有向边推动棋子，不能走的玩家判负<br>P为必败点，N为必胜点</p>
 <h3 id="公平组合游戏ICG"><a href="#公平组合游戏ICG" class="headerlink" title="公平组合游戏ICG"></a>公平组合游戏ICG</h3><ol>
 <li>两个玩家交替行动</li>
 <li><strong>能执行的操作与具体玩家无关</strong></li>
 <li>不能行动的玩家判负</li>
+<li>状态不会重复出现</li>
+<li>没有平局，在有限步内结束</li>
 </ol>
-<h3 id="mex运算与SG函数"><a href="#mex运算与SG函数" class="headerlink" title="mex运算与SG函数"></a>mex运算与SG函数</h3><p>定义mex为，非负整数集合S中，最小的不属于集合S的非负整数</p>
+<h3 id="mex运算与Sprague-Grundy函数"><a href="#mex运算与Sprague-Grundy函数" class="headerlink" title="mex运算与Sprague-Grundy函数"></a>mex运算与Sprague-Grundy函数</h3><p>定义mex为，非负整数集合S中，最小的不属于集合S的非负整数</p>
 <p>对于状态x，有k个后继状态y，$SG(x)=mex( { SG(y_1),SG(y_2)…SG(y_k) } )$<br>定理：有向图游戏的某个局面必胜，当且仅当其对应节点，sg函数值大于0（即能到达必败终点）</p>
-<p>而对于<strong>多个有向图游戏</strong>，定义<strong>有向图游戏的和</strong>为，它们<strong>sg(起点)的异或和</strong></p>
+<p>而对于<strong>SG-组合游戏</strong>，定义<strong>和</strong>=<strong>SG(起点)的异或和</strong></p>
 <h3 id="斐波那契博弈"><a href="#斐波那契博弈" class="headerlink" title="斐波那契博弈"></a>斐波那契博弈</h3><p>有一堆石子共有N个，A、B两个人轮流拿，A先拿，拿到最后1颗石子的人获胜<br>每次拿的数量最少1个，最多不超过对手上一次拿的数量的2倍（A第1次拿时要求不能全拿走）<br>结论：先手必胜，当且仅当，原本的石子数量为斐波那契数</p>
 <h3 id="巴什博弈-Bash-Games"><a href="#巴什博弈-Bash-Games" class="headerlink" title="巴什博弈 Bash Games"></a>巴什博弈 Bash Games</h3><p>只有一堆n个物品，两个人轮流从这堆物品中取物， 规定每次至少取一个，最多取m个，最后取光者得胜。</p>
 <p>直接套sg，不难发现sg=tot%(m+1)</p>
-<h3 id="NIM博弈"><a href="#NIM博弈" class="headerlink" title="NIM博弈"></a>NIM博弈</h3><p>n堆物品，每堆有ai个，两个玩家轮流任选一堆来取物品，<br>但不能不取，取走最后一个物品者获胜（不能取的玩家判负）<br>不难发现NIM博弈是由n个有向图游戏组成的</p>
-<p>定理：先手必胜，当且仅当sg异或和 $\neq 0$<br>证明可用数学归纳法，从游戏结束开始分析，<br>每次给对面一个平衡状态（异或和=0）</p>
-<p>拓展</p>
-<ol>
-<li><p>Nimk，即同时取k堆（可以不同）<br> 这个挺神奇的，就是每一位sum%(m+1)=0</p>
-</li>
-<li><p>阶梯博弈，每次把某个阶梯上若干个石头往下一个阶梯移动<br> 首先，不要考虑石子，而是考虑隔板的前移，那么石头相当于相对距离<br> 把两个隔板两两捆绑（奇数个的时候，把第 1 个和边界 0 捆绑）<br> 所以如果不考虑奇数的移动情况，就是一个 nim 游戏<br> 所以对于先手，如果他是赢家，一定按照 nim 来<br> 这个时候如果后手突然移动奇数，那么先手把偶数等距离向前移动，<br> 就能还原出相同局面，而且一定能实现<br> 而如果先手是输家，那么和上面同理无法改变结局</p>
-</li>
-</ol>
-<p>树上例：CF812E Sagheer and Apple Tree</p>
+<h3 id="NIM博弈"><a href="#NIM博弈" class="headerlink" title="NIM博弈"></a>NIM博弈</h3><p>n堆物品，每堆有ai个，两个玩家轮流任选一堆来取物品，但不能不取，不能取的玩家判负</p>
+<p>最常见的类型，不难发现NIM博弈是由n个有向图游戏组成的，显然对于单堆石子的sg值就是石子数量</p>
+<p>结论：先手必败，当且仅当每堆石子数异或和 $=0$</p>
+<p>不使用SG的证明：归纳法，最后状态异或和=0，考虑$a_1 \oplus a_2…\oplus a_n=S$，先手每次可以将最大的那堆变成$a_i \oplus S &lt;a_i$，给对手一个异或和=0的平衡状态</p>
+<p><strong>阶梯博弈</strong>：每次把某个阶梯上若干个石头往下一个阶梯移动<br>首先，不要考虑石子，而是考虑隔板的前移，那么石头相当于相对距离<br>把两个隔板两两捆绑（奇数个的时候，把第 1 个和边界 0 捆绑）<br>所以如果不考虑奇数的移动情况，就是一个 nim 游戏<br>所以对于先手，如果他是赢家，一定按照 nim 来<br>这个时候如果后手突然移动奇数，那么先手把偶数等距离向前移动，<br>就能还原出相同局面，而且一定能实现<br>而如果先手是输家，那么和上面同理无法改变结局</p>
+<p>树上例题：</p>
+<p>CF812E Sagheer and Apple Tree</p>
 <p> 一条到根链ln+1个隔板只有根上面那个隔板是定死的其他都是动的，那么叶子节点下面那个隔板一定是组的二号，故sg=与叶子节点深度奇偶性相同的点异或和，<a href="https://codeforces.com/contest/812/submission/58419662" target="_blank" rel="noopener">code</a></p>
-<h3 id="二分图博弈"><a href="#二分图博弈" class="headerlink" title="二分图博弈"></a>二分图博弈</h3><p>前置故事：bzoj2463<br>在这道题中，做法正确性的证明是，数量为偶数个是，总能用1乘2的骨牌填充，<br>然后我总是在骨牌内移动，所以问题总是留给对手解决<br>那如果依然在棋盘上，但不是规则的棋盘呢？</p>
+<p><a href="https://loj.ac/problem/6364" target="_blank" rel="noopener">loj6364烂柯</a>，瞎出的题，题解在讨论区</p>
+<h3 id="二分图博弈"><a href="#二分图博弈" class="headerlink" title="二分图博弈"></a>二分图博弈</h3><p>前置故事：bzoj2463<br>在这道题中，做法正确性的证明是，数量为偶数个时，总能用1乘2的骨牌填充，<br>然后我总是在骨牌内移动，所以问题总是留给对手解决<br>那如果依然在棋盘上，但不是规则的棋盘呢？</p>
 <p>模型：二分图上，轮流移动棋子，离开的时候删除原本的节点<br>结论：先手必胜当且仅当当前点在所有最大匹配中</p>
 <p>注意到我们（或者说题目）提到了必胜，也是就说这是一个可预测的公平组合游戏<br>那首先我们如何构造必胜策略呢？<br>二分图上很多问题都跟其最大匹配有关，先求出来（假设只有一个）<br>假设先手在所有最大匹配中，那么一定存在必胜策略，下面给出策略：<br>沿着匹配边走向匹配点，后手只能沿着未匹配边或者gg，<br>如果现在在匹配点，那么情况重复，我总有方法不死<br>如果在未匹配点，则走未匹配边到匹配点y（其匹配了x），<br>因为我们在所有最大匹配中，那么强行把现在这个未匹配点与y匹配起来就好了</p>
 <p>总而言之，我们总有办法把自己当做匹配点来走匹配边，把问题留给对手解决<br>具体做法的话，就是尝试删除这个点，看最大匹配会不会减少</p>
-<h3 id="平等博弈-最后bibi几句"><a href="#平等博弈-最后bibi几句" class="headerlink" title="平等博弈-最后bibi几句"></a>平等博弈-最后bibi几句</h3><p>其实研究这几个博弈有点伤感<br>如果你具体分析情况而非利用sg，你会发现，这些游戏还没开始就被注定了结局……</p>
+<h3 id="翻硬币游戏"><a href="#翻硬币游戏" class="headerlink" title="翻硬币游戏"></a>翻硬币游戏</h3><p>规则：一行硬币，每次操作（形式上是选取一个集合翻转上面的硬币，然后集合的选取有一定限制，具体什么并不重要）要求被操作的最右边的硬币是向上（1）的，不能翻判负</p>
+<p>结论（<a href="http://www.baidu.com/link?url=ApvSyn-_NisekJYy1LCm-lRfJHkBdl88O2AMICJGHrVQFDDDLAGwWYtYNVeTbW9L4IbjFpwzEn7K6EFus076WsJl17X8Dm-OZ6QoRqNV0Aa&amp;wd=&amp;eqid=faa1fbed00187499000000065dc22839" target="_blank" rel="noopener">证明</a>，反正我没看懂）：$sg(0101001)=sg(01) \oplus sg(0001) \oplus sg(0000001)$</p>
+<p>例题：<a href="https://loj.ac/problem/2126" target="_blank" rel="noopener">「HAOI2015」数组游戏</a>，$SG(x)=mex_{1&lt;i\leq(n/x)}(\bigoplus_{t=2}^iSG(t*x))$</p>
+<h3 id="Multi-SG"><a href="#Multi-SG" class="headerlink" title="Multi-SG"></a>Multi-SG</h3><p>在符合拓扑原则的前提下，一个单一游戏的后继可以为多个单一游戏</p>
+<p>结论是，该单一游戏的某个后继SG=其他单一游戏的异或和，该游戏的SG依然是各后继的mex</p>
+<p><a href="https://loj.ac/problem/2210" target="_blank" rel="noopener">「HNOI2014」江南乐</a></p>
 <h2 id="不平等博弈"><a href="#不平等博弈" class="headerlink" title="不平等博弈"></a>不平等博弈</h2><p>曾点开一道可能不该点开的题，留坑</p>
 <p><a href="https://loj.ac/problem/2327" target="_blank" rel="noopener">「清华集训 2017」福若格斯</a>，<a href="https://gitee.com/ufozgg/CTT2017/raw/master/C/frogs/solution.pdf" target="_blank" rel="noopener">官方题解</a>，<a href="https://blog.csdn.net/qq_39972971/article/details/83025412" target="_blank" rel="noopener">xvyixuan的题解</a></p>
 
@@ -660,7 +667,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/83b5.html" title="【OI之路】03数学-4博弈论">http://zory.ink/posts/83b5.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/83b5.html" title="「OI之路」03数学-4博弈论">http://zory.ink/posts/83b5.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -689,8 +696,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/998a.html" rel="next" title="【OI之路】03数学-3抽象代数">
-                <i class="fa fa-chevron-left"></i> 【OI之路】03数学-3抽象代数
+              <a href="/posts/998a.html" rel="next" title="「OI之路」03数学-3抽象代数">
+                <i class="fa fa-chevron-left"></i> 「OI之路」03数学-3抽象代数
               </a>
             
           </div>
@@ -699,8 +706,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/57d0.html" rel="prev" title="【OI之路】03数学-5模意义数域">
-                【OI之路】03数学-5模意义数域 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/57d0.html" rel="prev" title="「OI之路」03数学-5模意义数域">
+                「OI之路」03数学-5模意义数域 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -778,7 +785,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -803,7 +810,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1212,7 +1221,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1275,7 +1288,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#平等博弈"><span class="nav-text">平等博弈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有向图游戏"><span class="nav-text">有向图游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公平组合游戏ICG"><span class="nav-text">公平组合游戏ICG</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mex运算与SG函数"><span class="nav-text">mex运算与SG函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斐波那契博弈"><span class="nav-text">斐波那契博弈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#巴什博弈-Bash-Games"><span class="nav-text">巴什博弈 Bash Games</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NIM博弈"><span class="nav-text">NIM博弈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二分图博弈"><span class="nav-text">二分图博弈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平等博弈-最后bibi几句"><span class="nav-text">平等博弈-最后bibi几句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不平等博弈"><span class="nav-text">不平等博弈</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#平等博弈"><span class="nav-text">平等博弈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有向图游戏"><span class="nav-text">有向图游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公平组合游戏ICG"><span class="nav-text">公平组合游戏ICG</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mex运算与Sprague-Grundy函数"><span class="nav-text">mex运算与Sprague-Grundy函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斐波那契博弈"><span class="nav-text">斐波那契博弈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#巴什博弈-Bash-Games"><span class="nav-text">巴什博弈 Bash Games</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NIM博弈"><span class="nav-text">NIM博弈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二分图博弈"><span class="nav-text">二分图博弈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#翻硬币游戏"><span class="nav-text">翻硬币游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Multi-SG"><span class="nav-text">Multi-SG</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不平等博弈"><span class="nav-text">不平等博弈</span></a></li></ol></div>
             
 
           </div>

@@ -101,7 +101,7 @@
 <meta property="og:description" content="SourceAGC002好题：E、F">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190226104157618.png">
-<meta property="og:updated_time" content="2019-09-27T03:22:29.948Z">
+<meta property="og:updated_time" content="2019-12-07T03:01:40.613Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AGC002题解">
 <meta name="twitter:description" content="SourceAGC002好题：E、F">
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-27 11:22:29" itemprop="dateModified" datetime="2019-09-27T11:22:29+08:00">2019-09-27</time>
+                <time title="修改时间：2019-12-07 11:01:40" itemprop="dateModified" datetime="2019-12-07T11:01:40+08:00">2019-12-07</time>
               </span>
             
           
@@ -613,7 +613,7 @@
       
 
       
-        <h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p><a href="https://atcoder.jp/contests/agc002" target="_blank" rel="noopener">AGC002</a><br>好题：E、F</p>
+        <h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p><a href="https://atcoder.jp/contests/AGC002" target="_blank" rel="noopener">AGC002</a><br>好题：E、F</p>
 <a id="more"></a>
 <h2 id="B"><a href="#B" class="headerlink" title="B"></a>B</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>按题意模拟<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> siz[MAX_N];<span class="keyword">bool</span> v[MAX_N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> n=qread(),m=qread();</div><div class="line">	v[<span class="number">1</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) siz[i]=<span class="number">1</span>;</div><div class="line">	<span class="keyword">while</span>(m--)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> x=qread(),y=qread();siz[x]--;siz[y]++;</div><div class="line">		<span class="keyword">if</span>(v[x]) v[y]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">if</span>(siz[x]==<span class="number">0</span>) v[x]=<span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) ans+=v[i];</div><div class="line">	write(ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -628,7 +628,7 @@
 
 </div></div>
 <h2 id="E"><a href="#E" class="headerlink" title="E"></a>E</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>因为是个平等博弈，sg是可以用的<br>然后不知道怎么表达一个状态，想过排序，但没想下去……<br>就是从大到小排序后，这就是不规则的棋盘，类似这样（图挂不补）：<br><img src="https://img-blog.csdnimg.cn/20190226104157618.png" alt=""><br>然后用sg函数推一推，很容易证明一条线上的【是否必胜】是相同的<br>那么暴力找即可，复杂度下界为n</p>
+<p>因为是个平等博弈，sg是可以用的<br>然后不知道怎么表达一个状态，想过排序，但没想下去……<br>就是从大到小排序后，这就是不规则的棋盘，类似这样（图挂不补）：<br><img src="https://img-blog.csdnimg.cn/20190226104157618.png" alt=""><br>然后用sg函数推一推，很容易证明一条线上的「是否必胜」是相同的<br>那么暴力找即可，复杂度下界为n</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a[MAX_N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> n=qread();<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) a[i]=qread();</div><div class="line">	sort(a+<span class="number">1</span>,a+n+<span class="number">1</span>);reverse(a+<span class="number">1</span>,a+n+<span class="number">1</span>);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> x=<span class="number">1</span>;x&lt;=n;x++)</div><div class="line">		<span class="keyword">if</span>(x+<span class="number">1</span>&gt;a[x+<span class="number">1</span>])</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> up=(a[x]-x),right=<span class="number">0</span>;</div><div class="line">			<span class="keyword">while</span>(x+right+<span class="number">1</span>&lt;=n and x&lt;=a[x+right+<span class="number">1</span>]) right++;</div><div class="line">			<span class="keyword">int</span> now;</div><div class="line">			<span class="keyword">if</span>(up==<span class="number">0</span> and right==<span class="number">0</span>) now=<span class="number">0</span>;</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(up==<span class="number">0</span>) now=right&amp;<span class="number">1</span>;</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(right==<span class="number">0</span>) now=up&amp;<span class="number">1</span>;</div><div class="line">			<span class="keyword">else</span> now=(up!=<span class="number">0</span> and right!=<span class="number">0</span>);</div><div class="line">			<span class="built_in">puts</span>(now?<span class="string">"First"</span>:<span class="string">"Second"</span>);</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
@@ -651,21 +651,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9f71.html" rel="bookmark">【Poj3897】【Vijos1194】Domino</a></div>
+      <div class="popular-posts-title"><a href="/posts/9f71.html" rel="bookmark">「Poj3897」「Vijos1194」Domino</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">【CZYZ2009暑假集训提高组6】盟军敢死队</a></div>
+      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">「CZYZ2009暑假集训提高组6」盟军敢死队</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/381c.html" rel="bookmark">【NOIAC31】MST</a></div>
+      <div class="popular-posts-title"><a href="/posts/381c.html" rel="bookmark">「NOIAC31」MST</a></div>
       
     </li>
   
@@ -679,14 +679,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ae99.html" rel="bookmark">【CF960F】Pathwalks</a></div>
+      <div class="popular-posts-title"><a href="/posts/ae99.html" rel="bookmark">「CF960F」Pathwalks</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">「POJ2057」The Lost House</a></div>
       
     </li>
   
@@ -752,8 +752,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/1dfd.html" rel="prev" title="【Baltic2013】pipes">
-                【Baltic2013】pipes <i class="fa fa-chevron-right"></i>
+              <a href="/posts/1dfd.html" rel="prev" title="「Baltic2013」pipes">
+                「Baltic2013」pipes <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -831,7 +831,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -856,7 +856,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1265,7 +1267,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="CFR596 div1 好题：CF1246C Rock Is Push、CF1246E To Make 1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-29T07:46:14.198Z">
+<meta property="og:updated_time" content="2019-12-07T03:01:40.612Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CFR596">
 <meta name="twitter:description" content="CFR596 div1 好题：CF1246C Rock Is Push、CF1246E To Make 1">
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-29 15:46:14" itemprop="dateModified" datetime="2019-10-29T15:46:14+08:00">2019-10-29</time>
+                <time title="修改时间：2019-12-07 11:01:40" itemprop="dateModified" datetime="2019-12-07T11:01:40+08:00">2019-12-07</time>
               </span>
             
           
@@ -615,20 +615,20 @@
 <p>好题：CF1246C Rock Is Push、CF1246E To Make 1</p>
 <a id="more"></a>
 <p>比赛的时候C做了1h，导致没时间做D，其实还是很可做的</p>
-<h3 id="CF1246A-p-binary"><a href="#CF1246A-p-binary" class="headerlink" title="CF1246A p-binary"></a>CF1246A p-binary</h3><p>题意：给出$1 \le n \le 1e9和-1e3 \le p \le 1e3，问最小的t使得n为t个可以相同的【2^{非负}+p】之和$</p>
+<h3 id="CF1246A-p-binary"><a href="#CF1246A-p-binary" class="headerlink" title="CF1246A p-binary"></a>CF1246A p-binary</h3><p>题意：给出$1 \le n \le 1e9和-1e3 \le p \le 1e3，问最小的t使得n为t个可以相同的「2^{非负}+p」之和$</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>对于一个t，考虑如何判断是否可行；$n-tp&lt;0$显然无解，然后至少是$__builtin_popcount(n-tp)$，至多是n-tp，而只要在这之内，肯定能用t个$2^{非负}表示出n-tp$；于是显然t没有必要超过logn，直接枚举t即可，<a href="https://codeforces.com/contest/1246/submission/63482918" target="_blank" rel="noopener">code</a></p>
 
 </div></div>
 <h3 id="CF1246B-Power-Products"><a href="#CF1246B-Power-Products" class="headerlink" title="CF1246B Power Products"></a>CF1246B Power Products</h3><p>题意：给出n个数$a_i$，统计$\sum_{i=1}^n \sum_{j=i+1}^n [\exists x^k=a_i*a_j ]$，$a_i,n \le 1e5$</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>和<a href="e1875d00.html">agc003D - Anticube</a>有点像，把每个数分解质因数，指数模k，称得到的数为这个数的最简式（显然不大于），于是能和这个数匹配的最简式是唯一确定的，直接拿个东西计数，边输入边找即可</p>
+<p>和<a href="e1875d00.html">AGC003D - Anticube</a>有点像，把每个数分解质因数，指数模k，称得到的数为这个数的最简式（显然不大于），于是能和这个数匹配的最简式是唯一确定的，直接拿个东西计数，边输入边找即可</p>
 <p>$O(分解质因数+nlogn)$，<a href="https://codeforces.com/contest/1246/submission/63459309" target="_blank" rel="noopener">code</a></p>
 
 </div></div>
 <h3 id="CF1246C-Rock-Is-Push"><a href="#CF1246C-Rock-Is-Push" class="headerlink" title="CF1246C Rock Is Push"></a>CF1246C Rock Is Push</h3><p>题意：给出一个有石子的表格，n行m列（$n,m \le 2e3$），要从$(1,1)到(n,m)$，然后像<a href="https://assets.codeforces.com/rounds/1225/index.html" target="_blank" rel="noopener">这样走</a>，要求只能向右或下，石子不能被推出去，求方案数模1e9+7</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>一脸dp计数的样子，而且因为只能向右或向下，你会发现向下的时候这一行的石子就没用了，向右的时候这一列也没用了，然后为了能准确得到例如正在向下时下面有多少石子，有点套路地每次强制【向右至少1次+向下至少1次】<br>$$<br>\\设从(a,b) \to (i,j)，预处理出g[i][j]表示第i行中第j个后面的石子数，h[j][i]表示第j列中第i个后面的石子数<br>\\f(i,j) = \sum_{a&lt;i} \sum_{b&lt;j} f(a,b)，能过来的充要条件明显是g[a][b+1] \le m-j,h[j][a+1] \le n-i<br>$$<br>因为g和h是单调的，决策集合明显是个区间，可以双指针维护，递增枚举列j，移动每行的b的双指针（当时写了二分）并记录这行的合法转移的f和，然后递增枚举行i并维护仅对于这一列的指针a，利用前面处理的f和求出能转移过来的总和fsum即可</p>
+<p>一脸dp计数的样子，而且因为只能向右或向下，你会发现向下的时候这一行的石子就没用了，向右的时候这一列也没用了，然后为了能准确得到例如正在向下时下面有多少石子，有点套路地每次强制「向右至少1次+向下至少1次」<br>$$<br>\\设从(a,b) \to (i,j)，预处理出g[i][j]表示第i行中第j个后面的石子数，h[j][i]表示第j列中第i个后面的石子数<br>\\f(i,j) = \sum_{a&lt;i} \sum_{b&lt;j} f(a,b)，能过来的充要条件明显是g[a][b+1] \le m-j,h[j][a+1] \le n-i<br>$$<br>因为g和h是单调的，决策集合明显是个区间，可以双指针维护，递增枚举列j，移动每行的b的双指针（当时写了二分）并记录这行的合法转移的f和，然后递增枚举行i并维护仅对于这一列的指针a，利用前面处理的f和求出能转移过来的总和fsum即可</p>
 <p>$O(n^2)$，<a href="https://codeforces.com/contest/1246/submission/63480548" target="_blank" rel="noopener">code</a></p>
 <p>upd：其实没必要每次走两步来着，钦定转向也是可以的，就是多加入一维表示方向，代码复杂度的话可能不会差太多</p>
 
@@ -662,13 +662,6 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7e7e.html" rel="bookmark">【Luogu1090】合并果子</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
       <div class="popular-posts-title"><a href="/posts/2d0202e9.html" rel="bookmark">【OI之路】贪心</a></div>
       
     </li>
@@ -676,21 +669,28 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/cc15.html" rel="bookmark">【NOIAC40】Erlang</a></div>
+      <div class="popular-posts-title"><a href="/posts/d59f.html" rel="bookmark">「cqoi2013」二进制a+b</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/2c33.html" rel="bookmark">【Wf2016】Swap Space【PA2014】Bohater</a></div>
+      <div class="popular-posts-title"><a href="/posts/cc15.html" rel="bookmark">「NOIAC40」Erlang</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      <div class="popular-posts-title"><a href="/posts/2c33.html" rel="bookmark">「Wf2016」Swap Space「PA2014」Bohater</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">「POJ2057」The Lost House</a></div>
       
     </li>
   
@@ -755,8 +755,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/174ef833.html" rel="next" title="20191026模拟-lhy">
-                <i class="fa fa-chevron-left"></i> 20191026模拟-lhy
+              <a href="/posts/58b5aaea.html" rel="next" title="CFR371 div1">
+                <i class="fa fa-chevron-left"></i> CFR371 div1
               </a>
             
           </div>
@@ -844,7 +844,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -869,7 +869,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1278,7 +1280,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

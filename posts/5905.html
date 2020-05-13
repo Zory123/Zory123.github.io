@@ -94,17 +94,15 @@
 
   <meta name="description" content="组合数学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】03数学-7组合数学">
+<meta property="og:title" content="「OI之路」03数学-7组合数学">
 <meta property="og:url" content="http://zory.ink/posts/5905.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="组合数学">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.zhihu.com/equation?tex=+%7B%5Calpha+%5Cchoose+k%7D+%3D+%5Cfrac%7B%5Calpha+%28%5Calpha-1%29+...+%28%5Calpha+-+k+%2B1%29%7D%7Bk%21%7D+">
-<meta property="og:updated_time" content="2019-10-11T05:52:43.249Z">
+<meta property="og:updated_time" content="2020-05-09T02:39:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】03数学-7组合数学">
+<meta name="twitter:title" content="「OI之路」03数学-7组合数学">
 <meta name="twitter:description" content="组合数学">
-<meta name="twitter:image" content="https://www.zhihu.com/equation?tex=+%7B%5Calpha+%5Cchoose+k%7D+%3D+%5Cfrac%7B%5Calpha+%28%5Calpha-1%29+...+%28%5Calpha+-+k+%2B1%29%7D%7Bk%21%7D+">
 
 
 
@@ -122,7 +120,7 @@
   };
 </script>
 
-  <title>【OI之路】03数学-7组合数学 | Zory的个人博客</title>
+  <title>「OI之路」03数学-7组合数学 | Zory的个人博客</title>
   
 
 
@@ -251,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -269,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -287,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -497,7 +495,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】03数学-7组合数学
+          <h2 class="post-title" itemprop="name headline">「OI之路」03数学-7组合数学
 
               
             
@@ -538,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-11 13:52:43" itemprop="dateModified" datetime="2019-10-11T13:52:43+08:00">2019-10-11</time>
+                <time title="修改时间：2020-05-09 10:39:34" itemprop="dateModified" datetime="2020-05-09T10:39:34+08:00">2020-05-09</time>
               </span>
             
           
@@ -579,7 +577,7 @@
 
           
           
-            <span id="/posts/5905.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】03数学-7组合数学">
+            <span id="/posts/5905.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」03数学-7组合数学">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -613,38 +611,45 @@
 
       
         <p>组合数学<br><a id="more"></a></p>
-<h2 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h2><p>$$<br>P(n,m)=n\times (n-1)\times (n-2)……(n-m+1)=\frac{n!}{(n-m)!}<br>$$</p>
-<p>$$<br>C(n,m)=\frac{P(n,m)}{P(m,m)}=\frac{n!}{m!(n-m)!}<br>$$</p>
-<p>性质：详见<a href="https://blog.csdn.net/litble/article/details/75913032" target="_blank" rel="noopener">这里</a><br>补充：</p>
-<p>除n=0，奇数和偶数项之和相等，证明:$\sum_{i=0}^n(-1)^iC_n^i=[n=0]$，把奇数i移到等式右边即可</p>
-<p>$\sum_{i=j}^n C_i^j=C_{n+1}^{j+1}$，证明可以考虑组合意义：路径数<br>$\sum_{i=0}^r C_{m+i}^i=C_{m+r+1}^r，用组合递推证明$<br>$\sum_{i=a}^n C_i^a C_{n-i}^b = C_{n+1}^{a+b+1}$，第一眼看去可能会觉得是$C_n^{a+b}$，然而注意到位置i上不一定是第a个；考虑怎么修，不妨加入一个，变成在n+1中选a+b+1个，然后枚举第a+1个在i+1处，左边i选a，右边n-i选b<br>$C_n^i C_i^j=C_n^j C_{n-j}^{i-j}$，证明：组合意义<br>范德蒙德卷积： $\sum_{i=0}^k C_n^i C_m^{k-i} = C_{n+m}^k$  证明：生成函数</p>
-<p><strong>题</strong>：<a href="7deb.html">【Arc102E】Stop. Otherwise</a>、<a href="https://loj.ac/problem/2143" target="_blank" rel="noopener">「SHOI2017」组合数问题</a></p>
+<h2 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h2><ol>
+<li>除n=0，奇数和偶数项之和相等，证明:$\sum_{i=0}^n(-1)^iC_n^i=[n=0]$，把奇数i移到等式右边即可；也可以考虑组合意义，想要某个奇偶性，前面任选最后一个看情况行事，即$2^{n-1}$</li>
+<li>$\sum_{i=j}^n C_i^j=C_{n+1}^{j+1}（也可写成\sum_{i=0}^r C_{m+i}^m=C_{m+r+1}^r）$，证明可以考虑组合意义：表格路径计数</li>
+<li>$\sum_{i=a}^n C_i^a C_{n-i}^b = C_{n+1}^{a+b+1}$，证明：组合意义，有n+1个位置a+b+1个球，枚举第a+1个球在第i+1个格子</li>
+<li>$C_n^i C_i^j=C_n^j C_{n-j}^{i-j}$，证明：组合意义</li>
+<li>范德蒙德卷积： $\sum_{i=0}^k C_n^i C_m^{k-i} = C_{n+m}^k$  证明：组合意义；可以用来处理$\sum_{i=0}^n (C_n^i)^2=\sum_{i=0}^n C_n^iC_n^{n-i}=C_{2n}^n$</li>
+<li>$\sum_{i=0}^n i*C_n^i=\sum_{i=1}^n n*C_{n-1}^{i-1}=n2^{n-1}$</li>
+<li>$\frac{C_n^1}{1}-\frac{C_n^2}{2}+\frac{C_n^3}{3}+……+(-1)^{n-1}\frac{C _n^n}{n} =1 + \frac{1}{2}+ \frac{1}{3}+……+ \frac{1}{n}$，不知道咋证明</li>
+</ol>
+<p><strong>题</strong>：<a href="7deb.html">「Arc102E」Stop. Otherwise</a>、<a href="https://loj.ac/problem/2143" target="_blank" rel="noopener">「SHOI2017」组合数问题</a></p>
 <h2 id="多重集"><a href="#多重集" class="headerlink" title="多重集"></a>多重集</h2><p>也就是允许元素重复的广义集合，表示为$S={a_1 \cdot n_1,a_2 \cdot n_2,…a_k \cdot n_k}$，其中a表示元素</p>
 <p>全排列=$\frac{n!}{n_1! \times n_2! … \times n_k!}$</p>
 <p>组合：<br>设选r个，先考虑较为特殊的$r \leq n_i (\forall i \in [1,k])$，例题：<a href="82f7.html">Counting Swaps</a><br>然后我们就能直接把问题转化为求 $S={r \cdot 0,(k-1) \cdot 1}$ 的全排列，所以得到 $\frac{ (r+k-1)! }{r! \times (k-1)!}=C_{r+k-1}^{r}$</p>
 <p>那如果不是这样特殊的r个呢？对问题取补，$ans=C_{r-k+1}^{r}-非法数量$而非法数量，就是说存在一个i，取的数量达到了$n_i+1$</p>
-<p>那么我们枚举出每个数的非法情况，然后每个非法的数字，都先定向删除$n_i+1$个，然后照常取【$r-已经删除的数量$】个</p>
-<p>因为状态的重复，联想一下小学的时候学的简单容斥，不难算出<br>如果非法数量num是奇数，就减去，偶数就补回去；具体实现可以枚举二进制数来搞</p>
+<p>那么我们枚举出每个数的非法情况，然后每个非法的数字，都先定向删除$n_i+1$个，然后照常取「$r-已经删除的数量$」个</p>
+<p>因为状态的重复，容斥，如果非法数量num是奇数，就减去，偶数就补回去；具体实现可以枚举二进制数来搞</p>
 <p>例题：<a href="82f7.html">CF451E Devu and Flowers</a></p>
-<h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>$$<br>(a+b)^n=<br>\sum_{i=0}^n<br>C_n^i \times<br>a^i \times<br>b^{n-i}<br>$$<br><a href="https://riteme.github.io/blog/2016-8-18/binomial.html" target="_blank" rel="noopener">深入运用</a></p>
-<p><strong>牛顿广义二项式定理</strong>，将k拓展到实数域<br><strong>条件</strong>：  $0 \leq |a| \le |b|$<br>$(a+b)^k=\sum_{i=0}^\infty {k \choose i} a^i b^{k-i}$<br>其中组合数：<img src="https://www.zhihu.com/equation?tex=+%7B%5Calpha+%5Cchoose+k%7D+%3D+%5Cfrac%7B%5Calpha+%28%5Calpha-1%29+...+%28%5Calpha+-+k+%2B1%29%7D%7Bk%21%7D+" alt=""><br>显然这个广义是兼容狭义的</p>
-<h2 id="Catalan数与拓展"><a href="#Catalan数与拓展" class="headerlink" title="Catalan数与拓展"></a>Catalan数与拓展</h2><p>组合意义：有多少个【1和-1都是n个】的序列满足【任意前缀$\ge0$】、不同形态二叉树</p>
+<h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>$$<br>(a+b)^n=<br>\sum_{i=0}^{\infty} C_n^i \times a^i \times b^{n-i}<br>$$<br><a href="https://riteme.github.io/blog/2016-8-18/binomial.html" target="_blank" rel="noopener">深入运用</a></p>
+<p>当n是实数，称之为<strong>牛顿广义二项式定理</strong>，此时要求 $|a|&lt;|b|$，其中组合数$C_{x}^y,y \in N=x^{\underline y}/{y!}$。显然这个广义是兼容狭义的</p>
+<h2 id="Catalan数与拓展"><a href="#Catalan数与拓展" class="headerlink" title="Catalan数与拓展"></a>Catalan数与拓展</h2><p>组合意义：有多少个「1和-1都是n个」的序列满足「任意前缀$\ge0$」、不同形态二叉树</p>
 <p>$Cat_n=C_{2n}^n-C_{2n}^{n-1}=\frac{C_{2n}^n}{n+1}=\sum Cat_a \times Cat_{n-a-1}$</p>
-<p>左边推中间下面讲，右边推过去我只会生成函数搞，并不会怎么组合意义</p>
+<p>左边推中间下面讲，右边推过去我只会生成函数搞，并不会怎么组合意义（本身意义为枚举第一个左括号所在括号包括了多少对括号）</p>
 <p><strong>Catalan数</strong>：</p>
-<p>首先总量是 $C_{2n}^n$ ，然后考虑对于每个非法方案，一定存在一个最小的x使得$[1]-[-1]&lt;0$（其实一定是-1），将1到m部分翻转，一定唯一对应一个$(n+1,n-1)$的序列，而且反过来考虑这个序列最小的m，你会发现它是个双射</p>
-<p><strong>拓展</strong>：n个1m个-1，求多少个方案满足存在一个最小m使得$[1]-[-1]\ge k$  </p>
+<p>首先总量是 $C_{2n}^n$ ，然后考虑对于每个非法方案，一定存在一个最小的m使得$[1]-[-1]&lt;0$（其实一定是-1），将m后面部分符号反转，一定唯一对应一个$(n+1,n-1)$的序列，而且反过来考虑这个序列最小的m，你会发现它是个双射，所以非法方案总数就是$C_{n+n}^{n-1}$</p>
+<p><strong>拓展</strong>：n个1m个-1，求多少个方案满足存在一个最小x使得$[1]-[-1]\ge k$  </p>
 <p>即当前是$(x+k,x)+(n-x-k,m-x)$同样考虑翻转左边 $(x,x+k)+(n-x-k,m-x)=(n-k,m+k)$</p>
-<p>和上面类似，也是个双射，故方案为 $C_{n+m}^{m+k}$ （另需特判特殊情况）</p>
+<p>和上面类似做翻转，也是个双射，故方案为 $C_{n+m}^{m+k}$ （另需特判特殊情况）</p>
 <p>这个拓展主要是做<a href="71bd.html">CF1204E Natasha, Sasha and the Prefix Sums</a>收获的</p>
 <h2 id="斯特林数"><a href="#斯特林数" class="headerlink" title="斯特林数"></a>斯特林数</h2><p><a href="https://www.cnblogs.com/owenyu/p/6724661.html" target="_blank" rel="noopener">Stirling数各种性质（不知道有没有用）</a></p>
-<p>然后洛谷的4个板子都可以做一做</p>
-<h4 id="第一类Stirling数（斯特林轮换数）"><a href="#第一类Stirling数（斯特林轮换数）" class="headerlink" title="第一类Stirling数（斯特林轮换数）"></a>第一类Stirling数（斯特林轮换数）</h4><p>组合意义：n个不同的人，放入m个圆排列（内部顺序不同为不同方案），不能有空<br>递推式可考虑n放入新的排列，或者放在前面n-1个人中某个的右边 $S_1(n,m)=S_1(n-1,m-1)+(n-1)S_1(n-1,m)$<br>边界： $S_1(0,0)=1，S_1(n,0)=0 (n \geq 1)，x^{\overline{n}} = \sum_{i=0}^{n} S_1(n,i) x^i$</p>
+<p>然后洛谷的4个板子都可以写一写</p>
+<h4 id="第一类Stirling数（斯特林轮换数）"><a href="#第一类Stirling数（斯特林轮换数）" class="headerlink" title="第一类Stirling数（斯特林轮换数）"></a>第一类Stirling数（斯特林轮换数）</h4><p>组合意义：n个不同的人，放入m个圆排列（内部顺序不同为不同方案），不能有空<br>递推式可考虑n放入新的排列，或者放在前面n-1个人中某个的右边 $S_1(n,m)=S_1(n-1,m-1)+(n-1)S_1(n-1,m)$<br>边界： $S_1(0,0)=1，S_1(n,0)=0 (n \geq 1)$</p>
+<p>另一种意义是$x^{\overline{n}} = \sum_{i=0}^{n} S_1(n,i) x^i$，因为平时下降幂较多所以也有$x^{\underline{n}} = \sum_{i=0}^{n} (-1)^{n-i} S_1(n,i) x^i$</p>
+<p>一个引理：$\sum_k S_1(n,k)C_k^m=S_1(n+1,m+1)$，在<a href="https://vjudge.net/problem/TopCoder-14199" target="_blank" rel="noopener">SRM686 CyclesNumber</a>用过</p>
 <p><a href="https://www.luogu.org/problem/P5408" target="_blank" rel="noopener">求一行</a>：用分治fft求上升幂求系数，$T(n)=2T(n/2)+nlogn=nlog^2n$</p>
-<p>然后存在一个log的做法，主要思路是 $T(n)=T(n/2)+nlogn=nlogn$ ，也就是通过倍增，只分治一边，那么我们的目标就是用前者求出 $f_{2n}(n)=f_n(n)f_n(n+x)$ 中的后者，<a href="https://www.luogu.org/record/22192932" target="_blank" rel="noopener">code</a><br>$$<br>\begin{aligned}<br>F_n(x+n)&amp;=\sum_{i=0}^{n}a_i (x+n)^i=\sum_{i=0}^{n}a_i\sum_{j=0}^i{i\choose j}n^{i-j}x^j\\<br>&amp;=\sum_{j=0}^{n} ( b_j=\sum_{i=j}^{n} n^{i-j} {i \choose j} a_i ) x^j\\<br>A[i-j]&amp;=\frac{n^{i-j}}{(i-j)!},B[n-i]=i!a_i,C[n-j]=j!b_j<br>\end{aligned}<br>$$</p>
+<p>然后存在一个log的做法，主要思路是 $T(n)=T(n/2)+nlogn=nlogn$ ，也就是通过倍增，只分治一边，那么我们的目标就是用$f_{2n}(n)=f_n(n)f_n(n+x)$ 中前者求出后者，<a href="https://www.luogu.org/record/22192932" target="_blank" rel="noopener">code</a><br>$$<br>\begin{aligned}<br>F_n(x+n)&amp;=\sum_{i=0}^{n}a_i (x+n)^i=\sum_{i=0}^{n}a_i\sum_{j=0}^i{i\choose j}n^{i-j}x^j=\sum_{j=0}^{n} ( b_j=\sum_{i=j}^{n} n^{i-j} {i \choose j} a_i ) x^j\\<br>A[i-j]&amp;=\frac{n^{i-j}}{(i-j)!},B[n-i]=i!a_i,C[n-j]=j!b_j<br>\end{aligned}<br>$$</p>
 <p><a href="https://www.luogu.org/problem/P5409" target="_blank" rel="noopener">求一列</a>：正所谓斯特林轮换数，考虑轮换，$S_1(xxx,m)的EGF为=\frac{1}{m!} (\sum_{i=1}^{\infty} (i-1)! \frac{x^i}{i!})^m，O(nlogn)$，注意要平移符合ln的定义域，<a href="https://www.luogu.org/paste/hyft08cw" target="_blank" rel="noopener">code</a></p>
 <h4 id="第二类Stirling数（斯特林子集数）"><a href="#第二类Stirling数（斯特林子集数）" class="headerlink" title="第二类Stirling数（斯特林子集数）"></a>第二类Stirling数（斯特林子集数）</h4><p>n个不同的球，进入m个相同的盒子中，不可有空盒子的方案数<br>递推式可考虑n放入新排列，或者放在已有的盒子中，$S_2(n,m)=m S_2(n-1,m)+S_2(n-1,m-1)$<br>非递推式的话，考虑容斥即可，为了方便处理先假设m个盒子互不相同</p>
 <p><a href="https://www.luogu.org/problem/P5395" target="_blank" rel="noopener">求一行</a>：考虑空盒子直接容斥$S_2(n,m)=\frac{1}{m!} \sum (-1)^k {m \choose k} (m-k)^n$<br>还有一种理解，也是枚举颜色数，发现是一个下降幂多项式，二项式反演，殊途同归<br>$$<br>x^n = \sum_{i=0}^{n} {n \brace i} x^{\underline{i}}=\sum_{i=0}^n {n \brace i} C_x^i i!，m!{n \brace m} = \sum_{i=0}^{m} (-1)^{m-i} {m \choose i} i^n<br>$$</p>
+<p><strong>前面两种理解都有各自的组合意义，不过可能后面那个组合数的比较常用</strong></p>
 <p><a href="https://www.luogu.org/problem/P5396" target="_blank" rel="noopener">求一列</a>：同理，其EGF=$(e^x-1)^m /m!$</p>
 <p><strong>例题</strong>：</p>
 <p><a href="https://loj.ac/problem/2058" target="_blank" rel="noopener">loj2058 「TJOI / HEOI2016」求和</a>，把容斥的式子放进去就做完了，也可以推一下生成函数</p>
@@ -653,12 +658,11 @@
 <p><a href="https://vjudge.net/problem/HDU-4625" target="_blank" rel="noopener">bzoj2159 Crash的文明世界、HDU4625 JZPTREE</a>，bzoj太麻烦<a href="../code/hdu/HDU4625.html">HDU的code</a></p>
 <p>$S(i)=\sum_{j=1}^ndis(i,j)^k，不好二项式定理考虑斯特林把它展开=\sum_{t=0}^kS_2(k,t)t!(\sum_{1}^n C_{dis}^t)$ </p>
 <p>然后利用组合数的递推式就可以$O(nk)$了</p>
-<p><a href="https://codeforces.com/problemset/problem/932/E" target="_blank" rel="noopener">CF932E Team Work</a>，组合数比次幂友善，把次幂展开</p>
+<p><a href="https://codeforces.com/problemset/problem/932/E" target="_blank" rel="noopener">CF932E Team Work</a>，组合数比次幂友善，把次幂展开，<a href="https://codeforces.com/problemset/submission/932/60909500" target="_blank" rel="noopener">code</a></p>
 <p>$\sum_{i=1}^nC_n^ii^k=\sum_{j=0}^kS_2(k,j)j! \sum_{i=j}^n C_n^iC_{n-j}^{i-j}=\sum_{j=0}^k S_2(k,j)P_n^j max(2^{n-j},1)$</p>
-<p><a href="https://codeforces.com/problemset/submission/932/60909500" target="_blank" rel="noopener">code</a></p>
 <h2 id="错排问题"><a href="#错排问题" class="headerlink" title="错排问题"></a>错排问题</h2><p>问题本身没啥，但有启发性思想</p>
 <h3 id="原问题"><a href="#原问题" class="headerlink" title="原问题"></a>原问题</h3><p>求有多少个n的排列，满足每个$a_i \neq i$</p>
-<p><strong>本质</strong>：两组各n个数配对，n个ban满足相互独立</p>
+<p><strong>本质</strong>：两组各n个数配对，<strong>n个ban满足相互独立</strong></p>
 <p><strong>直接容斥</strong>：不是本文重点，$D_n=\sum (-1)^i C_n^i (n-i)!=\sum (-1)^i \frac{n!}{i!}$</p>
 <p><strong>递推</strong>：设在$b_1=a（n-1种）$，若$b_a=1$，转化为$D_{n-2}$；</p>
 <p>否则$b_a \ne 1$，此时这个新条件与其他条件独立，转化为$D_{n-1}$</p>
@@ -685,7 +689,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/5905.html" title="【OI之路】03数学-7组合数学">http://zory.ink/posts/5905.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/5905.html" title="「OI之路」03数学-7组合数学">http://zory.ink/posts/5905.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -714,8 +718,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/c6a2.html" rel="next" title="【OI之路】03数学-6线性代数">
-                <i class="fa fa-chevron-left"></i> 【OI之路】03数学-6线性代数
+              <a href="/posts/c6a2.html" rel="next" title="「OI之路」03数学-6线性代数">
+                <i class="fa fa-chevron-left"></i> 「OI之路」03数学-6线性代数
               </a>
             
           </div>
@@ -724,8 +728,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/3b5e.html" rel="prev" title="【OI之路】03数学-8反演与容斥">
-                【OI之路】03数学-8反演与容斥 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/3b5e.html" rel="prev" title="「OI之路」03数学-8反演与容斥">
+                「OI之路」03数学-8反演与容斥 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -803,7 +807,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -828,7 +832,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1237,7 +1243,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

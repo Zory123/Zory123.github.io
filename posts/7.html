@@ -95,15 +95,15 @@
   <meta name="description" content="Source and JudgeNOIP2002 提高组 T4Luogu1034Caioj1511">
 <meta name="keywords" content="模拟,难度1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Luogu1034】矩形覆盖">
+<meta property="og:title" content="「Luogu1034」矩形覆盖">
 <meta property="og:url" content="http://zory.ink/posts/7.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2002 提高组 T4Luogu1034Caioj1511">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cdn.luogu.org/upload/pic/12.png">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Luogu1034】矩形覆盖">
+<meta name="twitter:title" content="「Luogu1034」矩形覆盖">
 <meta name="twitter:description" content="Source and JudgeNOIP2002 提高组 T4Luogu1034Caioj1511">
 <meta name="twitter:image" content="https://cdn.luogu.org/upload/pic/12.png">
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>【Luogu1034】矩形覆盖 | Zory的个人博客</title>
+  <title>「Luogu1034」矩形覆盖 | Zory的个人博客</title>
   
 
 
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -498,7 +498,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Luogu1034】矩形覆盖
+          <h2 class="post-title" itemprop="name headline">「Luogu1034」矩形覆盖
 
               
             
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:48" itemprop="dateModified" datetime="2019-12-01T10:18:48+08:00">2019-12-01</time>
               </span>
             
           
@@ -580,7 +580,7 @@
 
           
           
-            <span id="/posts/7.html" class="post-meta-item leancloud_visitors" data-flag-title="【Luogu1034】矩形覆盖">
+            <span id="/posts/7.html" class="post-meta-item leancloud_visitors" data-flag-title="「Luogu1034」矩形覆盖">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,11 +615,11 @@
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOIP2002 提高组 T4<br><a href="https://www.luogu.org/problemnew/show/P1034" target="_blank" rel="noopener">Luogu1034</a><br><a href="http://caioj.cn/problem.php?id=1511" target="_blank" rel="noopener">Caioj1511</a></p>
 <a id="more"></a>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>【Brief description】</strong><br>在平面上有 n 个点，每个点用一对整数坐标表示。<br>例如：当 n=4 时，4个点的坐标分另为：p1(1,1),p2(2,2),p3(3，6),P4(0,7)，见图一。<br><img src="https://cdn.luogu.org/upload/pic/12.png" alt=""><br>这些点可以用 k 个矩形（1&lt;=k&lt;=4）全部覆盖，矩形的边平行于坐标轴。<br>当 k=2 时，可用如图二的两个矩形 s1，s2 覆盖，s1，s2 面积和为 4。<br>问题是当 n 个点坐标和 k 给出后，<br>怎样才能使得覆盖所有点的 k 个矩形的面积之和为最小。<br>约定：<br>覆盖一个点的矩形面积为 0；<br>覆盖平行于坐标轴直线上点的矩形面积也为0。<br>各个矩形必须完全分开（边线与顶点也都不能重合）。<br><strong>【Input】</strong><br>n k x1 y1 x2 y2 ……<br>xn yn<br><strong>【Output】</strong><br>一个整数，即满足条件的最小的矩形面积之和。<br><strong>【Limited conditions】</strong><br>n&lt;=50<br>0&lt;=xi,yi&lt;=500<br><strong>【Sample input】</strong><br>4 2<br>1 1<br>2 2<br>3 6<br>0 7<br><strong>【Sample output】</strong><br>4<br><strong>【Sample explanation】</strong><br>无<br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>「Brief description」</strong><br>在平面上有 n 个点，每个点用一对整数坐标表示。<br>例如：当 n=4 时，4个点的坐标分另为：p1(1,1),p2(2,2),p3(3，6),P4(0,7)，见图一。<br><img src="https://cdn.luogu.org/upload/pic/12.png" alt=""><br>这些点可以用 k 个矩形（1&lt;=k&lt;=4）全部覆盖，矩形的边平行于坐标轴。<br>当 k=2 时，可用如图二的两个矩形 s1，s2 覆盖，s1，s2 面积和为 4。<br>问题是当 n 个点坐标和 k 给出后，<br>怎样才能使得覆盖所有点的 k 个矩形的面积之和为最小。<br>约定：<br>覆盖一个点的矩形面积为 0；<br>覆盖平行于坐标轴直线上点的矩形面积也为0。<br>各个矩形必须完全分开（边线与顶点也都不能重合）。<br><strong>「Input」</strong><br>n k x1 y1 x2 y2 ……<br>xn yn<br><strong>「Output」</strong><br>一个整数，即满足条件的最小的矩形面积之和。<br><strong>「Limited conditions」</strong><br>n&lt;=50<br>0&lt;=xi,yi&lt;=500<br><strong>「Sample input」</strong><br>4 2<br>1 1<br>2 2<br>3 6<br>0 7<br><strong>「Sample output」</strong><br>4<br><strong>「Sample explanation」</strong><br>无<br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>1h</p>
 <h2 id="Analysis1"><a href="#Analysis1" class="headerlink" title="Analysis1"></a>Analysis1</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>首先手痒看了看数据，一如既往地水，连极限数据都没有<br>一开始想着50^6枚举矩形对角点，发现很麻烦，计算量大<br>于是又看了题解，正解太复杂，不管了……<br>【其实正解(极角排序是计算几何的玩意)没有存在的必要，因为我测试了极限数据，灰常快】<br>那么其实只要预设k个矩阵，枚举每个点，假设加入即可</p>
+<p>首先手痒看了看数据，一如既往地水，连极限数据都没有<br>一开始想着50^6枚举矩形对角点，发现很麻烦，计算量大<br>于是又看了题解，正解太复杂，不管了……<br>「其实正解(极角排序是计算几何的玩意)没有存在的必要，因为我测试了极限数据，灰常快」<br>那么其实只要预设k个矩阵，枚举每个点，假设加入即可</p>
 
 </div></div>
 <h2 id="Code1"><a href="#Code1" class="headerlink" title="Code1"></a>Code1</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -638,42 +638,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/e3ff.html" rel="bookmark">【NOIP14 D1T1】生活大爆炸版石头剪刀布</a></div>
+      <div class="popular-posts-title"><a href="/posts/e3ff.html" rel="bookmark">「NOIP14 D1T1」生活大爆炸版石头剪刀布</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/25a7.html" rel="bookmark">【NOIP17 D1T2】时间复杂度</a></div>
+      <div class="popular-posts-title"><a href="/posts/ba43.html" rel="bookmark">【OI之路】模拟与讨论大合集</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7398.html" rel="bookmark">【Luogu1072】Hankson的趣味题</a></div>
+      <div class="popular-posts-title"><a href="/posts/7398.html" rel="bookmark">「Luogu1072」Hankson的趣味题</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">【CF11B】【51Nod1615】Jumping Jack</a></div>
+      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">「CF11B」「51Nod1615」Jumping Jack</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/745a.html" rel="bookmark">【Luogu1079】Vigenère密码</a></div>
+      <div class="popular-posts-title"><a href="/posts/745a.html" rel="bookmark">「Luogu1079」Vigenère密码</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f28f.html" rel="bookmark">【Luogu1024】一元三次方程求解</a></div>
+      <div class="popular-posts-title"><a href="/posts/f28f.html" rel="bookmark">「Luogu1024」一元三次方程求解</a></div>
       
     </li>
   
@@ -691,7 +691,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/7.html" title="【Luogu1034】矩形覆盖">http://zory.ink/posts/7.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/7.html" title="「Luogu1034」矩形覆盖">http://zory.ink/posts/7.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -731,8 +731,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/19c9.html" rel="next" title="【Luogu1033】自由落体">
-                <i class="fa fa-chevron-left"></i> 【Luogu1033】自由落体
+              <a href="/posts/19c9.html" rel="next" title="「Luogu1033」自由落体">
+                <i class="fa fa-chevron-left"></i> 「Luogu1033」自由落体
               </a>
             
           </div>
@@ -741,8 +741,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/3ef1.html" rel="prev" title="【Luogu1038】神经网络">
-                【Luogu1038】神经网络 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/3ef1.html" rel="prev" title="「Luogu1038」神经网络">
+                「Luogu1038」神经网络 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -820,7 +820,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -845,7 +845,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1254,7 +1256,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

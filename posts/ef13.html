@@ -95,14 +95,14 @@
   <meta name="description" content="来源和评测点Sdoi2008Bzoj3226">
 <meta name="keywords" content="线段树,难度2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Bzoj3226】校门外的区间">
+<meta property="og:title" content="「Bzoj3226」校门外的区间">
 <meta property="og:url" content="http://zory.ink/posts/ef13.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点Sdoi2008Bzoj3226">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Bzoj3226】校门外的区间">
+<meta name="twitter:title" content="「Bzoj3226」校门外的区间">
 <meta name="twitter:description" content="来源和评测点Sdoi2008Bzoj3226">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【Bzoj3226】校门外的区间 | Zory的个人博客</title>
+  <title>「Bzoj3226」校门外的区间 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Bzoj3226】校门外的区间
+          <h2 class="post-title" itemprop="name headline">「Bzoj3226」校门外的区间
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:47" itemprop="dateModified" datetime="2019-12-01T10:18:47+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/ef13.html" class="post-meta-item leancloud_visitors" data-flag-title="【Bzoj3226】校门外的区间">
+            <span id="/posts/ef13.html" class="post-meta-item leancloud_visitors" data-flag-title="「Bzoj3226」校门外的区间">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -614,12 +614,12 @@
         <h2 id="来源和评测点"><a href="#来源和评测点" class="headerlink" title="来源和评测点"></a>来源和评测点</h2><p>Sdoi2008<br><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3226" target="_blank" rel="noopener">Bzoj3226</a></p>
 <a id="more"></a>
 <p>从小白的角度解释本题</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p></p><p id="div-border-top-blue"><strong>【题目大意】</strong><br>5种运算维护集合S(S初始为空)并最终输出S<br>5种运算如下：<br>U T：S、T并集<br>I T：S、T交集<br>D T：S独有<br>C T：T独有<br>S T：S独有 交 T独有<br><strong>【输入格式】</strong><br>输入共M行。<br>每行的格式为X T，用一个空格隔开，X表示运算的种类，T为一个区间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">0≤a≤b≤65535，1≤M≤70000</div><div class="line">**【输出格式】**</div><div class="line">共一行，即集合S，每个区间后面带一个空格。</div><div class="line">若S为空则输出&quot;empty set&quot;。</div><div class="line">**【输入样例】**</div></pre></td></tr></table></figure></p>
-<p>U [1,5]<br>D [3,3]<br>S [2,4]<br>C (1,5)<br>I (2,3]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">**【输出样例】**</div><div class="line">(2,3) </div><div class="line">&lt;/p&gt;</div><div class="line"></div><div class="line">## 刷题记录</div><div class="line">1h</div><div class="line">3WA</div><div class="line">1PE</div><div class="line">1AC</div><div class="line"></div><div class="line">## 分析</div><div class="line">挺考验逻辑关系能力的</div><div class="line"></div><div class="line">首先，区间都是连续的。</div><div class="line">然后先消除区间表达法的多样性，可以考虑用t表示t/2，</div><div class="line">这样把区间统一转化，例如(2,5)变成```[2.5,4.5]```也就是```[5,9]</div></pre></td></tr></table></figure></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p></p><p id="div-border-top-blue"><strong>「题目大意」</strong><br>5种运算维护集合S(S初始为空)并最终输出S<br>5种运算如下：<br>U T：S、T并集<br>I T：S、T交集<br>D T：S独有<br>C T：T独有<br>S T：S独有 交 T独有<br><strong>「输入格式」</strong><br>输入共M行。<br>每行的格式为X T，用一个空格隔开，X表示运算的种类，T为一个区间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">0≤a≤b≤65535，1≤M≤70000</div><div class="line">**「输出格式」**</div><div class="line">共一行，即集合S，每个区间后面带一个空格。</div><div class="line">若S为空则输出&quot;empty set&quot;。</div><div class="line">**「输入样例」**</div></pre></td></tr></table></figure></p>
+<p>U [1,5]<br>D [3,3]<br>S [2,4]<br>C (1,5)<br>I (2,3]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">**「输出样例」**</div><div class="line">(2,3) </div><div class="line">&lt;/p&gt;</div><div class="line"></div><div class="line">## 刷题记录</div><div class="line">1h</div><div class="line">3WA</div><div class="line">1PE</div><div class="line">1AC</div><div class="line"></div><div class="line">## 分析</div><div class="line">挺考验逻辑关系能力的</div><div class="line"></div><div class="line">首先，区间都是连续的。</div><div class="line">然后先消除区间表达法的多样性，可以考虑用t表示t/2，</div><div class="line">这样把区间统一转化，例如(2,5)变成```[2.5,4.5]```也就是```[5,9]</div></pre></td></tr></table></figure></p>
 <p>然后各种操作逐个击破<br>U 区间1<br>I 独有0<br>D 区间0<br>C 区间取反，其余0<br>S 区间取反</p>
 <p>各种max，min乱搞<br>线段树维护就好了</p>
 <p>格式错误的话，是因为我以为打空格的同时换行，<br>当时就想为什么这么奇怪，原来不用换行。</p>
-<p>然后WA的话，就是【可能我的方式太古怪了】除了打修改的时候删掉翻转外，<br>【因为我是用父亲c更新儿子c的】，所以如果翻转之前有修改标记而且是统一的（不是-1），<br>那么就不用往下打标记了</p>
+<p>然后WA的话，就是「可能我的方式太古怪了」除了打修改的时候删掉翻转外，<br>「因为我是用父亲c更新儿子c的」，所以如果翻转之前有修改标记而且是统一的（不是-1），<br>那么就不用往下打标记了</p>
 <p>然后我的答案统计方式好像很独特啊，网上那些方法我看不懂……</p>
 <p>最后最后就是，无数次忘记，翻转标记要用异或更新。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">struct</span> seg</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> l,r;</div><div class="line">	<span class="keyword">int</span> lc,rc;</div><div class="line">	<span class="keyword">int</span> c;<span class="comment">//-1,0,1</span></div><div class="line">	<span class="keyword">bool</span> tg1,tg2;</div><div class="line">&#125;p[<span class="number">310000</span>];</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="keyword">int</span> ln=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> t=++ln;</div><div class="line">	p[t].l=l;p[t].r=r;p[t].c=<span class="number">0</span>;</div><div class="line">	p[t].tg1=p[t].tg2=<span class="number">0</span>;</div><div class="line">	<span class="keyword">if</span>(l&lt;r)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> mid=(l+r)/<span class="number">2</span>;</div><div class="line">		p[t].lc=build(l,mid);</div><div class="line">		p[t].rc=build(mid+<span class="number">1</span>,r);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span> p[t].lc=p[t].rc=<span class="number">0</span>;</div><div class="line">	<span class="keyword">return</span> t;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> lc=p[x].lc,rc=p[x].rc;</div><div class="line">	<span class="keyword">if</span>(p[lc].c==p[rc].c) p[x].c=p[lc].c;</div><div class="line">	<span class="keyword">else</span> p[x].c=<span class="number">-1</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">maketg1</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> c)</span></div><div class="line"></span>&#123;</div><div class="line">	p[x].c=c;</div><div class="line">	p[x].tg1=<span class="number">1</span>;</div><div class="line">	p[x].tg2=<span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">maketg2</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">if</span>(p[x].c&gt;=<span class="number">0</span>) p[x].c=<span class="number">1</span>-p[x].c;</div><div class="line">	<span class="keyword">if</span>( !(p[x].tg1==<span class="number">1</span> and p[x].c&gt;=<span class="number">0</span>) ) p[x].tg2^=<span class="number">1</span>;<span class="comment">//debug</span></div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">pushdown</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> lc=p[x].lc,rc=p[x].rc;</div><div class="line">	<span class="keyword">if</span>(p[x].tg1&gt;<span class="number">0</span>)</div><div class="line">	&#123;</div><div class="line">		p[x].tg1=<span class="number">0</span>;</div><div class="line">		<span class="keyword">if</span>(lc&gt;<span class="number">0</span>) maketg1(lc,p[x].c);</div><div class="line">		<span class="keyword">if</span>(rc&gt;<span class="number">0</span>) maketg1(rc,p[x].c);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(p[x].tg2&gt;<span class="number">0</span>)</div><div class="line">	&#123;</div><div class="line">		p[x].tg2=<span class="number">0</span>;</div><div class="line">		<span class="keyword">if</span>(lc&gt;<span class="number">0</span>) maketg2(lc);</div><div class="line">		<span class="keyword">if</span>(rc&gt;<span class="number">0</span>) maketg2(rc);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">change1</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> c)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">if</span>(x==<span class="number">0</span> or l&gt;r) <span class="keyword">return</span>;</div><div class="line">	<span class="keyword">if</span>(p[x].l==l and p[x].r==r)</div><div class="line">	&#123;</div><div class="line">		maketg1(x,c);</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">	pushdown(x);</div><div class="line">	</div><div class="line">	<span class="keyword">int</span> mid=(p[x].l+p[x].r)/<span class="number">2</span>;</div><div class="line">	<span class="keyword">int</span> lc=p[x].lc,rc=p[x].rc;</div><div class="line">	<span class="keyword">if</span>(r&lt;=mid) change1(lc,l,r,c);</div><div class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(l&gt;mid) change1(rc,l,r,c);</div><div class="line">	<span class="keyword">else</span> change1(lc,l,mid,c),change1(rc,mid+<span class="number">1</span>,r,c);</div><div class="line">	update(x);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">change2</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">if</span>(x==<span class="number">0</span> or l&gt;r) <span class="keyword">return</span>;</div><div class="line">	pushdown(x);<span class="comment">//debug</span></div><div class="line">	<span class="keyword">if</span>(p[x].l==l and p[x].r==r)</div><div class="line">	&#123;</div><div class="line">		maketg2(x);</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> mid=(p[x].l+p[x].r)/<span class="number">2</span>;</div><div class="line">	<span class="keyword">int</span> lc=p[x].lc,rc=p[x].rc;</div><div class="line">	<span class="keyword">if</span>(r&lt;=mid) change2(lc,l,r);</div><div class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(l&gt;mid) change2(rc,l,r);</div><div class="line">	<span class="keyword">else</span> change2(lc,l,mid),change2(rc,mid+<span class="number">1</span>,r);</div><div class="line">	update(x);</div><div class="line">&#125;</div><div class="line"><span class="keyword">bool</span> bk=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">output</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></div><div class="line"></span>&#123;</div><div class="line">	bk=<span class="number">1</span>;</div><div class="line">	</div><div class="line">	<span class="keyword">if</span>(a%<span class="number">2</span>==<span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">"[%d,"</span>,a/<span class="number">2</span>);</div><div class="line">	<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"(%d,"</span>,a/<span class="number">2</span>);</div><div class="line">	<span class="keyword">if</span>(b%<span class="number">2</span>==<span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">"%d] "</span>,b/<span class="number">2</span>);</div><div class="line">	<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%d) "</span>,b/<span class="number">2</span>+<span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> ll=<span class="number">-2</span>,rr=<span class="number">-2</span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ask</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">if</span>(x==<span class="number">0</span>) <span class="keyword">return</span>;</div><div class="line">	</div><div class="line">	<span class="keyword">if</span>(p[x].c==<span class="number">1</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> a=p[x].l,b=p[x].r;</div><div class="line">		<span class="keyword">if</span>(a&gt;rr+<span class="number">1</span>)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span>(ll&gt;=<span class="number">0</span>) output(ll,rr);</div><div class="line">			ll=a;</div><div class="line">		&#125;</div><div class="line">		rr=b;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(p[x].c==<span class="number">-1</span>)</div><div class="line">	&#123;</div><div class="line">		pushdown(x);</div><div class="line">		ask(p[x].lc);</div><div class="line">		ask(p[x].rc);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	build(<span class="number">0</span>,<span class="number">140000</span>);</div><div class="line">	<span class="comment">//build(0,10);</span></div><div class="line">	</div><div class="line">	<span class="keyword">char</span> s[<span class="number">5</span>],c1,c2;<span class="keyword">int</span> a,b;</div><div class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%s %c%d,%d%c"</span>,s,&amp;c1,&amp;a,&amp;b,&amp;c2)!=EOF and s[<span class="number">0</span>]!=<span class="string">'e'</span>)</div><div class="line">	&#123;</div><div class="line">		a*=<span class="number">2</span>;<span class="keyword">if</span>(c1==<span class="string">'('</span>) a++;</div><div class="line">		b*=<span class="number">2</span>;<span class="keyword">if</span>(c2==<span class="string">')'</span>) b--;</div><div class="line">		</div><div class="line">		<span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">'U'</span>)</div><div class="line">		&#123;</div><div class="line">			change1(<span class="number">1</span>,a,b,<span class="number">1</span>);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">'I'</span>)</div><div class="line">		&#123;</div><div class="line">			change1(<span class="number">1</span>,<span class="number">0</span>,a<span class="number">-1</span>,<span class="number">0</span>);</div><div class="line">			change1(<span class="number">1</span>,b+<span class="number">1</span>,<span class="number">140000</span>,<span class="number">0</span>);</div><div class="line">			<span class="comment">//change1(1,b+1,10,0);</span></div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">'D'</span>)</div><div class="line">		&#123;</div><div class="line">			change1(<span class="number">1</span>,a,b,<span class="number">0</span>);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">'C'</span>)</div><div class="line">		&#123;</div><div class="line">			change1(<span class="number">1</span>,<span class="number">0</span>,a<span class="number">-1</span>,<span class="number">0</span>);</div><div class="line">			change2(<span class="number">1</span>,a,b);</div><div class="line">			change1(<span class="number">1</span>,b+<span class="number">1</span>,<span class="number">140000</span>,<span class="number">0</span>);</div><div class="line">			<span class="comment">//change1(1,b+1,10,0);</span></div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">'S'</span>)</div><div class="line">		&#123;</div><div class="line">			change2(<span class="number">1</span>,a,b);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	ask(<span class="number">1</span>);<span class="keyword">if</span>(ll&gt;=<span class="number">0</span>) output(ll,rr);</div><div class="line">	<span class="keyword">if</span>(bk==<span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">"empty set"</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">/*</div><div class="line">U 区间1</div><div class="line">I 其余0</div><div class="line">D 区间0</div><div class="line">C 区间取反，其余0</div><div class="line">S 区间取反</div><div class="line">*/</span></div></pre></td></tr></table></figure>
@@ -635,42 +635,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b9a5.html" rel="bookmark">【Luogu1083】借教室</a></div>
+      <div class="popular-posts-title"><a href="/posts/b9a5.html" rel="bookmark">「Luogu1083」借教室</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">【CF553E】Kyoya and Train</a></div>
+      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">「CF553E」Kyoya and Train</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/cbab.html" rel="bookmark">【CF1017G】The Tree</a></div>
+      <div class="popular-posts-title"><a href="/posts/cbab.html" rel="bookmark">「CF1017G」The Tree</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/1ba5.html" rel="bookmark">【CF997E】Good Subsegments</a></div>
+      <div class="popular-posts-title"><a href="/posts/1ba5.html" rel="bookmark">「CF997E」Good Subsegments</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/31df.html" rel="bookmark">【SDOI2017】树点涂色</a></div>
+      <div class="popular-posts-title"><a href="/posts/31df.html" rel="bookmark">「SDOI2017」树点涂色</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/184e.html" rel="bookmark">【Bzoj1018】【Luogu4246】堵塞的交通</a></div>
+      <div class="popular-posts-title"><a href="/posts/184e.html" rel="bookmark">「Bzoj1018」「Luogu4246」堵塞的交通</a></div>
       
     </li>
   
@@ -688,7 +688,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/ef13.html" title="【Bzoj3226】校门外的区间">http://zory.ink/posts/ef13.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/ef13.html" title="「Bzoj3226」校门外的区间">http://zory.ink/posts/ef13.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -728,8 +728,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/6053.html" rel="next" title="【Bzoj2733】【Luogu3224】永无乡">
-                <i class="fa fa-chevron-left"></i> 【Bzoj2733】【Luogu3224】永无乡
+              <a href="/posts/6053.html" rel="next" title="「Bzoj2733」「Luogu3224」永无乡">
+                <i class="fa fa-chevron-left"></i> 「Bzoj2733」「Luogu3224」永无乡
               </a>
             
           </div>
@@ -738,8 +738,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/8843.html" rel="prev" title="【Bzoj5072】小A的树">
-                【Bzoj5072】小A的树 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/8843.html" rel="prev" title="「Bzoj5072」小A的树">
+                「Bzoj5072」小A的树 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -817,7 +817,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -842,7 +842,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1251,7 +1253,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

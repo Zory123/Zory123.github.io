@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/avatar.ico?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false,"dimmer":false,"b2t":true,"scrollpercent":true},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="大家都笑出了声，这选手也太菜了吧——雅礼NOI2019集训题集">
+<meta property="og:type" content="article">
+<meta property="og:title" content="雅礼NOI2019集训题集">
+<meta property="og:url" content="http://zory.ink/posts/799ab4ff.html">
+<meta property="og:site_name" content="Zory的个人博客">
+<meta property="og:description" content="大家都笑出了声，这选手也太菜了吧——雅礼NOI2019集训题集">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://zory.ink/code/YL/20190629C.png">
+<meta property="og:updated_time" content="2020-05-11T08:27:35.581Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="雅礼NOI2019集训题集">
+<meta name="twitter:description" content="大家都笑出了声，这选手也太菜了吧——雅礼NOI2019集训题集">
+<meta name="twitter:image" content="http://zory.ink/code/YL/20190629C.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://zory.ink/posts/799ab4ff"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>雅礼NOI2019集训题集 | Zory的个人博客</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6c38ba8648d29103b8d122f998787d71";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zory的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">人生即使没有最短路，也是连通图</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-template">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/OI之路" rel="section"><i class="menu-item-icon fa fa-fw fa-telegram"></i> <br/>OI之路</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-problems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/刷题" rel="section"><i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br/>刷题Problems</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-friends">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/friends/" rel="section"><i class="menu-item-icon fa fa-fw fa-user-circle"></i> <br/>友链Friends</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-boutique">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/精品文章/" rel="section"><i class="menu-item-icon fa fa-fw fa-handshake-o"></i> <br/>精品文章</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-gproblems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/好题" rel="section"><i class="menu-item-icon fa fa-fw fa-thumbs-o-up"></i> <br/>好题</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-top">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/top/" rel="section"><i class="menu-item-icon fa fa-fw fa-signal"></i> <br/>排行榜Hot</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>Search（找文章必备，请耐心等待）</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="不区分大小写，尽量缩短关键词（如CF412、CFR123）" spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zory.ink/posts/799ab4ff.html"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zory"/>
+      <meta itemprop="description" content="Zory的个人博客"/>
+      <meta itemprop="image" content="/./avatar.ico"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zory的个人博客"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">雅礼NOI2019集训题集
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-06 00:00:00" itemprop="dateCreated datePublished" datetime="2020-04-06T00:00:00+08:00">2020-04-06</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-11 16:27:35" itemprop="dateModified" datetime="2020-05-11T16:27:35+08:00">2020-05-11</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/799ab4ff.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/799ab4ff.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/posts/799ab4ff.html" class="post-meta-item leancloud_visitors" data-flag-title="雅礼NOI2019集训题集">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>大家都笑出了声，这选手也太菜了吧<br>——雅礼NOI2019集训题集<br><a id="more"></a></p>
+<h2 id="6-20"><a href="#6-20" class="headerlink" title="6-20"></a>6-20</h2><h4 id="A"><a href="#A" class="headerlink" title="A"></a>A</h4><p><strong>题意</strong>：给出一棵树和序列w，求$val_x=\sum_{y} w_{dis(x,y)}$，$n \le 1e5,w \le 1e4$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>点分后，以深度为下标让一侧给另一侧做贡献，$a_i+=[x^{-i}] \sum b_j w_{-(i+j)}$，因为答案不大，FFT的精度可以接受，$O(nlog^2)$</p>
+
+</div></div>
+<h4 id="B"><a href="#B" class="headerlink" title="B"></a>B</h4><p><strong>题意</strong>：统计逆序对个数为K的n的排列数，$n,k \le 1e5$，模数1e9+7</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>我就说怎么这么熟悉：51nod1020逆序排列 HAOI2009逆序对数列 <a href="https://loj.ac/problem/6077" target="_blank" rel="noopener">「2017 山东一轮集训 Day7」逆序对</a></p>
+<p>$f(n,k+i)+=f(n-1,k),i \in [1,n-1] \to F_n=F_{n-1} (\frac{1-z^n}{1-z})=\frac{ \prod_{i=1}^n (1-z^i) }{ (1-z)^n },ans=[z^k]F_n$</p>
+<p>下面是$\sum_{i=0}^{\infty} C_{i+n-1}^{n-1} z^i$，上面是$[z^m]=\sum_{S \in {1,2,..n},sum(S)=m } (-1)^{|S|}$，可以根号解决（见套路集锦），<a href="https://loj.ac/submission/782228" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h4 id="C"><a href="#C" class="headerlink" title="C"></a>C</h4><p><strong>题意</strong>：给出序列A，按照长度为第一关键字左端点为第二关键字给所有区间排序，用区间最大值替换区间后得到长度为$(n+1)n/2$的序列B，求其中所有区间的最大值之和，$n \le 2e5$</p>
+<p>不感兴趣</p>
+<h2 id="6-22"><a href="#6-22" class="headerlink" title="6-22"></a>6-22</h2><h4 id="A-1"><a href="#A-1" class="headerlink" title="A"></a>A</h4><p><strong>题意</strong>：给出序列a，q次区间询问，对所有没有重复元素且模D相同的所有子区间的权值求和，权值定义为$max-min-(len-1)$，$n,q \le 3e5,a_i,D \le 1e7$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>一开始没注意到重复元素的限制，发现笛卡尔树随便在线做，后来发现从mx考虑不可能做现在的问题，估计是从端点考虑，离线询问+线段树+单调栈什么的，但当时稍微搞了搞都挺麻烦就想着后面再看吧，然后就并没有回来看的机会了。</p>
+<p>赛后用当时的思路推了推就会了：记录每个位置作为左端点的贡献和，右移右端点，碰到区间右端点时$+=ask(l,r)$</p>
+<p>对于一个确定的右端点，维护好单调栈，每个位置每次就是+=块尾，线段树的维护如果像我一样不熟练的选手可能要动动脑子</p>
+<p>写成$old+A*(T_{out}-T_{in})=(old-T_{in}*A)+A*T_{out}$，独立维护old和A的和，弹出的时候两个变量都是区间加</p>
+<p><a href="../code/YL/20190620A.html">写得比较奔放的$O(nlogn)$</a></p>
+
+</div></div>
+<h4 id="B-1"><a href="#B-1" class="headerlink" title="B"></a>B</h4><p><strong>题意</strong>：二分图两侧点数分别是$n,m \le 1e9$，在时间i（从0开始），会考虑$(i\%n,i\%m)$，如果某个已经被染色则另一个也会被染色，给出初始染色的节点（点数不超过1e5），求所有点都被染色的最短时间或无解</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p><strong>核心观察</strong>：对于$(1,i)$，如果到这里的路径最早（因此一定已经染色）是在$(1,a)$，则下一步一定是$(2,a\%m)$，因为$(a+zn) \%m+km=i \%n$中z无意义；同理，如果从$(2,b)$过来，不会再经过其他的a</p>
+<p>因此在计算一侧时，先把这一侧的起点搞去对面，再把对面的搞到这一侧的大环上，大环在增量m下会分解为gcd(n,m)个独立的环，如果某个环没有关键点就无解，对每个环考虑，从起始时间最小的关键点开始处理即可</p>
+
+</div></div>
+<h4 id="C-1"><a href="#C-1" class="headerlink" title="C"></a>C</h4><p><strong>题意</strong>：每次花费1的代价选若干对没有交集的二元组$(i&lt;j)$然后交换所有二元组的下标上面的值来给排列排序，现在给出一个排列，其中k个地方是0表示任意，枚举所有满足条件的$k!$个排列并分别累计最小代价、得到最小代价的方案数（比较每回合选的二元组的集合完全一致），并将这两个数输出，其中方案数取模，$n \le 1e5,k \le 12$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>难点在k=0，需要恰当的观察（我暴力写得很水只能拍9以内，然后经过渣渣手玩+勇敢猜测+过了几千组拍，以为只有大小为2的环可以两两配对，快乐白给）：对于一个大小为siz的环，排列的最小步数为$siz==2?1:2$，方案数为$siz==2?1:siz$，然后如果是多个大小为siz的环，可以选择一部分两两配对，配对来两次排序的方案数为siz；最后不同大小不能配对</p>
+<p>因此把步数为0和1判掉后，k=0搜环跑个$dp(siz,i)=dp(siz,i-1)siz+(i-1)siz*dp(siz,i-2)$即可，预处理为$O(nln\ n)$，可以过k=8的部分分</p>
+<p>dp的逆元是容易不增加复杂度处理的，花费$bell(12)=4213597$枚举k条链的分组方案即可，$O(nlogn+k*bell(k))$</p>
+
+</div></div>
+<h2 id="6-23"><a href="#6-23" class="headerlink" title="6-23"></a>6-23</h2><h4 id="A-2"><a href="#A-2" class="headerlink" title="A"></a>A</h4><p><strong>题意</strong>：n个球有着相同的高度限制$A \in [0,m]$，如果在一个高度不超过A的地方摔落就不会碎而可以再次使用，现在问在最坏情况下，猜测出A的最小实验次数，$n,m \le 5e3$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>神仙可以考虑设$dp(i,j)=i个球j次的高度上限，然后直接写下dp(i,j)=dp(i-1,j-1)+dp(i,j-1)+1$</p>
+<p>一个就只能从小到大尝试，两个就可以分块，据此得到思路：考虑我现在剩下n个球，如果我有k次询问机会，最优方案一定是给第一个块分配n-1次（表示我在第二个快首做了一次询问然后碎了，因此一定在第一个块内），给第二个块分配n-2次（第一次询问没碎，第二次碎了）……即$g_{n,0}=1,g_{1,k}=k+1,g_{n,k}=\sum_{j=0}^{k-1} g_{n-1,j}$，$O(nlogn)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">fo(T,<span class="number">0</span>,N<span class="number">-1</span>) g[<span class="number">1</span>][T]=T+<span class="number">1</span>;fo(k,<span class="number">2</span>,<span class="number">15</span>)&#123; g[k][<span class="number">0</span>]=g[k<span class="number">-1</span>][<span class="number">0</span>];fo(T,<span class="number">1</span>,N<span class="number">-1</span>) g[k][T]=g[k][T<span class="number">-1</span>]+g[k<span class="number">-1</span>][T<span class="number">-1</span>]; &#125;</div><div class="line">fo(T,<span class="number">1</span>,qread())</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> n=min(<span class="number">15l</span>l,qread()),m=qread();</div><div class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;<span class="keyword">while</span>(g[n][ans]&lt;m+<span class="number">1</span>) ans++;write2(ans);<span class="comment">//m+1个可能取值</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h4 id="B-2"><a href="#B-2" class="headerlink" title="B"></a>B</h4><p><strong>题意</strong>：交互题。存在一棵$n \le 1e5$点有根树，可以询问不超过3.5e6次$query(x,y)=[ x是y祖先 \to 1,y是x祖先 \to -1,otherwise \to 0 ]$，现在要在保证祖先总是比自己更早出现的前提下，输出任意一个序列</p>
+<p>hint：数据不好造，出题人好像造得挺随意的</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>链和菊花都很容易，二叉树可以不断把点集分裂给子树去做，每次取出覆盖所有人的一点作为根，$O(nlogn)$</p>
+<p>然后我的想法是，随机一个点（对于上面的点而言，大概率是重儿子所在方向），把上面这条链拉出来，链以外的点在链上二分来分组到每层，然后每层去递归处理其他点（保留链上那一个点作为根会比较好写），这样复杂度看起来是每个点向上二分的次数为，被轻边覆盖的次数，即是一个非常不靠谱的$O(nlog^2)$</p>
+<p>实测结果：n=1e5的二叉树就是链剖的最坏情况，次数约3.25e6</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"tree.h"</span></span></div><div class="line">vc&lt;<span class="keyword">int</span>&gt; ans;</div><div class="line"><span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; asked[N];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Query</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(asked[x].count(y))<span class="keyword">return</span> asked[x][y];<span class="keyword">if</span>(asked[y].count(x))<span class="keyword">return</span> -asked[y][x];</div><div class="line">    <span class="keyword">return</span> asked[x][y]=query(x,y);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Div</span><span class="params">(vc&lt;<span class="keyword">int</span>&gt; pt,<span class="keyword">int</span> ALL=<span class="number">0</span>)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n=sz(pt),leaf=pt[rd(<span class="number">0</span>,n<span class="number">-1</span>)];</div><div class="line">    vc&lt;<span class="keyword">int</span>&gt; link,oth;<span class="keyword">for</span>(<span class="keyword">auto</span> x:pt) <span class="keyword">if</span>(x==leaf or Query(x,leaf)==<span class="number">1</span>) link.PB(x); <span class="keyword">else</span> oth.PB(x);</div><div class="line">    stable_sort(all(link),[&amp;](<span class="keyword">int</span> x,<span class="keyword">int</span> y)&#123;<span class="keyword">return</span> Query(x,y)==<span class="number">1</span>;&#125;);<span class="keyword">int</span> m=sz(link);vc&lt; vc&lt;<span class="keyword">int</span>&gt; &gt; sub(m);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> x:oth)</div><div class="line">    &#123;  </div><div class="line">        <span class="keyword">int</span> pos=<span class="number">-1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> fl=<span class="number">0</span>,fr=m<span class="number">-1</span>;fl&lt;=fr;)&#123; <span class="keyword">int</span> T=(fl+fr)/<span class="number">2</span>;<span class="keyword">if</span>(Query(link[T],x)==<span class="number">1</span>) pos=T,fl=T+<span class="number">1</span>; <span class="keyword">else</span> fr=T<span class="number">-1</span>; &#125;</div><div class="line">        sub[pos].PB(x);</div><div class="line">    &#125;</div><div class="line">    fd(i,m<span class="number">-1</span>,<span class="number">0</span>)&#123; <span class="keyword">if</span>(sz(sub[i])) sub[i].PB(link[i]),Div(sub[i]);<span class="keyword">if</span>(i or ALL) ans.PB(link[i]); &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> type)</span></div><div class="line"></span>&#123;</div><div class="line">    vc&lt;<span class="keyword">int</span>&gt; now;fo(i,<span class="number">1</span>,n) now.PB(i);</div><div class="line">    Div(now,<span class="number">1</span>);reverse(all(ans));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> in:ans) submit(in);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h4 id="C-2"><a href="#C-2" class="headerlink" title="C"></a>C</h4><p><a href="https://codeforces.com/contest/704/problem/E" target="_blank" rel="noopener">CF704E Iron Man</a></p>
+<h2 id="6-24"><a href="#6-24" class="headerlink" title="6-24"></a>6-24</h2><h4 id="A-3"><a href="#A-3" class="headerlink" title="A"></a>A</h4><p><strong>题意</strong>：给出一棵$n \le 4e6$点有根树，点带权，从根出发k次且始终只能从父亲走向孩子，第一次到达某个节点可以获得上面的点权，求最大收益。时限1s，输入方式为某种无时间消耗的方式</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>结论之间碰过，每次在k-1的方案基础上，直接添加净收益最大的路径</p>
+<p>然后我就觉得小常数的zkw能过吧，卡了半天，还是要跑2.7s</p>
+<p>正解确实没想到，按权值长链剖分，这样把所有链长度做个nth_element即可</p>
+
+</div></div>
+<h4 id="B-3"><a href="#B-3" class="headerlink" title="B"></a>B</h4><p><strong>题意</strong>：有n个点，分为A、B两种类型，初始时i和i+1的边是向右的，m次操作：修改某点点权、翻转区间中所有边。每次操作后求多少个A类点是能够到达某个权值比他大的B类点的，$n,m \le 1e5，权值 \le 77$</p>
+<p>题面没写权值的范围把所有人坑了</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>如果没有翻转，线段树维护结构体存每种权值的数量，合并复杂度为权值种数</p>
+<p>如果单点翻转，只需要记录最左边和最右边两个未闭合的极长段上的信息</p>
+<p>区间翻转的话，平时就维护好这个区间翻转后的答案即可</p>
+
+</div></div>
+<h4 id="C-3"><a href="#C-3" class="headerlink" title="C"></a>C</h4><p><strong>题意</strong>：初始为0的长度为n的序列，给定操作集合，每次在操作集合中选一个作为长度，然后选这样长度的某个区间异或1，求最少的次数得到给定的目标序列，$P=pop_count(目标序列) \le 10,|oper| \le 100,n \le 1e4$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>我tm天秀啊，心里想着差分，默默做了个前缀和，对着题解中2k这个神秘数字懵逼……菜鸡能傍下大腿还是很重要的……</p>
+<p>差分后就是有2k个1，每次选两个距离为ai的点反转，最后变成全0</p>
+<p>如果看做是n个点，初始在2k个点上面有个棋子，每次走一步的距离在集合内选，两个棋子相遇就抵消了（相遇后不抵消显然亏），求让所有棋子消失的最小步数。那么背包一下长度对应的代价，然后跑个状压去考虑谁跟最小那个配对，$O(2^{2k}(2k))$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread(),k=qread(),L=qread();<span class="keyword">while</span>(k--) hh[qread()]=<span class="number">1</span>;fd(i,n,<span class="number">1</span>) hh[i]^=hh[i<span class="number">-1</span>],debug(<span class="string">"%d"</span>,hh[i]);</div><div class="line">k=<span class="number">0</span>;fo(i,<span class="number">1</span>,n) <span class="keyword">if</span>(hh[i]) pos[++k]=i;<span class="keyword">if</span>(k&amp;<span class="number">1</span>) pos[++k]=n+<span class="number">1</span>,deb;</div><div class="line">mem(g,<span class="number">0x3f</span>);g[<span class="number">0</span>]=<span class="number">0</span>;<span class="keyword">while</span>(L--)&#123; <span class="keyword">int</span> len=qread();fo(i,<span class="number">0</span>,N<span class="number">-1</span>-len) chmin(g[i+len],g[i]+<span class="number">1</span>);fd(i,N<span class="number">-1</span>,len) chmin(g[i-len],g[i]+<span class="number">1</span>); &#125;</div><div class="line">mem(f,<span class="number">0x3f</span>);f[bin(k)<span class="number">-1</span>]=<span class="number">0</span>;</div><div class="line">fd(s,bin(k)<span class="number">-1</span>,<span class="number">1</span>)&#123; <span class="keyword">int</span> x=log2(s&amp;-s);fo(y,x+<span class="number">1</span>,k<span class="number">-1</span>) <span class="keyword">if</span>(s&amp;bin(y)) chmin(f[s^bin(x)^bin(y)],f[s]+g[pos[y+<span class="number">1</span>]-pos[x+<span class="number">1</span>]]); &#125;</div><div class="line">write(f[<span class="number">0</span>]==INF?<span class="number">-1</span>:f[<span class="number">0</span>]);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h2 id="6-26"><a href="#6-26" class="headerlink" title="6-26"></a>6-26</h2><h4 id="A-4"><a href="#A-4" class="headerlink" title="A"></a>A</h4><p><strong>题意</strong>：给出n个数，保留最多数使得异或和为0，$n,maxnum \le 5e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>转化为最少数得到总异或和，最坏就是线性基的秩即log个，做集合幂级数的次幂，因为判断只要单点所以可以写成$O(b2^b)$</p>
+
+</div></div>
+<h4 id="B-4"><a href="#B-4" class="headerlink" title="B"></a>B</h4><p><strong>题意</strong>：给定常数$K \le 20$，定义一个积性函数f，满足$f(1)=1,\forall 质数p正整数e，f(p^e)=p^k$，求$\sum_{i=1}^n f(i),n \le 1e13$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>不会min25而且n太大，根号做法想不到，那就试试用杜教筛骗点分吧，不过也没发现什么优美的式子，就自闭了……</p>
+<p>结果被告知是<a href="416d.html">powerful number</a>的例题</p>
+
+</div></div>
+<h4 id="C-4"><a href="#C-4" class="headerlink" title="C"></a>C</h4><p><strong>题意</strong>：简单无向图，给每个点分配$col_i \in [0,lim_i]$，问有多少种分配方案使得$\oplus_{i=1}^n col_i=C且\forall (x,y)\ \in E,col_x \ne col_y$。$n \le 15,lim \le 1e18$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>先考虑没有边的情况：注意到限制很强，假设正在实现函数$solve(lim_1..lim_n,C)$，找到这n+1个数中最高位b（不是一般性设$lim_n$是最大的lim）。如果$lim_{n,b}=0$直接无解；否则考虑枚举$col_{n,b}$，如果是0，只需要考虑这一位，下面的位可以唯一决定，做个$dp(i,0/1)$的dp即可，如果是1，递归为$solve(lim_1,lim_2,…lim_n-2^b,C-2^b)$。总复杂度为$O(n^2*bit)$，因为每次会给lim消掉一个个1，而且实际效率远远高于这个下界</p>
+<p>有限制的时候容斥非法边集，会将点分为若干个col相等的组，考虑枚举组的划分去计算非法边集，方案数的话就是每个组内做个$O(n^22^n)$的连通dp（见集合幂级数中ln相关资料）。事先按照lim大小给所有点排序编号，对于每个组，大小为偶直接乘上$(lim_{mi}+1)$，大小为奇的话相当于贡献了编号最小那个点mi。设$dp(S,ss)=分组集合为S，每组贡献编号最小编号点集合ss$，考虑还没被考虑的编号最小点所属集合去转移。复杂度考虑枚举的编号最小点为i，左边部分S一定都是1，所以是$O(2^i*3^{n-i})$，求和发现是$O(3^n)$，dp完再对每个ss做上面无边的情况即可，$O(2^n*n^2*bit)$，<a href="../code/YL/20190626C.html">code</a></p>
+
+</div></div>
+<h2 id="6-28"><a href="#6-28" class="headerlink" title="6-28"></a>6-28</h2><h4 id="A-5"><a href="#A-5" class="headerlink" title="A"></a>A</h4><p><strong>题意</strong>：$n \le 2e3$个带标号的人，i号有个数字ai，求分组方案（组不带标号），使得每组的大小不超过组内a的最小值</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>对某个确定的表示每组大小的有序序列考虑怎么计数，从大到小处理，这样就很好判断在我能选的人中还剩多少</p>
+<p>同时处理一个大小的所有组，$dp(sum,lst)=已经选了sum个，上个siz为lst$，加个后缀和优化，$O(n^2ln)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread();fo(i,<span class="number">1</span>,n) a[i]=qread();sort(a+<span class="number">1</span>,a+n+<span class="number">1</span>);</div><div class="line">fo(i,<span class="number">1</span>,n) can[i]=n-(lower_bound(a+<span class="number">1</span>,a+n+<span class="number">1</span>,i)-a)+<span class="number">1</span>;PRE();</div><div class="line">dp[<span class="number">0</span>][n+<span class="number">1</span>]=<span class="number">1</span>;</div><div class="line">fo(i,<span class="number">0</span>,n)</div><div class="line">&#123;</div><div class="line">    fd(lst,n,<span class="number">1</span>) add(dp[i][lst],dp[i][lst+<span class="number">1</span>]);</div><div class="line">    fo(j,<span class="number">1</span>,n-i)</div><div class="line">    &#123;</div><div class="line">        ll pw=<span class="number">1</span>,V=facinv[j];</div><div class="line">        fo(k,<span class="number">1</span>,(n-i)/j) <span class="keyword">if</span>(k*j&lt;=can[j]-i)</div><div class="line">        &#123;</div><div class="line">            pw=pw*V%MOD;ll cc=Comb( can[j]-i,j*k )*fac[j*k]%MOD*pw%MOD*facinv[k]%MOD;</div><div class="line">            add(dp[i+j*k][j],dp[i][j+<span class="number">1</span>]*cc%MOD);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;write(dp[n][<span class="number">1</span>]);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h4 id="B-5"><a href="#B-5" class="headerlink" title="B"></a>B</h4><p><strong>题意</strong>：有一个大小为$n \le 100$的方棋盘，现在指定$m \le 10$个位置不能放棋子，其他地方每个位置最多一个，且每行、每列、每条长度为n的对角线都必须有至少一个棋子，问方案数模10007</p>
+<p>反复检查多次题意都没注意到——总共n个棋子</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>如果没有每行每列恰一个这个限制，我只能想到一个$O(n^22^{m+4})$的巨烦做法，现在就好做很多了</p>
+<p>直接容斥这m个条件中w个上面有子（判一下上面的限制），然后现在就是在已经确定了w个的情况下放棋子</p>
+<p>两条对角线都有=总-左斜无-右斜无+都无，总就是$(n-w)!$，某斜无就容斥至少若干位置有，$\sum_{z=0}^{n-w} (-1)^z C_{n-w}^z (n-w-z)!$</p>
+<p>都无的话，可以把X上，分4个一组（$(i,i),(i,n-i+1),(n-i+1,i),(n-i+1,n-i+1)$）去做背包，因为只有同组内会有影响，$O(2^m*(2^4n+n^2))$</p>
+
+</div></div>
+<h4 id="C-5"><a href="#C-5" class="headerlink" title="C"></a>C</h4><p><strong>题意</strong>：$mod=998244353,z=2mod+1$。从$(0,0)$出发，每步在三种情况中选一种执行：$\frac{A}{z}$的概率向上一步，$\frac{B}{z}$的概率向上一步，$1-\frac{A}{z}-\frac{B}{z}$的概率结束游戏。另有$K \le 50$个给定位置的坑（横坐标不超过$M \le 1e3$，保证不会两维都是D倍数），碰到就立刻结束游戏。如果走完第$n \le 1e18$步依然没结束就强制结束。求经过的坐标中两维都是$D \le 1e3$倍数的期望次数</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>为了写起来好看用生成函数，不是必要的，下文中的出现的多项式取模只是为了表示指数取模，实现时就是手动循环卷积</p>
+<p>设$[z^i]F_a=走a步中向右i次$，那么$ans=[x^0] \sum_{iD \le n} F_{iD} \bmod (z^D-1)$</p>
+<p>如果没有坑，$F_a=F_{a-1}(Bz+A)=(Bz+A)^a$，求出$H=(Bz+A)^D=\sum_{i=0}^D (C_D^i B^i A^{D-i}) z^i$后，倍增即可求出这个等比数列和（$S_{2n}=S_n*(H^n+1)$），NTT优化就是$O(nlog^2)$</p>
+<p>有坑时，坑$(x,y)相当于要特殊处理[z^x]F_{x+y}$，将这些特殊的时刻断开得到若干极长段$[l,r]$，段内可以直接做上面没坑的过程（同时维护$F_a$）。现在问题就是要在关键点去掉非法的路径，那就要我们维护真实的，到达这个坑的方案数，然后在$F_a \bmod (z^D-1)$中对应位置减掉。考虑到坑的横坐标在M内，另外维护$F_a \bmod x^{M+1}$即可（得到后自己也要清为0）。$O((D+m)log^2K)$</p>
+
+</div></div>
+<h2 id="6-29"><a href="#6-29" class="headerlink" title="6-29"></a>6-29</h2><h4 id="A-6"><a href="#A-6" class="headerlink" title="A"></a>A</h4><p><strong>题意</strong>：给出两个长度为n的字符串$S_1,T_1$，两个长度为m的字符串$S_2,T_2$，其中$S_1$可以在游戏开始前任意排列。游戏目标是用最少的步数把$S_1变成T_1$，每一步可以选择$满足S_1[i]=T_2[j]的(i,j)，swap(S_{1}[i],S_2[j])$，无解-1，$n,m \le 4e5$，字符集为小写字母</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>注意到交换后$S_2[j]=T_2[j]$，所以相当于m个操作只能用一次且相互独立</p>
+<p>那现在就是用最少的步数从一个集合搞成另一个集合，费用流去平衡数量，点数只有26</p>
+
+</div></div>
+<h4 id="B-6"><a href="#B-6" class="headerlink" title="B"></a>B</h4><p><strong>题意</strong>：给出一个排列，每次选一个子序列保留顺序全部移动到最前面，最小次数地排序并输出一种方案，$n \le 3e3$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>操作一个集合相当于让其他数后置，考虑排列的逆（$p_{a_i}=i$），用二进制考虑的话可以看做是给不操作的数的位置前面添加个1，然后新序列就是按照新位置排序</p>
+<p>下面给出方案，有了上面铺垫后感性理解应该是最优的方案了：贪心地将其分为数量最少的若干连续段，每个连续段可以看做一组，这个组以后总是整体出现。那么相当于给这些组排序，如果直接相邻两组中左边那个选右边那个不选，就能够消除这两组间的矛盾而合并成同一个组（而且这个矛盾一定存在），因此这样做的步数就是段数的二进制长度。实现的时候可以从0开始编号便于确定是否选</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a[N],ans,pos[N];vc&lt;<span class="keyword">int</span>&gt; in[N];</div><div class="line">vc&lt;<span class="keyword">int</span>&gt; now;<span class="function"><span class="keyword">void</span> <span class="title">out</span><span class="params">(<span class="keyword">int</span> id)</span></span>&#123;<span class="keyword">for</span>(<span class="keyword">auto</span> i:in[id]) now.PB(i);&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n=qread();fo(i,<span class="number">1</span>,n) pos[a[i]=qread()]=i;</div><div class="line">    <span class="keyword">int</span> id=<span class="number">0</span>;in[id].PB(pos[<span class="number">1</span>]);fo(i,<span class="number">2</span>,n) id+=(pos[i<span class="number">-1</span>]&gt;pos[i]),in[id].PB(pos[i]);</div><div class="line">    <span class="keyword">int</span> ans=log2(id)+<span class="number">1</span>;write2(ans);fo(i,<span class="number">1</span>,n) write1(a[i]);<span class="built_in">puts</span>(<span class="string">""</span>);</div><div class="line">    fo(i,<span class="number">0</span>,ans<span class="number">-1</span>)&#123;</div><div class="line">        now.clear();fo(t,<span class="number">0</span>,id) <span class="keyword">if</span>((t&gt;&gt;i)%<span class="number">2</span>==<span class="number">0</span>) fo(z,<span class="number">0</span>,sz(in[t])<span class="number">-1</span>) now.PB(in[t][z]);</div><div class="line">        sort(all(now));<span class="keyword">for</span>(<span class="keyword">auto</span> t:now) write1(a[t%bin(<span class="number">13</span>)]);<span class="comment">//选的前置</span></div><div class="line">        now.clear();fo(t,<span class="number">0</span>,id) <span class="keyword">if</span>((t&gt;&gt;i)%<span class="number">2</span>==<span class="number">1</span>) fo(z,<span class="number">0</span>,sz(in[t])<span class="number">-1</span>) now.PB(in[t][z]),in[t][z]|=bin(<span class="number">14</span>+i);</div><div class="line">        sort(all(now));<span class="keyword">for</span>(<span class="keyword">auto</span> t:now) write1(a[t%bin(<span class="number">13</span>)]);<span class="comment">//不选，因此修改对应位置</span></div><div class="line">        <span class="built_in">puts</span>(<span class="string">""</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h4 id="C-6"><a href="#C-6" class="headerlink" title="C"></a>C</h4><p><strong>题意</strong>：给出一个$n*m$表格，$[0,nm-1]$每个数出现一次，用不超过1e5步排序为$a_{i,j}=(i-1)m+(j-1)$，每步可以将一行或一列shift任意次（行右shift就是每个数右移，末尾数放第一个），$n,m \le 100$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>感觉这题很神仙啊，题解又很短，搞了很久……</p>
+<p>下文前提为判掉n或m=1，另外感觉这三步走的框架下，具体的方法是很多的，每步独立，下面给出的都是我第一反应想到的（虽然这第一反应的到来可能花了几万年），所以不喜欢可以随意替换</p>
+<p>如果看作行shift只在第0行做，那么把其他行填好是容易的：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fo(i,m,n*m<span class="number">-1</span>)&#123;</div><div class="line">    <span class="keyword">int</span> x=pos[i].FR,y=pos[i].SE;</div><div class="line">    <span class="keyword">if</span>(y==i%m) D(y,-x),R(<span class="number">0</span>,<span class="number">-1</span>),D(y,x-i/m),R(<span class="number">0</span>,<span class="number">1</span>),D(y,i/m);</div><div class="line">    <span class="keyword">else</span> D(y,-x),D(i%m,-i/m),R(<span class="number">0</span>,i%m-y),D(i%m,i/m),D(y,x);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>剩下的这一行我们以0为参照物依次放置1到m-2，如果都成功m-1自然会到达正确位置</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fo(i,<span class="number">1</span>,m<span class="number">-2</span>)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(i==m<span class="number">-2</span> and a[<span class="number">0</span>][(pos[<span class="number">0</span>].SE+m<span class="number">-2</span>)%m]==m<span class="number">-1</span>) <span class="keyword">break</span>;<span class="comment">//0 1 2... m-1 m-2，这个break没看懂可跳过</span></div><div class="line">    R(<span class="number">0</span>,-pos[i].SE);D(<span class="number">0</span>,<span class="number">1</span>);R(<span class="number">0</span>,m-pos[<span class="number">0</span>].SE-i);D(<span class="number">0</span>,<span class="number">-1</span>);<span class="comment">//成功放到指定位置，但top位置变成路人</span></div><div class="line">    <span class="keyword">int</span> go=(pos[i+<span class="number">1</span>].FR&gt;<span class="number">0</span>?i+<span class="number">2</span>:i+<span class="number">1</span>);assert(go&lt;m);</div><div class="line">    R(<span class="number">0</span>,-pos[go].SE);D(<span class="number">0</span>,<span class="number">1</span>);R(<span class="number">0</span>,-pos[(n<span class="number">-1</span>)*m].SE);D(<span class="number">0</span>,<span class="number">-1</span>);<span class="comment">//把路人随便放到一个空位，并把top转上来</span></div><div class="line">&#125;R(<span class="number">0</span>,-pos[<span class="number">0</span>].SE);</div></pre></td></tr></table></figure>
+<p>除了这个break一切看起来都很正常，问题就是在于i=m-2的时候可能发现手上路人是m-1而go找到的会是top所以不能搞</p>
+<p>所以我们及时break出来后的局面就是<code>0 1 2... m-1 m-2</code>，解决这个问题颇费了番功夫而题解没有展开讲（所以不排除搞复杂了）</p>
+<p><img src="../code/YL/20190629C.png" alt=""></p>
+<p>至于为毛n和m都是奇数的时候无解，我并没有一个合理的解释</p>
+<p><a href="../code/YL/20190629C.html">完整代码</a></p>
+
+</div></div>
+
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+	
+		<div>
+				<p id="div-border-left-purple">
+			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
+				<span>
+				<b>本文地址：</b><a href="/posts/799ab4ff.html" title="雅礼NOI2019集训题集">http://zory.ink/posts/799ab4ff.html</a><br/><b>转载请注明出处，谢谢！</b>
+				</span>
+				</p>
+		</div>
+    
+
+    
+    
+    
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/bea4f89.html" rel="next" title="CFR631">
+                <i class="fa fa-chevron-left"></i> CFR631
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/92e31e33.html" rel="prev" title="CFR632">
+                CFR632 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/./avatar.ico"
+                alt="Zory"/>
+            
+              <p class="site-author-name" itemprop="name">Zory</p>
+              <div class="site-description motion-element" itemprop="description">Zory的个人博客</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">688</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Zory123" title="GitHub &rarr; https://github.com/Zory123" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:1134430323@qq.com" title="E-Mail &rarr; mailto:1134430323@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          ﻿
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-20"><span class="nav-text">6-20</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A"><span class="nav-text">A</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B"><span class="nav-text">B</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C"><span class="nav-text">C</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-22"><span class="nav-text">6-22</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-1"><span class="nav-text">A</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B-1"><span class="nav-text">B</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-1"><span class="nav-text">C</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-23"><span class="nav-text">6-23</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-2"><span class="nav-text">A</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B-2"><span class="nav-text">B</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-2"><span class="nav-text">C</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-24"><span class="nav-text">6-24</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-3"><span class="nav-text">A</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B-3"><span class="nav-text">B</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-3"><span class="nav-text">C</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-26"><span class="nav-text">6-26</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-4"><span class="nav-text">A</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B-4"><span class="nav-text">B</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-4"><span class="nav-text">C</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-28"><span class="nav-text">6-28</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-5"><span class="nav-text">A</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B-5"><span class="nav-text">B</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-5"><span class="nav-text">C</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-29"><span class="nav-text">6-29</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-6"><span class="nav-text">A</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B-6"><span class="nav-text">B</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-6"><span class="nav-text">C</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zory</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: true,
+    appId: 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+    appKey: 'cJDLxDoNgzq0JJUWQFmpCRdw',
+    placeholder: '对这篇文章有什么看法？大胆地说出来吧',
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '20' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('2');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+                'X-LC-Key': 'cJDLxDoNgzq0JJUWQFmpCRdw',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

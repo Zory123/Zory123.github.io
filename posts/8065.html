@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeHNOI2010Bzoj2002Luogu3203">
 <meta name="keywords" content="分块,LCT,难度2,伸展树,好题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Bzoj2002】【Luogu3203】弹飞绵羊">
+<meta property="og:title" content="「Bzoj2002」「Luogu3203」弹飞绵羊">
 <meta property="og:url" content="http://zory.ink/posts/8065.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeHNOI2010Bzoj2002Luogu3203">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Bzoj2002】【Luogu3203】弹飞绵羊">
+<meta name="twitter:title" content="「Bzoj2002」「Luogu3203」弹飞绵羊">
 <meta name="twitter:description" content="Source and JudgeHNOI2010Bzoj2002Luogu3203">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【Bzoj2002】【Luogu3203】弹飞绵羊 | Zory的个人博客</title>
+  <title>「Bzoj2002」「Luogu3203」弹飞绵羊 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Bzoj2002】【Luogu3203】弹飞绵羊
+          <h2 class="post-title" itemprop="name headline">「Bzoj2002」「Luogu3203」弹飞绵羊
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:47" itemprop="dateModified" datetime="2019-12-01T10:18:47+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/8065.html" class="post-meta-item leancloud_visitors" data-flag-title="【Bzoj2002】【Luogu3203】弹飞绵羊">
+            <span id="/posts/8065.html" class="post-meta-item leancloud_visitors" data-flag-title="「Bzoj2002」「Luogu3203」弹飞绵羊">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -613,7 +613,7 @@
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>HNOI2010<br><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=2002" target="_blank" rel="noopener">Bzoj2002</a><br><a href="https://www.luogu.org/problemnew/show/P3203" target="_blank" rel="noopener">Luogu3203</a></p>
 <a id="more"></a>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-red"><strong>【Brief description】</strong><br>有n个点，一开始有n条边，点只会向比自己编号大的一个点连一条边，<br>其中有的边（保证至少有一条）会连不到点，被弹飞。<br>有两种操作：<br>op=1,x :询问从x点出发，需要经过多少个点（包括x）才会被弹飞<br>op=2,x,k:将x点连向其他点的边删掉，然后从x向x+k连一条边<br><strong>【Input】</strong><br>第一行为一个正整数n，表示点的个数。<br>第二行n个数ki，表示第i个点向第i+ki个点连一条边，若i+ki&gt;n被弹飞。<br>第三行为一个正整数m，表示操作的个数。<br>以下m行，一行表示一个操作。<br>每行开头是一个整数op，<br>op=1时之后有一个整数x代表询问点的编号。<br>op=2时之后有两个整数x，k代表点的编号和改变连边的距离。<br>操作如题意。<br><strong>【Output】</strong><br>如上<br><strong>【Limited conditions】</strong><br>对于20%的数据,n,m&lt;=10000<br>对于100%的数据,n&lt;=200000,m&lt;=100000<br><strong>【Sample input】</strong><br>4<br>1 2 1 1<br>3<br>1 1<br>2 1 1<br>1 1<br><strong>【Sample output】</strong><br>2<br>3<br><strong>【Sample explanation】</strong><br>无<br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-red"><strong>「Brief description」</strong><br>有n个点，一开始有n条边，点只会向比自己编号大的一个点连一条边，<br>其中有的边（保证至少有一条）会连不到点，被弹飞。<br>有两种操作：<br>op=1,x :询问从x点出发，需要经过多少个点（包括x）才会被弹飞<br>op=2,x,k:将x点连向其他点的边删掉，然后从x向x+k连一条边<br><strong>「Input」</strong><br>第一行为一个正整数n，表示点的个数。<br>第二行n个数ki，表示第i个点向第i+ki个点连一条边，若i+ki&gt;n被弹飞。<br>第三行为一个正整数m，表示操作的个数。<br>以下m行，一行表示一个操作。<br>每行开头是一个整数op，<br>op=1时之后有一个整数x代表询问点的编号。<br>op=2时之后有两个整数x，k代表点的编号和改变连边的距离。<br>操作如题意。<br><strong>「Output」</strong><br>如上<br><strong>「Limited conditions」</strong><br>对于20%的数据,n,m&lt;=10000<br>对于100%的数据,n&lt;=200000,m&lt;=100000<br><strong>「Sample input」</strong><br>4<br>1 2 1 1<br>3<br>1 1<br>2 1 1<br>1 1<br><strong>「Sample output」</strong><br>2<br>3<br><strong>「Sample explanation」</strong><br>无<br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>1h<br>打错变量了……</p>
 <h2 id="Analysis1"><a href="#Analysis1" class="headerlink" title="Analysis1"></a>Analysis1</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -633,7 +633,7 @@
 
 </div></div>
 <h2 id="Analysis3"><a href="#Analysis3" class="headerlink" title="Analysis3"></a>Analysis3</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>分块大法好！<br>既然说分块是暴力的优化，先想想暴力：<br>从后往前预处理，然后查询瞬间，修改再次从后往前<br>那么找个【暴力与分块】的关系和【前缀和与树状数组】的关系是类似的，<br>就是前一种查询快，但难修改。那么树状数组让两个操作的时间均衡了。<br>分块也类似如此，设法把修改的时间缩短：<br>对于每个位置，记录两个值：跳出这个块的步数、跳出后到了哪里。<br>于是时间都达到了sqrt(n)了</p>
+<p>分块大法好！<br>既然说分块是暴力的优化，先想想暴力：<br>从后往前预处理，然后查询瞬间，修改再次从后往前<br>那么找个「暴力与分块」的关系和「前缀和与树状数组」的关系是类似的，<br>就是前一种查询快，但难修改。那么树状数组让两个操作的时间均衡了。<br>分块也类似如此，设法把修改的时间缩短：<br>对于每个位置，记录两个值：跳出这个块的步数、跳出后到了哪里。<br>于是时间都达到了sqrt(n)了</p>
 
 </div></div>
 <h2 id="Code3"><a href="#Code3" class="headerlink" title="Code3"></a>Code3</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -654,42 +654,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d8f8.html" rel="bookmark">【51nod1462】树据结构</a></div>
+      <div class="popular-posts-title"><a href="/posts/d8f8.html" rel="bookmark">「51nod1462」树据结构</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/2ed3.html" rel="bookmark">【Bzoj1112】砖块</a></div>
+      <div class="popular-posts-title"><a href="/posts/4a8c.html" rel="bookmark">「AHOI2005」「CQOI2014」病毒检测/通配符匹配</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/bebe.html" rel="bookmark">【模板】动态树</a></div>
+      <div class="popular-posts-title"><a href="/posts/e23c.html" rel="bookmark">【OI之路】02数据结构-7动态树LCT</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/e070.html" rel="bookmark">【Bzoj3224】普通平衡树</a></div>
+      <div class="popular-posts-title"><a href="/posts/bebe.html" rel="bookmark">「模板」动态树</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">【CZYZ2009暑假集训提高组6】盟军敢死队</a></div>
+      <div class="popular-posts-title"><a href="/posts/e070.html" rel="bookmark">「Bzoj3224」普通平衡树</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/c201.html" rel="bookmark">【CZYZ2009暑假集训提高组6】魔兽争霸</a></div>
+      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">「CZYZ2009暑假集训提高组6」盟军敢死队</a></div>
       
     </li>
   
@@ -707,7 +707,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/8065.html" title="【Bzoj2002】【Luogu3203】弹飞绵羊">http://zory.ink/posts/8065.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/8065.html" title="「Bzoj2002」「Luogu3203」弹飞绵羊">http://zory.ink/posts/8065.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -753,8 +753,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/1124.html" rel="next" title="【Bzoj2152】【Luogu2634】聪聪可可">
-                <i class="fa fa-chevron-left"></i> 【Bzoj2152】【Luogu2634】聪聪可可
+              <a href="/posts/1124.html" rel="next" title="「Bzoj2152」「Luogu2634」聪聪可可">
+                <i class="fa fa-chevron-left"></i> 「Bzoj2152」「Luogu2634」聪聪可可
               </a>
             
           </div>
@@ -763,8 +763,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/6a8a.html" rel="prev" title="【CF946-F】Fibonacci String Subsequences">
-                【CF946-F】Fibonacci String Subsequences <i class="fa fa-chevron-right"></i>
+              <a href="/posts/6a8a.html" rel="prev" title="「CF946-F」Fibonacci String Subsequences">
+                「CF946-F」Fibonacci String Subsequences <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -842,7 +842,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -867,7 +867,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1276,7 +1278,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -95,15 +95,15 @@
   <meta name="description" content="来源和评测点ZJOI2006NOI导刊2010提高（01）Bzoj1003Luogu1772">
 <meta name="keywords" content="dp,难度2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Bzoj1003】【Luogu1772】物流运输">
+<meta property="og:title" content="「Bzoj1003」「Luogu1772」物流运输">
 <meta property="og:url" content="http://zory.ink/posts/90dd.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点ZJOI2006NOI导刊2010提高（01）Bzoj1003Luogu1772">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cdn.luogu.org/upload/pic/618.png">
-<meta property="og:updated_time" content="2019-10-05T01:05:42.963Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Bzoj1003】【Luogu1772】物流运输">
+<meta name="twitter:title" content="「Bzoj1003」「Luogu1772」物流运输">
 <meta name="twitter:description" content="来源和评测点ZJOI2006NOI导刊2010提高（01）Bzoj1003Luogu1772">
 <meta name="twitter:image" content="https://cdn.luogu.org/upload/pic/618.png">
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>【Bzoj1003】【Luogu1772】物流运输 | Zory的个人博客</title>
+  <title>「Bzoj1003」「Luogu1772」物流运输 | Zory的个人博客</title>
   
 
 
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -498,7 +498,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Bzoj1003】【Luogu1772】物流运输
+          <h2 class="post-title" itemprop="name headline">「Bzoj1003」「Luogu1772」物流运输
 
               
             
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-05 09:05:42" itemprop="dateModified" datetime="2019-10-05T09:05:42+08:00">2019-10-05</time>
+                <time title="修改时间：2019-12-01 10:18:47" itemprop="dateModified" datetime="2019-12-01T10:18:47+08:00">2019-12-01</time>
               </span>
             
           
@@ -580,7 +580,7 @@
 
           
           
-            <span id="/posts/90dd.html" class="post-meta-item leancloud_visitors" data-flag-title="【Bzoj1003】【Luogu1772】物流运输">
+            <span id="/posts/90dd.html" class="post-meta-item leancloud_visitors" data-flag-title="「Bzoj1003」「Luogu1772」物流运输">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,7 +615,7 @@
       
         <h2 id="来源和评测点"><a href="#来源和评测点" class="headerlink" title="来源和评测点"></a>来源和评测点</h2><p>ZJOI2006<br>NOI导刊2010提高（01）<br><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1003" target="_blank" rel="noopener">Bzoj1003</a><br><a href="https://www.luogu.org/problemnew/show/P1772" target="_blank" rel="noopener">Luogu1772</a></p>
 <a id="more"></a>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-green"><strong>【题目大意】</strong><br>物流公司要把一批货物从码头A运到码头B。<br>由于货物量比较大，需要n天才能运完。<br>货物运输过程中一般要转停好几个码头。<br>物流公司通常会设计一条固定的运输路线，以便对整个运输过程实施严格的管理和跟踪。<br>由于各种因素的存在，有的时候某个码头会无法装卸货物。<br>这时候就必须修改运输路线，让货物能够按时到达目的地。<br>但是修改路线是—件十分麻烦的事情，会带来额外的成本。<br>因此物流公司希望能够订一个n天的运输计划，使得总成本尽可能地小。<br><strong>【输入格式】</strong><br>第一行是四个整数n(l≤n≤100)、m(l≤m≤20)、K和e。<br>n表示货物运输所需天数，m表示码头总数，K表示每次修改运输路线所需成本，e表示航线条数。<br>接下来e行每行是一条航线描述，包括了三个整数，依次表示航线连接的两个码头编号以及航线长度(&gt;0)。<br>其中码头A编号为1，码头B编号为m。单位长度的运输费用为1。航线是双向的。<br>再接下来一行是一个整数d，后面的d行每行是三个整数P(1&lt;P&lt;m)，a，b(1≤a≤b≤n)。<br>表示编号为P的码头从第a天到第b天无法装卸货物（含头尾）。<br>同一个码头有可能在多个时间段内不可用。<br>但任何时间都存在至少一条从码头A到码头B的运输路线。<br><strong>【输出格式】</strong><br>包括了一个整数表示最小的总成本。<br>总成本=n天运输路线长度之和+K*改变运输路线的次数。<br><strong>【限定条件】</strong><br>30%的数据中N和M均不超过6<br>50%的数据中N和M至少有一个数不超过8<br>100%的数据中N和M均不超过100<br><strong>【输入样例】</strong><br>5 5 10 8<br>1 2 1<br>1 3 3<br>1 4 2<br>2 3 2<br>2 4 4<br>3 4 1<br>3 5 2<br>4 5 2<br>4<br>2 2 3<br>3 1 1<br>3 3 3<br>4 4 5<br><strong>【输出样例】</strong><br>32<br><strong>【样例解释】</strong><br><img src="https://cdn.luogu.org/upload/pic/618.png" alt=""><br>上图依次表示第1至第5天的情况，阴影表示不可用的码头。<br>前三天走1-4-5，后两天走1-3-5，这样总成本为(2+2)*3+(3+2)*2+10=32。<br></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-green"><strong>「题目大意」</strong><br>物流公司要把一批货物从码头A运到码头B。<br>由于货物量比较大，需要n天才能运完。<br>货物运输过程中一般要转停好几个码头。<br>物流公司通常会设计一条固定的运输路线，以便对整个运输过程实施严格的管理和跟踪。<br>由于各种因素的存在，有的时候某个码头会无法装卸货物。<br>这时候就必须修改运输路线，让货物能够按时到达目的地。<br>但是修改路线是—件十分麻烦的事情，会带来额外的成本。<br>因此物流公司希望能够订一个n天的运输计划，使得总成本尽可能地小。<br><strong>「输入格式」</strong><br>第一行是四个整数n(l≤n≤100)、m(l≤m≤20)、K和e。<br>n表示货物运输所需天数，m表示码头总数，K表示每次修改运输路线所需成本，e表示航线条数。<br>接下来e行每行是一条航线描述，包括了三个整数，依次表示航线连接的两个码头编号以及航线长度(&gt;0)。<br>其中码头A编号为1，码头B编号为m。单位长度的运输费用为1。航线是双向的。<br>再接下来一行是一个整数d，后面的d行每行是三个整数P(1&lt;P&lt;m)，a，b(1≤a≤b≤n)。<br>表示编号为P的码头从第a天到第b天无法装卸货物（含头尾）。<br>同一个码头有可能在多个时间段内不可用。<br>但任何时间都存在至少一条从码头A到码头B的运输路线。<br><strong>「输出格式」</strong><br>包括了一个整数表示最小的总成本。<br>总成本=n天运输路线长度之和+K*改变运输路线的次数。<br><strong>「限定条件」</strong><br>30%的数据中N和M均不超过6<br>50%的数据中N和M至少有一个数不超过8<br>100%的数据中N和M均不超过100<br><strong>「输入样例」</strong><br>5 5 10 8<br>1 2 1<br>1 3 3<br>1 4 2<br>2 3 2<br>2 4 4<br>3 4 1<br>3 5 2<br>4 5 2<br>4<br>2 2 3<br>3 1 1<br>3 3 3<br>4 4 5<br><strong>「输出样例」</strong><br>32<br><strong>「样例解释」</strong><br><img src="https://cdn.luogu.org/upload/pic/618.png" alt=""><br>上图依次表示第1至第5天的情况，阴影表示不可用的码头。<br>前三天走1-4-5，后两天走1-3-5，这样总成本为(2+2)*3+(3+2)*2+10=32。<br></p>
 
 <h2 id="刷题记录"><a href="#刷题记录" class="headerlink" title="刷题记录"></a>刷题记录</h2><p>30min<br>1AC<br>小心爆int</p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -638,28 +638,28 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9f3.html" rel="bookmark">【Bzoj1833】【Luogu2602】数字计数</a></div>
+      <div class="popular-posts-title"><a href="/posts/9f3.html" rel="bookmark">「Bzoj1833」「Luogu2602」数字计数</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">【CF553E】Kyoya and Train</a></div>
+      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">「CF553E」Kyoya and Train</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">【CZYZ2009暑假集训提高组6】盟军敢死队</a></div>
+      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">「CZYZ2009暑假集训提高组6」盟军敢死队</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/39cb.html" rel="bookmark">【CF955F】Heaps</a></div>
+      <div class="popular-posts-title"><a href="/posts/39cb.html" rel="bookmark">「CF955F」Heaps</a></div>
       
     </li>
   
@@ -691,7 +691,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/90dd.html" title="【Bzoj1003】【Luogu1772】物流运输">http://zory.ink/posts/90dd.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/90dd.html" title="「Bzoj1003」「Luogu1772」物流运输">http://zory.ink/posts/90dd.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -731,8 +731,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/4e5e.html" rel="next" title="【Bzoj1037】【Luogu2592】生日聚会">
-                <i class="fa fa-chevron-left"></i> 【Bzoj1037】【Luogu2592】生日聚会
+              <a href="/posts/4e5e.html" rel="next" title="「Bzoj1037」「Luogu2592」生日聚会">
+                <i class="fa fa-chevron-left"></i> 「Bzoj1037」「Luogu2592」生日聚会
               </a>
             
           </div>
@@ -741,8 +741,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/a490.html" rel="prev" title="【Bzoj1036】【Luogu2590】树的统计">
-                【Bzoj1036】【Luogu2590】树的统计 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/a490.html" rel="prev" title="「Bzoj1036」「Luogu2590」树的统计">
+                「Bzoj1036」「Luogu2590」树的统计 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -820,7 +820,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -845,7 +845,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1254,7 +1256,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

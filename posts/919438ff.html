@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="AGC021到AGC030题解合集 0/10">
+  <meta name="description" content="AGC021到AGC030题解合集 AGC的题面一般都不难懂，就不给出翻译了 0/10">
 <meta name="keywords" content="好题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AGC021到030">
 <meta property="og:url" content="http://zory.ink/posts/919438ff.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="AGC021到AGC030题解合集 0/10">
+<meta property="og:description" content="AGC021到AGC030题解合集 AGC的题面一般都不难懂，就不给出翻译了 0/10">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-25T00:39:10.352Z">
+<meta property="og:updated_time" content="2020-03-27T14:25:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AGC021到030">
-<meta name="twitter:description" content="AGC021到AGC030题解合集 0/10">
+<meta name="twitter:description" content="AGC021到AGC030题解合集 AGC的题面一般都不难懂，就不给出翻译了 0/10">
 
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-25 08:39:10" itemprop="dateModified" datetime="2019-10-25T08:39:10+08:00">2019-10-25</time>
+                <time title="修改时间：2020-03-27 22:25:07" itemprop="dateModified" datetime="2020-03-27T22:25:07+08:00">2020-03-27</time>
               </span>
             
           
@@ -612,14 +612,40 @@
 
       
         <p>AGC021到AGC030题解合集</p>
+<p>AGC的题面一般都不难懂，就不给出翻译了</p>
 <h1 id="0-10"><a href="#0-10" class="headerlink" title="0/10"></a>0/10</h1><a id="more"></a>
-<h2 id="AGC028"><a href="#AGC028" class="headerlink" title="AGC028"></a>AGC028</h2><p><strong>agc028E - High Elements</strong> <a href="https://atcoder.jp/contests/agc028/submissions/5005405" target="_blank" rel="noopener">code</a></p>
+<h2 id="AGC021"><a href="#AGC021" class="headerlink" title="AGC021"></a><a href="https://atcoder.jp/contests/AGC021/tasks" target="_blank" rel="noopener">AGC021</a></h2><p><strong>AGC021C - Tiling</strong> 讨论特判题，不想做</p>
+<p><strong>AGC021D - Reversed LCS</strong> </p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>考虑到$val(T,T’)=max\ {dp[1..i][i+1..n]*2,dp[1..i-1][i+1..n]*2+1}$，即dp到重叠后乘二就行了，所以可以独立决策，$dp(1..i,j..n,cnt)$即可，$O(n^3)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">fo(i,<span class="number">0</span>,n) fd(j,n+<span class="number">1</span>,i+<span class="number">1</span>) fo(cnt,<span class="number">0</span>,K)</div><div class="line">&#123;</div><div class="line">    chmax(dp[i+<span class="number">1</span>][j][cnt],dp[i][j][cnt]);chmax(dp[i][j<span class="number">-1</span>][cnt],dp[i][j][cnt]);</div><div class="line">    chmax(dp[i+<span class="number">1</span>][j<span class="number">-1</span>][cnt+(str[i+<span class="number">1</span>]!=str[j<span class="number">-1</span>])],dp[i][j][cnt]+<span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> ans=<span class="number">0</span>;fo(i,<span class="number">0</span>,n) fo(cnt,<span class="number">0</span>,K) chmax(ans,dp[i][i+<span class="number">1</span>][cnt]*<span class="number">2</span>),chmax(ans,dp[i][i+<span class="number">2</span>][cnt]*<span class="number">2</span>+<span class="number">1</span>);write(ans);</div></pre></td></tr></table></figure>
+<p>upd：发现其实我没意识到其本质是求最长回文子序列……</p>
+
+</div></div>
+<h2 id="AGC024"><a href="#AGC024" class="headerlink" title="AGC024"></a><a href="https://atcoder.jp/contests/AGC024/tasks" target="_blank" rel="noopener">AGC024</a></h2><p><strong>AGC024E Sequence Growing Hard</strong></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>首先显然是，如果是在ai（末尾为inf）前插个c，$c&gt;a_i$即可不重不漏</p>
+<p>然后一个奥妙重重的重要转化：设现在时间是i，考虑被插队那人的插入时间j，i向j连一条边</p>
+<p>想到这个后基本就没什么了：对于任意形态的带标号大小为n+1的树，标号就表示插入时间，根节点的标号为0，然后每个点的标号为子树最小值，另外给所有点一个权值$\in [0,K]$，其中根节点是0，且每个点的权值严格小于父亲。这样的树显然不重不漏统计了所有序列</p>
+<p>权值和标号是独立的，权值我们就给dp多加一维，设$f(S,val)=大小为S且根权值为val的所有树结构的贡献和$，然后标号内部关系定好后，可以用组合合并排列（为了唯一计数，可以按照各个子树的根即孩子的标号递增来dp，这个依然可以组合合并，具体地，如果考虑新加入的孩子时标号最大的复杂度过高，卡了一会后想到考虑新加入的孩子是标号最小的就行了，这样就是直接$C_{S-1}^{ad-1}$，即把最小那个标号预留给当前孩子），后缀和即可优化到$O(n^3)$，如果具体dp方程还是不会写直接看代码即可，很短</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread(),K=qread();MOD=qread();C[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;fo(i,<span class="number">1</span>,N<span class="number">-1</span>)&#123; C[i][<span class="number">0</span>]=<span class="number">1</span>;fo(j,<span class="number">1</span>,i) C[i][j]=mm(C[i<span class="number">-1</span>][j]+C[i<span class="number">-1</span>][j<span class="number">-1</span>]); &#125;</div><div class="line">fd(val,K,<span class="number">0</span>)</div><div class="line">&#123;</div><div class="line">    f[<span class="number">1</span>][val]=<span class="number">1</span>,f2[<span class="number">1</span>][val]=(K-val+<span class="number">1</span>)%MOD,g[<span class="number">0</span>][val]=<span class="number">1</span>;<span class="comment">//debug 模数很小时会漏模</span></div><div class="line">    fo(S,<span class="number">1</span>,n)&#123; g[S][val]=f2[S][val+<span class="number">1</span>];fo(ad,<span class="number">1</span>,S<span class="number">-1</span>) add(g[S][val],<span class="number">1l</span>l*g[S-ad][val]*f2[ad][val+<span class="number">1</span>]%MOD*C[S<span class="number">-1</span>][ad<span class="number">-1</span>]%MOD); &#125;</div><div class="line">    fo(S,<span class="number">2</span>,n+<span class="number">1</span>)&#123; f[S][val]=g[S<span class="number">-1</span>][val];f2[S][val]=mm(f2[S][val+<span class="number">1</span>]+f[S][val]); &#125;</div><div class="line">&#125;write(f[n+<span class="number">1</span>][<span class="number">0</span>]);<span class="comment">//好像可以不用定义g……</span></div></pre></td></tr></table></figure>
+
+</div></div>
+<h2 id="AGC025"><a href="#AGC025" class="headerlink" title="AGC025"></a><a href="https://atcoder.jp/contests/AGC025/tasks" target="_blank" rel="noopener">AGC025</a></h2><p><strong>AGC025D Choosing Points</strong></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>小结论：对于$D=x^2+y^2$，对x和y奇偶性讨论可知：$D\%4=0 \leftrightarrow xy都是偶$；$D\%4=2 \leftrightarrow xy都是奇$；$D\%2=1 \leftrightarrow 一奇一偶$</p>
+<p>如果只有一个D，第一种可以把每个$2*2$的看做一个格子，于是4个剩余系是独立的，当做坐标除2后给选中的格子整个涂色即可；第二种可以一整行一个颜色去涂，第三种可以棋盘染色。发现对两个D分别做，最后只取两边方案都是选的那些格子，是可以达到四分之一的，$O(n^2)$</p>
+<p>官方题解则不是用构造处理一个D，而是证明了一波，建图后一定是二分图，没有细看</p>
+
+</div></div>
+<h2 id="AGC028"><a href="#AGC028" class="headerlink" title="AGC028"></a><a href="https://atcoder.jp/contests/AGC028/tasks" target="_blank" rel="noopener">AGC028</a></h2><p><strong>AGC028E - High Elements</strong> <a href="https://atcoder.jp/contests/AGC028/submissions/5005405" target="_blank" rel="noopener">code</a></p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>为了方便我的实现改为考虑更小的元素；设E集合为全局的前缀最小值</p>
-<p>考虑逐位确定，那么我们需要判断的就是可行性，$设前面i个已经填完，前面的mi_0,mi_1，前面的长度c_0,c_1，后面的前缀最小值个数cnt$</p>
+<p>考虑逐位确定，那么我们需要判断的就是可行性</p>
+<p>$设前面i个已经填完，前面的mi_0,mi_1，前面的长度c_0,c_1，后面的前缀最小值个数cnt$</p>
 <p>对于两个集合只考虑下降部分，因为其他数总是至少有一种让它没用的分配方案（每个数丢到左边第一个更小的数所在集合即可）</p>
 <p>将元素分为来自E的A类、其他B类，那么能等效地转化为至少一个集合的下降是只有A类的（设为集合0）</p>
-<p>$c_0+cnt-a=c_1+a+b即2a+b=c_0-c_1+cnt$ 即要求存在一个【开头&lt;mx，满足权值（A贡献2，B贡献1）为定值】的下降序列</p>
+<p>$c_0+cnt-a=c_1+a+b即2a+b=c_0-c_1+cnt$ 即要求存在一个「开头&lt;mx，满足权值（A贡献2，B贡献1）为定值」的下降序列</p>
 <p>因为一定能$a–$，所以对于某个奇偶性求最长的即可，考虑一个维护前缀max的支持撤销树状数组，询问也是前缀</p>
 <p>从后往前插入元素来维护$f(num)$表示以num为开头的最长下降子序列，插入就是一个链修改，因为端点一直往后移动，这种东西是可以撤回的</p>
 <p>时空复杂度 $O(nlogn)$</p>
@@ -637,21 +663,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9f71.html" rel="bookmark">【Poj3897】【Vijos1194】Domino</a></div>
+      <div class="popular-posts-title"><a href="/posts/9f71.html" rel="bookmark">「Poj3897」「Vijos1194」Domino</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">【CZYZ2009暑假集训提高组6】盟军敢死队</a></div>
+      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">「CZYZ2009暑假集训提高组6」盟军敢死队</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/381c.html" rel="bookmark">【NOIAC31】MST</a></div>
+      <div class="popular-posts-title"><a href="/posts/381c.html" rel="bookmark">「NOIAC31」MST</a></div>
       
     </li>
   
@@ -665,14 +691,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ae99.html" rel="bookmark">【CF960F】Pathwalks</a></div>
+      <div class="popular-posts-title"><a href="/posts/ae99.html" rel="bookmark">「CF960F」Pathwalks</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">「POJ2057」The Lost House</a></div>
       
     </li>
   
@@ -817,7 +843,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -842,7 +868,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1251,7 +1279,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1314,7 +1346,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-10"><span class="nav-text">0/10</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC028"><span class="nav-text">AGC028</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-10"><span class="nav-text">0/10</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC021"><span class="nav-text">AGC021</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC024"><span class="nav-text">AGC024</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC025"><span class="nav-text">AGC025</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC028"><span class="nav-text">AGC028</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -95,14 +95,14 @@
   <meta name="description" content="并查集 其实应该放到数据结构里面的">
 <meta name="keywords" content="并查集">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】04图论-2并查集">
+<meta property="og:title" content="「OI之路」04图论-2并查集">
 <meta property="og:url" content="http://zory.ink/posts/a89d.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="并查集 其实应该放到数据结构里面的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-18T13:38:26.560Z">
+<meta property="og:updated_time" content="2020-02-02T07:41:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】04图论-2并查集">
+<meta name="twitter:title" content="「OI之路」04图论-2并查集">
 <meta name="twitter:description" content="并查集 其实应该放到数据结构里面的">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】04图论-2并查集 | Zory的个人博客</title>
+  <title>「OI之路」04图论-2并查集 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】04图论-2并查集
+          <h2 class="post-title" itemprop="name headline">「OI之路」04图论-2并查集
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-18 21:38:26" itemprop="dateModified" datetime="2019-10-18T21:38:26+08:00">2019-10-18</time>
+                <time title="修改时间：2020-02-02 15:41:00" itemprop="dateModified" datetime="2020-02-02T15:41:00+08:00">2020-02-02</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/a89d.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】04图论-2并查集">
+            <span id="/posts/a89d.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」04图论-2并查集">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -614,8 +614,9 @@
         <p>并查集</p>
 <p>其实应该放到数据结构里面的</p>
 <a id="more"></a>
-<p>路径压缩，均摊log<br>另外有种优化方法叫“按秩合并”，也是启发式合并的一种应用<br>就是每次把小的合并到大的里面，在这里可以用大小来表示<br>那么均摊也是log</p>
-<p>然后如果两者合并，根据tarjan的论文证明，总是小于5的</p>
+<p>路径压缩，均摊log，不会证明<br>另外有种优化方法叫“按秩合并”，也是启发式合并的一种应用<br>就是每次把小的合并到大的里面，在这里可以用大小来表示，那么均摊也是log</p>
+<p>然后如果两者都用，根据tarjan的论文证明，总是小于5的</p>
+<h2 id="带权并查集"><a href="#带权并查集" class="headerlink" title="带权并查集"></a>带权并查集</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span> DSU</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> fa[N],w[N];<span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>&#123; fo(i,<span class="number">0</span>,N<span class="number">-1</span>) fa[i]=i,w[i]=<span class="number">0</span>; &#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findfa</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123; <span class="keyword">if</span>(fa[x]==x)<span class="keyword">return</span> x;<span class="keyword">int</span> t=fa[x];fa[x]=findfa(fa[x]);w[x]^=w[t];<span class="keyword">return</span> fa[x]; &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">merg</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> val)</span></div><div class="line">    </span>&#123;</div><div class="line">        findfa(x),findfa(y);val^=w[x]^w[y];x=fa[x],y=fa[y];</div><div class="line">        <span class="keyword">if</span>(x!=y) w[x]=val,fa[x]=y; <span class="keyword">else</span> err|=w[x]^w[y]^val;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <h2 id="末尾回撤并查集"><a href="#末尾回撤并查集" class="headerlink" title="末尾回撤并查集"></a>末尾回撤并查集</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span> DSU</div><div class="line">&#123;</div><div class="line">    <span class="keyword">struct</span> Data&#123;<span class="keyword">int</span> fa,siz;&#125;a[N];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>&#123;fo(i,<span class="number">0</span>,N<span class="number">-1</span>)a[i].fa=i,a[i].siz=<span class="number">1</span>;&#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findfa</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">return</span> a[x].fa==x?x:findfa(a[x].fa);&#125;</div><div class="line">    <span class="built_in">stack</span>&lt; pair&lt;<span class="keyword">int</span>,Data&gt; &gt; sta;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">merg</span><span class="params">(Edge now)</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">int</span> x=findfa(now.x),y=findfa(now.y);<span class="keyword">if</span>(a[x].siz&lt;a[y].siz) swap(x,y);</div><div class="line">        sta.push(MP(x,a[x]));sta.push(MP(y,a[y]));</div><div class="line">        <span class="keyword">if</span>(x!=y) a[x].siz+=a[y].siz,a[y].fa=x;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">back</span><span class="params">()</span> </span>&#123;<span class="keyword">while</span>(sz(sta)) a[sta.top().FR]=sta.top().SE,sta.pop();&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <h2 id="可持久化并查集"><a href="#可持久化并查集" class="headerlink" title="可持久化并查集"></a>可持久化并查集</h2><p><a href="https://darkbzoj.tk/problem/3674" target="_blank" rel="noopener">bzoj3674</a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="function">ll <span class="title">qread</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    ll ans=<span class="number">0</span>;<span class="keyword">char</span> c=getchar();</div><div class="line">    <span class="keyword">while</span>(c&lt;<span class="string">'0'</span> or c&gt;<span class="string">'9'</span>) c=getchar();</div><div class="line">    <span class="keyword">while</span>(<span class="string">'0'</span>&lt;=c and c&lt;=<span class="string">'9'</span>) ans=ans*<span class="number">10</span>+c-<span class="string">'0'</span>,c=getchar();</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">2e5</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> pr pair<span class="meta-string">&lt;int,int&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> FR first</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> SE second</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></div><div class="line"><span class="keyword">struct</span> Nod&#123;<span class="keyword">int</span> lc,rc;pr data;&#125;p[MAX_N*<span class="number">20</span>*<span class="number">2</span>*<span class="number">2</span>];</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> mid (l+r)/2</span></div><div class="line"><span class="keyword">int</span> id=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> pos,pr ss)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(x==<span class="number">0</span>) x=++id;</div><div class="line">    <span class="keyword">if</span>(l==r) &#123;p[x].data=ss;<span class="keyword">return</span>;&#125;</div><div class="line">    <span class="keyword">if</span>(pos&lt;=mid) add(p[x].lc,l,mid,pos,ss);</div><div class="line">    <span class="keyword">else</span> add(p[x].rc,mid+<span class="number">1</span>,r,pos,ss);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">merg</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> &amp;y)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(x==<span class="number">0</span>) <span class="keyword">return</span>;</div><div class="line">    <span class="keyword">if</span>(y==<span class="number">0</span>) &#123;y=x;<span class="keyword">return</span>;&#125;</div><div class="line">    merg(p[x].lc,p[y].lc);</div><div class="line">    merg(p[x].rc,p[y].rc);</div><div class="line">&#125;</div><div class="line"><span class="function">pr <span class="title">ask</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> pos)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(l==r) <span class="keyword">return</span> p[x].data;</div><div class="line">    <span class="keyword">if</span>(pos&lt;=mid) <span class="keyword">return</span> ask(p[x].lc,l,mid,pos);</div><div class="line">    <span class="keyword">else</span> ask(p[x].rc,mid+<span class="number">1</span>,r,pos);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> rt[MAX_N];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">findfa</span><span class="params">(<span class="keyword">int</span> now,<span class="keyword">int</span> x)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> fa=ask(rt[now],<span class="number">1</span>,n,x).FR;</div><div class="line">    <span class="keyword">return</span> fa==x?x:findfa(now,fa);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> q;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;q);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) add(rt[<span class="number">0</span>],<span class="number">1</span>,n,i,MP(i,<span class="number">1</span>));</div><div class="line">    <span class="keyword">int</span> lst=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> now=<span class="number">1</span>;now&lt;=q;now++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> op=qread();</div><div class="line">        <span class="keyword">if</span>(op==<span class="number">1</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> fx=findfa(now<span class="number">-1</span>,qread()^lst),fy=findfa(now<span class="number">-1</span>,qread()^lst);</div><div class="line">            <span class="keyword">if</span>(fx!=fy)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">int</span> sx=ask(rt[now<span class="number">-1</span>],<span class="number">1</span>,n,fx).SE,sy=ask(rt[now<span class="number">-1</span>],<span class="number">1</span>,n,fy).SE;</div><div class="line">                <span class="keyword">if</span>(sx&lt;sy) swap(fx,fy);</div><div class="line">                add(rt[now],<span class="number">1</span>,n,fy,MP(fx,<span class="number">0</span>));</div><div class="line">                add(rt[now],<span class="number">1</span>,n,fx,MP(fx,sx+sy));</div><div class="line">            &#125;</div><div class="line">            merg(rt[now<span class="number">-1</span>],rt[now]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">2</span>) merg(rt[qread()^lst],rt[now]);</div><div class="line">        <span class="keyword">else</span></div><div class="line">        &#123;</div><div class="line">            merg(rt[now<span class="number">-1</span>],rt[now]);</div><div class="line">            <span class="keyword">int</span> fx=findfa(now,qread()^lst),fy=findfa(now,qread()^lst);</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,lst=(fx==fy));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
@@ -631,35 +632,35 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f249.html" rel="bookmark">【Bzoj1529】【Luogu3420】ska Piggy banks</a></div>
+      <div class="popular-posts-title"><a href="/posts/f249.html" rel="bookmark">「Bzoj1529」「Luogu3420」ska Piggy banks</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8b22.html" rel="bookmark">【Luogu1525】关押罪犯</a></div>
+      <div class="popular-posts-title"><a href="/posts/8b22.html" rel="bookmark">「Luogu1525」关押罪犯</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4b95.html" rel="bookmark">【SCOI2013】【Bzoj3325】【Luogu3279】密码</a></div>
+      <div class="popular-posts-title"><a href="/posts/4b95.html" rel="bookmark">「SCOI2013」「Bzoj3325」「Luogu3279」密码</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b656.html" rel="bookmark">【Luogu1073】最优贸易</a></div>
+      <div class="popular-posts-title"><a href="/posts/b656.html" rel="bookmark">「Luogu1073」最优贸易</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/aba8.html" rel="bookmark">【bzoj3319】黑白树</a></div>
+      <div class="popular-posts-title"><a href="/posts/aba8.html" rel="bookmark">「bzoj3319」黑白树</a></div>
       
     </li>
   
@@ -684,7 +685,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/a89d.html" title="【OI之路】04图论-2并查集">http://zory.ink/posts/a89d.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/a89d.html" title="「OI之路」04图论-2并查集">http://zory.ink/posts/a89d.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -722,8 +723,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/8720.html" rel="next" title="【OI之路】04图论-1最短路">
-                <i class="fa fa-chevron-left"></i> 【OI之路】04图论-1最短路
+              <a href="/posts/8720.html" rel="next" title="「OI之路」04图论-1最短路">
+                <i class="fa fa-chevron-left"></i> 「OI之路」04图论-1最短路
               </a>
             
           </div>
@@ -732,8 +733,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/dc4.html" rel="prev" title="【OI之路】04图论-3最近公共祖先lca">
-                【OI之路】04图论-3最近公共祖先lca <i class="fa fa-chevron-right"></i>
+              <a href="/posts/dc4.html" rel="prev" title="「OI之路」04图论-3最近公共祖先lca">
+                「OI之路」04图论-3最近公共祖先lca <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -811,7 +812,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -836,7 +837,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1245,7 +1248,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1308,7 +1315,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#末尾回撤并查集"><span class="nav-text">末尾回撤并查集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可持久化并查集"><span class="nav-text">可持久化并查集</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#带权并查集"><span class="nav-text">带权并查集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#末尾回撤并查集"><span class="nav-text">末尾回撤并查集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可持久化并查集"><span class="nav-text">可持久化并查集</span></a></li></ol></div>
             
 
           </div>

@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeNOIP2002 提高组 T1Luogu1031Caioj1508">
 <meta name="keywords" content="贪心,难度1,好题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Luogu1031】均分纸牌">
+<meta property="og:title" content="「Luogu1031」均分纸牌">
 <meta property="og:url" content="http://zory.ink/posts/24a0.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOIP2002 提高组 T1Luogu1031Caioj1508">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Luogu1031】均分纸牌">
+<meta name="twitter:title" content="「Luogu1031」均分纸牌">
 <meta name="twitter:description" content="Source and JudgeNOIP2002 提高组 T1Luogu1031Caioj1508">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【Luogu1031】均分纸牌 | Zory的个人博客</title>
+  <title>「Luogu1031」均分纸牌 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Luogu1031】均分纸牌
+          <h2 class="post-title" itemprop="name headline">「Luogu1031」均分纸牌
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:48" itemprop="dateModified" datetime="2019-12-01T10:18:48+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/24a0.html" class="post-meta-item leancloud_visitors" data-flag-title="【Luogu1031】均分纸牌">
+            <span id="/posts/24a0.html" class="post-meta-item leancloud_visitors" data-flag-title="「Luogu1031」均分纸牌">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -613,12 +613,12 @@
       
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOIP2002 提高组 T1<br><a href="https://www.luogu.org/problemnew/show/P1031" target="_blank" rel="noopener">Luogu1031</a><br><a href="http://caioj.cn/problem.php?id=1508" target="_blank" rel="noopener">Caioj1508</a></p>
 <a id="more"></a>
-<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>【Brief description】</strong><br>有N堆纸牌，编号分别为 1，2，…… , N。<br>每堆上有若干张，但纸牌总数必为 N 的倍数。<br>可以在任一堆上取若于张纸牌，然后移动。<br><br>移牌规则为：<br>在编号为1堆上取的纸牌，只能移到编号为2的堆上；<br>在编号为N的堆上取的纸牌，只能移到编号为 N-1 的堆上；<br>其他堆上取的纸牌，可以移到相邻左边或右边的堆上。<br><br>现在要求找出一种移动方法，用最少的移动次数使每堆上纸牌数都一样多。<br><strong>【Input】</strong><br>N（N 堆纸牌）<br>A1 A2 …… An （N 堆纸牌，每堆纸牌初始数）<br><strong>【Output】</strong><br>所有堆均达到相等时的最少移动次数。<br><strong>【Limited conditions】</strong><br>1 &lt;= N &lt;= 100<br>1 &lt;= Ai &lt;= 10000<br><strong>【Sample input】</strong><br>4<br>9 8 17 6<br><strong>【Sample output】</strong><br>3<br><strong>【Sample explanation】</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">N=4，4堆纸牌数分别为：</div><div class="line">(1) 9　(2) 8　(3) 17　(4) 6</div><div class="line">移动3次可达到目的：</div><div class="line">从 (3) 取 4 张牌放到 (4)（9 8 13 10） -&gt; </div><div class="line">从 (3) 取 3 张牌放到 (2)（9 11 10 10） -&gt; </div><div class="line">从 (2) 取 1 张牌放到 (1)（10 10 10 10）</div></pre></td></tr></table></figure><br><br></p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-blue"><strong>「Brief description」</strong><br>有N堆纸牌，编号分别为 1，2，…… , N。<br>每堆上有若干张，但纸牌总数必为 N 的倍数。<br>可以在任一堆上取若于张纸牌，然后移动。<br><br>移牌规则为：<br>在编号为1堆上取的纸牌，只能移到编号为2的堆上；<br>在编号为N的堆上取的纸牌，只能移到编号为 N-1 的堆上；<br>其他堆上取的纸牌，可以移到相邻左边或右边的堆上。<br><br>现在要求找出一种移动方法，用最少的移动次数使每堆上纸牌数都一样多。<br><strong>「Input」</strong><br>N（N 堆纸牌）<br>A1 A2 …… An （N 堆纸牌，每堆纸牌初始数）<br><strong>「Output」</strong><br>所有堆均达到相等时的最少移动次数。<br><strong>「Limited conditions」</strong><br>1 &lt;= N &lt;= 100<br>1 &lt;= Ai &lt;= 10000<br><strong>「Sample input」</strong><br>4<br>9 8 17 6<br><strong>「Sample output」</strong><br>3<br><strong>「Sample explanation」</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">N=4，4堆纸牌数分别为：</div><div class="line">(1) 9　(2) 8　(3) 17　(4) 6</div><div class="line">移动3次可达到目的：</div><div class="line">从 (3) 取 4 张牌放到 (4)（9 8 13 10） -&gt; </div><div class="line">从 (3) 取 3 张牌放到 (2)（9 11 10 10） -&gt; </div><div class="line">从 (2) 取 1 张牌放到 (1)（10 10 10 10）</div></pre></td></tr></table></figure><br><br></p>
 
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>30min</p>
 <h2 id="Analysis1"><a href="#Analysis1" class="headerlink" title="Analysis1"></a>Analysis1</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>显然我的贪心很菜</p>
-<p>首先，显然我们要与平均数比较，所以可以直接全部减去平均数<br>那么把方向固定，以从左到右为例，对于i，前面i-1个已经解决【不一定是顺序上的】<br>因为只能相邻操作，才保证了这种做法的正确性，总会有与i+1交互的过程<br>那么自己不平衡的时候，步数+1，转移不平衡即可</p>
+<p>首先，显然我们要与平均数比较，所以可以直接全部减去平均数<br>那么把方向固定，以从左到右为例，对于i，前面i-1个已经解决「不一定是顺序上的」<br>因为只能相邻操作，才保证了这种做法的正确性，总会有与i+1交互的过程<br>那么自己不平衡的时候，步数+1，转移不平衡即可</p>
 
 </div></div>
 <h2 id="Code1"><a href="#Code1" class="headerlink" title="Code1"></a>Code1</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -637,42 +637,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">【CF11B】【51Nod1615】Jumping Jack</a></div>
+      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">「CF11B」「51Nod1615」Jumping Jack</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/dcc7.html" rel="bookmark">【bzoj2563】阿狸和桃子的游戏</a></div>
+      <div class="popular-posts-title"><a href="/posts/dcc7.html" rel="bookmark">「bzoj2563」阿狸和桃子的游戏</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9d1.html" rel="bookmark">【POI2009】救火站</a></div>
+      <div class="popular-posts-title"><a href="/posts/9d1.html" rel="bookmark">「POI2009」救火站</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8b22.html" rel="bookmark">【Luogu1525】关押罪犯</a></div>
+      <div class="popular-posts-title"><a href="/posts/8b22.html" rel="bookmark">「Luogu1525」关押罪犯</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7e7e.html" rel="bookmark">【Luogu1090】合并果子</a></div>
+      <div class="popular-posts-title"><a href="/posts/7e7e.html" rel="bookmark">「Luogu1090」合并果子</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d2e5.html" rel="bookmark">【Luogu1514】引水入城</a></div>
+      <div class="popular-posts-title"><a href="/posts/d2e5.html" rel="bookmark">「Luogu1514」引水入城</a></div>
       
     </li>
   
@@ -690,7 +690,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/24a0.html" title="【Luogu1031】均分纸牌">http://zory.ink/posts/24a0.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/24a0.html" title="「Luogu1031」均分纸牌">http://zory.ink/posts/24a0.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -732,8 +732,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/e9ee.html" rel="next" title="【Luogu1027】Car的旅行路线">
-                <i class="fa fa-chevron-left"></i> 【Luogu1027】Car的旅行路线
+              <a href="/posts/e9ee.html" rel="next" title="「Luogu1027」Car的旅行路线">
+                <i class="fa fa-chevron-left"></i> 「Luogu1027」Car的旅行路线
               </a>
             
           </div>
@@ -742,8 +742,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/3d30.html" rel="prev" title="【Luogu1032】字串变换">
-                【Luogu1032】字串变换 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/3d30.html" rel="prev" title="「Luogu1032」字串变换">
+                「Luogu1032」字串变换 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -821,7 +821,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -846,7 +846,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1255,7 +1257,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

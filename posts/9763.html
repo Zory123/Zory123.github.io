@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="快乐计数 努力更上时代潮流ing 前置：多项式全家桶、生成函数（包括拉格朗日反演） 以下计数的所有图都没有重边、自环">
+  <meta name="description" content="快乐计数 努力跟上时代潮流ing 前置：多项式全家桶、生成函数（包括拉格朗日反演）">
 <meta name="keywords" content="精品文章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】03数学-16快乐计数">
+<meta property="og:title" content="「OI之路」03数学-16快乐计数">
 <meta property="og:url" content="http://zory.ink/posts/9763.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="快乐计数 努力更上时代潮流ing 前置：多项式全家桶、生成函数（包括拉格朗日反演） 以下计数的所有图都没有重边、自环">
+<meta property="og:description" content="快乐计数 努力跟上时代潮流ing 前置：多项式全家桶、生成函数（包括拉格朗日反演）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-23T13:59:26.586Z">
+<meta property="og:updated_time" content="2020-02-24T07:10:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】03数学-16快乐计数">
-<meta name="twitter:description" content="快乐计数 努力更上时代潮流ing 前置：多项式全家桶、生成函数（包括拉格朗日反演） 以下计数的所有图都没有重边、自环">
+<meta name="twitter:title" content="「OI之路」03数学-16快乐计数">
+<meta name="twitter:description" content="快乐计数 努力跟上时代潮流ing 前置：多项式全家桶、生成函数（包括拉格朗日反演）">
 
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】03数学-16快乐计数 | Zory的个人博客</title>
+  <title>「OI之路」03数学-16快乐计数 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】03数学-16快乐计数
+          <h2 class="post-title" itemprop="name headline">「OI之路」03数学-16快乐计数
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-23 21:59:26" itemprop="dateModified" datetime="2019-10-23T21:59:26+08:00">2019-10-23</time>
+                <time title="修改时间：2020-02-24 15:10:59" itemprop="dateModified" datetime="2020-02-24T15:10:59+08:00">2020-02-24</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/9763.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】03数学-16快乐计数">
+            <span id="/posts/9763.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」03数学-16快乐计数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -612,26 +612,38 @@
 
       
         <p>快乐计数</p>
-<p>努力更上时代潮流ing</p>
+<p>努力跟上时代潮流ing</p>
 <p>前置：多项式全家桶、生成函数（包括拉格朗日反演）</p>
-<p>以下计数的所有图都没有重边、自环</p>
 <a id="more"></a>
+<h1 id="某些计数模型"><a href="#某些计数模型" class="headerlink" title="某些计数模型"></a>某些计数模型</h1><h4 id="n种颜色的球，每种颜色有-a-i-个，记-m-sum-a-i-，多次询问多少种本质不同的颜色序列，使得恰有k个间隔的两侧是同色球"><a href="#n种颜色的球，每种颜色有-a-i-个，记-m-sum-a-i-，多次询问多少种本质不同的颜色序列，使得恰有k个间隔的两侧是同色球" class="headerlink" title="n种颜色的球，每种颜色有$a_i$个，记$m=\sum a_i$，多次询问多少种本质不同的颜色序列，使得恰有k个间隔的两侧是同色球"></a>n种颜色的球，每种颜色有$a_i$个，记$m=\sum a_i$，多次询问多少种本质不同的颜色序列，使得恰有k个间隔的两侧是同色球</h4><p>当年做<a href="ec1b0e39.html">CF840C On the Bench</a>的时候（那题的球带标号，要乘上$\prod (a_i)!$），是直接dp的<br>$$<br>\\ 记f(i,j)=处理了前i种颜色恰有j个间隔，记S_i=\sum_{j&lt;i} a_j，转移枚举第i种颜色共分b组，消除了原先的a个间隔\\ f(i,(j-a)+(a_i-b))+=f(i-1,j)*C_j^a*C_{a_i-1}^{b-1}*C_{S_i+1-j}^{b-a}，即将前a组「依次」分给那a处同色间隔，剩下依次分给异色间隔<br>$$<br>这样是$O(m^2*\sum a_i)=O(m^3)$的；当时尝试过容斥但萎了，看到<a href="https://www.cnblogs.com/ywwyww/p/8513349.html" target="_blank" rel="noopener">XSY2666</a>发现这东西是能做的，要对空位而不是段做容斥<br>$$<br>\\ 钦定每种颜色至多分成b_i段，则权值显然为\frac{(\sum b_i)!}{\prod (b_i!)}<br>，这个可以无脑dp(i,j)+=dp(i-1,j-k)*C_{a_i-1}^{k-1}*\frac{1}{k!}<br>\\ 设f_i为恰好i个同色空，g_i为至少i个，g_i=dp(n,m-i)*(m-i)!,g_i=\sum_{j=i}^m f_jC_j^i，二项式反演得f_i=\sum_{j=i}^m g_jC_j^i(-1)^{j-i}<br>$$<br>于是后面那部分是个朴素的$O(mlogm)$的FFT优化卷积，主要是上面那个需要个分治FFT求多项式卷积，上界为$O(mlogm*logn)$</p>
+<h4 id="n种颜色的球，每种颜色有-a-i-个，问所有排列的贡献和，贡献计算方式与极大同色块大小相关"><a href="#n种颜色的球，每种颜色有-a-i-个，问所有排列的贡献和，贡献计算方式与极大同色块大小相关" class="headerlink" title="n种颜色的球，每种颜色有$a_i$个，问所有排列的贡献和，贡献计算方式与极大同色块大小相关"></a>n种颜色的球，每种颜色有$a_i$个，问所有排列的贡献和，贡献计算方式与极大同色块大小相关</h4><p><a href="c7f8.html/#「集训队作业2018R4」青春猪头少年不会梦到兔女郎学姐">「集训队作业2018R4」青春猪头少年不会梦到兔女郎学姐</a></p>
+<h1 id="图的计数"><a href="#图的计数" class="headerlink" title="图的计数"></a>图的计数</h1><p>以下计数的所有图都没有重边、自环</p>
 <h2 id="带标号无向图"><a href="#带标号无向图" class="headerlink" title="带标号无向图"></a>带标号无向图</h2><p>以下所有生成函数都是EGF</p>
-<h3 id="Prufer序列"><a href="#Prufer序列" class="headerlink" title="Prufer序列"></a>Prufer序列</h3><p>背结论：带标号无根树和Prufer序列是双射，详情：<a href="http://www.matrix67.com/blog/archives/682" target="_blank" rel="noopener">matrix67</a></p>
-<p>树转序列：每次找到编号最小的叶子节点，输出x的相邻节点，删除x，做n-2次</p>
-<p><strong>Cayley公式</strong>：n个节点完全图的生成树个数=$n^{n-2}$；</p>
+<h3 id="Prufer序列"><a href="#Prufer序列" class="headerlink" title="Prufer序列"></a>Prufer序列</h3><p>背结论：带标号无根树和Prufer序列是双射，详情：<a href="http://www.matrix67.com/blog/archives/682" target="_blank" rel="noopener">顾森-matrix67</a></p>
+<p>树转序列：每次找到<strong>编号最小的叶子节点（无根树中为度数=1的节点）</strong>，输出x的相邻节点，删除x，做n-2次</p>
+<p>序列转树：显然一个点的度数=出现次数+1，维护叶子集合（初始为未出现节点），每次取出最小的连向序列第一个元素</p>
+<p><strong>Cayley′s Formula</strong>：n个节点完全图的生成树个数=$n^{n-2}$，即每次填的东西可以是1到n</p>
 <p>推论：设编号为i的节点度数为$d_i$，显然每个数会出现$d_i-1$次，直接多重集排列数，树的个数=$\frac{(n-2)!}{\prod (d_i-1)!}$</p>
-<h3 id="基尔霍夫矩阵"><a href="#基尔霍夫矩阵" class="headerlink" title="基尔霍夫矩阵"></a>基尔霍夫矩阵</h3><p>用来求给定图的生成树计数，也可以得到Cayley公式，结论见<a href="c6a2.html">这里</a></p>
-<h3 id="树个数的另一种推导"><a href="#树个数的另一种推导" class="headerlink" title="树个数的另一种推导"></a>树个数的另一种推导</h3><p>我更喜欢这种，而且对下面有启发意义</p>
-<p>考虑有根树的EGF，$F(x)=xe^{F(x)},F^{-1}(x)=\frac{x}{e^x},拉格朗日反演，[x^n]F(x)=\frac{1}{n}[x^{n-1}] (F^{-1}(x)/x)^{-n}=\frac{n^{n-1}}{n!}$</p>
-<h3 id="基本结构计数"><a href="#基本结构计数" class="headerlink" title="基本结构计数"></a>基本结构计数</h3><p>$$<br>Tree(x)=\sum_{i=0} i^{i-2} \frac{x^i}{i!},Trees(x)=exp\ Tree(x) \\UndirectedGraph(x)=\sum_{i=0} 2^{C_i^2} \frac{x^i}{i!}，UndirectedConnectedGraph(x)=ln\ UndirectedGraph(x)<br>$$</p>
-<p>例题：<a href="../code/hdu/HDU5279.html">Hdu5279 YJC plays Minecraft</a><br>$$<br>对于一个块，森林生成树如上，不考虑环的话就是 2^{n} \prod ts(a_i) \\<br>简单容斥掉，首先跨块的边要连上，设g(n)表示大小为n的去头去尾块方案数\\<br>g(n)=\sum_{i=2}^n C_{n-2}^{i-2} i^{i-2} ts(n-i)，直接卷即可<br>$$</p>
+<hr>
+<p>这部分可以选择不看，直接看下面那个</p>
+<p><strong>Generalized Cayley′s Formula</strong>：n个点构成m棵树，要求1..m在不同的树中，方案数为$m*n^{n-m-1}$，可归纳证</p>
+<p>例题：<a href="https://codeforces.com/contest/1109/problem/D" target="_blank" rel="noopener">CF1109D Sasha and Interesting Fact from Graph Theory</a>，$ans=\sum_{ln} P_{n-2}^{ln-2}*C_{ln-1}^{ln-1-1}*ln*n^{n-ln-1}*m^{n-ln}$</p>
+<p><strong>将k个已知的树合并成一棵树</strong>：将已有树看做<strong>块</strong>，设<strong>块</strong>大小为$siz_t$，我们做$k-2$次找叶子<strong>块</strong>，每次找到的时候考虑连向<strong>点</strong>，那么就是$n^{k-2}$，然后这样我们已经<strong>直接连</strong>了k-2条边，剩下的两个<strong>块</strong>之间还要连一条边，已经连的边还没有确定从自己里面哪个<strong>点</strong>伸出去，所以乘上$\prod_{t=1}^k siz_t$</p>
+<hr>
+<p>给出一种集大成且好记的理解方式——点带权val，令一棵树的权值=$\prod val_x^{deg_x}$；假如带度数限制就没意思了$\prod val_i^{d_i}*\frac{(n-2)!}{\prod (d_i-1)!}$</p>
+<p>根据基本的Prufer序列，至少有$(\prod val_x)$，然后序列上就是$(\sum val_x)^{n-2}$，乘起来就是带权计数了；</p>
+<p>将1..m缩成一个点，从而森林转树，新节点的权值为m，也可以得到<strong>Generalized Cayley′s Formula</strong>；合并树那个本质上就是点带权</p>
+<p>很有教学意义的计数题（不单指prufer方面）：<a href="c7f8.html/「WC2019」数树">「WC2019」数树</a>、<a href="c7f8.html/「清华集训2017」生成树计数">「清华集训2017」生成树计数</a></p>
+<h3 id="基尔霍夫矩阵"><a href="#基尔霍夫矩阵" class="headerlink" title="基尔霍夫矩阵"></a>基尔霍夫矩阵</h3><p>用来求给定图的生成树计数，也可以得到Cayley公式（据说上面所有东西都能搞出来），具体见<a href="c6a2.html">这里</a></p>
+<h3 id="树个数的另一种推导"><a href="#树个数的另一种推导" class="headerlink" title="树个数的另一种推导"></a>树个数的另一种推导</h3><p>对下面有启发意义，考虑有根树的EGF</p>
+<p>$F(x)=xe^{F(x)},F^{-1}(x)=\frac{x}{e^x},拉格朗日反演，[x^n]F(x)=\frac{1}{n}[x^{n-1}] (F^{-1}(x)/x)^{-n}=\frac{n^{n-1}}{n!}$</p>
+<h3 id="其他基本结构计数"><a href="#其他基本结构计数" class="headerlink" title="其他基本结构计数"></a>其他基本结构计数</h3><p>$$<br>Tree(x)=\sum_{i=0} i^{i-2} \frac{x^i}{i!},Trees(x)=exp\ Tree(x) \\UndirectedGraph(x)=\sum_{i=0} 2^{C_i^2} \frac{x^i}{i!}，UndirectedConnectedGraph(x)=ln\ UndirectedGraph(x)<br>$$</p>
+<p>例题：Hdu5279 YJC plays Minecraft，<a href="../code/hdu/HDU5279.html">code</a><br>$$<br>对于一个块，森林生成树如上，不考虑环的话就是 2^{n} \prod ts(a_i) \\<br>简单容斥掉，首先跨块的边要连上，设g(n)表示大小为n的去头去尾块方案数\\<br>g(n)=\sum_{i=2}^n C_{n-2}^{i-2} i^{i-2} ts(n-i)，直接卷即可<br>$$</p>
 <p><a href="https://www.51nod.com/Challenge/Problem.html#problemId=1728" target="_blank" rel="noopener">51nod1728 不动点</a>，考虑有根树EGF转森林，$ans(k)=e^{x*ans(k-1)}$</p>
-<p>$O(n)$求若干无向环、一次fft且以边数为上标求若干无向链：<a href="d9e23b83.html#loj6609-无意识的石子堆">无意识的石子堆</a></p>
-<h3 id="连通图计数"><a href="#连通图计数" class="headerlink" title="连通图计数"></a>连通图计数</h3><p>n个点的连通图计数见生成函数一章，这里讨论一下【n点m边k连通块】的图的计数</p>
+<p>$O(n)$求若干无向环、一次FFT且以边数为上标求若干无向链：<a href="d9e23b83.html#loj6609-无意识的石子堆">无意识的石子堆</a></p>
+<h3 id="连通图计数"><a href="#连通图计数" class="headerlink" title="连通图计数"></a>连通图计数</h3><p>n个点的连通图计数见生成函数一章，这里讨论一下「n点m边k连通块」的图的计数</p>
 <p>直接dp可能是$O(n^8)$的，不太行</p>
-<p>设$f(n,m,k)$表示恰好，$g(n,m,k)$表示至少（对n的划分后，钦定至少k个连通块，假设每个连通块为完全图，边数=m）<br>$$<br>g(n,m,k)=\sum_{m2} C_{m2}^m \sum_{k2} S_2(k2,k) f(n,m2,k2)，斯特林反演 \\<br>f(n,m,k)=\sum_{m2} C_{m2}^m (dp(n,m2,k)=\sum_{k2} S_1(k2,k)(-1)^{k2-k} g(n,m2,k2)) \\<br>先考虑求k=1的特殊情况,<br>dp(n,m,k)=\sum_{Graph(n,m,k)} (k-1)! (-1)^{k-1},<br>f(n,m,1)=\sum_{m2}C_{m2}^m \sum_{k2} dp(n,m2,k2) \\<br>dp(n,m,k)=\sum_{i=1}^n C_{n-1}^{i-1} (-1)*k*dp(n-i,m-C_i^2,k-1),O(n^5) \\<br>可以进一步优化，注意到贡献系数是(k-1)!，我们之前只枚举1号点所在连通块大小是为了不计重 \\<br>但我们可以让他计重，每次枚举不包括1号点的连通块从而每种方案被计重(k-1)!次，至于(-1)显然并不用考虑 \\<br>设dp2(n,m)=\sum_{k2} dp(n,m,k2)，dp2(n,m)=\sum_{i=1}^nC_{n-1}^i (-1)*dp2(n-i,m-C_i^2),O(n^4)<br>$$<br>至于$k \ne 1$？不管了好像不是很好搞2333</p>
-<p>那我们的生成函数酱去哪了？首先你需要看过生成函数一章中二元生成函数运算，那么无向图的EGF就是$\sum_i \frac{x^i}{i!} (1+y)^{C_i^2}$，就个二项式定理，对这个EGF做ln就是连通图了，理论复杂度 $O(n^3logn)$</p>
+<p>设$f(n,m,k)$表示恰好，$g(n,m,k)$表示至少（对n的划分后，钦定至少k个连通块，假设每个连通块为完全图，边数=m）<br>$$<br>g(n,m,k)=\sum_{m2} C_{m2}^m \sum_{k2} S_2(k2,k) f(n,m2,k2)，斯特林反演 \\<br>f(n,m,k)=\sum_{m2} C_{m2}^m (dp(n,m2,k)=\sum_{k2} S_1(k2,k)(-1)^{k2-k} g(n,m2,k2)) \\<br>先考虑求k=1的特殊情况,<br>dp(n,m,k)=\sum_{Graph(n,m,k)} (k-1)! (-1)^{k-1},<br>f(n,m,1)=\sum_{m2}C_{m2}^m \sum_{k2} dp(n,m2,k2) \\<br>dp(n,m,k)=\sum_{i=1}^n C_{n-1}^{i-1} (-1)*k*dp(n-i,m-C_i^2,k-1),O(n^5) \\<br>可以进一步优化，注意到贡献系数是(k-1)!，我们之前只枚举1号点所在连通块大小是为了不计重 \\<br>但我们可以让他计重，每次枚举不包括1号点的连通块从而每种方案被计重(k-1)!次，至于(-1)显然并不用考虑 \\<br>设dp2(n,m)=\sum_{k2} dp(n,m,k2)，dp2(n,m)=\sum_{i=1}^nC_{n-1}^i (-1)*dp2(n-i,m-C_i^2),O(n^4)<br>$$<br>至于$k \ne 1$？好像只能老实卷2333</p>
 <h3 id="连通欧拉回路图计数"><a href="#连通欧拉回路图计数" class="headerlink" title="连通欧拉回路图计数"></a>连通欧拉回路图计数</h3><p>如果你对ln熟练的话，显然我们并不关心这个连通，而只关心$f_n=n个点都是偶度数的无向图个数$，对这个ln就行了</p>
 <p>考虑n-1个点的无向图数即$2^{C_{n-1}^2}$，然后现在把n放进去，连向那些度数为奇的点；</p>
 <p>为什么这些点一定是偶数个？每次加一条边会让非法量变化0或2，而初始的非法为0；故$f_n=2^{C_{n-1}^2}$</p>
@@ -652,18 +664,18 @@
 <p>设G为所有竞赛图，F为强连通竞赛图，为方便设$g_o=1,f_0=0$</p>
 <p>考虑怎么表示，一开始想着考虑1在哪里发现不好搞，但想了想发现改为枚举哪些点作为拓扑序上第一个就好了（缩完点显然是链），$g_n=[n=0]+\sum_{i=1}^{\infty}C_n^if_ig_{n-i},G=1+F*G$</p>
 <p>例题：<a href="https://www.luogu.org/problem/P4233" target="_blank" rel="noopener">luogu4233 射命丸文的笔记</a>，<a href="https://www.luogu.org/paste/lnruabm0" target="_blank" rel="noopener">code</a></p>
-<p>哈密顿回路数=$(n-1)!2^{n(n-1)/2-n}$，然后有哈密顿回路的竞赛图等价于强连通的竞赛图，<a href="293.html\#竞赛图">证明</a></p>
+<p>哈密顿回路数=$(n-1)!2^{n(n-1)/2-n}$，然后有哈密顿回路的竞赛图等价于强连通的竞赛图，<a href="d107.html\#竞赛图">证明</a></p>
 <p>要特判一下1和2，$O(nlogn)$</p>
 <p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=5219" target="_blank" rel="noopener">bzoj5219 Lydsy2017省队十连测 最长路径</a>，<a href="https://www.luogu.org/paste/hjcbqd4v" target="_blank" rel="noopener">code</a></p>
 <p>先把上面的f和g处理好，考虑s表示以1所在强连通分量为开头的方案数，$s_n=\sum_{i=1}^nC_{n-1}^{i-1}f_ig_{n-i},ans_i=C_{n-1}^{i-1}s_ig_{n-i}$</p>
-<h4 id="竞赛图强连通分量个数-GDOI2018-D1T4"><a href="#竞赛图强连通分量个数-GDOI2018-D1T4" class="headerlink" title="竞赛图强连通分量个数 GDOI2018 D1T4"></a>竞赛图强连通分量个数 <a href="d688.html">GDOI2018 D1T4</a></h4><h3 id="有向无环图计数"><a href="#有向无环图计数" class="headerlink" title="有向无环图计数"></a>有向无环图计数</h3><p><a href="http://cogs.pro:8080/cogs/problem/problem.php?pid=vxJJmVjgg" target="_blank" rel="noopener">例题</a>、bzoj2863愤怒的元首<br>$$<br>同样考虑有根，定义根为出度=0的节点，考虑简单容斥 \\<br>至少i个节点是根，考虑根与其他节点的连边，g_n=[n=0]+\sum_{i=1}^n(-1)^{i+1} C_n^i2^{i(n-i)}g_{n-i}<br>$$<br>论文上的是一个稍复杂的思路，选看：</p>
+<h4 id="竞赛图的强连通分量个数-GDOI2018-D1T4"><a href="#竞赛图的强连通分量个数-GDOI2018-D1T4" class="headerlink" title="竞赛图的强连通分量个数 GDOI2018 D1T4"></a>竞赛图的强连通分量个数 <a href="d688.html">GDOI2018 D1T4</a></h4><h3 id="有向无环图计数"><a href="#有向无环图计数" class="headerlink" title="有向无环图计数"></a>有向无环图计数</h3><p><a href="http://cogs.pro:8080/cogs/problem/problem.php?pid=vxJJmVjgg" target="_blank" rel="noopener">例题</a>、bzoj2863愤怒的元首<br>$$<br>同样考虑有根，定义根为出度=0的节点，考虑简单容斥 \\<br>至少i个节点是根，考虑根与其他节点的连边，g_n=[n=0]+\sum_{i=1}^n(-1)^{i+1} C_n^i2^{i(n-i)}g_{n-i}<br>$$<br>论文上的是一个稍复杂的思路，选看：</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>$$<br>显然无根dag(G,根集合S)对应2^{|S|}个有根dag(G,S’)，设i个点j个根的无根dag为f_{i,j}，考虑将j个点删除会发生什么 \\<br>考虑选哪些点为根以及删除的边，\sum_{实际i=0}^n f_{n,i} 2^i=\sum_{至少i=0}^n C_n^i 2^{i(n-i)} g_{n-i}\\<br>展开次幂并翻转，\sum_{至少j=0}^n \sum_{i=j}^n f_{n,i} C_i^j=\sum_{至少i=0}^n C_n^i 2^{i(n-i)} g_{n-i} ，注意外和号等价 \\<br>\sum_{i=0}^n (-1)^i C_n^i 2^{i(n-i)} g_{n-i}<br>=\sum_{j=0}^n (-1)^j \sum_{i=j}^n f_{n,i} C_i^j<br>=\sum_{i=0}^n f_{n,i} \sum_{j=0}^i C_i^j (-1)^j=\sum_{i=0}^n f_{n,i} [i=0]=[n=0]\\<br>整理可得递推式：g_n=[n=0]-\sum_{i=1}^n (-1)^i C_n^i 2^{i(n-i)} g_{n-i}<br>$$<br>殊途同归，也算是某种验证吧</p>
 
 </div></div>
 <p>根据生成函数知识可得：$PP为(-1)^i的DGF，GG=-PP*GG+GG+1，GG=PP^{-1}$</p>
 <p>若要求弱连通，直接在EGF下ln就好了</p>
-<p>题：<a href="2558.html">CEOI2019游乐园</a>、<a href="http://zory.ink/posts/8884.html#uoj193[UR#14]人类补完计划">人类补完计划</a></p>
+<p>题：<a href="2558.html">CEOI2019游乐园</a>、<a href="http://zory.ink/posts/8884.html#uoj193[UR#14]人类补完计划">UR14 人类补完计划</a></p>
 <h3 id="强连通图计数"><a href="#强连通图计数" class="headerlink" title="强连通图计数"></a>强连通图计数</h3><p><a href="http://cogs.pro:8080/cogs/problem/problem.php?pid=vQmxzVjPW" target="_blank" rel="noopener">例题</a></p>
 <p>考虑怎么类似于上面去做，就是要把一些强连通分量替代前面枚举的根，从上面的式子出发，就是要用$(-1)^i$作为至少i个强连通块作为根组合起来的系数，故设$e_n$表示总点数为n的，若干个强连通图，且方案的系数为$(-1)^{强连通分量个数}$<br>$$<br>枚举1所在强连通分量大小，e_n=[n=0]-\sum_{i=1}^n C_{n-1}^{i-1} d_i e_{n-i},E=1-\int D’E,D=-\int \frac{E’}{E}=-lnE \\<br>类似dag的推导，还是容斥，\sum_{i=0}^n C_n^i e_i 2^{i(n-i)}h_{n-i}=[n=0]，即EE=HH^{-1} \\<br>可以理解为对h_n减一系列东西，这些东西的和是个容斥，意义为所有强连通分量根的个数&gt;0的情况，于是=0<br>$$</p>
 <p>顺便说一道类似的题：bzoj3812 主旋律，$O(n3^n)$，<a href="http://darkbzoj.tk/submission/35422" target="_blank" rel="noopener">code</a><br>$$<br>e_S=[S=\emptyset]-\sum_{T \subseteq S,lowbit(S) \in T} d_T e_{S \setminus T} 得d_S=[S=\emptyset]-e_S-\sum_{T \subset S,lowbit(S) \in T} d_T e_{S \setminus T}  \\<br>把上面的式子化一化，e_S=[S=\emptyset]-\sum_{T \subset S} 2^{to(T,S \setminus T)} e_T h_{S \setminus T}  \\<br>$$</p>
@@ -685,14 +697,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/68d9.html" rel="bookmark">【OI之路】03数学-13生成函数</a></div>
+      <div class="popular-posts-title"><a href="/posts/250b.html" rel="bookmark">【OI之路】04图论-9二分图</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/80c8.html" rel="bookmark">【置顶】套路集锦</a></div>
+      <div class="popular-posts-title"><a href="/posts/68d9.html" rel="bookmark">「OI之路」03数学-13生成函数</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/4bab.html" rel="bookmark">「OI之路」05动态规划-2-动态规划进阶</a></div>
       
     </li>
   
@@ -706,21 +725,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/250b.html" rel="bookmark">【OI之路】04图论-9二分图</a></div>
+      <div class="popular-posts-title"><a href="/posts/80c8.html" rel="bookmark">「置顶」套路集锦</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f834.html" rel="bookmark">【OI之路】03数学-11集合幂级数</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/b399.html" rel="bookmark">【OI之路】04图论-7生成树</a></div>
+      <div class="popular-posts-title"><a href="/posts/f834.html" rel="bookmark">「OI之路」03数学-11集合幂级数</a></div>
       
     </li>
   
@@ -738,7 +750,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/9763.html" title="【OI之路】03数学-16快乐计数">http://zory.ink/posts/9763.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/9763.html" title="「OI之路」03数学-16快乐计数">http://zory.ink/posts/9763.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -776,8 +788,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/3e6e.html" rel="next" title="【OI之路】03数学-15概率论">
-                <i class="fa fa-chevron-left"></i> 【OI之路】03数学-15概率论
+              <a href="/posts/3e6e.html" rel="next" title="「OI之路」03数学-15概率论">
+                <i class="fa fa-chevron-left"></i> 「OI之路」03数学-15概率论
               </a>
             
           </div>
@@ -786,8 +798,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/8720.html" rel="prev" title="【OI之路】04图论-1最短路">
-                【OI之路】04图论-1最短路 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/8720.html" rel="prev" title="「OI之路」04图论-1最短路">
+                「OI之路」04图论-1最短路 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -865,7 +877,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -890,7 +902,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1299,7 +1313,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1362,7 +1380,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#带标号无向图"><span class="nav-text">带标号无向图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Prufer序列"><span class="nav-text">Prufer序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基尔霍夫矩阵"><span class="nav-text">基尔霍夫矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#树个数的另一种推导"><span class="nav-text">树个数的另一种推导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本结构计数"><span class="nav-text">基本结构计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连通图计数"><span class="nav-text">连通图计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连通欧拉回路图计数"><span class="nav-text">连通欧拉回路图计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#仙人掌"><span class="nav-text">仙人掌</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#点双连通图计数"><span class="nav-text">点双连通图计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#边双连通图计数"><span class="nav-text">边双连通图计数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#带标号有向图"><span class="nav-text">带标号有向图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为下文方便定几个符号"><span class="nav-text">为下文方便定几个符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#竞赛图相关计数"><span class="nav-text">竞赛图相关计数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#强连通竞赛图计数"><span class="nav-text">强连通竞赛图计数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#竞赛图强连通分量个数-GDOI2018-D1T4"><span class="nav-text">竞赛图强连通分量个数 GDOI2018 D1T4</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有向无环图计数"><span class="nav-text">有向无环图计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强连通图计数"><span class="nav-text">强连通图计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#国家集训队互测2016R1-A-B-problem（口胡）"><span class="nav-text">国家集训队互测2016R1 A+B problem（口胡）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无标号图"><span class="nav-text">无标号图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#某些计数模型"><span class="nav-text">某些计数模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#n种颜色的球，每种颜色有-a-i-个，记-m-sum-a-i-，多次询问多少种本质不同的颜色序列，使得恰有k个间隔的两侧是同色球"><span class="nav-text">n种颜色的球，每种颜色有$a_i$个，记$m=\sum a_i$，多次询问多少种本质不同的颜色序列，使得恰有k个间隔的两侧是同色球</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#n种颜色的球，每种颜色有-a-i-个，问所有排列的贡献和，贡献计算方式与极大同色块大小相关"><span class="nav-text">n种颜色的球，每种颜色有$a_i$个，问所有排列的贡献和，贡献计算方式与极大同色块大小相关</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图的计数"><span class="nav-text">图的计数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#带标号无向图"><span class="nav-text">带标号无向图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Prufer序列"><span class="nav-text">Prufer序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基尔霍夫矩阵"><span class="nav-text">基尔霍夫矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#树个数的另一种推导"><span class="nav-text">树个数的另一种推导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他基本结构计数"><span class="nav-text">其他基本结构计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连通图计数"><span class="nav-text">连通图计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连通欧拉回路图计数"><span class="nav-text">连通欧拉回路图计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#仙人掌"><span class="nav-text">仙人掌</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#点双连通图计数"><span class="nav-text">点双连通图计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#边双连通图计数"><span class="nav-text">边双连通图计数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#带标号有向图"><span class="nav-text">带标号有向图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为下文方便定几个符号"><span class="nav-text">为下文方便定几个符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#竞赛图相关计数"><span class="nav-text">竞赛图相关计数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#强连通竞赛图计数"><span class="nav-text">强连通竞赛图计数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#竞赛图的强连通分量个数-GDOI2018-D1T4"><span class="nav-text">竞赛图的强连通分量个数 GDOI2018 D1T4</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有向无环图计数"><span class="nav-text">有向无环图计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强连通图计数"><span class="nav-text">强连通图计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#国家集训队互测2016R1-A-B-problem（口胡）"><span class="nav-text">国家集训队互测2016R1 A+B problem（口胡）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无标号图"><span class="nav-text">无标号图</span></a></li></ol></li></ol></div>
             
 
           </div>

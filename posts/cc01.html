@@ -95,14 +95,14 @@
   <meta name="description" content="后缀数组入门">
 <meta name="keywords" content="sa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】06字符串-6后缀数组">
+<meta property="og:title" content="「OI之路」06字符串-6后缀数组">
 <meta property="og:url" content="http://zory.ink/posts/cc01.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="后缀数组入门">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-21T12:59:15.390Z">
+<meta property="og:updated_time" content="2019-12-10T03:00:21.685Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】06字符串-6后缀数组">
+<meta name="twitter:title" content="「OI之路」06字符串-6后缀数组">
 <meta name="twitter:description" content="后缀数组入门">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】06字符串-6后缀数组 | Zory的个人博客</title>
+  <title>「OI之路」06字符串-6后缀数组 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】06字符串-6后缀数组
+          <h2 class="post-title" itemprop="name headline">「OI之路」06字符串-6后缀数组
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-21 20:59:15" itemprop="dateModified" datetime="2019-09-21T20:59:15+08:00">2019-09-21</time>
+                <time title="修改时间：2019-12-10 11:00:21" itemprop="dateModified" datetime="2019-12-10T11:00:21+08:00">2019-12-10</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/cc01.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】06字符串-6后缀数组">
+            <span id="/posts/cc01.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」06字符串-6后缀数组">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -620,7 +620,7 @@
 <p>按照这个做，时间复杂度就是2n的</p>
 <h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> Sa</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> rk[MAX_N*<span class="number">2</span>],sa[MAX_N*<span class="number">2</span>],hei[MAX_N*<span class="number">2</span>];</div><div class="line">    <span class="keyword">int</span> ct[MAX_N*<span class="number">2</span>],tmp[MAX_N*<span class="number">2</span>],wr[MAX_N*<span class="number">2</span>];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">getsa</span><span class="params">()</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="built_in">memset</span>(ct,<span class="number">0</span>,<span class="keyword">sizeof</span> ct);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) ct[rk[i]=a[i]]++;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_N;i++) ct[i]+=ct[i<span class="number">-1</span>];</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;=<span class="number">1</span>;i--) sa[ct[rk[i]]--]=i;</div><div class="line">        <span class="keyword">int</span> ln=<span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>(ln&lt;n)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> tot=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">if</span>(sa[i]+ln&gt;n) tmp[++tot]=sa[i];</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">if</span>(sa[i]-ln&gt;=<span class="number">1</span>) tmp[++tot]=sa[i]-ln;</div><div class="line">            <span class="built_in">memset</span>(wr,<span class="number">0</span>,<span class="keyword">sizeof</span> wr);<span class="comment">//debug</span></div><div class="line">            <span class="built_in">memset</span>(ct,<span class="number">0</span>,<span class="keyword">sizeof</span> ct);</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) ct[ wr[tmp[i]]=rk[tmp[i]] ]++;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;MAX_N;i++) ct[i]+=ct[i<span class="number">-1</span>];</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;=<span class="number">1</span>;i--) sa[ct[wr[tmp[i]]]--]=tmp[i];</div><div class="line">            <span class="keyword">int</span> cnt=<span class="number">1</span>;rk[sa[<span class="number">1</span>]]=<span class="number">1</span>;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</div><div class="line">            &#123;</div><div class="line">                <span class="keyword">if</span>(wr[sa[i<span class="number">-1</span>]]!=wr[sa[i]] or wr[sa[i<span class="number">-1</span>]+ln]!=wr[sa[i]+ln]) cnt++;</div><div class="line">                rk[sa[i]]=cnt;</div><div class="line">            &#125;</div><div class="line">            ln*=<span class="number">2</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">gethei</span><span class="params">()</span></div><div class="line">    </span>&#123;</div><div class="line">        <span class="keyword">int</span> lst=<span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(rk[i]==<span class="number">1</span>) &#123;hei[<span class="number">1</span>]=<span class="number">0</span>;<span class="keyword">continue</span>;&#125;</div><div class="line">            <span class="keyword">int</span> j=sa[rk[i]<span class="number">-1</span>];<span class="keyword">if</span>(lst) lst--;</div><div class="line">            <span class="keyword">while</span>(max(i,j)+lst&lt;=n and a[i+lst]==a[j+lst]) lst++;</div><div class="line">            hei[rk[i]]=lst;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;sa;</div></pre></td></tr></table></figure>
 <h3 id="经典例题"><a href="#经典例题" class="headerlink" title="经典例题"></a>经典例题</h3><p><a href="https://loj.ac/problem/2133" target="_blank" rel="noopener">NOI2015品酒大会</a>，<a href="https://loj.ac/submission/434922" target="_blank" rel="noopener">code</a></p>
-<h3 id="一些拓展"><a href="#一些拓展" class="headerlink" title="一些拓展"></a>一些拓展</h3><p><a href="https://www.luogu.org/problem/P5353" target="_blank" rel="noopener">树上：luogu5353【模板】树上后缀排序</a></p>
+<h3 id="一些拓展"><a href="#一些拓展" class="headerlink" title="一些拓展"></a>一些拓展</h3><p><a href="https://www.luogu.org/problem/P5353" target="_blank" rel="noopener">树上：luogu5353「模板」树上后缀排序</a></p>
 <p>思考一下，发现sa完全可以拓展到树上，基数排序多几个关键字就行了，然后把序列倍增改成树上倍增</p>
 
       
@@ -642,35 +642,35 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d300.html" rel="bookmark">【SP8222】NSUBSTR</a></div>
+      <div class="popular-posts-title"><a href="/posts/d300.html" rel="bookmark">「SP8222」NSUBSTR</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/aba4.html" rel="bookmark">【Ahoi2013】差异</a></div>
+      <div class="popular-posts-title"><a href="/posts/aba4.html" rel="bookmark">「Ahoi2013」差异</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/333f.html" rel="bookmark">【bzoj2865】字符串识别【bzoj1396】识别子串</a></div>
+      <div class="popular-posts-title"><a href="/posts/333f.html" rel="bookmark">「bzoj2865」字符串识别「bzoj1396」识别子串</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f7b4.html" rel="bookmark">【NOI2016】优秀的拆分</a></div>
+      <div class="popular-posts-title"><a href="/posts/f7b4.html" rel="bookmark">「NOI2016」优秀的拆分</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8cf7.html" rel="bookmark">【bzoj3277】【bzoj3473】串【HDU6405】Make ZYB Happy</a></div>
+      <div class="popular-posts-title"><a href="/posts/8cf7.html" rel="bookmark">「bzoj3277」「bzoj3473」串「HDU6405」Make ZYB Happy</a></div>
       
     </li>
   
@@ -688,7 +688,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/cc01.html" title="【OI之路】06字符串-6后缀数组">http://zory.ink/posts/cc01.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/cc01.html" title="「OI之路」06字符串-6后缀数组">http://zory.ink/posts/cc01.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -726,8 +726,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/ab16.html" rel="next" title="【OI之路】06字符串-5AC自动机">
-                <i class="fa fa-chevron-left"></i> 【OI之路】06字符串-5AC自动机
+              <a href="/posts/ab16.html" rel="next" title="「OI之路」06字符串-5AC自动机">
+                <i class="fa fa-chevron-left"></i> 「OI之路」06字符串-5AC自动机
               </a>
             
           </div>
@@ -736,8 +736,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/d6cf.html" rel="prev" title="【OI之路】06字符串-7后缀自动机">
-                【OI之路】06字符串-7后缀自动机 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/d6cf.html" rel="prev" title="「OI之路」06字符串-7后缀自动机">
+                「OI之路」06字符串-7后缀自动机 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -815,7 +815,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -840,7 +840,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1249,7 +1251,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

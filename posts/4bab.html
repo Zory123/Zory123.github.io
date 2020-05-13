@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="1D/1D动态规划状态为n，转移为n的dp方程动态规划的优化-周尚彦.pdf">
-<meta name="keywords" content="dp">
+  <meta name="description" content="动态规划进阶">
+<meta name="keywords" content="精品文章,dp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】05动态规划-2-1d1d动态规划">
+<meta property="og:title" content="「OI之路」05动态规划-2-动态规划进阶">
 <meta property="og:url" content="http://zory.ink/posts/4bab.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="1D/1D动态规划状态为n，转移为n的dp方程动态规划的优化-周尚彦.pdf">
+<meta property="og:description" content="动态规划进阶">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-22T04:44:44.648Z">
+<meta property="og:updated_time" content="2020-05-10T14:57:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】05动态规划-2-1d1d动态规划">
-<meta name="twitter:description" content="1D/1D动态规划状态为n，转移为n的dp方程动态规划的优化-周尚彦.pdf">
+<meta name="twitter:title" content="「OI之路」05动态规划-2-动态规划进阶">
+<meta name="twitter:description" content="动态规划进阶">
 
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】05动态规划-2-1d1d动态规划 | Zory的个人博客</title>
+  <title>「OI之路」05动态规划-2-动态规划进阶 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】05动态规划-2-1d1d动态规划
+          <h2 class="post-title" itemprop="name headline">「OI之路」05动态规划-2-动态规划进阶
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-22 12:44:44" itemprop="dateModified" datetime="2019-08-22T12:44:44+08:00">2019-08-22</time>
+                <time title="修改时间：2020-05-10 22:57:55" itemprop="dateModified" datetime="2020-05-10T22:57:55+08:00">2020-05-10</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/4bab.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】05动态规划-2-1d1d动态规划">
+            <span id="/posts/4bab.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」05动态规划-2-动态规划进阶">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -611,33 +611,61 @@
       
 
       
-        <p>1D/1D动态规划<br>状态为n，转移为n的dp方程<br><a href="../files/文章/动态规划的优化-周尚彦.pdf">动态规划的优化-周尚彦.pdf</a></p>
-<a id="more"></a>
-<h2 id="单调队列"><a href="#单调队列" class="headerlink" title="单调队列"></a>单调队列</h2><p>主要步骤：</p>
+        <p>动态规划进阶<br><a id="more"></a></p>
+<h2 id="1D-1D动态规划"><a href="#1D-1D动态规划" class="headerlink" title="1D/1D动态规划"></a>1D/1D动态规划</h2><p>状态和转移都是一维的动态规划</p>
+<p>$f(i)=f(j)+w(j,i)$</p>
+<h2 id="单调队列"><a href="#单调队列" class="headerlink" title="单调队列"></a>单调队列</h2><p>能转移的集合有单调性</p>
+<p>主要步骤：</p>
 <ol>
 <li>移除无效元素</li>
 <li>计算队首的最优g，得到f(i)的最优结果</li>
 <li>计算新的g，放入队列中，并维护单调性</li>
 </ol>
-<p>有一道比较变态的变形题：<br><a href="18f8.html">Cut the Sequence</a></p>
-<h2 id="斜率优化"><a href="#斜率优化" class="headerlink" title="斜率优化"></a>斜率优化</h2><p>这个东西学了n次，前面n-1次都没学扎实（教练水平有限）<br>随着实力的提升，这次细细研究周尚彦的论文，终于彻底搞明白了<br>所以我也尽力讲清楚，但开始研究之前请确保有扎实的基础（如提高一等水平）</p>
-<p>斜率优化主要可以从数学和图形的角度去理解，<br>数学方面的话可以看我玩具装箱的题解，本文以图形为主（更有助于后期的提升）</p>
-<p>dp方程的基本形式(不能有二维数组)：<br>$f(i)=f(j)+w(j,i),w(j,i)=a_i+b_j+c_i \times d_j$<br>如果j在i之前已经计算出来了，显然可以化一下式子<br>$f(i)=(d_j) \cdot (c_i) +a_i+b_j+f(j)$<br>不难看出这是一个一次函数，i是带入的未知元，这个可以用李超树轻松解决<br>看到别人说要化成一次函数的形式，这是我最先想到的做法，然而这样的复杂度下限是nlogn的<br>然而有些题，使用斜率优化可以线性解决</p>
-<p>换一种思路，考虑将j本身的东西所谓x和y，也就是变成点<br>那么对于i，它的决策也可以是这种形式：<br>$f(j)+b_j=(-c_i) \cdot (d_j) +f(i)-a_i$<br><strong>截距：直线与y轴的交点的纵坐标</strong><br>那么我们的目的就是最小化截距</p>
-<p>据说这是一个线性规划问题，但我不清楚这是什么……但这和我们要讲的无关<br>总之就是一个直线，其斜率和i有关，从下往上移直到碰到第一个点，就是最优决策点<br>显然只有某个凸壳上的点是有用的（min则下凸壳）</p>
-<hr>
+<p>有一道比较变态的变形题：<a href="18f8.html">Cut the Sequence</a></p>
+<h2 id="斜率优化"><a href="#斜率优化" class="headerlink" title="斜率优化"></a>斜率优化</h2><p>对于权值的要求：$w(j,i)=a_i+b_j+c_i \times d_j$</p>
+<p>如果j在i之前已经计算出来了，显然可以化一下式子：$f(i)=(d_j) \cdot (c_i) +a_i+b_j+f(j)$</p>
+<p>不难看出这是一个一次函数，i是带入的未知元，这个可以用李超树轻松解决，复杂度下限是nlogn</p>
+<p>而运用斜率优化，有些题还是要nlogn，但有些题可以达到线性（文末有讨论）</p>
+<p>换一种思路，考虑将j本身的东西所谓x和y，也就是变成点</p>
+<p>那么对于i，它的决策也可以是这种形式：$f(j)+b_j=(-c_i) \cdot (d_j) +f(i)-a_i$<br><strong>截距：直线与y轴的交点的纵坐标</strong><br>那么我们的目的就是最小化截距。总之就是一个直线，其斜率和i有关，从下往上移直到碰到第一个点，就是最优决策点<br>显然只有某个凸壳上的点是有用的（min则下凸壳）</p>
 <p>然后下面的内容就要结合题目的具体性质了<br>A. 点的x坐标是单调的</p>
 <ol>
 <li>提供的直线的斜率是单调递增的<br>这种情况的话，显然这个凸壳内部相邻点的斜率是单调递增的，否则不会有贡献<br>而且决策点具有单调性，左边的部分无需保留，通常用单调队列实现</li>
 <li>提供的直线的斜率是不单调的<br>此时决策点不单调，不过因为维护好了凸壳，可以在上面二分（某个左右都更差的位置）</li>
 </ol>
-<p>B. 点的x坐标是不单调的<br>平衡树动态插入来维护<br>或者用cdq分治处理</p>
-<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><p>详细地讲讲这个入门好题(仅从数学的角度)：<br><a href="dae0.html">玩具装箱</a><br>好文章推荐：<br><a href="http://www.cnblogs.com/MashiroSky/p/6009685.html" target="_blank" rel="noopener">MashiroSky</a></p>
-<h2 id="四边形不等式"><a href="#四边形不等式" class="headerlink" title="四边形不等式"></a>四边形不等式</h2><p>如果转移满足该不等式，则称满足决策单调性<br>形式1：对于 $a \leq b \leq c \leq d,w(a,d)+w(b,c) \geq w(a,c)+w(b,d)$<br>（简单记为：交叉小于包含）<br>形式2： $w(a,b+1)+w(a+1,b) \geq w(a,b)+w(a+1,b+1)$<br>考场上可以考虑暴力打出决策点的表，验证单调性</p>
-<p>一维：<br>$f(i)=min f(j)+w(j,i)$<br>一维状态例题：<a href="fb5d.html">诗人小G</a><br>这个套路还是很好用的</p>
-<p>然后还有一种写法，某些情况下可能更好写<br>就是分治，每次暴力处理mid的决策点</p>
-<p>二维（虽然这个不属于1d1d，但是也顺便讲讲）：<br>$f(l,r)=min f(l,k)+f(k+1,r)+w(l,r)$<br>如果w满足四边形不等式，则f也满足四边形不等式<br>如果f满足四边形不等式，则 $fm(l,r-1) \leq fm(l,r) \leq fm(l+1,r)$<br>即f的决策，在同一行、同一列上单调递增</p>
-<p>例题：合并石子<br>显然其w满足四边形不等式（取等），则f也满足，那么决策的区间是确定了的<br>然后你考虑每种ln<br>$l=1，fm(1,ln-1) -&gt; fm(2,ln)$<br>$l=2，fm(2,ln) -&gt; fm(3,ln+1)$<br>……<br>也就是枚举范围连起来只有一个n<br>（感觉这种东西谁会想到啊……）<br>l<br>推荐文章：<br><a href="https://www.cnblogs.com/mlystdcall/p/6525962.html" target="_blank" rel="noopener">https://www.cnblogs.com/mlystdcall/p/6525962.html</a><br><a href="https://blog.csdn.net/noiau/article/details/72514812" target="_blank" rel="noopener">https://blog.csdn.net/noiau/article/details/72514812</a></p>
+<p>B. 点的x坐标是不单调的<br>平衡树动态插入来维护或者用cdq分治处理</p>
+<p><strong>练习</strong>：入门经典题是<a href="dae0.html">玩具装箱</a>，当时写的题解是从数学的角度，现在用几何角度基本是秒杀的。另外如<a href="https://www.luogu.com.cn/problem/P5504" target="_blank" rel="noopener">「JSOI2011」柠檬</a></p>
+<h2 id="决策单调性"><a href="#决策单调性" class="headerlink" title="决策单调性"></a>决策单调性</h2><p>年轻时一直不喜欢这东西，觉得就是打表，证明冗长，题目少</p>
+<p>现在真正研究下，才发现这东西不简单，也不是题目少，只是境界不够，所以看不懂或没耐心的也没关系，回去修炼一年再来吧</p>
+<p>不过冗长的数学证明这事情，至今水平也不太足，但如果真的太长的墙裂建议别看，没多久就会忘记的</p>
+<hr>
+<p>如果w满足下面的四边形不等式，就可知满足决策单调性，决策点是单调递增的（注意我用的是<strong>劣</strong>）： </p>
+<p>$\forall a&lt;b &lt; c&lt;d, w(a,c)+w(b,d) 不劣于 w(a,d)+w(b,c)$</p>
+<p>年轻的我曾经给出了当时觉得已经算简洁的数学证明：<br>$$<br>想证明 \forall j&lt;i,fm_j \le fm_i，假定问题要最小化，最大化没区别\\对于x \le fm_j,T=dp(x)+w(x,i)-dp(fm_j)-w(fm_j,i)\\根据上面的式子，x \le fm_j \le j \le i,w(x,j)+w(fm_j,i) \le w(x,i)+w(fm_j,j)\\T \ge dp(x)-dp(j)+w(x,j) \ge 0，因此x没有fm_j优，因此fm_i \ge fm_j<br>$$<br>年迈的我选择跳过这段证明而采用更直观的方法：所谓不满足决策单调性就是$fm_i&lt;fm_j \le j \le i$，此时两人花在转移上的花费之和相当于不等式的后者，换成前者一定会导致$dp_i+dp_j$变优，因此一定有一个变优，但我们的dp定义就是不能再变优的了</p>
+<p>这个证明思路其实会始终贯穿，即使在二维、环等各种变形中，精髓还是不变的：<strong>形似最短路的dp这类东西本身定义的时候是所有状态都最优了，然后四边形不等式给出了一种交换使得两个状态和变优这样一个不应出现的情况</strong></p>
+<p>有些题显然满足（如CF321E画个图就行），不显然就拍上，假了再说</p>
+<hr>
+<h3 id="类型一：-dis-i-lt-j-w-i-j-，w满足四边形不等式，求0到n最短路"><a href="#类型一：-dis-i-lt-j-w-i-j-，w满足四边形不等式，求0到n最短路" class="headerlink" title="类型一：$dis_{i&lt;j}=w(i,j)$，w满足四边形不等式，求0到n最短路"></a>类型一：$dis_{i&lt;j}=w(i,j)$，w满足四边形不等式，求0到n最短路</h3><p>例题：<a href="https://www.luogu.com.cn/problem/P1912" target="_blank" rel="noopener">NOI2009诗人小G</a>、<a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2216" target="_blank" rel="noopener">bzoj2216 「Poi2011」Lightning Conductor</a></p>
+<p>必须从左往右计算出dp值，考虑每个点会作为哪些地方的决策点，从前往后考虑的话显然是一段后缀，二分出位置，单调队列维护每个点当前最优决策点即可，$O(nlog)$</p>
+<h3 id="类型二：-dis-i-lt-j-w-i-j-，w满足四边形不等式，求最短的点数为k路径"><a href="#类型二：-dis-i-lt-j-w-i-j-，w满足四边形不等式，求最短的点数为k路径" class="headerlink" title="类型二：$dis_{i&lt;j}=w(i,j)$，w满足四边形不等式，求最短的点数为k路径"></a>类型二：$dis_{i&lt;j}=w(i,j)$，w满足四边形不等式，求最短的点数为k路径</h3><p>例题：<a href="https://codeforces.com/contest/321/problem/E" target="_blank" rel="noopener">CF321E Ciel and Gondolas(bzoj5311 贞鱼)</a>、<a href="https://www.luogu.com.cn/problem/P4767" target="_blank" rel="noopener">「IOI2000」Post Office</a>、<a href="https://www.lydsy.com/JudgeOnline/problem.php?id=5125" target="_blank" rel="noopener">bzoj5125[Lydsy1712月赛]小Q的书架</a>、<a href="https://codeforces.com/problemset/problem/868/F" target="_blank" rel="noopener">CF868F Yet Another Minimization Problem</a>、「IOI2014」holiday（写了题解）</p>
+<p>做k轮dp，但每轮内部先计算哪个没有要求，此时推荐写分治，不容易写错，$O(knlog)$</p>
+<p>每次在可用决策点区间内暴力枚举求出mid的决策点，那么每层分治决策点区间长度和是$O(n)$级别的，所以每轮是nlogn的</p>
+<p>另外，如果一次只询问一个k，借助带权二分可以达到更优秀的$O(nlog^2)$，详见专题</p>
+<h3 id="类型三：环上求权值最小的点数为k集合，边权为相邻点间w和，w从相对位置角度满足四边形不等式"><a href="#类型三：环上求权值最小的点数为k集合，边权为相邻点间w和，w从相对位置角度满足四边形不等式" class="headerlink" title="类型三：环上求权值最小的点数为k集合，边权为相邻点间w和，w从相对位置角度满足四边形不等式"></a>类型三：环上求权值最小的点数为k集合，边权为相邻点间w和，w从相对位置角度满足四边形不等式</h3><p>例题：Yuhao Du Contest 5 I，并没有地方交，所以下面是口胡</p>
+<p>做法1：因为分治做法$O(nklog)$中包含k，可以用套路集锦-数学-5中的方法，$O(5n^2log)$</p>
+<p>做法2：先随便用某个做法初始化出一组解，那么每个相邻两点构成的一开一闭区间中，其他解一定都是每个区间恰一个点。<strong>固定第一组中起点</strong>的话就是要求出到最后一组每个点的最短距离然后枚举每个来统计答案（看做竖着的k个区间可能会比较直观）。将最短那个区间（不超过n/k）看做第一组，枚举每个起点，一层一层跑任意算法（推荐分治），确定性算法，$O(n/k*nlogn)$</p>
+<p>标算：用带权二分初始化出一组解，四边形不等式的限制竖着看就是两条转移直线不能交叉，因此一个起点的路径会把每一组分为左右两半（重叠1），因此可以套一个分治，每次求出第一组区间中mid为起点，花费$(\sum_i 第i组大小)log$的时间求出这个起点的最优方案并把每组分为两半。虽然每次分离时，k组中每个左右区间都会有1的重叠，记$ln=第一组大小$，那么重叠部分带来的影响为$\sum_{i=0}^{log_2 ln} 2^i*k=O(k*ln)$，因此我们依然选最小那个作为第一组，总复杂度为$O(nlog^2)$</p>
+<h3 id="非常规类型"><a href="#非常规类型" class="headerlink" title="非常规类型"></a>非常规类型</h3><p>「IOI2013」wombats（写了题解）</p>
+<p>Circular edit distance（写了题解）</p>
+<hr>
+<p>CF321E：k轮w满足四边形不等式的1d1d动归，下文轮数（最短路长度）放在状态的第二维</p>
+<p>合并石子：$f(l,r)=min\ f(l,k)+f(k+1,r)+w(l,r)$中w满足四边形不等式</p>
+<p>「IOI2013」 wombats：与1d1d、四边形不等式无关，但也满足决策单调性</p>
+<p>他们看起来除了状态都是二维外没啥关系，然而笔者认为他们代表了<strong>二维决策单调性</strong>的几种参考方向</p>
+<p>核心就是决策点满足不等式：$opt(i,k)=(i,k)的决策点，opt(i,k-1) \le opt(i,k) \le opt(i+1,k)$，稍后证明</p>
+<p>只要有了这个不等式，可以写出<code>fo(j,1,k) fd(i,n,1) fo(fm,opt(i,j-1),opt(i+1,j)) f(fm,j-1)-&gt;f(i,j)</code>（可见非常好写）。复杂度的话，考虑每种$ln=i-j$对应所有状态，他们的决策点连起来，精准覆盖了1到n，因此就是$O(n^2)$</p>
+<p>IOI那题具体见题解（口胡，不过应该没错），合并石子能数学证明但可以感受也不展开了，说说1d1d</p>
+<p>对于长度分别为k-1和k的两条路径，起点终点相同，因为不能出现四边形不等式的情况，k-1路径每一步一定恰好跨过一个k路径中的点（包括刚好在上面，此时前面部分都是重叠的）。因此去掉两条路径前面公共的部分，一定是交错出现的，感觉这个性质还有挖掘空间</p>
 
       
     </div>
@@ -651,42 +679,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8530.html" rel="bookmark">【Bzoj1911】【Luogu3628】特别行动队</a></div>
+      <div class="popular-posts-title"><a href="/posts/250b.html" rel="bookmark">【OI之路】04图论-9二分图</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b119.html" rel="bookmark">【OI之路】05动态规划-1入门</a></div>
+      <div class="popular-posts-title"><a href="/posts/9f3.html" rel="bookmark">「Bzoj1833」「Luogu2602」数字计数</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f8f3.html" rel="bookmark">WZK的减肥计划</a></div>
+      <div class="popular-posts-title"><a href="/posts/293.html" rel="bookmark">【OI之路】04图论-4简单连通性问题</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">【CZYZ2009暑假集训提高组6】盟军敢死队</a></div>
+      <div class="popular-posts-title"><a href="/posts/80c8.html" rel="bookmark">「置顶」套路集锦</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/39cb.html" rel="bookmark">【CF955F】Heaps</a></div>
+      <div class="popular-posts-title"><a href="/posts/f834.html" rel="bookmark">「OI之路」03数学-11集合幂级数</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3470.html" rel="bookmark">【CF1012C】Hills</a></div>
+      <div class="popular-posts-title"><a href="/posts/b399.html" rel="bookmark">「OI之路」04图论-7生成树</a></div>
       
     </li>
   
@@ -704,7 +732,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/4bab.html" title="【OI之路】05动态规划-2-1d1d动态规划">http://zory.ink/posts/4bab.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/4bab.html" title="「OI之路」05动态规划-2-动态规划进阶">http://zory.ink/posts/4bab.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -729,6 +757,8 @@
         
         <div class="post-tags">
           
+            <a href="/tags/精品文章/" rel="tag"># 精品文章</a>
+          
             <a href="/tags/dp/" rel="tag"># dp</a>
           
         </div>
@@ -742,8 +772,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/b119.html" rel="next" title="【OI之路】05动态规划-1入门">
-                <i class="fa fa-chevron-left"></i> 【OI之路】05动态规划-1入门
+              <a href="/posts/b119.html" rel="next" title="「OI之路」05动态规划-1入门">
+                <i class="fa fa-chevron-left"></i> 「OI之路」05动态规划-1入门
               </a>
             
           </div>
@@ -831,7 +861,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -856,7 +886,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1265,7 +1297,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1328,7 +1364,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#单调队列"><span class="nav-text">单调队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#斜率优化"><span class="nav-text">斜率优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#练习"><span class="nav-text">练习</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四边形不等式"><span class="nav-text">四边形不等式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1D-1D动态规划"><span class="nav-text">1D/1D动态规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单调队列"><span class="nav-text">单调队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#斜率优化"><span class="nav-text">斜率优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策单调性"><span class="nav-text">决策单调性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类型一：-dis-i-lt-j-w-i-j-，w满足四边形不等式，求0到n最短路"><span class="nav-text">类型一：$dis_{i&lt;j}=w(i,j)$，w满足四边形不等式，求0到n最短路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型二：-dis-i-lt-j-w-i-j-，w满足四边形不等式，求最短的点数为k路径"><span class="nav-text">类型二：$dis_{i&lt;j}=w(i,j)$，w满足四边形不等式，求最短的点数为k路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型三：环上求权值最小的点数为k集合，边权为相邻点间w和，w从相对位置角度满足四边形不等式"><span class="nav-text">类型三：环上求权值最小的点数为k集合，边权为相邻点间w和，w从相对位置角度满足四边形不等式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非常规类型"><span class="nav-text">非常规类型</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="AGC011到AGC020题解合集 0/10">
+  <meta name="description" content="AGC011到AGC020题解合集 AGC的题面一般都不难懂，就不给出翻译了 0/10">
 <meta name="keywords" content="好题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AGC011到020">
 <meta property="og:url" content="http://zory.ink/posts/6000e5d.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="AGC011到AGC020题解合集 0/10">
+<meta property="og:description" content="AGC011到AGC020题解合集 AGC的题面一般都不难懂，就不给出翻译了 0/10">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-25T00:39:05.917Z">
+<meta property="og:updated_time" content="2020-03-11T13:42:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AGC011到020">
-<meta name="twitter:description" content="AGC011到AGC020题解合集 0/10">
+<meta name="twitter:description" content="AGC011到AGC020题解合集 AGC的题面一般都不难懂，就不给出翻译了 0/10">
 
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-25 08:39:05" itemprop="dateModified" datetime="2019-10-25T08:39:05+08:00">2019-10-25</time>
+                <time title="修改时间：2020-03-11 21:42:11" itemprop="dateModified" datetime="2020-03-11T21:42:11+08:00">2020-03-11</time>
               </span>
             
           
@@ -612,19 +612,59 @@
 
       
         <p>AGC011到AGC020题解合集</p>
+<p>AGC的题面一般都不难懂，就不给出翻译了</p>
 <h1 id="0-10"><a href="#0-10" class="headerlink" title="0/10"></a>0/10</h1><a id="more"></a>
-<h2 id="AGC013"><a href="#AGC013" class="headerlink" title="AGC013"></a>AGC013</h2><p><strong>agc013E - Placing Squares</strong> <a href="https://atcoder.jp/contests/agc013/submissions/7586288" target="_blank" rel="noopener">code</a></p>
+<h2 id="AGC011"><a href="#AGC011" class="headerlink" title="AGC011"></a><a href="https://atcoder.jp/contests/AGC011/tasks" target="_blank" rel="noopener">AGC011</a></h2><p><strong>AGC011A - Airport Bus</strong> <a href="https://atcoder.jp/contests/agc011/submissions/8832426" target="_blank" rel="noopener">code</a></p>
+<p><strong>AGC011E - Increasing Numbers</strong></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>定义形如11111的数为全1数，0也算；于是任意一个递增数=若干全1数之和，且方法唯一，数量=最后一个数字</p>
+<p>于是求出最少由多少个全1数组成，然后向上取整/9即可</p>
+<p>求由全1数组成，见<a href="8f8d12e3.html">coj15的双十一特惠</a></p>
+
+</div></div>
+<h2 id="AGC012"><a href="#AGC012" class="headerlink" title="AGC012"></a><a href="https://atcoder.jp/contests/AGC012/tasks" target="_blank" rel="noopener">AGC012</a></h2><p><strong>AGC012A - AtCoder Group Contest</strong> <a href="https://atcoder.jp/contests/agc012/submissions/8832466" target="_blank" rel="noopener">code</a></p>
+<h2 id="AGC013"><a href="#AGC013" class="headerlink" title="AGC013"></a><a href="https://atcoder.jp/contests/AGC013/tasks" target="_blank" rel="noopener">AGC013</a></h2><p><strong>AGC013A - Sorted Arrays</strong> <a href="https://atcoder.jp/contests/agc013/submissions/8842225" target="_blank" rel="noopener">code-py</a></p>
+<p><strong>AGC013E - Placing Squares</strong> <a href="https://atcoder.jp/contests/AGC013/submissions/7586288" target="_blank" rel="noopener">code</a></p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>考虑题意转化：注意到总和固定，那就是有n个盒子，盒子间如果位置不属于S可插隔板；权值是个平方，和noi2010管道取珠类似，转化为每两个隔板间都要在盒子中恰好放一个红球和蓝球。</p>
 <p>那么设 $f(i,0/1/2)$表示放完第i个位置后，最新一段目前有多少个球，用矩乘优化转移，分当前位置能否转移写两个矩阵</p>
 <p>$O(2*3^3*mlogn)$</p>
 
 </div></div>
-<h2 id="AGC018"><a href="#AGC018" class="headerlink" title="AGC018"></a>AGC018</h2><p><strong>agc018C - Coins</strong></p>
+<h2 id="AGC014"><a href="#AGC014" class="headerlink" title="AGC014"></a><a href="https://atcoder.jp/contests/AGC014/tasks" target="_blank" rel="noopener">AGC014</a></h2><p><strong>AGC014A - Cookie Exchanges</strong> <a href="https://atcoder.jp/contests/agc014/submissions/8832714" target="_blank" rel="noopener">code</a></p>
+<h2 id="AGC015"><a href="#AGC015" class="headerlink" title="AGC015"></a><a href="https://atcoder.jp/contests/AGC015/tasks" target="_blank" rel="noopener">AGC015</a></h2><p><strong>AGC015A - A+…+B Problem</strong> <a href="https://atcoder.jp/contests/agc015/submissions/8832769" target="_blank" rel="noopener">code</a></p>
+<h2 id="AGC016"><a href="#AGC016" class="headerlink" title="AGC016"></a><a href="https://atcoder.jp/contests/AGC016/tasks" target="_blank" rel="noopener">AGC016</a></h2><p><strong>AGC016E - Poor Turkeys</strong> <a href="https://atcoder.jp/contests/AGC016/submissions/3432691" target="_blank" rel="noopener">code</a></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>对于每个元素，维护它最后存活的条件，<br>用一个集合表示，集合内所有元素都必须曾经存活（然后放入意味着死去）</p>
+<p>倒着考虑时间，处理x的存活集合<br>如果两个人都要曾求存活（以后的要求），则x必死<br>如果只有一个人，则另一个加入集合（杀死他）<br>如果都不在里面，则不变</p>
+<p>最后统计答案，两个元素能同时存活，当且仅当他们各自存活，并且存活集合没有交集<br>因为进入某个集合，意味着在这一刻要被充当替死鬼，所以不能充当两次</p>
+<p>本题的精髓在于倒序处理<br>说一个细节：因为本题是二元，不会存在这样一种情况「两个集合的并其实是同一个时间被杀死的」</p>
+
+</div></div>
+<h2 id="AGC017"><a href="#AGC017" class="headerlink" title="AGC017"></a><a href="https://atcoder.jp/contests/AGC017/tasks" target="_blank" rel="noopener">AGC017</a></h2><p><strong>AGC017A - Biscuits</strong> <a href="https://atcoder.jp/contests/agc017/submissions/8833010" target="_blank" rel="noopener">code</a></p>
+<p><strong>AGC017D - Game on Tree</strong></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>首先一棵树的sg显然就是各个「孩子+根」的sg异或和，然后给出结论：在一棵树的根上面再连个点，sg++，归纳很好证</p>
+<p>因此有$sg_x=\oplus( sg_{son}+1)$</p>
+
+</div></div>
+<h2 id="AGC018"><a href="#AGC018" class="headerlink" title="AGC018"></a><a href="https://atcoder.jp/contests/AGC018/tasks" target="_blank" rel="noopener">AGC018</a></h2><p><strong>AGC018C - Coins</strong></p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>先将a从大到小，然后枚举a最小那个位置<br>那么x个位置都在左边了<br>因为选择了x和y个，剩下那种不用计算，可以把所有属性减去c，最后补上即可，这样比较好思考</p>
 <p><strong>那么注意到左边一定不会选择0，也就是z只在右边</strong><br>那么左右两边直接贪心选择就好了（通过差值判断即可）</p>
 <p>需要一个数据结构，维护左右两边的前k大、小之和，这个随便维护即可</p>
+
+</div></div>
+<p><strong>AGC018E - Sightseeing Plan</strong></p>
+<p>题意补充：在给定3个无交矩形内选3个点，对「连接3点路径数」求和</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>$$<br>设f(a,b)表示从(0,0)\to(a,b)的方案数，显然f(a,b)=C_{a+b}^a \\<br>于是 \sum_{x=X_1}^{X_2}\sum_{y=Y_1}^{Y_2} f(x,y)=f(X_2+1,Y_2+1)-f(X_2+1,Y_1)-f(X_1,Y_2+1)+f(X_1,Y_1) \\<br>枚举4*4种关键点选择方案，问题转化成统计(0,0) \to (dx,dy)的路径权值和，一条路径的权值为与矩阵([X_1,X_2],[Y_1,Y_2])的交的长度 \\<br>注意到这个长度其实就是在矩形中的终点T与起点S的哈密顿距离，T_x+T_y-S_x-S_y+1<br>$$<br>然后这个东西是可以拆开计算贡献的，考虑会被作为起点多少次即可；而且起点终点关键点只有$4e6$个</p>
+
+</div></div>
+<h2 id="AGC019"><a href="#AGC019" class="headerlink" title="AGC019"></a><a href="https://atcoder.jp/contests/AGC019/tasks" target="_blank" rel="noopener">AGC019</a></h2><p><strong>AGC019F - Yes or No</strong> ，见<a href="5865fdd5.html">这里</a></p>
+<h2 id="AGC020"><a href="#AGC020" class="headerlink" title="AGC020"></a><a href="https://atcoder.jp/contests/AGC020/tasks" target="_blank" rel="noopener">AGC020</a></h2><p><strong>AGC020F - Arcs on a Circle</strong></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>和<a href="http://uoj.ac/contest/42/problem/352" target="_blank" rel="noopener">uojR42C 新年的五维几何</a>的思想类似，将每个弧的起始位置拆分为整数和小数部分，则小数部分只需要考虑$(n-1)!$种大小关系（将第一个圆弧看做圆的起点），相当于另外n-1个弧的小数部分在n-1种小数中选，故可将圆拆成离散的$C*n$个点，直接设$dp(S,i,j)=n-1种小数的使用情况二进制，目前考虑起点的整数部分为i，最远覆盖了点j$，$O((n-1)!2^{n-1}C*C*n)$</p>
 
 </div></div>
 
@@ -640,21 +680,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9f71.html" rel="bookmark">【Poj3897】【Vijos1194】Domino</a></div>
+      <div class="popular-posts-title"><a href="/posts/9f71.html" rel="bookmark">「Poj3897」「Vijos1194」Domino</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">【CZYZ2009暑假集训提高组6】盟军敢死队</a></div>
+      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">「CZYZ2009暑假集训提高组6」盟军敢死队</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/381c.html" rel="bookmark">【NOIAC31】MST</a></div>
+      <div class="popular-posts-title"><a href="/posts/381c.html" rel="bookmark">「NOIAC31」MST</a></div>
       
     </li>
   
@@ -668,14 +708,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ae99.html" rel="bookmark">【CF960F】Pathwalks</a></div>
+      <div class="popular-posts-title"><a href="/posts/ae99.html" rel="bookmark">「CF960F」Pathwalks</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">「POJ2057」The Lost House</a></div>
       
     </li>
   
@@ -741,8 +781,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/e1875d00.html" rel="prev" title="AGC001到010">
-                AGC001到010 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/127faea6.html" rel="prev" title="AGC031到040">
+                AGC031到040 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -820,7 +860,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -845,7 +885,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1254,7 +1296,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1317,7 +1363,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-10"><span class="nav-text">0/10</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC013"><span class="nav-text">AGC013</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC018"><span class="nav-text">AGC018</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-10"><span class="nav-text">0/10</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC011"><span class="nav-text">AGC011</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC012"><span class="nav-text">AGC012</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC013"><span class="nav-text">AGC013</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC014"><span class="nav-text">AGC014</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC015"><span class="nav-text">AGC015</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC016"><span class="nav-text">AGC016</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC017"><span class="nav-text">AGC017</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC018"><span class="nav-text">AGC018</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC019"><span class="nav-text">AGC019</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC020"><span class="nav-text">AGC020</span></a></li></ol></li></ol></div>
             
 
           </div>

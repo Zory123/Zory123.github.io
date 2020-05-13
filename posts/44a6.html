@@ -95,14 +95,14 @@
   <meta name="description" content="来源和评测点USACO 2005 March GoldBzoj1738Poj2391Caioj1118">
 <meta name="keywords" content="网络流,二分,难度2,好题,最大流,Floyd">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Usaco05Mar】Ombrophobic Bovines">
+<meta property="og:title" content="「Usaco05Mar」Ombrophobic Bovines">
 <meta property="og:url" content="http://zory.ink/posts/44a6.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点USACO 2005 March GoldBzoj1738Poj2391Caioj1118">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-11T02:51:48.152Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Usaco05Mar】Ombrophobic Bovines">
+<meta name="twitter:title" content="「Usaco05Mar」Ombrophobic Bovines">
 <meta name="twitter:description" content="来源和评测点USACO 2005 March GoldBzoj1738Poj2391Caioj1118">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【Usaco05Mar】Ombrophobic Bovines | Zory的个人博客</title>
+  <title>「Usaco05Mar」Ombrophobic Bovines | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Usaco05Mar】Ombrophobic Bovines
+          <h2 class="post-title" itemprop="name headline">「Usaco05Mar」Ombrophobic Bovines
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-11 10:51:48" itemprop="dateModified" datetime="2019-10-11T10:51:48+08:00">2019-10-11</time>
+                <time title="修改时间：2019-12-01 10:18:45" itemprop="dateModified" datetime="2019-12-01T10:18:45+08:00">2019-12-01</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/44a6.html" class="post-meta-item leancloud_visitors" data-flag-title="【Usaco05Mar】Ombrophobic Bovines">
+            <span id="/posts/44a6.html" class="post-meta-item leancloud_visitors" data-flag-title="「Usaco05Mar」Ombrophobic Bovines">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -613,9 +613,9 @@
       
         <h2 id="来源和评测点"><a href="#来源和评测点" class="headerlink" title="来源和评测点"></a>来源和评测点</h2><p>USACO 2005 March Gold<br><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1738" target="_blank" rel="noopener">Bzoj1738</a><br><a href="http://POJ.org/problem?id=2391" target="_blank" rel="noopener">Poj2391</a><br><a href="http://caioj.cn/problem.php?id=1118" target="_blank" rel="noopener">Caioj1118</a></p>
 <a id="more"></a>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><strong>【题目大意】</strong><br>下雨了，有F(1&lt;=F&lt;=200)个牛棚，这F个牛棚之间有P(1&lt;=P&lt;=1500)条无向边（有耗时）<br>每个牛棚有两个值A和B（A表示一开始这个牛棚有A头牛，B表示下雨时该牛棚最多可以容纳B头牛躲雨）。<br>问最少需要提前多少时间响“下雨警告”才能让所有牛在下雨前都能够找到可以遮雨的地方。</p>
-<p>重点句：<br>The paths are wide,so that any number of cows can traverse a path in either direction. 无向边<br>Fields are small compared to the paths and require no time for cows to traverse. 将牛棚看作点<br><strong>【输入格式】</strong><br>两个整数: F 和 P<br>接下来F行，第i行两个整数A和B（A、B的范围都是:0..1000）描述第i个牛棚<br>接下来P行，每行三个整数。X Y L，表示牛棚X和牛棚Y之间有一条边，耗时是L（1&lt;=L&lt;=1,000,000,000）<br><strong>【输出格式】</strong><br>输出一行，即为最短的时间，如果无法使得所有牛都能够有地方避雨，那么输出 “-1”<br><strong>【输入样例】</strong><br>3 4<br>7 2<br>0 4<br>2 6<br>1 2 40<br>3 2 70<br>2 3 90<br>1 3 120<br><strong>【输出样例】</strong><br>110<br><strong>【样例解释】</strong><br>牛棚1安排4头牛到牛棚2，牛棚1再安排1头牛走到牛棚2，再走到牛棚3避雨。</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>网络流教程和题目分类参见：<br><a href="../2003-01/【OI之路】03图论算法-4网络流.html">【OI之路】03图论算法-4网络流</a><br>其他网络流题目参见：<a href="../tags/网络流/">Tag-网络流</a><br>本题入选了好题：<a href="../tags/好题/">Tag-好题</a></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><strong>「题目大意」</strong><br>下雨了，有F(1&lt;=F&lt;=200)个牛棚，这F个牛棚之间有P(1&lt;=P&lt;=1500)条无向边（有耗时）<br>每个牛棚有两个值A和B（A表示一开始这个牛棚有A头牛，B表示下雨时该牛棚最多可以容纳B头牛躲雨）。<br>问最少需要提前多少时间响“下雨警告”才能让所有牛在下雨前都能够找到可以遮雨的地方。</p>
+<p>重点句：<br>The paths are wide,so that any number of cows can traverse a path in either direction. 无向边<br>Fields are small compared to the paths and require no time for cows to traverse. 将牛棚看作点<br><strong>「输入格式」</strong><br>两个整数: F 和 P<br>接下来F行，第i行两个整数A和B（A、B的范围都是:0..1000）描述第i个牛棚<br>接下来P行，每行三个整数。X Y L，表示牛棚X和牛棚Y之间有一条边，耗时是L（1&lt;=L&lt;=1,000,000,000）<br><strong>「输出格式」</strong><br>输出一行，即为最短的时间，如果无法使得所有牛都能够有地方避雨，那么输出 “-1”<br><strong>「输入样例」</strong><br>3 4<br>7 2<br>0 4<br>2 6<br>1 2 40<br>3 2 70<br>2 3 90<br>1 3 120<br><strong>「输出样例」</strong><br>110<br><strong>「样例解释」</strong><br>牛棚1安排4头牛到牛棚2，牛棚1再安排1头牛走到牛棚2，再走到牛棚3避雨。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>网络流教程和题目分类参见：<br><a href="../2003-01/「OI之路」03图论算法-4网络流.html">「OI之路」03图论算法-4网络流</a><br>其他网络流题目参见：<a href="../tags/网络流/">Tag-网络流</a><br>本题入选了好题：<a href="../tags/好题/">Tag-好题</a></p>
 <p>这道题建议大家像我一样仔细想想，<br>别急着看题解，虽然你到我这个页面很可能是来膜题解的</p>
 <p>由于边比较复杂，但又是无向图<br>考虑Floyd获得两点之间最短耗时<br>然后两点之间只存在一条边了</p>
 <p>原问题转化成：<br>选一些边来满足条件并且最长边最小<br>条件为牛跑来跑去后每个牛棚能容纳下</p>
@@ -636,42 +636,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/41bc.html" rel="bookmark">【Poj2112】Optimal Milking</a></div>
+      <div class="popular-posts-title"><a href="/posts/41bc.html" rel="bookmark">「Poj2112」Optimal Milking</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b6a3.html" rel="bookmark">【Poj3189】Steady Cow Assignment</a></div>
+      <div class="popular-posts-title"><a href="/posts/b6a3.html" rel="bookmark">「Poj3189」Steady Cow Assignment</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3001.html" rel="bookmark">【CQOI2014】危桥</a></div>
+      <div class="popular-posts-title"><a href="/posts/3001.html" rel="bookmark">「CQOI2014」危桥</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ab3c.html" rel="bookmark">【Poj3897】【Bzoj2709】迷宫花园</a></div>
+      <div class="popular-posts-title"><a href="/posts/ab3c.html" rel="bookmark">「Poj3897」「Bzoj2709」迷宫花园</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/a1fb.html" rel="bookmark">【Bzoj1934】【Bzoj2768】善意的投票&冠军调查</a></div>
+      <div class="popular-posts-title"><a href="/posts/a1fb.html" rel="bookmark">「Bzoj1934」「Bzoj2768」善意的投票&冠军调查</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9c9f.html" rel="bookmark">【Bzoj1001】狼抓兔子</a></div>
+      <div class="popular-posts-title"><a href="/posts/9c9f.html" rel="bookmark">「Bzoj1001」狼抓兔子</a></div>
       
     </li>
   
@@ -689,7 +689,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/44a6.html" title="【Usaco05Mar】Ombrophobic Bovines">http://zory.ink/posts/44a6.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/44a6.html" title="「Usaco05Mar」Ombrophobic Bovines">http://zory.ink/posts/44a6.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -737,8 +737,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/7731.html" rel="next" title="【Poj2455】【Bzoj1733】Secret Milking Machine">
-                <i class="fa fa-chevron-left"></i> 【Poj2455】【Bzoj1733】Secret Milking Machine
+              <a href="/posts/7731.html" rel="next" title="「Poj2455」「Bzoj1733」Secret Milking Machine">
+                <i class="fa fa-chevron-left"></i> 「Poj2455」「Bzoj1733」Secret Milking Machine
               </a>
             
           </div>
@@ -747,8 +747,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/41bc.html" rel="prev" title="【Poj2112】Optimal Milking">
-                【Poj2112】Optimal Milking <i class="fa fa-chevron-right"></i>
+              <a href="/posts/41bc.html" rel="prev" title="「Poj2112」Optimal Milking">
+                「Poj2112」Optimal Milking <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -826,7 +826,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -851,7 +851,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1260,7 +1262,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

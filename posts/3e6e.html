@@ -92,17 +92,18 @@
 
 
 
-  <meta name="description" content="概率论 一些概率论中比较有用的不等式及证明 经典的几个方法，证明一个经典问题，思想很有用">
+  <meta name="description" content="概率论">
+<meta name="keywords" content="精品文章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】03数学-15概率论">
+<meta property="og:title" content="「OI之路」03数学-15概率论">
 <meta property="og:url" content="http://zory.ink/posts/3e6e.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="概率论 一些概率论中比较有用的不等式及证明 经典的几个方法，证明一个经典问题，思想很有用">
+<meta property="og:description" content="概率论">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-16T13:36:40.699Z">
+<meta property="og:updated_time" content="2020-04-03T11:36:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】03数学-15概率论">
-<meta name="twitter:description" content="概率论 一些概率论中比较有用的不等式及证明 经典的几个方法，证明一个经典问题，思想很有用">
+<meta name="twitter:title" content="「OI之路」03数学-15概率论">
+<meta name="twitter:description" content="概率论">
 
 
 
@@ -120,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】03数学-15概率论 | Zory的个人博客</title>
+  <title>「OI之路」03数学-15概率论 | Zory的个人博客</title>
   
 
 
@@ -249,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -495,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】03数学-15概率论
+          <h2 class="post-title" itemprop="name headline">「OI之路」03数学-15概率论
 
               
             
@@ -536,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-16 21:36:40" itemprop="dateModified" datetime="2019-10-16T21:36:40+08:00">2019-10-16</time>
+                <time title="修改时间：2020-04-03 19:36:43" itemprop="dateModified" datetime="2020-04-03T19:36:43+08:00">2020-04-03</time>
               </span>
             
           
@@ -577,7 +578,7 @@
 
           
           
-            <span id="/posts/3e6e.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】03数学-15概率论">
+            <span id="/posts/3e6e.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」03数学-15概率论">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -611,43 +612,137 @@
 
       
         <p>概率论</p>
-<p><a href="https://foreseeable.github.io/2015/12/27/useful-probabilistic-inequalities/" target="_blank" rel="noopener">一些概率论中比较有用的不等式及证明</a></p>
-<p><a href="https://www.cnblogs.com/zjp-shadow/p/10009548.html" target="_blank" rel="noopener">经典的几个方法，证明一个经典问题，思想很有用</a></p>
 <a id="more"></a>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="一些定义"><a href="#一些定义" class="headerlink" title="一些定义"></a>一些定义</h3><p>定义连续型随机变量为在实数域或区间上取连续值的随机变量，若不连续则为离散型<br>概率函数（又叫分布律），为随机变量取某个元素的概率的函数</p>
-<p>概率分布函数是概率函数的前缀和<br>在连续型中，不存在概率函数，定义概率密度函数f满足 $概率分布函数F(x)=\int_{-\infty}^x f(t) dt$<br>推广到高维就叫做联合概率密度函数</p>
-<p>连续型随机变量的数学期望，要求概率密度函数的积分（即概率分布函数）收敛</p>
-<h3 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h3><p>经典柿子：$E(x)=\int_{0}^{\infty} P(x \ge t) dt-\int_{-\infty}^{0} P(x \le t) dt$<br>若变量X和Y独立， $E(XY)=E(X)E(Y)$<br>任意两个变量X和Y都满足 $E(X+Y)=E(X)+E(Y)$</p>
-<p>n个[0,1]随机变量的min： $E(min x)=\frac{1}{n+1}$，可积分得出</p>
-<p>期望有个套路的转化，恰好到达的状态的概率*步数之和，等价于所有未到达的状态（状态中包含步数）的概率之和，这个你可以通过【把当前概率推到上面的步数个祖先上】理解</p>
-<p><a href="18cd.html">入门题:OSU</a></p>
-<h3 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h3><p>方差记为 D(x)或Var(x)<br>$D(x)=E[(E(x)-x)^2]=E[E^2(x)+x^2-2xE(x)]=E(x^2)-E^2(x)$<br>协方差记为 Cov(X,Y)<br>$Cov(X,Y)=E[(X-EX)(Y-EY)]=E(XY)-E(X)E(Y)$</p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><a href="https://foreseeable.github.io/2015/12/27/useful-probabilistic-inequalities/" target="_blank" rel="noopener">一些神仙不等式及证明</a></p>
+<h3 id="概率"><a href="#概率" class="headerlink" title="概率"></a>概率</h3><p>如果随机变量是实数意义即为连续型，否则为离散型</p>
+<p>要特别注意题目求的是不是条件概率，记$P(A|B)表示已知B发生的前提下，A发生的概率$</p>
+<p>贝叶斯公式：$P(AB)=P(A|B)P(B)=P(B|A)P(A)$，理解不难，适当变形（例如已知结果发生问途径的概率）</p>
+<h3 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h3><p>经典柿子：$E(x)=\int_{0}^{\infty} P(x \ge t) dt-\int_{-\infty}^{0} P(x \le t) dt$<br>若变量X和Y独立， $E(XY)=E(X)E(Y)$（值得一提的是，例如$E(X)=3Y,E(XY)=E(3Y^2)$是正确的，怀疑的可以写下式子，可见这方面还是很灵活的，可以多多培养直觉）</p>
+<p>任意两个变量X和Y都满足 $E(X+Y)=E(X)+E(Y)$，这叫期望的线性性。即如果求A的期望，想办法把A拆成若干个变量的和然后求每个变量的期望的和、比较经典的一个应用如将排列拆成【比i小，i，比i大】三种数来简化状态；另一种经典转化：恰好到达的状态的概率*步数之和，等价于所有未到达的状态（状态中包含步数）的概率之和（理解的话可以想成把终止状态的步数分摊到上面每个未结束状态上，如果要数学理解可以看概率生成函数）</p>
+<p><a href="18cd.html">经典题：OSU</a></p>
+<p>掷骰子问题：<a href="https://www.cnblogs.com/zjp-shadow/p/10009548.html" target="_blank" rel="noopener">几个经典方法</a></p>
+<p>处理$E(x^k)$的常用方法是化成$\sum_{i=0}^k S_2(k,i)i! E(C_x^i)$，以刚刚的掷骰子问题为例，记p为失败概率</p>
+<p>如果使用无限和式，则失败次数的期望=$(1-p)\sum_{x=0}^{\infty} C_x^kp^x=[k=0]\frac{1}{1-p}+p*(E(x^k)+E(x^{k-1}))$，解得$k&gt;0,E(x^k)=E(x^{k-1})*\frac{p}{1-p}$</p>
+<h3 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h3><p>方差记为 $D(x)或Var(x)=E[(E(x)-x)^2]=E[E^2(x)+x^2-2xE(x)]=E(x^2)-E^2(x)$<br>协方差记为 $Cov(X,Y)=E[(X-EX)(Y-EY)]=E(XY)-E(X)E(Y)$</p>
 <p>运算律：$D(cX)=c^2 D(X),D(X \pm Y)=D(X)+D(Y) \pm 2Cov(X,Y)$</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h4 id="A-NOIP2018初赛某题"><a href="#A-NOIP2018初赛某题" class="headerlink" title="A NOIP2018初赛某题"></a>A NOIP2018初赛某题</h4><p>[0,1]上随机变量A、B，问E(|A-B|)<br>设 $X=max-min,E(X)=Emax(A,B)-Emin(A,B)=\frac{2}{3}-\frac{1}{3}=\frac{1}{3}$<br>另外， $D(X)=E(X^2)-E^2(X)=E(min^2+max^2-2min \times max)-1/9=1/6+5/6-2*(1/4)-1/9=1/18$</p>
-<h4 id="B-将1随机分为n份第k小段的期望"><a href="#B-将1随机分为n份第k小段的期望" class="headerlink" title="B 将1随机分为n份第k小段的期望"></a>B 将1随机分为n份第k小段的期望</h4><p>这里随机的严谨定义为 $n-1个[0,1]上随机变量，划分为n段$<br>如果k=1， $E=\int_0^{1/n} (1-nx)^{n-1} dx=\frac{1}{n^2}$<br>k&gt;1考虑数学归纳法<br>$$<br>\begin{aligned}<br>&amp; 已知 V1,V2..Vi，则 (V_{i+1}-V_i) \leq … (V_n-V_i)\\<br>&amp; V_{i+1}=V_i+\frac{1- (\sum_{i=1}^i V_i)-(n-i)V_i }{(n-i)^2}\\<br>&amp; 可得 V_k=\frac{1}{n} \sum_{i=1}^k \frac{1}{n-i+1}<br>\end{aligned}<br>$$<br>如果没看懂：<a href="http://www.jlao.net/technology/1419/?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">某文章</a>、 <a href="https://www.zhihu.com/question/30359365" target="_blank" rel="noopener">zhihu</a></p>
-<h4 id="C-n个随机实数的第k小的期望"><a href="#C-n个随机实数的第k小的期望" class="headerlink" title="C n个随机实数的第k小的期望"></a>C n个随机实数的第k小的期望</h4><p>下面我们只讨论在[0,1]间随机的情况，其他直接放缩就好了</p>
-<p>众所周知最大可以直接积分，最小翻转一下，今天看到地震后的幻想乡，发现k任意也可以求</p>
-<p>有两种方法：<a href="https://www.cnblogs.com/penth/p/9743303.html" target="_blank" rel="noopener">A</a>,<a href="https://www.cnblogs.com/totorato/p/10219713.html" target="_blank" rel="noopener">B</a></p>
-<p>B比较简单说B，就是 $\sum_{all} \frac{1}{all} a_{p_k}=\sum_{all} \frac{1}{all} [变量s \leq a_{p_k}]$</p>
-<p>将所有点取值情况投影到数轴，对于某种投影，共$(n+1)!$种情况，有 $k \times n!$ 种合法，即 $\frac{k}{n+1}$</p>
-<p>注意到每种投影的概率不同，但因为权值相同，所以没有影响</p>
-<h4 id="D-n个随机不重整数的第k小的期望"><a href="#D-n个随机不重整数的第k小的期望" class="headerlink" title="D n个随机不重整数的第k小的期望"></a>D n个随机不重整数的第k小的期望</h4><p>设值域为$[1,m]$，要求$n,m \le 1e18$<br>$$<br>\sum_{i=1}^m i*C_{i-1}^{k-1} C_{m-i}^{n-k}*\frac{1}{C_m^n}，拆开组合数得C_n^k*k* \sum_{i=1}^m \frac{C_{m-n}^{i-k}}{C_m^i}，然后就不会怎么化了……<br>\\正确的做法是\sum_{i=1}^m k*C_i^k C_{m-i}^{n-k}*\frac{1}{C_m^n}，组合数性质得 \frac{k}{C_m^n}*C_{m+1}^{n+1}=k*\frac{m+1}{n+1}<br>$$</p>
-<h4 id="E-关于展开-x-Ae-Bx-对普通生成函数（x-1）的贡献"><a href="#E-关于展开-x-Ae-Bx-对普通生成函数（x-1）的贡献" class="headerlink" title="E 关于展开$x^Ae^{Bx}$对普通生成函数（x=1）的贡献"></a>E 关于展开$x^Ae^{Bx}$对普通生成函数（x=1）的贡献</h4><p><a href="127faea6.html">agc038E - Gachapon</a></p>
-<h4 id="F-CF605E-Intergalaxy-Trips"><a href="#F-CF605E-Intergalaxy-Trips" class="headerlink" title="F CF605E Intergalaxy Trips"></a>F <a href="https://codeforces.com/problemset/problem/605/E" target="_blank" rel="noopener">CF605E Intergalaxy Trips</a></h4><p>$f(x)$表示x到n的期望时间，然后做期望题不急着考虑转移，而是考虑最后满足怎样的关系式</p>
+<h2 id="经典模型"><a href="#经典模型" class="headerlink" title="经典模型"></a>经典模型</h2><h4 id="A-n个随机实数的第k小的期望"><a href="#A-n个随机实数的第k小的期望" class="headerlink" title="A  n个随机实数的第k小的期望"></a>A  n个随机实数的第k小的期望</h4><p>只讨论在[0,1]间随机的情况，其他直接放缩就好了；</p>
+<p>众所周知最小随便积分（$E(minx)=\int_0^1 P(min \ge x)dx=\int_0^1 (1-x)^ndx=\frac{1}{n+1}$），最大翻转一下$E(maxx)=1-E(minx)=\frac{n}{n+1}$</p>
+<p>看到地震后的幻想乡的题面，发现k任意也可以求，找到两种方法：<a href="https://www.cnblogs.com/penth/p/9743303.html" target="_blank" rel="noopener">A</a>,<a href="https://www.cnblogs.com/totorato/p/10219713.html" target="_blank" rel="noopener">B</a>；其中B较容易理解：</p>
+<p> $\sum_{all} \frac{1}{all} a_{p_k}=\sum_{all} \frac{1}{all} [新变量s \leq a_{p_k}]$，将所有点取值情况投影到数轴，对于某种投影，共$(n+1)!$种情况，有 $k \times n!$ 种合法，即 $\frac{k}{n+1}$。注意到每种投影的概率不同，但因为权值相同，所以没有影响</p>
+<h4 id="B-将1随机分为n份第k小段的期望"><a href="#B-将1随机分为n份第k小段的期望" class="headerlink" title="B 将1随机分为n份第k小段的期望"></a>B 将1随机分为n份第k小段的期望</h4><p>这里随机的严谨定义为 $n-1个[0,1]上随机变量，划分为n段$<br>如果k=1， $E=\int_0^{1/n} (1-nx)^{n-1} dx=\frac{1}{n^2}$，k&gt;1考虑数学归纳法<br>$$<br>\begin{aligned}<br>&amp; 已知 V1,V2..Vi，则 (V_{i+1}-V_i) \leq … (V_n-V_i)\\<br>&amp; V_{i+1}=V_i+\frac{1- (\sum_{i=1}^i V_i)-(n-i)V_i }{(n-i)^2}\\<br>&amp; 可得 V_k=\frac{1}{n} \sum_{i=1}^k \frac{1}{n-i+1}<br>\end{aligned}<br>$$<br>如果没看懂：<a href="http://www.jlao.net/technology/1419/?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">某文章</a>、 <a href="https://www.zhihu.com/question/30359365" target="_blank" rel="noopener">zhihu</a></p>
+<h4 id="C-NOIP2018初赛某题"><a href="#C-NOIP2018初赛某题" class="headerlink" title="C NOIP2018初赛某题"></a>C NOIP2018初赛某题</h4><p>$[0,1]上随机变量A、B，问E(|A-B|)$<br>设 $X=max-min,E(X)=Emax(A,B)-Emin(A,B)=\frac{2}{3}-\frac{1}{3}=\frac{1}{3}$<br>另外， $D(X)=E(X^2)-E^2(X)=E(min^2+max^2-2min \times max)-1/9=1/6+5/6-2*(1/4)-1/9=1/18$</p>
+<h4 id="D-n个随机不重整数的第k小的期望"><a href="#D-n个随机不重整数的第k小的期望" class="headerlink" title="D n个随机不重整数的第k小的期望"></a>D n个随机不重整数的第k小的期望</h4><p>设值域为$[1,m]$，要求$O(1)$<br>$$<br>\sum_{i=1}^m i*C_{i-1}^{k-1} C_{m-i}^{n-k}*\frac{1}{C_m^n}=\sum_{i=1}^m k*C_i^k C_{m-i}^{n-k}*\frac{1}{C_m^n}，组合数卷积得 \frac{k}{C_m^n}*C_{m+1}^{n+1}=k*\frac{m+1}{n+1}<br>$$</p>
+<h4 id="E-一个经典的杀人模型转化-容斥"><a href="#E-一个经典的杀人模型转化-容斥" class="headerlink" title="E 一个经典的杀人模型转化+容斥"></a>E 一个经典的杀人模型转化+容斥</h4><p><a href="be4c.html">PKUWC2018 猎人杀</a>，<a href="8884.html">uoj390「UNR #3」百鸽笼</a></p>
+<h4 id="F-一类通过差分解决转移方向问题的期望dp"><a href="#F-一类通过差分解决转移方向问题的期望dp" class="headerlink" title="F 一类通过差分解决转移方向问题的期望dp"></a>F 一类通过差分解决转移方向问题的期望dp</h4><p><a href="778aaa12.html/#XSY2472-string KMP、[CTSC2006]歌唱王国">XSY2472 string KMP及[CTSC2006]歌唱王国</a>、<a href="778aaa12.html/#loj2145「SHOI2017」分手是祝愿">loj2145「SHOI2017」分手是祝愿</a>、<a href="50ade8c5.html">CF1264C Beautiful Mirrors with queries</a></p>
+<p>直接列式子可能可以，但转移方向会有点问题，发现期望式子向某个方向延伸很短，考虑跨过某过程所需期望（即差分）来设状态能让转移单向</p>
+<h4 id="G-一种dag上删除的期望模型"><a href="#G-一种dag上删除的期望模型" class="headerlink" title="G 一种dag上删除的期望模型"></a>G 一种dag上删除的期望模型</h4><p>给出一个dag，选择一个点就会把自己和所能到达的所有点删除，每次随机选择一个没有被删除的点删除，问期望步数</p>
+<p>考虑一个点被选择的概率，等价于对期望的贡献，设有k个点可到达自己，感性理解一下应该和别的点无关，$\frac{1}{k+1}$</p>
+<p><a href="https://codeforces.com/contest/280/problem/C" target="_blank" rel="noopener">CF280C Game on Tree</a>、<a href="https://codeforces.com/contest/235/problem/D" target="_blank" rel="noopener">CF235D Graph Game</a></p>
+<h2 id="非概率生成函数题单"><a href="#非概率生成函数题单" class="headerlink" title="非概率生成函数题单"></a>非概率生成函数题单</h2><h4 id="CF258D-Little-Elephant-and-Broken-Sorting：热身"><a href="#CF258D-Little-Elephant-and-Broken-Sorting：热身" class="headerlink" title="CF258D Little Elephant and Broken Sorting：热身"></a><a href="https://codeforces.com/problemset/problem/258/D" target="_blank" rel="noopener">CF258D Little Elephant and Broken Sorting</a>：热身</h4><p>$f(a,b)表示a&gt;b的概率，每次只修改2n个值,O(n^2)$  <a href="https://codeforces.com/contest/258/submission/59254716" target="_blank" rel="noopener">code</a></p>
+<h4 id="CF605E-Intergalaxy-Trips：好题"><a href="#CF605E-Intergalaxy-Trips：好题" class="headerlink" title="CF605E Intergalaxy Trips：好题"></a><a href="https://codeforces.com/problemset/problem/605/E" target="_blank" rel="noopener">CF605E Intergalaxy Trips</a>：好题</h4><p>$f(x)$表示x到n的期望时间，然后做期望题不急着考虑转移，而是考虑最后满足怎样的关系式</p>
 <p>注意到转移只会从期望值小的到大的，那么设a为按f从小到大排序的编号，则一定满足：</p>
 <p>$f(a_i)=1+\sum_{j=1}^i f(a_j)p(a_i,a_j)\prod_{t=1}^{j-1}(1-p(a_i,a_t))$，将i=j的部分移到左边，就是可以转移的东西了</p>
 <p>每次取出未拓展且最小的，更新其他未拓展的即可，$O(n^2)$</p>
-<h4 id="G-一种期望模型"><a href="#G-一种期望模型" class="headerlink" title="G 一种期望模型"></a>G 一种期望模型</h4><p>给出一个dag，删除一个点就会把所能到达的所有点删除，每次随机选择一个没有被删除的点删除，问期望步数</p>
-<p>考虑一个点被选择的概率，等价于对期望的贡献，设有k个点可到达自己，感性理解一下应该和别的点无关，$\frac{1}{k+1}$</p>
-<h4 id="H-一个经典的杀人模型转化-容斥"><a href="#H-一个经典的杀人模型转化-容斥" class="headerlink" title="H 一个经典的杀人模型转化+容斥"></a>H 一个经典的杀人模型转化+容斥</h4><p>见<a href="be4c.html">PKUWC2018 猎人杀</a>，另有一道不错的题：<a href="8884.html">uoj390【UNR #3】百鸽笼</a></p>
-<h2 id="ZZQ的ppt做题记录"><a href="#ZZQ的ppt做题记录" class="headerlink" title="ZZQ的ppt做题记录"></a>ZZQ的ppt做题记录</h2><p><strong>CF258D Little Elephant and Broken Sorting </strong></p>
-<p>$f(a,b)表示a&gt;b的概率，每次只修改2n个值,O(n^2)$  <a href="https://codeforces.com/contest/258/submission/59254716" target="_blank" rel="noopener">code</a></p>
+<h4 id="CF1153F-Serval-and-Bonus-Problem：积分处理期望线性运用于连续随机变量"><a href="#CF1153F-Serval-and-Bonus-Problem：积分处理期望线性运用于连续随机变量" class="headerlink" title="CF1153F Serval and Bonus Problem：积分处理期望线性运用于连续随机变量"></a><a href="https://codeforces.com/contest/1153/problem/F" target="_blank" rel="noopener">CF1153F Serval and Bonus Problem</a>：积分处理期望线性运用于连续随机变量</h4><p>题意：给出一个长度为L的线段，在上面随机出n条线段，问被覆盖至少k次的面积的期望，$n \le 2e3$</p>
+<p>一眼秒但过不去样例自闭1h，看题解才发现题意其实是随机两个没有大小关系的端点来确定哪个是左端点的</p>
+<p>做法：显然L没有意义当做长度1最后乘L即可，容斥f恰g至，期望线性性，$g_i=\sum_{j=i}^n C_j^i f_j=C_n^i \int_0^1 2^ix^i(1-x)^idx$</p>
+<p>二项式定理得$g_i=C_n^i2^i \sum_{j=0}^i C_i^j(-1)^j \int_0^1x^{i+j}dx$，应该可以FFT优化，似乎也有不少其他做法</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fo(i,<span class="number">0</span>,n) fo(j,<span class="number">0</span>,i) add(g[i], C[i][j]%MOD*(j&amp;<span class="number">1</span>?MOD<span class="number">-1</span>:<span class="number">1</span>)%MOD*invm(i+j+<span class="number">1</span>)%MOD );</div><div class="line">fo(i,<span class="number">0</span>,n) g[i]=g[i]*C[n][i]%MOD*qpower(<span class="number">2</span>,i)%MOD;</div><div class="line">ll ans=<span class="number">0</span>;fo(i,k,n) fo(j,i,n) add(ans, ((j-i)&amp;<span class="number">1</span>?MOD<span class="number">-1</span>:<span class="number">1</span>)*C[j][i]%MOD*g[j]%MOD );write(ans*L%MOD);</div></pre></td></tr></table></figure>
+<h4 id="bzoj2554-Color：条件概率做期望"><a href="#bzoj2554-Color：条件概率做期望" class="headerlink" title="bzoj2554 Color：条件概率做期望"></a><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2554" target="_blank" rel="noopener">bzoj2554 Color</a>：条件概率做期望</h4><p>$$<br>很自然地先考虑两种颜色，只关心一种颜色当前个数，e_i=\frac{e_{i-1}+e_{i+1}}{2}+\frac{1}{ \frac{2i(n-i)}{n(n-1)} },e_0=e_1=1，手动解方程即可<br>\\<br>多个颜色想用上述做法必须考虑条件概率，枚举颜色，ans+=最后是这种颜色的概率*最后是这种颜色前提下的期望步数<br>\\<br>算概率的话考虑到一定满足\sum_{ \sum a_i=n } p_{a_i}=1可知p_i=i/n，当然也可以p_i=\frac{p_{i-1}+p_{i+1}}{2}<br>\\<br>关键是条件概率下的期望（可以抱着学习的心态看）：\\<br>E_i=\frac{1}{ \frac{2i(n-i)}{n(n-1)} }+\frac{p_{i-1}e_{i-1}+p_{i+1}e_{i+1}}{p_{i-1}+p_{i+1}}，即考虑从那里开始做，满足条件的概率，来确定对期望的贡献<br>$$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">e[n<span class="number">-1</span>][<span class="number">1</span>]=<span class="number">1</span>;<span class="comment">//不知为何只能在darkbzoj通过</span></div><div class="line">fd(i,n<span class="number">-1</span>,<span class="number">2</span>)</div><div class="line">    e[i<span class="number">-1</span>][<span class="number">0</span>]=e[i][<span class="number">0</span>]*(<span class="number">2</span>*i)/(i<span class="number">-1</span>)-e[i+<span class="number">1</span>][<span class="number">0</span>]*(i+<span class="number">1</span>)/(i<span class="number">-1</span>)<span class="number">-1.0</span>*n*(n<span class="number">-1</span>)/(n-i)/(i<span class="number">-1</span>),</div><div class="line">e[i<span class="number">-1</span>][<span class="number">1</span>]=e[i][<span class="number">1</span>]*(<span class="number">2</span>*i)/(i<span class="number">-1</span>)-e[i+<span class="number">1</span>][<span class="number">1</span>]*(i+<span class="number">1</span>)/(i<span class="number">-1</span>);</div><div class="line">assert(e[<span class="number">1</span>][<span class="number">1</span>]!=e[<span class="number">2</span>][<span class="number">1</span>]);<span class="keyword">double</span> E=(n/<span class="number">2</span>+e[<span class="number">2</span>][<span class="number">0</span>]-e[<span class="number">1</span>][<span class="number">0</span>])/(e[<span class="number">1</span>][<span class="number">1</span>]-e[<span class="number">2</span>][<span class="number">1</span>]);</div><div class="line">fo(id,<span class="number">0</span>,<span class="number">25</span>) ans+=(e[cnt[id]][<span class="number">0</span>]+e[cnt[id]][<span class="number">1</span>]*E)*cnt[id]/n;<span class="built_in">printf</span>(<span class="string">"%.1lf"</span>,ans);</div></pre></td></tr></table></figure>
+<h4 id="Fibonacci’s-Nightmare：递推式与期望的小例题"><a href="#Fibonacci’s-Nightmare：递推式与期望的小例题" class="headerlink" title="Fibonacci’s Nightmare：递推式与期望的小例题"></a><a href="https://blog.csdn.net/xyyxyyx/article/details/102090170" target="_blank" rel="noopener">Fibonacci’s Nightmare</a>：递推式与期望的小例题</h4><p>题意：$a_0=1,a_n=a_i+a_j，其中i和j在[0,i)中随机选择，求D(a_n)，n \le 1e6$<br>$$<br>记S_n=\sum_{i=0}^n a_n ，E(a_n)=\frac{1}{n^2} E(\sum_{i,j \in [0,n)} a_i+a_j)=\frac{2}{n} E(S_{n-1}) \\E(S_n)=E(S_{n-1})*\frac{n+2}{2}=C_{n+2}^2,E(a_n)=n+1 \\E(a_n^2)=\frac{1}{n^2} E( \sum_{i,j \in [0,n)} (a_i+a_j)^2 )=\frac{2}{n} \sum_{i,j \in [0,n)} E(a_i^2)+\frac{2}{n^2} E( S_{n-1}^2 )\\E(S_{n}^2)=E( S_{n-1}^2+a_{n}^2+2a_nS_{n-1} )，此时只能带入E(a_n)=\frac{2}{n} E(S_{n-1})(保留自变量) \\得到E(S_{n}^2)=E(S_{n-1}^2)+E(a_n^2)+\frac{4}{n}E( S^2_{n-1})，O(n)<br>$$<br><a href="https://cometoj.com/contest/84/problem/G?problem_id=4304" target="_blank" rel="noopener">神仙加强——coj16G</a></p>
+<h2 id="概率生成函数"><a href="#概率生成函数" class="headerlink" title="概率生成函数"></a>概率生成函数</h2><p>$$<br>对于非负整数集上离散变量X，其概率生成函数为F(z)=E(z^X)=\sum_{i=0}^{\infty} P(X=i) z^i \\<br>显然F(1)=1，F’(1)=E(X)，F^{(k)}(1)=E(X^{\underline k})，D(x)=F’’(1)+F’(1)-(F’(1))^2 \\<br>$$</p>
+<p>还需要掌握求展开$z^A e^{Bz}转OGF后带入z=1的答案$：<br>$$<br>f(A,B)=\sum_{i=0}^{\infty}\frac{B^i}{i!} (i+A)!=\sum_{i=A} i^{\underline A} B^{i-A}，下降幂的自然思路是i^{\underline A}=(i-1)^{\underline {A-1}}*A+(i-1)^{\underline A}<br>\\<br>f(A,B)=A*f(A-1,B)+B*f(A,B),f(0,B)=\frac{1}{1-B},f(A,B)=\frac{A}{1-B}f(A-1,B)=\frac{A!}{(1-B)^{A+1}}<br>$$</p>
+<h4 id="CTSC2006-歌唱王国，求期望E、方差D"><a href="#CTSC2006-歌唱王国，求期望E、方差D" class="headerlink" title="[CTSC2006]歌唱王国，求期望E、方差D"></a><a href="https://www.luogu.org/problem/P4548" target="_blank" rel="noopener">[CTSC2006]歌唱王国</a>，求期望E、方差D</h4><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>对这类问题通用的部分：设F表示恰好结束，G表示尚未结束，$F+G=1+zG$</p>
+<p>首先要知道$F’(1)$，求导得$F’+G’=G+zG’,F’(1)=G(1)$，其实就是上面那个期望的转化</p>
+<p>然后也要知道$F’’(1)$，二次求导得$F’’+G’’=G’+G’+zG’’,F’’(1)=2G’(1)$</p>
+<p>然后考虑本题的特性，在所有未结束状态后面拼上str保证结束，那么当提前结束时，有效的只是其某个border</p>
+<p>$G*(z/m)^{L}=\sum_{i \in str的border} F*(z/m)^{L-i}，G=\sum m^i*F*z^{-i}$</p>
+<p>$G(1)=\sum m^i$；求导得$G’=\sum m^i(F’z^{-i}+F*(-i)z^{-i-1})，G’(1)=\sum m^i(F’(1)-i)$</p>
+
+</div></div>
+<h4 id="YMD的论文题1、「SDOI2017」硬币游戏"><a href="#YMD的论文题1、「SDOI2017」硬币游戏" class="headerlink" title="YMD的论文题1、「SDOI2017」硬币游戏"></a><strong>YMD的论文题1、<a href="https://loj.ac/problem/2004" target="_blank" rel="noopener">「SDOI2017」硬币游戏</a></strong></h4><p>题意：m种数字的概率不相同，数字i的概率为$P_i$，给出n个长度分别为$L_i$的串$S_i$，不断给串B末尾加字符，当B包含所有串时结束，问期望长度，$n \le 15,m \le 1e5,L_i \le 2e4$</p>
+<p>硬币游戏：对每个串，求出这种串是最早出现的概率，$n,L \le 3e2$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>外面肯定套上min-max容斥，$max = \sum_T min(T) (-1)^{|T|+1}$，即只考虑T内元素，第一个出现时就结束</p>
+<p>约定$P_i(l,r)=S_i的子串[l,r]所需概率，a_{i,j,ln}=S_j(L_j-ln+1,L_j)与S_i(1,ln)相等$</p>
+<p>设$F_i(z)=最后以S_i结尾$，则$\sum_{i \in T} F_i+G=1+zG$</p>
+<p>和上次类似的思想，$\forall i \in T,  G*P_i(1,L_i)z^{L_i}=\sum_{j \in T} \sum_{ln} a_{i,j,ln}*F_j*P_i(ln+1,L_i)*z^{L_i-ln},G(1)=\sum_{j \in T} \sum_{ln} \frac{ a_{i,j,ln}F_j(1) }{P_i(1,ln)}$</p>
+<p>这n条方程和$\sum_{i \in T} F_i(1)=1$组成n+1个变量的方程组；$O(n^2L)求a+O(2^nn^3)高斯消元$</p>
+<p>至于硬币游戏，是本题意的弟弟版本，发现就是不需要min-max容斥，然后求$F_i(1)$，$O(n^2L+n^3)$，<a href="https://loj.ac/submission/681599" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h4 id="YMD的论文题2"><a href="#YMD的论文题2" class="headerlink" title="YMD的论文题2"></a><strong>YMD的论文题2</strong></h4><p>题意：一个n面（保证偶）的骰子，有个初始为0的计数器，当投出奇数计数器清零，否则计数器加一且如果骰子为n则结束，问结束时计数器的期望</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>$$<br>\\ F(z)+G(z)=1+G(z)*\frac{z}{2}+G(1)/2，即1/2的概率清零，类似将概率收集到z^0的感觉；F(z)=G(z)*z/n<br>\\ F(1)=1 \rightarrow G(1)=n,F+G=1+Gz/2+n/2,F(z)=\frac{(n+2)z}{(2-n)z+2n}<br>\\ 然后求导，因为层数较多就不写过程了，总之的确可以得到F’(1)=\frac{2n}{n+2}<br>$$</p>
+
+</div></div>
+<h4 id="「ZJOI2019」开关"><a href="#「ZJOI2019」开关" class="headerlink" title="「ZJOI2019」开关"></a>「ZJOI2019」开关</h4><p>已知三种做法，和上面那些明显不同，感觉也是挺有适用性的一种设状态方式，<a href="80189232.html/#「ZJOI2019」开关">详情</a></p>
+<hr>
+<p>下面进入练手时间，手握强大工具，和其他做法的思维难度对比鲜明</p>
+<h4 id="hdu4652-Dice"><a href="#hdu4652-Dice" class="headerlink" title="hdu4652 Dice"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4652" target="_blank" rel="noopener">hdu4652 Dice</a></h4><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>可能差分法也能做？<br>$$<br>\\ 对于询问1，颜色本质相同，G*(z/m)^n=\frac{F}{m}(\sum_{i=1}^n (z/m)^i),E=G(1)=\frac{1}{m}*(\frac{1-m^{n+1}}{1-m}-1)\\ 对于询问2，G*z^n*\frac{P_m^n}{m^n}=F*\sum_{i=1}^n \frac{P_{m-i}^{n-i}}{m^{n-i}} z^{n-i},G(1)=\sum_{i=1}^n \frac{m^i}{m^{\underline i}}<br>$$<br>记得特判op=0，m=1；另外不知为啥不能用快读，<a href="../code/hdu/hdu4652.html">code</a></p>
+
+</div></div>
+<h4 id="牛客挑战赛31D-雷的打字机"><a href="#牛客挑战赛31D-雷的打字机" class="headerlink" title="牛客挑战赛31D 雷的打字机"></a><a href="https://ac.nowcoder.com/acm/contest/880/D" target="_blank" rel="noopener">牛客挑战赛31D 雷的打字机</a></h4><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>设$G_i(z)=以字符i结尾，G=1+\sum G_i$，易得$G_i=(G-G_i)p_iz,G_i=G*\frac{p_iz}{1+p_iz},G=\frac{1}{1-\sum \frac{p_i}{1+p_i}}$，线性求n个数的逆元见套路集锦</p>
+
+</div></div>
+<h4 id="AGC038E-Gachapon、「集训队作业2018」喂鸽子"><a href="#AGC038E-Gachapon、「集训队作业2018」喂鸽子" class="headerlink" title="AGC038E Gachapon、「集训队作业2018」喂鸽子"></a>AGC038E Gachapon、<a href="http://uoj.ac/problem/449" target="_blank" rel="noopener">「集训队作业2018」喂鸽子</a></h4><p><a href="127faea6.html/#AGC038">AGC038E题解</a>，喂鸽子也差不多，值得一提的是存在$O(n^2k)$的<a href="https://hyscere.github.io/2019/12/02/%E3%80%8C%E9%9B%86%E8%AE%AD%E9%98%9F%E4%BD%9C%E4%B8%9A2018%E3%80%8D%E5%96%82%E9%B8%BD%E5%AD%90/" target="_blank" rel="noopener">优美做法</a>，但貌似没法优化我惯用（即前者题解中那种）的做法，因为主要针对$(\sum_{i=0}^{k}\frac{x^i}{i!})^c$</p>
 
       
     </div>
 
     
       
+
+  <div class="popular-posts-header">相关文章推荐</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/250b.html" rel="bookmark">【OI之路】04图论-9二分图</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/68d9.html" rel="bookmark">「OI之路」03数学-13生成函数</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/4bab.html" rel="bookmark">「OI之路」05动态规划-2-动态规划进阶</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/293.html" rel="bookmark">【OI之路】04图论-4简单连通性问题</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/80c8.html" rel="bookmark">「置顶」套路集锦</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/f834.html" rel="bookmark">「OI之路」03数学-11集合幂级数</a></div>
+      
+    </li>
+  
+  </ul>
 
 
     
@@ -661,7 +756,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/3e6e.html" title="【OI之路】03数学-15概率论">http://zory.ink/posts/3e6e.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/3e6e.html" title="「OI之路」03数学-15概率论">http://zory.ink/posts/3e6e.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -681,6 +776,15 @@
 
     <footer class="post-footer">
       
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/精品文章/" rel="tag"># 精品文章</a>
+          
+        </div>
+      
 
       
       
@@ -690,8 +794,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/8c82.html" rel="next" title="【OI之路】03数学-14多项式全家桶">
-                <i class="fa fa-chevron-left"></i> 【OI之路】03数学-14多项式全家桶
+              <a href="/posts/8c82.html" rel="next" title="「OI之路」03数学-14多项式全家桶">
+                <i class="fa fa-chevron-left"></i> 「OI之路」03数学-14多项式全家桶
               </a>
             
           </div>
@@ -700,8 +804,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/9763.html" rel="prev" title="【OI之路】03数学-16快乐计数">
-                【OI之路】03数学-16快乐计数 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/9763.html" rel="prev" title="「OI之路」03数学-16快乐计数">
+                「OI之路」03数学-16快乐计数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -779,7 +883,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -804,7 +908,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1213,7 +1319,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1276,7 +1386,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些定义"><span class="nav-text">一些定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#期望"><span class="nav-text">期望</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方差"><span class="nav-text">方差</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-text">题目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-NOIP2018初赛某题"><span class="nav-text">A NOIP2018初赛某题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B-将1随机分为n份第k小段的期望"><span class="nav-text">B 将1随机分为n份第k小段的期望</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-n个随机实数的第k小的期望"><span class="nav-text">C n个随机实数的第k小的期望</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#D-n个随机不重整数的第k小的期望"><span class="nav-text">D n个随机不重整数的第k小的期望</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#E-关于展开-x-Ae-Bx-对普通生成函数（x-1）的贡献"><span class="nav-text">E 关于展开$x^Ae^{Bx}$对普通生成函数（x=1）的贡献</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F-CF605E-Intergalaxy-Trips"><span class="nav-text">F CF605E Intergalaxy Trips</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#G-一种期望模型"><span class="nav-text">G 一种期望模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#H-一个经典的杀人模型转化-容斥"><span class="nav-text">H 一个经典的杀人模型转化+容斥</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ZZQ的ppt做题记录"><span class="nav-text">ZZQ的ppt做题记录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概率"><span class="nav-text">概率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#期望"><span class="nav-text">期望</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方差"><span class="nav-text">方差</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#经典模型"><span class="nav-text">经典模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-n个随机实数的第k小的期望"><span class="nav-text">A  n个随机实数的第k小的期望</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B-将1随机分为n份第k小段的期望"><span class="nav-text">B 将1随机分为n份第k小段的期望</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-NOIP2018初赛某题"><span class="nav-text">C NOIP2018初赛某题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#D-n个随机不重整数的第k小的期望"><span class="nav-text">D n个随机不重整数的第k小的期望</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#E-一个经典的杀人模型转化-容斥"><span class="nav-text">E 一个经典的杀人模型转化+容斥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F-一类通过差分解决转移方向问题的期望dp"><span class="nav-text">F 一类通过差分解决转移方向问题的期望dp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#G-一种dag上删除的期望模型"><span class="nav-text">G 一种dag上删除的期望模型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非概率生成函数题单"><span class="nav-text">非概率生成函数题单</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CF258D-Little-Elephant-and-Broken-Sorting：热身"><span class="nav-text">CF258D Little Elephant and Broken Sorting：热身</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CF605E-Intergalaxy-Trips：好题"><span class="nav-text">CF605E Intergalaxy Trips：好题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CF1153F-Serval-and-Bonus-Problem：积分处理期望线性运用于连续随机变量"><span class="nav-text">CF1153F Serval and Bonus Problem：积分处理期望线性运用于连续随机变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bzoj2554-Color：条件概率做期望"><span class="nav-text">bzoj2554 Color：条件概率做期望</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Fibonacci’s-Nightmare：递推式与期望的小例题"><span class="nav-text">Fibonacci’s Nightmare：递推式与期望的小例题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概率生成函数"><span class="nav-text">概率生成函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CTSC2006-歌唱王国，求期望E、方差D"><span class="nav-text">[CTSC2006]歌唱王国，求期望E、方差D</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#YMD的论文题1、「SDOI2017」硬币游戏"><span class="nav-text">YMD的论文题1、「SDOI2017」硬币游戏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#YMD的论文题2"><span class="nav-text">YMD的论文题2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#「ZJOI2019」开关"><span class="nav-text">「ZJOI2019」开关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hdu4652-Dice"><span class="nav-text">hdu4652 Dice</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#牛客挑战赛31D-雷的打字机"><span class="nav-text">牛客挑战赛31D 雷的打字机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AGC038E-Gachapon、「集训队作业2018」喂鸽子"><span class="nav-text">AGC038E Gachapon、「集训队作业2018」喂鸽子</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

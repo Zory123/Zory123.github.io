@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="ProblemBernard有n个结点，编号1至n，一开始没有边。现在Bernard要新建m条边，构成一个图。每一条新建的边都是无向边。但是要满足如下的条件：1、选择两个不同编号的结点X和Y，在X和Y之间建立一条边，前提是两个结点的编号的差不超过给定的参数k，即0&amp;lt;|y-x|≤k。注意：允许在A和B之间建立多条边（即两个结点之间可以有重边）。2、当最终建完m条边之后，对于任意的一个结点i，与">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-11-22T00:27:44.133Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="graph">
 <meta name="twitter:description" content="ProblemBernard有n个结点，编号1至n，一开始没有边。现在Bernard要新建m条边，构成一个图。每一条新建的边都是无向边。但是要满足如下的条件：1、选择两个不同编号的结点X和Y，在X和Y之间建立一条边，前提是两个结点的编号的差不超过给定的参数k，即0&amp;lt;|y-x|≤k。注意：允许在A和B之间建立多条边（即两个结点之间可以有重边）。2、当最终建完m条边之后，对于任意的一个结点i，与">
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-11-22 08:27:44" itemprop="dateModified" datetime="2019-11-22T08:27:44+08:00">2019-11-22</time>
               </span>
             
           
@@ -617,7 +617,7 @@
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>wo shi sb</p>
 <p>一直不知道怎么处理重边<br>但其实如果现在满足度数的奇偶性，那么每条边的重复次数是可以%2的<br>所以最后用隔板法统计一下插入的边即可</p>
-<p>f[i][j][S]<br>表示考虑完点i有j条边，包括i在内的k个点的度数奇偶性<br>枚举第i个点相关的边就能通过本题了<br>更优秀的做法是考虑往前的每条边，这样就是 $O(nmk2^k)$ 不过并没有写</p>
+<p>$f[i][j][S]$<br>表示考虑完点i有j条边，包括i在内的k个点的度数奇偶性<br>枚举第i个点相关的边就能通过本题了<br>更优秀的做法是考虑往前的每条边，这样就是 $O(nmk2^k)$ 不过并没有写</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">	<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MOD=<span class="number">1000000007</span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> y)</span></div><div class="line">	</span>&#123;</div><div class="line">		x+=y;<span class="keyword">if</span>(x&gt;=MOD) x-=MOD;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> f[<span class="number">32</span>][<span class="number">42</span>][<span class="number">1</span>&lt;&lt;<span class="number">10</span>],bin[<span class="number">30</span>],siz[<span class="number">1</span>&lt;&lt;<span class="number">10</span>];</div><div class="line">	<span class="keyword">int</span> c[<span class="number">1100</span>][<span class="number">1100</span>];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		bin[<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;<span class="number">30</span>;i++) bin[i]=bin[i<span class="number">-1</span>]&lt;&lt;<span class="number">1</span>;</div><div class="line">		siz[<span class="number">1</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;bin[<span class="number">10</span>];i++) siz[i]=siz[i&gt;&gt;<span class="number">1</span>]+siz[i&amp;<span class="number">1</span>];</div><div class="line">		c[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;<span class="number">1100</span>;i++)</div><div class="line">		&#123;</div><div class="line">			c[i][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=i;j++) c[i][j]=(c[i<span class="number">-1</span>][j<span class="number">-1</span>]+c[i<span class="number">-1</span>][j])%MOD;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">int</span> n,m,k;<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;m,&amp;k);</div><div class="line">		f[<span class="number">1</span>][<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++) <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=m;j++) <span class="keyword">for</span>(<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;bin[k];s++) <span class="keyword">if</span>(f[i][j][s])</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> left=min(i,k);</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> s2=<span class="number">0</span>;s2&lt;bin[left];s2++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">if</span>(left==k and ((s^s2)&amp;bin[left<span class="number">-1</span>]) ) <span class="keyword">continue</span>;</div><div class="line">				add(f[i+<span class="number">1</span>][j+siz[s2]][ ((s^s2)&lt;&lt;<span class="number">1</span>)+(siz[s2]&amp;<span class="number">1</span>) ],f[i][j][s]);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">int</span> tot=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=n and j&lt;=i+k;j++) tot++;</div><div class="line">		<span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=m;j++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> left=m-j;<span class="keyword">if</span>(left&amp;<span class="number">1</span>) <span class="keyword">continue</span>;</div><div class="line">			add(ans,(ll)f[n][j][<span class="number">0</span>]*c[left/<span class="number">2</span>+tot<span class="number">-1</span>][tot<span class="number">-1</span>]%MOD);</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	srand(time(<span class="number">0</span>));</div><div class="line">	mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 </div></div>
@@ -634,21 +634,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">【CF553E】Kyoya and Train</a></div>
+      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">「CF553E」Kyoya and Train</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/301d.html" rel="bookmark">【NOIP17 D2T2】宝藏</a></div>
+      <div class="popular-posts-title"><a href="/posts/301d.html" rel="bookmark">「NOIP17 D2T2」宝藏</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/421b.html" rel="bookmark">【NOIP13 D1T2】火柴排队</a></div>
+      <div class="popular-posts-title"><a href="/posts/b262.html" rel="bookmark">「Bzoj1999」「Luogu1099」树网的核</a></div>
       
     </li>
   
@@ -662,14 +662,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/c65d.html" rel="bookmark">【Hdu2157】多少条路呢</a></div>
+      <div class="popular-posts-title"><a href="/posts/c65d.html" rel="bookmark">「Hdu2157」多少条路呢</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/c439.html" rel="bookmark">【Vijos1067】守望者的烦恼</a></div>
+      <div class="popular-posts-title"><a href="/posts/c439.html" rel="bookmark">「Vijos1067」守望者的烦恼</a></div>
       
     </li>
   
@@ -727,8 +727,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/1596.html" rel="next" title="小奇挖矿">
-                <i class="fa fa-chevron-left"></i> 小奇挖矿
+              <a href="/posts/b3c.html" rel="next" title="「bzoj3560」DZY Loves Math V">
+                <i class="fa fa-chevron-left"></i> 「bzoj3560」DZY Loves Math V
               </a>
             
           </div>
@@ -737,8 +737,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/1b03.html" rel="prev" title="【TJOI2015】线性代数">
-                【TJOI2015】线性代数 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/1596.html" rel="prev" title="小奇挖矿">
+                小奇挖矿 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -816,7 +816,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -841,7 +841,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1250,7 +1252,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

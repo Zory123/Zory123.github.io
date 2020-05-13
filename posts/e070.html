@@ -95,15 +95,15 @@
   <meta name="description" content="来源和评测点Bzoj3224Codevs4543Caioj1130">
 <meta name="keywords" content="难度2,伸展树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Bzoj3224】普通平衡树">
+<meta property="og:title" content="「Bzoj3224」普通平衡树">
 <meta property="og:url" content="http://zory.ink/posts/e070.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="来源和评测点Bzoj3224Codevs4543Caioj1130">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.ink/images/OI之路/rotate.png">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Bzoj3224】普通平衡树">
+<meta name="twitter:title" content="「Bzoj3224」普通平衡树">
 <meta name="twitter:description" content="来源和评测点Bzoj3224Codevs4543Caioj1130">
 <meta name="twitter:image" content="http://zory.ink/images/OI之路/rotate.png">
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>【Bzoj3224】普通平衡树 | Zory的个人博客</title>
+  <title>「Bzoj3224」普通平衡树 | Zory的个人博客</title>
   
 
 
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -498,7 +498,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【Bzoj3224】普通平衡树
+          <h2 class="post-title" itemprop="name headline">「Bzoj3224」普通平衡树
 
               
             
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2019-12-01 10:18:46" itemprop="dateModified" datetime="2019-12-01T10:18:46+08:00">2019-12-01</time>
               </span>
             
           
@@ -580,7 +580,7 @@
 
           
           
-            <span id="/posts/e070.html" class="post-meta-item leancloud_visitors" data-flag-title="【Bzoj3224】普通平衡树">
+            <span id="/posts/e070.html" class="post-meta-item leancloud_visitors" data-flag-title="「Bzoj3224」普通平衡树">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -615,9 +615,9 @@
       
         <h2 id="来源和评测点"><a href="#来源和评测点" class="headerlink" title="来源和评测点"></a>来源和评测点</h2><p><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3224" target="_blank" rel="noopener">Bzoj3224</a><br><a href="http://codevs.cn/problem/4543/" target="_blank" rel="noopener">Codevs4543</a><br><a href="http://caioj.cn/problem.php?id=1130" target="_blank" rel="noopener">Caioj1130</a></p>
 <a id="more"></a>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-red"><strong>【题目大意】</strong><br>写一种数据结构来维护一些数，<br>其中需要提供以下操作：<br>1. 插入数字x<br>2. 删除数字x(若有多个相同的数，应只删除一个)<br>3. 查询数字x的排名(若有多个相同的数，因输出最小的排名)<br>4. 查询排名为x的数<br>5. 求数字x的前驱(前驱定义为小于x，且最大的数)<br>6. 求数字x的后继(后继定义为大于x，且最小的数)<br><strong>【输入格式】</strong><br>第一行为n，表示操作的个数,<br>下面n行每行有两个数opt和x，opt表示操作的序号<br>1&lt;=opt&lt;=6 n&lt;=100000 所有数字均在-2*10^9到2*10^9内<br><strong>【输出格式】</strong><br>对于操作3,4,5,6每行输出一个数，表示对应答案<br><strong>【输入样例】</strong><br>8<br>1 10<br>1 20<br>1 30<br>3 20<br>4 2<br>2 10<br>5 25<br>6 -1<br><strong>【输出样例】</strong><br>2<br>20<br>20<br>20<br></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p id="div-border-top-red"><strong>「题目大意」</strong><br>写一种数据结构来维护一些数，<br>其中需要提供以下操作：<br>1. 插入数字x<br>2. 删除数字x(若有多个相同的数，应只删除一个)<br>3. 查询数字x的排名(若有多个相同的数，因输出最小的排名)<br>4. 查询排名为x的数<br>5. 求数字x的前驱(前驱定义为小于x，且最大的数)<br>6. 求数字x的后继(后继定义为大于x，且最小的数)<br><strong>「输入格式」</strong><br>第一行为n，表示操作的个数,<br>下面n行每行有两个数opt和x，opt表示操作的序号<br>1&lt;=opt&lt;=6 n&lt;=100000 所有数字均在-2*10^9到2*10^9内<br><strong>「输出格式」</strong><br>对于操作3,4,5,6每行输出一个数，表示对应答案<br><strong>「输入样例」</strong><br>8<br>1 10<br>1 20<br>1 30<br>3 20<br>4 2<br>2 10<br>5 25<br>6 -1<br><strong>「输出样例」</strong><br>2<br>20<br>20<br>20<br></p>
 
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><a href="../2003-01/【OI之路】06树-4伸展树.html">【OI之路】06树-4伸展树</a>的模版</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><a href="../2003-01/「OI之路」06树-4伸展树.html">「OI之路」06树-4伸展树</a>的模版</p>
 <p>核心思路在于：对于某节点，<br>左子树是关键字（在这道题中是大小关系）比该节点大的，右子树比该节点小<br>接着在保证这个平衡（中序遍历保持不变）的情况下，进行各种操作</p>
 <p>旋转Rotate<br><img src="../images/OI之路/rotate.png" alt=""></p>
 <p>旋转到某节点下Splay<br>网上的一段话:</p>
@@ -638,42 +638,42 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/c201.html" rel="bookmark">【CZYZ2009暑假集训提高组6】魔兽争霸</a></div>
+      <div class="popular-posts-title"><a href="/posts/c201.html" rel="bookmark">「CZYZ2009暑假集训提高组6」魔兽争霸</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/8065.html" rel="bookmark">【Bzoj2002】【Luogu3203】弹飞绵羊</a></div>
+      <div class="popular-posts-title"><a href="/posts/8065.html" rel="bookmark">「Bzoj2002」「Luogu3203」弹飞绵羊</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/d303.html" rel="bookmark">【Bzoj1500】【Luogu2042】维修数列</a></div>
+      <div class="popular-posts-title"><a href="/posts/d303.html" rel="bookmark">「Bzoj1500」「Luogu2042」维修数列</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/2ed3.html" rel="bookmark">【Bzoj1112】砖块</a></div>
+      <div class="popular-posts-title"><a href="/posts/2ed3.html" rel="bookmark">「Bzoj1112」砖块</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">【CF553E】Kyoya and Train</a></div>
+      <div class="popular-posts-title"><a href="/posts/7565.html" rel="bookmark">「CF553E」Kyoya and Train</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/77a.html" rel="bookmark">【Bzoj3223】文艺平衡树</a></div>
+      <div class="popular-posts-title"><a href="/posts/77a.html" rel="bookmark">「Bzoj3223」文艺平衡树</a></div>
       
     </li>
   
@@ -691,7 +691,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/e070.html" title="【Bzoj3224】普通平衡树">http://zory.ink/posts/e070.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/e070.html" title="「Bzoj3224」普通平衡树">http://zory.ink/posts/e070.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -731,8 +731,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/5d1d.html" rel="next" title="【Ural1028】【Vijos1066】弱弱的战壕">
-                <i class="fa fa-chevron-left"></i> 【Ural1028】【Vijos1066】弱弱的战壕
+              <a href="/posts/5d1d.html" rel="next" title="「Ural1028」「Vijos1066」弱弱的战壕">
+                <i class="fa fa-chevron-left"></i> 「Ural1028」「Vijos1066」弱弱的战壕
               </a>
             
           </div>
@@ -820,7 +820,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -845,7 +845,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1254,7 +1256,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

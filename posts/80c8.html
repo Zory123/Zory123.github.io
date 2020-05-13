@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="错误总结、套路集锦 加粗表示很有用">
+  <meta name="description" content="错误总结、套路集锦 带公式的项目前面编号会显示不出来，并不会修">
 <meta name="keywords" content="精品文章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【置顶】套路集锦">
+<meta property="og:title" content="「置顶」套路集锦">
 <meta property="og:url" content="http://zory.ink/posts/80c8.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="错误总结、套路集锦 加粗表示很有用">
+<meta property="og:description" content="错误总结、套路集锦 带公式的项目前面编号会显示不出来，并不会修">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-15T08:25:07.919Z">
+<meta property="og:updated_time" content="2020-05-12T13:21:25.461Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【置顶】套路集锦">
-<meta name="twitter:description" content="错误总结、套路集锦 加粗表示很有用">
+<meta name="twitter:title" content="「置顶」套路集锦">
+<meta name="twitter:description" content="错误总结、套路集锦 带公式的项目前面编号会显示不出来，并不会修">
 
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【置顶】套路集锦 | Zory的个人博客</title>
+  <title>「置顶」套路集锦 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【置顶】套路集锦
+          <h2 class="post-title" itemprop="name headline">「置顶」套路集锦
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-15 16:25:07" itemprop="dateModified" datetime="2019-10-15T16:25:07+08:00">2019-10-15</time>
+                <time title="修改时间：2020-05-12 21:21:25" itemprop="dateModified" datetime="2020-05-12T21:21:25+08:00">2020-05-12</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/80c8.html" class="post-meta-item leancloud_visitors" data-flag-title="【置顶】套路集锦">
+            <span id="/posts/80c8.html" class="post-meta-item leancloud_visitors" data-flag-title="「置顶」套路集锦">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -612,107 +612,173 @@
 
       
         <p>错误总结、套路集锦</p>
-<p>加粗表示很有用</p>
+<p>带公式的项目前面编号会显示不出来，并不会修</p>
 <a id="more"></a>
-<h1 id="错误总结"><a href="#错误总结" class="headerlink" title="错误总结"></a>错误总结</h1><ol>
-<li>cmp函数不能在结构体内部</li>
-<li>对于一道题意不裸的题，都应该手玩样例检验没有看错题、想出来算法的基本正确性，再去code</li>
+<h1 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h1><ol>
 <li>标准差是方差的算术平方根，所以说所谓方差是不需要开根的</li>
-<li><strong>不等式的移项</strong> 一定要分析正负性</li>
-<li>stl的比较重载不能随便搞，一定要满足传递性和大小情况单一性（stl用&lt;和&gt;推导出=）</li>
-<li>fft得答案时要round</li>
-<li>带取模计数，判无解不能用答案=0，因为答案可能是模数的倍数</li>
-<li><strong>注意！</strong><br>multiset的count复杂度和对应元素数量相关</li>
-<li><strong>注意！</strong><br> set等非随机访问结构的lower_bound，必须调用结构内部的，用stl的那个函数会线性</li>
-<li>注意 s&amp;bin[i] 和 (s&amp;bin[i])&gt;0 的不同（惯犯</li>
-<li>用指针a[]表示数组的时候，sizeof a只会得到单位大小，而不是整个数组的大小</li>
-<li>取模题最后转正很容易忘记，养成<strong>中途转正</strong>的习惯</li>
-<li>map等stl在结构体内的时候memset会gg</li>
+<li>cmp函数不能在结构体内部</li>
+<li><strong>注意！</strong>multiset的count复杂度和对应元素数量相关</li>
+<li><strong>注意！</strong>set等非随机访问结构的lower_bound，必须调用结构内部的，用stl的那个函数会一次O(n)但不会报错</li>
 <li>在无c++11的时候，queue系列的<strong>swap</strong>是o(n)的</li>
-<li>如果一个东西的插入复杂度是通过势能分析保证的<br>那么通常不能支持删除操作，因为可以多次进行高复杂度的操作</li>
-<li>在CF上，任何自选模数的题都应该rand或者双模数，例如路径关键点、hash</li>
-<li>线段树如果值域int，求mid的时候可能爆int……</li>
+<li>stable_sort在一些交互题中很好用</li>
 </ol>
-<h1 id="奇妙结论"><a href="#奇妙结论" class="headerlink" title="奇妙结论"></a>奇妙结论</h1><ol>
-<li>一个1到n的集合，选若干个不互质的数，要求和最大<br> 结论：每个数最多两个不同的质因子，且一个在根号内，一个在根号n外<br> bzoj3308</li>
-<li>让拓扑序的逆字典序最小，应建反向边跑大根堆；只会感性理解正确性</li>
-<li><strong>随机序列的笛卡尔树深度为log</strong>（每次期望为分成两半），即上升序列长度为log；笛卡尔树的子树大小也是log级别的</li>
-</ol>
-<h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><ol>
-<li>搜索去掉次序性的套路：强行限制大小关系<br>举例：<a href="9d2f.html">POJ1011 Sticks</a></li>
-<li>常见优化：优化搜索顺序、排除等效的决策和物体、可行性、最优性、记忆化</li>
-<li>对于一个序列，拆分成多个序列的问题，有两种不同的方向：给每个元素分配组、通过组找元素<br> 最好能仔细根据题目斟酌一下策略，本人多次用2各种剪枝，也比不过裸的1……<br> 举例：<a href="9d2f.html">Sticks</a>、<a href="9d2f.html">Missile Defence System</a>、<a href="8404.html">Zebras</a></li>
+<h1 id="错误总结"><a href="#错误总结" class="headerlink" title="错误总结"></a>错误总结</h1><ol>
+<li><strong>不等式的移项</strong> 一定要分析正负性</li>
+<li>stl的比较重载不能随便搞，一定要满足传递性和大小情况单一性（stl用&lt;和&gt;推导出=）。例如在cmp里写&gt;=这种东西会re</li>
+<li>fft得答案时要round</li>
+<li>带取模计数，<strong>判无解不能用答案=0</strong>，因为答案可能是模数的倍数。特别是一些模数在输入给出的题，特别好构造</li>
+<li>注意 s&amp;bin[i] 和 (s&amp;bin[i])&gt;0 的不同（<strong>惯犯</strong></li>
+<li>用指针a[]表示数组的时候，sizeof a只会得到单位大小，而不是整个数组的大小</li>
+<li>如果一个东西的插入复杂度是通过势能分析保证的（如sam、朴素pam、ac自动机），那么通常不能支持删除操作，因为可以多次进行再回撤高复杂度的操作</li>
+<li>在CF的在线比赛时，任何自选模数的题都应该rand或者双模数，例如路径关键点、hash</li>
+<li><p>线段树如果值域int，求mid的时候可能<strong>爆int</strong>；另外区间范围涉及负数的时候，<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">10. 我习惯定义的循环宏fo，注意循环变量是ll的情况</div><div class="line">11. 感觉自己经常在想题过程中把题意扭曲了……以后如果卡住了要再三检查前面的题意转化是否出问题</div><div class="line">13. 计数等题经常会出现等比数列，记得判**公比为1**的情况</div><div class="line">14. 经常写着写着忘记，点分治最外面那次也要找重心……</div><div class="line">14. 以后一些以为想清楚的不会发生/必定发生的情况，也要写个assert</div><div class="line"></div><div class="line"># 做数论题的常用姿势</div><div class="line"></div><div class="line">1. **调和级数**，$\sum_&#123;i=1&#125;^n n/i=O(n*ln(n))$，所以像$g(n)=\sum_&#123;d\mid n&#125;f(d)$这类较简单狄利克雷卷积无脑做是一个log的，但可以更快，类似高维前缀和的思想做。复杂度$=O( \sum \frac&#123;n&#125;&#123;prm_i&#125;=所有数的质因子个数和 )=O(n*log_2(log_2 n))$</div><div class="line"></div><div class="line">   ```cpp</div><div class="line">   fo(i,1,prn) fo(j,1,N/prm[i]) f[j*prm[i]]+=f[j];</div></pre></td></tr></table></figure></p>
+</li>
+<li><p>关于约数，一个数num的约数可以$O(\sqrt{num})$枚举，可见约数个数上界为$2\sqrt{num}$；如果枚举一个数的倍数就是调和级数的复杂度，可见n内所有数的约数个数和上界为$O(n*ln(n))$；很多时候会分析一个数的不同质因子数量（通过$2*3*5…&gt;num$），<a href="778aaa12.html#%E3%80%90MtOI2019%E3%80%91%E6%81%B6%E9%AD%94%E4%B9%8B%E6%A0%91">典型题目</a></p>
+</li>
+<li><p>phi小性质：「对于n&gt;1，1~n中与n互质的数的和为$n \times \varphi(n)/2$ ，证明：$gcd(n,x)=gcd(n,n-x)$」、「深度为log级别。考虑n为偶数，则$\varphi(n)\le n/2$；若n为奇数，$\varphi(n)$一定是偶数」；一个显然正确的式子：$\varphi(ab)=\frac{\varphi(a)\varphi(b)d}{\varphi(d)}(d=gcd(a,b))$</p>
+</li>
+<li><p>关于整除：「$当x \le \sqrt n,\left \lfloor \frac{n}{\left \lfloor \frac{n}{x} \right \rfloor} \right \rfloor=x$」、「$\forall a,b,c\in\mathbb{Z},\left\lfloor\frac{a}{bc}\right\rfloor=\left\lfloor\frac{\left\lfloor\frac{a}{b}\right\rfloor}{c}\right\rfloor$」、「<strong>数论分块</strong>，将$\lfloor \frac{n}{i} \rfloor$相同的i合并起来计算，不同个数是$O(\sqrt n)$的，因为当值比根号大时，分母一定在根号内」</p>
+<p>第二条的证明：<br>$$<br>\begin{split}<br>   &amp;\frac{a}{b}=\left\lfloor\frac{a}{b}\right\rfloor+r(0\leq r&lt;1)\ \Rightarrow \\ &amp;\left\lfloor\frac{a}{bc}\right\rfloor =\left\lfloor\frac{a}{b}\cdot\frac{1}{c}\right\rfloor =\left\lfloor \frac{1}{c}\left(\left\lfloor\frac{a}{b}\right\rfloor+r\right)\right\rfloor =\left\lfloor \frac{\left\lfloor\frac{a}{b}\right\rfloor}{c} +\frac{r}{c}\right\rfloor =\left\lfloor \frac{\left\lfloor\frac{a}{b}\right\rfloor}{c}\right\rfloor\<br>   \end{split}<br>$$</p>
+</li>
+<li><p>$\sum_{i=1}^n d(i)^2约为nlog^2n$（毫无数学依据）</p>
+</li>
+<li><p>对于一个素数P，任何P以内的x，其倍数在模P意义下可以表示出所有P以内的数</p>
+</li>
+<li><p><strong>x不断对「&lt;x」的数取模</strong>，只会进行$O(logn)$ 次，讨论一下就知道了</p>
+</li>
+<li><p>对于$\prod_{\sum x_i=S} x_i或\prod_{\sum x_i=S} x_i^k$这样的东西，不管在树上还是序列上，可以考虑其组合意义：每个块内恰放k个球。于是可以边走边放，记录当前所在的块内有多少个球，然后在位置上看要不要放，在间隔看要不要放隔板。</p>
+<p>举例：<a href="c7f8.html/「集训队作业2018R4」青春猪头少年不会梦到兔女郎学姐">「集训队作业2018R4」青春猪头少年不会梦到兔女郎学姐</a>、<a href="c7f8.html/「WC2019」数树">「WC2019」数树</a></p>
+</li>
+<li><p>$gcd(x_1,x_2…x_n)=gcd(x_1,x_2-x_1,….,x_n-x_{n-1})$，经典问题就是区间加法求区间gcd</p>
+</li>
+<li><p>有时候会碰到些奇怪的模数导致某数z没有逆元，如果答案一定是整数的话，可以考虑先所有放大z倍（即先按这个算，而且模数也要放大z倍），最后模出来的结果一定是z的倍数，直接除掉</p>
+</li>
 </ol>
 <h1 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h1><ol>
-<li><strong>数论分块</strong><br>当出现连续的$\lfloor \frac{n}{i} \rfloor$时，值一定是单调不递增的，同值的区间可以合起来计算<br>复杂度：$O(\sqrt n)$<br>① 当$i \leq \sqrt n$,分母只有$\sqrt n$种<br>② 当$i &gt; \sqrt n$,$\lfloor \frac{n}{i} \rfloor &lt; \sqrt n$<br>$last=\lfloor \frac{n}{ \lfloor \frac{n}{i} \rfloor } \rfloor$<br>举例：<a href="82f7.html">CQOI2007 余数求和</a>、非常多数论题</li>
-<li>由<strong>调和级数</strong>，1+1/2+1/3…1/n=O(logn)</li>
-<li>对于一个素数P，任何P以内的x，其倍数在模P意义下可以表示出所有P以内的数</li>
-<li><strong>x不断对【&lt;x】的数取模</strong>，只会进行 $O(logn)$ 次，讨论一下就知道了</li>
-<li>【任意模数下存在逆元的数，其逆元互不相同】的证明： $ax=1(\%p)$，那么把其一作为未知数，根据裴蜀定理另一个与p互质</li>
-<li>$\sum_{i=1}^n d(i)^2约为nlog^2n$</li>
-<li>期望有个套路的转化，<strong>恰好到达的状态的概率*步数之和，等价于所有未到达的状态的概率之和</strong>，这个你可以通过【把当前概率推到上面的步数个祖先上】理解</li>
-<li>若$H*W且gcd(H,W)=1$的网格左下角射出$(0,0)\to(1,1)$的光线，则$\forall x,y \in N,(x+y)\%2=0,(x,y)会被经过$，其中不在边框上的点会被经过多次，且上述结论是充要的</li>
+<li>期望有个套路的转化，<strong>恰好到达的状态的概率*步数之和，等价于所有未到达的状态的概率之和</strong>，这个你可以通过「把当前概率推到上面的步数个祖先上」理解</li>
+<li>若$H*W且gcd(H,W)=1$的网格左下角射出$(0,0)\to(1,1)$的光线，碰到边框就反射，则$\forall x,y \in N,(x+y)\%2=0,(x,y)会被经过$，其中不在边框上的点会被经过多次，且上述结论是充要的</li>
+<li>一个1到n的集合，选若干个不互质的数，要求和最大；bzoj3308<br>结论：选出的每个数最多两个不同的质因子，且一个在根号n内，一个在根号n外，并不会证明</li>
+<li><del>思维僵化如我</del>，$O(n)$求n个数的逆元，类似递推求阶乘逆元一样，求出$\prod a_i$的逆元再还原出前缀逆元，配合前缀积求出单个逆元</li>
+<li>有些模型是n个中选k个且k给出，那么随机一个点作为答案中某点，复杂度中含有k时，我们有时间做n/k次，借助wolfram知错误率极限是$\frac{1}{e}$（其实就是k=1最坏然后用e的定义？），次数乘个5之类的，正确率就足以接受了</li>
 </ol>
-<h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><ol>
-<li><p>点分树上点对的LCA一定也在原树两点路径上，可以从这个lca统计这个路径的信息</p>
+<h1 id="树形结构"><a href="#树形结构" class="headerlink" title="树形结构"></a>树形结构</h1><ol>
+<li><p>点分的本质：点分树上点对的LCA一定也在原树两点路径上，可以从这个LCA统计这个路径的信息；然后点分有个小trick，如果处理一个块的复杂度通过根号分治达到$O(B\sqrt B)$，总复杂度为$n*\sum (n/2^i)^{1/2}=n \sqrt n*2\sum \frac{1}{2^i}=n\sqrt n$</p>
 </li>
-<li><p>在一棵<strong>边权非负</strong>的树上，与该点最远的一定是直径的某个端点<br> 两棵树合并起来，新的直径端点一定在两边直径端点中产生<br> 直径的中心唯一<br> 每个点的最远点，都一定经过直径的中心<br> 改一条边，端点最多变化一个</p>
+<li><p>直径的性质（在一棵<strong>边权非负</strong>的树上）：「与该点最远的一定是直径的某个端点」、「直径的中心唯一」、<br> 「每个点的最远点，都一定经过直径的中心」、「改一条边，端点最多变化一个」</p>
 </li>
-<li><p><strong>一棵树上点集的连通块个数=点-边</strong></p>
+<li><p>重心和直径有个类似的结论：在一个点权为0/1的树上考虑带权直径、带权重心，「记下两个不重点集各自的任意一条直径端点，点集并的直径的端点一定能在这四个点中产生」，「记下两个不重点集各自的任意一个重心，点集并的所有重心一定都在这两个重心的路径上」</p>
+</li>
+<li><p><strong>树上点集的连通块个数=点-边</strong>，极度常用；另外将点集搞起来的最小虚树边数=「dfs序排序后成环，相邻两个求路径长度」/2</p>
 </li>
 <li><p>很多模型能转化为树形：</p>
-<p> 互不重叠只包含的区间（最近一个包含作为fa），例如析合树、一些性质题</p>
-<p> 某个变量只有单一指向（作为fa），这个其实是最常见的就不举例了</p>
-<p> 入栈出栈序列是可以表示为树形结构的，节点x的子树大小为k，则表示x先入栈，然后子树内的元素为$[x,x+k-1]$且都更晚入栈更早出栈，举例：<a href="8884.html">HDU5181 numbers</a></p>
-<p> 其他，举例：<a href="4147.html">跳跳棋</a></p>
+<p> A: 互不重叠只包含的区间（最近一个包含作为fa），例如析合树、一些性质题</p>
+<p> B: 某个变量只有单一指向（作为fa），这个其实是最常见的，举例：<a href="4147.html">跳跳棋</a></p>
+<p> C: 入栈出栈序列也是可以表示为树形结构的，节点x的子树大小为k，则表示x先入栈，然后子树内的元素为[x,x+k-1]且都更晚入栈更早出栈，举例：<a href="8884.html">HDU5181 numbers</a></p>
 </li>
-<li><p><strong>图的dfs树不会有横叉边</strong></p>
+<li><p>虚树上（或者给定点集）找到原树某个点的祖先中第一个在虚树上的：第一个祖先肯定是第一个dfs序能包含的节点，且所有祖先的dfs序区间是包含的，等价于找到$dfn_y \leq dfn_x$的y中$dfn_y+siz_y-1$最小的那个，如果能离线最简单的写法是按照dfs序从小大大回答询问，用个int维护合法y中最小右端点来自哪里，这样是线性的；如果强制在线可以线段树上询问$[1,dfn_x]$上最小右端点来自哪里</p>
 </li>
-<li><p>虚树上如何找到原树某个点的第一个祖先（强制在线）：<br> $dfn_A \leq dfn_B \leq dfn_A+siz-1$<br> 我们先找到$dfn_A \leq dfn_B$的区间，然后就是这段区间能覆盖B的最右边的点<br> 这个可以在线段树上二分实现</p>
+<li><p>多个点的lca=dfs序最小和最大点的lca</p>
 </li>
-<li><p>用可重路径覆盖一棵树，最小数量：$\lceil \frac{度=1的点数量}{2} \rceil$</p>
+<li><p>用可重路径覆盖一棵树的每条边，最小数量为度=1的点数量，向上取整地除2。根据下面经典问题2，那么就是要找到一个点作为根，各个子树叶子数$mx*2 \le sum$，这就是个带权重心，构造直接用堆模拟没毛病，多出来那货随便连一个点就是对的；<a href="https://loj.ac/problem/2371" target="_blank" rel="noopener">例题:「BalticOI 2015」网络                </a></p>
 </li>
-<li><p>用路径并可以判断是否存在一条路径包含某节点</p>
+<li><p>用路径交可以判断是否存在一条路径包含某节点，求交的话，路径$(a,b)与(c,d)$如果有交，一定是$lca(a,c),lca(a,d),lca(b,c),lca(b,d)$中深度最大的两个点间路径</p>
 </li>
-<li><p>给定一棵树结构，每个点标号，要求每个点的编号比子树其他点小,合法方案个数=$\frac{n!}{\prod siz_i}$</p>
+<li><p>给定一棵树结构，每个点标号成排列，要求每个点的编号比子树其他点小，合法方案个数=$\frac{n!}{\prod siz_i}$，这个我是感性理解，独立地乘上这个子树成立的概率</p>
 </li>
-<li><p>路径$(a,b)与(c,d)$如果有交，一定是$lca(a,c),lca(a,d),lca(b,c),lca(b,d)$中深度最大的两个点间路径</p>
+<li><p><strong>随机序列的笛卡尔树深度为log</strong>（每次期望为分成两半），即上升序列长度为log；笛卡尔树的期望子树大小也是log级别的</p>
+</li>
+<li><p>树上高斯消元可以线性：将每个方程写成$f(x)=k_x*f(fa)+b_x$的形式，这个从叶子开始就能搞出来，最后$f(rt)=b_{rt}$</p>
+</li>
+<li><p>bfs序加入树上点的话，$若dis_{i,x} \le K,dis_{j,x} \le K则dis_{i,j} \le K$；证明考虑$path_{x,i}和path_{x,j}$的第一个分叉点w且i在w子树内，则$dis_{i,j} \le dis_{x,j} \le K$</p>
 </li>
 </ol>
-<h1 id="除了树的图论"><a href="#除了树的图论" class="headerlink" title="除了树的图论"></a>除了树的图论</h1><ol>
-<li>对于无向图，一个点双内如果有奇环，那么内部每条边都至少在一个奇环中；点双内有奇环的充要条件是在dfs搜索树上存在一个【一条非树边+若干树边】组成的奇环</li>
+<h1 id="图论-其他"><a href="#图论-其他" class="headerlink" title="图论-其他"></a>图论-其他</h1><ol>
+<li>对于无向图，一个点双内如果有奇环，那么内部每条边都至少在一个奇环中；点双内有奇环的充要条件是在dfs搜索树上存在一个「一条非树边+若干树边」组成的奇环</li>
+<li>让拓扑序的逆字典序最小，应建反向边跑大根堆</li>
+<li><strong>无向图的dfs树不会有横叉边</strong>，这种边很恶心所以一般随便找个生成树的时候都会选择dfs（但是注意，可能会有向下的边，即在返祖边的上面访问这条边）</li>
+<li>一个图如果只有奇环，那么只会有简单环，因为两个奇环相交会产生偶环</li>
+<li>基环内向树森林修改出边得到一个环的最小步数为孤立环+叶子；策略的话先说一棵基环树，就是将环上每个点a挂的树内所有叶子向下个叶子连接，然后a的上一个点连向a的树得到的叶子链的首部。加入其它孤立环的话，从某个a那里拆就只会增加一次操作。例题：<a href="https://projecteuler.net/problem=522" target="_blank" rel="noopener">projecteuler522 Hilbert’s Blackout</a></li>
+<li>众所周知森林有$联通块=点-边$，同理仙人掌有$联通块=点-(边-环)$</li>
 </ol>
 <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><ol>
-<li>串的计数，枚举长度，建立间隔为长度的关键点（调和级数），然后每个串会经过一个关键点，枚举关键点算贡献<br>举例：<a href="f7b4.html">【NOI2016】优秀的拆分</a>、<a href="a10e.html">股市的预测</a></li>
+<li>串的计数，枚举长度，建立间隔为长度的关键点（调和级数），然后每个串会经过一个关键点，枚举关键点算贡献<br> 举例：<a href="f7b4.html">「NOI2016」优秀的拆分</a>、<a href="a10e.html">股市的预测</a>、poj3693 Maximum repetition substring</li>
 <li>如果一个串是双回文串，一定存在一种分割，满足前面是最长回文前缀或者后面是最长回文后缀</li>
-<li>一个串重复多次的最长回文子串，如果不是无限长，则最多是两个合并起来</li>
+<li>同一个串重复无限次得到串的最长回文子串，如果不是无限长，则最多是两个合并起来</li>
 </ol>
 <h1 id="决策算法"><a href="#决策算法" class="headerlink" title="决策算法"></a>决策算法</h1><ol>
-<li>找前k优的区间，固定一个点后，左边的优秀情况是极值问题<br>可以用堆维护左边，取出一个位置后把左边区间拆成两半放回去<br>举例：<a href="e5b3.html">超级钢琴</a>、<a href="1486.html">树上的路径</a><br>当然非区间一般也是用堆维护<br>做法：堆维护，堆顶为最差元素<br>举例：<a href="673d.html">K远点对</a>、<a href="7248.html">Supermarket</a></li>
-<li>max n个数的环上相邻差；最小化这个，可以递增奇数+递减偶数</li>
-<li>对于一些求大小为k最优集合的题目，不妨尝试猜测k一定为k-1的增量，感觉一般都不太好证明，不过可以画一画有没有反例:D</li>
+<li>找前k优的区间，固定一个点后，左边的优秀情况是极值问题。可以用堆维护左边，取出一个位置后把左边区间拆成两半放回去，举例：<a href="e5b3.html">超级钢琴</a>、<a href="1486.html">树上的路径</a></li>
+<li>对于一些求大小为k最优集合的题目，不妨尝试猜测k一定为k-1的增量，感觉一般都不太好证明，不过可以画一画感受一下有没有反例:D</li>
 </ol>
-<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><ol>
-<li>有些题可以从简单情况着手、然后拓展到复杂情况（数学归纳法或者总结经验、模仿）<br> 或者先考虑普通情况，再考虑改进来解决特殊情况<br> 举例：noi2015 荷马史诗、<a href="7248.html">POJ2442 Sequence</a></li>
-<li>目前碰到处理棘手的删除问题的方法主要有两个，基本都需要离线<br> 一个是倒着做，这个对题目的要求较高；<br> 另一个是贪心，离线后按出现时间处理，然后按结束时间贪心<br> 举例：<a href="a417.html">【bzoj4644】经典傻逼题【集训队互测2015】最大异或和</a>、<a href="d192.html">【bzoj5040】航线规划【bzoj4229】选择</a></li>
-<li>平方形式，可以转为为数点对，或者是进行两次然后相同的情况<br> 又或者可以处理其差分1,3,5,7,9,11……<br> 举例：NOI2009 管道取珠. <a href="c8e3.html">蔬菜</a>. <a href="4e7e.html">学习小组</a></li>
-<li>有关区间问题并用到区间最值，求出l[i]和r[i]表示第一个比a[i]大的位置，则l[i]+1~r[i]-1中间，用到的最大值都是a[i]<br> 不过要小心最大值相等而重复的情况，可以强行把左边界改严格来限制<br> 举例：<a href="b37c.html">洛谷18年7月月赛T4</a></li>
-<li>很多计数问题要求排列，可以时刻保证排列性，然后插入一个数，将比它大的数+1<br> 举例：<a href="8a7d.html">51nod1296 有限制的排列</a>、以及一些比较经典的树上dp</li>
-<li>跟极值有关的区间问题，考虑一下已知某个极值贴着区间所带来的影响（笛卡尔树dp之类的）<br> 举例：hnoi2016序列、hnoi2017影魔、ioi2018会议、noi2019机器人的50分部分分（都有题解）</li>
-<li>问从状态A操作到B，考虑倒着操作，适用于做某种操作可达性、构造</li>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><p>其实k维偏序在k较大时可以考虑bitset做，时间都是$O(kn^2/w)$</p>
+<p><strong>做法一</strong>：对每个询问维护哪些点在前面所有维都满足条件，考虑这一维时把询问和点排序，递增处理询问，空间是$O(n^2/w)$，时空常数为1。如果空间被gank了但时间充裕，把被询问点分成B次做，这样时间乘B，空间除B</p>
+<p><strong>做法二</strong>：先预处理出$(i,s)=第i维 \le s的集合$（必须将值离散化成n的排列），然后枚举每个询问做并，这样时空是常数2的$O(kn^2/w)$；优化空间的话，把前面第二维分块，设块大小为T，时间$O(k*\frac{n}{T}*(n/w+T)+qk(n/w+T))$，空间$O(k*\frac{n}{T}*n/w)$。在不太影响时间时取$T=n/w,空间为O(kn)$</p>
+<p>所以在卡空间时方法二更优越，方法一的优势大概是好写？</p>
+<h1 id="一些突破口"><a href="#一些突破口" class="headerlink" title="一些突破口"></a>一些突破口</h1><ol>
+<li><p>目前碰到处理棘手的删除问题的方法主要有两个，基本都需要离线<br> 一个是倒着做，这个对题目的要求较高；另一个是贪心，离线后按出现时间处理，然后按结束时间贪心<br> 举例：<a href="a417.html">「bzoj4644」经典傻逼题「集训队互测2015」最大异或和</a>、<a href="a4df.html">「bzoj5040」航线规划「bzoj4229」选择</a></p>
+</li>
+<li><p>如果一个式子出现k次方，可能是直接斯特林数或二项式定理处理，如果是建图相关可以差分成2x+1（如<a href="5e421ee0.html/#「WC2007」剪刀石头布">WC2007石头剪刀布</a>、<a href="4e7e.html">学习小组</a>），也可能是考虑组合意义：如果是$某整数变量^k$可以看做在其中恰好放k个球（如<a href="c8e3.html">蔬菜</a>），如果是类似于$\sum_i (x=i的情况数)=S,求\sum_i (x=i的情况数)^2$，可以看做$\sum_i (\sum_{情况} [x=i])^2=\sum_{情况1} \sum_{情况2} [x_1=x_2]$，这样就跟具体是什么无关了（如<a href="https://www.luogu.com.cn/problem/P1758" target="_blank" rel="noopener">NOI2009管道取珠</a>）</p>
+</li>
+<li><p>很多计数问题要求排列，可以时刻保证排列性，然后插入一个数，将比它大的数+1<br> 举例：<a href="8a7d.html">51nod1296 有限制的排列</a>、以及一些比较经典的树上dp</p>
+</li>
+<li><p>跟极值有关的区间问题，考虑一下已知存在某个极值贴着区间外所带来的影响（笛卡尔树dp之类的）<br> 举例：hnoi2016序列、hnoi2017影魔、ioi2018会议、noi2019机器人的50分部分分（都有题解）</p>
+</li>
+<li><p>问从状态A操作到B，可以考虑倒着操作，适用于做某种操作可达性、构造</p>
+</li>
+<li><p>表格图上行和列两侧成二分图，$(i,j)有棋子则i到n+j连边$</p>
+</li>
+<li><p>求只包含一点、只不包含一点的信息的一类问题</p>
+<p> 套路大概是分治，大概没法直接说懂，给出两道题，选一道题看，然后大概就能理解并做出另一道题了</p>
+<p> 一个是<a href="8c82.html/#一些技巧">这里</a>，一个是<a href="https://blog.csdn.net/ez_yww/article/details/77916085" target="_blank" rel="noopener">XSY2469</a></p>
+</li>
+<li><p>假如在序列上有很多区间，但这些区间长度都是L，那么可以对序列按L分块，于是每个区间一定是「某个块一段后缀」+「某个块一段前缀」组成，举例：<a href="778aaa12.html/#「LR11」Misaka-Network与Accelerator">「LR11」Misaka Network 与 Accelerator</a></p>
+</li>
+<li><p>有的问题如果确定一部分，另一部分的限制会很强，可以考虑meet in middle，如<a href="https://codeforces.com/contest/1257/problem/F" target="_blank" rel="noopener">CF1257F</a></p>
+</li>
+<li><p>很多单点修改维护整体答案的题目，可以考虑转化题意为可并信息（无脑的就是矩乘，有脑的就是自己定义两个结构体的运算），然后用线段树维护</p>
+</li>
+<li><p>对于n不大或随机算法的题，多多注意能否将大小&lt;i的东西去掉，使得n/=i，优化指数级算法，或者正确概率乘以i</p>
+</li>
 </ol>
 <h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><ol>
-<li>取模题对拍时可以改小模数检验</li>
+<li>取模题对拍时，如果暴力能做范围很小，可以改小模数检验</li>
 <li>对于比较陌生的题目操作形式，可以多造几组数据来模拟，找到一些性质，用这些性质转化题目</li>
+<li>分治的时候判掉l=1可以让$2l&gt;r$，这是一些自己搞自己的分治算法需要考虑、可以加以利用的，如一些分治ntt</li>
 </ol>
 <h1 id="经典问题"><a href="#经典问题" class="headerlink" title="经典问题"></a>经典问题</h1><ol>
-<li>权值总和为S的背包，可以 $O(S \sqrt S)$ 完成，即考虑大块小块有根号级别的不同权值，每种权值单调队列优化多组背包即可</li>
-<li>若干个不同的集合，要求选最多对数满足来自不同的集合；当$mx&gt;sum-mx$，显然答案为$sum-mx$，否则考虑在一个优先队列中每次取最大的两个集合拿出一对数再塞回去，答案为$\lfloor \frac{sum}{2} \rfloor$；如果对数为更多，那应该只能用堆模拟了</li>
+<li><p>物品权值总和为S的背包，可以$O(S \sqrt S)$完成：只有根号级别的不同权值，每种权值单调队列优化多组背包即可；</p>
+<p>另外集合${1,2,..n}的01背包也可以O(wt^{1.5})$完成，就是多加根号wt级别的一维记录使用的数字个数，然后$dp(S,m)$可以从$dp(S-m,m)$整体加1得到，也可以从$dp(S-m,m-1)$即第一个是1。但要注意不能得出比n大的数，即$dp(S,m)=dp(S-m,m-1)+dp(S-m,m)-dp(S-(n+1),m-1)$</p>
+</li>
+<li><p>若干个不同的集合，要求选最多对数满足来自不同的集合；当$mx&gt;sum-mx$，显然答案为$sum-mx$，否则只要每次在最大集合中取一个，在其他地方取一个，就能始终保证满足$2mx \le sum$，答案为$\lfloor \frac{sum}{2} \rfloor$；如果每次要k元组，那应该只能用堆模拟了（每次取前k大）？不过有一个不错的式子，反过来对于一个答案W，有哪些k可以至少取到W：$kW \le \sum min(count_{num},W)$，这个的必要性显然，构造证明式子是紧的：先把大于W的那些给W组都丢一个，小的那些选最少的若干个丢一个进去，肯定能搞出W个（其实这样构造的话组的大小只会有A和A+1两种，找A的那些放即可）</p>
+</li>
+<li><p>max n的排列的首尾相接时相邻差；最小化这个，可以递增奇数+递减偶数，正确性是显然的。然而值得一提的是，最小化相邻差的平方和（等价于最大化相邻乘积的和）也是这样放（而且能拓展到任意实数序列），证明见[NOI Online 提高组]最小环中<a href="https://www.luogu.com.cn/problemnew/solution/P6187" target="_blank" rel="noopener">EI写的题解</a>，类似的题是<a href="https://loj.ac/problem/520" target="_blank" rel="noopener">loj520「LibreOJ β Round #3」绯色 IOI（开端）</a></p>
+</li>
+<li><p>两个凸函数f和g，做$(max,+)卷积，即h_{i+j}=max\ f_i+g_j$，得到的h也是凸函数，证明显然；$h_{i+j+1}的(i,j)构成，与h_{i+j}的(i,j)构成$，一定能只改变一个，于是可以双指针线性合并</p>
+</li>
+<li><p>01分数规划，例如最大化平均数，二分判断是否存在sum-cnt*T&gt;=0即\sum (val-T)&gt;=0</p>
+</li>
+<li><p>一个数的所有约数的哈斯图的最长反链（定义一个数被另一个数整除时可比）。首先肯定是Dilworth去转成最小链覆盖，然后观察这个图的特性发现这其实每个点$\prod p_i^{k_i}可以看做(k_1,k_2..k_{cnt})$，然后发现是可以按$\sum k_i$分层的，而分层dag的最小链覆盖显然是最大的那个层的大小，对于本题就是$\prod_i (\sum_{j=0}^{mx_i} z^j)$的最大系数，可以分治NTT做。事实上一个结论是这东西的系数是先递增再递减的，且其最高点为$[z^{\lfloor (\sum mx)/2 \rfloor}]$，相关资料可见<a href="http://oeis.org/A096825" target="_blank" rel="noopener">此OEIS</a>。例题：<a href="https://codeforces.com/contest/1257/problem/G" target="_blank" rel="noopener">CF1257G Divisor Set</a></p>
+</li>
+<li><p>麻将，<a href="5fd7.html">「CF1110D」Jongmah</a></p>
+</li>
+<li><p>$\frac{x}{y} \in (\frac{a}{b},\frac{c}{d})$要最小化x或y：为了方便说明，假定$\frac{x}{0} \to \infty$：</p>
+<p>先$\frac{x}{y} \in (\frac{a}{b},\frac{c}{d}) \rightarrow \frac{y}{x} \in (\frac{d}{c},\frac{b}{a})$，这样就是最小化分母</p>
+<p>设$solve(\frac{a}{b},\frac{c}{d})$找到最小的y满足$\frac{x}{y} \in (\frac{a}{b},\frac{c}{d})$</p>
+<ol>
+<li>$\frac{a}{b} \ge 1$，$t=\lfloor \frac{a}{b} \rfloor,solve(\frac{a\%b}{b},\frac{c}{d}-t,\frac{x}{y}-t)$，因为分母不会变</li>
+<li>$\frac{a}{b}&lt;1,\frac{c}{d}&gt;1,x=y=1$</li>
+<li>$\frac{a}{b}&lt;\frac{c}{d} \le 1,将分数倒置，\frac{x}{y} \in (\frac{a}{b},\frac{c}{d}) \rightarrow \frac{y}{x} \in (\frac{d}{c},\frac{b}{a})，但此时问题是最小化分子$</li>
+</ol>
+<p>然后就懵逼了很久，感性上说分数这种jb玩意的大小关系是个整体，但这次真的不太想感性了</p>
+<p>其实理性的话就一句：$\frac{c}{d}有最小分子，\frac{a}{b}有最小分母，则\frac{c}{d}&lt;\frac{c}{b}&lt;\frac{a}{b}$，而$\frac{c}{d}$<del>作为大人不想做选择</del></p>
+<p>接着分析复杂度，注意到每次是把左边界搞个辗转相除，然后交换左右边界，因此复杂度为$O(2log)$</p>
+<p>例题如Codejam2019Round2New Elements Part 2、<a href="http://acm.hdu.edu.cn/showproblem.php?pid=6624" target="_blank" rel="noopener">2019多校hdu6624 fraction</a></p>
+</li>
 </ol>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ol>
 <li>设cnt(x)为x二进制下1的数量，$cnt(a \oplus b)$ 为奇，当且仅当一个cnt为奇，另一个是偶<br>因为两个1在一起是偶，不在一起也是偶</li>
-<li><strong>二进制数相减，不要考虑借位，而是允许-1存在</strong></li>
-<li>有时候矩乘的矩阵有特殊性，可以舍弃许多可推导信息来减少规模；举例：<a href="41d4.html">弱题</a></li>
+<li><strong>二进制数相减，不要考虑借位，而是允许-1存在，加法类似</strong></li>
+<li>所有n的排列中，奇排列数p=偶排列数q，因为交换任意两个元素必定使逆序对奇偶性变化，对所有p交换某两个位置，$p \ge q，同理q \ge p$</li>
+<li>对于$D=x^2+y^2$，对x和y奇偶性讨论可知：$D\%4=0 \leftrightarrow xy都是偶$；$D\%4=2 \leftrightarrow xy都是奇$；$D\%2=1 \leftrightarrow 一奇一偶$。可能构造题会比较常见，例如CF1270E Divide Points、AGC025D Choosing Points</li>
 </ol>
 
       
@@ -727,20 +793,6 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/9763.html" rel="bookmark">【OI之路】03数学-16快乐计数</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="/posts/f6c6.html" rel="bookmark">【OI之路】07其他-4哈夫曼树</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
       <div class="popular-posts-title"><a href="/posts/250b.html" rel="bookmark">【OI之路】04图论-9二分图</a></div>
       
     </li>
@@ -748,21 +800,35 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f834.html" rel="bookmark">【OI之路】03数学-11集合幂级数</a></div>
+      <div class="popular-posts-title"><a href="/posts/3e6e.html" rel="bookmark">「OI之路」03数学-15概率论</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/b399.html" rel="bookmark">【OI之路】04图论-7生成树</a></div>
+      <div class="popular-posts-title"><a href="/posts/293.html" rel="bookmark">【OI之路】04图论-4简单连通性问题</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/68d9.html" rel="bookmark">【OI之路】03数学-13生成函数</a></div>
+      <div class="popular-posts-title"><a href="/posts/f6c6.html" rel="bookmark">「OI之路」07其他-4哈夫曼树</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/f834.html" rel="bookmark">「OI之路」03数学-11集合幂级数</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/b399.html" rel="bookmark">「OI之路」04图论-7生成树</a></div>
       
     </li>
   
@@ -780,7 +846,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/80c8.html" title="【置顶】套路集锦">http://zory.ink/posts/80c8.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/80c8.html" title="「置顶」套路集锦">http://zory.ink/posts/80c8.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -828,8 +894,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/c2cf.html" rel="prev" title="【BJOI2018】治疗之雨">
-                【BJOI2018】治疗之雨 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/c2cf.html" rel="prev" title="「BJOI2018」治疗之雨">
+                「BJOI2018」治疗之雨 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -907,7 +973,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -932,7 +998,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1341,7 +1409,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1404,7 +1476,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#错误总结"><span class="nav-text">错误总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#奇妙结论"><span class="nav-text">奇妙结论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搜索"><span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数学"><span class="nav-text">数学</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#树"><span class="nav-text">树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#除了树的图论"><span class="nav-text">除了树的图论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串"><span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#决策算法"><span class="nav-text">决策算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技巧"><span class="nav-text">技巧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#经典问题"><span class="nav-text">经典问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-text">其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常识"><span class="nav-text">常识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错误总结"><span class="nav-text">错误总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数学"><span class="nav-text">数学</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#树形结构"><span class="nav-text">树形结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图论-其他"><span class="nav-text">图论-其他</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串"><span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#决策算法"><span class="nav-text">决策算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构"><span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些突破口"><span class="nav-text">一些突破口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技巧"><span class="nav-text">技巧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#经典问题"><span class="nav-text">经典问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-text">其他</span></a></li></ol></div>
             
 
           </div>

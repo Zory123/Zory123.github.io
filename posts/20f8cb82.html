@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Sourceいろはちゃんコンテスト Day4iroha2019day4 好题：E、H、K">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-09T01:02:20.460Z">
+<meta property="og:updated_time" content="2019-12-01T02:18:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iroha2019-day4题解">
 <meta name="twitter:description" content="Sourceいろはちゃんコンテスト Day4iroha2019day4 好题：E、H、K">
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -285,7 +285,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-09 09:02:20" itemprop="dateModified" datetime="2019-10-09T09:02:20+08:00">2019-10-09</time>
+                <time title="修改时间：2019-12-01 10:18:51" itemprop="dateModified" datetime="2019-12-01T10:18:51+08:00">2019-12-01</time>
               </span>
             
           
@@ -630,7 +630,7 @@
 <h2 id="iroha2019day4-H-永遠に"><a href="#iroha2019day4-H-永遠に" class="headerlink" title="iroha2019day4 H 永遠に"></a>iroha2019day4 H 永遠に</h2><p><strong>题意：</strong>构造一个n*n的方阵，使得每行、每列都不存在子序列是个长度&gt;2的等差数列</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>如果会一维，二维直接搞个二元组$(i,j)=(i-1)n+j$，然后例如第i行就是$(p_i,p_1)..(p_i,p_n)$</p>
-<p>一维的话，可以【奇数】+【偶数】，递归构造，<a href="https://atcoder.jp/contests/iroha2019-day4/submissions/7907214" target="_blank" rel="noopener">code</a></p>
+<p>一维的话，可以「奇数」+「偶数」，递归构造，<a href="https://atcoder.jp/contests/iroha2019-day4/submissions/7907214" target="_blank" rel="noopener">code</a></p>
 
 </div></div>
 <h2 id="iroha2019day4-K-世界線"><a href="#iroha2019day4-K-世界線" class="headerlink" title="iroha2019day4 K 世界線"></a>iroha2019day4 K 世界線</h2><p><strong>题意</strong>：给出一个排列求多少种方案能搞出这个排列；初始一个n，每次选一个没插的数插入，要求插的位置左边比自己大；两个方案不同当且仅当某次插入的数或插入位置不同</p>
@@ -638,7 +638,7 @@
 <p><strong>结论</strong>：给定一棵树结构，每个点标号，要求每个点的编号比子树其他点小,合法方案个数=$\frac{n!}{\prod siz_i}$</p>
 <p>不难发现总是有解的，例如倒序插入；考虑这个排列带来哪些限制</p>
 <p>对于$p_i$，找到左边第一个更大的数$p_j$，则$p_{j+1..i-1}$需要在$p_i$前插入</p>
-<p>注意到【左边第一个更大数】（可以用单调栈或链表求）显然形成一棵树，然后我们令每个节点的孩子按照在排列中位置排序，那么每个点的孩子显然是递增的</p>
+<p>注意到「左边第一个更大数」（可以用单调栈或链表求）显然形成一棵树，然后我们令每个节点的孩子按照在排列中位置排序，那么每个点的孩子显然是递增的</p>
 <p>所谓$p_{j+1..i-1}$实际上就是节点x在fa中，孩子序列上左边的点子树内所有点</p>
 <p>而这个限制也形成了一棵树形结构，即每个点向其所在孩子序列中右边第一个点连边，如果已经是最后一个就向父亲连边</p>
 <p>那么用上面的结论就好了，下界$O(n)$，<a href="https://atcoder.jp/contests/iroha2019-day4/submissions/7907332" target="_blank" rel="noopener">code</a></p>
@@ -781,7 +781,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -806,7 +806,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1215,7 +1217,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

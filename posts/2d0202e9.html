@@ -95,14 +95,14 @@
   <meta name="description" content="一些纯贪心">
 <meta name="keywords" content="贪心">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】贪心">
+<meta property="og:title" content="「OI之路」贪心">
 <meta property="og:url" content="http://zory.ink/posts/2d0202e9.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="一些纯贪心">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-11T11:44:21.894Z">
+<meta property="og:updated_time" content="2020-05-06T07:09:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】贪心">
+<meta name="twitter:title" content="「OI之路」贪心">
 <meta name="twitter:description" content="一些纯贪心">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【OI之路】贪心 | Zory的个人博客</title>
+  <title>「OI之路」贪心 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
 
   </li>
         
@@ -268,7 +268,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">198</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】贪心
+          <h2 class="post-title" itemprop="name headline">「OI之路」贪心
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-11 19:44:21" itemprop="dateModified" datetime="2019-10-11T19:44:21+08:00">2019-10-11</time>
+                <time title="修改时间：2020-05-06 15:09:30" itemprop="dateModified" datetime="2020-05-06T15:09:30+08:00">2020-05-06</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/2d0202e9.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】贪心">
+            <span id="/posts/2d0202e9.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」贪心">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -611,21 +611,47 @@
       
 
       
-        <p> 一些纯贪心</p>
+        <p>一些纯贪心</p>
 <a id="more"></a>
-<h3 id="noip国王游戏"><a href="#noip国王游戏" class="headerlink" title="noip国王游戏"></a>noip国王游戏</h3><p>见之前题解</p>
-<h3 id="「JSOI2007」建筑抢修"><a href="#「JSOI2007」建筑抢修" class="headerlink" title="「JSOI2007」建筑抢修"></a><a href="http://61.187.179.132:16386/JudgeOnline/problem.php?id=1029" target="_blank" rel="noopener">「JSOI2007」建筑抢修</a></h3><p><strong>做法</strong>：这种有终止时间的题可以考虑按这个排序来处理，设当前处理到的结束时间为D</p>
-<p>记录当前时间tim，如果能放进去就放；不能的时候，此时如果存在$t_i&gt;t_{now}$，替换掉一定更优，可以用大根堆找这样的i，$O(nlogn)$，<a href="../code/bzoj/bzoj1209.html">code</a></p>
+<h3 id="「NOIP2012」国王游戏"><a href="#「NOIP2012」国王游戏" class="headerlink" title="「NOIP2012」国王游戏"></a>「NOIP2012」国王游戏</h3><p>见之前题解，是一个比较经典的<strong>全序贪心</strong>处理思想，证明某种逆序对不存在会更优，于是可以排序</p>
+<h3 id="「JSOI2007」建筑抢修"><a href="#「JSOI2007」建筑抢修" class="headerlink" title="「JSOI2007」建筑抢修"></a><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1029" target="_blank" rel="noopener">「JSOI2007」建筑抢修</a></h3><p>这是个非常经典的<strong>选出最多的不重叠区间</strong>，经典到写题解的时候用到也不会提</p>
+<p><strong>做法</strong>：这种有终止时间的题可以考虑按这个排序来处理，设当前处理到的结束时间为D，记录当前时间tim，如果能放进去就放；不能的时候，此时如果存在$t_i&gt;t_{now}$，替换掉一定更优，可以用大根堆找这样的i，$O(nlogn)$，<a href="../code/bzoj/bzoj1209.html">code</a></p>
 <h3 id="「HEOI2015」兔子与樱花"><a href="#「HEOI2015」兔子与樱花" class="headerlink" title="「HEOI2015」兔子与樱花"></a><a href="https://loj.ac/problem/2118" target="_blank" rel="noopener">「HEOI2015」兔子与樱花</a></h3><p><strong>做法</strong>：发现只关心每个节点的$key_x=c_x+son_x$，然后删除点就是$key_x+=key_{son}-1$</p>
 <p>注意到删除点只关心点集而不是顺序，从下往上删除，每次如果要删除孩子，肯定选key最小的那个，然后如果能删一定会选择删，因为既然现在合法一定是现在删不劣，$O(nlogn)$</p>
-<h3 id="HDU4582-DFS-spanning-tree"><a href="#HDU4582-DFS-spanning-tree" class="headerlink" title="HDU4582 DFS spanning tree"></a><a href="https://vjudge.net/problem/HDU-4582" target="_blank" rel="noopener">HDU4582 DFS spanning tree</a></h3><p><strong>题意</strong>：给出一个没有自环的有向图，前n-1条边构成dfs树（以1为根），现在需要选最少的边，使得每个【由若干树边和一条非树边构成的环】上最少一条边被选中</p>
+<h3 id="HDU4582-DFS-spanning-tree"><a href="#HDU4582-DFS-spanning-tree" class="headerlink" title="HDU4582 DFS spanning tree"></a><a href="https://vjudge.net/problem/HDU-4582" target="_blank" rel="noopener">HDU4582 DFS spanning tree</a></h3><p><strong>题意</strong>：给出一个没有自环的有向图，前n-1条边构成dfs树（以1为根），现在需要选最少的边，使得每个「由若干树边和一条非树边构成的环」上最少一条边被选中</p>
 <p><strong>做法</strong>：注意到是dfs搜索树，所以没有横叉边；要选肯定选树边，每个这种环的树边构成一条向上的简单链</p>
-<p>对于每个区间至少选一个点的问题，如果在序列上就是按左端点排序，每次处理到还没有被覆盖的区间就贪心放右端点；现在放在树上，保证是向上的链，所以并没有什么不同，$O(Tmlogm)$</p>
+<p>对于<strong>每个区间至少选一个点</strong>的问题，如果在序列上就是按左端点排序，每次处理到还没有被覆盖的区间就贪心放右端点；现在放在树上，保证是向上的链，所以并没有什么不同，$O(Tmlogm)$</p>
 <h3 id="CF521D-shop"><a href="#CF521D-shop" class="headerlink" title="CF521D shop"></a><a href="https://codeforces.com/problemset/problem/521/D" target="_blank" rel="noopener">CF521D shop</a></h3><p><strong>题意</strong>：长度为k的序列，在n种操作中选m个并构造顺序执行，使得最后序列每个数乘积最大；操作有三种，分别是赋值、加法、乘法（操作位置给定），$k,m,n \le 1e5,值 \le 1e6$</p>
 <p><strong>做法</strong>：首先各个位置独立，而且操作肯定是按照赋值、加法、乘法顺序去做的，其中乘法对于乘积的贡献可以任意排序做，可以忽略。对于每个位置，首先考虑赋值，选最大那个出来，将增量看做加法，于是赋值操作也没有了；现在只剩加法，如果一个位置要搞t个肯定是选最大的t个，于是排好序的序列肯定是考虑新选这个数与上个数相比的贡献，<del>然后我就微扰到去世了</del>。</p>
 <p>其实再转化一次就好了，对于任意相邻两个元素a和b，前面和为front，看做两个乘法：$\frac{front+a}{front},\frac{front+a+b}{front+a}$</p>
 <p>最后我们会选择最大的m个乘法，我们需要证明$\frac{front+a}{front}&gt;\frac{front+a+b}{front+a}$，两边都-1后，右边分母更大分子更小，证毕</p>
 <p>选出那m个乘法后，循环三次把三种操作取出即可，$O(nlogn)$，<a href="https://codeforces.com/problemset/submission/521/62341657" target="_blank" rel="noopener">code</a></p>
+<h2 id="一类带血量取物品的贪心"><a href="#一类带血量取物品的贪心" class="headerlink" title="一类带血量取物品的贪心"></a>一类带血量取物品的贪心</h2><p><strong>模型</strong>：若干个物品，有血量，选某个物品要求原先有$a_i$血，选了可以获得$b_i$血（有正有负），问全选、选最多需要的最少初始血量</p>
+<p>首先很明显先搞增加再搞减少的，增加肯定直接按照a从小到大取，我们只需要考虑减少的部分怎么排序</p>
+<p>考虑某两个要选的物品为$(a_1,b_1)和(a_2,b_2)$，国王游戏的思想考虑相邻微扰，两种顺序的初始值需求分别为$max(a_1,a_2-b_1)和max(a_2,a_1-b_2)$，这个似乎并不是全序的，但并没有所谓保证拓扑序合法就行了；通过分类讨论发现等价于比较$a_1+b_1&gt;a_2+b_2$，可能存在某些情况必须要用这个比较（例如以a+b为下标建线段树？）</p>
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3709" target="_blank" rel="noopener">bzoj3709 [PA2014]Bohater</a>，所有选，模拟</p>
+<p><a href="https://codeforces.com/contest/1203/problem/F2" target="_blank" rel="noopener">CF1203F2 Complete the Projects</a>，选最多，dp，<a href="https://codeforces.com/contest/1203/submission/58791513" target="_blank" rel="noopener">code</a></p>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6326" target="_blank" rel="noopener">hdu6326 Monster Hunter</a>，树上做，类似<a href="cfc5.html/#16-POJ2054-Color-a-Tree">color a tree</a>一样依次处理每个点，如果有父亲肯定是在父亲后立刻选，与父亲合并</p>
+<p>合并的话就是血量为$max(a_1,a_2-b_1)$，变化量改成$b_1+b_2$，懒惰删除法维护堆，$O(nlogn)$，<a href="code/hdu/hdu6326.html">code</a></p>
+<p><a href="http://uoj.ac/problem/418" target="_blank" rel="noopener">uoj418「集训队作业2018」三角形</a></p>
+<p>转化一下就是每个点为$(w_x,-w_x+\sum w_{son})$，但要求选x前要选完孩子，这样子不好搞考虑将问题再转化，倒过来考虑</p>
+<p>即选一个二元组$(a,b)时，先-b，再判 \ge a，于是等价于每个二元组变成(a+b,-b)$，然后每个点选之前父亲要被选过，原操作序列等价于这个序列倒过来。那现在这个问题和上一题就一样了，搞个懒惰删除法的堆就能得出操作序列倒过来是啥了</p>
+<p>然后将所有二元组还原，对于一个子树的答案，就是从左往右只执行子树内的操作，线段树合并即可，$O(nlogn)$，<a href="http://uoj.ac/submission/373069" target="_blank" rel="noopener">code</a></p>
+<h2 id="拟阵"><a href="#拟阵" class="headerlink" title="拟阵"></a>拟阵</h2><p>只是记一下结论，具体内容可见<a href="http://wyfcyx.logdown.com/posts/234430-summary-matroids-in-part-of-greedy-algorithm-and-its-application" target="_blank" rel="noopener">A</a>、<a href="https://www.cnblogs.com/yoyoball/p/9218159.html" target="_blank" rel="noopener">B</a></p>
+<p>拟阵指一个二元组$M=(S,I)$，S是元素集合，$I$是S部分子集构成的集合，且$I$满足遗传性和交换性</p>
+<p>遗传性：$若A \in I,B \subset A，则B \in I$；</p>
+<p>交换性：$若A,B \in I,|A|&lt;|B|，一定存在x \in B-A使得A \cup {x} \in I$，咋一看是一样的其实不一样</p>
+<p>推论：$I$中最大独立子集（不存在超集）大小相等</p>
+<p>然后这东西的意义在于，如果定义权值函数$w(x)&gt;0,x \in S$，则$I$中权值和最大集合可以通过以下算法得出：$A \leftarrow \emptyset$，按权值从大到小依次考虑S中每个元素x，$若A \cup {x} \in I则A \leftarrow A \cup {x}$</p>
+<p>用牛刀杀只鸡，对于MST问题，集合元素为图中的边，$I$为合法森林，显然是个拟阵，于是kruskal的过程是正确的</p>
+<h4 id="例题：SRM726-HeroicSchedule"><a href="#例题：SRM726-HeroicSchedule" class="headerlink" title="例题：SRM726 HeroicSchedule"></a>例题：<a href="https://vjudge.net/problem/TopCoder-14750" target="_blank" rel="noopener">SRM726 HeroicSchedule</a></h4><p><strong>题意</strong>：给出n个收益为$C_i$的区间，最大化收益和，要求选出的区间能在区间内选一点使得不重，$n \le 2e6,l_i,r_i,c_i \le 1e3$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>令元素为区间，$I$为选取区间的方案，显然是个拟阵。其他做法：<a href="https://blog.csdn.net/wxh010910/article/details/78857147" target="_blank" rel="noopener">wxh</a>、<a href="https://www.cnblogs.com/mangoyang/p/10178795.html" target="_blank" rel="noopener">mangoyang</a></p>
+<p>暴力加入后网络流没有发展空间，考虑匈牙利，记m为值域，$O(nm^2)$，因为是区间可以用set维护unvis集合，$O(nmlogm)$</p>
+<p>注意到匈牙利算法如果右边集合、配对方案都没有修改，只是左边加入点和相关的边，且已知这个加入点没有产生增广路，那么unvis集合是不用重置的。考虑到只会产生m次增广路，复杂度降低为$O(m^2logm)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> bf[N];<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; unvis;</div><div class="line">ll xx[N];<span class="keyword">int</span> n,id[N],l[N],r[N],cs[N];</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it=unvis.lower_bound(l[x]);<span class="keyword">if</span>(it==unvis.end()) <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">int</span> y=*it;<span class="keyword">if</span>(y&gt;r[x]) <span class="keyword">break</span>;unvis.erase(it);</div><div class="line">        <span class="keyword">if</span>(bf[y]&lt;<span class="number">0</span> or find(bf[y])) &#123;bf[y]=x;<span class="keyword">return</span> <span class="number">1</span>;&#125;</div><div class="line">    &#125;<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> A,<span class="keyword">int</span> B,<span class="keyword">int</span> C,<span class="keyword">int</span> m1,<span class="keyword">int</span> m2,<span class="keyword">int</span> m3)</span></div><div class="line"></span>&#123;</div><div class="line">    xx[<span class="number">0</span>]=A;fo(i,<span class="number">1</span>,n*<span class="number">3</span><span class="number">-1</span>) xx[i]=(xx[i<span class="number">-1</span>]*B+C)%MOD;</div><div class="line">    <span class="keyword">int</span> m=<span class="number">0</span>;fo(i,<span class="number">0</span>,n<span class="number">-1</span>) l[i]=xx[i*<span class="number">3</span>]%m1,r[i]=l[i]+xx[i*<span class="number">3</span>+<span class="number">1</span>]%m2,cs[i]=xx[i*<span class="number">3</span>+<span class="number">2</span>]%m3,id[i]=i,chmax(m,r[i]);</div><div class="line">    sort(id,id+n,[&amp;](<span class="keyword">int</span> x,<span class="keyword">int</span> y)&#123;<span class="keyword">return</span> cs[x]&gt;cs[y];&#125;);</div><div class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;fo(i,<span class="number">0</span>,m) unvis.insert(i);mem(bf,<span class="number">-1</span>);</div><div class="line">    fo(i,<span class="number">0</span>,n<span class="number">-1</span>) <span class="keyword">if</span>(find(id[i]))</div><div class="line">    &#123;</div><div class="line">        ans+=cs[id[i]];</div><div class="line">        unvis.clear();fo(j,<span class="number">0</span>,m) unvis.insert(j);</div><div class="line">    &#125;<span class="keyword">return</span> ans;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
 
       
     </div>
@@ -639,28 +665,28 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7e7e.html" rel="bookmark">【Luogu1090】合并果子</a></div>
+      <div class="popular-posts-title"><a href="/posts/d2e5.html" rel="bookmark">「Luogu1514」引水入城</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/7f0f.html" rel="bookmark">【CF799E】Aquarium decoration</a></div>
+      <div class="popular-posts-title"><a href="/posts/7f0f.html" rel="bookmark">「CF799E」Aquarium decoration</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/2c33.html" rel="bookmark">【Wf2016】Swap Space【PA2014】Bohater</a></div>
+      <div class="popular-posts-title"><a href="/posts/2c33.html" rel="bookmark">「Wf2016」Swap Space「PA2014」Bohater</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">「POJ2057」The Lost House</a></div>
       
     </li>
   
@@ -674,7 +700,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f4f8.html" rel="bookmark">【GDOI2018 D1T2】【51nod1357】密码锁</a></div>
+      <div class="popular-posts-title"><a href="/posts/f4f8.html" rel="bookmark">「GDOI2018 D1T2」「51nod1357」密码锁</a></div>
       
     </li>
   
@@ -692,7 +718,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/2d0202e9.html" title="【OI之路】贪心">http://zory.ink/posts/2d0202e9.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/2d0202e9.html" title="「OI之路」贪心">http://zory.ink/posts/2d0202e9.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -730,8 +756,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/ba43.html" rel="next" title="【OI之路】模拟与讨论大合集">
-                <i class="fa fa-chevron-left"></i> 【OI之路】模拟与讨论大合集
+              <a href="/posts/ba43.html" rel="next" title="「OI之路」模拟与讨论大合集">
+                <i class="fa fa-chevron-left"></i> 「OI之路」模拟与讨论大合集
               </a>
             
           </div>
@@ -740,8 +766,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/5fe4.html" rel="prev" title="【OI之路】01语法与STL-1概要与常识">
-                【OI之路】01语法与STL-1概要与常识 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/2d0202e9.html" rel="prev" title="【OI之路】贪心">
+                【OI之路】贪心 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -819,7 +845,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-count">688</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -844,7 +870,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1253,7 +1281,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">196</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">198</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1316,7 +1348,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#noip国王游戏"><span class="nav-text">noip国王游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#「JSOI2007」建筑抢修"><span class="nav-text">「JSOI2007」建筑抢修</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#「HEOI2015」兔子与樱花"><span class="nav-text">「HEOI2015」兔子与樱花</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU4582-DFS-spanning-tree"><span class="nav-text">HDU4582 DFS spanning tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF521D-shop"><span class="nav-text">CF521D shop</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#「NOIP2012」国王游戏"><span class="nav-text">「NOIP2012」国王游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#「JSOI2007」建筑抢修"><span class="nav-text">「JSOI2007」建筑抢修</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#「HEOI2015」兔子与樱花"><span class="nav-text">「HEOI2015」兔子与樱花</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU4582-DFS-spanning-tree"><span class="nav-text">HDU4582 DFS spanning tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF521D-shop"><span class="nav-text">CF521D shop</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一类带血量取物品的贪心"><span class="nav-text">一类带血量取物品的贪心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拟阵"><span class="nav-text">拟阵</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#例题：SRM726-HeroicSchedule"><span class="nav-text">例题：SRM726 HeroicSchedule</span></a></li></ol></li></ol></div>
             
 
           </div>
