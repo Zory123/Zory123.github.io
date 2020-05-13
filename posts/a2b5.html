@@ -1,0 +1,2020 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/avatar.ico?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false,"dimmer":false,"b2t":true,"scrollpercent":true},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Source and JudgeCF893F">
+<meta name="keywords" content="dp,难度3,长链剖分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【CF893F】Subtree Minimum Query">
+<meta property="og:url" content="http://zory.ink/posts/a2b5.html">
+<meta property="og:site_name" content="Zory的个人博客">
+<meta property="og:description" content="Source and JudgeCF893F">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://zory.ink/images/题解图片/Subtree_Minimum_Query/1.png">
+<meta property="og:image" content="http://zory.ink/images/题解图片/Subtree_Minimum_Query/2.png">
+<meta property="og:image" content="http://zory.ink/images/题解图片/Subtree_Minimum_Query/3.png">
+<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【CF893F】Subtree Minimum Query">
+<meta name="twitter:description" content="Source and JudgeCF893F">
+<meta name="twitter:image" content="http://zory.ink/images/题解图片/Subtree_Minimum_Query/1.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://zory.ink/posts/a2b5"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>【CF893F】Subtree Minimum Query | Zory的个人博客</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6c38ba8648d29103b8d122f998787d71";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zory的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">人生即使没有最短路，也是连通图</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-template">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/OI之路" rel="section"><i class="menu-item-icon fa fa-fw fa-telegram"></i> <br/>OI之路</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-problems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/刷题" rel="section"><i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br/>刷题Problems</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-friends">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/friends/" rel="section"><i class="menu-item-icon fa fa-fw fa-user-circle"></i> <br/>友链Friends</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-boutique">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/精品文章/" rel="section"><i class="menu-item-icon fa fa-fw fa-handshake-o"></i> <br/>精品文章</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-gproblems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/好题" rel="section"><i class="menu-item-icon fa fa-fw fa-thumbs-o-up"></i> <br/>好题</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-top">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/top/" rel="section"><i class="menu-item-icon fa fa-fw fa-signal"></i> <br/>排行榜Hot</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>Search（找文章必备，请耐心等待）</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="不区分大小写，尽量缩短关键词（如CF412、CFR123）" spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zory.ink/posts/a2b5.html"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zory"/>
+      <meta itemprop="description" content="Zory的个人博客"/>
+      <meta itemprop="image" content="/./avatar.ico"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zory的个人博客"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">【CF893F】Subtree Minimum Query
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-30 15:08:19" itemprop="dateCreated datePublished" datetime="2018-10-30T15:08:19+08:00">2018-10-30</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/刷题/" itemprop="url" rel="index"><span itemprop="name">刷题</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/a2b5.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a2b5.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/posts/a2b5.html" class="post-meta-item leancloud_visitors" data-flag-title="【CF893F】Subtree Minimum Query">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p><a href="https://www.luogu.org/problemnew/show/CF893F" target="_blank" rel="noopener">CF893F</a><br><a id="more"></a></p>
+<h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>10h</p>
+<h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>感觉挺有难度的</p>
+<p>暴力做法是，dfs序为一维，深度为一维，然后二维找最小值，随便用个二维数据结构维护一下就好了<br>然而m很大显然不行</p>
+<p>做法一：主席树<br>关键：dfs序内，不存在比x更小深度的点<br>所以以深度为时间轴，不采用权值线段树，而是min线段树<br>线段树插入的时候动态开点，合并取min，询问即前缀和</p>
+<p>做法二：预处理+st表+长链剖分<br>这个做法相对更优秀，但实现有点难度</p>
+<p>注意到多组询问的对象是静态的，考虑预处理</p>
+<p>先求一次bfs序，然后对于x，维护L和R分别表示当前子树，下一层的bfs序的左右端点（因为在相同子树内是连续的）<br>不过，如果不存在子节点，则L为下一层，bfs序下右边第一个点（会跨出），R同理<br>这个主要是为了解决这种情况：<br><img src="../images/题解图片/Subtree_Minimum_Query/1.png" alt=""><br>注意到bfs序在同一层的相对顺序和上一层是一致的，仔细想想会发现很好处理</p>
+<p>然后因为询问的是最小值，允许重叠，所以可以跑一个非常规的ST表<br>设 $f(x,a,b)$ 表示对于 $x到x+2^a-1$ （下文都从bfs序角度），然后他们往下的子树的 $2^b$ 层（包括根）的最小值<br>$fl=L(x)^{2^{b-1}},fr=R(x+2^a-1)^{2^{b-1}}$ （指迭代次数）<br>虽然方向相反，但显然无论跳多少次都满足 $fl \leq fr$<br>$k为最大的 fl+2^k-1 \leq fr$<br>$f(x,a,b)=min f(x,a,b-1),f(fl,k,b-1),f(fr-2^{k-1}+1,k,b-1)$</p>
+<p>这里如果把L和R建成一棵树，相当于询问第k个父亲，可以长链剖分<br>这样询问就可以 O(1) 回答了，参考ST的处理</p>
+<p>然后我这道题做了超久（主要是第42个点）<br>烦了很多sb错误，主要是考虑情况不周全</p>
+<p>顺便提供几组小数据<br><img src="../images/题解图片/Subtree_Minimum_Query/2.png" alt=""><br><img src="../images/题解图片/Subtree_Minimum_Query/3.png" alt=""></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> DEBUG</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> LOCAL=<span class="number">1</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> LOCAL=<span class="number">0</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"></div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">	<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">qread</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">int</span> ans=<span class="number">0</span>;<span class="keyword">char</span> c=getchar();</div><div class="line">		<span class="keyword">while</span>(c&lt;<span class="string">'0'</span> or c&gt;<span class="string">'9'</span>) c=getchar();</div><div class="line">		<span class="keyword">while</span>(c&gt;=<span class="string">'0'</span> and c&lt;=<span class="string">'9'</span>) ans=ans*<span class="number">10</span>+c-<span class="string">'0'</span>,c=getchar();</div><div class="line">		<span class="keyword">return</span> ans;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">qwrite</span><span class="params">(<span class="keyword">int</span> num)</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">if</span>(num&gt;=<span class="number">10</span>) qwrite(num/<span class="number">10</span>);</div><div class="line">		<span class="built_in">putchar</span>(<span class="string">'0'</span>+num%<span class="number">10</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">qwriteln</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;qwrite(num);<span class="built_in">puts</span>(<span class="string">""</span>);&#125;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> n;</div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">110000</span>;</div><div class="line">	<span class="keyword">struct</span> Nod&#123;<span class="keyword">int</span> hou;<span class="keyword">int</span> num;<span class="keyword">int</span> bfsid;Nod()&#123;hou=bfsid=<span class="number">0</span>;&#125;&#125;p[MAX_N];</div><div class="line">	<span class="keyword">int</span> yz[MAX_N];<span class="comment">//dfn-&gt;id</span></div><div class="line">	<span class="keyword">struct</span> Edge&#123;<span class="keyword">int</span> y,g;&#125;e[MAX_N*<span class="number">2</span>];</div><div class="line">	<span class="keyword">int</span> ln=<span class="number">0</span>;<span class="function"><span class="keyword">void</span> <span class="title">ins</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;e[++ln]=(Edge)&#123;y,p[x].hou&#125;;p[x].hou=ln;&#125;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> down[MAX_N];<span class="comment">//down</span></div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">predep</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa)</span></div><div class="line">	</span>&#123;</div><div class="line">		down[x]=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=p[x].hou;k&gt;<span class="number">0</span>;k=e[k].g)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> y=e[k].y;<span class="keyword">if</span>(y==fa) <span class="keyword">continue</span>;</div><div class="line">			predep(y,x);down[x]=max(down[x],down[y]+<span class="number">1</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//bin意义下</span></div><div class="line">	<span class="keyword">int</span> bin[<span class="number">30</span>],<span class="built_in">log</span>[MAX_N];</div><div class="line">	<span class="keyword">int</span> mxpos[MAX_N];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		bin[<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">20</span>;i++) bin[i]=bin[i<span class="number">-1</span>]&lt;&lt;<span class="number">1</span>;</div><div class="line">		<span class="built_in">log</span>[<span class="number">1</span>]=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;MAX_N;i++) <span class="built_in">log</span>[i]=<span class="built_in">log</span>[i&gt;&gt;<span class="number">1</span>]+<span class="number">1</span>;</div><div class="line">		mxpos[<span class="number">1</span>]=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;MAX_N;i++) mxpos[i]=mxpos[i&gt;&gt;<span class="number">1</span>]+<span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">struct</span> Tree<span class="comment">//一切编号按照bfs序</span></div><div class="line">	&#123;</div><div class="line">		<span class="comment">//L、R树中，编号大为父亲</span></div><div class="line">		<span class="keyword">int</span> fa[MAX_N];</div><div class="line">		<span class="keyword">int</span> ff[MAX_N][<span class="number">30</span>];</div><div class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; son[MAX_N];</div><div class="line">		<span class="function"><span class="keyword">void</span> <span class="title">pre1</span><span class="params">()</span></div><div class="line">		</span>&#123;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;=<span class="number">1</span>;i--)</div><div class="line">			&#123;</div><div class="line">				son[fa[i]].push_back(i);</div><div class="line">				ff[i][<span class="number">0</span>]=fa[i];</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">1</span>;t&lt;=<span class="number">20</span>;t++) ff[i][t]=ff[ff[i][t<span class="number">-1</span>]][t<span class="number">-1</span>];</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">int</span> mxdep[MAX_N];</div><div class="line">		<span class="keyword">int</span> bson[MAX_N];<span class="comment">//长儿子</span></div><div class="line">		<span class="function"><span class="keyword">void</span> <span class="title">pre2</span><span class="params">(<span class="keyword">int</span> x)</span><span class="comment">//0=虚根</span></div><div class="line">		</span>&#123;</div><div class="line">			mxdep[x]=<span class="number">0</span>;bson[x]=<span class="number">0</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;(<span class="keyword">int</span>)son[x].size();t++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> y=son[x][t];</div><div class="line">				pre2(y);</div><div class="line">				mxdep[x]=max(mxdep[x],mxdep[y]+<span class="number">1</span>);</div><div class="line">				<span class="keyword">if</span>(bson[x]==<span class="number">0</span> or mxdep[y]&gt;=mxdep[bson[x]]) bson[x]=y;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">int</span> belg[MAX_N],pos[MAX_N];<span class="comment">//所在长链、位置</span></div><div class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; id[MAX_N];<span class="keyword">int</span> tot;</div><div class="line">		<span class="function"><span class="keyword">void</span> <span class="title">pre3</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> blg)</span></div><div class="line">		</span>&#123;</div><div class="line">			pos[x]=id[blg].size();</div><div class="line">			id[blg].push_back(x);</div><div class="line">			belg[x]=blg;</div><div class="line">			<span class="keyword">if</span>(bson[x]&gt;<span class="number">0</span>) pre3(bson[x],blg);</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;(<span class="keyword">int</span>)son[x].size();t++) <span class="keyword">if</span>(son[x][t]!=bson[x]) pre3(son[x][t],++tot);</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; up[MAX_N];<span class="comment">//在链顶记录，向上的，长度为链长的链</span></div><div class="line">		<span class="function"><span class="keyword">void</span> <span class="title">pre4</span><span class="params">()</span></div><div class="line">		</span>&#123;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> now=<span class="number">1</span>;now&lt;=tot;now++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> top=id[now][<span class="number">0</span>];</div><div class="line">				<span class="keyword">int</span> tmp=top;up[top].push_back(<span class="number">-1</span>);</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">1</span>;t&lt;=(<span class="keyword">int</span>)id[now].size();t++)</div><div class="line">				&#123;</div><div class="line">					up[top].push_back(tmp=fa[tmp]);</div><div class="line">					<span class="keyword">if</span>(tmp==<span class="number">0</span>) <span class="keyword">break</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="function"><span class="keyword">int</span> <span class="title">getfa</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> k)</span></div><div class="line">		</span>&#123;</div><div class="line">			<span class="keyword">if</span>(k==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line"></div><div class="line">			<span class="comment">/*</div><div class="line">			倍增版，log</div><div class="line">			for(int t=20;t&gt;=0;t--)</div><div class="line">				if(bin[t]&lt;=k and ff[x][t]!=0) x=ff[x][t],k-=bin[t];</div><div class="line">			return k==0?x:-1;*/</span></div><div class="line"></div><div class="line">			<span class="keyword">int</span> wt=mxpos[k];</div><div class="line">			x=ff[x][wt];k-=bin[wt];</div><div class="line">			<span class="keyword">if</span>(pos[x]&gt;=k) <span class="keyword">return</span> id[belg[x]][pos[x]-k];</div><div class="line">			<span class="keyword">else</span></div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> top=id[belg[x]][<span class="number">0</span>];</div><div class="line">				<span class="keyword">if</span>(k-pos[x]&lt;=(<span class="keyword">int</span>)up[top].size()<span class="number">-1</span>) <span class="keyword">return</span> up[top][k-pos[x]];</div><div class="line">				<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">-1</span>;<span class="comment">//debug</span></div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		Tree() &#123;tot=<span class="number">1</span>;&#125;</div><div class="line">		<span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">()</span></div><div class="line">		</span>&#123;</div><div class="line">			pre1();pre2(<span class="number">0</span>);pre3(<span class="number">0</span>,<span class="number">1</span>);pre4();</div><div class="line">		&#125;</div><div class="line">	&#125;L,R;</div><div class="line">	<span class="keyword">int</span> h[MAX_N];<span class="comment">//bfs深度</span></div><div class="line">	<span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span> rt)</span><span class="comment">//bfs序和L、R指针</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">int</span> id=<span class="number">1</span>;q.push(rt);h[rt]=<span class="number">0</span>;</div><div class="line">		p[rt].bfsid=id;yz[id]=rt;</div><div class="line">		<span class="keyword">while</span>(!q.empty())</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> x=q.front();q.pop();</div><div class="line">			<span class="keyword">bool</span> bk=<span class="number">1</span>;<span class="comment">//是否叶子</span></div><div class="line">			<span class="keyword">int</span> st=id+<span class="number">1</span>,now=p[x].bfsid;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k=p[x].hou;k&gt;<span class="number">0</span>;k=e[k].g)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> y=e[k].y;<span class="keyword">if</span>(p[y].bfsid) <span class="keyword">continue</span>;</div><div class="line">				h[y]=h[x]+<span class="number">1</span>;bk=<span class="number">0</span>;</div><div class="line">				p[y].bfsid=++id;yz[id]=y;</div><div class="line">				q.push(y);</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span>(!bk) L.fa[now]=st,R.fa[now]=id;</div><div class="line">			<span class="keyword">else</span> L.fa[now]=id+<span class="number">1</span>,R.fa[now]=id;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)<span class="comment">//边缘</span></div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span>(h[yz[i]]+<span class="number">1</span>!=h[yz[L.fa[i]]]) L.fa[i]=<span class="number">0</span>;</div><div class="line">			<span class="keyword">if</span>(h[yz[i]]+<span class="number">1</span>!=h[yz[R.fa[i]]]) R.fa[i]=<span class="number">0</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> dp[MAX_N][<span class="number">30</span>][<span class="number">30</span>];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">dp</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="built_in">memset</span>(dp,<span class="number">63</span>,<span class="keyword">sizeof</span> dp);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;=<span class="number">1</span>;i--)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">0</span>;a&lt;=<span class="number">20</span> and i+bin[a]<span class="number">-1</span>&lt;=n and h[yz[i]]==h[yz[i+bin[a]<span class="number">-1</span>]];a++)<span class="comment">//同一层</span></div><div class="line">			&#123;</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> b=<span class="number">0</span>;b&lt;=<span class="number">20</span>;b++)</div><div class="line">				&#123;</div><div class="line">					<span class="keyword">if</span>(a==<span class="number">0</span> and b==<span class="number">0</span>) dp[i][a][b]=p[yz[i]].num;</div><div class="line">					<span class="keyword">else</span> <span class="keyword">if</span>(b==<span class="number">0</span>) dp[i][a][b]=min(dp[i][a<span class="number">-1</span>][b],dp[i+bin[a<span class="number">-1</span>]][a<span class="number">-1</span>][b]);</div><div class="line">					<span class="keyword">else</span></div><div class="line">					&#123;</div><div class="line">						<span class="keyword">int</span> fl=L.getfa(i,bin[b<span class="number">-1</span>]),fr=R.getfa(i+bin[a]<span class="number">-1</span>,bin[b<span class="number">-1</span>]);</div><div class="line">						<span class="keyword">if</span>(fl&lt;=<span class="number">0</span> or fr&lt;=<span class="number">0</span> or fl&gt;fr)<span class="comment">//debug fl&gt;fr的情况忘记判断</span></div><div class="line">						&#123;</div><div class="line">							dp[i][a][b]=dp[i][a][b<span class="number">-1</span>];<span class="comment">//debug 延长转移，避免参差不齐的深度</span></div><div class="line">							<span class="keyword">continue</span>;</div><div class="line">						&#125;</div><div class="line">						<span class="keyword">int</span> k=<span class="built_in">log</span>[fr-fl+<span class="number">1</span>];</div><div class="line">						dp[i][a][b]=min(dp[i][a][b<span class="number">-1</span>],min(dp[fl][k][b<span class="number">-1</span>],dp[fr-bin[k]+<span class="number">1</span>][k][b<span class="number">-1</span>]));</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> cc)</span><span class="comment">//层数</span></div><div class="line">	</span>&#123;</div><div class="line">		cc=min(cc,down[x]+<span class="number">1</span>);</div><div class="line">		<span class="keyword">if</span>(cc==<span class="number">1</span>) <span class="keyword">return</span> p[x].num;</div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123;</div><div class="line">			x=p[x].bfsid;</div><div class="line"></div><div class="line">			<span class="keyword">int</span> k=<span class="built_in">log</span>[cc];</div><div class="line">			<span class="keyword">int</span> fl,fr;</div><div class="line">			<span class="keyword">if</span>(cc==bin[k]) fl=fr=x;</div><div class="line">			<span class="keyword">else</span> fl=L.getfa(x,cc<span class="number">-1</span>-bin[k]+<span class="number">1</span>),fr=R.getfa(x,cc<span class="number">-1</span>-bin[k]+<span class="number">1</span>);<span class="comment">//转步数</span></div><div class="line">			<span class="comment">//往下</span></div><div class="line"></div><div class="line">			<span class="keyword">if</span>(fl&lt;=<span class="number">0</span> or fr&lt;=<span class="number">0</span>) <span class="built_in">puts</span>(<span class="string">"error"</span>);</div><div class="line"></div><div class="line">			<span class="keyword">int</span> k2=<span class="built_in">log</span>[fr-fl+<span class="number">1</span>];</div><div class="line">			<span class="keyword">return</span> min(dp[x][<span class="number">0</span>][k],min(dp[fl][k2][k],dp[fr-bin[k2]+<span class="number">1</span>][k2][k]));</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		pre();</div><div class="line"></div><div class="line">		<span class="keyword">int</span> rt;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;rt);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;p[i].num);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++) &#123;<span class="keyword">int</span> x,y;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);ins(x,y);ins(y,x);&#125;</div><div class="line"></div><div class="line">		bfs(rt);predep(rt,<span class="number">0</span>);</div><div class="line">		L.pre();R.pre();</div><div class="line">		dp();</div><div class="line"></div><div class="line">		<span class="keyword">int</span> m;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;m);</div><div class="line">		<span class="keyword">int</span> lst=<span class="number">0</span>;</div><div class="line">		<span class="keyword">while</span>(m--)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> x=qread(),dis=qread();</div><div class="line">			x=(x+lst)%n+<span class="number">1</span>;dis=(dis+lst)%n;</div><div class="line">			qwriteln(lst=solve(x,dis+<span class="number">1</span>));</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+
+      
+    </div>
+
+    
+      
+
+  <div class="popular-posts-header">相关文章推荐</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/40b6.html" rel="bookmark">【POI2014】Hotel加强版</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/edb5.html" rel="bookmark">【Bzoj1835】【Luogu2605】基站选址</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/8470.html" rel="bookmark">【cf1012f】Passports</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/3f83.html" rel="bookmark">【Luogu1004】方格取数</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/310b.html" rel="bookmark">【CZYZ2009暑假集训提高组6】盟军敢死队</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/39cb.html" rel="bookmark">【CF955F】Heaps</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+	
+		<div>
+				<p id="div-border-left-purple">
+			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
+				<span>
+				<b>本文地址：</b><a href="/posts/a2b5.html" title="【CF893F】Subtree Minimum Query">http://zory.ink/posts/a2b5.html</a><br/><b>转载请注明出处，谢谢！</b>
+				</span>
+				</p>
+		</div>
+    
+
+    
+    
+    
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/dp/" rel="tag"># dp</a>
+          
+            <a href="/tags/难度3/" rel="tag"># 难度3</a>
+          
+            <a href="/tags/长链剖分/" rel="tag"># 长链剖分</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/a39a.html" rel="next" title="【CF1034C】Region Separation">
+                <i class="fa fa-chevron-left"></i> 【CF1034C】Region Separation
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/a414.html" rel="prev" title="【Loj521】抵达">
+                【Loj521】抵达 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/./avatar.ico"
+                alt="Zory"/>
+            
+              <p class="site-author-name" itemprop="name">Zory</p>
+              <div class="site-description motion-element" itemprop="description">Zory的个人博客</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">196</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Zory123" title="GitHub &rarr; https://github.com/Zory123" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:1134430323@qq.com" title="E-Mail &rarr; mailto:1134430323@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          ﻿
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Source-and-Judge"><span class="nav-text">Source and Judge</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Record"><span class="nav-text">Record</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Analysis"><span class="nav-text">Analysis</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zory</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: true,
+    appId: 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+    appKey: 'cJDLxDoNgzq0JJUWQFmpCRdw',
+    placeholder: '对这篇文章有什么看法？大胆地说出来吧',
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '20' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('2');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+                'X-LC-Key': 'cJDLxDoNgzq0JJUWQFmpCRdw',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

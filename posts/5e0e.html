@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/avatar.ico?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false,"dimmer":false,"b2t":true,"scrollpercent":true},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="NOIP2018">
+<meta name="keywords" content="NOIP,赛事">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NOIP2018 划水记+题解">
+<meta property="og:url" content="http://zory.ink/posts/5e0e.html">
+<meta property="og:site_name" content="Zory的个人博客">
+<meta property="og:description" content="NOIP2018">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-05T07:40:31.300Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NOIP2018 划水记+题解">
+<meta name="twitter:description" content="NOIP2018">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://zory.ink/posts/5e0e"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>NOIP2018 划水记+题解 | Zory的个人博客</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6c38ba8648d29103b8d122f998787d71";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zory的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">人生即使没有最短路，也是连通图</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-template">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/OI之路" rel="section"><i class="menu-item-icon fa fa-fw fa-telegram"></i> <br/>OI之路</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-problems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/刷题" rel="section"><i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br/>刷题Problems</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-friends">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/friends/" rel="section"><i class="menu-item-icon fa fa-fw fa-user-circle"></i> <br/>友链Friends</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-boutique">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/精品文章/" rel="section"><i class="menu-item-icon fa fa-fw fa-handshake-o"></i> <br/>精品文章</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-gproblems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/好题" rel="section"><i class="menu-item-icon fa fa-fw fa-thumbs-o-up"></i> <br/>好题</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-top">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/top/" rel="section"><i class="menu-item-icon fa fa-fw fa-signal"></i> <br/>排行榜Hot</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>Search（找文章必备，请耐心等待）</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="不区分大小写，尽量缩短关键词（如CF412、CFR123）" spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zory.ink/posts/5e0e.html"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zory"/>
+      <meta itemprop="description" content="Zory的个人博客"/>
+      <meta itemprop="image" content="/./avatar.ico"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zory的个人博客"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">NOIP2018 划水记+题解
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-11 20:34:56" itemprop="dateCreated datePublished" datetime="2018-11-11T20:34:56+08:00">2018-11-11</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-10-05 15:40:31" itemprop="dateModified" datetime="2019-10-05T15:40:31+08:00">2019-10-05</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/竞赛历程/" itemprop="url" rel="index"><span itemprop="name">竞赛历程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/5e0e.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/5e0e.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/posts/5e0e.html" class="post-meta-item leancloud_visitors" data-flag-title="NOIP2018 划水记+题解">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>NOIP2018<br><a id="more"></a></p>
+<h1 id="day0"><a href="#day0" class="headerlink" title="day0"></a>day0</h1><p>3:30才睡着，超级担心明天会困<br>upd：学到了，以后如果困的话可以喝红牛</p>
+<h1 id="day1"><a href="#day1" class="headerlink" title="day1"></a>day1</h1><p>居然一点也不困？感觉状态不错</p>
+<p>考试前曾经感叹：如果到时候有现在这么好用的键盘就好了……<br>结果居然还成真了！一模一样……<br>然后不卡空间好评，瞎jb开<br>评测机超强好评（没注意评测费，听说加了100），不用担心被卡常了（flag）</p>
+<p>t1，一开始想着差分，但很难做<br>先写了一个不会算复杂度的做法，应该蛮多分的吧，就是solve(l,r)，暴力找最小值去分割<br>然后发现随便卡……但显然可以线段树优化，log找到最左边的最小值，然后以此为分割在右边找<br>那分析一下势能，时间为 $O(nlog^2 n)$<br>好慢啊拍起来已经1h了</p>
+<p>t2，加法线性空间？各种二元函数分析？联想到 HAOI2018奇怪的背包？<br>搞了20min还是不会，看下一题</p>
+<p>t3，居然还真的非常可做<br>二分答案后，设g表示向上的唯一一条链的长度<br>那么现在问题就是给出一个序列，两两配对成至少ln的链，相同条数下选择【上传最大链】的方案<br>我的做法：维护一个set，每次取出最小，找到能配对的中最小的，都从中删除<br>所有被废弃的取mx上传<br>时间的话，看这次评测机配置这么高，应该不会被卡常的吧</p>
+<p>回去看t2，找性质<br>注意到只会是小的影响大的，所以从小到大考虑<br>显然最后一定是原先的子集，否则那个多出来的至少会表示出【其本身】<br>用一个无限背包表示某个数是否被表示，如果能显然不要</p>
+<p>一开始想着值域参考【小凯的疑惑】的话，不互质更小，上限ab，但开不下<br>想了想，只需要知道当前这个数而已（此时上面的性质尚未透彻，所以有怀疑），<br>所以只要每次跑值域大小即可</p>
+<p>彻底检查完所有方面，看了几次注意事项后，还剩1h，挂机玩3d软件去了……</p>
+<p>上限：100+100+100<br>感觉明天应该会很难【回忆起gdoi】</p>
+<p>jcp的t2，没想出值域那个性质，其他人普遍没问题</p>
+<p>下午看到师兄们去看毒液，和lxj突发奇想用手机看【在一年前就躺在u盘】的秒五<br>晚上去看看我在广州的新家（组的），老爸真爱吹啊，什么广州CBD区……<br><del>不过感觉老爸老妈还是有点东西的，以他们的性格不会随便花钱，虽然我不像我弟那样喜欢关心家底</del><br>吸取经验，跑步跑到【真·上气不接下气】<br>顺利早早睡着，打算以后比赛都要这样（scy不可多得的又一句有用的建议）</p>
+<h1 id="day2"><a href="#day2" class="headerlink" title="day2"></a>day2</h1><p>t1，一开始想线性做法，5min后不会，反正放平方，懒得想了，也拍不了，走了走了<br>此时40min，因为代码有点小bug</p>
+<p>t2，这好像很性质？很爆搜？但暂时没思路，走了</p>
+<p>t3, n方暴力显然<br>100%不会，发现很多特殊点，一般都是提示（noip就是良心）<br>如果是一条链，类型一只要正反跑一次，中间合并就好，类型二同理，但并不会类型3<br>深度？哦先dp好，每次重新跑一次祖先的链，那么复杂度就是和深度相关的<br>树上？感觉应该和【正反跑】类似，但不太会<br>此时已经10点，设限20min<br>因为用贪心来决策，dp只计数，计算出每个节点的 $g(x)=min f[x][0/1]$ 后，可以二次扫描<br>记录 $oth(x,0/1)$ 表示当前的选择，然后除了x子树以外的答案（子树间互不影响）<br>那么询问1就搞定了，询问2的话分类讨论，预处理allg和allf1表示无限制下，儿子们的两种和即可</p>
+<p>如果我会处理一条链上，固定前后，的答案的话，就可以树剖+虚树，然后套上询问2了（感觉这才是询问2意义所在啊）<br>ps:不过赛后问了问栋老师，好像不是这样做的</p>
+<p>回去看t2，以为状压就好了，瞎jb找了个转移的限制条件，就瞎jb写了，还过了2 2的点<br>然而其实根本不会转移……又不是加法原理或者乘法原理……毫无去重思路</p>
+<p>剩下时间不算多，赶快写t3，最后暴力过了大样例，然后和暴力拍了询问1<br>匆忙检查各种文件，和d1形成鲜明对比，最后t2特判了样例……好歹有10分</p>
+<p>上限：100+10+84<br>怎么高一只有我拿了t3的40，目前只知道gay队（TYB）和我差不多<br>但所有人第二题都顺利找规律拿了50pt……感觉从结果上血亏，不过那个耐心杠特殊数据的体验还是很好的</p>
+<p>看了看知乎，t3好像是动态dp？<br>不过似乎学过的tyb也没做出来<br>羊好像是我校唯一做出t2的<br>栋好像是我校唯一会做t3的，不过没写完<br>感觉可能是历年正解难度最大的一次，不过暴力分太足了可能线不会差太多</p>
+<p>上限494，随便fail一道题就很悬了（特别是我这种中考无限粗心选手）<br>日常模拟赛上限得分和实际得法相差巨大选手<br>再次上演，比赛完当天晚上一个人在竞赛室写游记系列<br>准备去上文化课了……希望能进wc，不然想想【别人都在训练我在文化课】就很难受</p>
+<h1 id="成绩"><a href="#成绩" class="headerlink" title="成绩"></a>成绩</h1><p>先立个flag，进了就氪个迎新礼包，没进弃游，剩下看天意……</p>
+<p>upd 2018.11.15 发代码速度好评<br>然后到处去测<br>学军和牛客478=100+100+100+100+10+68<br>洛谷441（被卡常，没有参考价值）<br>然后看了看，应该是d2t3询问2的情况写错了（当时只拍了询问1，没时间，只能肉眼看了好多次，结果还是错）<br>rose是真的牛逼，d1t3大样例没过，3个oj平均分95<br>（因为其采用了后面找前面的策略，而这个我记得对拍一下就错，为什么出的数据都卡不掉？我的改改交上去也和他差不多）</p>
+<p>upd 2018.11.20 ccf本来说昨天10点，居然咕咕咕了22h……<br>100+100+95+100+10+68=473<br>好像又被卡常了……但明明学军测都没事啊？<br>总之就是只有pkuwc了</p>
+<h1 id="d2t3-保卫王国-题解"><a href="#d2t3-保卫王国-题解" class="headerlink" title="d2t3 保卫王国 题解"></a>d2t3 保卫王国 题解</h1><p>$g(x)=min f[x][0/1]$<br>注意到dp是计数的，基本没有决策<br>轻重链剖分，然后非常好的性质就是只有一个重儿子<br>$s0(x)=\sum f(lightson,1)$<br>$s1(x)=z(x)+\sum g(lightson)$<br>$f(x,0)=s0(x)+f(hson,1)$<br>$f(x,1)=s1(x)+min\ f(hson,0/1)$</p>
+<p>考虑用矩阵优化，每个点，开一个大小为2乘2的矩阵，不表示状态，只表示转移<br>然后不允许的状态设inf，重写min运算，如果有-1就表示不能转移<br>定义矩阵运算@， $c_{i,j}=min\ a_{i,k}+b_{k,j}$，这个运算是满足结合性（ $(a@b)@c=a@(b@c)$ ）的，证明可以联想floyd</p>
+<p>那么跳重链就可以用线段树维护区间矩阵乘积</p>
+<p>矩阵中轻儿子相关的（s0、s1）信息后面暴力改就好了，每次修改影响log个地方的矩阵，线段树单点修改矩阵</p>
+<p>先从x=1的特殊点开始，那么y就向上dp到链<br>dp状态的表示，是1乘2的矩阵，即f(x,0/1)；每次重链之间，暴力转移就好了<br>不特殊的话同理，x和y各自跳到lca，然后暴力转移合并成一个状态，然后再跳到根<br>时间复杂度 $8 \times n log^2 n$，应该能过大部分点</p>
+<p>如何更快？注意到询问之间是独立的，每次询问最多固定两个点<br><strong>因为儿子是多个的，而父亲只有一个，应该从儿子角度考虑（这也是树上问题重要思想）</strong><br>设 $fs(x,t,0/1,0/1)$ 表示【x的状态，x的第 $2^t$ 个父亲的状态确定】时，祖先子树内，除了x子树的答案外都合法，最小代价<br>注意到前面的做法，答案是 $f(1,0/1)$ ，因为那是总代价<br>但现在，为了更好地动态回答答案，必须把答案拆开，所以fs是<strong>只保证上述区域合法时候的答案</strong><br>虽然稍微有点非常规，但显然<strong>只是本题计数dp的另一种形式罢了</strong></p>
+<p>想通上述内容后，预处理转移显然<br>回答询问时，中间的祖先的状态，因为只和上一个有关，做一个简单的dp即可</p>
+<p>最后就是，感觉码量和实现思维量无论哪种做法都很耗时，至少1h<br>考场上就算会，除非很早ak，否则拿84足够了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory-2018</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> DEBUG</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> LOCAL=<span class="number">1</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> LOCAL=<span class="number">0</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"></div><div class="line"><span class="keyword">namespace</span> mine</div><div class="line">&#123;</div><div class="line">	<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">qread</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">int</span> ans=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> c=getchar();</div><div class="line">		<span class="keyword">while</span>(c&lt;<span class="string">'0'</span> or c&gt;<span class="string">'9'</span>) &#123;<span class="keyword">if</span>(c==<span class="string">'-'</span>) f=<span class="number">-1</span>;;c=getchar();&#125;</div><div class="line">		<span class="keyword">while</span>(c&gt;=<span class="string">'0'</span> and c&lt;=<span class="string">'9'</span>) ans=ans*<span class="number">10</span>+c-<span class="string">'0'</span>,c=getchar();</div><div class="line">		<span class="keyword">return</span> ans*f;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">const</span> <span class="keyword">int</span> MAX_N=<span class="number">110000</span>;</div><div class="line">	<span class="keyword">int</span> n;</div><div class="line">	<span class="keyword">int</span> z[MAX_N];<span class="comment">//点权</span></div><div class="line"></div><div class="line">	<span class="keyword">int</span> hou[MAX_N],dep[MAX_N];</div><div class="line">	<span class="keyword">struct</span> Edge&#123;<span class="keyword">int</span> y,g;&#125;e[MAX_N*<span class="number">2</span>];</div><div class="line">	<span class="keyword">int</span> ln=<span class="number">0</span>;<span class="function"><span class="keyword">void</span> <span class="title">ins</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;e[++ln]=(Edge)&#123;y,hou[x]&#125;;hou[x]=ln;&#125;</div><div class="line"></div><div class="line">	<span class="function">ll <span class="title">add</span><span class="params">(ll a,ll b)</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">if</span>(a&lt;<span class="number">0</span> or b&lt;<span class="number">0</span>) <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		<span class="keyword">return</span> a+b;</div><div class="line">	&#125;</div><div class="line">	<span class="function">ll <span class="title">mymin</span><span class="params">(ll a,ll b)</span> </span>&#123;<span class="keyword">return</span> a&lt;b?a:b;&#125;</div><div class="line">	<span class="function">ll <span class="title">min</span><span class="params">(ll a,ll b)</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">if</span>(a&lt;<span class="number">0</span>) <span class="keyword">return</span> b;</div><div class="line">		<span class="keyword">if</span>(b&lt;<span class="number">0</span>) <span class="keyword">return</span> a;</div><div class="line">		<span class="keyword">return</span> mymin(a,b);</div><div class="line">	&#125;</div><div class="line">	<span class="function">ll <span class="title">dec</span><span class="params">(ll a,ll b)</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">if</span>(a&lt;<span class="number">0</span> or b&lt;<span class="number">0</span>) <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		<span class="keyword">return</span> a-b;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> bin[<span class="number">30</span>];</div><div class="line">	ll ff[MAX_N][<span class="number">30</span>];<span class="comment">//father</span></div><div class="line">	ll fs[MAX_N][<span class="number">30</span>][<span class="number">2</span>][<span class="number">2</span>];</div><div class="line"></div><div class="line">	<span class="keyword">struct</span> Predp</div><div class="line">	&#123;</div><div class="line">		ll f[MAX_N][<span class="number">2</span>];<span class="comment">//dp</span></div><div class="line">		Predp()&#123;<span class="built_in">memset</span>(f,<span class="number">0</span>,<span class="keyword">sizeof</span> f);&#125;</div><div class="line">		<span class="function"><span class="keyword">void</span> <span class="title">dp</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa)</span></div><div class="line">		</span>&#123;</div><div class="line">			ff[x][<span class="number">0</span>]=fa;</div><div class="line"></div><div class="line">			f[x][<span class="number">0</span>]=<span class="number">0</span>;f[x][<span class="number">1</span>]=z[x];</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k=hou[x];k&gt;<span class="number">0</span>;k=e[k].g)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> y=e[k].y;<span class="keyword">if</span>(y==fa) <span class="keyword">continue</span>;</div><div class="line">				dep[y]=dep[x]+<span class="number">1</span>;dp(y,x);</div><div class="line"></div><div class="line">				f[x][<span class="number">0</span>]=add(f[x][<span class="number">0</span>],f[y][<span class="number">1</span>]);</div><div class="line">				f[x][<span class="number">1</span>]=add(f[x][<span class="number">1</span>],min(f[y][<span class="number">0</span>],f[y][<span class="number">1</span>]));</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="function"><span class="keyword">void</span> <span class="title">preST</span><span class="params">()</span></div><div class="line">		</span>&#123;</div><div class="line">			<span class="built_in">memset</span>(fs,<span class="number">-1</span>,<span class="keyword">sizeof</span> fs);</div><div class="line">			f[<span class="number">0</span>][<span class="number">0</span>]=f[<span class="number">1</span>][<span class="number">1</span>],f[<span class="number">0</span>][<span class="number">1</span>]=min(f[<span class="number">1</span>][<span class="number">0</span>],f[<span class="number">1</span>][<span class="number">1</span>]);</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> x=<span class="number">1</span>;x&lt;=n;x++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> fa=ff[x][<span class="number">0</span>];</div><div class="line">				fs[x][<span class="number">0</span>][<span class="number">1</span>][<span class="number">0</span>]=dec(f[fa][<span class="number">0</span>],f[x][<span class="number">1</span>]);</div><div class="line">				fs[x][<span class="number">0</span>][<span class="number">0</span>][<span class="number">1</span>]=fs[x][<span class="number">0</span>][<span class="number">1</span>][<span class="number">1</span>]=dec(f[fa][<span class="number">1</span>],min(f[x][<span class="number">1</span>],f[x][<span class="number">0</span>]));</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">1</span>;t&lt;=<span class="number">20</span>;t++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> x=<span class="number">1</span>;x&lt;=n;x++)</div><div class="line">				&#123;</div><div class="line">					ff[x][t]=ff[ff[x][t<span class="number">-1</span>]][t<span class="number">-1</span>];</div><div class="line">					<span class="keyword">int</span> mid=ff[x][t<span class="number">-1</span>];</div><div class="line">					fs[x][t][<span class="number">0</span>][<span class="number">0</span>]=min( add(fs[x][t<span class="number">-1</span>][<span class="number">0</span>][<span class="number">0</span>],fs[mid][t<span class="number">-1</span>][<span class="number">0</span>][<span class="number">0</span>]),add(fs[x][t<span class="number">-1</span>][<span class="number">0</span>][<span class="number">1</span>],fs[mid][t<span class="number">-1</span>][<span class="number">1</span>][<span class="number">0</span>]) );</div><div class="line">					fs[x][t][<span class="number">0</span>][<span class="number">1</span>]=min( add(fs[x][t<span class="number">-1</span>][<span class="number">0</span>][<span class="number">0</span>],fs[mid][t<span class="number">-1</span>][<span class="number">0</span>][<span class="number">1</span>]),add(fs[x][t<span class="number">-1</span>][<span class="number">0</span>][<span class="number">1</span>],fs[mid][t<span class="number">-1</span>][<span class="number">1</span>][<span class="number">1</span>]) );</div><div class="line">					fs[x][t][<span class="number">1</span>][<span class="number">0</span>]=min( add(fs[x][t<span class="number">-1</span>][<span class="number">1</span>][<span class="number">0</span>],fs[mid][t<span class="number">-1</span>][<span class="number">0</span>][<span class="number">0</span>]),add(fs[x][t<span class="number">-1</span>][<span class="number">1</span>][<span class="number">1</span>],fs[mid][t<span class="number">-1</span>][<span class="number">1</span>][<span class="number">0</span>]) );</div><div class="line">					fs[x][t][<span class="number">1</span>][<span class="number">1</span>]=min( add(fs[x][t<span class="number">-1</span>][<span class="number">1</span>][<span class="number">0</span>],fs[mid][t<span class="number">-1</span>][<span class="number">0</span>][<span class="number">1</span>]),add(fs[x][t<span class="number">-1</span>][<span class="number">1</span>][<span class="number">1</span>],fs[mid][t<span class="number">-1</span>][<span class="number">1</span>][<span class="number">1</span>]) );</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;predp;</div><div class="line"></div><div class="line">	ll ans[<span class="number">2</span>][<span class="number">8000</span>][<span class="number">2</span>];<span class="comment">//简单dp, ans[x或者y][序数][以此状态结尾]=最小代价</span></div><div class="line">	<span class="keyword">int</span> tmp[<span class="number">2</span>];</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">jump</span><span class="params">(<span class="keyword">int</span> typ,<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> t)</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">int</span> now=++tmp[typ];</div><div class="line">		ans[typ][now][<span class="number">0</span>]=ans[typ][now][<span class="number">1</span>]=<span class="number">-1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> a=<span class="number">0</span>;a&lt;=<span class="number">1</span>;a++)<span class="comment">//x</span></div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> b=<span class="number">0</span>;b&lt;=<span class="number">1</span>;b++)<span class="comment">//anc</span></div><div class="line">				ans[typ][now][b]=min(ans[typ][now][b], add(ans[typ][now<span class="number">-1</span>][a],fs[x][t][a][b]) );</div><div class="line">		x=ff[x][t];</div><div class="line">	&#125;</div><div class="line">	<span class="function">ll <span class="title">solve</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> a,<span class="keyword">int</span> y,<span class="keyword">int</span> b)</span><span class="comment">//点x，y</span></div><div class="line">	</span>&#123;</div><div class="line">		<span class="keyword">if</span>(dep[x]&lt;dep[y]) swap(x,y),swap(a,b);</div><div class="line"></div><div class="line">		tmp[<span class="number">0</span>]=<span class="number">0</span>;tmp[<span class="number">1</span>]=<span class="number">0</span>;</div><div class="line">		ans[<span class="number">0</span>][<span class="number">0</span>][a]=predp.f[x][a];ans[<span class="number">0</span>][<span class="number">0</span>][a^<span class="number">1</span>]=<span class="number">-1</span>;</div><div class="line">		ans[<span class="number">1</span>][<span class="number">0</span>][b]=predp.f[y][b];ans[<span class="number">1</span>][<span class="number">0</span>][b^<span class="number">1</span>]=<span class="number">-1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">20</span>;t&gt;=<span class="number">0</span>;t--) <span class="keyword">if</span>(bin[t]&lt;=dep[x]-dep[y]) jump(<span class="number">0</span>,x,t);</div><div class="line"></div><div class="line">		<span class="keyword">if</span>(x==y) ans[<span class="number">0</span>][tmp[<span class="number">0</span>]][b^<span class="number">1</span>]=<span class="number">-1</span>;</div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">20</span>;t&gt;=<span class="number">0</span>;t--) <span class="keyword">if</span>(ff[x][t]!=ff[y][t]) jump(<span class="number">0</span>,x,t),jump(<span class="number">1</span>,y,t);</div><div class="line"></div><div class="line">			<span class="keyword">int</span> lca=ff[x][<span class="number">0</span>];</div><div class="line">			<span class="keyword">int</span> now=++tmp[<span class="number">0</span>];</div><div class="line">			ans[<span class="number">0</span>][now][<span class="number">0</span>]=ans[<span class="number">0</span>][now][<span class="number">1</span>]=<span class="number">-1</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> c=<span class="number">0</span>;c&lt;=<span class="number">1</span>;c++)</div><div class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> t1=<span class="number">0</span>;t1&lt;=<span class="number">1</span>;t1++)</div><div class="line">					<span class="keyword">for</span>(<span class="keyword">int</span> t2=<span class="number">0</span>;t2&lt;=<span class="number">1</span>;t2++)</div><div class="line">					&#123;</div><div class="line">						<span class="keyword">if</span>(c==<span class="number">0</span> and (t1==<span class="number">0</span> or t2==<span class="number">0</span>)) <span class="keyword">continue</span>;<span class="comment">//debug 这种情况要特判</span></div><div class="line"></div><div class="line">						ll t=add(ans[<span class="number">0</span>][now<span class="number">-1</span>][t1],fs[x][<span class="number">0</span>][t1][c]);</div><div class="line">						t=add(t,ans[<span class="number">1</span>][tmp[<span class="number">1</span>]][t2]);</div><div class="line">						<span class="keyword">if</span>(c==<span class="number">0</span>) t=dec(t,predp.f[y][<span class="number">1</span>]);</div><div class="line">						<span class="keyword">else</span> t=dec(t,min(predp.f[y][<span class="number">0</span>],predp.f[y][<span class="number">1</span>]));</div><div class="line"></div><div class="line">						ans[<span class="number">0</span>][now][c]=min(ans[<span class="number">0</span>][now][c],t);</div><div class="line">					&#125;</div><div class="line">			x=lca;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="comment">//x为当前lca，开始向上</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">20</span>;t&gt;=<span class="number">0</span>;t--) <span class="keyword">if</span>(ff[x][t]&gt;<span class="number">0</span>) jump(<span class="number">0</span>,x,t);</div><div class="line">		<span class="keyword">return</span> min(ans[<span class="number">0</span>][tmp[<span class="number">0</span>]][<span class="number">0</span>],ans[<span class="number">0</span>][tmp[<span class="number">0</span>]][<span class="number">1</span>]);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line">	</span>&#123;</div><div class="line">		bin[<span class="number">0</span>]=<span class="number">1</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">20</span>;i++) bin[i]=bin[i<span class="number">-1</span>]&lt;&lt;<span class="number">1</span>;</div><div class="line"></div><div class="line">		<span class="keyword">int</span> m;<span class="keyword">char</span> op[<span class="number">10</span>];<span class="built_in">scanf</span>(<span class="string">"%d%d%s"</span>,&amp;n,&amp;m,op);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;z[i]);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> x,y;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</div><div class="line">			ins(x,y);ins(y,x);</div><div class="line">		&#125;</div><div class="line">		predp.dp(<span class="number">1</span>,<span class="number">0</span>);</div><div class="line">		predp.preST();</div><div class="line">		<span class="keyword">while</span>(m--)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> x,a,y,b;<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;x,&amp;a,&amp;y,&amp;b);</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,solve(x,a,y,b));</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	mine::main();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="d2t2-填数游戏-题解"><a href="#d2t2-填数游戏-题解" class="headerlink" title="d2t2 填数游戏 题解"></a>d2t2 填数游戏 题解</h1><p>某些性质：<br>$若w(p1)&gt;w(p2)，则s(p1) \leq s(p2)$<br>显然既然字符串的比较从前往后，所有长度相同的路径间都要满足条件<br>那么显然每个对角线都应该满足从右上往左下【一段0然后一段1】<br>当(i,j+1)和(i+1,j)相同时，以(i+1,j+1)为左上角的矩阵，对角线上必须相同<br>否则从(i,j)走出来，然后路径字典序不同，合并后可能交换走</p>
+<p><a href="https://blog.csdn.net/A1847225889/article/details/84293984" target="_blank" rel="noopener">真题解</a></p>
+
+      
+    </div>
+
+    
+      
+
+  <div class="popular-posts-header">相关文章推荐</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/f969.html" rel="bookmark">NOIP2017训练日记</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/da68.html" rel="bookmark">NOIP2016总结</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/d1a6.html" rel="bookmark">NOIP2017游记</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/afb6.html" rel="bookmark">NOIP2016海港</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/141d.html" rel="bookmark">NOIP2016魔法阵</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/676d.html" rel="bookmark">GDKOI2018日志&游记</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+	
+		<div>
+				<p id="div-border-left-purple">
+			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
+				<span>
+				<b>本文地址：</b><a href="/posts/5e0e.html" title="NOIP2018 划水记+题解">http://zory.ink/posts/5e0e.html</a><br/><b>转载请注明出处，谢谢！</b>
+				</span>
+				</p>
+		</div>
+    
+
+    
+    
+    
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/NOIP/" rel="tag"># NOIP</a>
+          
+            <a href="/tags/赛事/" rel="tag"># 赛事</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/2fa8.html" rel="next" title="【CF590E】Birthday">
+                <i class="fa fa-chevron-left"></i> 【CF590E】Birthday
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/80c8.html" rel="prev" title="【置顶】套路集锦">
+                【置顶】套路集锦 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/./avatar.ico"
+                alt="Zory"/>
+            
+              <p class="site-author-name" itemprop="name">Zory</p>
+              <div class="site-description motion-element" itemprop="description">Zory的个人博客</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">196</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Zory123" title="GitHub &rarr; https://github.com/Zory123" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:1134430323@qq.com" title="E-Mail &rarr; mailto:1134430323@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          ﻿
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#day0"><span class="nav-text">day0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#day1"><span class="nav-text">day1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#day2"><span class="nav-text">day2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#成绩"><span class="nav-text">成绩</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#d2t3-保卫王国-题解"><span class="nav-text">d2t3 保卫王国 题解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#d2t2-填数游戏-题解"><span class="nav-text">d2t2 填数游戏 题解</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zory</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: true,
+    appId: 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+    appKey: 'cJDLxDoNgzq0JJUWQFmpCRdw',
+    placeholder: '对这篇文章有什么看法？大胆地说出来吧',
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '20' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('2');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+                'X-LC-Key': 'cJDLxDoNgzq0JJUWQFmpCRdw',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

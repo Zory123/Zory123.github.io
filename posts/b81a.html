@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/avatar.ico?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false,"dimmer":false,"b2t":true,"scrollpercent":true},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Source and JudgeNOIP2011 提高组 D2T3Luogu1315Caioj1550">
+<meta name="keywords" content="模拟,贪心,难度2,好题,坑,费用流">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Luogu1315】观光公交">
+<meta property="og:url" content="http://zory.ink/posts/b81a.html">
+<meta property="og:site_name" content="Zory的个人博客">
+<meta property="og:description" content="Source and JudgeNOIP2011 提高组 D2T3Luogu1315Caioj1550">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【Luogu1315】观光公交">
+<meta name="twitter:description" content="Source and JudgeNOIP2011 提高组 D2T3Luogu1315Caioj1550">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://zory.ink/posts/b81a"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>【Luogu1315】观光公交 | Zory的个人博客</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6c38ba8648d29103b8d122f998787d71";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zory的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">人生即使没有最短路，也是连通图</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">603</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">4</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">196</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-template">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/OI之路" rel="section"><i class="menu-item-icon fa fa-fw fa-telegram"></i> <br/>OI之路</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-problems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/刷题" rel="section"><i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br/>刷题Problems</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-friends">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/friends/" rel="section"><i class="menu-item-icon fa fa-fw fa-user-circle"></i> <br/>友链Friends</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-boutique">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/精品文章/" rel="section"><i class="menu-item-icon fa fa-fw fa-handshake-o"></i> <br/>精品文章</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-gproblems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/好题" rel="section"><i class="menu-item-icon fa fa-fw fa-thumbs-o-up"></i> <br/>好题</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-top">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/top/" rel="section"><i class="menu-item-icon fa fa-fw fa-signal"></i> <br/>排行榜Hot</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>Search（找文章必备，请耐心等待）</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="不区分大小写，尽量缩短关键词（如CF412、CFR123）" spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zory.ink/posts/b81a.html"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zory"/>
+      <meta itemprop="description" content="Zory的个人博客"/>
+      <meta itemprop="image" content="/./avatar.ico"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zory的个人博客"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">【Luogu1315】观光公交
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-04-11 13:21:00" itemprop="dateCreated datePublished" datetime="2018-04-11T13:21:00+08:00">2018-04-11</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/刷题/" itemprop="url" rel="index"><span itemprop="name">刷题</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/b81a.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/b81a.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/posts/b81a.html" class="post-meta-item leancloud_visitors" data-flag-title="【Luogu1315】观光公交">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOIP2011 提高组 D2T3<br><a href="https://www.luogu.org/problemnew/show/P1315" target="_blank" rel="noopener">Luogu1315</a><br><a href="http://caioj.cn/problem.php?id=1550" target="_blank" rel="noopener">Caioj1550</a></p>
+<a id="more"></a>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p id="div-border-top-green"><strong>【Brief description】</strong><br><br>风景迷人的小城Y 市，拥有n 个美丽的景点。由于慕名而来的游客越来越多，Y 市特意安排了一辆观光公交车，为游客提供更便捷的交通服务。观光公交车在第 0 分钟出现在 1号景点，随后依次前往 2、3 、4 ……n 号景点。从第 i 号景点开到第 i+1 号景点需要 Di 分钟。任意时刻，公交车只能往前开，或在景点处等待。<br><br>设共有m 个游客，每位游客需要乘车1 次从一个景点到达另一个景点，第i 位游客在Ti 分钟来到景点 Ai ，希望乘车前往景点Bi （Ai&lt;Bi ）。为了使所有乘客都能顺利到达目的地，公交车在每站都必须等待需要从该景点出发的所有乘客都上车后才能出发开往下一景点。<br><br>假设乘客上下车不需要时间。<br><br>一个乘客的旅行时间，等于他到达目的地的时刻减去他来到出发地的时刻。因为只有一辆观光车，有时候还要停下来等其他乘客，乘客们纷纷抱怨旅行时间太长了。于是聪明的司机ZZ给公交车安装了 k 个氮气加速器，每使用一个加速器，可以使其中一个 Di 减1 。对于同一个Di 可以重复使用加速器，但是必须保证使用后Di 大于等于0 。<br><br>那么ZZ该如何安排使用加速器，才能使所有乘客的旅行时间总和最小？<br><br><strong>【Input】</strong><br><br>第 1 行是3 个整数n, m, k ，每两个整数之间用一个空格隔开。分别表示景点数、乘客数和氮气加速器个数。<br><br>第 2 行是n-1 个整数，每两个整数之间用一个空格隔开，第i 个数表示从第i 个景点开往第i+1 个景点所需要的时间，即 Di 。<br><br>第 3 行至m+2 行每行 3 个整数 Ti, Ai, Bi，每两个整数之间用一个空格隔开。<br><br>第 i+2 行表示第i 位乘客来到出发景点的时刻，出发的景点编号和到达的景点编号。<br><br><strong>【Output】</strong><br><br>共一行，包含一个整数，表示最小的总旅行时间。<br><br><strong>【Limited conditions】</strong><br><br>对于10% 的数据，k=0 ；<br><br>对于20% 的数据，k=1 ；<br><br>对于40% 的数据，2 ≤ n ≤ 50，1 ≤ m ≤ 1,000，0 ≤ k ≤ 20，0 ≤ Di ≤ 10，0 ≤ T i ≤ 500；<br><br>对于60% 的数据，1 ≤ n ≤ 100，1 ≤ m ≤ 1,000，0 ≤ k ≤ 100 ，0 ≤ Di ≤ 100，0 ≤ T i ≤ 10,000 ；<br><br>对于100%的数据，1 ≤ n ≤ 1,000，1 ≤ m ≤ 10,000 ，0 ≤ k ≤ 100,000，0 ≤ Di ≤ 100 ，0 ≤ T i ≤ 100,000。<br><br><strong>【Sample input】</strong><br><br>3 3 2<br>1 4<br>0 1 3<br>1 1 2<br>5 2 3<br><br><strong>【Sample output】</strong><br><br>10<br><br><strong>【Sample explanation】</strong><br><br>对D2 使用2 个加速器，从2 号景点到 3 号景点时间变为 2 分钟。<br><br>公交车在第1 分钟从1 号景点出发，第2 分钟到达2 号景点，第5 分钟从2 号景点出发，第7 分钟到达 3 号景点。<br><br>第1 个旅客旅行时间 7-0 = 7 分钟。<br><br>第2 个旅客旅行时间 2-1 = 1 分钟。<br><br>第3 个旅客旅行时间 7-5 = 2 分钟。<br><br>总时间 7+1+2 = 10分钟。<br><br></p>
+
+<h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>6h</p>
+<h2 id="Analysis1"><a href="#Analysis1" class="headerlink" title="Analysis1"></a>Analysis1</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>首先，对于同一个点上车的乘客，除了最后那一个，其他人什么时候到达时没有关系的，只影响答案统计但不影响决策，因为他在这个点的等待时间无法改变，所以用lst[i]表示第i个点最后到的人的时间。</p>
+<p>先定义几个数组</p>
+<p>$tot[t]$=在t点下车的乘客数量</p>
+<p>$arr[ t]$=当前方案，开车到t点的时间=$max(arr[t-1],lst[t-1])+d[t]$</p>
+<p>那么思考在什么地方用加速器呢？可以考虑贪心一下</p>
+<p>假如要对$(t-1,t)$这条边加速，</p>
+<p>①$lst[t]\geq arr[t]$，则对于【不在i点下车的乘客】，旅行时间不变，贡献$tot[t]$</p>
+<p>②$lst[t]&lt;arr[t]​$，贡献$\sum_{i=t}^{g[t]} tot[i]​$，g[t]是当前连续情况②的最后一个，因为一旦碰到①又要等了</p>
+<p>然后tot不变，可以搞个前缀和</p>
+<p>总结：把没有加速的答案先搞定，然后一个个贪心</p>
+<p>复杂度：$O(kn)$</p>
+<p>至于数据……别管了很伪的，反正不会T</p>
+<p>但是为什么能贪心呢？这个我没相通，因为感觉决策是变化很大的</p>
+
+</div></div>
+<h2 id="Code1"><a href="#Code1" class="headerlink" title="Code1"></a>Code1</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory in 2018</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> WIN32</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BIGN <span class="meta-string">"%I64d"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BIGN <span class="meta-string">"%lld"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymax</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&gt;y?x:y;&#125;</div><div class="line"><span class="function">ll <span class="title">mymin</span><span class="params">(ll x,ll y)</span> </span>&#123;<span class="keyword">return</span> x&lt;y?x:y;&#125;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">1100</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">struct</span> Nod</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> t,st,ed;</div><div class="line">&#125;p[<span class="number">11000</span>];</div><div class="line"><span class="keyword">int</span> d[MAXN];</div><div class="line"><span class="keyword">int</span> tot[MAXN];</div><div class="line"><span class="keyword">int</span> arr[MAXN],lst[MAXN];</div><div class="line"><span class="keyword">int</span> g[MAXN];<span class="comment">//最后影响点</span></div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"></div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> n,m,k;<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;m,&amp;k);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;d[i]);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;p[i].t,&amp;p[i].st,&amp;p[i].ed);</div><div class="line">		lst[p[i].st]=mymax(lst[p[i].st],p[i].t);</div><div class="line">		tot[p[i].ed]++;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++) tot[i]+=tot[i<span class="number">-1</span>];</div><div class="line">	arr[<span class="number">1</span>]=lst[<span class="number">1</span>];<span class="comment">//debug</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++) arr[i]=mymax(arr[i<span class="number">-1</span>],lst[i<span class="number">-1</span>])+d[i<span class="number">-1</span>];</div><div class="line">	</div><div class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) ans+=arr[ p[i].ed ]-p[i].t;</div><div class="line">	<span class="keyword">while</span>(k--)</div><div class="line">	&#123;</div><div class="line">		g[n<span class="number">-1</span>]=n;<span class="keyword">for</span>(<span class="keyword">int</span> i=n<span class="number">-2</span>;i&gt;=<span class="number">1</span>;i--) g[i]=(arr[i+<span class="number">1</span>]&lt;=lst[i+<span class="number">1</span>])?i+<span class="number">1</span>:g[i+<span class="number">1</span>];</div><div class="line">		</div><div class="line">		<span class="keyword">int</span> mx=<span class="number">0</span>,t=<span class="number">-1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)<span class="comment">//i~i+1</span></div><div class="line">			<span class="keyword">if</span>(d[i]&gt;<span class="number">0</span> and mx&lt;tot[g[i]]-tot[i])</div><div class="line">			&#123;</div><div class="line">				mx=tot[g[i]]-tot[i];</div><div class="line">				t=i;</div><div class="line">			&#125;</div><div class="line">		<span class="keyword">if</span>(t&lt;<span class="number">0</span>) <span class="keyword">break</span>;</div><div class="line">		ans-=mx;d[t]--;</div><div class="line">		</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++) arr[i]=mymax(arr[i<span class="number">-1</span>],lst[i<span class="number">-1</span>])+d[i<span class="number">-1</span>];</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h2 id="Analysis2"><a href="#Analysis2" class="headerlink" title="Analysis2"></a>Analysis2</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>费用流~</p>
+<p>感觉思路真的很妙，不好想</p>
+<p>但还是很好理解的，而且比贪心慢不了太多，但感觉特别稳</p>
+<p>核心：</p>
+<p>一次加速器，碰到$lst[t]\geq arr[t]$也就是上面的情况①就会停止</p>
+<p>那么也就是说加速器个数超过$max(arr[i]-lst[i],0)$就停止影响</p>
+<p>那么考虑把每一个点拆成【到达】和【离开】</p>
+<p>然后用变化的【加速器分配方案】作为流量</p>
+<p>则构图如下（i作为边i~i+1遍历）：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">边</th>
+<th style="text-align:center">单位流量费用</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$S\rightarrow S’$</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">k</td>
+<td style="text-align:center">限制总个数</td>
+</tr>
+<tr>
+<td style="text-align:center">$S’\rightarrow i’$</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">$d[i]$</td>
+<td style="text-align:center">$边权\geq 0$</td>
+</tr>
+<tr>
+<td style="text-align:center">$i’\rightarrow i+1$</td>
+<td style="text-align:center">$-tot[i+1]$</td>
+<td style="text-align:center">$INF$</td>
+<td style="text-align:center">追求最小</td>
+</tr>
+<tr>
+<td style="text-align:center">$i\rightarrow i’$</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">$max(arr[i]-lst[i],0)$</td>
+<td style="text-align:center">确保影响范围</td>
+</tr>
+<tr>
+<td style="text-align:center">$i’\rightarrow T$</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">$INF$</td>
+<td style="text-align:center">统计答案</td>
+</tr>
+</tbody>
+</table>
+<p>大功告成！</p>
+
+</div></div>
+<h2 id="Code2"><a href="#Code2" class="headerlink" title="Code2"></a>Code2</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory in 2018</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> WIN32</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BIGN <span class="meta-string">"%I64d"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BIGN <span class="meta-string">"%lld"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymax</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&gt;y?x:y;&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymin</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&lt;y?x:y;&#125;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">1100</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">struct</span> Boy</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> t,st,ed;</div><div class="line">&#125;b[<span class="number">11000</span>];</div><div class="line"><span class="keyword">int</span> d[MAXN];</div><div class="line"><span class="keyword">int</span> tot[MAXN];</div><div class="line"><span class="keyword">int</span> arr[MAXN],lst[MAXN];</div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="keyword">struct</span> Nod</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> hou;</div><div class="line">	<span class="keyword">int</span> dis;</div><div class="line">	<span class="keyword">int</span> fm,mic;</div><div class="line">	<span class="keyword">bool</span> v;</div><div class="line">	Nod()</div><div class="line">	&#123;</div><div class="line">		hou=v=<span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line">&#125;p[MAXN*<span class="number">2</span>];</div><div class="line"><span class="keyword">struct</span> Edge</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> y,w,c,g;</div><div class="line">	<span class="keyword">int</span> oth;</div><div class="line">&#125;e[MAXN*<span class="number">8</span>];</div><div class="line"><span class="keyword">int</span> ln=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ins</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> c,<span class="keyword">int</span> w)</span></div><div class="line"></span>&#123;</div><div class="line">	e[++ln]=(Edge)&#123;y,w,c,p[x].hou,ln+<span class="number">1</span>&#125;;p[x].hou=ln;</div><div class="line">	e[++ln]=(Edge)&#123;x,-w,<span class="number">0</span>,p[y].hou,ln<span class="number">-1</span>&#125;;p[y].hou=ln;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> cost;</div><div class="line"><span class="keyword">int</span> q[MAXN*<span class="number">3</span>];</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">spfa</span><span class="params">(<span class="keyword">int</span> st,<span class="keyword">int</span> ed)</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=ed;i++) p[i].dis=p[i].mic=INF;</div><div class="line">	</div><div class="line">	<span class="keyword">int</span> tou=<span class="number">1</span>,wei=<span class="number">2</span>;q[<span class="number">1</span>]=st;</div><div class="line">	p[st].v=<span class="number">1</span>;p[st].dis=<span class="number">0</span>;p[st].mic=INF;<span class="comment">//debug</span></div><div class="line">	<span class="keyword">while</span>(tou!=wei)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> x=q[tou++];<span class="keyword">if</span>(tou==MAXN) tou=<span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=p[x].hou;k&gt;<span class="number">0</span>;k=e[k].g)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> y=e[k].y;</div><div class="line">			<span class="keyword">if</span>(p[y].dis&gt;p[x].dis+e[k].w and e[k].c&gt;<span class="number">0</span>)</div><div class="line">			&#123;</div><div class="line">				p[y].dis=p[x].dis+e[k].w;</div><div class="line">				p[y].mic=mymin(p[x].mic,e[k].c);</div><div class="line">				p[y].fm=k;</div><div class="line">				<span class="keyword">if</span>(!p[y].v)</div><div class="line">				&#123;</div><div class="line">					p[y].v=<span class="number">1</span>;</div><div class="line">					q[wei++]=y;<span class="keyword">if</span>(wei==MAXN) wei=<span class="number">1</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		p[x].v=<span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(p[ed].dis==INF) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	</div><div class="line">	cost+=p[ed].mic*p[ed].dis;</div><div class="line">	<span class="keyword">int</span> x=ed;</div><div class="line">	<span class="keyword">while</span>(x!=st)</div><div class="line">	&#123;</div><div class="line">		e[p[x].fm].c-=p[ed].mic;</div><div class="line">		e[e[p[x].fm].oth].c+=p[ed].mic;</div><div class="line">		x=e[e[p[x].fm].oth].y;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> n,m,k;<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;m,&amp;k);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;d[i]);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;b[i].t,&amp;b[i].st,&amp;b[i].ed);</div><div class="line">		lst[b[i].st]=mymax(lst[b[i].st],b[i].t);</div><div class="line">		tot[b[i].ed]++;</div><div class="line">	&#125;</div><div class="line">	arr[<span class="number">1</span>]=lst[<span class="number">1</span>];<span class="comment">//debug</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++) arr[i]=mymax(arr[i<span class="number">-1</span>],lst[i<span class="number">-1</span>])+d[i<span class="number">-1</span>];</div><div class="line">	</div><div class="line">	<span class="keyword">int</span> st=<span class="number">2</span>*n+<span class="number">1</span>,st2=st+<span class="number">1</span>,ed=st+<span class="number">2</span>;</div><div class="line">	ins(st,st2,k,<span class="number">0</span>);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++)</div><div class="line">	&#123;</div><div class="line">		ins(st2,n+i,d[i],<span class="number">0</span>);</div><div class="line">		ins(i,n+i,mymax(arr[i]-lst[i],<span class="number">0</span>),<span class="number">0</span>);</div><div class="line">		</div><div class="line">		ins(n+i,i+<span class="number">1</span>,INF,-tot[i+<span class="number">1</span>]);</div><div class="line">		ins(i+<span class="number">1</span>,ed,INF,<span class="number">0</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) ans+=arr[ b[i].ed ]-b[i].t;</div><div class="line">	cost=<span class="number">0</span>;<span class="keyword">while</span>(spfa(st,ed)) ;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans+cost);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h2 id="Analysis3"><a href="#Analysis3" class="headerlink" title="Analysis3"></a>Analysis3</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>然后猛地发现，虽然上面两种看起来都灰常快，事实上跑官方数据也确实算快</p>
+<p>然鹅，理论复杂度都是灰常大的</p>
+<p>有没有更快的呢？<del>我才不会告诉你这几个解法我一个都没想到</del></p>
+<p>其实优化一下贪心就好了</p>
+<ol>
+<li>把arr的更新，从全部减少为更新范围（根据上面的限制公式）</li>
+<li>每次用多几个加速器（根据上面的限制公式）</li>
+</ol>
+<p>然后速度就从700ms到了12ms……</p>
+
+</div></div>
+<h2 id="Code3"><a href="#Code3" class="headerlink" title="Code3"></a>Code3</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Zory in 2018</span></div><div class="line"><span class="comment">//*******************头文件*******************</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> WIN32</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BIGN <span class="meta-string">"%I64d"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> BIGN <span class="meta-string">"%lld"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">mymax</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span> </span>&#123;<span class="keyword">return</span> x&gt;y?x:y;&#125;</div><div class="line"><span class="function">ll <span class="title">mymin</span><span class="params">(ll x,ll y)</span> </span>&#123;<span class="keyword">return</span> x&lt;y?x:y;&#125;</div><div class="line"><span class="comment">//*******************全局常量*******************</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">1100</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3f3f3f3f</span>;</div><div class="line"><span class="comment">//*******************全局定义*******************</span></div><div class="line"><span class="keyword">struct</span> Nod</div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> t,st,ed;</div><div class="line">&#125;p[<span class="number">11000</span>];</div><div class="line"><span class="keyword">int</span> d[MAXN];</div><div class="line"><span class="keyword">int</span> tot[MAXN];</div><div class="line"><span class="keyword">int</span> arr[MAXN],lst[MAXN];</div><div class="line"><span class="keyword">int</span> g[MAXN];<span class="comment">//最后影响点</span></div><div class="line"><span class="comment">//*******************实现*******************</span></div><div class="line"><span class="keyword">int</span> n,m,k;</div><div class="line"><span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">solve</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="keyword">int</span> best_tot=<span class="number">0</span>,best_i,best_wei;</div><div class="line">	<span class="keyword">int</span> now_k=INF,best_k=INF;</div><div class="line">	<span class="keyword">int</span> wei=n;<span class="comment">//之前的g[]</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=n<span class="number">-1</span>;i&gt;=<span class="number">1</span>;i--)<span class="comment">//i~i+1</span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(arr[i+<span class="number">1</span>]&lt;=lst[i+<span class="number">1</span>])</div><div class="line">		&#123;</div><div class="line">			now_k=arr[i+<span class="number">1</span>];</div><div class="line">			wei=i+<span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> now_k=mymin(now_k,arr[i+<span class="number">1</span>]-lst[i+<span class="number">1</span>]);</div><div class="line">		</div><div class="line">		<span class="keyword">if</span>(d[i]&gt;<span class="number">0</span> and best_tot&lt;tot[wei]-tot[i])</div><div class="line">		&#123;</div><div class="line">			best_tot=tot[wei]-tot[i];</div><div class="line">			best_i=i;</div><div class="line">			best_wei=wei;</div><div class="line">			best_k=mymin(now_k,mymin(d[i],k));</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(best_k==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	</div><div class="line">	k-=best_k;</div><div class="line">	d[best_i]-=best_k;</div><div class="line">	ans-=best_k*best_tot;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=best_i+<span class="number">1</span>;i&lt;=best_wei;i++) arr[i]-=best_k;</div><div class="line">	<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//*******************主函数*******************</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;m,&amp;k);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;d[i]);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;p[i].t,&amp;p[i].st,&amp;p[i].ed);</div><div class="line">		lst[p[i].st]=mymax(lst[p[i].st],p[i].t);</div><div class="line">		tot[p[i].ed]++;</div><div class="line">	&#125;</div><div class="line">	arr[<span class="number">1</span>]=lst[<span class="number">1</span>];</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		tot[i]+=tot[i<span class="number">-1</span>];</div><div class="line">		arr[i]=mymax(arr[i<span class="number">-1</span>],lst[i<span class="number">-1</span>])+d[i<span class="number">-1</span>];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) ans+=arr[ p[i].ed ]-p[i].t;</div><div class="line">	</div><div class="line">	<span class="keyword">while</span>(solve()) ; </div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+      
+    </div>
+
+    
+      
+
+  <div class="popular-posts-header">相关文章推荐</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/4075.html" rel="bookmark">【POJ2057】The Lost House</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/ff50.html" rel="bookmark">【CF11B】【51Nod1615】Jumping Jack</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/f1fd.html" rel="bookmark">【Luogu1081】开车旅行</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/b7e3.html" rel="bookmark">【Luogu1051】篝火晚会</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/6a62.html" rel="bookmark">【Luogu1092】虫食算</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/ead0.html" rel="bookmark">【Luogu1075】靶形数独</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+	
+		<div>
+				<p id="div-border-left-purple">
+			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
+				<span>
+				<b>本文地址：</b><a href="/posts/b81a.html" title="【Luogu1315】观光公交">http://zory.ink/posts/b81a.html</a><br/><b>转载请注明出处，谢谢！</b>
+				</span>
+				</p>
+		</div>
+    
+
+    
+    
+    
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/模拟/" rel="tag"># 模拟</a>
+          
+            <a href="/tags/贪心/" rel="tag"># 贪心</a>
+          
+            <a href="/tags/难度2/" rel="tag"># 难度2</a>
+          
+            <a href="/tags/好题/" rel="tag"># 好题</a>
+          
+            <a href="/tags/坑/" rel="tag"># 坑</a>
+          
+            <a href="/tags/费用流/" rel="tag"># 费用流</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/e6e5.html" rel="next" title="【Luogu1314】聪明的质监员">
+                <i class="fa fa-chevron-left"></i> 【Luogu1314】聪明的质监员
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/745a.html" rel="prev" title="【Luogu1079】Vigenère密码">
+                【Luogu1079】Vigenère密码 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/./avatar.ico"
+                alt="Zory"/>
+            
+              <p class="site-author-name" itemprop="name">Zory</p>
+              <div class="site-description motion-element" itemprop="description">Zory的个人博客</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">603</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">196</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Zory123" title="GitHub &rarr; https://github.com/Zory123" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:1134430323@qq.com" title="E-Mail &rarr; mailto:1134430323@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          ﻿
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Source-and-Judge"><span class="nav-text">Source and Judge</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem"><span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Record"><span class="nav-text">Record</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Analysis1"><span class="nav-text">Analysis1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code1"><span class="nav-text">Code1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Analysis2"><span class="nav-text">Analysis2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code2"><span class="nav-text">Code2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Analysis3"><span class="nav-text">Analysis3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code3"><span class="nav-text">Code3</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zory</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: true,
+    appId: 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+    appKey: 'cJDLxDoNgzq0JJUWQFmpCRdw',
+    placeholder: '对这篇文章有什么看法？大胆地说出来吧',
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '20' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('2');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+                'X-LC-Key': 'cJDLxDoNgzq0JJUWQFmpCRdw',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
