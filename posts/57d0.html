@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="模意义数域，模数p&amp;gt;1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-05-01T14:03:54.000Z">
+<meta property="og:updated_time" content="2020-05-13T07:48:39.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「OI之路」03数学-5模意义数域">
 <meta name="twitter:description" content="模意义数域，模数p&amp;gt;1">
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-05-01 22:03:54" itemprop="dateModified" datetime="2020-05-01T22:03:54+08:00">2020-05-01</time>
+                <time title="修改时间：2020-05-13 15:48:39" itemprop="dateModified" datetime="2020-05-13T15:48:39+08:00">2020-05-13</time>
               </span>
             
           
@@ -655,7 +655,7 @@
 <p>对于更为一般的$Mod=p_1^{k_1} \times p_2^{k_2} … \times p_t^{k_t}$，CRT合并即可</p>
 <p>例题：<a href="1774.html">礼物</a>、<a href="a109.html">「HNOI2017」抛硬币</a></p>
 <h3 id="二次剩余"><a href="#二次剩余" class="headerlink" title="二次剩余"></a>二次剩余</h3><p>个人感觉<a href="https://blog.csdn.net/a_crazy_czy/article/details/51959546" target="_blank" rel="noopener">czy</a>的有一点小瑕疵，可和<a href="https://blog.csdn.net/qq_33229466/article/details/79125057" target="_blank" rel="noopener">begay</a>的一起看</p>
-<p>模p意义下，求 $b^2=a(\%p) $ 为了方便叙述以下内容都在模p意义下<br>然后我们如果要找到一个p在质数下的算法，则只需要考虑a&gt;0且m&gt;2的情况<br>先考虑怎么判断a是否是模p的二次剩余（指a是否存在一个这样的b）</p>
+<p>模p意义下，求 $b^2=a(\%p) $ 为了方便叙述以下内容都在模p意义下<br>然后我们如果要找到一个p在质数下的算法，则只需要考虑a&gt;0且p&gt;2的情况<br>先考虑怎么判断a是否是模p的二次剩余（指a是否存在一个这样的b）</p>
 <p>结论1：a要么不是模p的二次剩余，要么恰有两个根<br>证明：首先 $x \ne -x$ 然后如果存在另一个解y，$(x+y)(x-y)=0 \to y=\pm x$<br>根据结论1，以及每个根只能被覆盖一次，可知$1\to p-1$有一半是二次剩余一半不是</p>
 <p>然后判断是否存在应该这样思考：$bc=a$ 这样的c是唯一的，只是要考虑是否=b<br>欧拉判别法：如果a是二次剩余，则$a^{(p-1)/2}=1$ 否则-1<br>证明：如果是，则$a=b^2,1=b^{p-1}=a^{(p-1)/2}$<br>否则，bc是二元环，将1到p-1分成若干个二元环，则$(p-1)!=a^{(p-1)/2}$<br>根据威尔逊定理可证。这个判别法有助于进一步推导性质。</p>
 <p>方案A：bsgs+原根，$g^A=a,b=g^{A/2}，由欧拉判别法+费马小定理可知A为偶数，O(\sqrt n)$</p>

@@ -103,7 +103,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3810750-b3419498fafeee90.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3810750-7d8bcee0c15f5120.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3810750-15145dff43a157f5.png">
-<meta property="og:updated_time" content="2020-05-13T06:55:19.271Z">
+<meta property="og:updated_time" content="2020-05-13T08:06:26.009Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「OI之路」03数学-6线性代数">
 <meta name="twitter:description" content="线性代数">
@@ -541,7 +541,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-05-13 14:55:19" itemprop="dateModified" datetime="2020-05-13T14:55:19+08:00">2020-05-13</time>
+                <time title="修改时间：2020-05-13 16:06:26" itemprop="dateModified" datetime="2020-05-13T16:06:26+08:00">2020-05-13</time>
               </span>
             
           
@@ -705,6 +705,7 @@
 <p>$P^{-1}AP=diag(\lambda_1,\lambda_2,..\lambda_n),AP=Pdiag(\lambda_1,\lambda_2,..\lambda_n),AP_i=\lambda P_i$ ，即P的每个列向量都是A的特征向量，又因P可逆，故A可对角化的充要条件是有n个线性无关的特征向量（而任意n阶方阵最多n个）。</p>
 <p><strong>特征向量</strong>（没有离开其张成的直线）：$A\vec x=\lambda \vec x，其中\lambda为特征值表示缩放程度，\vec x为特征向量，求\vec x则变形成(A-\lambda E)\vec x=0$</p>
 <p>这是一个齐次线性递推，前面说过条件为$det(A-\lambda E)=0$ ，行列式展开后是一个关于$\lambda$的n次多项式，称为A的<strong>特征多项式</strong>，记作 $f(\lambda)$，然后就是求零点。特殊的，三角矩阵的特征值为主对角线上的n个元素，因为$A-\lambda E$仍是三角矩阵，其行列式为主对角线上乘积</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> Matrix<span class="comment">//求矩阵行列式板子</span></div><div class="line">&#123;</div><div class="line">    ll a[N][N];<span class="keyword">int</span> n;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">Det</span><span class="params">()</span><span class="comment">//去掉最后一行一列，只需消成倒三角</span></div><div class="line">    </span>&#123;</div><div class="line">        ll ret=<span class="number">1</span>;</div><div class="line">        fo(i,<span class="number">1</span>,n<span class="number">-1</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(!a[i][i]) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">            fo(j,i+<span class="number">1</span>,n<span class="number">-1</span>) <span class="keyword">while</span>(a[j][i])<span class="comment">//有的时候给出的模数不是质数，需要辗转相除</span></div><div class="line">            &#123;</div><div class="line">                ll pp=a[i][i]/a[j][i];ret=mm(MOD-ret);</div><div class="line">                fo(t,i,n<span class="number">-1</span>) add(a[i][t],MOD-a[j][t]*pp%MOD);swap(a[i],a[j]);</div><div class="line">            &#125;</div><div class="line">            ret=ret*a[i][i]%MOD;</div><div class="line">        &#125;<span class="keyword">return</span> ret;</div><div class="line">    &#125;</div><div class="line">&#125;A;</div></pre></td></tr></table></figure>
 <hr>
 <h3 id="常系数线性齐次递推"><a href="#常系数线性齐次递推" class="headerlink" title="常系数线性齐次递推"></a>常系数线性齐次递推</h3><p><strong>常系数</strong>：递推系数和下标n无关；<strong>线性</strong>：递推式中每一项的次数都是1；<strong>齐次</strong>：递推式常数项等于0</p>
 <p><strong>Hamilton-Cayley theorem</strong>：$f(A)=0$ （A的特征多项式），并不是什么前沿科技其实，<a href="https://blog.csdn.net/qq_35649707/article/details/78688235" target="_blank" rel="noopener">dzy的证明</a></p>
@@ -722,7 +723,6 @@
 <p>那么对于边带权，称之为<strong>变元矩阵树定理</strong>，D改为相连各边权值和，AA改为边权；</p>
 <p>对于有向图，$AA_{i,j}=(i \to j)$，求外向树的话D为入度（列的和=0），内向树就出度（行的和=0）；点x为根就是$代数余子式A_{x,x}$</p>
 <p>例题：<a href="https://www.luogu.org/problem/P4336" target="_blank" rel="noopener">[SHOI2016]黑暗前的幻想乡</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> Matrix<span class="comment">//板子</span></div><div class="line">&#123;</div><div class="line">    ll a[N][N];<span class="keyword">int</span> n;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">Det</span><span class="params">()</span><span class="comment">//去掉最后一行一列，只需消成倒三角</span></div><div class="line">    </span>&#123;</div><div class="line">        ll ret=<span class="number">1</span>;</div><div class="line">        fo(i,<span class="number">1</span>,n<span class="number">-1</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(!a[i][i]) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">            fo(j,i+<span class="number">1</span>,n<span class="number">-1</span>) <span class="keyword">while</span>(a[j][i])<span class="comment">//有的时候给出的模数不是质数，需要辗转相除</span></div><div class="line">            &#123;</div><div class="line">                ll pp=a[i][i]/a[j][i];ret=mm(MOD-ret);</div><div class="line">                fo(t,i,n<span class="number">-1</span>) add(a[i][t],MOD-a[j][t]*pp%MOD);swap(a[i],a[j]);</div><div class="line">            &#125;</div><div class="line">            ret=ret*a[i][i]%MOD;</div><div class="line">        &#125;<span class="keyword">return</span> ret;</div><div class="line">    &#125;</div><div class="line">&#125;A;</div></pre></td></tr></table></figure>
 <h3 id="best定理"><a href="#best定理" class="headerlink" title="best定理"></a>best定理</h3><p>存在欧拉回路的图，deg=入度=出度，任一点出发外向树个数相同（记为cnt）</p>
 <p>$从st出发的个数\ =  \  cnt*deg_{st}  \  \prod (deg_x-1)!$（如果边的环同构算一种方案，就不要乘$deg_{st}$）</p>
 <p>并不知道有啥用。有人闲着没事出了数据：bzoj3659</p>
@@ -750,7 +750,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/68d9.html" rel="bookmark">「OI之路」03数学-13生成函数</a></div>
+      <div class="popular-posts-title"><a href="/posts/2435.html" rel="bookmark">「OI之路」06字符串-2回文算法</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/posts/0.html" rel="bookmark"></a></div>
       
     </li>
   
@@ -771,6 +778,13 @@
     <li class="popular-posts-item">
       
       
+      <div class="popular-posts-title"><a href="/posts/b399.html" rel="bookmark">「OI之路」04图论-7生成树</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
       <div class="popular-posts-title"><a href="/posts/80c8.html" rel="bookmark">「置顶」套路集锦</a></div>
       
     </li>
@@ -778,7 +792,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/f834.html" rel="bookmark">「OI之路」03数学-11集合幂级数</a></div>
+      <div class="popular-posts-title"><a href="/posts/f6c6.html" rel="bookmark">「OI之路」07其他-4哈夫曼树</a></div>
       
     </li>
   
