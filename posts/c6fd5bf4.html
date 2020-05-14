@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="考完学考做点小水题练练脑子 Sourcecode festival 2016 final">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-01-13T04:36:41.675Z">
+<meta property="og:updated_time" content="2020-05-14T07:13:58.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="code festival 2016 final题解">
 <meta name="twitter:description" content="考完学考做点小水题练练脑子 Sourcecode festival 2016 final">
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">681</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">676</span></a>
 
   </li>
         
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-01-13 12:36:41" itemprop="dateModified" datetime="2020-01-13T12:36:41+08:00">2020-01-13</time>
+                <time title="修改时间：2020-05-14 15:13:58" itemprop="dateModified" datetime="2020-05-14T15:13:58+08:00">2020-05-14</time>
               </span>
             
           
@@ -620,7 +620,7 @@
 </div></div>
 <h2 id="F-Road-of-the-King"><a href="#F-Road-of-the-King" class="headerlink" title="F Road of the King"></a>F Road of the King</h2><p>题意：统计长度为m值域为n的序列c，要求造出$1 \to c_1 \to c_2…c_m$这样一条链，然后把共点的缩起来，得到的图是个强连通图，$n,m \le 300$</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>因为1是一切的根，发现会【出+入】多次，且每个块（每次）独立，当然可能是通过到前面的块来实现入的</p>
+<p>因为1是一切的根，发现会「出+入」多次，且每个块（每次）独立，当然可能是通过到前面的块来实现入的</p>
 <p>记$dp(len,done,now)=序列长度，前面块的大小和，当前块的大小$，注意这里的大小都是去重的</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread(),m=qread();dp[<span class="number">0</span>][<span class="number">1</span>][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">fo(i,<span class="number">0</span>,m<span class="number">-1</span>) fo(done,<span class="number">0</span>,n) fo(siz,<span class="number">0</span>,n-done)</div><div class="line">&#123;</div><div class="line">    ll now=dp[i][done][siz];<span class="keyword">if</span>(!now) <span class="keyword">continue</span>;</div><div class="line">    add(dp[i+<span class="number">1</span>][done+siz][<span class="number">0</span>],now*done%MOD);</div><div class="line">    add(dp[i+<span class="number">1</span>][done][siz],now*siz%MOD);</div><div class="line">    add(dp[i+<span class="number">1</span>][done][siz+<span class="number">1</span>],now*(n-done-siz)%MOD);</div><div class="line">&#125;write(dp[m][n][<span class="number">0</span>]);</div></pre></td></tr></table></figure>
 
@@ -769,7 +769,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">681</span>
+                    <span class="site-state-item-count">676</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1209,7 +1209,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">198</span>
+                    <span class="site-state-item-count">197</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

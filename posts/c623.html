@@ -92,17 +92,17 @@
 
 
 
-  <meta name="description" content="第k优解相关主要是【寻找第k优解的几种方法————俞鼎力】的学习笔记">
+  <meta name="description" content="第k优解相关主要是「寻找第k优解的几种方法————俞鼎力」的学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【OI之路】04图论-11第k优解相关">
+<meta property="og:title" content="「OI之路」04图论-11第k优解相关">
 <meta property="og:url" content="http://zory.ink/posts/c623.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="第k优解相关主要是【寻找第k优解的几种方法————俞鼎力】的学习笔记">
+<meta property="og:description" content="第k优解相关主要是「寻找第k优解的几种方法————俞鼎力」的学习笔记">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-07T03:04:49.215Z">
+<meta property="og:updated_time" content="2020-05-14T07:13:55.516Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【OI之路】04图论-11第k优解相关">
-<meta name="twitter:description" content="第k优解相关主要是【寻找第k优解的几种方法————俞鼎力】的学习笔记">
+<meta name="twitter:title" content="「OI之路」04图论-11第k优解相关">
+<meta name="twitter:description" content="第k优解相关主要是「寻找第k优解的几种方法————俞鼎力」的学习笔记">
 
 
 
@@ -120,7 +120,7 @@
   };
 </script>
 
-  <title>【OI之路】04图论-11第k优解相关 | Zory的个人博客</title>
+  <title>「OI之路」04图论-11第k优解相关 | Zory的个人博客</title>
   
 
 
@@ -249,7 +249,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">681</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">676</span></a>
 
   </li>
         
@@ -495,7 +495,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【OI之路】04图论-11第k优解相关
+          <h2 class="post-title" itemprop="name headline">「OI之路」04图论-11第k优解相关
 
               
             
@@ -536,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-07 11:04:49" itemprop="dateModified" datetime="2019-08-07T11:04:49+08:00">2019-08-07</time>
+                <time title="修改时间：2020-05-14 15:13:55" itemprop="dateModified" datetime="2020-05-14T15:13:55+08:00">2020-05-14</time>
               </span>
             
           
@@ -577,7 +577,7 @@
 
           
           
-            <span id="/posts/c623.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】04图论-11第k优解相关">
+            <span id="/posts/c623.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」04图论-11第k优解相关">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -610,12 +610,12 @@
       
 
       
-        <p>第k优解相关<br>主要是【寻找第k优解的几种方法————俞鼎力】的学习笔记<br><a id="more"></a></p>
+        <p>第k优解相关<br>主要是「寻找第k优解的几种方法————俞鼎力」的学习笔记<br><a id="more"></a></p>
 <h1 id="区间k大的众多拓展"><a href="#区间k大的众多拓展" class="headerlink" title="区间k大的众多拓展"></a>区间k大的众多拓展</h1><p>暂未研究</p>
 <h1 id="k小生成树"><a href="#k小生成树" class="headerlink" title="k小生成树"></a>k小生成树</h1><p>暂未研究</p>
 <h1 id="k短简单路径"><a href="#k短简单路径" class="headerlink" title="k短简单路径"></a>k短简单路径</h1><p>暂未研究</p>
-<h1 id="k短路"><a href="#k短路" class="headerlink" title="k短路"></a>k短路</h1><p>无负权边下<br>对反图上终点建最短路径树<br>然后每个点，存储一个非树边序列<br>因为树上父亲是当前的序列的子集，继承过来，然后加入新的非树边（单个）<br>那么为了减少状态的出度，从最基础的【在后面直接加边】改为【排序后，有序替换】，这个感觉论文的图不错<br>那么每个点，开一个堆去维护，因为有继承的环节，用可持久化左偏树会非常方便，复杂度为严格logn（深度限制）<br>$O(nlogn+mlogm+klogk)$<br>似乎实现有很多边界和细节？<br>暂未达成： $O(nlogn+m+klogk)$ （不过反正连supergaymj都不会……）<br>以后补代码……</p>
-<h1 id="k优多个数列选数"><a href="#k优多个数列选数" class="headerlink" title="k优多个数列选数"></a>k优多个数列选数</h1><p>例题：POJ2442 Sequence，loj6254 最优卡组<a href="https://loj.ac/submission/561501" target="_blank" rel="noopener">code</a><br>核心思想：状态不能也没必要压缩，但我们并不需要存储状态，而是像dp一样存储转移所需要的信息<br>既然我们存储转移信息，我们就不能hash，需要保证选数方案是一棵树，也就是只有一个前继转移<br>做法：klogk<br>先把没有意义的ci=1的数列去除，然后每个数列递减排序并差分，按照【最大-次大】给数列间递增排序<br>三元组(i,j,sum)表示前i行已经处理，第i行至少选择第j个，然后后面的n-i行都选择最大值<br>$(i,j,sum)-&gt;(i,j+1,sum-a[i][j]),(i+1,2,sum-a[i+1][2])$<br>$(i,2,sum)-&gt;(i+1,2,sum+a[i][2]-a[i+1][2])，即这行依然选择最大$</p>
+<h1 id="k短路"><a href="#k短路" class="headerlink" title="k短路"></a>k短路</h1><p>无负权边下<br>对反图上终点建最短路径树<br>然后每个点，存储一个非树边序列<br>因为树上父亲是当前的序列的子集，继承过来，然后加入新的非树边（单个）<br>那么为了减少状态的出度，从最基础的「在后面直接加边」改为「排序后，有序替换」，这个感觉论文的图不错<br>那么每个点，开一个堆去维护，因为有继承的环节，用可持久化左偏树会非常方便，复杂度为严格logn（深度限制）<br>$O(nlogn+mlogm+klogk)$<br>似乎实现有很多边界和细节？<br>暂未达成： $O(nlogn+m+klogk)$ （不过反正连supergaymj都不会……）<br>以后补代码……</p>
+<h1 id="k优多个数列选数"><a href="#k优多个数列选数" class="headerlink" title="k优多个数列选数"></a>k优多个数列选数</h1><p>例题：POJ2442 Sequence，loj6254 最优卡组<a href="https://loj.ac/submission/561501" target="_blank" rel="noopener">code</a><br>核心思想：状态不能也没必要压缩，但我们并不需要存储状态，而是像dp一样存储转移所需要的信息<br>既然我们存储转移信息，我们就不能hash，需要保证选数方案是一棵树，也就是只有一个前继转移<br>做法：klogk<br>先把没有意义的ci=1的数列去除，然后每个数列递减排序并差分，按照「最大-次大」给数列间递增排序<br>三元组(i,j,sum)表示前i行已经处理，第i行至少选择第j个，然后后面的n-i行都选择最大值<br>$(i,j,sum)-&gt;(i,j+1,sum-a[i][j]),(i+1,2,sum-a[i+1][2])$<br>$(i,2,sum)-&gt;(i+1,2,sum+a[i][2]-a[i+1][2])，即这行依然选择最大$</p>
 
       
     </div>
@@ -635,7 +635,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/c623.html" title="【OI之路】04图论-11第k优解相关">http://zory.ink/posts/c623.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/c623.html" title="「OI之路」04图论-11第k优解相关">http://zory.ink/posts/c623.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -664,8 +664,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/d107.html" rel="next" title="【OI之路】04图论-10其他">
-                <i class="fa fa-chevron-left"></i> 【OI之路】04图论-10其他
+              <a href="/posts/d107.html" rel="next" title="「OI之路」04图论-09其他">
+                <i class="fa fa-chevron-left"></i> 「OI之路」04图论-09其他
               </a>
             
           </div>
@@ -753,7 +753,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">681</span>
+                    <span class="site-state-item-count">676</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1193,7 +1193,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">198</span>
+                    <span class="site-state-item-count">197</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

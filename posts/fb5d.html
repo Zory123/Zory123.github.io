@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeNOI2009bzoj1563">
 <meta name="keywords" content="dp,难度2,四边形不等式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【NOI2009】诗人小G">
+<meta property="og:title" content="「NOI2009」诗人小G">
 <meta property="og:url" content="http://zory.ink/posts/fb5d.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeNOI2009bzoj1563">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2020-05-14T07:13:56.398Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【NOI2009】诗人小G">
+<meta name="twitter:title" content="「NOI2009」诗人小G">
 <meta name="twitter:description" content="Source and JudgeNOI2009bzoj1563">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【NOI2009】诗人小G | Zory的个人博客</title>
+  <title>「NOI2009」诗人小G | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">681</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">676</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【NOI2009】诗人小G
+          <h2 class="post-title" itemprop="name headline">「NOI2009」诗人小G
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2020-05-14 15:13:56" itemprop="dateModified" datetime="2020-05-14T15:13:56+08:00">2020-05-14</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/fb5d.html" class="post-meta-item leancloud_visitors" data-flag-title="【NOI2009】诗人小G">
+            <span id="/posts/fb5d.html" class="post-meta-item leancloud_visitors" data-flag-title="「NOI2009」诗人小G">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -614,7 +614,7 @@
         <h2 id="Source-and-Judge"><a href="#Source-and-Judge" class="headerlink" title="Source and Judge"></a>Source and Judge</h2><p>NOI2009<br><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1563" target="_blank" rel="noopener">bzoj1563</a><br><a id="more"></a></p>
 <h2 id="Record"><a href="#Record" class="headerlink" title="Record"></a>Record</h2><p>2h</p>
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<p>题意：<br>多组数据<br>n个句子，分行，每行的代价为<br>【总长度+中间的分割空格数量】与L的差的p次方<br>最小化该代价并输出方案<br>如果超过1e18，输出Too hard to arrange<br>每组数据后输出20个“-”</p>
+<p>题意：<br>多组数据<br>n个句子，分行，每行的代价为<br>「总长度+中间的分割空格数量」与L的差的p次方<br>最小化该代价并输出方案<br>如果超过1e18，输出Too hard to arrange<br>每组数据后输出20个“-”</p>
 <p>发现了bzoj的目前唯一优点：将繁琐而sb的输出方案省略</p>
 <p>本题通过暴力打表验证，发现决策满足单调性<br>（从证明上说就是满足四边形不等式，虽然我并没有去证明hh）<br>然后我一开始就想了一个很sb的问题：既然决策点单调，每次从那里开始往后移动指针不就好了？<br>但对于每个i，其j的验证并不是单调的，虽然确实可以从那里开始，但不得不全部扫一遍<br>如果每次的下一个就是最优解，那么依然是平方级别的</p>
 <p>但反过来考虑，考虑i能够给多少个后面的k作贡献，就好维护多了<br>维护一个数组q，表示最优决策点的位置，<br>此时如果设计一个函数，表示和原本相比是否更优，那么一定是单调的，二分查找即可<br>我在具体实现的时候，分了一下段，稍微加速下~</p>
@@ -634,7 +634,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/5867.html" rel="bookmark">【IOI2000】Post Office</a></div>
+      <div class="popular-posts-title"><a href="/posts/5867.html" rel="bookmark">「IOI2000」Post Office</a></div>
       
     </li>
   
@@ -676,14 +676,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3470.html" rel="bookmark">【CF1012C】Hills</a></div>
+      <div class="popular-posts-title"><a href="/posts/3470.html" rel="bookmark">「CF1012C」Hills</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ce55.html" rel="bookmark">【Poi2011】Lightning Conductor</a></div>
+      <div class="popular-posts-title"><a href="/posts/ce55.html" rel="bookmark">「Poi2011」Lightning Conductor</a></div>
       
     </li>
   
@@ -701,7 +701,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/fb5d.html" title="【NOI2009】诗人小G">http://zory.ink/posts/fb5d.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/fb5d.html" title="「NOI2009」诗人小G">http://zory.ink/posts/fb5d.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -753,8 +753,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/ce55.html" rel="prev" title="【Poi2011】Lightning Conductor">
-                【Poi2011】Lightning Conductor <i class="fa fa-chevron-right"></i>
+              <a href="/posts/ce55.html" rel="prev" title="「Poi2011」Lightning Conductor">
+                「Poi2011」Lightning Conductor <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -832,7 +832,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">681</span>
+                    <span class="site-state-item-count">676</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1272,7 +1272,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">198</span>
+                    <span class="site-state-item-count">197</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

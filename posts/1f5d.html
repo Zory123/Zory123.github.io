@@ -100,7 +100,7 @@
 <meta property="og:description" content="OZY退役邀请赛">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.ink/images/套题/OZY的ACM.jpg">
-<meta property="og:updated_time" content="2019-10-23T14:13:38.521Z">
+<meta property="og:updated_time" content="2020-05-14T07:13:58.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OZY退役邀请赛">
 <meta name="twitter:description" content="OZY退役邀请赛">
@@ -251,7 +251,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">681</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">676</span></a>
 
   </li>
         
@@ -538,7 +538,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-23 22:13:38" itemprop="dateModified" datetime="2019-10-23T22:13:38+08:00">2019-10-23</time>
+                <time title="修改时间：2020-05-14 15:13:58" itemprop="dateModified" datetime="2020-05-14T15:13:58+08:00">2020-05-14</time>
               </span>
             
           
@@ -624,11 +624,11 @@
 <p>zsy的做法：正确性比较显然<br>$$<br>考虑对每个子集统计贡献，设大小为i的子集贡献系数为bi（显然只跟集合大小有关） \\<br>\sum_{i=1}^n C_n^ib_i(P^{0i}+P^{1i}…)=\sum_{i=1}^n \frac{C_n^i b_i}{1-P^i} \\<br>a_0=0,a_n=\sum_{i=0}^n C_n^ib_i,b_n=\sum_{i=0}^n(-1)^{n-i}C_n^ia_i，NTT求b，O(nlogn)<br>$$</p>
 <p>出题人做法：</p>
 <p>先说怎么做，就是把ai看做连续点值求这个<a href="8c82.html\#下降幂多项式">多项式的下降幂</a></p>
-<h3 id="loj2417-bzoj4576-「USACO-2016-US-Open-Platinum」262144"><a href="#loj2417-bzoj4576-「USACO-2016-US-Open-Platinum」262144" class="headerlink" title="loj2417 bzoj4576 「USACO 2016 US Open, Platinum」262144"></a>loj2417 bzoj4576 「USACO 2016 US Open, Platinum」262144</h3><p>我的做法：<br>从小到大考虑，孤立的点会变成分界点，但分割这东西我不会怎么写成函数，只能硬着头皮写了1h+，过的时候真的成就感满满（因为担心做法假）<br>大概就是维护一段区间，然后每次扫同一个值的所有东西，然后向上合并，然后如果这一段长度是奇数，在中间建立分割点，然后因为题目只需要求最大值是什么，所以相互独立进行两组实验，告诉左边【我舍弃了最右边那个】，告诉右边【我舍弃了最左边那个】（xgc的优秀idea）<br>时间复杂度为 $O(n值域)$ 这个复杂度和正解一样，但不满，所以loj登顶了，<a href="https://loj.ac/submission/561925" target="_blank" rel="noopener">code</a>；然后发现也有<a href="https://blog.csdn.net/DOFYPXY/article/details/78300943" target="_blank" rel="noopener">人</a>和我一样的做法的<br>正解：<a href="https://loj.ac/submission/542196" target="_blank" rel="noopener">code</a> 非常好写……</p>
+<h3 id="loj2417-bzoj4576-「USACO-2016-US-Open-Platinum」262144"><a href="#loj2417-bzoj4576-「USACO-2016-US-Open-Platinum」262144" class="headerlink" title="loj2417 bzoj4576 「USACO 2016 US Open, Platinum」262144"></a>loj2417 bzoj4576 「USACO 2016 US Open, Platinum」262144</h3><p>我的做法：<br>从小到大考虑，孤立的点会变成分界点，但分割这东西我不会怎么写成函数，只能硬着头皮写了1h+，过的时候真的成就感满满（因为担心做法假）<br>大概就是维护一段区间，然后每次扫同一个值的所有东西，然后向上合并，然后如果这一段长度是奇数，在中间建立分割点，然后因为题目只需要求最大值是什么，所以相互独立进行两组实验，告诉左边「我舍弃了最右边那个」，告诉右边「我舍弃了最左边那个」（xgc的优秀idea）<br>时间复杂度为 $O(n值域)$ 这个复杂度和正解一样，但不满，所以loj登顶了，<a href="https://loj.ac/submission/561925" target="_blank" rel="noopener">code</a>；然后发现也有<a href="https://blog.csdn.net/DOFYPXY/article/details/78300943" target="_blank" rel="noopener">人</a>和我一样的做法的<br>正解：<a href="https://loj.ac/submission/542196" target="_blank" rel="noopener">code</a> 非常好写……</p>
 <h3 id="LOJ3014-「JOI-2019-Final」独特的城市"><a href="#LOJ3014-「JOI-2019-Final」独特的城市" class="headerlink" title="LOJ3014 「JOI 2019 Final」独特的城市"></a>LOJ3014 「JOI 2019 Final」独特的城市</h3><p>设直径端点为S和T，按照与谁近划分两点的地盘，则节点x的独特城市一定在x到管理x的端点另一个的路径上</p>
 <p>那么我们分别以S和T为根建树，然后最后用所属端点来决定输出哪个答案</p>
 <p>如果用dfs遍历节点并用栈保存到根路径上所有当前合法的点，容易发现到其孩子的话最多增加一个节点x本身</p>
-<p>那么我们现在得到一个暴力做法：依次遍历每个孩子，然后将栈内到x距离&lt;=【其他孩子能贡献最长到x的链】的节点删除并加入x，回溯的时候还原；等所有节点都处理完了，再求出x的答案（用x的最长链更新后）</p>
+<p>那么我们现在得到一个暴力做法：依次遍历每个孩子，然后将栈内到x距离&lt;=「其他孩子能贡献最长到x的链」的节点删除并加入x，回溯的时候还原；等所有节点都处理完了，再求出x的答案（用x的最长链更新后）</p>
 <p>发现这样复杂度无法保证，但先别急着换做法；注意到如果那个更新的阈值递减就不用还原了，也就是说我们先用次长链更新，然后访问长孩子，再用最长链更新访问其他孩子，这样就没有还原了，于是就能保证复杂度，即每个点加入度数次，复杂度为线性；<a href="https://loj.ac/submission/562576" target="_blank" rel="noopener">code</a></p>
 <h3 id="小学生网格题"><a href="#小学生网格题" class="headerlink" title="小学生网格题"></a>小学生网格题</h3><p><a href="https://www.luogu.org/problem/U79914?contestId=18869" target="_blank" rel="noopener">题目</a><br>题意：<br>n*m四连通的网格，一个格子被控制满足下面两个条件之一:<br>1：这个格子被标记<br>2：这个格子相邻的格子都被标记<br>给出每个格子控制的收益和标记的代价，求最大收益-代价<br>1≤n,m≤100</p>
 <p>规模、值域很小，费用流好像不是很可行，考虑最小割</p>
@@ -781,7 +781,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">681</span>
+                    <span class="site-state-item-count">676</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1221,7 +1221,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">198</span>
+                    <span class="site-state-item-count">197</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

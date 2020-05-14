@@ -95,14 +95,14 @@
   <meta name="description" content="Source and JudgeCF840C">
 <meta name="keywords" content="dp,难度2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【CF840C】On the Bench">
+<meta property="og:title" content="「CF840C」On the Bench">
 <meta property="og:url" content="http://zory.ink/posts/3ed7.html">
 <meta property="og:site_name" content="Zory的个人博客">
 <meta property="og:description" content="Source and JudgeCF840C">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-12T06:33:28.000Z">
+<meta property="og:updated_time" content="2020-05-14T07:13:56.247Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【CF840C】On the Bench">
+<meta name="twitter:title" content="「CF840C」On the Bench">
 <meta name="twitter:description" content="Source and JudgeCF840C">
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>【CF840C】On the Bench | Zory的个人博客</title>
+  <title>「CF840C」On the Bench | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">681</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">676</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">【CF840C】On the Bench
+          <h2 class="post-title" itemprop="name headline">「CF840C」On the Bench
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-12 14:33:28" itemprop="dateModified" datetime="2019-04-12T14:33:28+08:00">2019-04-12</time>
+                <time title="修改时间：2020-05-14 15:13:56" itemprop="dateModified" datetime="2020-05-14T15:13:56+08:00">2020-05-14</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/3ed7.html" class="post-meta-item leancloud_visitors" data-flag-title="【CF840C】On the Bench">
+            <span id="/posts/3ed7.html" class="post-meta-item leancloud_visitors" data-flag-title="「CF840C」On the Bench">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -617,7 +617,7 @@
 <p>有点难，不过也不算神仙题，大概省选t2难度？<br>有综合性，状态感觉也挺难想到的</p>
 <p>最难的一步：转化题意<br>这个完全平方数很恶心，但注意到如果每个数的标准分解形式，质因数的次幂膜二后<br>问题变成，不能将两个相同的数放在一起</p>
 <p>然后就感觉排列这东西很难搞，唯一会的姿势这里也不能用<br>但如果脱离排列的形式，考虑将数字放入的方案数，就会好搞很多</p>
-<p>小套路：将同值的合并处理，看做一组，设数量为num[i]<br>依次考虑每组，顺序任意，设 $f(i,tt)$ 表示【前i组，有tt个相邻关系是非法的】的计数<br>ps：感觉这个第二维非常关键，是【表达一个状态真正最需要的唯一关键信息】</p>
+<p>小套路：将同值的合并处理，看做一组，设数量为num[i]<br>依次考虑每组，顺序任意，设 $f(i,tt)$ 表示「前i组，有tt个相邻关系是非法的」的计数<br>ps：感觉这个第二维非常关键，是「表达一个状态真正最需要的唯一关键信息」</p>
 <p>同组的值相同，但在原题中是互不相同的数，所以乘以排列数 $num[i]!$<br>枚举将当前组分成t个，插入到空隙中，那么新产生了 $b=num[i]-1-(t-1)=num[i]-t$ 个非法的相邻量<br>分组方案： $C_{num[i]-1}^{t-1}$<br>枚举将之前a个相邻非法位置变成合法，那么非法数量变成 $tt-a+b$<br>方案数为 $c_{tt}^{a} \times C_{sum+1-tt}^{t-1}$ ，sum为前面的num的和</p>
 <p>综上所述：<br>$f(i,tt-a+b)+=f(i-1,tt) \times num[i]! \times C_{num[i]-1}^{t-1} \times C_{tt}^{a} \times C_{sum+1-tt}^{t-a}$</p>
 <p>看起来是四层枚举，但由于 $t \leq num[i],\sum num[i]=n$<br>所以实际复杂度是 $O(n^3)$</p>
@@ -679,14 +679,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/3470.html" rel="bookmark">【CF1012C】Hills</a></div>
+      <div class="popular-posts-title"><a href="/posts/3470.html" rel="bookmark">「CF1012C」Hills</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/posts/ce55.html" rel="bookmark">【Poi2011】Lightning Conductor</a></div>
+      <div class="popular-posts-title"><a href="/posts/ce55.html" rel="bookmark">「Poi2011」Lightning Conductor</a></div>
       
     </li>
   
@@ -704,7 +704,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/3ed7.html" title="【CF840C】On the Bench">http://zory.ink/posts/3ed7.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/3ed7.html" title="「CF840C」On the Bench">http://zory.ink/posts/3ed7.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -744,8 +744,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/3470.html" rel="next" title="【CF1012C】Hills">
-                <i class="fa fa-chevron-left"></i> 【CF1012C】Hills
+              <a href="/posts/3470.html" rel="next" title="「CF1012C」Hills">
+                <i class="fa fa-chevron-left"></i> 「CF1012C」Hills
               </a>
             
           </div>
@@ -833,7 +833,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">681</span>
+                    <span class="site-state-item-count">676</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1273,7 +1273,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">198</span>
+                    <span class="site-state-item-count">197</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
