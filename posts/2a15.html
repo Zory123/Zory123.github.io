@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="PKUWC2019菜鸡博主去不了ccf WC目前暂时没有题解，等loj有题面先吧……">
+  <meta name="description" content="PKUWC2019菜鸡博主去不了ccf WC目前题解都是口胡的，等loj有题面先吧……（似乎不会有了？如果做法假了请务必指出） upd：好羞耻啊把以前的游记删了">
 <meta name="keywords" content="赛事,PKUWC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PKUWC2019 游记与题解">
+<meta property="og:title" content="PKUWC2019题解">
 <meta property="og:url" content="http://zory.ink/posts/2a15.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="PKUWC2019菜鸡博主去不了ccf WC目前暂时没有题解，等loj有题面先吧……">
+<meta property="og:description" content="PKUWC2019菜鸡博主去不了ccf WC目前题解都是口胡的，等loj有题面先吧……（似乎不会有了？如果做法假了请务必指出） upd：好羞耻啊把以前的游记删了">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-16T13:07:23.999Z">
+<meta property="og:updated_time" content="2019-12-02T13:00:24.096Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PKUWC2019 游记与题解">
-<meta name="twitter:description" content="PKUWC2019菜鸡博主去不了ccf WC目前暂时没有题解，等loj有题面先吧……">
+<meta name="twitter:title" content="PKUWC2019题解">
+<meta name="twitter:description" content="PKUWC2019菜鸡博主去不了ccf WC目前题解都是口胡的，等loj有题面先吧……（似乎不会有了？如果做法假了请务必指出） upd：好羞耻啊把以前的游记删了">
 
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>PKUWC2019 游记与题解 | Zory的个人博客</title>
+  <title>PKUWC2019题解 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">681</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">PKUWC2019 游记与题解
+          <h2 class="post-title" itemprop="name headline">PKUWC2019题解
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-16 21:07:23" itemprop="dateModified" datetime="2019-10-16T21:07:23+08:00">2019-10-16</time>
+                <time title="修改时间：2019-12-02 21:00:24" itemprop="dateModified" datetime="2019-12-02T21:00:24+08:00">2019-12-02</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/2a15.html" class="post-meta-item leancloud_visitors" data-flag-title="PKUWC2019 游记与题解">
+            <span id="/posts/2a15.html" class="post-meta-item leancloud_visitors" data-flag-title="PKUWC2019题解">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -611,21 +611,29 @@
       
 
       
-        <p>PKUWC2019<br>菜鸡博主去不了ccf WC<br>目前暂时没有题解，等loj有题面先吧……<br><a id="more"></a></p>
-<p>其他人的游记：<br><a href="https://www.cnblogs.com/bztMinamoto/p/10293697.html" target="_blank" rel="noopener">bztMinamoto</a><br><a href="https://www.cnblogs.com/xzz_233/p/10292983.html" target="_blank" rel="noopener">xzz</a></p>
-<h1 id="day1"><a href="#day1" class="headerlink" title="day1"></a>day1</h1><p>自闭了，被广大附中的hz大爷d飞了，才人家的一半……</p>
-<p>t1：n个节点m条边，求边集的子集下每个图的合法拓扑序之和，n小于20<br>题解：<br>考虑统计贡献相同的排列出现次数<br>设$f(S,tot)$表示当前用了S这些点，然后已知有tot条给出的边已知被满足，那么贡献次数就是$2^{tot}$<br>然后直接dp就是$2^n n^3$的<br>先考虑优化空间，按照1的数量滚动数组即可<br>优化时间，灵光一闪发现可以只处理到选n/2个1，大概210000个，dp就很快乐<br>然后关键是合并，一开始没有算复杂度就写写写，到这里以为要枚举tot1和tot2，心态就崩了，以为这个做法凉凉了，又忘记算一算<br>后来因为有点不甘心又想了想，发现可以分别求和然后乘法原理起来<br>然后卡卡常就过了，可能不是最优秀的做法，花了2.5h，同时间大把人已经切了两道题了<br>upd：不难发现我sb了，状态的第二维是没有必要的，因为2的次幂不像阶乘那样不能分解</p>
-<p>t2：n个点的树，每个节点有颜色，定义点集的虚树为内部路径的并<br>求多少个颜色的集合，满足这些颜色的虚树的并非空<br>n小于1e5<br>题解：虚树的并还是树，然后贡献到树的深度最浅的节点上<br>然后就不会了……大概是set启发式合并+生成函数+fft什么的</p>
-<p>upd：口胡</p>
-<p>注意到树的并也是树，既然是树的计数考虑 点-边，以点为例</p>
-<p>考虑求出每个点被多少棵虚树包含（$col_x$），这个可以差分，用些小技巧让虚树上每个点的系数=1</p>
-<p>那么 $ans_i=\sum_x C_{col_x}^i=\frac{1}{i!}\sum_{j=i}^n \frac{tot_j j!}{(j-i)!}$  这个翻转一下ntt优化即可</p>
-<p>t3：地主斗，给定至少包含的牌，然后判多少种方案平手【无法在某次询问中一个能出牌另一个不行】，规则很繁琐<br>题解：不会</p>
-<h1 id="day2"><a href="#day2" class="headerlink" title="day2"></a>day2</h1><p>上午是数学，啥都不会</p>
-<p>下午继续上机<br>t1：给出3个长度为100值域在ll内的数组a,l,r，求严格递增序列b，满足bi在[li,ri]内，而且是ai的超集<br>经历：开场就写了个22的暴力，然后就不会了……<br>题解：</p>
-<p>t2：对于有向图G求无向图G’，用简单环对应点，然后有公共边就连接，求其连通块数，n在2e5内<br>经历：没时间写暴力了，爆0<br>题解：</p>
-<p>t3：给出2e5个点，然后2e5次给定询问点，然后以原本的点为圆心，过询问点作圆，求最多去掉多少个圆后总面积不变<br>经历：杠了一场，发现有趣的东西，理论上70分但过不去，调了很久搞不出来，把凸包去掉就拿了47<br>题解：</p>
-<p>我校两位神仙又让分了……</p>
+        <p>PKUWC2019<br>菜鸡博主去不了ccf WC<br>目前题解都是口胡的，等loj有题面先吧……（似乎不会有了？如果做法假了请务必指出）</p>
+<p>upd：好羞耻啊把以前的游记删了</p>
+<a id="more"></a>
+<h3 id="D1T1-拓扑序计数"><a href="#D1T1-拓扑序计数" class="headerlink" title="D1T1 拓扑序计数"></a>D1T1 拓扑序计数</h3><p>题意：n点m边有向图，求边集的子集下每个图的合法拓扑序之和，$n \le 20$</p>
+<p>一个合法拓扑序的权值为$2^{m-不能有边数}$，设$f(S)=带权方案数$，通过/2来转移就好了，$O(n2^n)$</p>
+<h3 id="D1T2-你与虚树的故事"><a href="#D1T2-你与虚树的故事" class="headerlink" title="D1T2 你与虚树的故事"></a>D1T2 你与虚树的故事</h3><p>题意：$n \le 1e5$点树，给个点有颜色，定义点集的虚树为最小的包含所有点的子图，$\forall i求颜色集合大小恰为i，虚树交非空$</p>
+<p>考虑单个i怎么求，不可容斥考虑唯一计数，注意到树交还是树，而树的根是唯一的，设$f_x=根恰为x，g_x=根为x祖先$</p>
+<p>则$ans_i=\sum f_x=\sum (g_x-g_{fa})=\sum g_x(1-son_x)$，而显然$g_x=这个点在交上=C_{T_x}^i，其中T_x=子树内外都有的颜色数$，可以建出虚树后树上差分线性求。把式子化开就是$ans_i*i!=\sum (1-son_x)*(T_x)!*\frac{1}{(T_x-i)!}$，直接FFT优化即可，$O(nlogn)$</p>
+<h3 id="D2T1-递增序列"><a href="#D2T1-递增序列" class="headerlink" title="D2T1 递增序列"></a>D2T1 递增序列</h3><p>题意：统计多少个长度为n的严格递增序列b，满足$b_i \in [L_i,R_i]且a_i \subseteq b_i,其中l,r,a \in [0,2^{60}),n \le 100$</p>
+<p>首先如果没有a的限制，那么就是<a href="5f55.html">apio2016划艇</a></p>
+<p>二进制题肯定优先想怎么拆位做，比较大小也很自然会想从高到低位做，计数没法直接算也很自然地考虑dp</p>
+<p>注意到递增是唯一将不同位置沟通起来的限制，那么$dp(i,l,r)$表示做到第i位且目前l到r是一样的，那么就是在前面填一段0在后面填一段1然后两边就独立了，边界i=-1的时候必须满足l=r即可</p>
+<p>然后a的限制其实就等价于限制了划分点必须在一个区间，仅此而已</p>
+<p>只剩下值域区间限制了，注意到我们只关心有哪些元素在前面是顶格的（类似数位dp），开一个维表示前面具体是什么，但如果在区间内都没出现过，那就是不用管的，这样的状态是$ \le 2(r-l+1)+1$个的，小常数$O(60n^4)$，因为限制的存在要用的状态可能不多，听说可过</p>
+<p>其实把值域下界、值域上界独立处理成递增的，那么那个维就变成$[0/1][0/1]$表示是否是$R_l及L_r$了，$O(60n^3)$</p>
+<h3 id="D2T2-环图"><a href="#D2T2-环图" class="headerlink" title="D2T2 环图"></a>D2T2 环图</h3><p>题意：给一个n点$m \le 2e5$边有向图，对其每个简单环在新图中建一个点，新图中的无向边(x,y)存在当且仅当环x和环y有公共边​，问新图联通块个数</p>
+<p>应该挺多人都是猜个结论感受一下挺对就写了过了的</p>
+<p>注意到两个环有公共边的话一定在同一个SCC中；自环、同向的重边是没有意义的</p>
+<p>考虑在一个SCC中两个环，没有公共边的情况是怎样的？瞎jb画点情况发现似乎边的方向性不再重要了</p>
+<p>注意到两个环有连边的充要条件可以看做两个环的基图是点双，于是就是在SCC内看做无向边求v-DCC数，$O(n)$</p>
+<h3 id="D2T3-防御塔"><a href="#D2T3-防御塔" class="headerlink" title="D2T3 防御塔"></a>D2T3 防御塔</h3><p>题意：给出n个圆心，m次独立询问点A，n个圆心过A做圆，问n个圆心的最大子集使得圆的并不变，$n,m \le 1e5$</p>
+<p>杠了一场，发现有趣的东西，理论上70分但过不去，调了很久搞不出来，把凸包去掉就拿了47</p>
+<p>这题就不back了，因为当时为啥有问题至今不知道，希望有朝一日能把数据公布</p>
 
       
     </div>
@@ -706,7 +714,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/2a15.html" title="PKUWC2019 游记与题解">http://zory.ink/posts/2a15.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/2a15.html" title="PKUWC2019题解">http://zory.ink/posts/2a15.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -746,8 +754,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/50cd.html" rel="next" title="GXOI/GZOI2019">
-                <i class="fa fa-chevron-left"></i> GXOI/GZOI2019
+              <a href="/posts/be4c.html" rel="next" title="PKUWC2018题解">
+                <i class="fa fa-chevron-left"></i> PKUWC2018题解
               </a>
             
           </div>
@@ -756,8 +764,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/2a15.html" rel="prev" title="PKUWC2019题解">
-                PKUWC2019题解 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/ee60.html" rel="prev" title="luogu4707 重返现世">
+                luogu4707 重返现世 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -835,7 +843,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">688</span>
+                    <span class="site-state-item-count">681</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1338,7 +1346,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#day1"><span class="nav-text">day1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#day2"><span class="nav-text">day2</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#D1T1-拓扑序计数"><span class="nav-text">D1T1 拓扑序计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D1T2-你与虚树的故事"><span class="nav-text">D1T2 你与虚树的故事</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D2T1-递增序列"><span class="nav-text">D2T1 递增序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D2T2-环图"><span class="nav-text">D2T2 环图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D2T3-防御塔"><span class="nav-text">D2T3 防御塔</span></a></li></ol></div>
             
 
           </div>

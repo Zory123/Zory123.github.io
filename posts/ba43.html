@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="模拟与讨论大合集（仅散题） 因为经常碰到模拟、讨论就做很久，丢几道题在这里">
+  <meta name="description" content="模拟与讨论大合集（仅散题） 因为经常碰到模拟、讨论就做很久，丢几道题在这里 但似乎也没啥好说的，就放题意和代码好了">
 <meta name="keywords" content="模拟">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「OI之路」模拟与讨论大合集">
+<meta property="og:title" content="【OI之路】模拟与讨论大合集">
 <meta property="og:url" content="http://zory.ink/posts/ba43.html">
 <meta property="og:site_name" content="Zory的个人博客">
-<meta property="og:description" content="模拟与讨论大合集（仅散题） 因为经常碰到模拟、讨论就做很久，丢几道题在这里">
+<meta property="og:description" content="模拟与讨论大合集（仅散题） 因为经常碰到模拟、讨论就做很久，丢几道题在这里 但似乎也没啥好说的，就放题意和代码好了">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-02T13:58:36.000Z">
+<meta property="og:updated_time" content="2019-09-22T00:39:10.063Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="「OI之路」模拟与讨论大合集">
-<meta name="twitter:description" content="模拟与讨论大合集（仅散题） 因为经常碰到模拟、讨论就做很久，丢几道题在这里">
+<meta name="twitter:title" content="【OI之路】模拟与讨论大合集">
+<meta name="twitter:description" content="模拟与讨论大合集（仅散题） 因为经常碰到模拟、讨论就做很久，丢几道题在这里 但似乎也没啥好说的，就放题意和代码好了">
 
 
 
@@ -121,7 +121,7 @@
   };
 </script>
 
-  <title>「OI之路」模拟与讨论大合集 | Zory的个人博客</title>
+  <title>【OI之路】模拟与讨论大合集 | Zory的个人博客</title>
   
 
 
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">688</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">681</span></a>
 
   </li>
         
@@ -496,7 +496,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">「OI之路」模拟与讨论大合集
+          <h2 class="post-title" itemprop="name headline">【OI之路】模拟与讨论大合集
 
               
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-02-02 21:58:36" itemprop="dateModified" datetime="2020-02-02T21:58:36+08:00">2020-02-02</time>
+                <time title="修改时间：2019-09-22 08:39:10" itemprop="dateModified" datetime="2019-09-22T08:39:10+08:00">2019-09-22</time>
               </span>
             
           
@@ -578,7 +578,7 @@
 
           
           
-            <span id="/posts/ba43.html" class="post-meta-item leancloud_visitors" data-flag-title="「OI之路」模拟与讨论大合集">
+            <span id="/posts/ba43.html" class="post-meta-item leancloud_visitors" data-flag-title="【OI之路】模拟与讨论大合集">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -613,19 +613,10 @@
       
         <p>模拟与讨论大合集（仅散题）</p>
 <p>因为经常碰到模拟、讨论就做很久，丢几道题在这里</p>
+<p>但似乎也没啥好说的，就放题意和代码好了</p>
 <a id="more"></a>
-<h1 id="Think-twice-code-once"><a href="#Think-twice-code-once" class="headerlink" title="Think twice, code once"></a>Think twice, code once</h1><h3 id="CF878B-Teams-Formation"><a href="#CF878B-Teams-Formation" class="headerlink" title="CF878B Teams Formation"></a>CF878B Teams Formation</h3><p><strong>题意</strong>：一个长度n的串复制m次，去掉连续相同的每k个，求最后长度</p>
-<p>$n \le1e5,m ,k\le 1e9$，<a href="https://codeforces.com/contest/878/submission/60341753" target="_blank" rel="noopener">code</a>，不知道说什么……</p>
-<h3 id="CF1239C-Queue-in-the-Train"><a href="#CF1239C-Queue-in-the-Train" class="headerlink" title="CF1239C Queue in the Train"></a><a href="https://codeforces.com/problemset/problem/1239/C" target="_blank" rel="noopener">CF1239C Queue in the Train</a></h3><p><strong>题意</strong>：$n \le 1e5$个从左到右一行的人，每个人在$t_i$时开始渴，每一秒如果有先让打完水的人坐回座位，找到那个渴了而且前面的人都在座位上的家伙，如果有就让他前往打水处。一个人打水需要花P的时间，此时后来的打水者排在他后面。模拟这个过程，输出每个人什么时候打完水</p>
-<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
-<ol>
-<li>注意到如果一个人在等待打水，下一个来的人不可能在他后面，所以打水处的编号是递减的，记为队列que</li>
-<li>注意到如果某人前往打水后，只要渴的人集合没变，其他人都要坐着，所以只需要在有人回来、有新人渴的时候维护，此时编号最小那个能动只需$id&lt;que尾$</li>
-</ol>
-<p>那么用pll堆记录当前不渴的人sit，用int堆记录当前渴的人wt，变量int表示当前时间。细节较多，建议谨慎思考</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">deque</span>&lt;<span class="keyword">int</span>&gt; que;</div><div class="line">priority_queue&lt; pll,vc&lt;pll&gt;,greater&lt;pll&gt; &gt; sit;</div><div class="line">priority_queue&lt; <span class="keyword">int</span>,vc&lt;<span class="keyword">int</span>&gt;,greater&lt;<span class="keyword">int</span>&gt; &gt; wt;</div><div class="line">ll ans[N];<span class="function"><span class="keyword">void</span> <span class="title">upd</span><span class="params">()</span></span>&#123; <span class="keyword">if</span>(sz(wt)) <span class="keyword">if</span>(!sz(que) or wt.top()&lt;que.back()) que.push_back(wt.top()),wt.pop(); &#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n=qread();ll P=qread();fo(i,<span class="number">1</span>,n) sit.push(&#123;qread(),i&#125;);ll time=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(sz(que))</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">int</span> id=que.front();time+=P,ans[id]=time;</div><div class="line">            <span class="keyword">while</span>(sz(sit) and sit.top().FR&lt;time) wt.push(sit.top().SE),sit.pop(),upd();</div><div class="line">            que.pop_front();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(sz(wt)) ;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(!sz(wt) and sz(sit)) time=sit.top().FR;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">while</span>(sz(sit) and sit.top().FR&lt;=time) wt.push(sit.top().SE),sit.pop(),upd();upd();</div><div class="line">    &#125;fo(i,<span class="number">1</span>,n) write1(ans[i]);</div><div class="line">&#125;</div><div class="line"><span class="comment">/*</div><div class="line">think twice, code once</div><div class="line">4 11</div><div class="line">13 35 3 4 </div><div class="line"></div><div class="line">5 14</div><div class="line">20 66 16 11 87 </div><div class="line">*/</span></div></pre></td></tr></table></figure>
-
-</div></div>
+<h3 id="CF878B-Teams-Formation"><a href="#CF878B-Teams-Formation" class="headerlink" title="CF878B Teams Formation"></a>CF878B Teams Formation</h3><p>一个长度n的串复制m次，去掉连续相同的每k个，求最后长度</p>
+<p>$n \le1e5,m ,k\le 1e9$，<a href="https://codeforces.com/contest/878/submission/60341753" target="_blank" rel="noopener">code</a></p>
 
       
     </div>
@@ -706,7 +697,7 @@
 				<p id="div-border-left-purple">
 			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 				<span>
-				<b>本文地址：</b><a href="/posts/ba43.html" title="「OI之路」模拟与讨论大合集">http://zory.ink/posts/ba43.html</a><br/><b>转载请注明出处，谢谢！</b>
+				<b>本文地址：</b><a href="/posts/ba43.html" title="【OI之路】模拟与讨论大合集">http://zory.ink/posts/ba43.html</a><br/><b>转载请注明出处，谢谢！</b>
 				</span>
 				</p>
 		</div>
@@ -750,8 +741,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/2d0202e9.html" rel="prev" title="「OI之路」贪心">
-                「OI之路」贪心 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/ba43.html" rel="prev" title="「OI之路」模拟与讨论大合集">
+                「OI之路」模拟与讨论大合集 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -829,7 +820,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">688</span>
+                    <span class="site-state-item-count">681</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1332,7 +1323,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Think-twice-code-once"><span class="nav-text">Think twice, code once</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CF878B-Teams-Formation"><span class="nav-text">CF878B Teams Formation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1239C-Queue-in-the-Train"><span class="nav-text">CF1239C Queue in the Train</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CF878B-Teams-Formation"><span class="nav-text">CF878B Teams Formation</span></a></li></ol></div>
             
 
           </div>
