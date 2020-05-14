@@ -154,7 +154,7 @@ template {
 body {
   position: relative;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-size: 8px;
   line-height: 2;
   color: #555;
   background: #fff;
@@ -166,7 +166,7 @@ body {
 }
 @media (min-width: 1200px) {
   body {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 h1,
@@ -528,11 +528,11 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: 700px;
+  width: 900px;
 }
 @media (min-width: 1200px) {
   .container .header-inner {
-    width: 800px;
+    width: 950px;
   }
 }
 @media (min-width: 1600px) {
@@ -542,11 +542,11 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: 700px;
+  width: 900px;
 }
 @media (min-width: 1200px) {
   .container .main-inner {
-    width: 800px;
+    width: 950px;
   }
 }
 @media (min-width: 1600px) {
@@ -560,11 +560,11 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 0px auto;
-  width: 700px;
+  width: 900px;
 }
 @media (min-width: 1200px) {
   .container .footer-inner {
-    width: 800px;
+    width: 950px;
   }
 }
 @media (min-width: 1600px) {
@@ -1311,7 +1311,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: -20px auto 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 8px;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -1840,7 +1840,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff4ff;
+  background: #577c09;
 }
 .feed-link,
 .chat {
@@ -2216,7 +2216,7 @@ ul.popular-posts .popular-posts-item {
 }
 ul.popular-posts .popular-posts-item .popular-posts-title {
   font-weight: normal;
-  font-size: 14px;
+  font-size: 8px;
   margin: 0;
   line-height: 2.4;
 }
@@ -2466,7 +2466,7 @@ ul.breadcrumb {
   margin: 1em 0;
   padding: 0 2em;
   text-align: center;
-  font-size: 12px;
+  font-size: 9px;
 }
 ul.breadcrumb li {
   display: inline;
@@ -2730,7 +2730,7 @@ hr {
 }
 @media (max-width: 767px) {
   .posts-expand .post-body {
-    font-size: 14px;
+    font-size: 8px;
   }
 }
 .posts-expand .post-body img {
@@ -2756,7 +2756,7 @@ hr {
 }
 .post-button a {
   padding: 0;
-  font-size: 14px;
+  font-size: 8px;
   background: none;
   border: none;
   border-bottom: 2px solid #666;
@@ -2764,12 +2764,12 @@ hr {
 }
 @media (max-width: 767px) {
   .post-button a {
-    font-size: 12px;
+    font-size: 9px;
   }
 }
 @media (min-width: 1200px) {
   .post-button a {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 .post-button a:hover {
