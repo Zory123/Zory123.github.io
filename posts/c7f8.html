@@ -102,7 +102,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zory.ink/sum_%7Bk=0%7D%5E%7Bn-1%7D%20F%5E%7Bn-k%7D=e%5EF-1">
 <meta property="og:image" content="http://zory.ink/images/套题/wc2019.png">
-<meta property="og:updated_time" content="2020-05-14T08:16:39.605Z">
+<meta property="og:updated_time" content="2020-05-14T13:18:13.072Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="集训队相关">
 <meta name="twitter:description" content="21/?收录14年后的清华集训、集训队互测/作业、CCFWC、CTSC 完整肝完的：WC2019">
@@ -253,7 +253,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">676</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">680</span></a>
 
   </li>
         
@@ -540,7 +540,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-05-14 16:16:39" itemprop="dateModified" datetime="2020-05-14T16:16:39+08:00">2020-05-14</time>
+                <time title="修改时间：2020-05-14 21:18:13" itemprop="dateModified" datetime="2020-05-14T21:18:13+08:00">2020-05-14</time>
               </span>
             
           
@@ -713,7 +713,8 @@
 <p>我们的目标是让8个方向只有一个还没有被线性表示，不过一般都是从边角开始推，而在边角的话其实方向极少，画一画很容易发现，设前两行和第一列就好了，$O((n+m)^3)$</p>
 
 </div></div>
-<h2 id="WC（5）"><a href="#WC（5）" class="headerlink" title="WC（5）"></a>WC（5）</h2><h3 id="「WC2018」通道"><a href="#「WC2018」通道" class="headerlink" title="「WC2018」通道"></a><a href="http://uoj.ac/problem/347" target="_blank" rel="noopener">「WC2018」通道</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<h2 id="WC（5）"><a href="#WC（5）" class="headerlink" title="WC（5）"></a>WC（5）</h2><h3 id="「WC2018」通道"><a href="#「WC2018」通道" class="headerlink" title="「WC2018」通道"></a><a href="http://uoj.ac/problem/347" target="_blank" rel="noopener">「WC2018」通道</a></h3><p><strong>题意：</strong>给出三棵带权树，求$\max_{a,b} dis_1(a,b)+dis_2(a,b)+dis_3(a,b)$，$n \le 1e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 
 </div></div>
 <h3 id="「WC2018」州区划分"><a href="#「WC2018」州区划分" class="headerlink" title="「WC2018」州区划分"></a><a href="http://uoj.ac/problem/348" target="_blank" rel="noopener">「WC2018」州区划分</a></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
@@ -776,9 +777,12 @@
 <h3 id="「CTSC2018」暴力写挂"><a href="#「CTSC2018」暴力写挂" class="headerlink" title="「CTSC2018」暴力写挂"></a><a href="https://uoj.ac/problem/400" target="_blank" rel="noopener">「CTSC2018」暴力写挂</a></h3><p><strong>题意</strong>：两棵有根树，最大化$depth(x) + depth(y) - (depth(LCA(x , y)) + depth′ (LCA′ (x, y)))$，$n \le 4e5$</p>
 <div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
 <p>注意到$dis_x+dis_y-dis_{lca}=\frac{1}{2}(dis_x+dis_y+dis(x,y))$，此时与lca无关了，可以树分治处理路径</p>
-<p>点分不可行，但边分可行，因为边分只有两侧，可以每次放到第二棵树上建黑白点虚树跑dp</p>
+<p>点分不可行，但边分可行，因为边分只有两侧，可以每次放到第二棵树上建虚树跑黑白点dp</p>
 <p>具体地，对于第一棵树上每次分治，求出每个点到分治中心距离g</p>
 <p>则要dp求$\max_{col_x \ne col_y} (g_x+dis_x)+(g_y+dis_y)+[中间长度]-2dis’_{lca’}$</p>
+<p>理论复杂度瓶颈在求虚树的排序，但实际上同样的做法，别人第4，我倒4，而且只能在uoj上通过，loj迷之re，luoguTLE（uoj永远滴神），<a href="http://uoj.ac/submission/396818" target="_blank" rel="noopener">code</a></p>
+<p>关于我的速度，我是真的很懵逼，你要跟我说st表lca、vc常数大，但他们都是作为nlogn的系数的啊……</p>
+<p>我猜测主要是因为总共有4棵树，我大量地使用了vc，然而o2并没有很给力啊，明明是nlogn的部分……毕竟虚树部分的常数应该很小（系统sort）</p>
 
 </div></div>
 <hr>
@@ -943,7 +947,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">676</span>
+                    <span class="site-state-item-count">680</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>

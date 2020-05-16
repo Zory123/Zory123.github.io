@@ -1,0 +1,2280 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/avatar.ico?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false,"dimmer":false,"b2t":true,"scrollpercent":true},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="CF近题层刷 UPD：CF修改了评分规则，以下分数都是旧的，不过强行改成新的似乎没有太大必要，大家适度参考即可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CF近题层刷">
+<meta property="og:url" content="http://zory.ink/posts/da5ae507.html">
+<meta property="og:site_name" content="Zory的个人博客">
+<meta property="og:description" content="CF近题层刷 UPD：CF修改了评分规则，以下分数都是旧的，不过强行改成新的似乎没有太大必要，大家适度参考即可">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-05-16T00:25:27.665Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CF近题层刷">
+<meta name="twitter:description" content="CF近题层刷 UPD：CF修改了评分规则，以下分数都是旧的，不过强行改成新的似乎没有太大必要，大家适度参考即可">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://zory.ink/posts/da5ae507"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>CF近题层刷 | Zory的个人博客</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6c38ba8648d29103b8d122f998787d71";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zory的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">人生即使没有最短路，也是连通图</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">680</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">197</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-template">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/OI之路" rel="section"><i class="menu-item-icon fa fa-fw fa-telegram"></i> <br/>OI之路</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-problems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/刷题" rel="section"><i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br/>刷题Problems</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-friends">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/friends/" rel="section"><i class="menu-item-icon fa fa-fw fa-user-circle"></i> <br/>友链Friends</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-boutique">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/精品文章/" rel="section"><i class="menu-item-icon fa fa-fw fa-handshake-o"></i> <br/>精品文章</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-gproblems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/好题" rel="section"><i class="menu-item-icon fa fa-fw fa-thumbs-o-up"></i> <br/>好题</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-top">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/top/" rel="section"><i class="menu-item-icon fa fa-fw fa-signal"></i> <br/>排行榜Hot</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>Search（找文章必备，请耐心等待）</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="不区分大小写，尽量缩短关键词（如CF412、CFR123）" spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zory.ink/posts/da5ae507.html"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zory"/>
+      <meta itemprop="description" content="Zory的个人博客"/>
+      <meta itemprop="image" content="/./avatar.ico"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zory的个人博客"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CF近题层刷
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-05-16 00:00:00 / 修改时间：08:25:27" itemprop="dateCreated datePublished" datetime="2020-05-16T00:00:00+08:00">2020-05-16</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/刷题/" itemprop="url" rel="index"><span itemprop="name">刷题</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/da5ae507.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/da5ae507.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/posts/da5ae507.html" class="post-meta-item leancloud_visitors" data-flag-title="CF近题层刷">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>CF近题层刷</p>
+<p>UPD：CF修改了评分规则，以下分数都是旧的，不过强行改成新的似乎没有太大必要，大家适度参考即可</p>
+<a id="more"></a>
+<h2 id="Codeforces-2000pt"><a href="#Codeforces-2000pt" class="headerlink" title="Codeforces 2000pt"></a><a href="https://codeforces.com/problemset?tags=2000-2000" target="_blank" rel="noopener">Codeforces 2000pt</a></h2><h3 id="CF1294E-Obtain-a-Permutation：会做"><a href="#CF1294E-Obtain-a-Permutation：会做" class="headerlink" title="CF1294E Obtain a Permutation：会做"></a><a href="https://codeforces.com/problemset/problem/1294/E" target="_blank" rel="noopener">CF1294E Obtain a Permutation</a>：<font color="#32CD32">会做</font></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>对每列独立做，就是最小化$偏移量+n-匹配个数$，注意到每个数被匹配成功的偏移量只有一个，更新那个偏移量，最后扫一次即可，$O(nm)$</p>
+
+</div></div>
+<h3 id="CF1288D-Minimax-Problem：会做"><a href="#CF1288D-Minimax-Problem：会做" class="headerlink" title="CF1288D Minimax Problem：会做"></a><a href="https://codeforces.com/problemset/problem/1288/D" target="_blank" rel="noopener">CF1288D Minimax Problem</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出$n \le 3e5$个长度为$m \le 8$的数组$a_i$，选择$A,B \in [1,n]$，最大化$min_{k=1}^m\ max(a_{A,k},a_{B,k})$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>先二分答案不小于T，则选出两个数，使得二进制或能得到全集。值域为$2^8$故直接枚举两种数即可，$O(nmlog)$</p>
+
+</div></div>
+<p>*太水跑路*</p>
+<h2 id="Codeforces-2100pt"><a href="#Codeforces-2100pt" class="headerlink" title="Codeforces 2100pt"></a><a href="https://codeforces.com/problemset?tags=2100-2100" target="_blank" rel="noopener">Codeforces 2100pt</a></h2><h3 id="CF1294F-Three-Paths-on-a-Tree：会做"><a href="#CF1294F-Three-Paths-on-a-Tree：会做" class="headerlink" title="CF1294F Three Paths on a Tree：会做"></a><a href="https://codeforces.com/problemset/problem/1294/F" target="_blank" rel="noopener">CF1294F Three Paths on a Tree</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出$n \le 2e5$点的树，选出三个不同的点，使得他们的虚树（包含他们的最小联通块）最大，输出任意一个方案</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>强化版是<a href="b2c5.html">cojR8F 黄金体验</a>，总之三个点的方案可以从直径增量得到</p>
+<p>当然不知道结论也是随便做，设个dp背包子树内选了多少个点就好了，这个更好写</p>
+
+</div></div>
+<h3 id="CF1288E-Messenger-Simulator：会做"><a href="#CF1288E-Messenger-Simulator：会做" class="headerlink" title="CF1288E Messenger Simulator：会做"></a><a href="https://codeforces.com/problemset/problem/1288/E" target="_blank" rel="noopener">CF1288E Messenger Simulator</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：初始为1..n的排列，m次输入一个数后将他移动到最前面得到一个新排列，最后对于每个数输出他历史上到过的最左和最右的位置，$n \le 3e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>独立考虑最左和最右，对于数字num稍作讨论</p>
+<p>最左：如果被操作过就是1，否则就是num</p>
+<p>最右：先把开始和结束判掉，只需要在操作这个数的时候更新他的答案即可</p>
+<p>查询排名写个树状数组即可，$O(nlogn)$</p>
+
+</div></div>
+<h3 id="CF1284D-New-Year-and-Conference：会做"><a href="#CF1284D-New-Year-and-Conference：会做" class="headerlink" title="CF1284D New Year and Conference：会做"></a><a href="https://codeforces.com/problemset/problem/1284/D" target="_blank" rel="noopener">CF1284D New Year and Conference</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出$n\le 1e5$个元素为区间的二元组，判断是否存在一个子集，同时选左边和同时选右边， 命题「存在重叠区间」的真伪不一致</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>唯一难点就是注意到，对于一个$|S|&gt;2的集合S$，$[S不重]=[\forall_{T \subset S} T不重]$，于是完全不用判这类集合，只要每对二元组满足即可</p>
+<p>判断集合相同可以用随机异或hash，求出每个区间的「不与之重叠二元组」即可，除了排序是线性的</p>
+
+</div></div>
+<h3 id="CF1278D-Segment-Tree：不够简洁"><a href="#CF1278D-Segment-Tree：不够简洁" class="headerlink" title="CF1278D Segment Tree：不够简洁"></a><a href="https://codeforces.com/problemset/problem/1278/D" target="_blank" rel="noopener">CF1278D Segment Tree</a>：<font color="purple">不够简洁</font></h3><p><strong>题意</strong>：给出$n \le 5e5$个区间，保证端点是2n个不同的整数；两点有边当且仅当区间重叠且互不包含，问建出的是否是树</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>我的较复杂做法：和一个区间连边的范围就是两个矩形，离线下来扫描线，碰到一个点的时候，较好写的线段树得出所有覆盖该点的矩形，dsu连边</p>
+<p>一种稍有技巧性的简短做法：直接从左到右枚举每个端点，如果是左端点就把右端点丢到set里，并且枚举set中与自己连边的前缀，dsu连接</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread();fo(i,<span class="number">1</span>,n) &#123;<span class="keyword">int</span> l=qread(),r=qread();R[l]=r;id[l]=id[r]=i;a[l]=&#123;<span class="number">0</span>,i&#125;;a[r]=&#123;<span class="number">1</span>,i&#125;;fa[i]=i;&#125;</div><div class="line"><span class="keyword">int</span> cnt=<span class="number">0</span>;fo(i,<span class="number">1</span>,n+n) <span class="keyword">if</span>(a[i].FR==<span class="number">1</span>) right.erase(i);</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it=right.begin();it!=right.end();it++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> go=id[*it];<span class="keyword">if</span>(*it&gt;R[i]) <span class="keyword">break</span>;</div><div class="line">        cnt++;<span class="keyword">int</span> fx=findfa(id[i]),fy=findfa(go);</div><div class="line">        <span class="keyword">if</span>(cnt&gt;n<span class="number">-1</span> or fx==fy) &#123;<span class="built_in">puts</span>(<span class="string">"NO"</span>);<span class="keyword">return</span>;&#125; fa[fx]=fy;</div><div class="line">    &#125;</div><div class="line">    right.insert(R[i]);</div><div class="line">&#125;<span class="built_in">puts</span>(cnt!=n<span class="number">-1</span>?<span class="string">"NO"</span>:<span class="string">"YES"</span>);</div></pre></td></tr></table></figure>
+
+</div></div>
+<p>*太水跑路*</p>
+<h2 id="Codeforces-2200pt"><a href="#Codeforces-2200pt" class="headerlink" title="Codeforces 2200pt"></a><a href="https://codeforces.com/problemset?tags=2200-2200" target="_blank" rel="noopener">Codeforces 2200pt</a></h2><h3 id="CF1278E-Tests-for-problem-D：会做"><a href="#CF1278E-Tests-for-problem-D：会做" class="headerlink" title="CF1278E Tests for problem D：会做"></a><a href="https://codeforces.com/problemset/problem/1278/E" target="_blank" rel="noopener">CF1278E Tests for problem D</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出一棵树，写一个CF1278D的数据生成器</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>这种题关键就是构造一种<strong>分形</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> m=sz(to[x])-(fa&gt;<span class="number">0</span>);ret[x].SE=rmx+m+<span class="number">1</span>;rmx+=m+<span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> id=rmx;<span class="keyword">for</span>(<span class="keyword">auto</span> y:to[x]) <span class="keyword">if</span>(y!=fa) ret[y].FR=--id,solve(y,x);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1267K-Key-Storage：会做"><a href="#CF1267K-Key-Storage：会做" class="headerlink" title="CF1267K Key Storage：会做"></a><a href="https://codeforces.com/problemset/problem/1267/K" target="_blank" rel="noopener">CF1267K Key Storage</a>：<font color="#32CD32">会做</font></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p><a href="80c8.html">套路集锦</a>：两次整除与直接整除其乘积，结果一样；这个多重集的大小&lt;20</p>
+<p>容易发现一个余数序列（不是多重集）唯一对应一个数，且序列最后一项一定不是0</p>
+<p>于是求出多重集求合法的排列即可，从大到小考虑每种数怎么放，把最后一项是0的方案容斥掉即可，$O(20T)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mem(ct,<span class="number">0</span>);fo(i,<span class="number">2</span>,<span class="number">20</span>) &#123;ct[num%i]++,sum++,num/=i;<span class="keyword">if</span>(num==<span class="number">0</span>)<span class="keyword">break</span>;&#125;</div><div class="line">ll ans1=<span class="number">1</span>;<span class="keyword">int</span> used=<span class="number">0</span>;fd(i,sum,<span class="number">1</span>) ans1*=C[sum-i+<span class="number">1</span>-used][ct[i]],used+=ct[i];</div><div class="line">ll ans2=<span class="number">1</span>;used=<span class="number">1</span>;fd(i,sum,<span class="number">1</span>) &#123;<span class="keyword">if</span>(sum-i+<span class="number">1</span>-used&lt;<span class="number">0</span>)&#123;ans2=<span class="number">0</span>;<span class="keyword">break</span>;&#125;ans2*=C[sum-i+<span class="number">1</span>-used][ct[i]],used+=ct[i];&#125;</div><div class="line">write2(ans1-ans2<span class="number">-1</span>);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1253E-Antenna-Coverage：会做"><a href="#CF1253E-Antenna-Coverage：会做" class="headerlink" title="CF1253E Antenna Coverage：会做"></a><a href="https://codeforces.com/problemset/problem/1253/E" target="_blank" rel="noopener">CF1253E Antenna Coverage</a>：<font color="#32CD32">会做</font></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>zz题，$dp(pos)$=后缀pos被处理完的最小代价，直接枚举哪个人覆盖pos即可，$O(nm)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">fd(i,m,<span class="number">1</span>) dp[i]=m-i+<span class="number">1</span>;</div><div class="line">fd(i,m,<span class="number">1</span>) fo(lst,<span class="number">1</span>,n)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> ned=max(<span class="number">0</span>,a[lst].FR-a[lst].SE-i);</div><div class="line">    chmin(dp[i], ned+dp[a[lst].FR+a[lst].SE+ned+<span class="number">1</span>] );</div><div class="line">&#125;write(dp[<span class="number">1</span>]);</div></pre></td></tr></table></figure>
+
+</div></div>
+<p>*太水跑路*</p>
+<h2 id="Codeforces-2300pt"><a href="#Codeforces-2300pt" class="headerlink" title="Codeforces 2300pt"></a><a href="https://codeforces.com/problemset?tags=2300-2300" target="_blank" rel="noopener">Codeforces 2300pt</a></h2><h3 id="CF1311E-Construct-the-Binary-Tree：会做"><a href="#CF1311E-Construct-the-Binary-Tree：会做" class="headerlink" title="CF1311E Construct the Binary Tree：会做"></a><a href="https://codeforces.com/contest/1311/problem/E" target="_blank" rel="noopener">CF1311E Construct the Binary Tree</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出n和d，构造二叉树满足节点dep之和=d</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>显然其实是求一个序列，$\sum a_i=n,\sum i*a_i=d$</p>
+<p>想了挺久的，感受一下应该每个n能得到的d是一个区间。思考了几种方案最后发现从链开始，把每个点往上拉就是对的</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread(),D=qread();fo(i,<span class="number">0</span>,n<span class="number">-1</span>) a[i]=<span class="number">1</span>,D-=i,son[i+<span class="number">1</span>]=<span class="number">0</span>;<span class="keyword">int</span> lst=n<span class="number">-1</span>;</div><div class="line"><span class="keyword">while</span>(D&lt;<span class="number">0</span>)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> ok=lst;fo(i,<span class="number">1</span>,lst<span class="number">-1</span>) <span class="keyword">if</span>(a[i]&lt;a[i<span class="number">-1</span>]*<span class="number">2</span> and D+lst-i&lt;=<span class="number">0</span>) &#123;ok=i;<span class="keyword">break</span>;&#125;</div><div class="line">    <span class="keyword">if</span>(ok==lst) <span class="keyword">break</span>;D+=lst-ok;a[lst]--,a[ok]++;</div><div class="line">    <span class="keyword">while</span>(!a[lst]) lst--;</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span>(D!=<span class="number">0</span>)&#123; <span class="built_in">puts</span>(<span class="string">"NO"</span>);<span class="keyword">continue</span>; &#125;<span class="built_in">puts</span>(<span class="string">"YES"</span>);</div><div class="line"><span class="keyword">int</span> cur=<span class="number">2</span>;fo(i,<span class="number">1</span>,lst)<span class="keyword">while</span>(a[i]--)&#123; <span class="keyword">int</span> wt=<span class="number">0</span>;fo(j,<span class="number">1</span>,cur<span class="number">-1</span>)<span class="keyword">if</span>(son[j]&lt;<span class="number">2</span> and dep[j]==i<span class="number">-1</span>)wt=j;assert(wt&gt;<span class="number">0</span>); son[wt]++,write1(wt),dep[cur++]=i; &#125;<span class="built_in">puts</span>(<span class="string">""</span>);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1292C-Xenon’s-Attack-on-the-Gangs：会做"><a href="#CF1292C-Xenon’s-Attack-on-the-Gangs：会做" class="headerlink" title="CF1292C Xenon’s Attack on the Gangs：会做"></a><a href="https://codeforces.com/problemset/problem/1292/C" target="_blank" rel="noopener">CF1292C Xenon’s Attack on the Gangs</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出一棵$n \le 3e3$个点的树，$将[0,n-2]排列到边上，最大化\sum_{x&lt;y} mex(x \to y的路径边权集)$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>md某luogu题解上写求最小，那么特判掉单链的情况后，可以在两条叶子边上填0和1，于是答案为$(n-1)*1+1*2$</p>
+<p>最大的话一开始想错了还是花了一会时间，整理一下其实也很清晰自然：没有经过0的路径不用管，经过0的路径至少为1，然后增量地考虑同时经过0和1的路径个数……发现有贡献的就是一条路径，上面是从0开始的连续数字。如果已知是哪条路径考虑怎么分配数字，那么很容易发现最优方案应该是0在中间，递增加入1到len，每次可以放在链的左边或右边</p>
+<p>于是dp这个链就得了，不带脑子枚举链再区间dp就是$O(n^2*n^2)$，但显然太zz，写成树上路径dp就是$O(n^2)$，路径更短的端点或子树大小都可以枚举根预处理</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function">ll <span class="title">dp</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(DP[x][y]) <span class="keyword">return</span> DP[x][y];</div><div class="line">    <span class="keyword">int</span> xx=pre[y][x],yy=pre[x][y];</div><div class="line">    <span class="keyword">return</span> DP[x][y]=(xx==y?<span class="number">0</span>:max( dp(xx,y),dp(x,yy) ))+siz[y][x]*siz[x][y];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1285E-Delete-a-Segment：会做"><a href="#CF1285E-Delete-a-Segment：会做" class="headerlink" title="CF1285E Delete a Segment：会做"></a><a href="https://codeforces.com/problemset/problem/1285/E" target="_blank" rel="noopener">CF1285E Delete a Segment</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出$n \le 2e5$个数轴上线段$[l_i,r_i]$，问如果只没有第i个线段，剩下线段并的个数（连续被覆盖的<strong>段</strong>数），注意$[1,3]和[4,6]$算是两个</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>为了符合正常人理解且考虑到线段可能退化为点，先离散化，然后给整数点和实数区都编号，具体而言就是将$[l,r] \to [2l,2r]$。</p>
+<p>发现恰没有第i个线段答案就是，全集<strong>段</strong>数+只由第i个线段覆盖的<strong>块</strong>（将连续的只被第i个线段覆盖的部分缩成一<strong>块</strong>，忽略在每段最左边和右边的块；这部分肯定都是实数区）-自己独立组成了一个段。</p>
+<p>看了几个代码感觉可能差不多长甚至自己会更长些，有点不爽，不停想怎么更简洁，结果真正写完的时候发现巨短，写完就过了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread();nums.clear();fo(i,<span class="number">0</span>,n*<span class="number">5</span>) on[i].clear(),ct[i]=<span class="number">0</span>;</div><div class="line">fo(i,<span class="number">1</span>,n)&#123; <span class="keyword">int</span> l=qread(),r=qread();a[i]=&#123;l,r&#125;;nums.PB(l),nums.PB(r);ans[i]=cnt[i]=<span class="number">0</span>; &#125;</div><div class="line">sort(all(nums));</div><div class="line">fo(i,<span class="number">1</span>,n)</div><div class="line">    search(a[i].FR),search(a[i].SE),a[i].FR*=<span class="number">2</span>,a[i].SE*=<span class="number">2</span>,</div><div class="line">on[a[i].FR].PB(i),on[a[i].SE+<span class="number">1</span>].PB(i),ct[a[i].FR]++,ct[a[i].SE+<span class="number">1</span>]--;</div><div class="line">fo(i,<span class="number">1</span>,n*<span class="number">5</span>) ct[i]+=ct[i<span class="number">-1</span>];</div><div class="line"><span class="keyword">int</span> real=<span class="number">0</span>;</div><div class="line">fo(pos,<span class="number">1</span>,n*<span class="number">5</span>)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> i:on[pos]) <span class="keyword">if</span>(now.count(i)) now.erase(i); <span class="keyword">else</span> now.insert(i);<span class="comment">//工具人，可以写成线性队列</span></div><div class="line">    <span class="keyword">if</span>(ct[pos<span class="number">-1</span>]==<span class="number">0</span> and ct[pos]&gt;<span class="number">0</span>) real++;</div><div class="line">    <span class="keyword">if</span>(ct[pos<span class="number">-1</span>]!=<span class="number">1</span> and ct[pos]==<span class="number">1</span>) ans[*now.begin()]++;</div><div class="line">    <span class="keyword">if</span>(ct[pos<span class="number">-1</span>]==<span class="number">0</span> and ct[pos]==<span class="number">1</span>) ans[*now.begin()]--;</div><div class="line">    <span class="keyword">if</span>(ct[pos]==<span class="number">1</span> and ct[pos+<span class="number">1</span>]==<span class="number">0</span>) ans[*now.begin()]--;</div><div class="line">&#125;<span class="keyword">int</span> ret=-INF;fo(i,<span class="number">1</span>,n) chmax(ret,ans[i]);write2(ret+real);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1282D-Enchanted-Artifact：不会做"><a href="#CF1282D-Enchanted-Artifact：不会做" class="headerlink" title="CF1282D Enchanted Artifact：不会做"></a><a href="https://codeforces.com/problemset/problem/1282/D" target="_blank" rel="noopener">CF1282D Enchanted Artifact</a>：<font color="red">不会做</font></h3><p><strong>题意</strong>：交互题，不给出长度猜字符串S（$|S| \le 300$，字符集为ab），每次询问字符串T，返回<a href="https://en.wikipedia.org/wiki/Levenshtein_distance" target="_blank" rel="noopener">Edit distance</a>，定义为每次做单字符的插入、替换、删除的最下次数，要求询问次数不超过$|S|+2$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>首先很容易求出字符串的长度：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">询问</th>
+<th style="text-align:center">全a</th>
+<th style="text-align:center">全b</th>
+<th style="text-align:center">都有</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">“a”</td>
+<td style="text-align:center">n-1</td>
+<td style="text-align:center">n-1</td>
+<td style="text-align:center">n</td>
+</tr>
+<tr>
+<td style="text-align:center">“b”</td>
+<td style="text-align:center">n</td>
+<td style="text-align:center">n-1</td>
+<td style="text-align:center">n-1</td>
+</tr>
+</tbody>
+</table>
+<p>如果只有替换就是zz，但直接考虑这个代价不太好求。注意到如果是且仅当是子序列的时候，编辑代价就是n-长度，于是我们得到一个询问次数=$2n^2$的做法。然而并不会优化qwq</p>
+<p><strong>hint</strong>：输入n个a得到a、b的个数aa、bb</p>
+<p>于是直接枚举每个间隔插入b就好了，次数=2+1+aa+bb。这个很好解决，改成输入300个a、b，次数变为n+2</p>
+<p><a href="https://codeforces.com/problemset/submission/1282/69663188" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="CF1270E-Divide-Points：不会做"><a href="#CF1270E-Divide-Points：不会做" class="headerlink" title="CF1270E Divide Points：不会做"></a><a href="https://codeforces.com/problemset/problem/1270/E" target="_blank" rel="noopener">CF1270E Divide Points</a>：<font color="red">不会做</font></h3><p><strong>题意</strong>：给出$n \le 1e3$个二维平面上整点，建完全图后分为两个集合A、B，边分为跨集合边和集合内边，要求相同长度的边是相同的种类，构造集合划分方案，保证输入有解</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>很妙啊</p>
+<p>注意到是整点，距离只需考虑欧几里得距离的平方</p>
+<p><strong>hint</strong>：一个很容易验证的小结论：$奇^2+奇^2=2 \pmod 4,偶^2+偶^2=0 \pmod 4,奇^2+偶^2=1 \pmod 4$</p>
+<p>于是很容易想到以某点为原点，按照两维奇偶性分成00,01,10,11四类</p>
+<p>如果全部是00显然可以把所有坐标/2，无需考虑</p>
+<p>如果01和10都没有，$A={00},B={11}$；如果有，$A={00,11},B={01,10}$</p>
+
+</div></div>
+<h3 id="CF1268C-K-Integers：不会做"><a href="#CF1268C-K-Integers：不会做" class="headerlink" title="CF1268C K Integers：不会做"></a><a href="https://codeforces.com/problemset/problem/1268/C" target="_blank" rel="noopener">CF1268C K Integers</a>：<font color="red">不会做</font></h3><p><strong>题意</strong>：给出排列p，每次可以交换相邻两个元素，对于所有k回答搞出$1,2,3…k$这样的连续段所需最小时间</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p><strong>核心观察</strong>：一定是先把1到k拼成连续一段且原顺序不变，然后再内部排序（只能说玩一玩感觉挺对的），容易发现两过程独立</p>
+<p>得出式子就随便做了，逆序对部分显然随便求，移动部分就是个中位数（尽管和常见的“移动到相同位置”不完全相同，推推式子就是比常规的少$\frac{k^2-[k\&amp;1]}{4}$），建议写树状数组</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fo(i,<span class="number">1</span>,n) pos[qread()]=i;</div><div class="line">fo(k,<span class="number">1</span>,n)</div><div class="line">&#123;</div><div class="line">    b0.ad(pos[k],<span class="number">1</span>),b1.ad(pos[k],pos[k]);<span class="keyword">int</span> mid=b0.findk(k/<span class="number">2</span>+<span class="number">1</span>);</div><div class="line">    sum+=pos[k];ans+=k-b0.ask(pos[k]);</div><div class="line">    write1( ans+sum<span class="number">-2</span>*b1.ask(mid<span class="number">-1</span>)+(k&amp;<span class="number">1</span>?-mid:<span class="number">0</span>)-(<span class="number">1l</span>l*k*k-k%<span class="number">2</span>)/<span class="number">4</span> );</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1254C-Point-Ordering：会做"><a href="#CF1254C-Point-Ordering：会做" class="headerlink" title="CF1254C Point Ordering：会做"></a><a href="https://codeforces.com/problemset/problem/1254/C" target="_blank" rel="noopener">CF1254C Point Ordering</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：交互题，平面上有$n \le 1e3$个整点形成凸多边形且给出n，没有三点共线，询问最多3n次，每次可以询问$\overrightarrow{a_ia_j}与\overrightarrow{a_ia_k}$叉积的绝对值或符号，最后逆时针从点1开始逆时针输出该多边形</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>很容易发现可以直接给2到n排序，$a_i&lt;a_j当且仅当ask2(a_1,a_i,a_j)&gt;0$，然而需要nlogn次，试图化叉积的式子或者割补法，无果，遂自闭30min。忽然想起有种东西叫三角形面积等底看高，所以可以找出逆时针第一个作为底，找到最高那个（可能是两个），然后枚举其他人判断是在左侧还是右侧，两侧内部就能直接根据高排序，询问次数为$3n$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">small</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123; <span class="built_in">printf</span>(<span class="string">"2 1 %d %d\n"</span>,x,y);fflush(<span class="built_in">stdout</span>);<span class="keyword">return</span> qread()&gt;<span class="number">0</span>; &#125;</div><div class="line">ll val[N];<span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;<span class="keyword">return</span> val[x]&lt;val[y];&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> n=qread();<span class="keyword">int</span> mi=<span class="number">2</span>;fo(i,<span class="number">3</span>,n) <span class="keyword">if</span>(small(i,mi)) mi=i;</div><div class="line">    fo(i,<span class="number">2</span>,n) <span class="keyword">if</span>(i!=mi) &#123; <span class="built_in">printf</span>(<span class="string">"1 1 %d %d\n"</span>,mi,i);fflush(<span class="built_in">stdout</span>);val[i]=qread(); &#125;</div><div class="line">    <span class="keyword">int</span> top=<span class="number">0</span>;fo(i,<span class="number">2</span>,n) <span class="keyword">if</span>(i!=mi and val[i]&gt;val[top]) top=i;</div><div class="line">    fo(i,<span class="number">2</span>,n) <span class="keyword">if</span>(i!=mi and i!=top and val[i]==val[top] and small(i,top)) top=i; </div><div class="line">    vc&lt;<span class="keyword">int</span>&gt; left,right;fo(i,<span class="number">2</span>,n) <span class="keyword">if</span>(i==top or small(i,top)) left.PB(i); <span class="keyword">else</span> right.PB(i);</div><div class="line">    sort(all(left),cmp);sort(all(right),cmp);reverse(all(right));</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"0 1 "</span>);<span class="keyword">for</span>(<span class="keyword">auto</span> in:left) write1(in);<span class="keyword">for</span>(<span class="keyword">auto</span> in:right) write1(in);fflush(<span class="built_in">stdout</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1252E-Songwriter：不会做"><a href="#CF1252E-Songwriter：不会做" class="headerlink" title="CF1252E Songwriter：不会做"></a><a href="https://codeforces.com/problemset/problem/1252/E" target="_blank" rel="noopener">CF1252E Songwriter</a>：<font color="red">不会做</font></h3><p><strong>题意</strong>：给出一个长度为$n \le 1e5$的序列，问能否保证大小关系（$&lt;,=,&gt;$）不变的前提下，使相邻的差不超过K且所有数$\in [L,R]$，若有解输出最小字典序方案</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>惭愧啊……从后往前得到合法范围（即这里这样选后面都能合法，显然是连续一段区间），从前往后取值就好了啊</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread(),L=qread(),R=qread(),K=qread();</div><div class="line">fo(i,<span class="number">1</span>,n) a[i]=qread(); ok[n]=&#123;L,R&#125;;</div><div class="line">fd(i,n<span class="number">-1</span>,<span class="number">1</span>)</div><div class="line">&#123;</div><div class="line">    ok[i]=ok[i+<span class="number">1</span>];</div><div class="line">    <span class="keyword">if</span>(a[i]&lt;a[i+<span class="number">1</span>]) ok[i].FR-=K,ok[i].SE--;</div><div class="line">    <span class="keyword">if</span>(a[i]&gt;a[i+<span class="number">1</span>]) ok[i].FR++,ok[i].SE+=K;</div><div class="line">    chmax(ok[i].FR,L),chmin(ok[i].SE,R);</div><div class="line">    <span class="keyword">if</span>(ok[i].FR&gt;ok[i].SE) &#123;<span class="built_in">puts</span>(<span class="string">"-1"</span>);<span class="keyword">return</span>;&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> lst=ok[<span class="number">1</span>].FR;write1(lst);</div><div class="line">fo(i,<span class="number">2</span>,n)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(a[i<span class="number">-1</span>]&lt;a[i]) lst=max(lst+<span class="number">1</span>,ok[i].FR);</div><div class="line">    <span class="keyword">if</span>(a[i<span class="number">-1</span>]&gt;a[i]) lst=max(min(lst-K,ok[i].SE),ok[i].FR);</div><div class="line">    write1(lst);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1252G-Performance-Review：会做"><a href="#CF1252G-Performance-Review：会做" class="headerlink" title="CF1252G Performance Review：会做"></a><a href="https://codeforces.com/problemset/problem/1252/G" target="_blank" rel="noopener">CF1252G Performance Review</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出n个数，经过m天，每天会删除最小的$R_i$个数并加入给定的$R_i$个数，保证所有输入中数字都互不重复，q次修改某天$R_i$个数中某个数，并回答按现在的表格模拟m天后最开始的第一个数是否还没有被删除，$n,m,q \le 1e5,\sum r_i \le 1e6$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>回答的只是第一个数是否活着。于是就很容易了，只关心$&lt;a_i$​的数的个数，每次先加后减（最后一次显然没用），那等价于m个数，看是否存在一段前缀和&lt;0，线段树上直接维护前缀和，后缀修改，找最小值即可</p>
+
+</div></div>
+<h3 id="CF1251E-Voting：会做"><a href="#CF1251E-Voting：会做" class="headerlink" title="CF1251E Voting：会做"></a><a href="https://codeforces.com/problemset/problem/1251/E2" target="_blank" rel="noopener">CF1251E Voting</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：要说服$n \le 2e5$个人投票，要么花$p_i$收买他，要么让其他投票的人达到$m_i$，求最小代价</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>按照m从小到大排序，发现即使前一个满足（前面的人都满足）了后一个也不一定满足，此时需要在后面收买若干个人，从后往前贪心即可</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread();fo(i,<span class="number">1</span>,n) a[i].FR=qread(),a[i].SE=qread();sort(a+<span class="number">1</span>,a+n+<span class="number">1</span>);</div><div class="line">priority_queue&lt; <span class="keyword">int</span>,vc&lt;<span class="keyword">int</span>&gt;,greater&lt;<span class="keyword">int</span>&gt; &gt; que;<span class="keyword">int</span> have=<span class="number">0</span>;ll ans=<span class="number">0</span>;</div><div class="line">fd(i,n,<span class="number">1</span>)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">while</span>(sz(que) and i<span class="number">-1</span>+have&lt;a[i].FR) ans+=que.top(),que.pop(),have++;<span class="comment">//mi&lt;n</span></div><div class="line">    que.push(a[i].SE);</div><div class="line">&#125;write2(ans);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1250C-Trip-to-Saint-Petersburg：会做"><a href="#CF1250C-Trip-to-Saint-Petersburg：会做" class="headerlink" title="CF1250C Trip to Saint Petersburg：会做"></a><a href="https://codeforces.com/problemset/problem/1250/C" target="_blank" rel="noopener">CF1250C Trip to Saint Petersburg</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出K和$n \le 2e5$个区间，选出集合S最大化$\sum \limits_{i \in S} p_i - K(R - L + 1),L=\min_ \limits{i \in S} l_i,R=\max \limits_{i \in S} R_i$，多解输出任意一种</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>只要计算出最优的$[L,R]$，于是枚举L，如果离开区间的左端点就删除该区间，线段树维护每个右端点此时的贡献，那么就是后缀加K，后缀减val，后缀求最大值的位置，$O(nlogn)$</p>
+
+</div></div>
+<h3 id="CF1245E-Hyakugoku-and-Ladders：会做"><a href="#CF1245E-Hyakugoku-and-Ladders：会做" class="headerlink" title="CF1245E Hyakugoku and Ladders：会做"></a><a href="https://codeforces.com/problemset/problem/1245/E" target="_blank" rel="noopener">CF1245E Hyakugoku and Ladders</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出一个$10*10$的表格，上面的数字大小表示有个向上多少行的梯子（起点一定没有）。现在从左下角出发到达左上角，每次摇一个6面的骰子，走上面数字步（按照题中图片一样蛇形走，如果距离终点少于该步数则不移动），然后此时的格子如果有梯子<strong>可以选择</strong>上爬（必须从起点完整爬到梯子终点，且到达后不能立刻再爬梯子），问期望摇骰子次数</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>$$<br>记终点为0，dp(i,0/1=是否刚爬过梯子) \\<br>对于i \le 6，dp(i,0)=dp(i,1)= \sum \frac{dp(ii,0)+1}{6}+(dp(i,0)+1)*\frac{max(0,6-i)}{6} \\<br>otherwise，dp(i,1)= \sum \frac{dp(ii,0)+1}{6}，dp(i,0)=min{ dp(i,1),1+dp(ii,1) }<br>$$<br><a href="https://codeforces.com/contest/1245/submission/69845197" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="CF1245F-Daniel-and-Spring-Cleaning：会做"><a href="#CF1245F-Daniel-and-Spring-Cleaning：会做" class="headerlink" title="CF1245F Daniel and Spring Cleaning：会做"></a><a href="https://codeforces.com/problemset/problem/1245/F" target="_blank" rel="noopener">CF1245F Daniel and Spring Cleaning</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：$T \le 100$组数据，每次求$\sum_{L \le a,b \le R} [a\&amp;b=0]$，$0 \le L,R \le 1e9$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>这种二进制连续段的题，先考虑形如$Axxxx$，其中xxx任填的方案数（记录为$[A,A+2^a-1]$）自己内部做，根据经典的$\sum_{s \subseteq S} s的补集的子集数=3^n$即可。现在不规则，容斥，设计函数$solve(&lt;R1,&lt;R2)$，那么$ans=solve(R+1,R+1)-solve(L,R+1)-solve(R+1,L)+solve(L,L)$（当然不想容斥可以用线段树划分法）</p>
+<p>考虑$[A,A+2^a-1]与[B,B+2^b-1],a \le b$的答案，显然首先要求$A \&amp; B=0$，然后a多出来的那部分会有一定限制，$3^a*2^{多出来部分多少个0}$，复杂度为$O(Tlog^2)或O(Tlog^3)$</p>
+<p><a href="https://codeforces.com/problemset/submission/1245/69826225" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="CF1244F-Chips：会做"><a href="#CF1244F-Chips：会做" class="headerlink" title="CF1244F Chips：会做"></a><a href="https://codeforces.com/problemset/problem/1244/F" target="_blank" rel="noopener">CF1244F Chips</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出一个环形的01序列，做k次，每次对于一个位置考虑相邻及自己三个位置，值就变成出现最多的那种数，$n \le 2e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>和<a href="e1875d00.html">AGC006D Median Pyramid Hard</a>很像，不过因为很简单问题不大。就很容易发现连续同色如果长度&gt;1一定永远不变，于是可以把序列分割成若干个独立的段（特判整个串01交替，看k奇偶性即可）。每个段讨论两边01情况，无论怎样每做一次就会变短2，且如果两边数字不同要01反转。</p>
+
+</div></div>
+<h3 id="CF1238F-The-Maximum-Subtree：会做"><a href="#CF1238F-The-Maximum-Subtree：会做" class="headerlink" title="CF1238F The Maximum Subtree：会做"></a><a href="https://codeforces.com/problemset/problem/1238/F" target="_blank" rel="noopener">CF1238F The Maximum Subtree</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出一棵$n \le 3e5$个点的树，要求选出最大的连通子图G，使得能够构造出一组方案，每个点分配一条一维线段，断开原先的边后给所有线段相交的点对连边，得到的图与G一致（带标号）</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>显然每个点最多连向两个非叶节点，这是个必要条件。很容易通过构造发现这也是个充要条件（叶子直接包含在里面），那么将ans=2判掉后，与非叶相邻的点构成一条链，贪心地选每个点旁边的边（这东西或许应该叫<a href="https://www.luogu.com.cn/problem/P3174" target="_blank" rel="noopener">毛毛虫——HAOI2009</a>）</p>
+<p>直接dp这条链，<a href="https://codeforces.com/problemset/submission/1238/69885389" target="_blank" rel="noopener">code</a>，当然化式子写成带权直径也是资瓷的</p>
+
+</div></div>
+<h3 id="CF1228E-Another-Filling-the-Grid：会做"><a href="#CF1228E-Another-Filling-the-Grid：会做" class="headerlink" title="CF1228E Another Filling the Grid：会做"></a><a href="https://codeforces.com/problemset/problem/1228/E" target="_blank" rel="noopener">CF1228E Another Filling the Grid</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：计数，给大小为$n \le 250$的方阵填数，值域为K，要求每行每列最小值都是1</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fo(i,<span class="number">0</span>,n) fo(j,<span class="number">0</span>,n) &#123; <span class="keyword">int</span> S=(n-i)*(n-j);add(ans, <span class="number">1l</span>l*C[n][i]*C[n][j]%MOD*((i+j)&amp;<span class="number">1</span>?MOD<span class="number">-1</span>:<span class="number">1</span>)%MOD*qpower(K,S)%MOD*qpower(K<span class="number">-1</span>,n*n-S)%MOD ); &#125;write(ans);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1217E-Sum-Queries：不会做"><a href="#CF1217E-Sum-Queries：不会做" class="headerlink" title="CF1217E Sum Queries：不会做"></a><a href="https://codeforces.com/problemset/problem/1217/E" target="_blank" rel="noopener">CF1217E Sum Queries</a>：<font color="red">不会做</font></h3><p><strong>题意</strong>：给出n个数m次操作，每次修改一个数或询问区间内的好的多重子集中和最小的，不存在输出-1，定义好为没法通过 「 每个十进制数位独立从集合内某个元素中选出」来得到集合的和，$n,m \le 2e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>因为是求最小可以考虑枚举某个数位，固定它没法选出</p>
+<p><strong>核心观察</strong>：为了满足这一位的限制，选最小两个「这一位非0」的数一定是最优的，因为任何合法方案肯定需要选至少两个这种数</p>
+<p>无地自容啊……怪不得还附带了这么多花里胡哨的操作，性质过于优美，直接建10个线段树就好了，$O(nlog^2)$</p>
+
+</div></div>
+<h3 id="CF1216E-Numerical-Sequence：会做"><a href="#CF1216E-Numerical-Sequence：会做" class="headerlink" title="CF1216E Numerical Sequence：会做"></a><a href="https://codeforces.com/contest/1216/problem/E2" target="_blank" rel="noopener">CF1216E Numerical Sequence</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：存在一个无穷大的十进制数形如”1|12|123|1234|12345|123456|….”（分隔符实际不存在），$q \le 500$次询问第$k \le 1e18$高数位上的$digit \in [0,9]$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function">ll <span class="title">F</span><span class="params">(ll R)</span></span>&#123; ll ret=<span class="number">0</span>;fo(t,<span class="number">0</span>,<span class="number">9</span>)&#123; ll tt=R-dec[t]+<span class="number">1</span>;<span class="keyword">if</span>(tt&gt;<span class="number">0</span>) ret+=tt; &#125;<span class="keyword">return</span> ret; &#125;</div><div class="line"><span class="function">ll <span class="title">S</span><span class="params">(ll R)</span></span>&#123; ll ret=<span class="number">0</span>;fo(t,<span class="number">0</span>,<span class="number">9</span>)&#123; ll tt=R-dec[t]+<span class="number">1</span>;<span class="keyword">if</span>(tt&gt;<span class="number">0</span>) ret+=tt*(tt+<span class="number">1</span>)/<span class="number">2</span>; &#125;<span class="keyword">return</span> ret; &#125;</div></pre></td></tr></table></figure>
+<p>然后直接两次二分，$O(Tlg^2)$</p>
+<p><a href="https://codeforces.com/contest/1216/submission/69882483" target="_blank" rel="noopener">完整code</a></p>
+
+</div></div>
+<h2 id="Codeforces-2400pt"><a href="#Codeforces-2400pt" class="headerlink" title="Codeforces 2400pt"></a><a href="https://codeforces.com/problemset?tags=2400-2400" target="_blank" rel="noopener">Codeforces 2400pt</a></h2><h3 id="CF1283F-DIY-Garland：不会做"><a href="#CF1283F-DIY-Garland：不会做" class="headerlink" title="CF1283F DIY Garland：不会做"></a><a href="https://codeforces.com/problemset/problem/1283/F" target="_blank" rel="noopener">CF1283F DIY Garland</a>：<font color="red">不会做</font></h3><p><strong>题意</strong>：定义一个从带标号有根树到序列的映射为，点x点权$2^x$，边权为子树内点权和，按边权从大到小枚举边并写下这条边深度较小的那个节点编号，现在给出这个序列，构造一棵能映射到该序列的有根树，$n \le 2e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>可小到大处理每条边，那么这时候只要知道深度较大那个点，其实本质上就是要对子树点权和排序，只要能排序就能告诉你其父亲是什么，将一开始的叶子塞到堆中，得到父亲的时候类似拓扑处理即可</p>
+<p>无解是瞎判的，貌似没有这种数据（即-1的意思好像是还原的条件不够充足？总之当构造做问题不大）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread();fo(i,<span class="number">1</span>,n<span class="number">-1</span>) a[i]=qread(),cnt[a[i]]++;</div><div class="line">fo(i,<span class="number">1</span>,n) <span class="keyword">if</span>(!cnt[i]) q.push(&#123;i,i&#125;);</div><div class="line">fo(i,<span class="number">1</span>,n) mx[i]=i;</div><div class="line">fd(now,n<span class="number">-1</span>,<span class="number">1</span>)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(!sz(q))&#123; <span class="built_in">puts</span>(<span class="string">"-1"</span>);<span class="keyword">return</span>; &#125;</div><div class="line">    <span class="keyword">int</span> x=a[now],y=q.top().SE;chmax(mx[x],q.top().FR);q.pop();</div><div class="line">    ans.PB(&#123;x,y&#125;);cnt[x]--;done[y]=<span class="number">1</span>;<span class="keyword">if</span>(!cnt[x]) q.push(&#123;mx[x],x&#125;);</div><div class="line">&#125;<span class="keyword">int</span> rt=<span class="number">0</span>;fo(i,<span class="number">1</span>,n) <span class="keyword">if</span>(!done[i])&#123; <span class="keyword">if</span>(rt)&#123;<span class="built_in">puts</span>(<span class="string">"-1"</span>);<span class="keyword">return</span>;&#125;<span class="keyword">else</span> rt=i; &#125;</div><div class="line">write2(rt);<span class="keyword">for</span>(<span class="keyword">auto</span> t:ans) write1(t.FR),write2(t.SE);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1282E-The-Cake-Is-a-Lie：会做"><a href="#CF1282E-The-Cake-Is-a-Lie：会做" class="headerlink" title="CF1282E The Cake Is a Lie：会做"></a><a href="https://codeforces.com/problemset/problem/1282/E" target="_blank" rel="noopener">CF1282E The Cake Is a Lie</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：存在一个未知编号排列的正n边形，给出一种三角剖分（形式为n-2个三角形的三点），依次求出一个表示编号顺序的排列，以及满足该编号的一个n-2的排列表示三角形被切割出来的顺序，要求按照这个顺序依次删掉的那个三角形是在边上的（即剩下的还是一个凸多边形），输入和输出都不保证顺逆时针，$n \le 1e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> S&#123;<span class="keyword">int</span> x,y,z;&#125;a[N];<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; on[N],go[N];</div><div class="line"><span class="keyword">bool</span> vis[N];<span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123; vis[x]=<span class="number">1</span>;write1(x);<span class="keyword">for</span>(<span class="keyword">auto</span> y:go[x]) <span class="keyword">if</span>(!vis[y]) dfs(y); &#125;</div><div class="line"><span class="keyword">int</span> n;<span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;vc&lt;<span class="keyword">int</span>&gt; ans;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> cnt)</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> now=q.front();q.pop();<span class="keyword">int</span> id=*on[now].begin();ans.PB(id);</div><div class="line">    <span class="keyword">int</span> x=a[id].x,y=a[id].y,z=a[id].z;<span class="keyword">if</span>(y==now) swap(y,x);<span class="keyword">if</span>(z==now) swap(z,x);</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> upd(pt) on[pt].erase(id);<span class="meta-keyword">if</span>(sz(on[pt])==1) q.push(pt);</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> ins(x,y) go[x].insert(y),go[y].insert(x)</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> del(x,y) go[x].erase(y),go[y].erase(x)</span></div><div class="line">    upd(y);upd(z);</div><div class="line">    <span class="keyword">if</span>(cnt==n<span class="number">-2</span>) ins(x,y),ins(x,z),ins(y,z);</div><div class="line">    <span class="keyword">else</span> solve(cnt+<span class="number">1</span>),del(y,z),ins(x,y),ins(x,z);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></div><div class="line"></span>&#123;</div><div class="line">    <span class="keyword">int</span> T=qread();</div><div class="line">    <span class="keyword">while</span>(T--)</div><div class="line">    &#123;</div><div class="line">        n=qread();fo(i,<span class="number">1</span>,n) on[i].clear(),go[i].clear(),vis[i]=<span class="number">0</span>;</div><div class="line">        fo(i,<span class="number">1</span>,n<span class="number">-2</span>) on[a[i].x=qread()].insert(i),on[a[i].y=qread()].insert(i),on[a[i].z=qread()].insert(i);</div><div class="line">        <span class="keyword">while</span>(sz(q)) q.pop();ans.clear();fo(i,<span class="number">1</span>,n) <span class="keyword">if</span>(sz(on[i])==<span class="number">1</span>) q.push(i);solve(<span class="number">1</span>);</div><div class="line">        dfs(<span class="number">1</span>);<span class="built_in">puts</span>(<span class="string">""</span>);<span class="keyword">for</span>(<span class="keyword">auto</span> in:ans) write1(in);<span class="built_in">puts</span>(<span class="string">""</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1272F-Two-Bracket-Sequences：会做"><a href="#CF1272F-Two-Bracket-Sequences：会做" class="headerlink" title="CF1272F Two Bracket Sequences：会做"></a><a href="https://codeforces.com/problemset/problem/1272/F" target="_blank" rel="noopener">CF1272F Two Bracket Sequences</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出两个不一定合法的括号串A和B（$|A|,|B| \le 200$），构造一个最短的合法括号串，使得A和B都是其子序列</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>直接dp，<a href="https://codeforces.com/contest/1272/submission/70278488" target="_blank" rel="noopener">代码</a>是随便写的</p>
+
+</div></div>
+<h3 id="CF1260E-Tournament：会做"><a href="#CF1260E-Tournament：会做" class="headerlink" title="CF1260E Tournament：会做"></a><a href="https://codeforces.com/problemset/problem/1260/E" target="_blank" rel="noopener">CF1260E Tournament</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：$2^n(n \le 18)$个人打淘汰赛，收买第i个人的代价为$a_i$，其中$a_i=-1$的是你，任意决定分组方案（要做n-1次两两分组）去最小化你会遇到的每个原本其实打不过的对手，两人对战总是编号大的人获胜，但你总是获胜</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>$收买n来负责大小为n/2的子树，收买[\ge n/2]来负责大小为n/4的子树……$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">priority_queue&lt;<span class="keyword">int</span>,vc&lt;<span class="keyword">int</span>&gt;,greater&lt;<span class="keyword">int</span>&gt;&gt; q;ll ans=<span class="number">0</span>;</div><div class="line">fd(i,n,<span class="number">1</span>)&#123; <span class="keyword">if</span>(a[i]&lt;<span class="number">0</span>)<span class="keyword">break</span>;q.push(a[i]);<span class="keyword">if</span>(bin((<span class="keyword">int</span>)log2(i))==i) ans+=q.top(),q.pop(); &#125;write(ans);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1239D-Catowice-City：会做"><a href="#CF1239D-Catowice-City：会做" class="headerlink" title="CF1239D Catowice City：会做"></a><a href="https://codeforces.com/problemset/problem/1239/D" target="_blank" rel="noopener">CF1239D Catowice City</a>：<font color="#32CD32">会做</font></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>因为要选出n个，猫的编号一定是人的补集，则边$(x \to y)$等价于选了x必须选y做人，没必要无脑2-sat，实际上就是要找这个dag中出度为0且不是整个图的强联通分量，<a href="https://codeforces.com/contest/1239/submission/70406447" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="CF1221E-Game-With-String：不会做"><a href="#CF1221E-Game-With-String：不会做" class="headerlink" title="CF1221E Game With String：不会做"></a><a href="https://codeforces.com/problemset/problem/1221/E" target="_blank" rel="noopener">CF1221E Game With String</a>：<font color="red">不会做</font></h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p><strong>核心观察</strong>：只要存在A类线段（$ln \in [b,a)$），bob必胜</p>
+<p>于是，只要轮到bob操作时存在B类线段（$ln \ge 2b$），就能制造出A类线段，所以Alice的首要目标是去掉B类线段，接下来只要考虑能去掉。此时bob先手且只存在C类线段（$ln \in [a,2b)$），无论是谁都只能操作一次，直接看奇偶性即可</p>
+
+</div></div>
+<h3 id="CF1183F-Topforces-Strikes-Back：不会做"><a href="#CF1183F-Topforces-Strikes-Back：不会做" class="headerlink" title="CF1183F Topforces Strikes Back：不会做"></a><a href="https://codeforces.com/problemset/problem/1183/F" target="_blank" rel="noopener">CF1183F Topforces Strikes Back</a>：<font color="red">不会做</font></h3><p><strong>题意</strong>：多组数据，给出n个数，选出最多三个数，要求互不为倍数，最大化其和，$\sum n,a_i \le 2e5$</p>
+<p><a href="https://www.luogu.com.cn/blog/wucstdio/solution-cf1183f" target="_blank" rel="noopener">题解</a>，只想到了一个最多三个小log的不优美做法</p>
+<h3 id="CF1179C-Serge-and-Dining-Room：会做"><a href="#CF1179C-Serge-and-Dining-Room：会做" class="headerlink" title="CF1179C Serge and Dining Room：会做"></a><a href="https://codeforces.com/problemset/problem/1179/C" target="_blank" rel="noopener">CF1179C Serge and Dining Room</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：m男找n女，依次处理每个男，记权值为$a_i$，在剩女中找最大的$b_j \le a_i$并娶走，没有就放弃。q次修改a或b，要求快速模拟这个过程后回答剩女中最大的a，$n,m \le 3e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>很容易发现，我们其实就是要知道是否最大的若干个女孩都有主了，其实就是$\forall i,\sum_{j} [b_j \ge a_i] \ge n-i+1$</p>
+<p>那么b的顺序是没有意义的，直接写个权值线段树维护最小值即可，求答案就在上面二分，$O(nlogn)$，<a href="https://codeforces.com/contest/1179/submission/70846763" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="CF1120D-Power-Tree：会做"><a href="#CF1120D-Power-Tree：会做" class="headerlink" title="CF1120D Power Tree：会做"></a><a href="https://codeforces.com/problemset/problem/1120/D" target="_blank" rel="noopener">CF1120D Power Tree</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出一棵$n \le 2e5$点有根树，控制点x的代价为$w_x$，控制后可以给子树内叶子加任意整数，花最小的代价使得无论初始叶子上有什么数，都能操作为0</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>容易发现其实就是要保证每个叶子向上跳第一个碰到的控制节点存在且互不同，可以随便写个线性dp，类似<a href="https://blog.csdn.net/C_S_X_/article/details/88734928" target="_blank" rel="noopener">这样</a></p>
+<p>但这并不是我想说的重点，题解给出的做法很有趣：问题丢到序列上，然后就是要能让差分数组变成0。我们发现建图$(l_i,r_i+1)$的话，只要形成一棵树，就能以cnt+1那个虚点为根，从下往上处理叶子，所以转化成了最小生成树。</p>
+
+</div></div>
+<h2 id="Codeforces-2500pt"><a href="#Codeforces-2500pt" class="headerlink" title="Codeforces 2500pt"></a><a href="https://codeforces.com/problemset?tags=2500-2500" target="_blank" rel="noopener">Codeforces 2500pt</a></h2><h3 id="CF1284E-New-Year-and-Castle-Construction：不会做"><a href="#CF1284E-New-Year-and-Castle-Construction：不会做" class="headerlink" title="CF1284E New Year and Castle Construction：不会做"></a><a href="https://codeforces.com/problemset/problem/1284/E" target="_blank" rel="noopener">CF1284E New Year and Castle Construction</a>：<font color="red">不会做</font></h3><p><strong>题意</strong>：给出n个二维平面点，没有三点共线，求$\sum_{x} 选4个点构成四边形严格enclose\ x$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p><strong>核心观察</strong>：考虑五个点形成三点凸包、四点凸包、五点凸包的方案数分别为x3、x4、x5，则$ans=2x3+x4=5(x3+x4+x5)-(3x3+4x4+5x5)=2x3+x4=5C_n^5-(3x3+4x4+5x5)$</p>
+<p>问题转化为统计每条边是5-set形成的凸包上一条边的方案数，直接以每个点为原点做极角排序后2-point即可</p>
+
+</div></div>
+<h3 id="CF1263F-Economic-Difficulties：会做"><a href="#CF1263F-Economic-Difficulties：会做" class="headerlink" title="CF1263F Economic Difficulties：会做"></a><a href="https://codeforces.com/problemset/problem/1263/F" target="_blank" rel="noopener">CF1263F Economic Difficulties</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：看题图，上下两棵树大小分别为A和B，叶子数都是n，每棵树都存在一种dfs顺序使得遍历到的排气扇编号从1到n，排气扇连接那两个叶子给定且不重，然后删除最多的边（图中为红色）使得每个排气扇至少能访问到一个树根。$n \le 1e3,A,B \le 2e3$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>决策题优先考虑网络流，二选一试图最小割，与S连通表示选择A，记割掉表示保留这条边，排气扇与叶子间、树边流量为INF，去留由叶子与父亲那条边反映，则A树某条边必须被割当且仅当子树有人与S连通，故$(A_x \to ed,1)$，B树则是$(st \to B_x,1)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread();<span class="keyword">using</span> <span class="keyword">namespace</span> MF;st=<span class="number">0</span>,ed=MAX_N<span class="number">-1</span>;</div><div class="line"><span class="keyword">int</span> A=qread();fo(x,<span class="number">2</span>,A) ins(x,qread(),INF),ins(x,ed,<span class="number">1</span>);fo(i,<span class="number">1</span>,n) ins(A+i,qread(),INF);</div><div class="line"><span class="keyword">int</span> B=qread();fo(x,<span class="number">2</span>,B) ins(A+n+qread(),A+n+x,INF),ins(st,A+n+x,<span class="number">1</span>);fo(i,<span class="number">1</span>,n) ins(A+n+qread(),A+i,INF);</div><div class="line"><span class="keyword">int</span> ans=<span class="number">0</span>;<span class="keyword">while</span>(bfs()) ans+=dfs(st,INF);write(A<span class="number">-1</span>+B<span class="number">-1</span>-ans);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1239B-The-World-Is-Just-a-Programming-Task：不会做"><a href="#CF1239B-The-World-Is-Just-a-Programming-Task：不会做" class="headerlink" title="CF1239B The World Is Just a Programming Task：不会做"></a><a href="https://codeforces.com/problemset/problem/1239/B" target="_blank" rel="noopener">CF1239B The World Is Just a Programming Task</a>：<font color="red">不会做</font></h3><p><strong>题意</strong>：给出一个长度为$n \le 3e5$的括号序列，交换两个不一定不同的位置，最大化$\sum_i [将序列shift\ i后是合法括号序列]$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>我的思路：首先转化为-1和1，则位置i作为结尾的条件为$\min S[1..i]\ge S_i-S_n且\min S[i+1..n] \ge S_i$，然后如果从<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">正解：其实括号对于+1-1有个优势，就是哪两个括号匹配是确定的。因此对于合法括号序列，可行位置数就是一级括号数+1。</div><div class="line"></div><div class="line">对于本题，先把序列调整为一个合法括号序列（一定存在），然后容易发现如果交换一个一级括号两端，答案为内部二级+1，如果交换一个二级括号两端，答案为内部三级+整体一级+1，显然交换三级括号没有意义</div><div class="line"></div><div class="line">```cpp</div><div class="line">int n=qread();scanf(&quot;%s&quot;,str+1);fo(i,n+1,n+n) str[i]=str[i-n];</div><div class="line">fo(i,1,n) S[i]=S[i-1]+(str[i]==&apos;(&apos;?1:-1);</div><div class="line">pre[0]=INF;fo(i,1,n) pre[i]=min(pre[i-1],S[i]);suf[n+1]=INF;fd(i,n,1) suf[i]=min(suf[i+1],S[i]);</div><div class="line">if(S[n]!=0) &#123;printf(&quot;0\n1 1&quot;);return;&#125;</div><div class="line">int st=0;fo(i,0,n-1) if(suf[i+1]&gt;=S[i] and pre[i]&gt;=S[i]-S[n]) st=i+1;deb(st);</div><div class="line">int sum=0,one=0;</div><div class="line">fo(i,st,st+n-1)</div><div class="line">&#123;</div><div class="line">    if(str[i]==&apos;(&apos;) sum++,cnt[sum]++;</div><div class="line">    else&#123; if(sum==1) one++;cnt[sum+1]=0;sum--; &#125;</div><div class="line">&#125;</div><div class="line">pair&lt;int,pii&gt; ans=&#123;one,&#123;1,1&#125;&#125;;</div><div class="line">fo(i,st,st+n-1)</div><div class="line">&#123;</div><div class="line">    if(str[i]==&apos;(&apos;) sum++,cnt[sum]++,lst[sum]=i;</div><div class="line">    else&#123; if(sum==1) chmax(ans,&#123;cnt[2]+1,&#123;lst[1],i&#125;&#125;);if(sum==2) chmax(ans,&#123;cnt[3]+one+1,&#123;lst[2],i&#125;&#125;);cnt[sum+1]=0;sum--;&#125;</div><div class="line">&#125;printf(&quot;%d\n%d %d&quot;,ans.FR,(ans.SE.FR&gt;n?ans.SE.FR-n:ans.SE.FR),(ans.SE.SE&gt;n?ans.SE.SE-n:ans.SE.SE));</div></pre></td></tr></table></figure></p>
+
+</div></div>
+<h3 id="CF1221F-Choose-a-Square：不会做"><a href="#CF1221F-Choose-a-Square：不会做" class="headerlink" title="CF1221F Choose a Square：不会做"></a><a href="https://codeforces.com/problemset/problem/1221/F" target="_blank" rel="noopener">CF1221F Choose a Square</a>：<font color="red">不会做</font></h3><p><strong>题意</strong>：给出$n \le 5e5$个带权点，有负权，选择$a&lt;b得到正方形(a,a)-(b,b)$，最大化$被其包含的点权和-(b-a)$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>发现是个切比雪夫距离，化成曼哈顿距离后发现了一些优美的性质，但没能优化复杂度</p>
+<p>事实上直接按题意说的考虑就好了，点$(x,y)被覆盖当且仅当a \le min(x,y),b \ge max(x,y)$，那直接扫描线整体改权即可</p>
+
+</div></div>
+<h3 id="CF1218E-Product-Tuples会做"><a href="#CF1218E-Product-Tuples会做" class="headerlink" title="CF1218E Product Tuples会做"></a><a href="https://codeforces.com/problemset/problem/1218/E" target="_blank" rel="noopener">CF1218E Product Tuples</a><font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出长度为$n \le 2e4$的序列A和常数K，$Q \le 10$次<strong>独立</strong>操作，每次对A单点修改或区间加，然后对给定值q定义序列$B_i=q-A_i$，输出$\sum_{ T \in {1,2..n},|T|-K} \prod_{x \in T} B_x$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>又是国人擅长的多项式套路题，$ans=[x^k]\prod(1+a_ix)$，看到Q这么小就感觉不对劲，直接重新做就好了，$O(Qnlog^2)$，<a href="https://codeforces.com/contest/1218/submission/70771462" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="CF1202E-You-Are-Given-Some-Strings：会做"><a href="#CF1202E-You-Are-Given-Some-Strings：会做" class="headerlink" title="CF1202E You Are Given Some Strings：会做"></a><a href="https://codeforces.com/problemset/problem/1202/E" target="_blank" rel="noopener">CF1202E You Are Given Some Strings</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：给出字符串T和n个字符串si，输出$\sum_{i=1}^n \sum_{j=1}^n  「s_i和s_j的拼接」在T中出现次数$，$|T|,n,\sum s_i \le 2e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>计算$\sum_{i} 以i结尾的s个数*以i+1开头的s个数$，就是个sam子树加，<a href="https://codeforces.com/contest/1202/submission/70769591" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<p>*日，好像目前会做的2500都是因为过于套路……*</p>
+<h3 id="CF1197F-Coloring-Game：不会做"><a href="#CF1197F-Coloring-Game：不会做" class="headerlink" title="CF1197F Coloring Game：不会做"></a><a href="https://codeforces.com/problemset/problem/1197/F" target="_blank" rel="noopener">CF1197F Coloring Game</a>：<font color="red">不会做</font></h3><p><strong>题意</strong>：给出n个纸条，第i条有ai个格子，在最后一格放一枚棋子，每次可以选一个棋子往前移动1、2、3格，但不能移出去，alice先手，不能移动的输。同时格子有3种颜色，给出大小为3的矩阵，$M_{i,j}=能否从颜色i的格子移动j步$，初始只有m个位置有颜色，其他由bob染色，对bob必胜的染色方案计数，$n,m \le 1e3,a_i \le 1e9$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>很容易想到把三个状态压成64做矩乘，复杂度为$O((n+m)64^3loga)$，仔细思考了半天，成功想到了分块压复杂度，从30变成了5，高兴地打开计算器，<del>粗言秽语</del></p>
+<p><strong>核心观察</strong>：$ans=A[1*4^2+2*4+3*4^0][S]$，只关心这一行，所以不要快速幂，预处理下二进制幂后，每次向量右乘矩阵就完事了，$O((n+m)64^2loga+64^3loga)$，小技巧get</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread();fo(i,<span class="number">1</span>,n) a[i]=qread();</div><div class="line"><span class="keyword">int</span> m=qread();<span class="keyword">while</span>(m--)&#123; <span class="keyword">int</span> x=qread(),y=qread();in[x].PB(&#123;y,qread()&#125;); &#125;</div><div class="line">fo(i,<span class="number">1</span>,n) in[i].PB(&#123;a[i]+<span class="number">1</span>,<span class="number">0</span>&#125;),sort(all(in[i]));</div><div class="line">fo(i,<span class="number">0</span>,<span class="number">2</span>) fo(j,<span class="number">0</span>,<span class="number">2</span>) ok[i][j]=qread();</div><div class="line">fo(i,<span class="number">0</span>,<span class="number">3</span>) fo(j,<span class="number">0</span>,<span class="number">3</span>) fo(k,<span class="number">0</span>,<span class="number">3</span>) go[i][j][k]=i*<span class="number">16</span>+j*<span class="number">4</span>+k;</div><div class="line">fo(col,<span class="number">0</span>,<span class="number">2</span>) fo(a,<span class="number">0</span>,<span class="number">3</span>) fo(b,<span class="number">0</span>,<span class="number">3</span>) fo(c,<span class="number">0</span>,<span class="number">3</span>)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">bool</span> use[<span class="number">4</span>];mem(use,<span class="number">0</span>);</div><div class="line">    <span class="keyword">if</span>(ok[col][<span class="number">0</span>]) use[c]=<span class="number">1</span>;<span class="keyword">if</span>(ok[col][<span class="number">1</span>]) use[b]=<span class="number">1</span>;<span class="keyword">if</span>(ok[col][<span class="number">2</span>]) use[a]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> sg=<span class="number">3</span>;fd(i,<span class="number">2</span>,<span class="number">0</span>) <span class="keyword">if</span>(!use[i]) sg=i;</div><div class="line">    add(A[col].a[go[a][b][c]][go[b][c][sg]],<span class="number">1</span>),add(B[<span class="number">0</span>].a[go[a][b][c]][go[b][c][sg]],<span class="number">1</span>);</div><div class="line">&#125;</div><div class="line">fo(i,<span class="number">1</span>,<span class="number">30</span>) B[i]=B[i<span class="number">-1</span>]*B[i<span class="number">-1</span>];f[<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">fo(i,<span class="number">1</span>,n)</div><div class="line">&#123;</div><div class="line">    Mat now;now.n=<span class="number">1</span>;now.a[<span class="number">0</span>][go[<span class="number">1</span>][<span class="number">2</span>][<span class="number">3</span>]]=<span class="number">1</span>;<span class="keyword">int</span> lst=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> t:in[i])</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> ln=t.FR-lst<span class="number">-1</span>;lst=t.FR;</div><div class="line">        fo(j,<span class="number">0</span>,<span class="number">30</span>) <span class="keyword">if</span>(ln&amp;bin(j)) now=now*B[j];</div><div class="line">        <span class="keyword">if</span>(lst&lt;=a[i]) now=now*A[t.SE<span class="number">-1</span>];</div><div class="line">    &#125;</div><div class="line">    mem(g,<span class="number">0</span>);fo(lst,<span class="number">0</span>,<span class="number">3</span>) fo(a,<span class="number">0</span>,<span class="number">3</span>) fo(b,<span class="number">0</span>,<span class="number">3</span>) fo(c,<span class="number">0</span>,<span class="number">3</span>) add(g[lst^c],f[lst]*now.a[<span class="number">0</span>][go[a][b][c]]%MOD );swap(f,g);</div><div class="line">&#125;write(f[<span class="number">0</span>]);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1194F-Crossword-Expert：会做"><a href="#CF1194F-Crossword-Expert：会做" class="headerlink" title="CF1194F Crossword Expert：会做"></a><a href="https://codeforces.com/problemset/problem/1194/F" target="_blank" rel="noopener">CF1194F Crossword Expert</a>：<font color="#32CD32">会做</font></h3><p><strong>题意</strong>：依次做n道题，第i道题需要花$t_i$的时间，另外有$50\%的概率多花1$，问T秒末时完整做完的题目数量，$n \le 2e5,t_i \le 1e9$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>直接枚举恰完成了第i个任务，不等式得到在前i+1个+1次数的范围，发现形如$(T-S-t_{i+1}-ad_{i+1},T-S]$，每个i的范围不重，暴力求复杂度就是对的</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n=qread();ll T=qread();fo(i,<span class="number">1</span>,n) t[i]=qread();t[n+<span class="number">1</span>]=T;</div><div class="line">fo(i,<span class="number">1</span>,n)</div><div class="line">&#123;</div><div class="line">    ll l=<span class="number">0</span>,r=i;S+=t[i];chmin(r,T-S);ll P=qpower(<span class="number">2</span>,MOD<span class="number">-1</span>-i-(i&lt;n));</div><div class="line">    <span class="keyword">if</span>(i&lt;n)<span class="comment">//ad[i+1]=1</span></div><div class="line">    &#123;</div><div class="line">        ll l2=l;chmax(l2,T-S-t[i+<span class="number">1</span>]<span class="number">-1</span>+<span class="number">1</span>);</div><div class="line">        <span class="keyword">if</span>(l2&lt;=r) fo(t,l2,r) add(ans, C(i,t)*i%MOD*P%MOD );<span class="comment">//debug 爆int</span></div><div class="line">    &#125;</div><div class="line">    chmax(l,T-S-t[i+<span class="number">1</span>]+<span class="number">1</span>);<span class="keyword">if</span>(l&lt;=r) fo(t,l,r) add(ans, C(i,t)*i%MOD*P%MOD ); <span class="comment">//ad[i+1]=0</span></div><div class="line">&#125;write(ans);</div></pre></td></tr></table></figure>
+
+</div></div>
+<h3 id="CF1188A-Add-on-a-Tree：不会做"><a href="#CF1188A-Add-on-a-Tree：不会做" class="headerlink" title="CF1188A Add on a Tree：不会做"></a><a href="https://codeforces.com/problemset/problem/1188/A2" target="_blank" rel="noopener">CF1188A Add on a Tree</a>：<font color="red">不会做</font></h3><p><strong>题意1</strong>：给出一棵$n \le 2e5$个点的无根树，每次可以选两个叶子和任意实数，然后给路径上的边加该实数，问是否能得到任何样子的边带权树</p>
+<p><strong>题意2</strong>：给出一棵$n \le 1e3$个点的无根树，边权初始为0，每次可以选两个叶子和任意整数，然后给路径上的边加该整数，问是否能得到给定的边权方案，边带偶权且互不相同</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>先给出第二题的构造方法：选一个叶子为根rt方便操作，然后从上到下处理每条边$(fa \to x)$，使其加X，那么x子树内的边不用管，只要保证其他边没有变化就行。此时如果你考虑“找子树内两个叶子”，这显然是不可行的，因为可能x是叶子；事实上应该考虑“找x某个兄弟内的叶子”，这个只要保证所有点度不是2就行了。</p>
+<p>设x内是a，另一个是b，则$(rt,a)+=X/2,(a,b)+=X/2,(rt,b)-=X/2$即可，实现只要预处理叶子后dfs，暴力改边权即可</p>
+<p>那现在“所有点度不是2”这种情况已经解决，如果没有这个条件，发现一定有两条边始终相同，而题目保证不同，所以一定无解。</p>
+<p><a href="https://codeforces.com/contest/1188/submission/70836818" target="_blank" rel="noopener">code</a></p>
+<p>树状数组容易做到nlogn，已经不好卡，顺手编了个没写的线性做法：钦定每个子树的偏爱叶子节点，这样只需要把那个路径加传递给和自己偏爱叶子相同的那个孩子</p>
+<p>此时再讲第一题是显然的，当然实际做题时比较适合先用第一题验证结论</p>
+
+</div></div>
+<h3 id="1156F"><a href="#1156F" class="headerlink" title="1156F"></a><a href="https://codeforces.com/problemset/problem/1156/F" target="_blank" rel="noopener">1156F</a></h3><p><strong>题意</strong>：</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+
+</div></div>
+<h3 id="1152E"><a href="#1152E" class="headerlink" title="1152E"></a><a href="https://codeforces.com/problemset/problem/1152/E" target="_blank" rel="noopener">1152E</a></h3><p><strong>题意</strong>：</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+
+</div></div>
+<h3 id="1148F"><a href="#1148F" class="headerlink" title="1148F"></a><a href="https://codeforces.com/problemset/problem/1148/F" target="_blank" rel="noopener">1148F</a></h3><p><strong>题意</strong>：</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+
+</div></div>
+<h3 id="1141G"><a href="#1141G" class="headerlink" title="1141G"></a><a href="https://codeforces.com/problemset/problem/1141/G" target="_blank" rel="noopener">1141G</a></h3><p><strong>题意</strong>：</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+
+</div></div>
+<h3 id="1137D"><a href="#1137D" class="headerlink" title="1137D"></a><a href="https://codeforces.com/problemset/problem/1137/D" target="_blank" rel="noopener">1137D</a></h3><p><strong>题意</strong>：</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+
+</div></div>
+<h3 id="1136E"><a href="#1136E" class="headerlink" title="1136E"></a><a href="https://codeforces.com/problemset/problem/1136/E" target="_blank" rel="noopener">1136E</a></h3><p><strong>题意</strong>：</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+
+</div></div>
+<h3 id="1117G"><a href="#1117G" class="headerlink" title="1117G"></a><a href="https://codeforces.com/problemset/problem/1117/G" target="_blank" rel="noopener">1117G</a></h3><p><strong>题意</strong>：</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+
+</div></div>
+<h3 id="1114F"><a href="#1114F" class="headerlink" title="1114F"></a><a href="https://codeforces.com/problemset/problem/1114/F" target="_blank" rel="noopener">1114F</a></h3><p><strong>题意</strong>：</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+
+</div></div>
+<h3 id="1111D"><a href="#1111D" class="headerlink" title="1111D"></a><a href="https://codeforces.com/problemset/problem/1111/D" target="_blank" rel="noopener">1111D</a></h3><p><strong>题意</strong>：</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+
+</div></div>
+<h3 id="1101F"><a href="#1101F" class="headerlink" title="1101F"></a><a href="https://codeforces.com/problemset/problem/1101/F" target="_blank" rel="noopener">1101F</a></h3><p><strong>题意</strong>：</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+
+</div></div>
+
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+	
+		<div>
+				<p id="div-border-left-purple">
+			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
+				<span>
+				<b>本文地址：</b><a href="/posts/da5ae507.html" title="CF近题层刷">http://zory.ink/posts/da5ae507.html</a><br/><b>转载请注明出处，谢谢！</b>
+				</span>
+				</p>
+		</div>
+    
+
+    
+    
+    
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/38bb3cb9.html" rel="next" title="5月做题记录">
+                <i class="fa fa-chevron-left"></i> 5月做题记录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/b27dc4f4.html" rel="prev" title="ARC计划2">
+                ARC计划2 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/./avatar.ico"
+                alt="Zory"/>
+            
+              <p class="site-author-name" itemprop="name">Zory</p>
+              <div class="site-description motion-element" itemprop="description">Zory的个人博客</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">680</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">197</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Zory123" title="GitHub &rarr; https://github.com/Zory123" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:1134430323@qq.com" title="E-Mail &rarr; mailto:1134430323@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          ﻿
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Codeforces-2000pt"><span class="nav-text">Codeforces 2000pt</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1294E-Obtain-a-Permutation：会做"><span class="nav-text">CF1294E Obtain a Permutation：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1288D-Minimax-Problem：会做"><span class="nav-text">CF1288D Minimax Problem：会做</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Codeforces-2100pt"><span class="nav-text">Codeforces 2100pt</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1294F-Three-Paths-on-a-Tree：会做"><span class="nav-text">CF1294F Three Paths on a Tree：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1288E-Messenger-Simulator：会做"><span class="nav-text">CF1288E Messenger Simulator：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1284D-New-Year-and-Conference：会做"><span class="nav-text">CF1284D New Year and Conference：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1278D-Segment-Tree：不够简洁"><span class="nav-text">CF1278D Segment Tree：不够简洁</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Codeforces-2200pt"><span class="nav-text">Codeforces 2200pt</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1278E-Tests-for-problem-D：会做"><span class="nav-text">CF1278E Tests for problem D：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1267K-Key-Storage：会做"><span class="nav-text">CF1267K Key Storage：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1253E-Antenna-Coverage：会做"><span class="nav-text">CF1253E Antenna Coverage：会做</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Codeforces-2300pt"><span class="nav-text">Codeforces 2300pt</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1311E-Construct-the-Binary-Tree：会做"><span class="nav-text">CF1311E Construct the Binary Tree：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1292C-Xenon’s-Attack-on-the-Gangs：会做"><span class="nav-text">CF1292C Xenon’s Attack on the Gangs：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1285E-Delete-a-Segment：会做"><span class="nav-text">CF1285E Delete a Segment：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1282D-Enchanted-Artifact：不会做"><span class="nav-text">CF1282D Enchanted Artifact：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1270E-Divide-Points：不会做"><span class="nav-text">CF1270E Divide Points：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1268C-K-Integers：不会做"><span class="nav-text">CF1268C K Integers：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1254C-Point-Ordering：会做"><span class="nav-text">CF1254C Point Ordering：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1252E-Songwriter：不会做"><span class="nav-text">CF1252E Songwriter：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1252G-Performance-Review：会做"><span class="nav-text">CF1252G Performance Review：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1251E-Voting：会做"><span class="nav-text">CF1251E Voting：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1250C-Trip-to-Saint-Petersburg：会做"><span class="nav-text">CF1250C Trip to Saint Petersburg：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1245E-Hyakugoku-and-Ladders：会做"><span class="nav-text">CF1245E Hyakugoku and Ladders：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1245F-Daniel-and-Spring-Cleaning：会做"><span class="nav-text">CF1245F Daniel and Spring Cleaning：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1244F-Chips：会做"><span class="nav-text">CF1244F Chips：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1238F-The-Maximum-Subtree：会做"><span class="nav-text">CF1238F The Maximum Subtree：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1228E-Another-Filling-the-Grid：会做"><span class="nav-text">CF1228E Another Filling the Grid：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1217E-Sum-Queries：不会做"><span class="nav-text">CF1217E Sum Queries：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1216E-Numerical-Sequence：会做"><span class="nav-text">CF1216E Numerical Sequence：会做</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Codeforces-2400pt"><span class="nav-text">Codeforces 2400pt</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1283F-DIY-Garland：不会做"><span class="nav-text">CF1283F DIY Garland：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1282E-The-Cake-Is-a-Lie：会做"><span class="nav-text">CF1282E The Cake Is a Lie：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1272F-Two-Bracket-Sequences：会做"><span class="nav-text">CF1272F Two Bracket Sequences：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1260E-Tournament：会做"><span class="nav-text">CF1260E Tournament：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1239D-Catowice-City：会做"><span class="nav-text">CF1239D Catowice City：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1221E-Game-With-String：不会做"><span class="nav-text">CF1221E Game With String：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1183F-Topforces-Strikes-Back：不会做"><span class="nav-text">CF1183F Topforces Strikes Back：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1179C-Serge-and-Dining-Room：会做"><span class="nav-text">CF1179C Serge and Dining Room：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1120D-Power-Tree：会做"><span class="nav-text">CF1120D Power Tree：会做</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Codeforces-2500pt"><span class="nav-text">Codeforces 2500pt</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1284E-New-Year-and-Castle-Construction：不会做"><span class="nav-text">CF1284E New Year and Castle Construction：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1263F-Economic-Difficulties：会做"><span class="nav-text">CF1263F Economic Difficulties：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1239B-The-World-Is-Just-a-Programming-Task：不会做"><span class="nav-text">CF1239B The World Is Just a Programming Task：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1221F-Choose-a-Square：不会做"><span class="nav-text">CF1221F Choose a Square：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1218E-Product-Tuples会做"><span class="nav-text">CF1218E Product Tuples会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1202E-You-Are-Given-Some-Strings：会做"><span class="nav-text">CF1202E You Are Given Some Strings：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1197F-Coloring-Game：不会做"><span class="nav-text">CF1197F Coloring Game：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1194F-Crossword-Expert：会做"><span class="nav-text">CF1194F Crossword Expert：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1188A-Add-on-a-Tree：不会做"><span class="nav-text">CF1188A Add on a Tree：不会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1156F"><span class="nav-text">1156F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1152E"><span class="nav-text">1152E</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1148F"><span class="nav-text">1148F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1141G"><span class="nav-text">1141G</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1137D"><span class="nav-text">1137D</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1136E"><span class="nav-text">1136E</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1117G"><span class="nav-text">1117G</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1114F"><span class="nav-text">1114F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1111D"><span class="nav-text">1111D</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1101F"><span class="nav-text">1101F</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zory</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: true,
+    appId: 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+    appKey: 'cJDLxDoNgzq0JJUWQFmpCRdw',
+    placeholder: '对这篇文章有什么看法？大胆地说出来吧',
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '20' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('2');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+                'X-LC-Key': 'cJDLxDoNgzq0JJUWQFmpCRdw',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

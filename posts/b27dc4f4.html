@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/avatar.ico?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/avatar.ico?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.2.0',
+    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false,"dimmer":false,"b2t":true,"scrollpercent":true},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="ARC090~ARC081difficult数据来自kenkoooo 只有代码没有解析不代表看不起这题什么的，而是表示只看代码就能看出writer的转化 ARC090到ARC086平均数=2719.6 ARC085到ARC081平均数=2686 （其实perf这东西好像和打出来的总分和有关，所以题目难的时候会偏低，参考价值不高）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARC计划2">
+<meta property="og:url" content="http://zory.ink/posts/b27dc4f4.html">
+<meta property="og:site_name" content="Zory的个人博客">
+<meta property="og:description" content="ARC090~ARC081difficult数据来自kenkoooo 只有代码没有解析不代表看不起这题什么的，而是表示只看代码就能看出writer的转化 ARC090到ARC086平均数=2719.6 ARC085到ARC081平均数=2686 （其实perf这东西好像和打出来的总分和有关，所以题目难的时候会偏低，参考价值不高）">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-05-16T00:25:27.652Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARC计划2">
+<meta name="twitter:description" content="ARC090~ARC081difficult数据来自kenkoooo 只有代码没有解析不代表看不起这题什么的，而是表示只看代码就能看出writer的转化 ARC090到ARC086平均数=2719.6 ARC085到ARC081平均数=2686 （其实perf这东西好像和打出来的总分和有关，所以题目难的时候会偏低，参考价值不高）">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://zory.ink/posts/b27dc4f4"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>ARC计划2 | Zory的个人博客</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6c38ba8648d29103b8d122f998787d71";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zory的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">人生即使没有最短路，也是连通图</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>历程Archives<span class="badge">680</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类Categories<span class="badge">5</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签Tags<span class="badge">197</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-template">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/OI之路" rel="section"><i class="menu-item-icon fa fa-fw fa-telegram"></i> <br/>OI之路</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-problems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/刷题" rel="section"><i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br/>刷题Problems</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-friends">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/friends/" rel="section"><i class="menu-item-icon fa fa-fw fa-user-circle"></i> <br/>友链Friends</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-boutique">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/精品文章/" rel="section"><i class="menu-item-icon fa fa-fw fa-handshake-o"></i> <br/>精品文章</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-gproblems">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/好题" rel="section"><i class="menu-item-icon fa fa-fw fa-thumbs-o-up"></i> <br/>好题</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-top">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/top/" rel="section"><i class="menu-item-icon fa fa-fw fa-signal"></i> <br/>排行榜Hot</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>Search（找文章必备，请耐心等待）</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="不区分大小写，尽量缩短关键词（如CF412、CFR123）" spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zory.ink/posts/b27dc4f4.html"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zory"/>
+      <meta itemprop="description" content="Zory的个人博客"/>
+      <meta itemprop="image" content="/./avatar.ico"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zory的个人博客"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">ARC计划2
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-05-16 00:00:00 / 修改时间：08:25:27" itemprop="dateCreated datePublished" datetime="2020-05-16T00:00:00+08:00">2020-05-16</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/刷题/" itemprop="url" rel="index"><span itemprop="name">刷题</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/b27dc4f4.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/b27dc4f4.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/posts/b27dc4f4.html" class="post-meta-item leancloud_visitors" data-flag-title="ARC计划2">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>ARC090~ARC081<br>difficult数据来自<a href="https://kenkoooo.com/atcoder#/table/Zory" target="_blank" rel="noopener">kenkoooo</a></p>
+<p>只有代码没有解析不代表看不起这题什么的，而是表示只看代码就能看出writer的转化</p>
+<p>ARC090到ARC086平均数=2719.6</p>
+<p>ARC085到ARC081平均数=2686</p>
+<p>（其实perf这东西好像和打出来的总分和有关，所以题目难的时候会偏低，参考价值不高）</p>
+<a id="more"></a>
+<h2 id="ARC090-rk33-perf-3035"><a href="#ARC090-rk33-perf-3035" class="headerlink" title="ARC090 rk33 perf=3035"></a><a href="https://atcoder.jp/contests/arc090" target="_blank" rel="noopener">ARC090</a> rk33 perf=3035</h2><h3 id="ARC090C-Candies：会做"><a href="#ARC090C-Candies：会做" class="headerlink" title="ARC090C - Candies：会做"></a>ARC090C - Candies：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc090/submissions/10415816" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC090D-People-on-a-Line：会做"><a href="#ARC090D-People-on-a-Line：会做" class="headerlink" title="ARC090D - People on a Line：会做"></a>ARC090D - People on a Line：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc090/submissions/10415978" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC090E-Avoiding-Collision：会做，dif-2282"><a href="#ARC090E-Avoiding-Collision：会做，dif-2282" class="headerlink" title="ARC090E - Avoiding Collision：会做，dif=2282"></a>ARC090E - Avoiding Collision：<font color="#32CD32">会做</font>，dif=2282</h3><p><strong>题意</strong>：n点m边带权无向连通图，给定st和ed，统计多少对两点间最短路径$(S,T)$，满足同时正走S和倒走T的两人不会相遇，$n \le 1e5,m \le  2e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>注意到相遇时一定在L/2处，对于每个S在这个位置唯一计数，分类讨论在点或边上，得到合法的T个数。具体而言，在点上答案为$f_xg_x*(f_{ed}-f_xg_x)$，在边上答案为$f_xg_y*(f_{ed}-f_xg_y)$</p>
+<p><a href="https://atcoder.jp/contests/arc090/submissions/10416490" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="ARC090F-Number-of-Digits：会做，dif-2841"><a href="#ARC090F-Number-of-Digits：会做，dif-2841" class="headerlink" title="ARC090F - Number of Digits：会做，dif=2841"></a>ARC090F - Number of Digits：<font color="#32CD32">会做</font>，dif=2841</h3><p><strong>题意</strong>：给定常数$S \le 1e8$，求$(l \le r)满足\sum_{i=l}^r i的十进制位数=S$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>绝杀成功美滋滋，这类细节题做得很小心很慢，而且写得太奔放re、mle好一会</p>
+<p>很自然地按开头和结尾的位数考虑，$a*i+\sum_{t={i+1}}^{j-1} t*9*10^{t-1}+b*j=S$</p>
+<p>$i=j$的情况只需考虑S的约数，$O(\sqrt Slog)$；$i+1&lt;j$的情况$i,j \le 8$即可，很明显枚举+适当剪枝就能过；</p>
+<p>$i+1=j$的情况就是手动拓展欧几里得，$ai+b(i+1)=S,a_0=-S,b_0=S,a’=a+(i+1),b’=b-i$，复杂度为$\sum \frac{S}{i^2}$，肯定能跑，实际写出来跑极限数据本机为0.8s，<a href="https://atcoder.jp/contests/arc090/submissions/10417165" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h2 id="ARC089-rk74-perf-2526"><a href="#ARC089-rk74-perf-2526" class="headerlink" title="ARC089 rk74 perf=2526"></a><a href="https://atcoder.jp/contests/arc089" target="_blank" rel="noopener">ARC089</a> rk74 perf=2526</h2><h3 id="ARC089C-Traveling：会做"><a href="#ARC089C-Traveling：会做" class="headerlink" title="ARC089C - Traveling：会做"></a>ARC089C - Traveling：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc089/submissions/10503569" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC089D-Checker：会做"><a href="#ARC089D-Checker：会做" class="headerlink" title="ARC089D - Checker：会做"></a>ARC089D - Checker：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc089/submissions/10503891" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC089E-GraphXY：不会做，dif-2889"><a href="#ARC089E-GraphXY：不会做，dif-2889" class="headerlink" title="ARC089E - GraphXY：不会做，dif=2889"></a>ARC089E - GraphXY：<font color="red">不会做</font>，dif=2889</h3><p><strong>题意</strong>：构造一张不超过300个点的有向图并指定S、T，边权$\in {[0,100]、’X’、’Y’}$，要求$mindis_{带入’X’=x,’Y’=y} (S \to T)=d_{x,y}$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>容易想到用三元组$(a,b,c)$表示经过了a条X边b条Y边且常数边长和为c的一条路径</p>
+<p>然后我当时的思路是先考虑只有一种字母，想了个做法，然后感觉没法拓展就自闭睡觉了，现在才发现做法的证明是假的</p>
+<p>正解的话，首先考虑下输入的合法性判断，枚举每种路径是否合法（要求$ax+by+c \ge d_{x,y}$）且每种$d_{x,y}$都有能覆盖它的合法路径</p>
+<p>发现现在我们无需担心满足这个d会影响其他的d了，只要能把所有路径塞到图里，可以构造两条链（官方题解有图），如二分图一样连边，$O(val^4)$</p>
+
+</div></div>
+<h3 id="ARC089F-ColoringBalls：不会做，dif-4221"><a href="#ARC089F-ColoringBalls：不会做，dif-4221" class="headerlink" title="ARC089F - ColoringBalls：不会做，dif=4221"></a>ARC089F - ColoringBalls：<font color="red">不会做</font>，dif=4221</h3><p><strong>题意</strong>：初始有n个白球排成一排，做m次操作，按时间顺序给出每次操作时手上的颜色是蓝还是红，每次选择一段区间染色或者跳过此操作，并且不能直接把白色染成蓝色，问能得到多少种结果序列，$n,m \le 70$</p>
+<p>一开始漏想了蓝色会变成红色的情况，写了个正确率奇高的<a href="https://atcoder.jp/contests/arc089/submissions/10526971" target="_blank" rel="noopener">code</a></p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>我只想到了$O(n^4m^3log)$的做法，常数不大能勉强跑n=m=50，总之atc上跑过了106/112：<a href="https://atcoder.jp/contests/arc089/submissions/10566941" target="_blank" rel="noopener">code</a></p>
+<p>很容易想到如何判断一个结果序列可达：将白色区域删除得到$t \le R$ 块，记每个块中连续蓝色段数为bi，对于bi=0的块要一个<code>r</code>，其他块需要先<code>r</code>再<code>b</code>，再然后$b_i-1$次任意颜色（思考一下发现怎样都能构造出方案）。</p>
+<p>枚举A=[bi&gt;0]的块数，B=[bi=0]的块数，然后预处理出此时的括号序分配方案（显然是用掉左边的A个<code>r</code>并且每个往右找最近的一个<code>b</code>，另外尽可能前地找B个<code>r</code>，共计预分配了2A+B个操作）<br>$$<br>贪心地按照bi降序处理，pi为第i个r对应的b的位置，p_{A+1}=m<br>\\<br>i=1 \sim A,cnt=max(0,cnt+(b_i-1)-[操作序列p_i \sim p_{i+1}没有被预分配中的个数])，最后非负<br>$$<br>可以做一个dp，降序考虑蓝色段数=ln的块有j个（因此块数是调和级数），先把j个看做相同的，即多重集排列数<br>$$<br>最后ans=\sum dp(0,S,t,cnt \ge 0)*t!*C_{(n-S)+2-1}^{(t-1)+2-1}<br>\\<br>dp(ln-1,S+i,t+j,go(cnt,ln,t,j))+=dp(ln,S,t,cnt)*g(ln,i,j)*\frac{1}{j!}<br>\\<br>g(ln,i,j)=总体积为i的j个连续蓝色段为ln的块，<br>g(cc,i+i’,j+1)+=g(cc,i,j)*( C_{i’-1}^{2cc-2}+ 2C_{i’-1}^{2cc-1}+ C_{i’-1}^{2cc} )<br>\\<br>go(cnt,ln,st,0)就是cnt被st+1到st+j依次处理后的结果<br>$$</p>
+<hr>
+<p>更好的做法是$O(m^5log)$的（官方题解的整数分拆做法随便把n放到300就gg了）：</p>
+<p>换一种判断合法性的方法，还是上面说的bi递减的一个序列，每次减掉中间的blu（区间中未预分配的操作数），再加个bi-1，这个过程其实可以转化成，$\forall 后缀i,\sum_{t=i}^A b_t \le up_i$。这个up可以倒推求（$up_i=up_{i+1}+blu(pos_i \sim pos_{i+1})+1$），也就是说把cnt换成这个和也是可以的（因此升序考虑ln做dp）</p>
+<p>当然此时复杂度还没有优化，但注意到之前记录的总长度S和这个b的和，这两个信息只需要一个就能计算出方案数了（具体地，枚举实际段数=2b-1的块数i，实际段数=2b+1的块数j，剩下的实际块数=2b，但这种块第一个可以是b或r连续段，即$\sum_{i,j} C_A^iC_{A-i}^j 2^{A-i-j} (C_{n-1}^{(2(\sum b)-i+j)+(A+2B-1)-1}+2C_{n-1}^{(2(\sum b)-i+j)+(A+2B)-1}+C_{n-1}^{(2(\sum b)-i+j)+(A+2B+1)-1})$），因此成功省掉了卷积S的那两次循环（不过因为不再是倒着考虑，块数那里常数会变大些，当然，这划得来），<a href="https://atcoder.jp/contests/arc089/submissions/10581399" target="_blank" rel="noopener">code</a></p>
+<hr>
+<p>总结：</p>
+<p>做法一并不能因此也得到优化，因为就算不记录S，也还要记录bi的和</p>
+<p>可见做法二优越的关键在于它需要的信息，和原本就需要的东西，有一定的重叠</p>
+<p>本质关系是「某个变量在变化过程中处处受某个范围的限制」与「$a’=max(a+X-Y,0)$」</p>
+<p>感觉第二种更优越的情况应该也是有的，虽然一时举不出来</p>
+<hr>
+<p>另外这题好像恰好是2020集训队作业里面的</p>
+<p>下面三位都是dp，我是跟myh学习的，有幸比三位都快，另两位做法不太清楚<a href="https://blog.csdn.net/qq_39972971/article/details/103709138" target="_blank" rel="noopener">xyx</a>、<a href="https://blog.csdn.net/qq_38609262/article/details/103219594" target="_blank" rel="noopener">myh</a>、<a href="https://atcoder.jp/contests/arc089/submissions/8266846" target="_blank" rel="noopener">zyy</a></p>
+
+</div></div>
+<h2 id="ARC088-rk18-perf-3001"><a href="#ARC088-rk18-perf-3001" class="headerlink" title="ARC088 rk18 perf=3001"></a><a href="https://atcoder.jp/contests/arc088" target="_blank" rel="noopener">ARC088</a> rk18 perf=3001</h2><h3 id="ARC088C-Multiple-Gift：会做"><a href="#ARC088C-Multiple-Gift：会做" class="headerlink" title="ARC088C - Multiple Gift：会做"></a>ARC088C - Multiple Gift：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc088/submissions/10653116" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC088D-Wide-Flip：会做"><a href="#ARC088D-Wide-Flip：会做" class="headerlink" title="ARC088D - Wide Flip：会做"></a>ARC088D - Wide Flip：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc088/submissions/10653485" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC088E-Papple-Sort：不会做，dif-2303"><a href="#ARC088E-Papple-Sort：不会做，dif-2303" class="headerlink" title="ARC088E - Papple Sort：不会做，dif=2303"></a>ARC088E - Papple Sort：<font color="red">不会做</font>，dif=2303</h3><p><strong>题意</strong>：给定长度为$n \le 2e5$的小写字母串，交换相邻字母，求形成回文串的最小步数</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>一般位置交换的题目，都是考虑一对点，考虑相对位置发生变化的那次交换，然而这里稍微变形了下我就懵了……</p>
+<hr>
+<p>首先，显然对于同种字符，一定是最左边和最右边的配成一对，因此我们分析一对数的交换</p>
+<p>[…A…A…B…B…]：无论目标是B还是A在外，都是交换两次，不用管</p>
+<p>[…A…B…A…B…]：无论目标是B还是A在外，都是交换一次，不用管</p>
+<p>[…A…B…B…A…]：最好能A外</p>
+<p>因此这个答案的下界就是，每对AA和BB，满足条件三的，都能满足</p>
+<p>而这个下界是可以达到的，就是从左往右扫，碰到在i的人，就把和他一对的另一个丢到n-i+1去（这里的i不统计作为中间那个老哥，另外他的统计方式为，剩下人一半在它左边一半右边，而这些人原本都在他右边）</p>
+<p>移动要经过多少人可以用树状数组算，<a href="https://atcoder.jp/contests/arc088/submissions/10656272" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="ARC088F-Christmas-Tree：会做，dif-3010"><a href="#ARC088F-Christmas-Tree：会做，dif-3010" class="headerlink" title="ARC088F - Christmas Tree：会做，dif=3010"></a>ARC088F - Christmas Tree：<font color="#32CD32">会做</font>，dif=3010</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>这题和noip2018D1T3很像，所以做个这样的F踩人很不是滋味</p>
+<p>因为这其实就是要选出A条路径，每条长度不超过B，而且每条边必须被恰好一个路径覆盖</p>
+<p>那直接设mx=INF跑一次得到最小的A，然后二分B（判断是否与第一次相同，因为随着B减小，最小的A不降）。那第一次和中间每一次，其实都是给个上界，然后满足上面说的条件，最小化用的路径数。那么路径数是第一关键字，上传的链长度是第二关键字，做法就是维护multiset然后每次选最大的找里面能找中最大的，连成一条链，做法正确性相关见noip那题相关题解（我应该没写</p>
+<p><a href="https://atcoder.jp/contests/arc088/submissions/10654789" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h2 id="ARC087-rk42-perf-2644"><a href="#ARC087-rk42-perf-2644" class="headerlink" title="ARC087 rk42 perf=2644"></a><a href="https://atcoder.jp/contests/arc087" target="_blank" rel="noopener">ARC087</a> rk42 perf=2644</h2><h3 id="ARC087C-Good-Sequence：会做"><a href="#ARC087C-Good-Sequence：会做" class="headerlink" title="ARC087C - Good Sequence：会做"></a>ARC087C - Good Sequence：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc087/submissions/10753213" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC087D-FT-Robot：会做，dif-1500"><a href="#ARC087D-FT-Robot：会做，dif-1500" class="headerlink" title="ARC087D - FT Robot：会做，dif=1500"></a>ARC087D - FT Robot：<font color="#32CD32">会做</font>，dif=1500</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>差点不会做</p>
+<p>核心观察：唯一要决策的是方向，而转向的时候不关心现在的方向，所以x和y独立</p>
+<p>bitset会更好写，$O(n^2/32)$</p>
+<p><a href="https://atcoder.jp/contests/arc087/submissions/10753822" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="ARC087E-Prefix-free-Game：会做，dif-2438"><a href="#ARC087E-Prefix-free-Game：会做，dif-2438" class="headerlink" title="ARC087E - Prefix-free Game：会做，dif=2438"></a>ARC087E - Prefix-free Game：<font color="#32CD32">会做</font>，dif=2438</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>在熟悉SG、nim相关理论的前提下，快速知道建出Trie后，就是要扫只有一个孩子的节点，然后求某个大小的满二叉树的sg值</p>
+<p>显然有$sg_1=1,sg_i=mex_{j=1}^{i} ( \oplus_{t=j}^{i-1} sg_t )$，熟练的选手选择打表试试，发现$sg_i=lowbit(i)$，<a href="https://atcoder.jp/contests/arc087/submissions/10754557" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="ARC087F-Squirrel-Migration：会做，dif-3275"><a href="#ARC087F-Squirrel-Migration：会做，dif-3275" class="headerlink" title="ARC087F - Squirrel Migration：会做，dif=3275"></a>ARC087F - Squirrel Migration：<font color="#32CD32">会做</font>，dif=3275</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>真没想到我能AK全场6人ak的场，虽然因为太困没法考虑时间因素</p>
+<p>首先想到，我们只关心分配每个人去哪里，那么就不会有地方空着。这虽然看起来是个废话，但因此我们枚举每条边时，总是希望能让子树内尽量多的人出去，而不需要关心别人进来这种事，即$\sum min(siz_x,n-siz_x)$，尝试能否达到这个上界</p>
+<p>此时我先是试图讨论了一番$siz_x与n-siz_x$的大小关系，无果，忽然意识到这是无根树，直接选重心为根，根据$siz \le n/2$的性质，所有人都是$siz_x \le n-siz_x$</p>
+<p>问题转化成若干组，每组大小为ai，和为n-1，给每个点分配pi，使得pi=G或pi所在组不是这个组</p>
+<p>容易发现能用经典容斥$\sum_S (-1)^{|S|}$解决，发现式子就是$(\sum_S (-1)^{|S|} \frac{ (n-S)! }{ \prod left_t! })*\prod_t a_t!$</p>
+<p>直接dp即可，$O(n^2)$，<a href="https://atcoder.jp/contests/arc087/submissions/10757755" target="_blank" rel="noopener">code</a></p>
+<p>值得一提的是个人认为没必要讨论重心的数量啊</p>
+
+</div></div>
+<h2 id="ARC086-rk80-perf-2392"><a href="#ARC086-rk80-perf-2392" class="headerlink" title="ARC086 rk80 perf=2392"></a><a href="https://atcoder.jp/contests/arc086" target="_blank" rel="noopener">ARC086</a> rk80 perf=2392</h2><h3 id="ARC086C-Not-so-Diverse：会做"><a href="#ARC086C-Not-so-Diverse：会做" class="headerlink" title="ARC086C - Not so Diverse：会做"></a>ARC086C - Not so Diverse：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc086/submissions/10774727" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC086D-Non-decreasing：会做，dif-1571"><a href="#ARC086D-Non-decreasing：会做，dif-1571" class="headerlink" title="ARC086D - Non-decreasing：会做，dif=1571"></a>ARC086D - Non-decreasing：<font color="#32CD32">会做</font>，dif=1571</h3><p><a href="https://atcoder.jp/contests/arc086/submissions/10775264" target="_blank" rel="noopener">不是最显然的做法</a></p>
+<h3 id="ARC086E-Smuggling-Marbles：不会做，dif-2818"><a href="#ARC086E-Smuggling-Marbles：不会做，dif-2818" class="headerlink" title="ARC086E - Smuggling Marbles：不会做，dif=2818"></a>ARC086E - Smuggling Marbles：<font color="red">不会做</font>，dif=2818</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>枚举每种深度做dp，设g表示根无人c表示子树内该深度的点数，$g_x=2^{c_x}-( \prod g_y )( \sum \frac{2^{c_y}-g_y}{g_y} )，ans+=(2^{c_0}-g_{0})*2^{n-c_0}$</p>
+<p>将深度放到里面，发现对于某个d，只有不超过一个孩子有状态的话直接继承</p>
+<p>和hotel很像，长链剖分，因为还要记录和，只需要特殊处理所有轻儿子涉及到的深度，也就是扫两次即可</p>
+<p>因为要求逆元，$O(nlogn)$，如果想优化成线性的话可以考虑初衷是恰一个子树贡献出“有人在根”，加入一维0/1即可</p>
+<p><a href="https://atcoder.jp/contests/arc086/submissions/10784132" target="_blank" rel="noopener">反正都带log就写得比较奔放</a></p>
+
+</div></div>
+<h3 id="ARC086F-Shift-and-Decrement：dif-inf"><a href="#ARC086F-Shift-and-Decrement：dif-inf" class="headerlink" title="ARC086F - Shift and Decrement：dif=inf"></a>ARC086F - Shift and Decrement：dif=inf</h3><p>做个屁</p>
+<h2 id="ARC085-rk32-perf-2861"><a href="#ARC085-rk32-perf-2861" class="headerlink" title="ARC085 rk32 perf=2861"></a><a href="https://atcoder.jp/contests/arc085" target="_blank" rel="noopener">ARC085</a> rk32 perf=2861</h2><h3 id="ARC085C-HSI：会做"><a href="#ARC085C-HSI：会做" class="headerlink" title="ARC085C - HSI：会做"></a>ARC085C - HSI：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc085/submissions/10790481" target="_blank" rel="noopener">阅读理解了挺久</a></p>
+<h3 id="ARC085D-ABS：会做"><a href="#ARC085D-ABS：会做" class="headerlink" title="ARC085D - ABS：会做"></a>ARC085D - ABS：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc085/submissions/10790656" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC085E-MUL：会做，dif-2593"><a href="#ARC085E-MUL：会做，dif-2593" class="headerlink" title="ARC085E - MUL：会做，dif=2593"></a>ARC085E - MUL：<font color="#32CD32">会做</font>，dif=2593</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>将点权取反，就是个最大权闭合子图去选出不要的点，<a href="https://atcoder.jp/contests/arc085/submissions/10791086" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="ARC085F-NRE：太尴尬了，dif-3071"><a href="#ARC085F-NRE：太尴尬了，dif-3071" class="headerlink" title="ARC085F - NRE：太尴尬了，dif=3071"></a>ARC085F - NRE：<font color="red">太尴尬了</font>，dif=3071</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>直接对答案集合做dp，然后就会了：只考虑「互不包含」的答案集合，不妨以右端点排序</p>
+<p>$dp_i=\min_{j&lt;i,r_j&lt;l_i} c0(l_i,r_i)+dp_j+c1(r_j+1,l_i-1),dp_i=\min_{j&lt;i,l_j \le l_i \le r_j} c0(r_j+1,r_i)+dp_j$</p>
+<p>前者随便做，后者发现可以每次对覆盖范围做个min更新，然后查询的时候单点查询左端点</p>
+<p>这种单点询问不需要吉司机，标记永久化或直接下传都行，$O(nlogn)$，<a href="https://atcoder.jp/contests/arc085/submissions/10798894" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h2 id="ARC084-rk110，perf-2264"><a href="#ARC084-rk110，perf-2264" class="headerlink" title="ARC084 rk110，perf=2264"></a><a href="https://atcoder.jp/contests/arc084" target="_blank" rel="noopener">ARC084</a> rk110，perf=2264</h2><p>教练我想否认我打过这vp</p>
+<h3 id="ARC084C-Snuke-Festival：会做"><a href="#ARC084C-Snuke-Festival：会做" class="headerlink" title="ARC084C - Snuke Festival：会做"></a>ARC084C - Snuke Festival：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc084/submissions/10982062" target="_blank" rel="noopener">混了个只过这题里面的rk3</a></p>
+<h3 id="ARC084D-Small-Multiple：不会做，dif-2540"><a href="#ARC084D-Small-Multiple：不会做，dif-2540" class="headerlink" title="ARC084D - Small Multiple：不会做，dif=2540"></a>ARC084D - Small Multiple：<font color="red">不会做</font>，dif=2540</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>假设x为答案，则$K|x$，它是可以通过x/10转移过来的，于是我们发现一个值能否成为答案我们只关心其模k的结果</p>
+<p>特殊的dp可以转化为图论问题用最短路处理，往这方向想想得到做法：K个点，10K条边（$x \to (10x+i)\bmod K,i$）</p>
+<p>其实不难看出来这个做法还能进一步优化，每个点只建乘十和加一两条边，肯定也是等效的（能进位不进肯定亏），队列实现$O(k)$，<a href="https://atcoder.jp/contests/arc084/submissions/10990203" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="ARC084E-Finite-Encyclopedia-of-Integer-Sequences：看错题，dif-2804"><a href="#ARC084E-Finite-Encyclopedia-of-Integer-Sequences：看错题，dif-2804" class="headerlink" title="ARC084E - Finite Encyclopedia of Integer Sequences：看错题，dif=2804"></a>ARC084E - Finite Encyclopedia of Integer Sequences：<font color="red">看错题</font>，dif=2804</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>虽然做法一样不过感觉官方题解思路有点怪</p>
+<p>按照第一个分k组，每组个数一样，k是偶数时总数为偶数，答案就是这一组最后一个即$k/2,k,k,k,…k$，当然也能<del>打表</del>观察法</p>
+<p>k是奇数的话，答案肯定在$\frac{k+1}{2}$那组，显然就是$(k,n-1)$这个子问题的答案或答案的前一个</p>
+<p>$ans(k,1)=\frac{k+1}{2},ans(k,n)=[\frac{k+1}{2}][n\&amp;1?ans(k,n-1):left\ of\ ans(k,n-1)]$，<a href="https://atcoder.jp/contests/arc084/submissions/10989334" target="_blank" rel="noopener">code</a></p>
+<p>复杂度虽然很明显还是稍微说明吧，就把空位当做0，几乎就是大整数在–，k=2已经线性，更大的k只会让常数更小</p>
+
+</div></div>
+<h3 id="ARC084F-XorShift：不会做，dif-3443"><a href="#ARC084F-XorShift：不会做，dif-3443" class="headerlink" title="ARC084F - XorShift：不会做，dif=3443"></a>ARC084F - XorShift：<font color="red">不会做</font>，dif=3443</h3><p>题意补充：线性空间是无限大的，X只是限制了要输出的范围，记$m=4000$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>只想到了$O(n*m^3/32)$的做法：直接把nm个数塞线性基里面，二分k，判断就是要求第k大，<a href="https://atcoder.jp/contests/arc084/submissions/11001828" target="_blank" rel="noopener">code</a></p>
+<hr>
+<p>核心观察：位移跟异或这两种操作的组合，可以简洁的记作两个二进制数的乘法（加法指异或），A是B的倍数等价于存在$C*B=A$；而$ax+by$的集合显然是等价于$ax+b(y-x)$的集合的（a和b是形式上的系数），而这很像辗转相减，我们不妨定义它为gcd（名字并不重要，因为不代表满足辗转相除），于是可以$O(n*m^2/32)$求出n个数的gcd，于是把n个数的问题变成了1个数</p>
+<p>剩下就很容易了，高位起$z=|mx|-|gcd|+1$个位都是随便填，然后后面的位是根据前面填的情况唯一确定的，因此答案就是$mx的高位起z位组成的数+[前面z位和mx一样时，后面得到的方案是否不超过mx]$，<a href="https://atcoder.jp/contests/arc084/submissions/11004121" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h2 id="ARC083-rk39，perf-2775"><a href="#ARC083-rk39，perf-2775" class="headerlink" title="ARC083 rk39，perf=2775"></a><a href="https://atcoder.jp/contests/arc083" target="_blank" rel="noopener">ARC083</a> rk39，perf=2775</h2><p>赛后才开始码F，过的时候比赛已经结束30min了，码的时候是一直在想怎么写得更简洁（我感觉从过E开始计，且忽略各种与OI无关的杂事，好像比当场过题的所有人还快一丁丁，听起来还是挺振奋人心的）</p>
+<p>不过整体来看，我觉得即使我应当做到更快，感觉也很难快30min这么夸张，所以那两个AK的是真的恐怖</p>
+<h3 id="ARC083C-Sugar-Water：会做"><a href="#ARC083C-Sugar-Water：会做" class="headerlink" title="ARC083C - Sugar Water：会做"></a>ARC083C - Sugar Water：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc084/submissions/10982062" target="_blank" rel="noopener">阅读理解了一万年</a></p>
+<h3 id="ARC083D-Restoring-Road-Network：会做"><a href="#ARC083D-Restoring-Road-Network：会做" class="headerlink" title="ARC083D - Restoring Road Network：会做"></a>ARC083D - Restoring Road Network：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc083/submissions/11434664" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC083E-Bichrome-Tree：会做，dif-2290"><a href="#ARC083E-Bichrome-Tree：会做，dif-2290" class="headerlink" title="ARC083E - Bichrome Tree：会做，dif=2290"></a>ARC083E - Bichrome Tree：<font color="#32CD32">会做</font>，dif=2290</h3><p><a href="https://atcoder.jp/contests/arc083/submissions/11434664" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC083F-Collecting-Balls：会做，dif-3678"><a href="#ARC083F-Collecting-Balls：会做，dif-3678" class="headerlink" title="ARC083F - Collecting Balls：会做，dif=3678"></a>ARC083F - Collecting Balls：<font color="#32CD32">会做</font>，dif=3678</h3><p>题意：在$[1,n]\times[1,n]$平面上有2n个不重叠的球，求有多少个2n的排列能把所有球拿完，其中a表示x=a直线上拿走y最小的一个球，n+a表示y=a直线上拿走x最小的一个球，$n \le 1e5$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>刷新了“会做”里面的最高dif，撒花，但不可否认的是基环树相关的题挺泛滥的</p>
+<p>肯定要转化，第一个想到的是二分图，感觉没有原本的模型那么直观，但想想好像也没有更好的转化模型，所以就深入想了想。每一个球就是一条边，将无向图按照是哪个点取走了它定向，这样每个点恰一个入度，就是一个基环内向树森林。</p>
+<p>所以对于每个基环树考虑边的方向的两种情况，对于节点x，所有x指出去的点，如果比指向x的点小，则必须比x先出现。在基环树上，这种边一定是原图的子图且方向相反，即唯一出度，因此一定是树（想想就知道不会是基环树），每个点是子树中最小是个经典模型（见套路集锦）</p>
+<p><a href="https://atcoder.jp/contests/arc083/submissions/11437638" target="_blank" rel="noopener">用了点小技巧，应该真的很简洁了，随便看看网上题解都是臭长</a></p>
+
+</div></div>
+<h2 id="ARC082-rk61，perf-2657"><a href="#ARC082-rk61，perf-2657" class="headerlink" title="ARC082 rk61，perf=2657"></a><a href="https://atcoder.jp/contests/arc082" target="_blank" rel="noopener">ARC082</a> rk61，perf=2657</h2><p>赛后10min过F好评！主要是写法有点问题，纠结了半天，然后即使不考虑E，D也因为想偏了，慢正常人10min+</p>
+<h3 id="ARC082C-Together：会做"><a href="#ARC082C-Together：会做" class="headerlink" title="ARC082C - Together：会做"></a>ARC082C - Together：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc082/submissions/11443122" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC082D-Derangement：会做"><a href="#ARC082D-Derangement：会做" class="headerlink" title="ARC082D - Derangement：会做"></a>ARC082D - Derangement：<font color="#32CD32">会做</font></h3><p><a href="https://atcoder.jp/contests/arc082/submissions/11443888" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC082E-ConvexScore：会做，dif-2908"><a href="#ARC082E-ConvexScore：会做，dif-2908" class="headerlink" title="ARC082E - ConvexScore：会做，dif=2908"></a>ARC082E - ConvexScore：<font color="#32CD32">会做</font>，dif=2908</h3><p>题意：给出平面上不重叠的$n \le 200$个点，求$\sum_{点集S是凸多边形} 2^{凸多边形包含的点数（包括边界，但不包括顶点）}$</p>
+<div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>这道题是一年多前的栋老师出的题，然后当时的mld想了个n四方：<br>把每个凸包用最下面的点表示（多个则最左），然后极角排序后，跑一个dp，记录内部点的数量（暴力预处理三角形内点的数量）</p>
+<p>然后三方怎么做我是完全不记得了，反而对四方的有点印象——凸包相关，然后直接造成这次想了半天……</p>
+<p>唯一记得的是当时觉得这三方做法真的是人能想得到的吗，现在想想其实只是当时的我的实力限制了想象力，跳出凸包后很快就 想到了：相当于把每个面积为正数的点集，从其凸包唯一计数了，因此答案就是正面积点集数，$O(n^3)$，<a href="https://atcoder.jp/contests/arc082/submissions/11444939" target="_blank" rel="noopener">code</a></p>
+
+</div></div>
+<h3 id="ARC082F-Sandglass：会做，dif-2512"><a href="#ARC082F-Sandglass：会做，dif-2512" class="headerlink" title="ARC082F - Sandglass：会做，dif=2512"></a>ARC082F - Sandglass：<font color="#32CD32">会做</font>，dif=2512</h3><p><a href="https://atcoder.jp/contests/arc082/submissions/11446155" target="_blank" rel="noopener">code</a></p>
+<h2 id="ARC081-rk30，perf-2872"><a href="#ARC081-rk30，perf-2872" class="headerlink" title="ARC081 rk30，perf=2872"></a><a href="https://atcoder.jp/contests/arc081" target="_blank" rel="noopener">ARC081</a> rk30，perf=2872</h2><p>F忘记判一列那种情况（当时是先感觉一行可能有问题，但没有，<del>哦那不管了</del>），浪费了2发罚时+10min=20min=排名可以到13=perf到3123=让后面五场的perf比前五场高，差距极大.jpg</p>
+<h3 id="ARC081C-Make-a-Rectangle："><a href="#ARC081C-Make-a-Rectangle：" class="headerlink" title="ARC081C - Make a Rectangle："></a>ARC081C - Make a Rectangle：</h3><p><a href="https://atcoder.jp/contests/arc081/submissions/11455716" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC081D-Coloring-Dominoes："><a href="#ARC081D-Coloring-Dominoes：" class="headerlink" title="ARC081D - Coloring Dominoes："></a>ARC081D - Coloring Dominoes：</h3><p><a href="https://atcoder.jp/contests/arc081/submissions/11455888" target="_blank" rel="noopener">code</a></p>
+<h3 id="ARC081E-Don’t-Be-a-Subsequence："><a href="#ARC081E-Don’t-Be-a-Subsequence：" class="headerlink" title="ARC081E - Don’t Be a Subsequence："></a>ARC081E - Don’t Be a Subsequence：</h3><p>看完题开始写，全场第六个过的，单题速度一眼看去有可能是最快的</p>
+<p><a href="https://atcoder.jp/contests/arc081/submissions/11456050" target="_blank" rel="noopener">不过代码写得还是麻烦了</a></p>
+<h3 id="ARC081F-Flip-and-Rectangles："><a href="#ARC081F-Flip-and-Rectangles：" class="headerlink" title="ARC081F - Flip and Rectangles："></a>ARC081F - Flip and Rectangles：</h3><div><div class="fold_hider"><div class="close hider_title">请先思考后再展开</div></div><div class="fold">
+<p>网上都是比较不直接的结论做法，然后也有一两个非结论做法，这里也是一个非结论做法，本质应该也差不多：</p>
+<p>枚举每一行作为起点，枚举这行是否翻转可以得到每列如果在答案中是否需要翻转。每列是否翻转确定后，一个矩形作为答案的条件就是每一列经过前面说的唯一翻转后，每一列完全相同。那优化方法很多，我考虑的是预处理出相邻两列在4种翻转情况时，哪些行的那两个是不同的。这样每次踢掉没用的头后，可以把变化时间点按递减排序，然后从下往上用并查集合并，并且用最大集合大小更新答案</p>
+<p>通过一些计数排序之类的技巧可以优化到$O(n^2)$，<a href="https://atcoder.jp/contests/arc081/submissions/11456931" target="_blank" rel="noopener">$O(n^2log)$-code</a></p>
+
+</div></div>
+<h1 id="完结撒花！"><a href="#完结撒花！" class="headerlink" title="完结撒花！"></a>完结撒花！</h1>
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+	
+		<div>
+				<p id="div-border-left-purple">
+			   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
+				<span>
+				<b>本文地址：</b><a href="/posts/b27dc4f4.html" title="ARC计划2">http://zory.ink/posts/b27dc4f4.html</a><br/><b>转载请注明出处，谢谢！</b>
+				</span>
+				</p>
+		</div>
+    
+
+    
+    
+    
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/da5ae507.html" rel="next" title="CF近题层刷">
+                <i class="fa fa-chevron-left"></i> CF近题层刷
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/f2c1e637.html" rel="prev" title="SCOI">
+                SCOI <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/./avatar.ico"
+                alt="Zory"/>
+            
+              <p class="site-author-name" itemprop="name">Zory</p>
+              <div class="site-description motion-element" itemprop="description">Zory的个人博客</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">680</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">197</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Zory123" title="GitHub &rarr; https://github.com/Zory123" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:1134430323@qq.com" title="E-Mail &rarr; mailto:1134430323@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          ﻿
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ARC090-rk33-perf-3035"><span class="nav-text">ARC090 rk33 perf=3035</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC090C-Candies：会做"><span class="nav-text">ARC090C - Candies：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC090D-People-on-a-Line：会做"><span class="nav-text">ARC090D - People on a Line：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC090E-Avoiding-Collision：会做，dif-2282"><span class="nav-text">ARC090E - Avoiding Collision：会做，dif=2282</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC090F-Number-of-Digits：会做，dif-2841"><span class="nav-text">ARC090F - Number of Digits：会做，dif=2841</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARC089-rk74-perf-2526"><span class="nav-text">ARC089 rk74 perf=2526</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC089C-Traveling：会做"><span class="nav-text">ARC089C - Traveling：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC089D-Checker：会做"><span class="nav-text">ARC089D - Checker：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC089E-GraphXY：不会做，dif-2889"><span class="nav-text">ARC089E - GraphXY：不会做，dif=2889</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC089F-ColoringBalls：不会做，dif-4221"><span class="nav-text">ARC089F - ColoringBalls：不会做，dif=4221</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARC088-rk18-perf-3001"><span class="nav-text">ARC088 rk18 perf=3001</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC088C-Multiple-Gift：会做"><span class="nav-text">ARC088C - Multiple Gift：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC088D-Wide-Flip：会做"><span class="nav-text">ARC088D - Wide Flip：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC088E-Papple-Sort：不会做，dif-2303"><span class="nav-text">ARC088E - Papple Sort：不会做，dif=2303</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC088F-Christmas-Tree：会做，dif-3010"><span class="nav-text">ARC088F - Christmas Tree：会做，dif=3010</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARC087-rk42-perf-2644"><span class="nav-text">ARC087 rk42 perf=2644</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC087C-Good-Sequence：会做"><span class="nav-text">ARC087C - Good Sequence：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC087D-FT-Robot：会做，dif-1500"><span class="nav-text">ARC087D - FT Robot：会做，dif=1500</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC087E-Prefix-free-Game：会做，dif-2438"><span class="nav-text">ARC087E - Prefix-free Game：会做，dif=2438</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC087F-Squirrel-Migration：会做，dif-3275"><span class="nav-text">ARC087F - Squirrel Migration：会做，dif=3275</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARC086-rk80-perf-2392"><span class="nav-text">ARC086 rk80 perf=2392</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC086C-Not-so-Diverse：会做"><span class="nav-text">ARC086C - Not so Diverse：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC086D-Non-decreasing：会做，dif-1571"><span class="nav-text">ARC086D - Non-decreasing：会做，dif=1571</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC086E-Smuggling-Marbles：不会做，dif-2818"><span class="nav-text">ARC086E - Smuggling Marbles：不会做，dif=2818</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC086F-Shift-and-Decrement：dif-inf"><span class="nav-text">ARC086F - Shift and Decrement：dif=inf</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARC085-rk32-perf-2861"><span class="nav-text">ARC085 rk32 perf=2861</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC085C-HSI：会做"><span class="nav-text">ARC085C - HSI：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC085D-ABS：会做"><span class="nav-text">ARC085D - ABS：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC085E-MUL：会做，dif-2593"><span class="nav-text">ARC085E - MUL：会做，dif=2593</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC085F-NRE：太尴尬了，dif-3071"><span class="nav-text">ARC085F - NRE：太尴尬了，dif=3071</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARC084-rk110，perf-2264"><span class="nav-text">ARC084 rk110，perf=2264</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC084C-Snuke-Festival：会做"><span class="nav-text">ARC084C - Snuke Festival：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC084D-Small-Multiple：不会做，dif-2540"><span class="nav-text">ARC084D - Small Multiple：不会做，dif=2540</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC084E-Finite-Encyclopedia-of-Integer-Sequences：看错题，dif-2804"><span class="nav-text">ARC084E - Finite Encyclopedia of Integer Sequences：看错题，dif=2804</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC084F-XorShift：不会做，dif-3443"><span class="nav-text">ARC084F - XorShift：不会做，dif=3443</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARC083-rk39，perf-2775"><span class="nav-text">ARC083 rk39，perf=2775</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC083C-Sugar-Water：会做"><span class="nav-text">ARC083C - Sugar Water：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC083D-Restoring-Road-Network：会做"><span class="nav-text">ARC083D - Restoring Road Network：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC083E-Bichrome-Tree：会做，dif-2290"><span class="nav-text">ARC083E - Bichrome Tree：会做，dif=2290</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC083F-Collecting-Balls：会做，dif-3678"><span class="nav-text">ARC083F - Collecting Balls：会做，dif=3678</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARC082-rk61，perf-2657"><span class="nav-text">ARC082 rk61，perf=2657</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC082C-Together：会做"><span class="nav-text">ARC082C - Together：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC082D-Derangement：会做"><span class="nav-text">ARC082D - Derangement：会做</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC082E-ConvexScore：会做，dif-2908"><span class="nav-text">ARC082E - ConvexScore：会做，dif=2908</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC082F-Sandglass：会做，dif-2512"><span class="nav-text">ARC082F - Sandglass：会做，dif=2512</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARC081-rk30，perf-2872"><span class="nav-text">ARC081 rk30，perf=2872</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC081C-Make-a-Rectangle："><span class="nav-text">ARC081C - Make a Rectangle：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC081D-Coloring-Dominoes："><span class="nav-text">ARC081D - Coloring Dominoes：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC081E-Don’t-Be-a-Subsequence："><span class="nav-text">ARC081E - Don’t Be a Subsequence：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC081F-Flip-and-Rectangles："><span class="nav-text">ARC081F - Flip and Rectangles：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#完结撒花！"><span class="nav-text">完结撒花！</span></a></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zory</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: true,
+    appId: 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+    appKey: 'cJDLxDoNgzq0JJUWQFmpCRdw',
+    placeholder: '对这篇文章有什么看法？大胆地说出来吧',
+    avatar: 'wavatar',
+    meta: guest,
+    pageSize: '20' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('2');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
+                .done(function() {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function() {
+                  console.log('Failed to create');
+                });
+            
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'zMDFLwV3WMlWrOYhJ7tOad3M-gzGzoHsz',
+                'X-LC-Key': 'cJDLxDoNgzq0JJUWQFmpCRdw',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
+            if (localhost.test(document.URL)) return;
+            addCount(Counter);
+          
+        });
+    });
+  </script>
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
